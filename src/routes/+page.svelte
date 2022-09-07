@@ -1,0 +1,24 @@
+
+<script>
+    import Events from "$lib/components/events.svelte"
+    import Hero from "$lib/components/hero.svelte"
+    import Strength from "$lib/components/strength.svelte"
+    import Message from "$lib/components/message.svelte"
+    import Committies from "$lib/components/committies.svelte"
+    import LocomotiveScrollProvider from 'svelte-locomotive-scroll'
+</script>
+
+<svelte:head>
+    <title>Home</title>
+</svelte:head>
+
+<LocomotiveScrollProvider options={{smooth: true}} watch={[]}>
+    <Hero/>
+    <Events/>
+    <Strength/>
+    <Committies/>
+    <Message/>
+</LocomotiveScrollProvider>
+
+
+
