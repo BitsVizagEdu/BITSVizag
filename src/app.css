@@ -68,15 +68,24 @@ html.has-scroll-dragging {
     right: auto;
     bottom: 0; }
 
+
+#nav1{
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+
+    height: 100%;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
 .dropdown:hover .dropdown-menu {
     display: flex;
     flex-direction: column;
     overflow: auto;
     max-height: 70vh;
     width: max-content;
-
-
 }
+
 .dropdown-menu:hover .dropdown button {
     scale: 1.2;
 }
@@ -85,10 +94,6 @@ html.has-scroll-dragging {
 }
 .dropdown-menu li a{
     color:#f4f4f4;
-}
-
-.logo-svg{
-    fill:black;
 }
 
 video {
@@ -102,6 +107,7 @@ video {
     z-index: -1;
 }
 #overlay {
+    margin-right: 50px;
     min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -112,4 +118,24 @@ video {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 6px solid rgba(0, 0, 0, 0.18);
+    border-left: 0;
+    border-right: 0;
+    background-color: #8070d4;
+}
+nav{
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }

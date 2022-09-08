@@ -80,7 +80,7 @@
                 </div>
             </div>
         {:else}
-            <div class="flex divide-gray-500 divide-x-4 divide-purpleS1 justify-end">
+            <div class="flex divide-x-4 divide-purpleS1 justify-end">
                 <div class="w-[400px] py-16">
                     <div class="flex flex-col justify-center items-center pt-4 px-4">
                         <p class="text-xl font-bold pb-4 text-center">{event.name}</p>

@@ -64,9 +64,6 @@
             <p class=" text-3xl text-white p-3">Professional Committie</p>
             <p class=" text-2xl text-white pb-2">BITS Vizag provides you </p>
         </div>
-        <div class="flex">
-            <div><img src="/graduated.svg" alt="" class="w-10"></div>
-        </div>
         <div class="flex flex-row flex-wrap w-[75%] justify-center items-center ">
             {#each items as item, i}
                 <div on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px] bg-green-300 flex flex-col items-center m-2 rounded-[5px]`}>
