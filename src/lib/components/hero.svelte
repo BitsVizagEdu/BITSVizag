@@ -153,12 +153,12 @@
 				<div class="p-0">
 					<div class="dropdown inline-block relative">
 						<div class="flex items-center flex-col  content-center hover:cursor-pointer">
-							<a class="md:w-5 md:h-5 w-6 h-6 pr-1 lg:pr-0 mt-2">{@html navName.icon}</a>
+							<a class="md:w-5 md:h-5  lg:w-6 lg:h-6 pr-1 lg:pr-0 mt-2">{@html navName.icon}</a>
 							<div>
 								<button
 									class="text-white font-semibold lg:px-2 py-2 pt-0 px-4 rounded inline-flex items-center hover:underline underline-offset-4 "
 								>
-									<span class="text-white text-xs lg:text-[10px]">{navName.name}</span>
+									<span class="text-white xl:text-[14px] lg:text-[10px]">{navName.name}</span>
 									{#if navName.items.length > 0}
 										<svg
 											class="fill-white h-4 w-4"
@@ -204,7 +204,7 @@
 		</div>
 	</nav>
 	<video playsinline autoplay muted loop>
-		<source src="/baba2.mp4" type="video/mp4" />
+		<source src="/baba.webm" type="video/webm" />
 	</video>
 
 	<div id="overlay" class="">
