@@ -37,7 +37,8 @@
     }
 </script>
 
-<section class=" flex flex-col items-center">
+<!--Bigger Screens-->
+<section class="lg:flex lg:flex-col lg:items-center hidden">
     <div class="flex divide-x-4 divide-purpleS1 justify-start">
         <div class="w-[400px] flex items-center justify-center py-16">
             <div class="w-[800px] flex flex-col bg-white">
@@ -109,4 +110,33 @@
     {/each}
 </section>
 
-
+<!--<1024px Smaller screens-->
+<section class="lg:hidden flex flex-col w-[100vw] bg-gray-800 ">
+    <div class="flex md:p-10 sm:p-10 xs:py-5 xs:px-12 px-6 py-4 items-center justify-center">
+        <p class="md:text-4xl sm:text-2xl text-2xl font-bold text-gray-300">Events</p>
+    </div>
+    <div class="flex flex-wrap xs:p-10">
+        {#each events as event, i}
+            <div class="flex w-[300px] grow shrink-0 pb-6 justify-center">
+                <div class="flex flex-col bg-white xs:ml-5 mx-2 rounded-2xl items-center p-4 ">
+                    <p class="md:text-sm sm:text-sm text-lg text-center py-2 font-bold">{event.name}</p>
+                    <p class="md:text-sm sm:text-sm text-lg text-center py-2 text-gray-900 font-[400]">{event.description}</p>
+                    <div class="py-4">
+                        <img class="xs:h-[300px] xs:w-[300px] object-contain rounded-lg" src={event.image} alt="">
+                    </div>
+                    <div class="flex pb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6 text-gray-900">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <p class="text-sm font-light text-gray-900 text-center pl-2">{event.date}</p>
+                    </div>
+                </div>
+            </div>
+        {/each}
+        <div class="flex justify-end w-full p-4">
+            <a href="/events" class="underline text-gray-300 font-bold md:text-2xl sm:text-xl text-lg">Read More...</a>
+        </div>
+    </div>
+</section>

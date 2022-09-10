@@ -48,7 +48,7 @@
 					on:click={() => dropdown_toggle(index)}
 					class="flex flex-col justify-between bg-sortwhite mx-auto w-[100%]"
 				>
-					<button class="flex items-center justify-between px-14 my-2">
+					<button class="flex items-center justify-between pl-14 my-2">
 						<span class="text-black font-bold  text-lg mr-2">{navName.name}</span>
 						{#if navName.items.length > 0}
 							<svg class="fill-red1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">

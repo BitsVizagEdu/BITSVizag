@@ -27,7 +27,7 @@
 <!--    <Placement/>-->
     <Committies/>
     <Gallery/>
-    <Message/>
+<!--    <Message/>-->
     <Footer/>
     <!-- <Events/> -->
     {/if}
