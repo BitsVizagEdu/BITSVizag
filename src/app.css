@@ -109,7 +109,7 @@ video {
 }
 #overlay {
     margin-right: 50px;
-    min-height: 80vh;
+    min-height: 67vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
