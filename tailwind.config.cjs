@@ -29,6 +29,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'menu':'#234885',        
         'nav': '#2d2d2d',
         'navgray2': '#2d2d2d',
         'purpleS3': '#a598e7',
