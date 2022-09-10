@@ -142,7 +142,7 @@
 <!--    </footer>-->
 <!--</div>-->
 
-<section class="w-[100vw] h-[50vh] bg-black">
+<section class=" h-[50vh] bg-black">
     <div class="flex basis-1/4 justify-between p-12">
         <div class=" text-white flex flex-col justify-center items-start">
             <div class="relative">
@@ -200,10 +200,14 @@
                 <p class="pl-2">BITS Vizag</p>
             </div>
             <div class="py-1 flex">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black bg-white rounded-sm w-[20%] p-1">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black bg-white rounded-sm p-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <p class="pl-2">All India Council for Technical Education (AICTE), Nelson Mandela Marg, VasantKunj, New Delhi-110070.</p>
+                <p class="pl-2">Baba Institute of Technology & Sciences <br/>
+                    Near Pothinamallayyapalem, <br/>
+                    Pothinamallayya Palem,<br/>
+                    Visakhapatnam,<br/>
+                    Andhra Pradesh 530041</p>
             </div>
             <div class="py-1 flex">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black bg-white rounded-sm p-1">

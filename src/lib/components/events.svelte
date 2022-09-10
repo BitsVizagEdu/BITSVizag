@@ -37,7 +37,7 @@
     }
 </script>
 
-<section class="w-[100vw] flex flex-col items-center">
+<section class=" flex flex-col items-center">
     <div class="flex divide-x-4 divide-purpleS1 justify-start">
         <div class="w-[400px] flex items-center justify-center py-16">
             <div class="w-[800px] flex flex-col bg-white">
