@@ -1,4 +1,14 @@
-import {writable} from "svelte/store";
+
+import { writable } from "svelte/store"
+
+export const isHidden =writable(true)
+
+export function toggleIsHidden(){
+    let value = isHidden
+    isHidden.set(!value)
+}
+
+
 
 export const showNavBar = writable(false)
 export let tempNavValue = false
@@ -10,3 +20,4 @@ showNavBar.subscribe(value => {
 export function toggleNavBar(){
     showNavBar.set(!tempNavValue)
 }
+

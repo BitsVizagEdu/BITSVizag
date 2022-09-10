@@ -1,5 +1,6 @@
 
 <script>
+    import Nav from "$lib/components/navmenu.svelte"
     import Events from "$lib/components/events.svelte"
     import Hero from "$lib/components/hero.svelte"
     import Strength from "$lib/components/strength.svelte"
@@ -7,6 +8,7 @@
     import Committies from "$lib/components/committies.svelte"
     import Footer from "$lib/components/footer.svelte"
     import Placement from "$lib/components/placement.svelte"
+    import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
     import LocomotiveScrollProvider from 'svelte-locomotive-scroll'
 </script>
 
@@ -15,13 +17,20 @@
 </svelte:head>
 
 <LocomotiveScrollProvider options={{smooth: false}} watch={[]}>
-    <Hero/>
+    {#if $showNavBar}
+    <Nav/>
+    {:else}
+    <Hero showNavBar={showNavBar}/>
     <Events/>
     <Strength/>
 <!--    <Placement/>-->
     <Committies/>
     <Message/>
     <Footer/>
+    <!-- <Events/> -->
+    {/if}
+    
+    
 </LocomotiveScrollProvider>
 
 
