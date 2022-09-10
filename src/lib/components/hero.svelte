@@ -1,4 +1,6 @@
 <script>
+    import {showNavBar, toggleNavBar} from "../stores.js";
+
     let nav2 = [
         'BITS Login',
         'ARIIA',
@@ -10,11 +12,11 @@
         'Placements',
         'Instagram'
     ];
-    import {NavItems} from './navItem.js';
+    import {dropdown, NavItems} from './navItem.js';
 
-    function handleClick() {
-        alert('clicked');
-    }
+    // function handleClick() {
+    //     alert('clicked');
+    // }
 </script>
 
 <link
@@ -76,7 +78,7 @@
         <img src="/sqc.svg" class="inline w-32 ml-5" alt=""/>
     </div>
 
-    <div id="nav1" class="nav1  my-1 h-20 flex flex-row items-center ">
+    <div id="nav1" class={`hidden nav1 lg:my-1 lg:h-20 lg:flex lg:flex-row lg:items-center `}>
         {#each $NavItems as navName, index}
             <div class="p-0">
                 <div class="dropdown inline-block relative">
@@ -120,7 +122,14 @@
             </div>
         {/each}
     </div>
-    <button class="openbtn hidden" on:click={handleClick}>☰</button>
+    <button class="openbtn px-4 lg:hidden" on:click={toggleNavBar}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+    </button>
+    <div class={`${$showNavBar ? "h-[100vh] w-[100vw]" : "hidden"}`}>
+        <p>navBar</p>
+    </div>
 </nav>
 
 <nav class=" bg-white border-b-0 border-purpleS2">
