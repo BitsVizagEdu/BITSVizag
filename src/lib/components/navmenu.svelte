@@ -40,24 +40,26 @@
 	</a>
 </div>
 
-<div id="navf1 " class="md:block w-full lg:hidden">
-	<div id="navf " class="bg-sortwhite flex flex-col justify-center">
-		<div class="container bg-sortwhite py-2">
+<div id="navf1 " class="md:block  lg:hidden">
+	<div id="navf " class="bg-sortwhite ">
+		<div class="con   bg-sortwhite py-2">
 			{#each $NavItems as navName, index}
 				<div
 					on:click={() => dropdown_toggle(index)}
-					class="flex flex-col justify-between bg-sortwhite mx-auto w-[100%]"
+					class="flex flex-col  bg-sortwhite  "
 				>
-					<button class="flex items-center justify-between pl-14 my-2">
-						<span class="text-black font-bold  text-lg mr-2">{navName.name}</span>
-						{#if navName.items.length > 0}
-							<svg class="fill-red1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-								<path
-									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-								/>
-							</svg>
-						{/if}
-					</button>
+					<div class="flex flex-row items-center justify-between">
+						<button class="flex items-center justify-between px-14 text-black font-bold  text-lg mr-2 my-2">
+							{navName.name}</button>
+							{#if navName.items.length > 0}
+								<svg class="fill-red1 h-4 w-4 mr-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+									<path
+										d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+									/>
+								</svg>
+							{/if}
+						
+					</div>
 				</div>
 				{#if $dropdown[index]}
 					{#if navName.items.length > 0}

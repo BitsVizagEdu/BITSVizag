@@ -94,6 +94,7 @@ html.has-scroll-dragging {
 }
 .dropdown-menu li a{
     color:#f4f4f4;
+    transition: display 2s;
 }
 
 video {
@@ -140,8 +141,12 @@ nav{
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
-@media (min-width: 320px) { 
+@media (min-width: 320px) {
     #overlay {
-        margin-right: 5px;
+        margin-right: 0;
+
     }
- }
+    video{
+        top: 160px;
+    }
+}
