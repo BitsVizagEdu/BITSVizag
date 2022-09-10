@@ -111,7 +111,7 @@
 <div
 	id="menu"
 	on:click={toggleNavBar}
-	class=" bg-sortwhite  lg:hidden  p-3 hover:cursor-pointer ml-auto"
+	class=" bg-menu  lg:hidden  p-3 hover:cursor-pointer ml-auto"
 >
 	<a class=" "
 		><svg
@@ -119,7 +119,7 @@
 			fill="none"
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
-			stroke="black"
+			stroke="white"
 			class="w-9 h-9 mr-0 ml-auto"
 		>
 			<path
