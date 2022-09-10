@@ -24,7 +24,7 @@
                 <button on:mouseenter={() => scaleUp(".button-strength")} on:mouseleave={()=> {scaleDown(".button-strength")}} class="button-strength bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">Read more about BITS Vizag</button>
             </div>
         </div>
-        <div class=" basis-2/3 flex xs:mt-6  md:mt-6 3xs:mt-6 justify-center">
+        <div class=" basis-2/3 flex xs:mt-6  md:mt-6 3xs:mt-6 pb-6 justify-center">
 
             <div class="grid md:grid-cols-4 3xs:grid-cols-2 xs:grid-cols-3 md:gap-10 3xs:gap-5">
 
