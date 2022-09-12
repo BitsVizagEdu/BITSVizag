@@ -24,7 +24,7 @@
     <Hero showNavBar={showNavBar}/>
     <Events/>
     <Strength/>
-<!--    <Placement/>-->
+   <Placement/>
     <Committies/>
     <Gallery/>
 <Message/>
