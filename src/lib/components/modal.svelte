@@ -13,7 +13,7 @@
 </script>
 
 <section
-	class={`${$isVisible ? "" : "hidden"} z-[9999] fixed flex bg-gray-900 bg-opacity-[0.9] h-[100vh] w-[100vw] items-center align-middle justify-center`}
+	class={`${$isVisible ? "" : "hidden"} z-[9999] fixed flex bg-gray-900 bg-opacity-90 h-[100vh] w-[100vw] items-center align-middle justify-center`}
 >
 	<div class="">
 		<div class="w-[50vw] h-[50vh]">
