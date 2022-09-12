@@ -189,9 +189,9 @@
 							<a class="md:w-5 md:h-5  lg:w-6 lg:h-6 pr-1 lg:pr-0 mt-2">{@html navName.icon}</a>
 							<div>
 								<button
-									class="text-white font-semibold lg:px-[7px] py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
+									class="text-white font-semibold lg:px-[7px]  py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
 								>
-									<span class="text-white xl:text-[17px] 2xl:text-[17.5px] 3xs:text-[13px] lg:text-[10px]"
+									<span class="text-white xl:text-[15px] 2xl:text-[16.5px] 3xs:text-[13px] lg:text-[10px]"
 										>{navName.name}</span
 									>
 									{#if navName.items.length > 0}
