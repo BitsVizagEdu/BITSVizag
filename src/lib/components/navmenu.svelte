@@ -1,5 +1,5 @@
 <script>
-	import { isHidden, toggleIsHidden, toggleNavBar } from '../stores/store.js';
+	import { isHidden, toggleIsHidden, toggleNavBar ,toggleNavBar2 } from '../stores/store.js';
 	let nav2 = [
 		'BITS Login',
 		'AICTE',
@@ -42,14 +42,14 @@
 
 <div id="navf1 " class="md:block  lg:hidden">
 	<div id="navf " class="bg-sortwhite ">
-		<div class="con   bg-sortwhite py-2">
+		<div class="con   bg-sortwhite py-2 h-[100vh]">
 			{#each $NavItems as navName, index}
 				<div
 					on:click={() => dropdown_toggle(index)}
 					class="flex flex-col  bg-sortwhite  "
 				>
 					<div class="flex flex-row items-center justify-between">
-						<button class="flex items-center justify-between px-14 text-black font-bold  text-lg mr-2 my-2">
+						<button class="flex items-center justify-between px-14 text-black font-bold 3xs:text-base  xs:text-lg mr-2 my-2">
 							{navName.name}</button>
 							{#if navName.items.length > 0}
 								<svg class="fill-red1 h-4 w-4 mr-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -88,10 +88,10 @@
 				{/if}
 			{/each}
 		</div>
-		<div class="flex flex-col justify-center font-semibold text-lg bg-black w-full items-center py-20 space-y-10">
+		<!-- <div class="flex flex-col justify-center font-semibold text-lg bg-black w-full items-center py-20 space-y-10">
             {#each nav2 as nav2name}
                 <a class="{nav2name}  text-white">{nav2name}</a>
             {/each}
-        </div>
+        </div> -->
 	</div>
 </div>
