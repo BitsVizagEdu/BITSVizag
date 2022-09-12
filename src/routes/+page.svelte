@@ -10,14 +10,14 @@
     import Gallery from "$lib/components/gallery.svelte"
     import Placement from "$lib/components/placement.svelte"
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
-    import LocomotiveScrollProvider from 'svelte-locomotive-scroll'
+    
 </script>
 
 <svelte:head>
     <title>Home</title>
 </svelte:head>
 
-<LocomotiveScrollProvider options={{smooth: false}} watch={[]}>
+
     {#if $showNavBar}
     <Nav/>
     {:else}
@@ -33,7 +33,7 @@
     {/if}
     
     
-</LocomotiveScrollProvider>
+
 
 
 

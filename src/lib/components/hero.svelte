@@ -1,6 +1,5 @@
 <script>
-	import { toggleNavBar } from '../stores/store.js';
-	export let showNavBar;
+	import { toggleNavBar, toggleNavBar2, showNavBar, showNavBar2 } from '../stores/store.js';
 	import Nav from '$lib/components/navmenu.svelte';
 	let nav2 = ['BITS Login', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
 	import { NavItems, dropdown } from './navItem.js';
@@ -33,7 +32,7 @@
 <div id="header" class="bg-gray-800 flex flex-col items-center w-full">
 	<div class=" 2xl:mx-auto py-5 lg:px-7 md:pb-5 xs:p-4 sm:px-4 px-4 w-full">
 		<div class=" flex flex-row md:justify-between 3xs:justify-center w-full">
-			<div class="flex flex-col lg:flex md:hidden md:justify-center xs:justify-center">
+			<div class="flex flex-col lg:flex md:hidden  md:justify-center xs:justify-center">
 				<div
 					class=" flex space-x-3 lg:flex 3xs:hidden xs:hidden md:flex md:h-[100px] md:w-[100px] lg:h-[150px] lg:w-[150px]  items-center xs:w-20 xs:h-20 justify-start"
 				>
@@ -47,17 +46,14 @@
 				</div>
 			</div>
 			<div class="flex flex-row justify-center items-center">
-				<div class=" flex space-x-3 3xs:w-24 xs:mr-4 2xs:w-32 xs:w-36 md:w-[100px] md:h-[100px] 2xs:flex lg:block lg:mr-4 items-center">
-					<img
-						class="bg-white rounded-full p-1"
-						src="/bits.jpg"
-						alt="circle"
-						
-					/>
+				<div
+					class=" flex space-x-3 3xs:hidden 3xs:w-24 xs:mr-4 2xs:w-32 xs:w-36 md:w-[100px] md:h-[100px] 2xs:hidden md:flex lg:block lg:mr-4 items-center"
+				>
+					<img class="bg-white rounded-full p-1" src="/bits.jpg" alt="circle" />
 				</div>
 				<div class="flex flex-col justify-center items-center ">
 					<h1
-						class="text-4xl 3xs:text-[14px] xs:text-[18px] leading-6 xl:text-2xl md:text-[20px] lg:text-xl font-bold text-white item-center tracking-wider justify-center text-center md:px-[10px] "
+						class="text-4xl 3xs:text-[11px] 2xs:text-[13px] xs:text-[15px] leading-6 xl:text-2xl md:text-[19px] lg:text-xl font-bold text-white item-center tracking-wider justify-center text-center md:px-[10px] "
 					>
 						BABA INSTITUTE OF TECHNOLOGY AND SCIENCES
 					</h1>
@@ -66,8 +62,9 @@
 						<h6
 							class="text-center text-xl 3xs:text-[6.5px] 2xs:text-[7.5px] xs:text-[9.5px] leading-3 xl:text-lg lg:text-sm md:text-[12px] text-white"
 						>
-							( Accredited by NAAC | Approved by AICTE,New Delhi | Affiliated to JNTU-Kakinada,GV )<br>(An ISO 9001:2015 Certified Educational Institution) 
-					</h6>
+							( Accredited by NAAC | Approved by AICTE,New Delhi | Affiliated to JNTU-Kakinada,GV )<br
+							/>(An ISO 9001:2015 Certified Educational Institution)
+						</h6>
 						<!-- <p
 							class="text-center text-2xl   xs:text-[10px] md:text-[16px] xl:text-xl lg:text-base mb-0 text-white"
 						>
@@ -108,37 +105,73 @@
 		</a>
 	</div> -->
 </div>
-<div
-	id="menu"
-	on:click={toggleNavBar}
-	class=" bg-gray-700  lg:hidden  p-3 pr-8 hover:cursor-pointer ml-auto"
->
-	<a class=" "
-		><svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="white"
-			class="w-9 h-9 mr-0 ml-auto"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-			/>
-		</svg>
-	</a>
+<div id="menu">
+	<div
+		class=" bg-white flex flex-row items-center justify-between lg:hidden  p-3 px-4 hover:cursor-pointer "
+	>
+		<a class="  " on:click={toggleNavBar}
+			><svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="black"
+				class="w-6 h-6 "
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+				/>
+			</svg>
+		</a>
+		<div class="flex flex-row  ">
+			<a>
+				<img src="./logorb.svg" class=" mx-1 w-9 h-9" />
+			</a>
+
+			<!-- <a>
+		<img src="./sqb.svg" class=" w-12	 h-12">
+	</a> -->
+		</div>
+
+		<a on:click={toggleNavBar2}>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class=" px-2 w-10 "
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
+				/>
+			</svg>
+		</a>
+	</div>
+	<div class={`${$showNavBar2 ? 'grid gap-2 grid-cols-2 bg-white ' : 'hidden'}`}>
+		{#each nav2 as nav2name}
+			<div class="flex flex-col  justify-center items-center bg-white  ">
+				<button class="flex items-center justify-between mx-14 my-2">
+					<span class="text-black text-left py-1 font-semibold  text-base mr-2">{nav2name}</span>
+				</button>
+			</div>
+		{/each}
+	</div>
 </div>
 {#if $showNavBar}
 	<Nav />
 {/if}
+
 {#if !$showNavBar}
 	<nav
 		id="navt"
 		class=" pl-3 hidden 2xs:hidden  lg:flex flex-row justify-between align-middle content-center items-center   border-b-4 border-purpleS2"
 	>
-		<div class="flex flex-row items-center ">
+		<div class="flex  flex-row items-center ">
 			<img
 				class="bg-white rounded-full p-1 lg:w-16 lg:h-16 h-[70px] w-[70px]"
 				src="/bits.jpg"
@@ -156,9 +189,11 @@
 							<a class="md:w-5 md:h-5  lg:w-6 lg:h-6 pr-1 lg:pr-0 mt-2">{@html navName.icon}</a>
 							<div>
 								<button
-									class="text-white font-semibold lg:px-2 py-2 pt-0 px-4 rounded inline-flex items-center hover:underline underline-offset-4 "
+									class="text-white font-semibold lg:px-[7px] py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
 								>
-									<span class="text-white xl:text-[14px] lg:text-[10px]">{navName.name}</span>
+									<span class="text-white xl:text-[17px] 2xl:text-[17.5px] 3xs:text-[13px] lg:text-[10px]"
+										>{navName.name}</span
+									>
 									{#if navName.items.length > 0}
 										<svg
 											class="fill-white h-4 w-4"
@@ -180,7 +215,7 @@
 								{#each navName.items as item, i}
 									<li class="text-white  border-white">
 										<a
-											class="  hover:underline  underline-offset-1 py-2 px-4 block text-white lg:text-[10px]"
+											class="  hover:underline 3xs:text-[11px] underline-offset-1 py-2 px-4 block text-white lg:text-[14px]"
 											href="#">{item}</a
 										>
 									</li>
@@ -204,8 +239,7 @@
 		</div>
 	</nav>
 
-
-	<div id="overlay" class="flex relative min-h-[80vh]">
+	<div id="overlay" class="flex relative z-[-1] min-h-[80vh]">
 		<video playsinline autoplay muted loop>
 			<source src="/baba.webm" type="video/webm" />
 		</video>
@@ -214,6 +248,7 @@
 			<img src="/sq.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
 		</div>
 	</div>
+
 {/if}
 
 <style>
