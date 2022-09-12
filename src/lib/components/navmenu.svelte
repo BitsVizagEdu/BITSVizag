@@ -88,10 +88,16 @@
 				{/if}
 			{/each}
 		</div>
-		<div class="flex flex-col justify-center font-semibold text-lg bg-black w-full items-center py-20 space-y-10">
-            {#each nav2 as nav2name}
-                <a class="{nav2name}  text-white">{nav2name}</a>
-            {/each}
+		<div class="flex flex-col justify-start font-semibold text-lg bg-black text-white w-full items-start py-20 px-14 space-y-10">
+			<ul class="list-disc">
+				{#each nav2 as nav2name}
+					<li class="text-gray-500 py-2 underline">
+						<a href="#" class="text-white">
+							{nav2name}
+						</a>
+					</li>
+				{/each}
+			</ul>
         </div>
 	</div>
 </div>

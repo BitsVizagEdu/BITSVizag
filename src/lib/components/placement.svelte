@@ -6,7 +6,7 @@
 <section class="w-[100vw]">
     <div class="flex">
         <div class="flex w-[50%] overflow-x-scroll">
-            <Splide aria-label="My Favorite Images" class=".splide">
+            <Splide aria-label="My Favorite Images">
                 <SplideSlide>
                     <img src="/company/2560px-Deloitte.svg.png" alt="Image 1"/>
                 </SplideSlide>
