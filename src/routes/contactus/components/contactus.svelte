@@ -2,9 +2,9 @@
 A sample contact us page form written with tailwind css
 Illustration from undraw.co by the amazing Katerina Limpitsouni
 -->
-<body class="bg-gray-800 text-gray-100 ">
+<body class="bg-gray-800 ">
     <div class="text-center w-full">
-      <h1 class="text-6xl font-bold pt-[50px]">Contact Us</h1>
+      <h1 class="text-6xl font-bold pt-[50px] text-white">Contact Us</h1>
     </div>
 
     
