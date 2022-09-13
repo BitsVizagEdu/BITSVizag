@@ -205,7 +205,7 @@
         <div class="nav2 flex justify-center mx-10  items-center  ">
             {#each nav2 as nav2name}
                 <a
-                        class="{nav2name} w-full text-black inline border-b-4 border-white hover:border-purpleS2 p-[10px]   text-[15px] tracking-wider text-center  cursor-pointer "
+                        class="{nav2name} w-full text-black inline border-b-4 border-slate-200 hover:border-purpleS2 p-[10px]   text-[15px] tracking-wider text-center  cursor-pointer "
                 >{nav2name}</a
                 >
             {/each}
