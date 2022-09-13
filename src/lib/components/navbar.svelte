@@ -127,7 +127,7 @@
     </div>
     <div class={`${$showNavBar2 ? 'grid gap-2 grid-cols-2 bg-white ' : 'hidden'}`}>
         {#each nav2 as nav2name}
-            <div class="flex flex-col  justify-center items-center bg-white  ">
+            <div class="flex flex-col  justify-center items-center lg:hidden bg-white  ">
                 <button class="flex items-center justify-between mx-14 my-2">
                     <span class="text-black text-left py-1 font-semibold  text-base mr-2">{nav2name}</span>
                 </button>
@@ -212,15 +212,7 @@
         </div>
     </nav>
 
-    <div id="overlay" class="flex relative z-[-1] min-h-[80vh]">
-        <video playsinline autoplay muted loop>
-            <source src="/baba.webm" type="video/webm"/>
-        </video>
-        <div class="absolute flex justify-center items-center h-full w-full">
-            <img src="/logow.svg" class="  mb-24 w-auto lg:h-52 md:h-44 mr-4 pb-10 3xs:h-24 xs:h-32"/>
-            <img src="/sq.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32"/>
-        </div>
-    </div>
+	
 
 {/if}
 
