@@ -18,11 +18,7 @@
 </svelte:head>
 
 
-{#if $showNavBar}
-    <Nav/>
-    
-    {:else}
-    <Hero showNavBar={showNavBar}/>
+{#if !$showNavBar}
     <Video/>
     <Events/>
     <Strength/>

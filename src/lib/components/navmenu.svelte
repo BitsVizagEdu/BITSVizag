@@ -30,7 +30,7 @@
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
 			stroke="currentColor"
-			class="w-9 h-9 ml-auto mr-0"
+			class="w-9 h-9 ml-auto mr-0 text-black"
 		>
 			<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 		</svg>
