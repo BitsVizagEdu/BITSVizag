@@ -1,5 +1,5 @@
 <section class=" bg-slate-200 p-10">
-    <div class="flex flex-row lg:flex-row  3xs:flex-col-reverse justify-center items-center  mx-auto  max-w-[1080px] ">
+    <div class="flex flex-row lg:flex-row  3xs:flex-col-reverse justify-center items-center  mx-auto  lg:w-[90%] ">
         <div id="text" class=" lg:w-[900px] 3xs:mb-3 lg:px-10">
             <div class="text-red1 3xs:text-center lg:text-left xs:text-[20px] sm:text-[25px] font-bold pb-6">
                 <h2>A MESSAGE FROM THE SECRETARY</h2>
