@@ -1,9 +1,4 @@
 <script>
-    import Nav from "$lib/components/navmenu.svelte"
-    
-    import Hero from "$lib/components/navbar.svelte"
-   
-    import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
 
     import Contactus from "./components/contactus.svelte";
 
@@ -16,16 +11,6 @@
 </svelte:head>
 
 
-{#if $showNavBar}
-    <Nav/>
-    
-    {:else}
-    
-    <Hero showNavBar={showNavBar}/>
-    
-    <Contactus/>
-
-    <Footer/>
-    
-{/if}
+<Contactus/>
+<Footer/>
 
