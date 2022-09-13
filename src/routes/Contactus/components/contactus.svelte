@@ -6,11 +6,62 @@ Illustration from undraw.co by the amazing Katerina Limpitsouni
     <div class="text-center w-full">
       <h1 class="text-6xl font-bold pt-[50px]">Contact Us</h1>
     </div>
+
+    
+<div class="text-center bg-slate-800 font-sans xs:px-0 ">
+  <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col items-center">
+          
+          <br>
+          <br>
+      </div>
+      <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1   items-center ">
+              <div  class="card h-[200px] w-[250px] bg-slate-400 flex flex-col items-center m-2 rounded-[5px]">
+                <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-10 h-10 mt-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                </div>
+                  <div class="p-[10px] capitalize font-bold">Principal</div>
+                  <div class="capitalize font-semibold">Dr.M.govinda raju</div>
+                  <div class="capitalize overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">principal@bitsvizag.com</a></div>
+              </div>
+              <div  class="card h-[200px] w-[250px] bg-slate-400 flex flex-col items-center m-2 rounded-[5px]">
+                <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-10 h-10 mt-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                </div>
+                <div class="p-[10px] capitalize font-bold">acadamic advisor</div>
+                <div class="capitalize font-semibold">dr.c.v.gopinath</div>
+                <div class="capitalize overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">acadamic advisor@bitsvizag.com</a></div>
+            </div>
+            <div  class="card h-[200px] w-[250px] bg-slate-400 flex flex-col items-center m-2 rounded-[5px]">
+              <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-10 h-10 mt-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              </div>
+              <div class="p-[10px] capitalize font-bold">Administrative Officer</div>
+              <div class="capitalize font-semibold">mr. a.o.sir</div>
+              <div class="capitalize overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">Administrative Officer@bitsvizag.com</a></div>
+            </div>
+            <div  class="card h-[200px] w-[250px] bg-slate-400 flex flex-col items-center m-2 rounded-[5px]">
+              <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-10 h-10 mt-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              </div>
+              <div class="p-[10px] capitalize font-bold">training and placement officer</div>
+              <div class="capitalize font-semibold">mr.joshua rao</div>
+              <div class="capitalize overflow-hidden text-center pt-2"><a href="mailto:tpo@bitsvizag.com">tpo@bitsvizag.com</a></div>
+            </div>
+          
+      </div>
+  </div>
+</div>
+    
     <div
       class="max-w-screen-xl my-20 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
       <div class="flex flex-col justify-between">
         <div>
-          <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Lets talk about everything!</h2>
+          <h2 class="text-4xl lg:text-5xl font-bold leading-tight capitalize"> have any query <br> ask us!</h2>
           <div class="text-gray-700 mt-8">
             Hate forms? Send us an <span class="underline"><a href="mailto:principal2@bitsvizag.com">email</a></span> instead.
           </div>
