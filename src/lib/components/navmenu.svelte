@@ -16,9 +16,6 @@
 		dropdown.set(temp);
 		console.log(temp);
 	}
-	// function handleClick() {
-	//     alert('clicked');
-	// }
 </script>
 
 <div
@@ -70,17 +67,6 @@
 							>
 								<button class="flex items-center justify-between mx-14 my-2">
 									<span class="text-black text-left py-1 font-semibold  text-lg mr-2">{item}</span>
-									<!-- {#if navName.items.length > 0}
-                                <svg
-                                    class="fill-red1 h-4 w-4"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                >
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                    />
-                                </svg>
-                            {/if} -->
 								</button>
 							</div>
 						{/each}
@@ -88,10 +74,5 @@
 				{/if}
 			{/each}
 		</div>
-		<!-- <div class="flex flex-col justify-center font-semibold text-lg bg-black w-full items-center py-20 space-y-10">
-            {#each nav2 as nav2name}
-                <a class="{nav2name}  text-white">{nav2name}</a>
-            {/each}
-        </div> -->
 	</div>
 </div>

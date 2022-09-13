@@ -1,5 +1,3 @@
-
-
 <section class="h-[40vh] lg:flex-row 3xs:flex-col flex ">
 	<div class="container  flex  px-4 sm:px-12 py-8 3xs:w-full lg:w-1/2 justify-center items-center basis-1/2">
 		<h3 class="text-center text-4xl ">COMPANY VISITED</h3>

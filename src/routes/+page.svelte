@@ -18,7 +18,7 @@
 </svelte:head>
 
 
-    {#if $showNavBar}
+{#if $showNavBar}
     <Nav/>
     
     {:else}
@@ -26,16 +26,11 @@
     <Video/>
     <Events/>
     <Strength/>
-   <Placement/>
+    <Placement/>
     <Committies/>
     <Gallery/>
-<Message/>
+    <Message/>
     <Footer/>
-    <!-- <Events/> -->
-    {/if}
-    
-    
-
-
+{/if}
 
 
