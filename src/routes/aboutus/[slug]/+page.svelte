@@ -5,7 +5,9 @@
 
 	import { showNavBar, toggleNavBar, activeTab, setActiveTabValue } from '$lib/stores/store.js';
 
-    import Secretary from './components/message.svelte';
+    import Secretary from './components/secretary.svelte';
+
+	import Principal from "./components/principal.svelte";
     
     import Bits from './components/bits.svelte';
     
@@ -47,6 +49,9 @@
 			{/if}
 			{#if $activeTab === 'Message-from-Secretary-&-Correspondent'}
 				<Secretary/>
+			{/if}
+			{#if $activeTab === 'Message-from-Principal'}
+				<Principal/>
 			{/if}
 		</div>
 	</div>
