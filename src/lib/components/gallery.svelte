@@ -84,5 +84,5 @@
             <p class="text-2xl text-center md:text-right  hover:underline font-bold">More ></p>
         </div>
     </div>
-    <div class="border-2 border-purpleS1"></div>
+    <div class="border-b-2 border-purpleS1"></div>
 </section>
