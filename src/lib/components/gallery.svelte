@@ -17,7 +17,7 @@
     });
 </script>
 
-<section class={`${$isVisible ? ' opacity-100' : 'opacity-0'}`} id="gallery">
+<section class={`${$isVisible ? ' opacity-100' : 'opacity-0'}`} id="gallery" >
     <div class="md:grid md:grid-cols-3 md:grid-rows-5 p-10 gap-10 ">
         <div class="justify-center items-center py-8 md:py-0">
             <p
@@ -32,7 +32,7 @@
 			}`}
         >
             <img
-                    src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"
+                    src="./g1.jpeg"
                     alt=""
             />
         </div>
@@ -42,7 +42,7 @@
 			} `}
         >
             <img
-                    src="https://metro.co.uk/wp-content/uploads/2020/07/marvels_iron_man_vr_hero_banner_06_ps4_us_18mar19-ffe6.jpeg?quality=90&strip=all&crop=0px%2C52px%2C1400px%2C736px&resize=1200%2C630"
+                    src="./g2.jpeg"
                     alt=""
                     class="my-6 "
             />
@@ -53,7 +53,7 @@
 			}`}
         >
             <img
-                    src="https://metro.co.uk/wp-content/uploads/2020/07/marvels_iron_man_vr_hero_banner_06_ps4_us_18mar19-ffe6.jpeg?quality=90&strip=all&crop=0px%2C52px%2C1400px%2C736px&resize=1200%2C630"
+                    src="./g3.jpeg"
                     alt=""
                     class="my-6 "
             />
@@ -64,7 +64,7 @@
 			} `}
         >
             <img
-                    src="https://metro.co.uk/wp-content/uploads/2020/07/marvels_iron_man_vr_hero_banner_06_ps4_us_18mar19-ffe6.jpeg?quality=90&strip=all&crop=0px%2C52px%2C1400px%2C736px&resize=1200%2C630"
+                    src="./g4.jpeg"
                     alt=""
                     class="my-6 "
             />
@@ -75,13 +75,14 @@
 			} `}
         >
             <img
-                    src="https://metro.co.uk/wp-content/uploads/2020/07/marvels_iron_man_vr_hero_banner_06_ps4_us_18mar19-ffe6.jpeg?quality=90&strip=all&crop=0px%2C52px%2C1400px%2C736px&resize=1200%2C630"
+                    src="./g5.jpeg"
                     alt=""
                     class="my-6 "
             />
         </div>
         <div class="items-center ">
-            <p class="text-2xl text-center md:text-right  hover:underline">More</p>
+            <p class="text-2xl text-center md:text-right  hover:underline font-bold">More ></p>
         </div>
     </div>
+    <div class="border-2 border-purpleS1"></div>
 </section>

@@ -49,7 +49,7 @@
         </div>
         <div class="w-[400px] flex py-16 justify-end">
             <div class="flex flex-col justify-center items-center px-4">
-                <a href="#" class="text-2xl font-semibold underline">View all ></a>
+                <a href="#" class="text-2xl font-bold underline">View all ></a>
             </div>
         </div>
     </div>
