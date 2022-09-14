@@ -23,7 +23,6 @@ export const showNavBar2 = writable(false)
 export let tempNavValue2 = false
 
 showNavBar2.subscribe(value => {
-    console.log(value)
     tempNavValue2 = value
 })
 
@@ -31,11 +30,10 @@ export function toggleNavBar2(){
     showNavBar2.set(!tempNavValue2)
 }
 
-export const activeTab = writable("About-BITS-Vizag")
-export let tempTabValue = "About-BITS-Vizag"
+export const activeTab = writable("")
+export let tempTabValue = ""
 
 activeTab.subscribe(value =>{
-    console.log(value)
     tempTabValue = value
 })
 
@@ -43,3 +41,13 @@ export function setActiveTabValue(value) {
     activeTab.set(value)
 }
 
+export const isActiveTabSet = writable(false)
+export let tempIsActiveTabSet = false
+
+isActiveTabSet.subscribe(value => {
+    tempIsActiveTabSet = value
+})
+
+export function toggleIsActiveTab(value){
+    isActiveTabSet.set(value)
+}

@@ -12,7 +12,6 @@
 
     onMount(() => {
         inView('#gallery', (info) => {
-            console.log(info)
             isVisible.set(!tempValue);
         });
     });

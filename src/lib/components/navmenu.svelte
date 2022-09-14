@@ -1,5 +1,5 @@
 <script>
-    import {setActiveTabValue, toggleNavBar} from '../stores/store.js';
+    import {activeTab, setActiveTabValue, tempTabValue, toggleIsActiveTab, toggleNavBar} from '../stores/store.js';
     import {dropdown, NavItems} from './navItem.js';
     import {replaceHyphenWithSpace} from "../../routes/aboutus/[slug]/components/utils.js";
 
@@ -17,17 +17,13 @@
         let temp = dropdown;
         temp[index] = !temp[index];
         dropdown.set(temp);
-        console.log(temp);
     }
 
     function onClick(item) {
-        toggleNavBar()
+        toggleIsActiveTab(true)
         setActiveTabValue(item)
+        toggleNavBar()
     }
-
-	function onDropdownClick(){
-		toggleNavBar()
-	}
 </script>
 
 <div
@@ -59,7 +55,6 @@
                         class="flex flex-col  bg-sortwhite  "
                 >
                     <div class="flex flex-row items-center justify-between">
-
                         {#if navName.items.length > 0}
                             <button class="flex items-center justify-between px-14 text-black font-bold 3xs:text-base  xs:text-lg mr-2 my-2">
                                 {navName.name}

@@ -10,8 +10,12 @@
     import Bits from './components/bits.svelte';
     
     import Footer from '$lib/components/footer.svelte';
+	import {isActiveTabSet, toggleIsActiveTab} from "../../../lib/stores/store.js";
 	if(data){
-		setActiveTabValue(data.route)
+		if(!$isActiveTabSet){
+			setActiveTabValue(data.route)
+		}
+		toggleIsActiveTab(false)
 	}
 
 </script>

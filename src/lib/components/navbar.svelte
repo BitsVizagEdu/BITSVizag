@@ -1,11 +1,19 @@
 <script>
-    import {setActiveTabValue, showNavBar, showNavBar2, toggleNavBar, toggleNavBar2} from '../stores/store.js';
+    import {
+        setActiveTabValue,
+        showNavBar,
+        showNavBar2,
+        toggleIsActiveTab,
+        toggleNavBar,
+        toggleNavBar2
+    } from '../stores/store.js';
     import Nav from '$lib/components/navmenu.svelte';
     import {NavItems} from './navItem.js';
     import {replaceHyphenWithSpace} from "../../routes/aboutus/[slug]/components/utils.js";
 
     let nav2 = ['BITS Login', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
     function onClick(item){
+        toggleIsActiveTab(true)
         setActiveTabValue(item)
     }
 </script>
