@@ -1,7 +1,7 @@
 <section class=" bg-slate-200 p-10">
-    <div class="flex flex-row lg:flex-row  3xs:flex-col justify-center items-center  mx-auto lg:max-h-[800px] max-w-[1080px] ">
-        <div id="text" class=" lg:w-[900px] 3xs:mb-3 lg:px-10">
-            <div class="text-red1 3xs:text-center lg:text-left xs:text-[20px] sm:text-[25px] font-bold pb-6">
+    <div class="flex flex-row xl:flex-row  3xs:flex-col-reverse justify-center items-center  mx-auto  xl:w-[90%] ">
+        <div id="text" class=" xl:w-[900px] 3xs:mb-3 lg:px-10">
+            <div class="text-red1 3xs:text-center xl:w-[438px] xs:text-[20px] sm:text-[25px] font-bold pb-6">
                 <h2>A MESSAGE FROM THE SECRETARY</h2>
             </div>
             <div>
@@ -22,9 +22,9 @@
 
         </div>
         <div id="pic " class="flex flex-col justify-between ">
-            <div><img src="/mam.jpg" class="  p-3 rounded-md h-auto">
+            <div><img src="/mam.jpg" class=" 3xs:h-[300px] xs:h-[400px] md:h-[550px] p-3 rounded-md xl:h-auto">
             </div>
-            <div><p class=" text-center font-bold text-2xl" >Dr. Srilakshmi Kondru</p>
+            <div><p class=" text-center font-bold text-2xl" >Dr.K.Srilakshmi</p>
             </div>
         </div>
     </div>
