@@ -21,13 +21,13 @@
 
 
 {#if !$showNavBar}
-	<div class="total flex lg:flex-row 3xs:flex-col  h-[100%] h-full">
+	<div class="total flex lg:flex-row 3xs:flex-col  h-[100%] ">
 		<aside class="lg:w-[25%] p-5 rounded-lg  " aria-label="Sidebar">
 			<div class="overflow-y-auto py-4 px-3   bg-blue-900 rounded-lg">
 				<ul class="space-y-2">
 					{#each items as item}
 					<li  id="{item}" on:click={() => (activeTab = item)}>
-						<a href="#" class="flex items-center lg:justify-center p-2 text-base font-normal rounded-lg  
+						<a href="#" class="flex items-center 2xl:justify-center p-2 3xs:p-1 text-base font-normal rounded-lg  
 								{(activeTab === item) ? ' bg-white text-black ' : 'text-white'} ">
 							<!-- <svg
 								aria-hidden="true"
@@ -39,7 +39,7 @@
 									d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"
 								/></svg
 							> -->
-							<span class="ml-3 text-lg">{item}</span>
+							<span class="ml-3 md:text-base 2xl:text-center  3xs:text-xs xs:text-sm">{item}</span>
 						</a>
 					<!-- </li>
 					<li id="Ab-Chairman" on:click={() => (activeTab = 'Chairman')}>
