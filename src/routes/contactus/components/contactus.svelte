@@ -2,14 +2,14 @@
 A sample contact us page form written with tailwind css
 Illustration from undraw.co by the amazing Katerina Limpitsouni
 -->
-<body class="bg-gray-800 ">
+<div class="bg-gray-800 pb-20 ">
     <div class="text-center w-full">
       <h1 class="text-6xl font-bold pt-[50px] text-white">Contact Us</h1>
     </div>
 
     
 <div class="text-center bg-slate-800 font-sans xs:px-0 ">
-  <div class="flex flex-col justify-center items-center">
+  <div class="flex flex-col justify-center items-center pb-11">
       <div class="flex flex-col items-center">
           
           <br>
@@ -58,7 +58,7 @@ Illustration from undraw.co by the amazing Katerina Limpitsouni
 </div>
     
     <div
-      class="max-w-screen-xl my-20 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+      class="max-w-screen-xl p-32 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
       <div class="flex flex-col justify-between">
         <div>
           <h2 class="text-4xl lg:text-5xl font-bold leading-tight capitalize"> have any query <br> ask us!</h2>
@@ -588,4 +588,4 @@ Illustration from undraw.co by the amazing Katerina Limpitsouni
         </div>
       </div>
     </div>
-  </body>
+  </div>
