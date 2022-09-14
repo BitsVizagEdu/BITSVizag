@@ -4,7 +4,6 @@
     import Events from "$lib/components/events.svelte"
     import Hero from "$lib/components/navbar.svelte"
     import Strength from "$lib/components/strength.svelte"
-    import Message from "$lib/components/message.svelte"
     import Committies from "$lib/components/committies.svelte"
     import Footer from "$lib/components/footer.svelte"
     import Gallery from "$lib/components/gallery.svelte"
@@ -25,7 +24,6 @@
     <Strength/>
     <Placement/>
     <Committies/>
-    <Message/>
     <Footer/>
 {/if}
 
