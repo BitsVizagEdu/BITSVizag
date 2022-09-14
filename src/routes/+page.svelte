@@ -20,11 +20,11 @@
 
 {#if !$showNavBar}
     <Video/>
+    <Gallery/>
     <Events/>
     <Strength/>
     <Placement/>
     <Committies/>
-    <Gallery/>
     <Message/>
     <Footer/>
 {/if}
