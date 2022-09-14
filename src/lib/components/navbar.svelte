@@ -1,9 +1,13 @@
 <script>
-    import {showNavBar, showNavBar2, toggleNavBar, toggleNavBar2} from '../stores/store.js';
+    import {setActiveTabValue, showNavBar, showNavBar2, toggleNavBar, toggleNavBar2} from '../stores/store.js';
     import Nav from '$lib/components/navmenu.svelte';
     import {NavItems} from './navItem.js';
+    import {replaceHyphenWithSpace} from "../../routes/aboutus/[slug]/components/utils.js";
 
     let nav2 = ['BITS Login', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
+    function onClick(item){
+        setActiveTabValue(item)
+    }
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -100,12 +104,8 @@
         </a>
         <div class="flex flex-row  ">
             <a>
-                <img src="./logorb.svg" class=" mx-1 w-9 h-9"/>
+                <img src="/logorb.svg" class=" mx-1 w-9 h-9"/>
             </a>
-
-            <!-- <a>
-        <img src="./sqb.svg" class=" w-12	 h-12">
-    </a> -->
         </div>
 
         <a on:click={toggleNavBar2}>
@@ -125,7 +125,7 @@
             </svg>
         </a>
     </div>
-    <div class={`${$showNavBar2 ? 'grid gap-2 grid-cols-2 bg-white ' : 'hidden'}`}>
+    <div class={`${$showNavBar2 ? 'grid gap-2 grid-cols-2 bg-white' : 'hidden'}`}>
         {#each nav2 as nav2name}
             <div class="flex flex-col  justify-center items-center lg:hidden bg-white  ">
                 <button class="flex items-center justify-between mx-14 my-2">
@@ -161,24 +161,46 @@
                         <div class="flex items-center flex-col  content-center hover:cursor-pointer">
                             <a class="md:w-5 md:h-5  lg:w-6 lg:h-6 pr-1 lg:pr-0 mt-2">{@html navName.icon}</a>
                             <div>
-                                <button
-                                        class="text-white font-semibold lg:px-[7px]  py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
-                                >
+                                {#if navName.items.length > 0}
+                                    <button href={`${navName.folder}`}
+                                            class="text-white font-semibold lg:px-[7px]  py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
+                                    >
 									<span class="text-white xl:text-[15px] 2xl:text-[16.5px] 3xs:text-[13px] lg:text-[10px]"
                                     >{navName.name}</span
                                     >
-                                    {#if navName.items.length > 0}
-                                        <svg
-                                                class="fill-white h-4 w-4"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 20 20"
-                                        >
-                                            <path
-                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                            />
-                                        </svg>
-                                    {/if}
-                                </button>
+                                        {#if navName.items.length > 0}
+                                            <svg
+                                                    class="fill-white h-4 w-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20"
+                                            >
+                                                <path
+                                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                                />
+                                            </svg>
+                                        {/if}
+                                    </button>
+                                {:else}
+                                    <a href={`${navName.folder}`}
+                                       class="text-white font-semibold lg:px-[7px]  py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
+                                    >
+									<span class="text-white xl:text-[15px] 2xl:text-[16.5px] 3xs:text-[13px] lg:text-[10px]"
+                                    >{navName.name}</span
+                                    >
+                                        {#if navName.items.length > 0}
+                                            <svg
+                                                    class="fill-white h-4 w-4"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20"
+                                            >
+                                                <path
+                                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                                />
+                                            </svg>
+                                        {/if}
+                                    </a>
+                                {/if}
+
                             </div>
                         </div>
                         {#if navName.items.length > 0}
@@ -187,10 +209,8 @@
                             >
                                 {#each navName.items as item, i}
                                     <li class="text-white  border-white">
-                                        <a
-                                                class="  hover:underline 3xs:text-[11px] underline-offset-1 py-2 px-4 block text-white lg:text-[14px]"
-                                                href="#">{item}</a
-                                        >
+                                        <a on:click={() => {onClick(item)}} class=" hover:underline 3xs:text-[11px] underline-offset-1 py-2 px-4 block text-white lg:text-[14px]"
+                                           href={`${navName.folder}/${item}`}>{replaceHyphenWithSpace(item)}</a>
                                     </li>
                                 {/each}
                             </ul>
@@ -204,16 +224,10 @@
     <nav id="nav2" class=" hidden bg-white border-b-0 border-purpleS2 2xs:hidden lg:block">
         <div class="nav2 flex justify-center mx-10  items-center  ">
             {#each nav2 as nav2name}
-                <a
-                        class="{nav2name} w-full text-black inline border-b-4 border-slate-200 hover:border-purpleS2 p-[10px]   text-[15px] tracking-wider text-center  cursor-pointer "
-                >{nav2name}</a
-                >
+                <a class="{nav2name} w-full text-black inline border-b-4 border-slate-200 hover:border-purpleS2 p-[10px]   text-[15px] tracking-wider text-center  cursor-pointer ">{nav2name}</a>
             {/each}
         </div>
     </nav>
-
-	
-
 {/if}
 
 <style>

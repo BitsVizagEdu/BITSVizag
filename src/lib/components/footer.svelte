@@ -1,4 +1,4 @@
-<section class="  bg-black ">
+<section class=" bg-black ">
 	<div class="flex basis-1/4 justify-between p-12 flex-wrap w-full items-center">
 		<div class=" text-white flex flex-col justify-center items-start p-5 md:px-0">
 			<div class="relative">

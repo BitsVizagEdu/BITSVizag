@@ -13,6 +13,7 @@
         <Nav/>
     {:else}
         <Hero showNavBar={showNavBar}/>
+        <slot />
     {/if}
-    <slot />
+
 </main>

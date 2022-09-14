@@ -8,8 +8,6 @@ export function toggleIsHidden(){
     isHidden.set(!value)
 }
 
-
-
 export const showNavBar = writable(false)
 export let tempNavValue = false
 
@@ -31,5 +29,17 @@ showNavBar2.subscribe(value => {
 
 export function toggleNavBar2(){
     showNavBar2.set(!tempNavValue2)
+}
+
+export const activeTab = writable("About-BITS-Vizag")
+export let tempTabValue = "About-BITS-Vizag"
+
+activeTab.subscribe(value =>{
+    console.log(value)
+    tempTabValue = value
+})
+
+export function setActiveTabValue(value) {
+    activeTab.set(value)
 }
 
