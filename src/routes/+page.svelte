@@ -11,6 +11,7 @@
     import Placement from "$lib/components/placement.svelte"
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
     import Video from "$lib/components/video.svelte"
+    import Principal from "$lib/components/principal.svelte"
 </script>
 
 <svelte:head>
@@ -26,6 +27,7 @@
     <Committies/>
     <Gallery/>
     <Message/>
+    <Principal/>
     <Footer/>
 {/if}
 
