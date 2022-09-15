@@ -7,7 +7,6 @@ function checkInArray(item){
             return true
         }
     }
-
     return false
 }
 
@@ -18,6 +17,5 @@ export function load({ params }) {
             route: params.slug
         };
     }
-
     throw error(404, 'Not found');
 }

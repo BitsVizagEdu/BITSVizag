@@ -26,7 +26,8 @@
            </div>
         </div>
         <div id="pic " class="flex flex-col justify-between ">
-            <div><img src="/principal.jpg" class=" 3xs:h-[300px] xs:h-[400px] md:h-[550px] p-3 rounded-md xl:h-auto">
+            <div>
+                <img src="/principal.jpg" class=" 3xs:h-[300px] xs:h-[400px] md:h-[550px] p-3 rounded-md xl:h-auto" alt=""/>
             </div>
             <div><p class=" text-center font-bold text-2xl" >Dr. Govinda Raju Matha</p>
             </div>
