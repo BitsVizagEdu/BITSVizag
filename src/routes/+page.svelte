@@ -7,13 +7,16 @@
     import Placement from "$lib/components/placement.svelte"
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
     import Video from "$lib/components/video.svelte"
+
+    let y
+    $:console.log(y)
 </script>
 
 <svelte:head>
     <title>Home</title>
 </svelte:head>
 
-
+<svelte:window bind:scrollY={y}/>
 {#if !$showNavBar}
     <Video/>
     <Gallery/>
