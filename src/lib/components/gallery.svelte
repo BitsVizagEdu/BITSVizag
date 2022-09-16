@@ -1,88 +1,53 @@
 <script>
-    import { inView, animate } from 'motion';
 
-    import { onMount } from 'svelte';
-    import { writable } from 'svelte/store';
-
-    const isVisible = writable(false);
-    let tempValue = false;
-    isVisible.subscribe((value) => {
-        tempValue = value;
-    });
-
-    onMount(() => {
-        inView('#gallery', (info) => {
-            isVisible.set(!tempValue);
-        });
-    });
 </script>
 
-<section class={`${$isVisible ? ' opacity-100' : 'opacity-0'}`} id="gallery" >
-    <div class="md:grid md:grid-cols-3 md:grid-rows-5 p-10 gap-10 ">
-        <div class="justify-center items-center py-8 md:py-0">
-            <p
-                    class="uppercase text-[400%] sm:text-[300%] 2xl:text-[600%] text-center md:text-left font-bold"
-            >
-                gallery
-            </p>
-        </div>
-        <div
-                class={`row-span-5 row-start-2  ${
-				$isVisible ? ' opacity-100 animate-fade-in-down' : 'opacity-0'
-			}`}
-        >
-            <img
-                    src="./g1.jpeg"
-                    alt=""
-            />
-        </div>
-        <div
-                class={`row-span-2 col-start-2 row-start-1 items-center   ${
-				$isVisible ? ' opacity-100 animate-fade-in-left' : 'opacity-0'
-			} `}
-        >
-            <img
-                    src="./g2.jpeg"
-                    alt=""
-                    class="my-6 "
-            />
-        </div>
-        <div
-                class={`row-span-2 col-start-3 row-start-2 items-center  ${
-				$isVisible ? ' opacity-100 animate-fade-in-up' : 'opacity-0'
-			}`}
-        >
-            <img
-                    src="./g3.jpeg"
-                    alt=""
-                    class="my-6 "
-            />
-        </div>
-        <div
-                class={`row-span-2 col-start-2 row-start-3 items-center  ${
-				$isVisible ? ' opacity-100 animate-fade-in-down' : 'opacity-0'
-			} `}
-        >
-            <img
-                    src="./g4.jpeg"
-                    alt=""
-                    class="my-6 "
-            />
-        </div>
-        <div
-                class={`row-span-2 col-start-3 row-start-4 items-center  ${
-				$isVisible ? ' opacity-100 animate-fade-in-right' : 'opacity-0'
-			} `}
-        >
-            <img
-                    src="./g5.jpeg"
-                    alt=""
-                    class="my-6 "
-            />
-        </div>
-        <div class="items-center ">
-            <p class="text-2xl text-center md:text-right  hover:underline font-bold">More ></p>
-        </div>
-    </div>
-    <div class="border-b-4 border-purpleS1"></div>
-</section>
+<div class="image-grid min-h-full">
+    <div class="box-1 image-grid-col-2 image-grid-row-2"><img class="" src="/gallery/img1.jpeg" alt="architecture"></div>
+    <div class="box-2"><img src="/gallery/img6.jpeg" alt="architecture"></div>
+    <div class="box-3"><img src="/gallery/img2.jpeg" alt="architecture"></div>
+    <div class="box-4"><img src="/gallery/img3.jpeg" alt="architecture"></div>
+    <div class="box-5"><img src="/gallery/img4.jpeg" alt="architecture"></div>
+
+</div>
+<style>
+    .image-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        box-sizing: border-box;
+        grid-template-areas: 'item-1 item-1'
+                             'item-2 item-3'
+                             'item-4 item-5';
+
+
+    }
+
+    .box-1{
+        grid-area: item-1;
+    }
+
+
+
+    .image-grid div{
+        object-fit: cover;
+
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+    }
+    @media screen and (min-width: 768px) {
+        .image-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            box-sizing: border-box;
+            grid-template-areas: 'item-1 item-1 item-2 item-3'
+                             'item-1 item-1 item-4 item-5';
+
+
+        }
+    }
+</style>

@@ -17,7 +17,7 @@
 {#if !$showNavBar}
     <Video/>
     <Gallery/>
-    <Events/>
+<!--    <Events/>-->
     <Strength/>
     <Placement/>
     <Committies/>
