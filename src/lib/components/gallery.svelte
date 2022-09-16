@@ -19,7 +19,7 @@
 
 
     #overlayimg{
-        opacity: 1;
+        opacity: 0;
         top: 0%;
         position: absolute;
         height: 100%;
