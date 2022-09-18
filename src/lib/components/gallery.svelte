@@ -4,30 +4,36 @@
          "pic" : "/gallery/img1.jpeg",
          "name": "Beach Cleaning Drive",
          "date" : "15/07/2023",
+         "href" : "#" ,
          "id" : "box-1"
+
      },
      {
          "pic" : "/gallery/img2.jpeg",
          "name": "Beach Cleaning Drive",
          "date" : "15/07/2023",
+         "href" : "#" ,
          "id" : "box-2"
      },
      {
          "pic" : "/gallery/img3.jpeg",
          "name": "Beach Cleaning Drive",
          "date" : "15/07/2023",
+         "href" : "#" ,
          "id" : "box-3"
      },
      {
          "pic" : "/gallery/img4.jpeg",
          "name": "Beach Cleaning Drive",
          "date" : "15/07/2023",
+         "href" : "#" ,
          "id" : "box-4"
      },
      {
          "pic" : "/gallery/img6.jpeg",
          "name": "Beach Cleaning Drive",
          "date" : "15/07/2023",
+         "href" : "#" ,
          "id" : "box-5"
      }
 
@@ -40,8 +46,8 @@
         <img class="" src={img.pic} alt="architecture">
         <div id="overlayimg" class="flex flex-col opacity-0 top-0 absolute h-[100%] p-5 transition-[opacity] duration-500 bg-gradient-to-t from-black to-transparent  hover:opacity-70 justify-center first:justify-end w-full ">
             <div class="p-10" >
-            <h1 class="font-black text-white text-4xl">{img.name}</h1>
-            <h2 class="font-bold text-sortwhite text-3xl">{img.date}</h2>
+            <a href={img.href} class="font-black text-white text-4xl">{img.name}</a>
+            <a class="font-bold text-sortwhite text-3xl">{img.date}</a>
             </div>
         </div>
     </div>
