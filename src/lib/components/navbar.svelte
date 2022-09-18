@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-<div id="menu">
+<div id="menu" class="sticky top-0 z-10">
     <div
             class=" bg-white flex flex-row items-center justify-between lg:hidden  p-3 px-4 hover:cursor-pointer "
     >
