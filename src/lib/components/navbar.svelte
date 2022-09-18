@@ -93,7 +93,7 @@
     <div
             class=" bg-white flex flex-row items-center justify-between lg:hidden  p-3 px-4 hover:cursor-pointer "
     >
-        <a class="  " on:click={toggleNavBar}
+        <div class="  " on:click={toggleNavBar}
         >
             <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -109,14 +109,14 @@
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
             </svg>
-        </a>
+        </div>
         <div class="flex flex-row  ">
             <a>
                 <img src="/logorb.svg" class=" mx-1 w-9 h-9"/>
             </a>
         </div>
 
-        <a on:click={toggleNavBar2}>
+        <div on:click={toggleNavBar2}>
             <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -131,7 +131,7 @@
                         d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
                 />
             </svg>
-        </a>
+        </div>
     </div>
     <div class={`${$showNavBar2 ? 'grid gap-2 grid-cols-2 bg-white' : 'hidden'}`}>
         {#each nav2 as nav2name}
