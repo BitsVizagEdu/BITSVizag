@@ -45,9 +45,9 @@
     <div class="{img.id} relative image-grid-col-2 image-grid-row-2">
         <img class="" src={img.pic} alt="architecture">
         <div id="overlayimg" class="flex flex-col opacity-0 top-0 absolute h-[100%] p-5 transition-[opacity] duration-500 bg-gradient-to-t from-black to-transparent  hover:opacity-70 justify-center first:justify-end w-full ">
-            <div class="p-10" >
-            <a href={img.href} class="font-black text-white text-4xl">{img.name}</a>
-            <a class="font-bold text-sortwhite text-3xl">{img.date}</a>
+            <div class="3xs:p-4 lg:p-10" >
+            <a href={img.href} class="font-black text-white 3xs:text-2xl lg:text-4xl">{img.name}</a>
+            <a class="font-bold text-sortwhite 3xs:text-xl lg:text-3xl">{img.date}</a>
             </div>
         </div>
     </div>
