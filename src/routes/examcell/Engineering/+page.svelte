@@ -1,5 +1,5 @@
 <script>
-     let activeTab = 'Library';
+     let activeTab = 'Academic Calendar';
     
 
 	let items = ['Academic Calendar','Academic Regulation','Syllabus','Results','Timetable','Circular & Notification','Online Discrepancies','Department Examcell Coordinators','Contactus']
