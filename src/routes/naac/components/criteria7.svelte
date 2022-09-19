@@ -1,153 +1,56 @@
-<table class="w-full text-sm text-left text-blue-100">
-    <thead class="text-xs text-gray-800 uppercase bg-gray-200">
-    <tr>
-        <th scope="col" class="py-3 px-6">
-            File Name
-        </th>
-        <th scope="col" class="py-3 px-6">
-            Links
-        </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-    </tr>
+<script>
+	
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    let criteria_7 = [
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    {
+        "name": "7.1.2",
+        "items" : [ "7.1.2.1","7.1.2.2","7.1.2.3","7.1.2.4"],
+        "link": ["link1","link2","link3","link4"]
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    },
+    {
+        "name": "7.1.4",
+        "items" : [ "7.1.4.1","7.1.4.2","7.1.4.3","7.1.4.4"],
+        "link": ["link1","link2","link3","link4"]
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    },
+    {
+        "name": "7.1.5",
+        "items" : [ "7.1.5.1","7.1.5.2","7.1.5.3","7.1.5.4","7.1.5.6"],
+        "link": ["link1","link2","link3","link4","link5"]
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    },
+    {
+        "name": "7.1.6",
+        "items" : [ "7.1.6.1","7.1.6.2","7.1.6.3","7.1.6.4","7.1.6.5","7.1.6.6"],
+        "link": ["link1","link2","link3","link4","link5","link6"]
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    },
+    {
+        "name": "7.1.7",
+        "items" : [ "7.1.7.1","7.1.7.2","7.1.7.3","7.1.7.4","7.1.7.5"],
+        "link": ["link1","link2","link3","link4","link5","link6"]
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    },
+    {
+        "name": "7.1.10",
+        "items" : [ "7.1.10.1"],
+        "link": ["link1"]
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+    },
+    ]
+</script>
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
+<div>
+    {#each criteria_7 as list}
+    <div>
+        <p>{list.name}</p>
+        {#each list.items as sublist, i}
+        <a href={list.link[i]} class="block">{sublist}</a>
+        {/each}
 
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
-
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
-
-    <tr class="bg-gray-500 border-b border-gray-700">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-            Some Name
-        </th>
-        <td class="py-4 px-6 text-gray-50">
-            TCS
-        </td>
-        
-    </tr>
-
-    </tbody>
-</table>
+    </div>
+    {/each}
+</div>
