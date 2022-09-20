@@ -1,5 +1,5 @@
 <script>
-    let activeTab = 'Library';
+    let activeTab = 'Criteria-1';
    
 
    let items = ['Criteria-1','Criteria-2','Criteria-3','Criteria-4','Criteria-5','Criteria-6', 'Criteria-7']
