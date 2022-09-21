@@ -28,7 +28,7 @@
    <title>NAAC</title>
 </svelte:head>
 
-
+<img src="./naaclogo.png" class="md:hidden ">
    <div class="total flex lg:flex-row 3xs:flex-col  h-[100%] ">
        <aside class="lg:w-[25%] p-5 rounded-lg  " aria-label="Sidebar">
            <div class="overflow-y-auto py-4 px-3   bg-blue-900 rounded-lg">

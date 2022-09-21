@@ -4,7 +4,7 @@
     export const ssr = false;
     import "../app.css"
     import Nav from "$lib/components/navmenu.svelte"
-
+    import BackToTop from '$lib/components/backtotop.svelte'
     import Hero from "$lib/components/navbar.svelte"
     import AOS from 'aos';
     import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -24,6 +24,7 @@
         <Nav/>
     {:else}
         <Hero showNavBar={showNavBar}/>
+        <BackToTop/>
         <slot />
     {/if}
 
