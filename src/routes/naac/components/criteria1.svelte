@@ -81,8 +81,9 @@
 
     ]
 </script>
+
 <div class="flex flex-row w-full">
-<div class="bg-indigo-800  rounded-2xl flex w-full flex-col md:w-auto">
+<div class="bg-indigo-800  rounded-2xl flex w-full flex-col md:w-auto mb-auto">
     {#each criteria_1 as list,y}
     <div class=" flex flex-col p-3 items-center justify-center">
         <div class="flex cursor-pointer  w-64 items-center justify-center  pb-2">
