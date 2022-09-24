@@ -77,20 +77,26 @@ function setValue(y){
 </script>
 
 <div class="flex flex-row  ">
-    <div class="bg-indigo-800 hidden md:flex  rounded-2xl flex w-full flex-col md:w-auto" >
+    <div class="bg-indigo-800 hidden md:flex  rounded-2xl flex w-full flex-col md:w-auto mb-auto" >
+
         {#each criteria_6 as list,y}
-            <div class=" flex flex-col p-3 items-center justify-center">
-                <div class="flex cursor-pointer  w-64 items-center justify-center  pb-2">
-                    <button on:click={() => setValue(y)} class=" w-96 {(show[y]) ? '  text-white ' : ' bg-slate-800 text-white'} inline text-lg p-4 rounded-xl font-extrabold items-center justify-center">{list.name}</button>
+        <div class="flex  max-w-min  rounded-2xl flex-row">
+            <div class=" flex  p-3">
+                <div class="cursor-pointer ] mx-2 max-h-[84px] ">
+                    <button on:click={() => setValue(y)}
+                            class=" {(show[y]) ? '  text-white ' : ' bg-white text-black '} inline text-lg p-4 rounded-xl font-bold ">{list.name}</button>
                 </div>
                 <!--{#if show[y]}-->
-                <div class="{(show[y]) ? ' hidden ' : 'block '}  w-64 rounded-xl bg-white items-center justify-center">
-                    {#each list.items as sublist, i}
-                        <a id={y} href={list.link[i]} class="{(show[y]) ? ' hidden ' : 'block '} text-black text-center p-4 pl-6 text-xl">{sublist}</a>
-                    {/each}
-                </div>
+
                 <!--{/if}-->
             </div>
+            <div id="left" class="{(show[y]) ? ' hidden ' : 'block '} z-10 w-52 max-h-min absolute 3xs:left-[46%]  2xs:left-[37%] xs:left-[33%]  rounded-md bg-sortwhite  ">
+                {#each list.items as sublist, i}
+                    <a id={y} href={list.link[i]}
+                       class="{(show[y]) ? ' hidden ' : 'block '} text-black text-center p-4 pl-6 text-xl  font-semibold">{sublist}</a>
+                {/each}
+            </div>
+        </div>
         {/each}
     </div>
     <div class=" md:hidden mb-auto main flex flex-col bg-indigo-800 max-w-min  max-h-min  rounded-2xl">
