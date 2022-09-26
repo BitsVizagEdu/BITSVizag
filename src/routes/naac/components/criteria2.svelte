@@ -74,7 +74,7 @@ function setValue(y){
         <div class="flex  max-w-min  rounded-2xl flex-row">
             <div class=" flex  p-3">
                 <div class="cursor-pointer ] mx-2 max-h-[84px] ">
-                    <button on:click={() => setValue(y)}
+                    <button on:focusin={() => setValue(y)} on:focusout={() => setValue(y)}
                             class=" {(show[y]) ? '  text-white ' : ' bg-white text-black '} inline text-lg p-4 rounded-xl font-bold ">{list.name}</button>
                 </div>
                 <!--{#if show[y]}-->
@@ -96,7 +96,7 @@ function setValue(y){
             <div class="flex  max-w-min  rounded-2xl flex-row">
                 <div class=" flex  p-3">
                     <div class="cursor-pointer ] mx-2 max-h-[84px] ">
-                        <button on:click={() => setValue(y)}
+                        <button on:focusin={() => setValue(y)} on:focusout={() => setValue(y)}
                                 class=" {(show[y]) ? '  text-white ' : ' bg-white text-black'} inline text-lg p-4 rounded-xl font-bold">{list.name}</button>
                     </div>
                     <!--{#if show[y]}-->
