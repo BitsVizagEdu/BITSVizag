@@ -1,6 +1,6 @@
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
 	<div>
-        <h1 class="text-4xl font-bold text-center mb-10 text-red1">Under Graduation Programme</h1>
+        <h1 class="text-4xl font-bold text-center mb-10 text-red1">Post Graduation Programme</h1>
 	<div class="flex">
 		<div class="w-[50%] pr-7">
 			<h1 class="text-2xl xl:text-3xl font-bold ">Master of Technology</h1>
