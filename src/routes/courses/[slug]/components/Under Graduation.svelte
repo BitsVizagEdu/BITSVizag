@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<div>
-		<h1 class="text-2xl">Courses Offered</h1>
+		<h1 class="text-2xl font-semibold">Courses Offered</h1>
 	</div>
 
     <br>
@@ -116,7 +116,7 @@
                     <td
                       class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
                     >
-                      3
+                      4
                     </td>
                     <td
                       class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
@@ -135,7 +135,7 @@
                     <td
                       class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
                     >
-                      3
+                      5
                     </td>
                     <td
                       class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
