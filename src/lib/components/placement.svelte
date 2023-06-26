@@ -4,25 +4,26 @@
 		<div class="slider lg:min-h-[30vh]">
 			<div class="slide-track ">
 				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Capgemini.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/HCL.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Infosys.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/microsoft.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Tcs.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Techmahindra.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Wipro.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/google.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Cognizant.png" alt="" /></div>
 				<!-- same 9 slides doubled (duplicate) -->
 				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Capgemini.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/HCL.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Infosys.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/microsoft.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Tcs.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Techmahindra.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Wipro.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Google.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/Cognizant.png" alt="" /></div>
 			</div>
 		</div>
 	</div>
