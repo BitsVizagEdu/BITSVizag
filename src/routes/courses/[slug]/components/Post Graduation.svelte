@@ -174,6 +174,94 @@
 		<h1 class="text-2xl">Courses Offered</h1>
 	</div>
     <br>
-    
+    <section class="bg-white ">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="max-w-full overflow-x-auto">
+              <table class="w-full table-auto">
+                <thead>
+                  <tr class="bg-red1 bg-opacity-90 text-center">
+                    <th
+                      class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+                    >
+                      Sl.No
+                    </th>
+                    <th
+                      class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+                    >
+                      Courses Offered
+                    </th>
+                    <th
+                      class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+                    >
+                     Intake
+                    </th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                    >
+                    HUMAN RESOURCES
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      60
+                    </td>
+                    
+                  </tr>
+                  <tr>
+                    <td
+                      class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                    >
+                    MARKETING
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      60
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                    >
+                    FINANCE
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      18
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
     </div>
 </section>
