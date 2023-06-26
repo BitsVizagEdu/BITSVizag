@@ -1,8 +1,8 @@
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
 	<h1 class="text-4xl font-bold text-center mb-10 text-red1">Under Graduation Programme</h1>
-	<div class="flex">
-		<div class="w-[50%] pr-7">
-			<h1 class="text-2xl xl:text-3xl font-bold ">Bachelor of Technology</h1>
+	<div class="flex flex-col-reverse lg:flex-row items-center">
+		<div class="lg:w-[50%] pr-7">
+			<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0 ">Bachelor of Technology</h1>
 			<br />
 			<h1 class="text-justify ">
 				Bachelor of Technology (B.Tech): Embark on a transformative journey in the field of
@@ -20,7 +20,7 @@
 			</h1>
 		</div>
 
-		<div class="w-[50%]">
+		<div class="w-[75%] lg:w-[50%]">
 			<img src="/ug.jpg" alt="" />
 		</div>
 	</div>
