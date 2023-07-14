@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from "svelte-preprocess";
 
 /** @type {{preprocess: (PreprocessorGroup & {defaultLanguages: Readonly<{markup: string; style: string; script: string}>})[], kit: {methodOverride: {allowed: string[]}, adapter: Adapter}}} */
@@ -14,7 +14,9 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			runtime: 'nodejs18.x',
+		}),
 	}
 };
 
