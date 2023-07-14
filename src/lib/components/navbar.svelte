@@ -11,7 +11,34 @@
     import {NavItems} from './navItem.js';
     import {replaceHyphenWithSpace} from "../../routes/aboutus/[slug]/components/utils.js";
 
-    let nav2 = ['BITS Login', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
+    let nav3 = [
+        {
+            name: "Staff",
+            link: "/staff"
+        },
+        {
+            name: "AICTE",
+            link: "/aicte"
+        },
+        {
+            name: "Alumni",
+            link: "/alumni"
+        },
+        {
+            name: "Downloads",
+            link: "/downloads"
+        },
+        {
+            name: "Placements",
+            link: "/placements"
+        },
+        {
+            name: "Instagram",
+            link: "https://www.instagram.com/bits_vizag_official/"
+        }
+    ]
+
+    let nav2 = ['Staff', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
     function onClick(item){
         toggleIsActiveTab(true)
         setActiveTabValue(item)
@@ -134,10 +161,10 @@
         </div>
     </div>
     <div class={`${$showNavBar2 ? 'grid gap-2 grid-cols-2 bg-white' : 'hidden'}`}>
-        {#each nav2 as nav2name}
+        {#each nav3 as nav3Data}
             <div class="flex flex-col  justify-center items-center lg:hidden bg-white  ">
-                <button class="flex items-center justify-between mx-14 my-2">
-                    <span class="text-black text-left py-1 font-semibold  text-base mr-2">{nav2name}</span>
+                <button class="flex items-center justify-between mx-14 my-2" on:click={() => window.location.href = nav3Data.link}>
+                    <span class="text-black text-left py-1 font-semibold  text-base mr-2">{nav3Data.name}</span>
                 </button>
             </div>
         {/each}
@@ -231,8 +258,8 @@
 
     <nav id="nav2" class=" hidden bg-white border-b-0 border-purpleS2 2xs:hidden lg:block">
         <div class="nav2 flex justify-center mx-10  items-center  ">
-            {#each nav2 as nav2name}
-                <a class="{nav2name} w-full text-black inline border-b-4 border-slate-200 hover:border-purpleS2 p-[10px]   text-[15px] tracking-wider text-center  cursor-pointer ">{nav2name}</a>
+            {#each nav3 as nav3Data}
+                <a class="{nav3Data.name} w-full text-black inline border-b-4 border-slate-200 hover:border-purpleS2 p-[10px]   text-[15px] tracking-wider text-center  cursor-pointer " href="{nav3Data.link}">{nav3Data.name}</a>
             {/each}
         </div>
     </nav>
