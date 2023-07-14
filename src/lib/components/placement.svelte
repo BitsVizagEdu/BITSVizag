@@ -1,3 +1,95 @@
+<script>
+
+let details = [
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+	{
+		name: "Sandeep",
+		job: "Infinite Proxies",
+		branch: "CSE"
+	},
+
+]
+</script>
+
 <section class="lg:flex-row justify-evenly items-center 3xs:flex-col flex ">
 	<div class="container flex flex-col px-4 sm:px-12 py-8 3xs:w-full lg:w-1/2 justify-between items-center basis-1/2 min-h-[10vh]">
 		<h3 class="text-3xl font-semibold p-4">COMPANY VISITED</h3>
@@ -46,172 +138,24 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
+					{#each details as item, i}
+					<tr class="bg-gray-500 border-b border-gray-700">
+						<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
+							{item.name}
+						</th>
+						<td class="py-4 px-6 text-gray-50">
+							{item.job}
+						</td>
+						<td class="py-4 px-6 text-gray-50">
+							{item.branch}
+						</td>
+					</tr>
+                                {/each}
+				
 
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
-				</tr>
-
-				<tr class="bg-gray-500 border-b border-gray-700">
-					<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
-						Some Name
-					</th>
-					<td class="py-4 px-6 text-gray-50">
-						TCS
-					</td>
-					<td class="py-4 px-6 text-gray-50">
-						CSE
-					</td>
+				<tr class="item-center text text-center ">
+					<th></th>
+					<a href="/placements"><td colspan="3" class="text-slate-800 text-center justify-center items-center font-bold"> More Info</td></a>
 				</tr>
 
 				</tbody>
