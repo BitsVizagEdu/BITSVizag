@@ -42,7 +42,7 @@
                 >
                     <img
                             class="bg-transparent md:hidden lg:flex p-1 flex justify-content: flex-start"
-                            src="/azadhi.png"
+                            src="/naac.png"
                             alt="circle"
                             height="150px"
                             width="150px"
@@ -170,7 +170,7 @@
                             <a class="md:w-5 md:h-5  lg:w-6 lg:h-6 pr-1 lg:pr-0 mt-2">{@html navName.icon}</a>
                             <div>
                                 {#if navName.items.length > 0}
-                                    <button href={`${navName.folder}`}
+                                    <button href ={`${navName.folder}`}
                                             class="text-white font-semibold lg:px-[7px]  py-2 pt-0 md:px-1 rounded inline-flex items-center hover:underline underline-offset-4 "
                                     >
 									<span class="text-white xl:text-[15px] 2xl:text-[16.5px] 3xs:text-[13px] lg:text-[10px]"
