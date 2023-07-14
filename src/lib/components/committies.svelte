@@ -16,43 +16,67 @@
 
     let items = [
         {
-            title: "Title",
+            title: "Anti Ragging Committee",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Online Grievance Redressal",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Research & Development",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Enterprenurial Development Cell",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Women Grievance &  Redressal",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "SC / ST Cell",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Training & Placement",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "IPR",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Disciplinary Committee",
             description: "Description"
         },
         {
-            title: "Title",
+            title: "Cultural",
+            description: "Description"
+        },
+        {
+            title: "Admissions",
+            description: "Description"
+        },
+        {
+            title: "NSS",
+            description: "Description"
+        },
+        {
+            title: "Sports Committee",
+            description: "Description"
+        },
+        {
+            title: "Hostel",
+            description: "Description"
+        },
+        {
+            title: "Canteen",
+            description: "Description"
+        },
+        {
+            title: "Library",
             description: "Description"
         },
     ]
@@ -61,14 +85,14 @@
 <section class="text-center bg-slate-800 font-sans xs:px-0 3xs:p-24 ">
     <div class="flex flex-col justify-center items-center ">
         <div class="flex flex-col items-center ">
-            <p class=" text-3xl text-white p-3">Professional Committie</p>
+            <p class=" text-3xl text-white font-bold p-3">Professional Committie</p>
             <p class=" text-2xl text-white pb-2">BITS Vizag provides you </p>
         </div>
-        <div class="grid xl:grid-cols-5 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-2   items-center ">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-2  ">
             {#each items as item, i}
-                <div on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px] bg-white flex flex-col items-center m-2 rounded-[5px] `}>
-                    <div class="p-[10px] capitalize font-bold">{item.title}</div>
-                    <div class="capitalize overflow-hidden text-center">{item.description}</div>
+                <div on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px]  bg-white flex justify-center  items-center  m-2 rounded-[5px] `}>
+                    <div class="p-[10px] text-center capitalize font-bold">{item.title}</div>
+                    
                 </div>
             {/each}
         </div>
