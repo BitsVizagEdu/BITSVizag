@@ -4,7 +4,7 @@
     import {replaceHyphenWithSpace} from "../../routes/aboutus/[slug]/components/utils.js";
 
     let nav2 = [
-        'BITS Login',
+        'Staff',
         'AICTE',
         'Admission',
         'Alumni',
