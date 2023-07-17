@@ -2,30 +2,101 @@
     <div class="flex  flex-col-reverse justify-center items-center  mx-auto   ">
         <div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
             <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
-                <h2>CIRCULAR & NOTIFICATION</h2>
+                <h2 class="text-4xl">CIRCULAR & NOTIFICATION</h2>
             </div>
-            <div>
-                <p class="text-justify md:text-[15px]  3xs:tracking-normal lg:text-[20px] xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                    BITS Vizag has the provision of a spacious and hygienic canteen that caters to the taste of all students. 
-                </p>
-            </div>
-            <div>
-                 <p class="text-justify md:text-[15px] 3xs:tracking-normal lg:text-[20px] xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The canteen and cafeteria are equipped with modern furniture, cooking and storing and refrigeration facilities, which provide hot lunch, snacks and beverages both to the students and staff at reasonable rates.
-                </p>
-            </div>
-            <div>
-                 <p class="text-justify md:text-[15px] 3xs:tracking-normal lg:text-[20px] xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    It can comfortably accommodate more than 300 students at a time.It is well maintained with efficient service counter..
-                </p>
-            </div>
-            <div>
-                <p class="text-justify md:text-[15px] 3xs:tracking-normal lg:text-[20px] xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The canteen serves a variety of dishes and remains open on all working days.Beverages as per the prevailing season and requirements of the students are available.To break away from the daily academic routine students can unwind during the evenings at cafeteria offering a wide range of fast food varieties at nominal prices.
-                 </p>
-           </div>
-
+            <div class="table-box">
+                <div class="table-row table-head">
+                    <div class="table-cell first-cell last-cell">
+                        <p>Stream/Year</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p>Links</p>
+                    </div> 
+                </div>
+        
+        
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-sm">Academic Calendar</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>   
+                </div>
+        
+        
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-sm">List of Working days/ Holidays</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+        
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-sm">Academic Calendar B.Tech</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+        </div>   
         </div>
         
     </div>
 </section>
+
+<style>
+
+.table-box
+{
+    margin: 40px auto;
+}
+
+.table-row{
+    display: table;
+    width: 80%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #000000;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+}
+.table-head{
+    background: #1E3A8A;
+    box-shadow: none;
+    color: #fff;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+}
+.table-head .table-cell{
+    border-right: none;
+}
+.table-cell{
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+.last-cell{
+    border-right: none;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-row {
+    font-size: 13px;
+  }
+}
+</style>
