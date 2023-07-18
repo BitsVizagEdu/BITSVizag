@@ -46,7 +46,7 @@
         </div>
     </div>
     <Gallery/>
-<!--    <Events/>-->
+    <Events/>
     <Strength/>
     <Placement/>
     <Committies/>
