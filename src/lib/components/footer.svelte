@@ -1,162 +1,138 @@
-<section class=" bg-black ">
-	<div class="flex basis-1/4 justify-between p-12 flex-wrap w-full items-center">
-		<div class=" text-white flex flex-col justify-center items-start p-5 md:px-0">
-			<div class="relative">
-				<p class="pb-4 text-lg font-bold">Quick Links</p>
-				<div class="underline-style">
-					<span></span>
+<script>
+	import gsap from 'gsap/dist/gsap';
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		let timeline_footer = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#joinnowf',
+				toggleActions: 'play none none none',
+				start: '0% 80%',
+				// markers: true
+			}
+		});
+
+		timeline_footer
+			.from('#joinnow', {
+				delay:1,
+				// duration:1,
+				opacity: 0,
+				translateY: '-20px'
+			})
+			.from('#tagline-f', {
+				// duration:1,
+				opacity: 0,
+				translateY: '20px'
+			})
+			.from('#joinnowbtn', {
+				// duration:1,
+				opacity: 0,
+				// scaleX:0,
+				translateY: '15px'
+			});
+	});
+</script>
+
+<section class="" data-aos="fade-up" data-aos-anchor-placement="top-center">
+	<div>
+		<div class="bg-[#0c1637]  rounded-t-[40px]">
+			<div
+                
+				id="joinnowf"
+				class=" bg-cover h-[500px] md:h-[75vh] rounded-[40px]"
+				style="background-image: url(/bgfooter.webp);"
+			>
+				<div
+					class="3xs:h-[75vh] md:h-[75vh] backdrop-blur-none rounded-[40px] grid place-content-center"
+				>
+					<div id="joinnow" class="grid place-items-center">
+						<span
+							class="font-extrabold text-white text-8xl  xs:text-9xl lg:text-[150px] text-center"
+							>JOIN<br />NOW!</span
+						>
+					</div>
+					<div id="tagline-f" class="flex justify-center mt-2">
+						<span class="font-semibold text-white 3xs:text-2xl xs:text-3xl md:text-4xl text-center"
+							>You are the light of the world</span
+						>
+					</div>
+					<a href="/admissions" id="joinnowbtn" class="flex justify-center mt-4">
+						<button
+							class=" group flex flex-row bg-white shadow-2xl shadow-gray-600 text-[#0c1637] xl:text-xl text-base font-medium p-2 xl:p-4 rounded-full duration-700 hover:bg-[#0c1637] hover:text-white"
+						>
+						<div class="px-3"><svg  class="rotate-[315deg] duration-700 group-hover:fill-white" viewBox="0 0 24 25" role="img" data-v-ab5c9590="" width="24"  height="25" ><path fill-rule="evenodd" clip-rule="evenodd" d="M16.961 18.085a.459.459 0 0 0 .023.68.545.545 0 0 0 .732-.02l5.648-5.592.333-.33-.333-.33-5.572-5.516a.545.545 0 0 0-.732-.02.459.459 0 0 0-.023.68l4.76 4.712H.713c-.276 0-.5.224-.498.5 0 .276.226.5.502.5h21.028l-4.784 4.736Z"></path></svg></div> Admissions Enquiry
+						</button>
+					</a>
 				</div>
 			</div>
-			<p class="py-1">About Bits</p>
-			<p class="py-1">NAAC</p>
-			<p class="py-1">Anti Ragging</p>
-			<p class="py-1">Mandatory Disclosure</p>
-			<p class="py-1">Amenities</p>
-			<p class="py-1">Grievance Cell</p>
-		</div>
-		<div class=" text-white flex flex-col justify-center items-start p-5 md:px-0">
-			<div class="relative">
-				<p class="pb-4 text-lg font-bold">Examination Section</p>
-				<div class="underline-style">
-					<span></span>
+			<div class="md:h-[350px] flex 3xs:flex-col md:flex-row p-6">
+				<div class=" md:w-[50%] flex flex-col justify-between md:py-8">
+					<div>
+						<p class="text-center md:text-start text-white font-semibold 3xs:text-xl md:text-2xl md:mr-[5%]">
+							"The future belongs to those who believe in the beauty of their dreams." 
+						</p>
+					</div>
+					<div class="flex 3xs:flex-col my-5 md:my-0 lg:flex-row items-center md:items-start lg:items-center  ">
+						<a href="/contactus"
+							class="flex flex-row group text-center justify-evenly items-center 3xs:px-2 md:px-8 duration-700 bg-gradient-to-r hover:bg-gradient-to-t from-[#6edad8] via-[#64d9d6] to-[#1aa9e8] 3xs:w-[100%] 2xs:w-[300px] lg:w-[55%] lg:max-w-[350px] md:w-[90%] 3xs:my-4 sm:my-0 h-[10vh] rounded-3xl"
+						>
+							<a href="/contactus"
+								><p class="font-semibold text-xl group-hover:scale-[1.2] duration-300">
+									Contact US
+								</p></a
+							>
+							<a href="/contactus">
+								<div
+									class="bg-white h-[50px] group-hover:h-[55px] w-[50px] group-hover:w-[55px] duration-300 rounded-full grid place-items-center"
+								>
+									<img class="" src="./arrow.svg" />
+								</div>
+							</a>
+						</a>
+						<div
+							class="grid grid-cols-5 items-center lg:px-4 3xs:my-4 md:my-0 justify-items-center 3xs:w-[100%] md:mt-5 lg:mt-0 md:w-[90%] lg:w-[50%]"
+						>
+							<div><a href="https://www.facebook.com/catherinebheemili/"><img src="./facebook.svg" alt="#" /></a></div>
+							<div><a href=""><img src="./instagram.svg" alt="#" /></a></div>
+							<div><a href=""><img src="./youtube.svg" alt="#" /></a></div>
+							<div><a href=""><img src="./twitter.svg" alt="#" /></a></div>
+							<div><a href=""><img src="./linkedin.svg" alt="#" /></a></div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<p class="py-1">Examination Section</p>
-			<p class="py-1">Gallery</p>
-			<p class="py-1">Academic Calendar</p>
-			<p class="py-1">Academic Regulation</p>
-			<p class="py-1">Circular & Notification</p>
-			<p class="py-1">Online Discrepancies</p>
-		</div>
-		<div class=" text-white flex flex-col justify-center items-start p-5 md:px-0">
-			<div class="relative">
-				<p class="pb-4 text-lg font-bold">About BITS Campus</p>
-				<div class="underline-style">
-					<span></span>
+				<div class="flex 2xs:flex-row md:w-[50%] justify-evenly">
+					<div class="flex 3xs:flex-col   text-white pr-6  pt-6">
+						<div class="w-[60%] xl:w-[50%]">
+							<div class="pb-2 w-max">
+								<a href="/" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Home</a>						</div>
+							<div class="pb-2 w-max">
+								<a href="/aboutus" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">About Us</a>
+							</div>
+							<div class="pb-2 w-max">
+								<a href="/admissions" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Admissions</a>
+							</div>
+							<div class="pb-2 w-max">
+								<a href="/facilites" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Facilities</a>
+							</div>
+							<div class="pb-2 w-max">
+								<a href="/gallery" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Gallery</a>
+							</div>
+							<!-- <div class="pb-2 w-max"><p class="sm:hover:scale-[1.1] cursor-pointer  duration-300">Credits</p></div> -->
+						</div>
+						<div class="w-[30%] xl:w-[50%] mt-10">
+							<div class="pb-2 w-max"><a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-xl  duration-300">Exam Cell</a></div>
+							<div class="pb-2 w-max"><a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-xl duration-300">Payment</a></div>
+							<!-- <div class="pb-2 w-max"><p class="sm:hover:scale-[1.1] cursor-pointer  duration-300">NFB Education</p></div> -->
+						</div>
+					</div>
+					<div class="">
+						<iframe class="rounded-2xl w-[100%] xl:w-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.5764681637656!2d83.32984371488234!3d17.811591387825697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395befa9dda303%3A0x5781c56a5df412!2sBaba%20Institute%20of%20Technology%20%26%20Sciences!5e0!3m2!1sen!2sin!4v1689674946811!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 				</div>
-			</div>
-			<p class="py-1">Examination Section</p>
-			<p class="py-1">Gallery</p>
-			<p class="py-1">Academic Calendar</p>
-			<p class="py-1">Academic Regulation</p>
-			<p class="py-1">Circular & Notification</p>
-			<p class="py-1">Online Discrepancies</p>
-		</div>
-		<div class=" text-white flex flex-col justify-center items-start p-5 md:px-0">
-			<div class="relative">
-				<p class="pb-4 text-lg font-bold">Contact</p>
-				<div class="underline-style">
-					<span></span>
-				</div>
-			</div>
-			<div class="py-1 flex">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6 text-black bg-white rounded-sm p-1"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-					/>
-				</svg>
-				<p class="pl-2">BITS Vizag</p>
-			</div>
-			<div class="py-1 flex">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6 text-black bg-white rounded-sm p-1"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-					/>
-				</svg>
-				<p class="pl-2 ">
-					Baba Institute of Technology & Sciences <br />
-					Near Pothinamallayyapalem, <br />
-					Pothinamallayya Palem,<br />
-					Visakhapatnam,<br />
-					Andhra Pradesh 530041
-				</p>
-			</div>
-			<div class="py-1 flex">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6 text-black bg-white rounded-sm p-1"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-					/>
-				</svg>
-				<p class="pl-2">+91 987654321</p>
-			</div>
-			<div class="py-1 flex">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6 text-black bg-white rounded-sm p-1"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-					/>
-				</svg>
-				<p class="pl-2">principal@bitsvizag.com</p>
 			</div>
 		</div>
 	</div>
+	<div class="text-center bg-[#0c1637] my-[-2px] text-white py-2">Made with ❤️ by <span class="text-orange-300"><a href="https://www.konkorde.org">KONKORDE</a></span></div>
 </section>
-
-<style>
-	.underline-style {
-		width: 100%;
-		height: 5px;
-		background: #767676;
-		border-radius: 3px;
-		position: absolute;
-		top: 30px;
-		left: 0;
-		overflow: hidden;
-	}
-
-	.underline-style span {
-		width: 25px;
-		height: 100%;
-		background: red;
-		border-radius: 3px;
-		position: absolute;
-		top: 0;
-		left: 10px;
-		animation: moving 2s linear infinite;
-	}
-
-	@keyframes moving {
-		0% {
-			left: -20px;
-		}
-
-		100% {
-			left: 100%;
-		}
-	}
-</style>

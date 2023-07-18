@@ -82,15 +82,15 @@
     ]
 </script>
 
-<section class="text-center bg-slate-800 font-sans xs:px-0 3xs:p-24 ">
+<section class="text-center  font-sans xs:px-0 3xs:p-24  ">
     <div class="flex flex-col justify-center items-center ">
         <div class="flex flex-col items-center ">
-            <p class=" text-3xl text-white font-bold p-3">Professional Committie</p>
-            <p class=" text-2xl text-white pb-2">BITS Vizag provides you </p>
+            <p class=" text-3xl  font-bold p-3">Professional Committie</p>
+            <p class=" text-2xl  pb-2">BITS Vizag provides you </p>
         </div>
         <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-2  ">
             {#each items as item, i}
-                <div on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px]  bg-white flex justify-center  items-center  m-2 rounded-[5px] `}>
+                <div on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px]  bg-white flex justify-center shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] items-center  m-2 rounded-[5px] `}>
                     <div class="p-[10px] text-center capitalize font-bold">{item.title}</div>
                     
                 </div>
