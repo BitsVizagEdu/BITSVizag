@@ -95,11 +95,11 @@
 						<div
 							class="grid grid-cols-5 items-center lg:px-4 3xs:my-4 md:my-0 justify-items-center 3xs:w-[100%] md:mt-5 lg:mt-0 md:w-[90%] lg:w-[50%]"
 						>
-							<div><a href="https://www.facebook.com/catherinebheemili/"><img src="./facebook.svg" alt="#" /></a></div>
-							<div><a href=""><img src="./instagram.svg" alt="#" /></a></div>
-							<div><a href=""><img src="./youtube.svg" alt="#" /></a></div>
+							<div><a href="https://www.facebook.com/BITSVizagOfficial/"><img src="./facebook.svg" alt="#" /></a></div>
+							<div><a href="https://www.instagram.com/bits_vizag_official/"><img src="./instagram.svg" alt="#" /></a></div>
+							<div><a href="https://www.youtube.com/@bitsmediacenter8449"><img src="./youtube.svg" alt="#" /></a></div>
 							<div><a href=""><img src="./twitter.svg" alt="#" /></a></div>
-							<div><a href=""><img src="./linkedin.svg" alt="#" /></a></div>
+							<div><a href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"><img src="./linkedin.svg" alt="#" /></a></div>
 						</div>
 					</div>
 				</div>
