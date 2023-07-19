@@ -9,6 +9,7 @@
     import Video from "$lib/components/video.svelte"
 
     import {onMount} from "svelte";
+	import Placementheader from "$lib/components/placementheader.svelte";
 	
 
     function scaleLogo(y){
@@ -46,6 +47,7 @@
             <img src="/sq.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
         </div>
     </div>
+    <Placementheader/>
     <Gallery/>
     <Events/>
     <Strength/>
