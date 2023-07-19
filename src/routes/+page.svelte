@@ -7,6 +7,7 @@
     import Placement from "$lib/components/placement.svelte"
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
     import Video from "$lib/components/video.svelte"
+   
 
     import {onMount} from "svelte";
 
@@ -45,6 +46,7 @@
             <img src="/sq.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
         </div>
     </div>
+    
     <Gallery/>
     <Events/>
     <Strength/>

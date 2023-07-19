@@ -7,6 +7,7 @@
     import BackToTop from '$lib/components/backtotop.svelte'
     import Hero from "$lib/components/navbar.svelte"
     import AOS from 'aos';
+    import Middlenav from "$lib/components/middlenav.svelte";
     import 'aos/dist/aos.css'; // You can also use <link> for styles
     // ..
 
@@ -21,11 +22,14 @@
 
 <main>
     {#if $showNavBar}
-        <Nav/>
+    
+        
     {:else}
+    
         <Hero showNavBar={showNavBar}/>
+        <Middlenav/>
         <BackToTop/>
         <slot />
     {/if}
-
+    
 </main>
