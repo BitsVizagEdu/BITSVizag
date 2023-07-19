@@ -90,7 +90,7 @@
 			HOD MESSAGE - Dr. Narrasimha Murti Dusi
 		</h1>
 		<div class="flex justify-center w-[100%] pt-8">
-			<img src="/lab.jpeg" alt="" />
+			<img src="/ece hod.jpg" alt="" />
 		</div>
 	</div>
 	<div class="text-justify mt-8 text-lg flex flex-col gap-5">
