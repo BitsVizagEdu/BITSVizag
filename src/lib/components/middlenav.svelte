@@ -42,8 +42,8 @@
 			</li>
 			<li>
 				<a href="/courses" class="desktop-item">Courses</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">Courses</label>
+				<input type="checkbox" id="courses" />
+				<label for="courses" class="mobile-item">Courses</label>
 				<div class="mega-box">
 					<div class="content">
 						<div class="row">
@@ -73,8 +73,8 @@
 			</li>
 			<li>
 				<a href="" class="desktop-item">Departments</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">Departments</label>
+				<input type="checkbox" id="departments" />
+				<label for="departments" class="mobile-item">Departments</label>
 				<div class="mega-box">
 					<div class="content">
 						<div class="row">
@@ -120,11 +120,11 @@
 				
 			</li>
 			<li><a href="/placements">Placements</a></li>
-			<li><a href="#">Academics</a></li>
+			<!--<li><a href="#">Academics</a></li>-->
 			<li>
 				<a href="" class="desktop-item">Exam Cell</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">Exam Cell</label>
+				<input type="checkbox" id="exam" />
+				<label for="exam" class="mobile-item">Exam Cell</label>
 				<div class="mega-box">
 					<div class="content">
 						<div class="row">
@@ -147,10 +147,10 @@
 			</li>
 			<li><a href="/facilities">Facilities</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li>
+			<!--<li>
 				<a href="#" class="desktop-item">IQAC</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">IQAC</label>
+				<input type="checkbox" id="icac" />
+				<label for="icac" class="mobile-item">IQAC</label>
 				<div class="mega-box">
 					<div class="content">
 						<div class="row">
@@ -192,9 +192,11 @@
 						
 					</div>
 				</div>
-			</li>
-			<li><a href="/naac">NAAC</a></li>
+			</li>-->
+			<!--<li><a href="/naac">NAAC</a></li>-->
 			<li><a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985">Online Payment</a></li>
+			<li><a href="/contactus">Contact Us</a></li>
+			<li><a href="https://www.instagram.com/bits_vizag_official/">Social Life</a></li>
 			
 		</ul>
 		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
@@ -274,7 +276,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 19px;
+		font-size: 17px;
 		font-weight: 600;
 		padding: 9px 10px;
 		border-radius: 5px;
@@ -417,8 +419,12 @@
 			box-shadow: none;
 			transition: all 0.3s ease;
 		}
-		#showDrop:checked ~ .drop-menu,
-		#showMega:checked ~ .mega-box {
+		#courses:checked ~ .mega-box,
+		#showMega:checked ~ .mega-box,
+		#departments:checked ~ .mega-box,
+		#exam:checked ~ .mega-box,
+		#iqac:checked ~ .mega-box
+		{
 			max-height: 100%;
 		}
 		.nav-links .desktop-item {
