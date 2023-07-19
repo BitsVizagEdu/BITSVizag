@@ -7,6 +7,7 @@
     import Placement from "$lib/components/placement.svelte"
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
     import Video from "$lib/components/video.svelte"
+   
 
     import {onMount} from "svelte";
 	import Placementheader from "$lib/components/placementheader.svelte";
