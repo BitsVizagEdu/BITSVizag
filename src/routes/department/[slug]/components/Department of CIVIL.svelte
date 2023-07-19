@@ -1,5 +1,6 @@
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
-	<h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Civil Engineering</h1>
+	<img src="/header/civil.png" alt="" srcset="">
+	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Civil Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/lab.jpeg" alt="" />
 	</div>
