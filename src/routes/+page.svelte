@@ -44,10 +44,13 @@
 
         <div id="scale-logo" class="vidlogo absolute flex justify-center items-center h-full w-full">
             <img src="/logow.svg" class="mb-24 w-auto lg:h-52 md:h-44 mr-4 pb-10 3xs:h-24 xs:h-32" />
-            <img src="/sq.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
+            <img src="/sq-1.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
         </div>
     </div>
     <Placementheader/>
+    
+    <h1 class="3xs:text-lg xs:text-xl md:text-4xl text-center p-4 md:p-10 bg-white ">CELEBRATE LIFE AT BITS VIZAG</h1>
+
     <Gallery/>
     <Events/>
     <Strength/>
