@@ -59,7 +59,7 @@
 							>Be a Part of BITS FAMILY</span
 						>
 					</div>
-					<a href="/admissions" id="joinnowbtn" class="flex justify-center mt-4">
+					<a href="/contactus" id="joinnowbtn" class="flex justify-center mt-4">
 						<button
 							class=" group flex flex-row bg-white shadow-2xl shadow-gray-600 text-[#0c1637] xl:text-xl text-base font-medium p-2 xl:p-4 rounded-full duration-700 hover:bg-[#0c1637] hover:text-white"
 						>
