@@ -88,18 +88,18 @@
 								<div
 									class="bg-white h-[50px] group-hover:h-[55px] w-[50px] group-hover:w-[55px] duration-300 rounded-full grid place-items-center"
 								>
-									<img class="" src="./arrow.svg" />
+									<img class="" src="/arrow.svg" />
 								</div>
 							</a>
 						</a>
 						<div
 							class="grid grid-cols-5 items-center lg:px-4 3xs:my-4 md:my-0 justify-items-center 3xs:w-[100%] md:mt-5 lg:mt-0 md:w-[90%] lg:w-[50%]"
 						>
-							<div><a href="https://www.facebook.com/BITSVizagOfficial/"><img src="./facebook.svg" alt="#" /></a></div>
-							<div><a href="https://www.instagram.com/bits_vizag_official/"><img src="./instagram.svg" alt="#" /></a></div>
-							<div><a href="https://www.youtube.com/@bitsmediacenter8449"><img src="./youtube.svg" alt="#" /></a></div>
-							<div><a href=""><img src="./twitter.svg" alt="#" /></a></div>
-							<div><a href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"><img src="./linkedin.svg" alt="#" /></a></div>
+							<div><a href="https://www.facebook.com/BITSVizagOfficial/"><img src="/facebook.svg" alt="#" /></a></div>
+							<div><a href="https://www.instagram.com/bits_vizag_official/"><img src="/instagram.svg" alt="#" /></a></div>
+							<div><a href="https://www.youtube.com/@bitsmediacenter8449"><img src="/youtube.svg" alt="#" /></a></div>
+							<div><a href=""><img src="/twitter.svg" alt="#" /></a></div>
+							<div><a href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"><img src="/linkedin.svg" alt="#" /></a></div>
 						</div>
 					</div>
 				</div>
@@ -107,24 +107,24 @@
 					<div class="flex 3xs:flex-col   text-white pr-6  pt-6">
 						<div class="w-[60%] xl:w-[50%]">
 							<div class="pb-2 w-max">
-								<a href="/" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Home</a>						</div>
+								<a href="/" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Home</a>						</div>
 							<div class="pb-2 w-max">
-								<a href="/aboutus/About-BITS-Vizag" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">About Us</a>
+								<a href="/aboutus/About-BITS-Vizag" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">About Us</a>
 							</div>
 							<div class="pb-2 w-max">
-								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Department</a>
+								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Department</a>
 							</div>
 							<div class="pb-2 w-max">
-								<a href="/facilites" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Facilities</a>
+								<a href="/facilites" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Facilities</a>
 							</div>
 							<div class="pb-2 w-max">
-								<a href="/gallery" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Gallery</a>
+								<a href="/gallery" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Gallery</a>
 							</div>
 							<!-- <div class="pb-2 w-max"><p class="sm:hover:scale-[1.1] cursor-pointer  duration-300">Credits</p></div> -->
 						</div>
 						<div class="w-[30%] xl:w-[50%] mt-10">
-							<div class="pb-2 w-max"><a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-xl  duration-300">Exam Cell</a></div>
-							<div class="pb-2 w-max"><a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-xl duration-300">Payment</a></div>
+							<div class="pb-2 w-max"><a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-lg  duration-300">Exam Cell</a></div>
+							<div class="pb-2 w-max"><a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300">Payment</a></div>
 							<!-- <div class="pb-2 w-max"><p class="sm:hover:scale-[1.1] cursor-pointer  duration-300">NFB Education</p></div> -->
 						</div>
 					</div>

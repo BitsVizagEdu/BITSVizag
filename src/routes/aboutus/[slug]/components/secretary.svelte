@@ -23,7 +23,7 @@
         </div>
         <div id="pic " class="flex flex-col justify-between ">
             <div>
-                <img src="/mam.jpg" class=" 3xs:h-[300px] xs:h-[400px] md:h-[550px] p-3 rounded-md xl:h-auto" alt=""/>
+                <img src="/mam.jpg" class=" 3xs:h-[300px] xs:h-[400px] md:h-[550px] p-3 rounded-[50px] xl:h-auto" alt=""/>
             </div>
             <div><p class=" text-center font-bold text-2xl" >Dr.K.Srilakshmi</p>
             </div>
