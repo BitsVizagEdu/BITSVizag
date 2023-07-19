@@ -77,14 +77,10 @@
                 </div>
             </div>
             <div class="flex flex-row justify-center items-center">
-                <div
-                        class=" flex space-x-3 3xs:hidden 3xs:w-24 xs:mr-4 2xs:w-32 xs:w-36 md:w-[100px] md:h-[100px] 2xs:hidden md:flex lg:block lg:mr-4 items-center"
-                >
-                    <img class="bg-white rounded-full p-1" src="/bits.jpg" alt="circle"/>
-                </div>
-                <div class="flex flex-col justify-center items-center ">
+                
+                <div class="flex flex-col justify-center items-center text-center">
                     <h1
-                            class="text-4xl 3xs:text-[11px] 2xs:text-[13px] xs:text-[15px] leading-6 xl:text-2xl md:text-[19px] lg:text-xl font-bold text-white item-center tracking-wider justify-center text-center md:px-[10px] "
+                            class="text-4xl 3xs:text-[11px] 2xs:text-[13px] xs:text-[15px] leading-6 xl:text-3xl md:text-[19px] lg:text-xl font-bold text-white item-center tracking-wider justify-center text-center md:px-[10px] "
                     >
                         BABA INSTITUTE OF TECHNOLOGY AND SCIENCES
                     </h1>
@@ -95,6 +91,7 @@
                         >
                             ( Accredited by NAAC | Approved by AICTE,New Delhi | Affiliated to JNTU-Kakinada,GV )<br
                         />(An ISO 9001:2015 Certified Educational Institution)
+                        <p class="text-yellow-400 font-semibold uppercase text-xl">College Code :Baba</p>
                         </h6>
                     </div>
                 </div>
@@ -102,15 +99,8 @@
             <div
                     class="flex flex-col xs:hidden md:flex 3xs:hidden justify-center xs:scale-[0.8] md:scale-[1] items-center "
             >
-                <div class="flex flex-col justify-center items-center">
-                    <h1
-                            class=" text-xl font-bold text-sortwhite items-end tracking-wider justify-center text-center"
-                    >
-                        COLLEGE<br/>CODE
-                    </h1>
-                    <h1 class="text-center text-2xl md:text-2xl mb-o xs:text-base text-yellow-400 font-bold">
-                        <b>BABA</b>
-                    </h1>
+                <div class="flex flex-col justify-center items-center 2xs:w-28">
+                    <img class="bg-white rounded-full p-1" src="/bits.jpg" alt="circle"/>
                 </div>
             </div>
         </div>
