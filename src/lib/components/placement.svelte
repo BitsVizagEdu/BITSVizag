@@ -95,27 +95,27 @@ let details = [
 		<h3 class="text-3xl font-semibold p-4">COMPANY VISITED</h3>
 		<div class="slider lg:min-h-[30vh]">
 			<div class="slide-track ">
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Capgemini.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/HCL.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Infosys.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/microsoft.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Tcs.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Techmahindra.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Wipro.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/google.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Cognizant.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/1.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/2.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/3.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/4.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/5.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/6.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/7.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/8.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/9.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/10.png" alt="" /></div>
 				<!-- same 9 slides doubled (duplicate) -->
-				<div class="slide "><img src="/logo-150/Amazon.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Capgemini.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/HCL.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Infosys.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/microsoft.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Tcs.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Techmahindra.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Wipro.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Google.png" alt="" /></div>
-				<div class="slide "><img src="/logo-150/Cognizant.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/1.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/2.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/3.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/4.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/5.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/6.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/7.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/8.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/9.png" alt="" /></div>
+				<div class="slide "><img src="/logo-150/10.png" alt="" /></div>
 			</div>
 		</div>
 	</div>

@@ -2,13 +2,14 @@
     import Events from "$lib/components/events.svelte"
     import Strength from "$lib/components/strength.svelte"
     import Committies from "$lib/components/committies.svelte"
-    import Footer from "$lib/components/footer.svelte"
+   
     import Gallery from "$lib/components/gallery.svelte"
     import Placement from "$lib/components/placement.svelte"
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
     import Video from "$lib/components/video.svelte"
 
     import {onMount} from "svelte";
+	
 
     function scaleLogo(y){
         if(typeof(y) !== "undefined"){
@@ -48,9 +49,10 @@
     <Gallery/>
     <Events/>
     <Strength/>
+    
     <Placement/>
     <Committies/>
-    <Footer/>
+ 
 {/if}
 
 

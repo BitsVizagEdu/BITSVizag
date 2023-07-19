@@ -1,3 +1,4 @@
+
 <section>
     <div class="font-font1 text-xl md:text-5xl text-center m-10 md:p-10">Career Support Opportunities</div>
     <div class="flex w-[80%] ml-auto mr-auto md:flex-row flex-col my-8">
