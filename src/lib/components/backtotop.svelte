@@ -25,8 +25,8 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<div class="back-to-top" on:click={goTop} class:hidden>
-	<i class="fa-solid fa-arrow-up" />
+<div class="back-to-top flex item-center justify-center" on:click={goTop} class:hidden>
+	<i class="fa-solid fa-arrow-up pr-2 pt-1" />
 	<p>BackToTop</p>
 </div>
 
@@ -53,7 +53,7 @@
 		visibility: hidden;
 	}
 	.back-to-top i {
-		display: flex;
+		
 		justify-content: center;
 		padding-bottom: 5px;
 	}

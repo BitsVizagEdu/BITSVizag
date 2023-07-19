@@ -7,84 +7,94 @@ let details = [
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Rahul",
+		job: "TCS",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Chaitanya",
+		job: "TCS",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Keerthana",
+		job: "TCS",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Sai Prasad",
+		job: "TCS",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Sunitha",
+		job: "TCS",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Manikanta",
+		job: "Infosys",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Dan Alfred",
+		job: "Infosys",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
+		name: "Tejaswini",
+		job: "Infosys",
 		branch: "CSE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Mounika",
+		job: "Infosys",
+		branch: "ECE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Ramesh",
+		job: "Tech Mahindra",
+		branch: "MECH"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Kishore",
+		job: "Tech Mahindra",
+		branch: "MECH"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Satish",
+		job: "Tech Mahindra",
+		branch: "MECH"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Jyothi",
+		job: "Tech Mahindra",
+		branch: "MECH"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Divya",
+		job: "Tech Mahindra",
+		branch: "MECH"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Ankith",
+		job: "Teleperformance",
+		branch: "ECE"
 	},
 	{
-		name: "Sandeep",
-		job: "Infinite Proxies",
-		branch: "CSE"
+		name: "Nihal",
+		job: "Teleperformance",
+		branch: "ECE"
+	},
+	{
+		name: "Naveen",
+		job: "Teleperformance",
+		branch: "ECE"
+	},
+	{
+		name: "Srinivas Rao",
+		job: "Teleperformance",
+		branch: "ECE"
 	},
 
 ]
