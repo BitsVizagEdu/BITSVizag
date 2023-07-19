@@ -56,7 +56,7 @@
 					</div>
 					<div id="tagline-f" class="flex justify-center mt-2">
 						<span class="font-semibold text-white 3xs:text-2xl xs:text-3xl md:text-4xl text-center"
-							>You are the light of the world</span
+							>Be a Part of BITS FAMILY</span
 						>
 					</div>
 					<a href="/admissions" id="joinnowbtn" class="flex justify-center mt-4">
@@ -109,10 +109,10 @@
 							<div class="pb-2 w-max">
 								<a href="/" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Home</a>						</div>
 							<div class="pb-2 w-max">
-								<a href="/aboutus" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">About Us</a>
+								<a href="/aboutus/About-BITS-Vizag" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">About Us</a>
 							</div>
 							<div class="pb-2 w-max">
-								<a href="/admissions" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Admissions</a>
+								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Department</a>
 							</div>
 							<div class="pb-2 w-max">
 								<a href="/facilites" class="sm:hover:scale-[1.1] cursor-pointer  text-xl duration-300">Facilities</a>
