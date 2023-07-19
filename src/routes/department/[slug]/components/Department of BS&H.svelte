@@ -129,11 +129,11 @@
 	<div>
 		<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
 		<div class="container pt-8">
-			<img class="first" src="/7.png" alt="" />
-			<img src="/8.png" alt="" />
-			<img src="/9.png" alt="" />
-			<img class="third" src="/10.png" alt="" />
-			<img class="second" src="/11.png" alt="" />
+			<img class="first" src="/bsh1.png" alt="" />
+			<img src="/bsh3.webp" alt="" />
+			<img src="/bsh4.jpeg" alt="" />
+			<img class="third" src="/bsh5.jpeg" alt="" />
+			<img class="second" src="/bsh2.png" alt="" />
 		</div>
 	</div>
 	<div id="facilities" class="flex gap-20 facilities">
@@ -383,7 +383,7 @@
 	<div id="academic" class="flex gap-7">
 	
 		<div>
-			<p id="post" class="mt-10 text-3xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
+			<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
 			<div id="branch" class="flex items-center">
 				<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 				<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">

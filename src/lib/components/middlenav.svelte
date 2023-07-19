@@ -18,24 +18,25 @@
 					<div class="content">
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-building-columns"></i>
+								<i class="fa-solid fa-building-columns" />
 							</div>
 							<header><a href="/aboutus/About-BITS-Vizag">About Bits</a></header>
-							
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-user"></i>
+								<i class="fa-solid fa-user" />
 							</div>
-							<header><a href="/aboutus/Message-from-Secretary-&-Correspondent">Message from Secretariat</a></header>
-							
+							<header>
+								<a href="/aboutus/Message-from-Secretary-&-Correspondent"
+									>Message from Secretary & Correspondent</a
+								>
+							</header>
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-user"></i>
+								<i class="fa-solid fa-user" />
 							</div>
 							<header><a href="/aboutus/Message-from-Principal">Message from Principal</a></header>
-							
 						</div>
 					</div>
 				</div>
@@ -48,7 +49,7 @@
 					<div class="content">
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-graduation-cap"></i>
+								<i class="fa-solid fa-graduation-cap" />
 							</div>
 							<header><a href="/courses/Under Graduation">Under Graduation</a></header>
 							<ul class="mega-links">
@@ -58,16 +59,14 @@
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-graduation-cap"></i>
+								<i class="fa-solid fa-graduation-cap" />
 							</div>
 							<header><a href="/courses/Post Graduation">Post Graduation</a></header>
 							<ul class="mega-links">
 								<li>M -Tech</li>
 								<li>Duration - 2Years</li>
-								
 							</ul>
 						</div>
-						
 					</div>
 				</div>
 			</li>
@@ -79,45 +78,49 @@
 					<div class="content">
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-code"></i>
+								<i class="fa-solid fa-code" />
 							</div>
-							<header><a href="/department/Department of CSE">Computer Science and Engineering</a></header>
+							<header>
+								<a href="/department/Department of CSE">Computer Science and Engineering</a>
+							</header>
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-wand-magic-sparkles"></i>
+								<i class="fa-solid fa-wand-magic-sparkles" />
 							</div>
-							<header><a href="/department/Department of BS&H">Basics Sciences & Humanities</a></header>
-							
+							<header>
+								<a href="/department/Department of BS&H">Basics Sciences & Humanities</a>
+							</header>
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-lightbulb"></i>
+								<i class="fa-solid fa-lightbulb" />
 							</div>
-							<header><a href="/department/Department of ECE">Electronics and Communication Engineering</a></header>
+							<header>
+								<a href="/department/Department of ECE">Electronics and Communication Engineering</a
+								>
+							</header>
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-screwdriver-wrench"></i>
+								<i class="fa-solid fa-screwdriver-wrench" />
 							</div>
 							<header><a href="/department/Department of CIVIL">Civil Engineering</a></header>
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-file-invoice"></i>
+								<i class="fa-solid fa-file-invoice" />
 							</div>
 							<header><a href="/department/Department of MBA">Management Studies</a></header>
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-lightbulb"></i>
+								<i class="fa-solid fa-lightbulb" />
 							</div>
-							<header><a href="/department/Department of EEE">Electrical and Electronics Engineering</a></header>
+							<header>
+								<a href="/department/Department of EEE">Electrical and Electronics Engineering</a>
+							</header>
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-gears"></i>
+								<i class="fa-solid fa-gears" />
 							</div>
 							<header><a href="/department/Department of MECH">Mechanical Engineering </a></header>
 						</div>
-						
 					</div>
-					
-					
 				</div>
-				
 			</li>
 			<li><a href="/placements">Placements</a></li>
 			<!--<li><a href="#">Academics</a></li>-->
@@ -129,19 +132,16 @@
 					<div class="content">
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-user-graduate"></i>
+								<i class="fa-solid fa-user-graduate" />
 							</div>
 							<header><a href="examcell/Engineering">Engineering</a></header>
-			
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
-								<i class="fa-solid fa-user-graduate"></i>
+								<i class="fa-solid fa-user-graduate" />
 							</div>
 							<header><a href="examcell/MBA">Management Studies</a></header>
-							
 						</div>
-						
 					</div>
 				</div>
 			</li>
@@ -194,55 +194,104 @@
 				</div>
 			</li>-->
 			<!--<li><a href="/naac">NAAC</a></li>-->
-			<li><a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985">Online Payment</a></li>
+			<li>
+				<a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
+					>Online Payment</a
+				>
+			</li>
 			<li><a href="/contactus">Contact Us</a></li>
 			<li><a href="https://www.instagram.com/bits_vizag_official/">Social Life</a></li>
-			
 		</ul>
 		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>
+<div class="marquee">
+	<h3>
+	  <div class="marquee-wrapper">
+		<div class="marquee-title">
+			<span class="text-stroke-black">
+				BITS VIZAG
+			</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+			<span class="text-stroke-black">
+				BITS VIZAG
+			</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+			<span class="text-stroke-black">
+				BITS VIZAG
+			</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>
+			<span class="text-stroke-black">BITS VIZAG</span>
+			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+		</div>
+		<div class="marquee-title">
+			
+		</div>
+	  </div>
+	</h3>
+  </div>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-	
 	.dropdown__icon i {
-		font-size: 2.30rem;
+		font-size: 2.3rem;
 		color: hsl(220, 68%, 54%);
 		border-radius: 50%;
 		padding: 11px 10px;
 		margin-left: 20px;
 	}
-	.dropdown__icon .fa-code{
+	.dropdown__icon .fa-code {
 		margin-left: -45px;
 	}
-	.dropdown__icon .fa-wand-magic-sparkles{
+	.dropdown__icon .fa-wand-magic-sparkles {
 		margin-left: -40px;
 	}
-	.dropdown__icon .fa-lightbulb{
+	.dropdown__icon .fa-lightbulb {
 		margin-left: -50px;
 	}
-	.dropdown__icon .fa-gears{
+	.dropdown__icon .fa-gears {
 		margin-left: -37px;
 	}
-	.dropdown__icon .fa-file-invoice{
+	.dropdown__icon .fa-file-invoice {
 		margin-left: -50px;
 	}
-	.dropdown__icon .fa-screwdriver-wrench{
+	.dropdown__icon .fa-screwdriver-wrench {
 		margin-left: -40px;
 	}
-	.dropdown__icon .fa-user-graduate{
+	.dropdown__icon .fa-user-graduate {
 		margin-left: -45px;
 	}
-	.dropdown__icon .fa-graduation-cap{
+	.dropdown__icon .fa-graduation-cap {
 		margin-left: -50px;
 	}
-	.dropdown__icon .fa-building-columns{
+	.dropdown__icon .fa-building-columns {
 		margin-left: -40px;
 	}
-	.dropdown__icon .fa-user{
-		margin-left: -40px
+	.dropdown__icon .fa-user {
+		margin-left: -50px;
 	}
 	nav {
 		z-index: 99;
@@ -259,7 +308,7 @@
 		margin: auto;
 		display: flex;
 		align-items: center;
-		gap: 5px;
+		gap: 130px;
 	}
 	.wrapper .logo a {
 		color: #253c6a;
@@ -276,7 +325,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 17px;
+		font-size: 16px;
 		font-weight: 600;
 		padding: 9px 10px;
 		border-radius: 5px;
@@ -288,6 +337,7 @@
 	}
 	.nav-links .mobile-item {
 		display: none;
+		font-weight: bold;
 	}
 	.nav-links li:hover .drop-menu,
 	.nav-links li:hover .mega-box {
@@ -311,10 +361,11 @@
 		opacity: 0;
 		visibility: hidden;
 		text-align: center;
+		z-index: 1;
 	}
 	.mega-box .content {
 		background: #ffffff;
-		padding: 70px 20px;
+		padding: 100px 20px;
 		display: flex;
 		width: 100%;
 		justify-content: space-evenly;
@@ -324,7 +375,7 @@
 	.mega-box .content .row {
 		line-height: 50px;
 	}
-	.mega-box .content .row header a{
+	.mega-box .content .row header a {
 		color: hsl(220, 48%, 28%);
 		font-weight: bold;
 		margin-left: -40px;
@@ -357,9 +408,37 @@
 		right: 30px;
 		top: 10px;
 	}
+	@media screen and (max-width: 1320px) {
+		nav .wrapper {
+			gap: 0px;
+		}
+	}
 
+	@media screen and (max-width: 1402px) {
+		.nav-links li a {
+			font-size: 15px;
+			font-weight: 700;
+		}
+	}
+	@media screen and (max-width: 1220px) {
+		.nav-links li a {
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
 	@media screen and (max-width: 1024px) {
-		nav .wrapper{
+		.nav-links li a {
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	@media screen and (max-width: 430px) {
+		nav .wrapper {
+			max-width: 350px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		nav .wrapper {
 			justify-content: space-between;
 		}
 		.wrapper .btn {
@@ -378,7 +457,8 @@
 			line-height: 50px;
 			overflow-y: auto;
 			box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
-			transition: all 0.3s ease;
+			transition: all 0.6s ease;
+			z-index: 1;
 		}
 		/* custom scroll bar */
 		::-webkit-scrollbar {
@@ -423,8 +503,7 @@
 		#showMega:checked ~ .mega-box,
 		#departments:checked ~ .mega-box,
 		#exam:checked ~ .mega-box,
-		#iqac:checked ~ .mega-box
-		{
+		#iqac:checked ~ .mega-box {
 			max-height: 100%;
 		}
 		.nav-links .desktop-item {
@@ -503,4 +582,55 @@
 		font-size: 45px;
 		font-weight: 600;
 	}
+
+	/* Marquee Css */
+
+	.marquee {
+        width: 100%;
+        padding: 5px 20px;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .marquee h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .marquee .marquee-wrapper {
+        width: 100000px;
+        animation: marqueeAnimation 40s linear 0s infinite running;
+      }
+
+      .marquee h3 .marquee-title {
+        margin-right: 20px;
+        float: left;
+      }
+
+      .text-stroke-black {
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: #000000;
+      }
+
+      @keyframes marqueeAnimation {
+		100% {
+          transform: translateX(-3500px);
+        }
+      }
+
+      @media (max-width: 992px) {
+        .marquee h3 {
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 549px) {
+        .marquee h3 {
+          font-size: 18px;
+        }
+      }
 </style>
