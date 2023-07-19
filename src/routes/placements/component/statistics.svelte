@@ -1,42 +1,12 @@
+
 <script>
+
+    // import {onMount} from "svelte";
+    //
+    // onMount(async () => {
+    //
+    // })
     import {animate} from "motion";
-	import gsap from 'gsap/dist/gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-
-		let timeline_footer = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#joinnowf',
-				toggleActions: 'play none none none',
-				start: '0% 80%',
-				// markers: true
-			}
-		});
-
-		timeline_footer
-			.from('#joinnow', {
-				delay:1,
-				// duration:1,
-				opacity: 0,
-				translateY: '-20px'
-			})
-			.from('#tagline-f', {
-				// duration:1,
-				opacity: 0,
-				translateY: '20px'
-			})
-			.from('#joinnowbtn', {
-				// duration:1,
-				opacity: 0,
-				// scaleX:0,
-				translateY: '15px'
-			});
-	});
-
-     
     function scaleUp(element) {
         animate(document.querySelector(element), {scale: 1.2}, {duration: 0.3})
     }
@@ -48,7 +18,7 @@
     let items = [
         {
             title: "312+",
-            description: "Recruiters hired Bits students"
+            description: "Recruiters hired LPU students"
         },
         {
             title: "1000+",
@@ -67,8 +37,7 @@
     ]
 </script>
 
-
-<h1 id="" class="md:text-4xl text-xl text-center p-2 md:p-10">Statistics</h1>
+<h1 class="md:text-4xl text-xl text-center p-2 md:p-10">Statistics</h1>
 <div class="text-center  font-sans  ">
     <div class="flex flex-col  items-center ">
         
