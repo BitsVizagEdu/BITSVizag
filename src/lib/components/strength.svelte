@@ -20,9 +20,9 @@
                 <div class="pr-4 items-center">This is why we are Accredited by </div>
                 <div class="text-5xl font-bold p-4">NAAC A</div>
             </div>
-            <div class="flex justify-center items-center">
+            <a href="/aboutus/About-BITS-Vizag" class="flex justify-center items-center">
                 <button on:mouseenter={() => scaleUp(".button-strength")} on:mouseleave={()=> {scaleDown(".button-strength")}} class="button-strength bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">Read more about BITS Vizag</button>
-            </div>
+            </a>
         </div>
         <div class=" basis-2/3 flex xs:mt-6  md:mt-6 3xs:mt-6 pb-6 justify-center">
 

@@ -20,7 +20,7 @@
             image: "/events/5.jpeg"
         },
         {
-            name: "INTERNATIONAL WOMEN DAY",
+            name: "INTERNATIONAL WOMEN'S DAY",
             description: "We were Honored to have esteemed guests Dr.Betsy Merilyn Williams, Vice President of the National Council of YMCA's",
             date: "August 15, 2022",
             image: "/events/2.jpeg"
