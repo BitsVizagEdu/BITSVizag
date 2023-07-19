@@ -56,5 +56,5 @@
             {/if}
         </div>
     </div>
-    <Footer/>
+    
 {/if}

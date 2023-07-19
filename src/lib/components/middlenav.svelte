@@ -11,7 +11,7 @@
 			</label>
 			<li><a href="#">Home</a></li>
 			<li>
-				<a href="#" class="desktop-item"> About Us</a>
+				<a href="/aboutus/About-BITS-Vizag" class="desktop-item"> About Us</a>
 				<input type="checkbox" id="showMega" />
 				<label for="showMega" class="mobile-item">About Us</label>
 				<div class="mega-box">
@@ -20,28 +20,28 @@
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-building-columns"></i>
 							</div>
-							<header><a href="">About Bits</a></header>
+							<header><a href="/aboutus/About-BITS-Vizag">About Bits</a></header>
 							
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-user"></i>
 							</div>
-							<header><a href="">Message from Secretariat</a></header>
+							<header><a href="/aboutus/Message-from-Secretary-&-Correspondent">Message from Secretariat</a></header>
 							
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-user"></i>
 							</div>
-							<header><a href="">Message from Principal</a></header>
+							<header><a href="/aboutus/Message-from-Principal">Message from Principal</a></header>
 							
 						</div>
 					</div>
 				</div>
 			</li>
 			<li>
-				<a href="#" class="desktop-item">Courses</a>
+				<a href="/courses" class="desktop-item">Courses</a>
 				<input type="checkbox" id="showMega" />
 				<label for="showMega" class="mobile-item">Courses</label>
 				<div class="mega-box">
@@ -50,7 +50,7 @@
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-graduation-cap"></i>
 							</div>
-							<header><a href="">Under Graduation</a></header>
+							<header><a href="/courses/Under Graduation">Under Graduation</a></header>
 							<ul class="mega-links">
 								<li>B-Tech</li>
 								<li>Duration - 4Years</li>
@@ -60,7 +60,7 @@
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-graduation-cap"></i>
 							</div>
-							<header><a href="">Post Graduation</a></header>
+							<header><a href="/courses/Post Graduation">Post Graduation</a></header>
 							<ul class="mega-links">
 								<li>M -Tech</li>
 								<li>Duration - 2Years</li>
@@ -72,7 +72,7 @@
 				</div>
 			</li>
 			<li>
-				<a href="#" class="desktop-item">Departments</a>
+				<a href="" class="desktop-item">Departments</a>
 				<input type="checkbox" id="showMega" />
 				<label for="showMega" class="mobile-item">Departments</label>
 				<div class="mega-box">
@@ -81,36 +81,36 @@
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-code"></i>
 							</div>
-							<header><a href="">Computer Science and Engineering</a></header>
+							<header><a href="/department/Department of CSE">Computer Science and Engineering</a></header>
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-wand-magic-sparkles"></i>
 							</div>
-							<header><a href="">Basics Sciences & Humanities</a></header>
+							<header><a href="/department/Department of BS&H">Basics Sciences & Humanities</a></header>
 							
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-lightbulb"></i>
 							</div>
-							<header><a href="">Electronics and Communication Engineering</a></header>
+							<header><a href="/department/Department of ECE">Electronics and Communication Engineering</a></header>
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-screwdriver-wrench"></i>
 							</div>
-							<header><a href="">Civil Engineering</a></header>
+							<header><a href="/department/Department of CIVIL">Civil Engineering</a></header>
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-file-invoice"></i>
 							</div>
-							<header><a href="">Management Studies</a></header>
+							<header><a href="/department/Department of MBA">Management Studies</a></header>
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-lightbulb"></i>
 							</div>
-							<header><a href="">Electrical and Electronics Engineering</a></header>
+							<header><a href="/department/Department of EEE">Electrical and Electronics Engineering</a></header>
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-gears"></i>
 							</div>
-							<header><a href="">Mechanical Engineering </a></header>
+							<header><a href="/department/Department of MECH">Mechanical Engineering </a></header>
 						</div>
 						
 					</div>
@@ -119,10 +119,10 @@
 				</div>
 				
 			</li>
-			<li><a href="#">Placements</a></li>
+			<li><a href="/placements">Placements</a></li>
 			<li><a href="#">Academics</a></li>
 			<li>
-				<a href="#" class="desktop-item">Exam Cell</a>
+				<a href="" class="desktop-item">Exam Cell</a>
 				<input type="checkbox" id="showMega" />
 				<label for="showMega" class="mobile-item">Exam Cell</label>
 				<div class="mega-box">
@@ -131,21 +131,21 @@
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-user-graduate"></i>
 							</div>
-							<header><a href="">Engineering</a></header>
+							<header><a href="examcell/Engineering">Engineering</a></header>
 			
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-user-graduate"></i>
 							</div>
-							<header><a href="">Management Studies</a></header>
+							<header><a href="examcell/MBA">Management Studies</a></header>
 							
 						</div>
 						
 					</div>
 				</div>
 			</li>
-			<li><a href="#">Facilities</a></li>
+			<li><a href="/facilities">Facilities</a></li>
 			<li><a href="/gallery">Gallery</a></li>
 			<li>
 				<a href="#" class="desktop-item">IQAC</a>
@@ -161,39 +161,39 @@
 							<ul class="mega-links">
 								<li><a href="">NIRF 2022</a></li>
 								<li><a href="">2021 - 2022</a></li>
-								<li><a href="">2020 - 2023</a></li>
-								<li><a href="">Institute Credintials</a></li>
+								<li><a href="">2020 - 2021</a></li>
+								<li><a href="">Institute Credentials</a></li>
 								<li><a href="">RTA Act</a></li>
-								<li><a href="">Principal Message</a></li>
-								<li><a href="">NIRF 2022</a></li>
-								<li><a href="">2021 - 2022</a></li>
-								<li><a href="">2020 - 2023</a></li>
-								<li><a href="">Institute Credintials</a></li>
-								<li><a href="">RTA Act</a></li>
-								<li><a href="">Principal Message</a></li>
+								<li><a href="">Principal Munites of Meeting</a></li>
+								<li><a href="">Criteria - 5</a></li>
+								<li><a href="">Criteria - 1</a></li>
+								<li><a href="">2019 - 2020</a></li>
+								<li><a href="">IIQA Self Declaration</a></li>
+								<li><a href="">Minutes of Meeting and Actions Taken Reports</a></li>
+								<li><a href="">Code of Conduct</a></li>
 							</ul>
 						</div>
 						<div class="row pt-28">
 							<ul class="mega-links">
-								<li><a href="">NIRF 2022</a></li>
-								<li><a href="">2021 - 2022</a></li>
-								<li><a href="">2020 - 2023</a></li>
-								<li><a href="">Institute Credintials</a></li>
-								<li><a href="">RTA Act</a></li>
-								<li><a href="">Principal Message</a></li>
-								<li><a href="">NIRF 2022</a></li>
-								<li><a href="">2021 - 2022</a></li>
-								<li><a href="">2020 - 2023</a></li>
-								<li><a href="">Institute Credintials</a></li>
-								<li><a href="">RTA Act</a></li>
-								<li><a href="">Principal Message</a></li>
+								<li><a href="">Criteria - 20</a></li>
+								<li><a href="">Exam Cell Annual Report</a></li>
+								<li><a href="">Critera - 6</a></li>
+								<li><a href="">2018 - 2019</a></li>
+								<li><a href="">2017 - 2018</a></li>
+								<li><a href="">Feedback System</a></li>
+								<li><a href="">PO's and PEO's</a></li>
+								<li><a href="">Procedures and Policies</a></li>
+								<li><a href="">Criteria - 7</a></li>
+								<li><a href="">Students Satisfication Survey</a></li>
+								<li><a href="">Others</a></li>
+								<li><a href="">Critera - 5</a></li>
 							</ul>
 						</div>
 						
 					</div>
 				</div>
 			</li>
-			<li><a href="#">NAAC</a></li>
+			<li><a href="/naac">NAAC</a></li>
 			<li><a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985">Online Payment</a></li>
 			
 		</ul>
@@ -204,6 +204,7 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+	
 	.dropdown__icon i {
 		font-size: 2.30rem;
 		color: hsl(220, 68%, 54%);
@@ -249,7 +250,7 @@
 	}
 	nav .wrapper {
 		position: relative;
-		max-width: 1500px;
+		max-width: 1600px;
 		padding: 30px 0px;
 		height: 80px;
 		line-height: 70px;
@@ -357,7 +358,7 @@
 
 	@media screen and (max-width: 1024px) {
 		nav .wrapper{
-			gap: 100px;
+			justify-content: space-between;
 		}
 		.wrapper .btn {
 			display: block;
