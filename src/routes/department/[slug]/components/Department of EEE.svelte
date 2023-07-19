@@ -381,7 +381,7 @@
 	</div>
 	<div id="academic" class="flex gap-7">
 		<div>
-			<p id="post" class="mt-10 text-3xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
+			<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
 			<div id="branch" class="flex items-center">
 				<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
 				<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
@@ -472,7 +472,7 @@
 		</div>
 		<div />
 		<div>
-			<p id="post" class="mt-10 text-3xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
+			<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
 			<div id="branch" class="flex items-center">
 				<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 				<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
