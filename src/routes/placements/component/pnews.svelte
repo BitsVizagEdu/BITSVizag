@@ -42,60 +42,54 @@
 const Events = [
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 1',
+		name: 'MOU with i3 IT Solutionz and Rubicon Skill Development Pvt Ltd',
 		image: '/g4.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			'i3 IT Solutionz and Rubicon Skill Development Pvt Ltd have signed an MOU for IT skill development collaboration.'
 	},
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 2',
-		image: '/principal.jpg',
+		name: 'Expert talks by Prakriti Shrivastava - Senior HR Chegg India',
+		image: '/pevents/1.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			' Prakriti Shrivastava, Senior HR at Chegg India, delivers expert talks on HR topics, offering practical insights for professionals and organizations.'
 	},
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 3',
-		image: '/principal.jpg',
+		name: 'JAVA Training Session by Imtihiyaz Ali',
+		image: '/pevents/8.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			' The program aimed to equip students with latest knowledge and skills in java provide them with competitive edge in job market.'
 	},
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 4',
-		image: '/principal.jpg',
+		name: 'Lumos Labs session about WEB3 Metaverse',
+		image: '/pevents/2.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			' Tech talk on into the Web3 Metaverse and Digital Life by Nikhil Aparjith and Anshita Soni from Lumous Lab'
 	},
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 5',
-		image: '/principal.jpg',
+		name: 'Expert talks by Oliver Rayi, Director of Catherine Group',
+		image: '/pevents/6.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			'Oliver Rayi, Director of Catherine Group, delivers expert talks providing valuable insights and practical guidance to inspire and empower individuals and organizations.'
 	},
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 6',
-		image: '/principal.jpg',
+		name: 'Motivational Speech by Youtube sensation Sudeer Sandra',
+		image: '/pevents/4.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			' YouTube sensation Sudeer Sandra delivers captivating and inspiring motivational speeches that empower individuals to pursue their dreams and overcome obstacles.'
 	},
 	{
 		date: '15/12/2022',
-		name: 'Event Heading 7',
-		image: '/principal.jpg',
+		name: 'Expert talks by T. Siva Rama Krishna on Blockchain Technology and Cryptography',
+		image: '/pevents/7.jpg',
 		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
+			'T. Siva Rama Krishna delivers expert talks on blockchain and cryptography, empowering audiences in the digital landscape.'
 	},
-	{
-		date: '15/12/2022',
-		name: 'Event Heading 8',
-		image: '/principal.jpg',
-		description:
-			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
-	}
+	
 ];
 </script>
 
