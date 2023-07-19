@@ -43,7 +43,7 @@ const Events = [
 	{
 		date: '15/12/2022',
 		name: 'Event Heading 1',
-		image: '/g3.jpeg',
+		image: '/g4.jpg',
 		description:
 			' consectetur mollit elit sunt laborum. Mollit Lorem id occaecat Lorem dolor magna velit enim.'
 	},
