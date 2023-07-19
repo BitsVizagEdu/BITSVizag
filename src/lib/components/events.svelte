@@ -2,28 +2,28 @@
 <script>
     let events = [
         {
-            name: "TECH TALK by LUMOS LABS – INTO THE WEB3 METAVERSE",
-            description: "Department of Training & Placements TECH TALK by LUMOS LABS...",
-            date: "September 2, 2022",
-            image: "https://bitsvizag.com/wp-content/uploads/2022/08/DTP-03.09.2022.jpeg"
+            name: "INTERNATIONAL YOGA DAY CELEBRATION",
+            description: "Featuring Dr. Sundar Raj Perumali, Director, Aroghyadhatri.",
+            date: "June 21, 2023",
+            image: "/events/6.jpeg"
         },
         {
-            name: "VALUE ADDED COURSE ON – Solid Modeling with CATIA V5",
-            description: "VALUE ADDED COURSE ON Solid Modeling with CATIA V5 by...",
+            name: "GRADUATION DAY CELEBRATION",
+            description: "Featuring Chief Guest Prof. G. Swami Naidu, Registrar - JNTU GV.",
             date: "September 2, 2022",
-            image: "https://bitsvizag.com/wp-content/uploads/2022/08/DME-02.09.2022.jpeg"
+            image: "/events/7.JPG"
         },
         {
-            name: "Vizag Mega Beach Cleanup Drive featuring Faculty and Students of BITS Vizag",
-            description: "Thankyou for giving us this Opportunity and making us a part...",
+            name: "BITS QUEST 2K23 - ANNUAL FEST",
+            description: "Thrilled to witness Digitaries like Prof. K. Venkata Subbaiah, JNTU Vice Chancellor and Shri. K. Nagesh.",
             date: "August 26, 2022",
-            image: "/BeachClean.webp"
+            image: "/events/5.jpeg"
         },
         {
-            name: "Celebrating 75 Years of Independence",
-            description: "Secretary and Correspondent Madam Dr. Srilakshmi Kondru...",
+            name: "INTERNATIONAL WOMEN'S DAY",
+            description: "We were Honored to have esteemed guests Dr.Betsy Merilyn Williams, Vice President of the National Council of YMCA's",
             date: "August 15, 2022",
-            image: "/IndependenceDay.webp"
+            image: "/events/2.jpeg"
         },
     ]
 
@@ -49,7 +49,7 @@
         </div>
         <div class="w-[400px] flex py-16 justify-end">
             <div class="flex flex-col justify-center items-center px-4">
-                <a href="#" class="text-2xl font-bold underline">View all ></a>
+                <a href="/gallery" class="text-2xl font-bold underline">Explore More ></a>
             </div>
         </div>
     </div>

@@ -17,12 +17,12 @@
             </div>
             <div class="text-xl p-4">Grooming leaders who are not only thorough professionals but also good human beings with values.</div>
             <div class="flex items-center flex-col py-4 flex-wrap lg:flex-nowrap ">
-                <div class="pr-4 items-center">This is why we are consistently ranked</div>
-                <div class="text-4xl font-bold p-4">NO.1</div>
+                <div class="pr-4 items-center">This is why we are Accredited by </div>
+                <div class="text-5xl font-bold p-4">NAAC A</div>
             </div>
-            <div class="flex justify-center items-center">
+            <a href="/aboutus/About-BITS-Vizag" class="flex justify-center items-center">
                 <button on:mouseenter={() => scaleUp(".button-strength")} on:mouseleave={()=> {scaleDown(".button-strength")}} class="button-strength bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">Read more about BITS Vizag</button>
-            </div>
+            </a>
         </div>
         <div class=" basis-2/3 flex xs:mt-6  md:mt-6 3xs:mt-6 pb-6 justify-center">
 

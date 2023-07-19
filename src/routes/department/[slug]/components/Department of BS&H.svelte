@@ -1,5 +1,7 @@
+
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
-	<h1 class="text-4xl font-bold text-center mb-10 text-red1">BASIC SCIENCE AND HUMANITIES</h1>
+	<img src="/header/basic.png" alt="" srcset="">
+	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1">BASIC SCIENCE AND HUMANITIES</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/lab.jpeg" alt="" />
 	</div>
@@ -89,7 +91,7 @@
 			HOD MESSAGE - Dr. Narrasimha Murti Dusi
 		</h1>
 		<div class="flex justify-center w-[100%] pt-8">
-			<img src="/lab.jpeg" alt="" />
+			<img src="/Bsc hod.jpg" alt="" />
 		</div>
 	</div>
 	<div class="text-justify mt-8 text-lg flex flex-col gap-5">

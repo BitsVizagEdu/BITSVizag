@@ -10,8 +10,8 @@
     import Middlenav from "$lib/components/middlenav.svelte";
     import 'aos/dist/aos.css'; // You can also use <link> for styles
     // ..
-
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
+	import Footer from "$lib/components/footer.svelte";
 
     onMount(() => {
 
@@ -30,6 +30,7 @@
         <Middlenav/>
         <BackToTop/>
         <slot />
+        <Footer/>
     {/if}
     
 </main>
