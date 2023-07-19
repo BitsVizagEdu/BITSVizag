@@ -13,4 +13,4 @@
 
 
 <Gallery/>
-<Footer/>
+
