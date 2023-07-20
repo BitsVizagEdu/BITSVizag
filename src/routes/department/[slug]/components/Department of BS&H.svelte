@@ -314,9 +314,9 @@
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>B.TECH :</p>
-						<p>BS & H</p>
-						<p>DURATION – 4 YEARS</p>
+						<p>B.TECH : BS&H</p>
+						
+						<p>DURATION –4YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>

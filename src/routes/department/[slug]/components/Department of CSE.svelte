@@ -307,14 +307,13 @@
 		</div>
 		<div id="academic" class="flex gap-7">
 			<div>
-				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>M.TECH :</p>
-						<p>CSE (STRUCTURAL</p>
-						<p>ENGINEERING-SE)</p>
-						<p>DURATION - 4 YEARS</p>
+						<p>B.TECH : CSE</p>
+
+						<p>DURATION -4YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
@@ -398,21 +397,19 @@
 			</div>
 			<div />
 			<div>
-				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>B.TECH :</p>
-						<p>CIVIL ENGINEERING</p>
-						<p>DURATION – 4 YEARS</p>
+						<p>M.TECH : CSE</p>
+						<p>DURATION–2 YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
 				<div>
 					<p class="text-justify pt-5 text-[#08163d]">
-						BITS Engineering College admits candidates through the Engineering, Agriculture &
-						Pharmacy Common Entrance Test (EAPCET), conducted by AP STATE GOVERNMENT, on fulfilling
-						the eligibility requirements and under management quota.
+						BITS Engineering College admits candidates through the eligibility requirements and
+						under management quota.
 					</p>
 					<div class="flex pt-5">
 						<div>
