@@ -28,11 +28,11 @@
             description: "Description"
         },
         {
-            title: "Enterprenurial Development Cell",
+            title: "Entrepreneurial Development Cell",
             description: "Description"
         },
         {
-            title: "Women Grievance &  Redressal",
+            title: "Women's Grievance &  Redressal",
             description: "Description"
         },
         {
