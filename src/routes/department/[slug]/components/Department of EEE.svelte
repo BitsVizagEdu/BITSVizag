@@ -57,11 +57,11 @@
 		<div>
 			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
 			<div class="container pt-8">
-				<img class="first" src="/7.png" alt="" />
-				<img src="/8.png" alt="" />
-				<img src="/9.png" alt="" />
-				<img class="third" src="/eee6.jpg" alt="" />
-				<img class="second" src="/11.png" alt="" />
+				<img class="first" src="/eee4.png" alt="" />
+				<img src="/eee1.jpg" alt="" />
+				<img src="/eee2.jpg" alt="" />
+				<img class="third" src="/eee3.jpg" alt="" />
+				<img class="second" src="/ece3.png" alt="" />
 			</div>
 		</div>
 		<div id="facilities" class="flex gap-20 facilities">
