@@ -11,11 +11,14 @@
     import DepartmentofMba from "./components/Department of MBA.svelte";
     import Footer from '$lib/components/footer.svelte';
     import {isActiveTabSet, toggleIsActiveTab} from "../../../lib/stores/store.js";
+    import {page} from "$app/stores";
 
     /** @type {import('./$types').PageData} */
     export let data;
 
     if (data) {
+        console.log(data)
+        console.log($page)
         if (!$isActiveTabSet) {
             setActiveTabValue(data.route)
         }
@@ -49,7 +52,7 @@
             {#if $activeTab === 'Department of BS&H'}
                 <DepartmentofBsh/>
             {/if}
-            
+
             {#if $activeTab === 'Department of CSE'}
                 <DepartmentofCse/>
             {/if}
@@ -70,5 +73,5 @@
             {/if}
         </div>
     </div>
-    
+
 {/if}
