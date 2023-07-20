@@ -17,26 +17,29 @@
                 <div class="mega-box">
                     <div class="content">
                         <div class="row">
-                            <div class="dropdown__icon">
+                            <div class="link-item cursor-pointer" on:click={() => window.location.href = "/aboutus/About-BITS-Vizag"}>
+								<div class="dropdown__icon">
                                 <i class="fa-solid fa-building-columns"/>
                             </div>
-                            <header><a href="/aboutus/About-BITS-Vizag">About Bits</a></header>
+                            <header><div class="link-item" on:click={() => window.location.href = "/aboutus/About-BITS-Vizag"}>About Bits
+							</div></header>
+							</div>
                         </div>
                         <div class="row">
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user"/>
                             </div>
                             <header>
-                                <a href="/aboutus/Message-from-Secretary-&-Correspondent"
-                                >Message from Secretary & Correspondent</a
-                                >
+                                <div class="link-item" on:click={() => window.location.href = "/aboutus/Message-from-Secretary-&-Correspondent"}>Message from Secretary & Correspondent
+                                </div>
                             </header>
                         </div>
                         <div class="row">
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user"/>
                             </div>
-                            <header><a href="/aboutus/Message-from-Principal">Message from Principal</a></header>
+                            <header><div class="link-item" on:click={() => window.location.href = "/aboutus/Message-from-Principal"}>Message From Principal
+							</div></header>
                         </div>
                     </div>
                 </div>
@@ -51,7 +54,8 @@
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-graduation-cap"/>
                             </div>
-                            <header><a href="/courses/Under Graduation">Under Graduation</a></header>
+                            <header><div class="link-item" on:click={() => window.location.href = "/courses/Under Graduation"}>Under Graduation
+							</div></header>
                             <ul class="mega-links">
                                 <li>B-Tech</li>
                                 <li>Duration - 4Years</li>
@@ -61,7 +65,8 @@
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-graduation-cap"/>
                             </div>
-                            <header><a href="/courses/Post Graduation">Post Graduation</a></header>
+                            <header><div class="link-item" on:click={() => window.location.href = "/courses/Post Graduation"}>Post Graduation
+							</div></header>
                             <ul class="mega-links">
                                 <li>M -Tech</li>
                                 <li>Duration - 2Years</li>
@@ -71,7 +76,7 @@
                 </div>
             </li>
             <li>
-                <a on:click={() => window.location.href = "/department/Department of BS&H"} class="desktop-item">
+                <a on:click={() => window.location.href = "/department/Department of BS&H"} class="desktop-item cursor-pointer">
                     Departments
                 </a>
                 <input type="checkbox" id="departments"/>
@@ -136,7 +141,7 @@
             </li>
             <li><a href="/placements">Placements</a></li>
             <!--<li><a href="#">Academics</a></li>-->
-            <li>
+            <!--<li>
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -156,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li>-->
             <li><a href="/facilities">Facilities</a></li>
             <li><a href="/gallery">Gallery</a></li>
             <!--<li>
@@ -217,53 +222,7 @@
         <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]"/></label>
     </div>
 </nav>
-<div class="marquee">
-	<h3>
-	  <div class="marquee-wrapper">
-		<div class="marquee-title">
-			<span class="text-stroke-black">
-				BITS VIZAG
-			</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-			<span class="text-stroke-black">
-				BITS VIZAG
-			</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-			<span class="text-stroke-black">
-				BITS VIZAG
-			</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-		</div>
-		<div class="marquee-title">
-			
-		</div>
-	  </div>
-	</h3>
-  </div>
+
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -309,7 +268,7 @@
     }
 
     .dropdown__icon .fa-building-columns {
-        margin-left: -40px;
+        margin-left: -5px;
     }
 
     .dropdown__icon .fa-user {
@@ -689,52 +648,5 @@
 
 	/* Marquee Css */
 
-	.marquee {
-        width: 100%;
-        padding: 5px 20px;
-        border-top: 1px solid #000000;
-        border-bottom: 1px solid #000000;
-        text-align: center;
-        overflow: hidden;
-      }
-
-      .marquee h3 {
-        font-size: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-
-      .marquee .marquee-wrapper {
-        width: 100000px;
-        animation: marqueeAnimation 40s linear 0s infinite running;
-      }
-
-      .marquee h3 .marquee-title {
-        margin-right: 20px;
-        float: left;
-      }
-
-      .text-stroke-black {
-        color: transparent;
-        -webkit-text-stroke: 1px;
-        -webkit-text-stroke-color: #000000;
-      }
-
-      @keyframes marqueeAnimation {
-		100% {
-          transform: translateX(-3500px);
-        }
-      }
-
-      @media (max-width: 992px) {
-        .marquee h3 {
-          font-size: 20px;
-        }
-      }
-
-      @media (max-width: 549px) {
-        .marquee h3 {
-          font-size: 18px;
-        }
-      }
+	
 </style>
