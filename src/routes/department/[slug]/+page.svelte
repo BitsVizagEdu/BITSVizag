@@ -17,8 +17,7 @@
     export let data;
 
     if (data) {
-        console.log(data)
-        console.log($page)
+        
         if (!$isActiveTabSet) {
             setActiveTabValue(data.route)
         }
