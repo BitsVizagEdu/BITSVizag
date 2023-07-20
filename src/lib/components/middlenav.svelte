@@ -9,7 +9,7 @@
 			<label for="close-btn" class="btn close-btn">
 				<i class="fas fa-times text-[#242526]" />
 			</label>
-			<li><a href="#">Home</a></li>
+			<li><a href="/">Home</a></li>
 			<li>
 				<a href="/aboutus/About-BITS-Vizag" class="desktop-item"> About Us</a>
 				<input type="checkbox" id="showMega" />
