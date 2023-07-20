@@ -83,7 +83,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Engineering Geoloy Laboratory</p>
+					<p>Business Analytics Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -106,7 +106,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Geotechnical Engineering Laboratory</p>
+					<p>Entrepreneurship Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -129,7 +129,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Surveying Laboratory</p>
+					<p>Innovation Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -152,7 +152,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Concrete Technology Laboratory</p>
+					<p>Startegic Management Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -175,7 +175,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Transportation Engineering Laboratory</p>
+					<p>Finance and Investment Laboratory</p>
 				</div>
 			</div>
 			<div>
@@ -200,7 +200,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Environmental Engineering Laboratory</p>
+					<p>Markteing Research Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
