@@ -102,7 +102,7 @@ let details = [
 
 <section class="lg:flex-row justify-evenly items-center 3xs:flex-col flex ">
 	<div class="container flex flex-col px-4 sm:px-12 py-8 3xs:w-full lg:w-1/2 justify-between items-center basis-1/2 min-h-[10vh]">
-		<h3 class="text-3xl font-semibold p-4">COMPANY VISITED</h3>
+		<h3 class="text-3xl font-semibold p-4">COMPANIES VISITED</h3>
 		<div class="slider lg:min-h-[30vh]">
 			<div class="slide-track ">
 				<div class="slide "><img src="/logo-150/1.png" alt="" /></div>
@@ -140,7 +140,7 @@ let details = [
 						Name
 					</th>
 					<th scope="col" class="py-3 px-6">
-						Job
+						Company
 					</th>
 					<th scope="col" class="py-3 px-6">
 						Branch
