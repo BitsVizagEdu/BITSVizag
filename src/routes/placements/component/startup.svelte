@@ -15,7 +15,7 @@
 					</div>
 					<div id="tagline-f" class="flex justify-center mt-4 lg:mt-7">
 						<span class="font-semibold text-white 3xs:text-2xl xs:text-3xl md:text-3xl lg:text-4xl xl:text-6xl text-center"
-							>is Excited to share its 1st Student Startup </span
+							>is Excited to share it's 1st Student Startup </span
 						>
 					</div>
 					<a href="https://www.konkorde.org/" id="joinnowbtn" class="flex justify-center mt-4 lg:mt-7">
