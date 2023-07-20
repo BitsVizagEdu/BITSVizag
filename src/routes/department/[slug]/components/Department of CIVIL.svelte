@@ -2,7 +2,7 @@
 	<img src="/header/civil.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Civil Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
-		<img src="/lab.jpeg" alt="" />
+		<img src="/civil.jpg" alt="" />
 	</div>
 	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
 		<div>

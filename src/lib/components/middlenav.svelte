@@ -1,147 +1,260 @@
 <nav>
-    <div class="wrapper">
-        <div class="logo">
-            <a href="#"><img class="w-[150px]" src="/1.png" alt=""/></a>
-        </div>
-        <input type="radio" name="slider" id="menu-btn"/>
-        <input type="radio" name="slider" id="close-btn"/>
-        <ul class="nav-links">
-            <label for="close-btn" class="btn close-btn">
-                <i class="fas fa-times text-[#242526]"/>
-            </label>
-            <li><a href="/">Home</a></li>
-            <li>
-                <a href="/aboutus/About-BITS-Vizag" class="desktop-item"> About Us</a>
-                <input type="checkbox" id="showMega"/>
-                <label for="showMega" class="mobile-item">About Us</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <div class="link-item cursor-pointer" on:click={() => window.location.href = "/aboutus/About-BITS-Vizag"}>
+	<div class="wrapper">
+		<div class="logo">
+			<a href="#"><img class="w-[150px]" src="/1.png" alt="" /></a>
+		</div>
+		<input type="radio" name="slider" id="menu-btn" />
+		<input type="radio" name="slider" id="close-btn" />
+		<ul class="nav-links">
+			<label for="close-btn" class="btn close-btn">
+				<i class="fas fa-times text-[#242526]" />
+			</label>
+			<li><a href="/">Home</a></li>
+			<li>
+				<a href="/aboutus/About-BITS-Vizag" class="desktop-item"> About Us</a>
+				<input type="checkbox" id="showMega" />
+				<label for="showMega" class="mobile-item">About Us</label>
+				<div class="mega-box">
+					<div class="content">
+						<div class="row">
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
+							>
 								<div class="dropdown__icon">
-                                <i class="fa-solid fa-building-columns"/>
-                            </div>
-                            <header><div class="link-item" on:click={() => window.location.href = "/aboutus/About-BITS-Vizag"}>About Bits
-							</div></header>
+									<i class="fa-solid fa-building-columns" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
+									>
+										About BITS VIZAG
+									</div>
+								</header>
 							</div>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/aboutus/Message-from-Secretary-&-Correspondent"}>Message from Secretary & Correspondent
-                                </div>
-                            </header>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user"/>
-                            </div>
-                            <header><div class="link-item" on:click={() => window.location.href = "/aboutus/Message-from-Principal"}>Message From Principal
-							</div></header>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="/courses/Under Graduation" class="desktop-item">Courses</a>
-                <input type="checkbox" id="courses"/>
-                <label for="courses" class="mobile-item">Courses</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-graduation-cap"/>
-                            </div>
-                            <header><div class="link-item" on:click={() => window.location.href = "/courses/Under Graduation"}>Under Graduation
-							</div></header>
-                            <ul class="mega-links">
-                                <li>B-Tech</li>
-                                <li>Duration - 4Years</li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-graduation-cap"/>
-                            </div>
-                            <header><div class="link-item" on:click={() => window.location.href = "/courses/Post Graduation"}>Post Graduation
-							</div></header>
-                            <ul class="mega-links">
-                                <li>M -Tech</li>
-                                <li>Duration - 2Years</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a on:click={() => window.location.href = "/department/Department of BS&H"} class="desktop-item cursor-pointer">
-                    Departments
-                </a>
-                <input type="checkbox" id="departments"/>
-                <label for="departments" class="mobile-item">Departments</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-code"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/department/Department of CSE"}>Computer
-                                    Science and Engineering
-                                </div>
-                            </header>
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-wand-magic-sparkles"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/department/Department of BS&H"}>Basics Sciences & Humanities
-                                </div>
-                            </header>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-lightbulb"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/department/Department of ECE"}>Electronics and Communication Engineering
-                                </div>
-                            </header>
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-screwdriver-wrench"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/department/Department of CIVIL"}>Civil Engineering
-                                </div>
-                            </header>
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-file-invoice"/>
-                            </div>
-                            <header><div class="link-item" on:click={() => window.location.href = "/department/Department of MBA"}>Management Studies</div></header>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-lightbulb"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/department/Department of EEE"}>Electrical and Electronics Engineering
-                                </div>
-                            </header>
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-gears"/>
-                            </div>
-                            <header>
-                                <div class="link-item" on:click={() => window.location.href = "/department/Department of MECH"}>Mechanical Engineering
-                                </div>
-                            </header>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="/placements">Placements</a></li>
-            <!--<li><a href="#">Academics</a></li>-->
-            <!--<li>
+						</div>
+						<div
+							class="link-item cursor-pointer"
+							on:click={() =>
+								(window.location.href = '/aboutus/Message-from-Secretary-&-Correspondent')}
+						>
+							<div class="row">
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-user" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() =>
+											(window.location.href = '/aboutus/Message-from-Secretary-&-Correspondent')}
+									>
+										Message from Secretary & Correspondent
+									</div>
+								</header>
+							</div>
+						</div>
+						<div
+							class="link-item cursor-pointer"
+							on:click={() => (window.location.href = '/aboutus/Message-from-Principal')}
+						>
+							<div class="row">
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-user" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/aboutus/Message-from-Principal')}
+									>
+										Message From Principal
+									</div>
+								</header>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="/courses/Under Graduation" class="desktop-item">Courses</a>
+				<input type="checkbox" id="courses" />
+				<label for="courses" class="mobile-item">Courses</label>
+				<div class="mega-box">
+					<div class="content">
+						<div class="row">
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/courses/Under Graduation')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-graduation-cap" />
+								</div>
+								<header>
+									<div
+										class="link-item ml-[-20px]"
+										on:click={() => (window.location.href = '/courses/Under Graduation')}
+									>
+										Under Graduation
+									</div>
+								</header>
+							</div>
+						</div>
+						<div
+							class="link-item cursor-pointer"
+							on:click={() => (window.location.href = '/courses/Post Graduation')}
+						>
+							<div class="row">
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-graduation-cap" />
+								</div>
+								<header>
+									<div
+										class="link-item ml-[-40px]"
+										on:click={() => (window.location.href = '/courses/Post Graduation')}
+									>
+										Post Graduation
+									</div>
+								</header>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a
+					on:click={() => (window.location.href = '/department/Department of BS&H')}
+					class="desktop-item cursor-pointer"
+				>
+					Departments
+				</a>
+				<input type="checkbox" id="departments" />
+				<label for="departments" class="mobile-item">Departments</label>
+				<div class="mega-box">
+					<div class="content">
+						<div class="row">
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of CSE')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-code" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/department/Department of CSE')}
+									>
+										Computer Science and Engineering
+									</div>
+								</header>
+							</div>
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of BS&H')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-wand-magic-sparkles" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/department/Department of BS&H')}
+									>
+										Basics Sciences & Humanities
+									</div>
+								</header>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of ECE')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-lightbulb" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/department/Department of ECE')}
+									>
+										Electronics and Communication Engineering
+									</div>
+								</header>
+							</div>
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of CIVIL')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-screwdriver-wrench" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/department/Department of CIVIL')}
+									>
+										Civil Engineering
+									</div>
+								</header>
+							</div>
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of MBA')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-file-invoice" />
+								</div>
+								<header>
+									<div
+										class="link-item cursor-pointer"
+										on:click={() => (window.location.href = '/department/Department of MBA')}
+									>
+										Management Studies
+									</div>
+								</header>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of EEE')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-lightbulb" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/department/Department of EEE')}
+									>
+										Electrical and Electronics Engineering
+									</div>
+								</header>
+							</div>
+							<div
+								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/department/Department of MECH')}
+							>
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-gears" />
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/department/Department of MECH')}
+									>
+										Mechanical Engineering
+									</div>
+								</header>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li><a href="/placements">Placements</a></li>
+			<!--<li><a href="#">Academics</a></li>-->
+			<!--<li>
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -162,9 +275,9 @@
                     </div>
                 </div>
             </li>-->
-            <li><a href="/facilities">Facilities</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <!--<li>
+			<li><a href="/facilities">Facilities</a></li>
+			<li><a href="/gallery">Gallery</a></li>
+			<!--<li>
                 <a href="#" class="desktop-item">IQAC</a>
                 <input type="checkbox" id="icac" />
                 <label for="icac" class="mobile-item">IQAC</label>
@@ -210,121 +323,108 @@
                     </div>
                 </div>
             </li>-->
-            <!--<li><a href="/naac">NAAC</a></li>-->
-            <li>
-                <a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
-                >Online Payment</a
-                >
-            </li>
-            <li><a href="/contactus">Contact Us</a></li>
-            <li><a href="https://www.instagram.com/bits_vizag_official/">Social Life</a></li>
-        </ul>
-        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]"/></label>
-    </div>
+			<!--<li><a href="/naac">NAAC</a></li>-->
+			<li>
+				<a
+					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
+					target="_blank">Online Payment</a
+				>
+			</li>
+			<li><a href="/contactus">Contact Us</a></li>
+			<li>
+				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
+			</li>
+		</ul>
+		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
+	</div>
 </nav>
 
-
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-    .dropdown__icon i {
-        font-size: 2.3rem;
-        color: hsl(220, 68%, 54%);
-        border-radius: 50%;
-        padding: 11px 10px;
-        margin-left: 20px;
-    }
+	.dropdown__icon i {
+		font-size: 2.3rem;
+		color: hsl(220, 68%, 54%);
+		border-radius: 50%;
+		padding: 11px 10px;
+		margin-left: 20px;
+	}
 
-    .dropdown__icon .fa-code {
-        margin-left: -45px;
-    }
+	.dropdown__icon .fa-code {
+		margin-left: -20px;
+	}
 
-    .dropdown__icon .fa-wand-magic-sparkles {
-        margin-left: -40px;
-    }
+	.dropdown__icon .fa-wand-magic-sparkles {
+		margin-left: -10px;
+	}
 
-    .dropdown__icon .fa-lightbulb {
-        margin-left: -50px;
-    }
+	.dropdown__icon .fa-lightbulb {
+		margin-left: -5px;
+	}
 
-    .dropdown__icon .fa-gears {
-        margin-left: -37px;
-    }
+	.dropdown__icon .fa-gears {
+		margin-left: -5px;
+	}
 
-    .dropdown__icon .fa-file-invoice {
-        margin-left: -50px;
-    }
+	.dropdown__icon .fa-file-invoice {
+		margin-left: -5px;
+	}
 
-    .dropdown__icon .fa-screwdriver-wrench {
-        margin-left: -40px;
-    }
+	.dropdown__icon .fa-screwdriver-wrench {
+		margin-left: -0px;
+	}
 
-    .dropdown__icon .fa-user-graduate {
-        margin-left: -45px;
-    }
+	.dropdown__icon .fa-user-graduate {
+		margin-left: -45px;
+	}
 
-    .dropdown__icon .fa-graduation-cap {
-        margin-left: -50px;
-    }
+	.dropdown__icon .fa-graduation-cap {
+		margin-left: -35px;
+	}
 
-    .dropdown__icon .fa-building-columns {
-        margin-left: -5px;
-    }
+	.dropdown__icon .fa-building-columns {
+		margin-left: -5px;
+	}
 
-    .dropdown__icon .fa-user {
-        margin-left: -50px;
-    }
+	.dropdown__icon .fa-user {
+		margin-left: -20px;
+	}
 
-    nav {
-        z-index: 99;
-        width: 100%;
+	nav {
+		z-index: 99;
+		width: 100%;
 
-        background: hsl(220, 100%, 99%);
-    }
+		background: hsl(220, 100%, 99%);
+	}
 
-    nav .wrapper {
-        position: relative;
-        max-width: 1600px;
-        padding: 30px 0px;
-        height: 80px;
-        line-height: 70px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        gap: 130px;
-    }
+	nav .wrapper {
+		position: relative;
+		max-width: 1600px;
+		padding: 30px 0px;
+		height: 80px;
+		line-height: 70px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		gap: 50px;
+	}
 
-    .wrapper .logo a {
-        color: #253c6a;
-        font-size: 30px;
-        font-weight: 600;
-        text-decoration: none;
-    }
+	.wrapper .logo a {
+		color: #253c6a;
+		font-size: 30px;
+		font-weight: 600;
+		text-decoration: none;
+	}
 
-    .wrapper .nav-links {
-        display: inline-flex;
-    }
+	.wrapper .nav-links {
+		display: inline-flex;
+	}
 
-    .nav-links li {
-        list-style: none;
-    }
+	.nav-links li {
+		list-style: none;
+	}
 
-    .nav-links li .link-item {
-        color: #253c6a;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 9px 10px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .nav-links li .link-item:hover {
-        color: hsl(220, 68%, 54%);
-    }
-
-	.nav-links li a {
+	.nav-links li .link-item {
 		color: #253c6a;
 		text-decoration: none;
 		font-size: 16px;
@@ -335,318 +435,392 @@
 		font-family: 'Poppins', sans-serif;
 	}
 
+	.nav-links li .link-item:hover {
+		color: hsl(220, 68%, 54%);
+	}
+
+	.nav-links li a {
+		color: #253c6a;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 9px 20px;
+		border-radius: 5px;
+		transition: all 0.3s ease;
+		font-family: 'Poppins', sans-serif;
+	}
+
 	.nav-links li a:hover {
 		color: hsl(220, 68%, 54%);
 	}
 
-    .nav-links .mobile-item {
-        display: none;
-        font-weight: bold;
-    }
+	.nav-links .mobile-item {
+		display: none;
+		font-weight: bold;
+	}
 
-    .nav-links li:hover .drop-menu,
-    .nav-links li:hover .mega-box {
-        transition: all 0.3s ease;
-        top: 70px;
-        opacity: 1;
-        visibility: visible;
-    }
+	.nav-links li:hover .drop-menu,
+	.nav-links li:hover .mega-box {
+		transition: all 0.3s ease;
+		top: 70px;
+		opacity: 1;
+		visibility: visible;
+	}
 
-    .drop-menu li a {
-        width: 100%;
-        display: block;
-        padding: 0 0 0 15px;
-        font-weight: 400;
-        border-radius: 0px;
-    }
+	.drop-menu li a {
+		width: 100%;
+		display: block;
+		padding: 0 0 0 15px;
+		font-weight: 400;
+		border-radius: 0px;
+	}
 
-    .mega-box {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        top: 85px;
-        opacity: 0;
-        visibility: hidden;
-        text-align: center;
-        z-index: 1;
-    }
+	.mega-box {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 85px;
+		opacity: 0;
+		visibility: hidden;
+		text-align: center;
+		z-index: 1;
+	}
 
-    .mega-box .content {
-        background: #ffffff;
-        padding: 100px 20px;
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        box-shadow: 50px 40px 10px rgba(0, 0, 0, 0.15);
-        border-radius: 10px 10px 10px 10px;
-    }
+	.mega-box .content {
+		background: #ffffff;
+		padding: 11px 100px;
+		display: flex;
+		width: 100%;
+		justify-content: space-evenly;
+		box-shadow: 50px 40px 10px rgba(0, 0, 0, 0.15);
+		border-radius: 10px 10px 10px 10px;
+	}
 
-    .mega-box .content .row {
-        line-height: 50px;
-    }
+	.mega-box .content .row {
+		line-height: 50px;
+	}
 
-    .mega-box .content .row header a {
-        color: hsl(220, 48%, 28%);
-        font-weight: bold;
-        margin-left: -40px;
-    }
+	.mega-box .content .row header a {
+		color: hsl(220, 48%, 28%);
+		font-weight: bold;
+		margin-left: -40px;
+	}
 
-    .content .row .mega-links {
-        margin-left: -40px;
-        border-left: 1px solid rgba(255, 255, 255, 0.09);
-    }
+	.content .row .mega-links {
+		margin-left: -40px;
+		border-left: 1px solid rgba(255, 255, 255, 0.09);
+	}
 
-    .row .mega-links li {
-        padding: 0 20px;
-    }
+	.row .mega-links li {
+		padding: 0 20px;
+	}
 
-    .row .mega-links li a {
-        padding: 0px;
-        padding: 0 20px;
-        color: hsl(220, 12%, 45%);
-        font-size: 17px;
-        display: block;
-    }
+	.row .mega-links li a {
+		padding: 0px;
+		padding: 0 20px;
+		color: hsl(220, 12%, 45%);
+		font-size: 17px;
+		display: block;
+	}
 
-    .row .mega-links li a:hover {
-        color: hsl(220, 68%, 54%);
-    }
+	.row .mega-links li a:hover {
+		color: hsl(220, 68%, 54%);
+	}
 
-    .wrapper .btn {
-        color: #fff;
-        font-size: 20px;
-        cursor: pointer;
-        display: none;
-    }
+	.wrapper .btn {
+		color: #fff;
+		font-size: 20px;
+		cursor: pointer;
+		display: none;
+	}
 
-    .wrapper .btn.close-btn {
-        position: absolute;
-        right: 30px;
-        top: 10px;
-    }
+	.wrapper .btn.close-btn {
+		position: absolute;
+		right: 30px;
+		top: 10px;
+	}
 
-    @media screen and (max-width: 1320px) {
-        nav .wrapper {
-            gap: 0px;
-        }
-    }
+	@media screen and (max-width: 1320px) {
+		nav .wrapper {
+			gap: 0px;
+		}
+	}
 
-    @media screen and (max-width: 1402px) {
-        .nav-links li a {
-            font-size: 15px;
-            font-weight: 700;
-        }
-    }
+	@media screen and (max-width: 1402px) {
+		.nav-links li a {
+			font-size: 15px;
+			font-weight: 700;
+			padding: 9px 13px;
+		}
+	}
 
-    @media screen and (max-width: 1220px) {
-        .nav-links li a {
-            font-size: 14px;
-            font-weight: 700;
-        }
+	@media screen and (max-width: 1220px) {
+		.nav-links li a {
+			font-size: 14px;
+			font-weight: 700;
+			padding: 9px 10px;
+		}
 
 		.nav-links li .link-item {
 			font-size: 14px;
 			font-weight: 700;
 		}
-    }
-
-    @media screen and (max-width: 1024px) {
-        .nav-links li a {
-            font-size: 11px;
-            font-weight: 700;
-        }
+	}
+	@media screen and (max-width: 1080px) {
+		.nav-links li a {
+			font-size: 12px;
+			font-weight: 700;
+			padding: 9px 10px;
+		}
 
 		.nav-links li .link-item {
 			font-size: 11px;
 			font-weight: 700;
 		}
-    }
-
-    @media screen and (max-width: 430px) {
-        nav .wrapper {
-            max-width: 350px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        nav .wrapper {
-            justify-content: space-between;
-        }
-
-        .wrapper .btn {
-            display: block;
-        }
-
-        .wrapper .nav-links {
-            position: fixed;
-            height: 100vh;
-            width: 100%;
-            max-width: 350px;
-            top: 0;
-            left: -100%;
-            background: #ffffff;
-            display: block;
-            padding: 50px 10px;
-            line-height: 50px;
-            overflow-y: auto;
-            box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
-            transition: all 0.6s ease;
-            z-index: 1;
-        }
-
-        /* custom scroll bar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #242526;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #3a3b3c;
-        }
-
-        #menu-btn:checked ~ .nav-links {
-            left: 0%;
-        }
-
-        #menu-btn:checked ~ .btn.menu-btn {
-            display: none;
-        }
-
-        #close-btn:checked ~ .btn.menu-btn {
-            display: block;
-        }
-
-        .nav-links li {
-            margin: 15px 10px;
-        }
-
-        .nav-links li a {
-            padding: 0 20px;
-            display: block;
-            font-size: 20px;
-        }
+	}
+	@media screen and (max-width: 1024px) {
+		.nav-links li a {
+			font-size: 11px;
+			font-weight: 700;
+		}
 
 		.nav-links li .link-item {
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	@media screen and (max-width: 924px) {
+		.nav-links li a {
+			font-size: 10px;
+			font-weight: 700;
+		}
+
+		.nav-links li .link-item {
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	
+
+	@media screen and (max-width: 430px) {
+		nav .wrapper {
+			max-width: 350px;
+		}
+	}
+
+	@media screen and (max-width: 872px) {
+		.dropdown__icon .fa-user {
+			margin-left: -5px;
+			padding-top: 30px;
+		}
+		.dropdown__icon .fa-graduation-cap {
+			margin-left: -28px;
+			padding-top: 30px;
+		}
+		.dropdown__icon .fa-wand-magic-sparkles {
+			margin-left: -10px;
+			padding-top: 40px;
+		}
+		.dropdown__icon .fa-lightbulb {
+			margin-left: -5px;
+			padding-top: 30px;
+		}
+		.dropdown__icon .fa-gears {
+			margin-left: -5px;
+			padding-top: 40px;
+		}
+
+		.dropdown__icon .fa-file-invoice {
+			margin-left: -5px;
+			padding-top: 40px;
+		}
+
+		.dropdown__icon .fa-screwdriver-wrench {
+			margin-left: -0px;
+			padding-top: 40px;
+		}
+		.dropdown__icon .fa-code {
+			margin-left: -5px;
+		}
+		nav .wrapper {
+			justify-content: space-between;
+		}
+
+		.wrapper .btn {
+			display: block;
+			padding-right: 25px;
+		}
+
+		.wrapper .nav-links {
+			position: fixed;
+			height: 100vh;
+			width: 100%;
+			max-width: 350px;
+			top: 0;
+			left: -100%;
+			background: #ffffff;
+			display: block;
+			padding: 50px 10px;
+			line-height: 50px;
+			overflow-y: auto;
+			box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+			transition: all 0.6s ease;
+			z-index: 1;
+		}
+
+		/* custom scroll bar */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #242526;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #3a3b3c;
+		}
+
+		#menu-btn:checked ~ .nav-links {
+			left: 0%;
+		}
+
+		#menu-btn:checked ~ .btn.menu-btn {
+			display: none;
+		}
+
+		#close-btn:checked ~ .btn.menu-btn {
+			display: block;
+		}
+
+		.nav-links li {
+			margin: 15px 10px;
+		}
+
+		.nav-links li a {
 			padding: 0 20px;
 			display: block;
 			font-size: 20px;
 		}
 
-        .nav-links .drop-menu {
-            position: static;
-            opacity: 1;
-            top: 65px;
-            visibility: visible;
-            padding-left: 20px;
-            width: 100%;
-            max-height: 0px;
-            overflow: hidden;
-            box-shadow: none;
-            transition: all 0.3s ease;
-        }
+		.nav-links li .link-item {
+			padding: 0 0px;
+			display: block;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 30px;
+			text-align: center;
+		}
 
-        #courses:checked ~ .mega-box,
-        #showMega:checked ~ .mega-box,
-        #departments:checked ~ .mega-box,
-        #exam:checked ~ .mega-box,
-        #iqac:checked ~ .mega-box {
-            max-height: 100%;
-        }
+		.nav-links .drop-menu {
+			position: static;
+			opacity: 1;
+			top: 65px;
+			visibility: visible;
+			padding-left: 20px;
+			width: 100%;
+			max-height: 0px;
+			overflow: hidden;
+			box-shadow: none;
+			transition: all 0.3s ease;
+		}
 
-        .nav-links .desktop-item {
-            display: none;
-        }
+		#courses:checked ~ .mega-box,
+		#showMega:checked ~ .mega-box,
+		#departments:checked ~ .mega-box,
+		#exam:checked ~ .mega-box,
+		#iqac:checked ~ .mega-box {
+			max-height: 100%;
+		}
 
-        .nav-links .mobile-item {
-            display: block;
-            color: #2c426e;
-            font-size: 20px;
-            font-weight: 500;
-            padding-left: 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
+		.nav-links .desktop-item {
+			display: none;
+		}
 
-        .nav-links .mobile-item:hover {
-            background: #2c426e;
-            color: white;
-        }
+		.nav-links .mobile-item {
+			display: block;
+			color: #2c426e;
+			font-size: 20px;
+			font-weight: 500;
+			padding-left: 20px;
+			cursor: pointer;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			font-weight: bold;
+		}
 
-        .drop-menu li {
-            margin: 0;
-        }
+		.nav-links .mobile-item:hover {
+			background: #2c426e;
+			color: white;
+		}
 
-        .drop-menu li a {
-            border-radius: 5px;
-            font-size: 18px;
-        }
+		.drop-menu li {
+			margin: 0;
+		}
 
-        .mega-box {
-            position: static;
-            top: 65px;
-            opacity: 1;
-            visibility: visible;
-            padding: 0 20px;
-            max-height: 0px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+		.drop-menu li a {
+			border-radius: 5px;
+			font-size: 18px;
+		}
 
-        .mega-box .content {
-            box-shadow: none;
-            flex-direction: column;
-            padding: 20px 20px 0 20px;
-        }
+		.mega-box {
+			position: static;
+			top: 65px;
+			opacity: 1;
+			visibility: visible;
+			padding: 0 20px;
+			max-height: 0px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
 
-        .mega-box .content .row {
-            width: 100%;
-            margin-bottom: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
+		.mega-box .content {
+			box-shadow: none;
+			flex-direction: column;
+			padding: 20px 20px 0 20px;
+		}
 
-        .mega-box .content .row:nth-child(1),
-        .mega-box .content .row:nth-child(2) {
-            border-top: 0px;
-        }
+		.mega-box .content .row {
+			width: 100%;
+			margin-bottom: 15px;
+			border-top: 1px solid rgba(255, 255, 255, 0.08);
+		}
 
-        .content .row .mega-links {
-            border-left: 0px;
-            padding-left: 15px;
-        }
+		.mega-box .content .row:nth-child(1),
+		.mega-box .content .row:nth-child(2) {
+			border-top: 0px;
+		}
 
-        .row .mega-links li {
-            margin: 0;
-        }
+		.content .row .mega-links {
+			border-left: 0px;
+			padding-left: 15px;
+		}
 
-        .content .row header {
-            font-size: 19px;
-        }
-    }
+		.row .mega-links li {
+			margin: 0;
+		}
 
-    nav input {
-        display: none;
-    }
+		.content .row header {
+			font-size: 19px;
+		}
+	}
 
-    .body-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
-        padding: 0 30px;
-    }
+	nav input {
+		display: none;
+	}
 
-    .body-text div {
-        font-size: 45px;
-        font-weight: 600;
-    }
+	.body-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		padding: 0 30px;
+	}
 
-	/* Marquee Css */
-
-	
+	.body-text div {
+		font-size: 45px;
+		font-weight: 600;
+	}
 </style>

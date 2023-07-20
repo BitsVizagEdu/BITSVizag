@@ -2,7 +2,7 @@
 	<img src="/header/cse.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
-		<img src="/lab.jpeg" alt="" />
+		<img src="/cse.jpg" alt="" />
 	</div>
 	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
 		<div>
@@ -54,11 +54,11 @@
 		<div>
 			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
 			<div class="container pt-8">
-				<img class="first" src="/7.png" alt="" />
-				<img src="/8.png" alt="" />
-				<img src="/9.png" alt="" />
-				<img class="third" src="/10.png" alt="" />
-				<img class="second" src="/11.png" alt="" />
+				<img class="first" src="/cse8.png" alt="" />
+				<img src="/cse3.jpg" alt="" />
+				<img src="/cse6.jpg" alt="" />
+				<img class="third" src="/cse9.jpg" alt="" />
+				<img class="second" src="/cse7.png" alt="" />
 			</div>
 		</div>
 		<div id="facilities" class="flex gap-20 facilities">
@@ -312,9 +312,9 @@
 					<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
 						<p>M.TECH :</p>
-						<p>CIVIL (STRUCTURAL</p>
+						<p>CSE (STRUCTURAL</p>
 						<p>ENGINEERING-SE)</p>
-						<p>DURATION - 2 YEARS</p>
+						<p>DURATION - 4 YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>

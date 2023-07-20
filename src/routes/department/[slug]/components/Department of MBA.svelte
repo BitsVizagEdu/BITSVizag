@@ -2,7 +2,7 @@
 	<img src="/header/mba.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Management Studies - <b>MBA</b></h1> -->
 	<div class="flex justify-center w-[100%]">
-		<img src="/lab.jpeg" alt="" />
+		<img src="/mba.jpg" alt="" />
 	</div>
 	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
 		<div>
@@ -311,8 +311,7 @@
 					<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
 						<p>M.TECH :</p>
-						<p>CIVIL (STRUCTURAL</p>
-						<p>ENGINEERING-SE)</p>
+						<p>MBA</p>
 						<p>DURATION - 2 YEARS</p>
 					</div>
 				</div>
