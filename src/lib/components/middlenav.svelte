@@ -42,7 +42,7 @@
 				</div>
 			</li>
 			<li>
-				<a href="/courses" class="desktop-item">Courses</a>
+				<a href="/courses/Under Graduation" class="desktop-item">Courses</a>
 				<input type="checkbox" id="courses" />
 				<label for="courses" class="mobile-item">Courses</label>
 				<div class="mega-box">
@@ -71,7 +71,7 @@
 				</div>
 			</li>
 			<li>
-				<a href="" class="desktop-item">Departments</a>
+				<a href="/department/Department of BS&H" class="desktop-item">Departments</a>
 				<input type="checkbox" id="departments" />
 				<label for="departments" class="mobile-item">Departments</label>
 				<div class="mega-box">
@@ -125,7 +125,7 @@
 			<li><a href="/placements">Placements</a></li>
 			<!--<li><a href="#">Academics</a></li>-->
 			<li>
-				<a href="" class="desktop-item">Exam Cell</a>
+				<a href="/examcell" class="desktop-item">Exam Cell</a>
 				<input type="checkbox" id="exam" />
 				<label for="exam" class="mobile-item">Exam Cell</label>
 				<div class="mega-box">
@@ -134,13 +134,13 @@
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-user-graduate" />
 							</div>
-							<header><a href="examcell/Engineering">Engineering</a></header>
+							<header><a href="/examcell/Engineering">Engineering</a></header>
 						</div>
 						<div class="row">
 							<div class="dropdown__icon">
 								<i class="fa-solid fa-user-graduate" />
 							</div>
-							<header><a href="examcell/MBA">Management Studies</a></header>
+							<header><a href="/examcell/MBA">Management Studies</a></header>
 						</div>
 					</div>
 				</div>
@@ -205,53 +205,45 @@
 		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>
-<div class="marquee">
+<!-- <div class="marquee">
 	<h3>
-	  <div class="marquee-wrapper">
-		<div class="marquee-title">
-			<span class="text-stroke-black">
-				BITS VIZAG
-			</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-			<span class="text-stroke-black">
-				BITS VIZAG
-			</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-			<span class="text-stroke-black">
-				BITS VIZAG
-			</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>
-			<span class="text-stroke-black">BITS VIZAG</span>
-			<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+		<div class="marquee-wrapper">
+			<div class="marquee-title">
+				<span class="text-stroke-black"> BITS VIZAG </span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-stroke-black"> BITS VIZAG </span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-stroke-black"> BITS VIZAG </span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>
+				<span class="text-stroke-black">BITS VIZAG</span>
+				<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="marquee-title" />
 		</div>
-		<div class="marquee-title">
-			
-		</div>
-	  </div>
 	</h3>
-  </div>
+</div> -->
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -583,54 +575,5 @@
 		font-weight: 600;
 	}
 
-	/* Marquee Css */
 
-	.marquee {
-        width: 100%;
-        padding: 5px 20px;
-        border-top: 1px solid #000000;
-        border-bottom: 1px solid #000000;
-        text-align: center;
-        overflow: hidden;
-      }
-
-      .marquee h3 {
-        font-size: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-
-      .marquee .marquee-wrapper {
-        width: 100000px;
-        animation: marqueeAnimation 40s linear 0s infinite running;
-      }
-
-      .marquee h3 .marquee-title {
-        margin-right: 20px;
-        float: left;
-      }
-
-      .text-stroke-black {
-        color: transparent;
-        -webkit-text-stroke: 1px;
-        -webkit-text-stroke-color: #000000;
-      }
-
-      @keyframes marqueeAnimation {
-		100% {
-          transform: translateX(-3500px);
-        }
-      }
-
-      @media (max-width: 992px) {
-        .marquee h3 {
-          font-size: 20px;
-        }
-      }
-
-      @media (max-width: 549px) {
-        .marquee h3 {
-          font-size: 18px;
-        }
-      }
 </style>
