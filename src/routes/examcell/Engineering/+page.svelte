@@ -2,7 +2,7 @@
      let activeTab = 'Academic Calendar';
     
 
-	let items = ['Academic Calendar','Academic Regulation','Syllabus','Results','Timetable','Circular & Notification','Online Discrepancies','Department Examcell Coordinators','Contactus']
+	let items = ['Academic Calendar','Academic Regulation','Syllabus','Results','Timetable','Circular & Notification','Online Discrepancies','Department Examcell Coordinators','Contact Us']
 	
 	import Calendar from "./components/calendar.svelte";
 	import Regulation from "./components/regulation.svelte";
