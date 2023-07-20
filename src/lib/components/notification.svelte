@@ -2,36 +2,16 @@
 	<h3>
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
-				<span class="text-stroke-black"> BITS VIZAG </span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-stroke-black"> BITS VIZAG </span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-stroke-black"> BITS VIZAG </span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>
-				<span class="text-stroke-black">BITS VIZAG</span>
-				<span>BITS VIZAG</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>International Interactive Workshop on Digital Education, Internships and Opportunities in UK. - 22 July 2023</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>BITS Vizag signed an MOU with EXCELR to facilitate Faculty & Student Development Program. - 7 June 2023</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>BITS VIZAG signed an MOU with i3 IT Solutionz - 13 July 2023</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>BITS VIZAG signed MOU with Rubicon Skill Development Pvt Ltd to Facilitate Soft skills Training</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;
 			</div>
 			<div class="marquee-title" />
 		</div>
@@ -39,6 +19,9 @@
 </div>
 
 <style>
+
+
+
     	/* Marquee Css */
 
 	.marquee {
