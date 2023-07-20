@@ -85,7 +85,7 @@
 <section class="text-center  font-sans xs:px-0 3xs:p-24  ">
     <div class="flex flex-col justify-center items-center ">
         <div class="flex flex-col items-center ">
-            <p class=" text-3xl  font-bold p-3">Professional Committie</p>
+            <p class=" text-3xl  font-bold p-3">Professional Committee</p>
             <p class=" text-2xl  pb-2">BITS Vizag provides you </p>
         </div>
         <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-2  ">
