@@ -2,7 +2,7 @@
 	<img src="/header/basic.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1">BASIC SCIENCE AND HUMANITIES</h1> -->
 	<div class="flex justify-center w-[100%]">
-		<img src="/lab.jpeg" alt="" />
+		<img src="/lab.jpg" alt="" />
 	</div>
 	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
 		<div>
@@ -58,8 +58,8 @@
 			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
 			<div class="container pt-8">
 				<img class="first" src="/bsh1.png" alt="" />
-				<img src="/bsh3.webp" alt="" />
-				<img src="/bsh5.jpeg" alt="" />
+				<img src="/bsh3.jpg" alt="" />
+				<img src="/bsh6.jpg" alt="" />
 				<img class="third" src="/bsh4.jpeg" alt="" />
 				<img class="second" src="/bsh2.png" alt="" />
 			</div>
@@ -315,7 +315,7 @@
 					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
 						<p>B.TECH :</p>
-						<p>CIVIL ENGINEERING</p>
+						<p>BS & H</p>
 						<p>DURATION – 4 YEARS</p>
 					</div>
 				</div>
