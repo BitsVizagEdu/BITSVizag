@@ -46,7 +46,7 @@
                                   d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
                         </svg>
                     </div>
-                    <div class="p-[10px] capitalize font-bold">training and placement officer</div>
+                    <div class="p-[10px] capitalize font-bold">Training and placement officer</div>
                     <div class="capitalize font-semibold">MR. P. Joshua Raju</div>
                     <div class="overflow-hidden text-center pt-2"><a href="mailto:tpo@bitsvizag.com">tpo@bitsvizag.com</a>
                     </div>
@@ -59,9 +59,9 @@
                                       d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
                             </svg>
                         </div>
-                        <div class="p-[10px] capitalize font-bold">Admission Officer</div>
-                        <div class="capitalize font-semibold">Mr. B. G. S. Prasad </div>
-                        <div class="overflow-hidden text-center pt-2">+91 92980 52173</div>
+                        <div class="p-[10px] capitalize font-bold">Exam Cell</div>
+                        <div class="capitalize font-semibold">Prof. D. N. Murti</div>
+                        <div class="overflow-hidden text-center pt-2"><a href="mailto:examcellinfo@bitsvizag.com">examcellinfo@bitsvizag.com</a></div>
                     </div>
 
             </div>
