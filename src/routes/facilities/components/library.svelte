@@ -30,7 +30,7 @@
 
         </div>
         <div id="pic " class="flex flex-col justify-between ">
-            <div class="rounded-lg"><img src="./Library.jpg" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3">
+            <div class="rounded-lg"><img src="./Library-1.webp" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3">
             </div>
             
             
