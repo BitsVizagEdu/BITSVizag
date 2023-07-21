@@ -571,7 +571,7 @@
 	}
 	@media screen and (max-width: 1083px) {
 		.nav-links li a {
-			font-size: 11px;
+			font-size: 10.7px;
 			font-weight: 700;
 			padding: 9px 10px;
 		}
@@ -594,7 +594,7 @@
 	}
 	@media screen and (max-width: 967px) {
 		.nav-links li a {
-			font-size: 9.8px;
+			font-size: 9.5px;
 			font-weight: 700;
 		}
 
