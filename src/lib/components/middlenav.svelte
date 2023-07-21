@@ -277,17 +277,13 @@
             </li>-->
 			<li><a href="/facilities">Facilities</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<!--<li>
+			<li>
                 <a href="#" class="desktop-item">IQAC</a>
-                <input type="checkbox" id="icac" />
-                <label for="icac" class="mobile-item">IQAC</label>
+                <input type="checkbox" id="iqac" />
+                <label for="iqac" class="mobile-item">IQAC</label>
                 <div class="mega-box">
                     <div class="content">
                         <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            </div>
-                            <header><a href="">Get Started</a></header>
                             <ul class="mega-links">
                                 <li><a href="">NIRF 2022</a></li>
                                 <li><a href="">2021 - 2022</a></li>
@@ -303,7 +299,7 @@
                                 <li><a href="">Code of Conduct</a></li>
                             </ul>
                         </div>
-                        <div class="row pt-28">
+                        <div class="row">
                             <ul class="mega-links">
                                 <li><a href="">Criteria - 20</a></li>
                                 <li><a href="">Exam Cell Annual Report</a></li>
@@ -322,8 +318,8 @@
 
                     </div>
                 </div>
-            </li>-->
-			<!--<li><a href="/naac">NAAC</a></li>-->
+            </li>
+			<li><a href="/naac">NAAC</a></li>
 			<li>
 				<a
 					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
@@ -406,7 +402,7 @@
 		margin: auto;
 		display: flex;
 		align-items: center;
-		gap: 50px;
+		gap: 10px;
 	}
 
 	.wrapper .logo a {
@@ -442,7 +438,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 600;
 		padding: 9px 20px;
 		border-radius: 5px;
@@ -518,8 +514,8 @@
 	.row .mega-links li a {
 		padding: 0px;
 		padding: 0 20px;
-		color: hsl(220, 12%, 45%);
-		font-size: 17px;
+		color: #253c6a;
+		font-size: 15px;
 		display: block;
 	}
 
@@ -548,7 +544,7 @@
 
 	@media screen and (max-width: 1402px) {
 		.nav-links li a {
-			font-size: 15px;
+			font-size: 13px;
 			font-weight: 700;
 			padding: 9px 13px;
 		}
@@ -556,7 +552,7 @@
 
 	@media screen and (max-width: 1220px) {
 		.nav-links li a {
-			font-size: 14px;
+			font-size: 13px;
 			font-weight: 700;
 			padding: 9px 10px;
 		}
@@ -566,22 +562,18 @@
 			font-weight: 700;
 		}
 	}
-	@media screen and (max-width: 1080px) {
+	@media screen and (max-width:1141px){
 		.nav-links li a {
 			font-size: 12px;
 			font-weight: 700;
 			padding: 9px 10px;
 		}
-
-		.nav-links li .link-item {
-			font-size: 11px;
-			font-weight: 700;
-		}
 	}
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1083px) {
 		.nav-links li a {
 			font-size: 11px;
 			font-weight: 700;
+			padding: 9px 10px;
 		}
 
 		.nav-links li .link-item {
@@ -589,7 +581,7 @@
 			font-weight: 700;
 		}
 	}
-	@media screen and (max-width: 924px) {
+	@media screen and (max-width: 1025px) {
 		.nav-links li a {
 			font-size: 10px;
 			font-weight: 700;
@@ -600,7 +592,23 @@
 			font-weight: 700;
 		}
 	}
-	
+	@media screen and (max-width: 967px) {
+		.nav-links li a {
+			font-size: 9.8px;
+			font-weight: 700;
+		}
+
+		.nav-links li .link-item {
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	@media screen and (max-width:956px){
+		.nav-links li a {
+			font-size: 9px;
+			font-weight: 700;
+		}
+	}
 
 	@media screen and (max-width: 430px) {
 		nav .wrapper {
@@ -608,7 +616,7 @@
 		}
 	}
 
-	@media screen and (max-width: 872px) {
+	@media screen and (max-width: 909px) {
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
 			padding-top: 30px;
