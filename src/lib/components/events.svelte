@@ -2,7 +2,7 @@
 <script>
     let events = [
         {
-            name: "INTERNATIONAL WOMEN'S DAY",
+            name: "MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK",
             description: "BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held.",
             date: "July 22, 2023",
             image: "/events/lsdb.jpg",
