@@ -105,8 +105,8 @@
                     <div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r"></div>
                     <div class="w-[800px] flex flex-col bg-white rounded-2xl border-2">
                         <div class="w-full">
-                            <img on:mouseenter={() => scaleUp(".img" + i.toString())} on:mouseleave={() => scaleDown(".img" + i.toString())} class={`img${i} image w-full rounded-2xl`}
-                                 src={event.image} alt="">
+                           <a href="{event.href}"> <img on:mouseenter={() => scaleUp(".img" + i.toString())} on:mouseleave={() => scaleDown(".img" + i.toString())} class={`img${i} image w-full rounded-2xl`}
+                            src={event.image} alt=""></a>
                         </div>
                     </div>
                 </div>
