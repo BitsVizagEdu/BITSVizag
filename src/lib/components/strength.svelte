@@ -9,7 +9,7 @@
     }
 </script>
 
-<section data-aos="zoom-in" class="text-center bg-indigo-800 font-sans text-white">
+<section data-aos="zoom-in" class="text-center bg-[#0c1637] font-sans text-white">
     <div class="flex items-center 3xs:flex-col lg:flex-row justify-center items-center lg:p-10 md:p-5 ">
         <div class="basis-1/3 border-b-4 lg:border-r-4 md:border-b-4 lg:border-b-0 pt-12 flex flex-col items-center justify-center border-white xs:pb-6 pb-12 md:pr-12 ">
             <div class="flex items-center justify-center p-4">
