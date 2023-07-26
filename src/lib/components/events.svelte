@@ -2,29 +2,34 @@
 <script>
     let events = [
         {
+            name: "INTERNATIONAL WOMEN'S DAY",
+            description: "BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held.",
+            date: "July 22, 2023",
+            image: "/events/lsdb.jpg",
+            href:"https://www.instagram.com/p/CvBteqCLtbR/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
             name: "INTERNATIONAL YOGA DAY CELEBRATION",
             description: "Featuring Dr. Sundar Raj Perumali, Director, Aroghyadhatri.",
             date: "June 21, 2023",
-            image: "/events/6.jpeg"
+            image: "/events/6.jpeg",
+            href:"https://www.instagram.com/p/Ctv-lUWroBU/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
         },
         {
             name: "GRADUATION DAY CELEBRATION",
             description: "Featuring Chief Guest Prof. G. Swami Naidu, Registrar - JNTU GV.",
             date: "September 2, 2022",
-            image: "/events/7.JPG"
+            image: "/events/7.JPG",
+            href:"https://www.instagram.com/p/CrtQ2fwPY26/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
         },
         {
             name: "BITS QUEST 2K23 - ANNUAL FEST",
             description: "Thrilled to witness Digitaries like Prof. K. Venkata Subbaiah, JNTU Vice Chancellor and Shri. K. Nagesh.",
             date: "August 26, 2022",
-            image: "/events/5.jpeg"
+            image: "/events/5.jpeg",
+            href:"https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
         },
-        {
-            name: "INTERNATIONAL WOMEN'S DAY",
-            description: "We were Honored to have esteemed guests Dr.Betsy Merilyn Williams, Vice President of the National Council of YMCA's",
-            date: "August 15, 2022",
-            image: "/events/2.jpeg"
-        },
+        
     ]
 
     import {animate} from "motion";
@@ -59,8 +64,8 @@
                 <div class="w-[400px] flex items-center justify-center py-16">
                     <div class="w-[800px] flex flex-col">
                         <div class="w-full">
-                            <img on:mouseenter={() => scaleUp(".img" + i.toString())} on:mouseleave={() => scaleDown(".img" + i.toString())} class={`img${i} image w-full rounded-2xl`}
-                                 src={event.image} alt="">
+                            <a href="{event.href}"><img  on:mouseenter={() => scaleUp(".img" + i.toString())} on:mouseleave={() => scaleDown(".img" + i.toString())} class={`img${i} image w-full rounded-2xl`}
+                                src={event.image} alt=""></a>
                         </div>
                     </div>
                     <div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r"></div>
