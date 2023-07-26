@@ -134,7 +134,7 @@ let details = [
 		<h3 class="pb-4 text-3xl font-semibold text-center">Placement Info</h3>
 		<div class="overflow-x-auto relative shadow-md sm:rounded-lg h-[30vh]">
 			<table class="w-full text-sm text-left text-blue-100">
-				<thead class="text-xs text-gray-800 uppercase bg-gray-200">
+				<thead class="text-xs text-gray-800 uppercase bg-blue-100">
 				<tr>
 					<th scope="col" class="py-3 px-6">
 						Name
@@ -149,7 +149,7 @@ let details = [
 				</thead>
 				<tbody>
 					{#each details as item, i}
-					<tr class="bg-gray-500 border-b border-gray-700">
+					<tr class="bg-blue-600 border-b border-gray-600">
 						<th scope="row" class="py-4 px-6 font-medium text-gray-50 whitespace-nowrap">
 							{item.name}
 						</th>
