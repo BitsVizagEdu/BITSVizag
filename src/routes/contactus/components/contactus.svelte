@@ -36,7 +36,7 @@
                     </div>
                     <div class="p-[10px] capitalize font-bold">Administrative Officer</div>
                     <div class="capitalize font-semibold">Mr. T. Kiran Kumar</div>
-                    <div class="overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">ao@bitsvizag.com</a></div>
+                    <div class="overflow-hidden text-center pt-2"><a href="mailto:ao@bitsvizag.com">ao@bitsvizag.com</a></div>
                 </div>
                 <div class="card h-[200px] w-[250px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
                     <div>
