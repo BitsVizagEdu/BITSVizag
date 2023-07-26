@@ -18,7 +18,7 @@
     let items = [
         {
             title: "312+",
-            description: "Recruiters hired LPU students"
+            description: "Recruiters hired BITS VIZAG students"
         },
         {
             title: "1000+",

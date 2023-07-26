@@ -2,7 +2,7 @@
 	<img src="/header/mech.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Mechanical Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
-		<img src="/lab.jpeg" alt="" />
+		<img src="/mech.jpg" alt="" />
 	</div>
 	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
 		<div>
@@ -87,7 +87,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Engineering Geoloy Laboratory</p>
+					<p>Thermodynamics Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -110,7 +110,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Geotechnical Engineering Laboratory</p>
+					<p>Fluid Mechanics Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -133,7 +133,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Surveying Laboratory</p>
+					<p>Mechatronics Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -156,7 +156,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Concrete Technology Laboratory</p>
+					<p>CAD Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -179,7 +179,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Transportation Engineering Laboratory</p>
+					<p>CAM Laboratory</p>
 				</div>
 			</div>
 			<div>
@@ -204,7 +204,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Environmental Engineering Laboratory</p>
+					<p>Automotive Engineering Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -310,14 +310,13 @@
 		</div>
 		<div id="academic" class="flex gap-7">
 			<div>
-				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>M.TECH :</p>
-						<p>CIVIL (STRUCTURAL</p>
-						<p>ENGINEERING-SE)</p>
-						<p>DURATION - 2 YEARS</p>
+						<p>B.TECH : MECH</p>
+
+						<p>DURATION-4YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
@@ -401,21 +400,20 @@
 			</div>
 			<div />
 			<div>
-				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>B.TECH :</p>
-						<p>CIVIL ENGINEERING</p>
-						<p>DURATION – 4 YEARS</p>
+						<p>M.TECH : MECH</p>
+
+						<p>DURATION–2YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
 				<div>
 					<p class="text-justify pt-5 text-[#08163d]">
-						BITS Engineering College admits candidates through the Engineering, Agriculture &
-						Pharmacy Common Entrance Test (EAPCET), conducted by AP STATE GOVERNMENT, on fulfilling
-						the eligibility requirements and under management quota.
+						BITS Engineering College admits candidates through the eligibility requirements and
+						under management quota.
 					</p>
 					<div class="flex pt-5">
 						<div>

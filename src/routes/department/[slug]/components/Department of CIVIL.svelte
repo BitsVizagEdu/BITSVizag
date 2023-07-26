@@ -2,7 +2,7 @@
 	<img src="/header/civil.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Civil Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
-		<img src="/lab.jpeg" alt="" />
+		<img src="/civil.jpg" alt="" />
 	</div>
 	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
 		<div>
@@ -85,7 +85,30 @@
 							</g>
 						</g>
 					</svg>
-					<p>Engineering Geoloy Laboratory</p>
+					<p>Material Testing Laboratory</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Structural Engineering Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -131,7 +154,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Surveying Laboratory</p>
+					<p>Hydraulacs Mechanical Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -154,30 +177,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Concrete Technology Laboratory</p>
-				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
-						viewBox="0 0 24 24"
-						version="1.1"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-					>
-						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-						<title>ic_fluent_checkbox_checked_24_regular</title>
-						<desc>Created with Sketch.</desc>
-						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
-								<path
-									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
-									id="🎨Color"
-								/>
-							</g>
-						</g>
-					</svg>
-					<p>Transportation Engineering Laboratory</p>
+					<p>Fluid Mechanics Laboratory</p>
 				</div>
 			</div>
 			<div>
@@ -202,7 +202,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Environmental Engineering Laboratory</p>
+					<p>Surveying Laboratory</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -308,14 +308,13 @@
 		</div>
 		<div id="academic" class="flex gap-7">
 			<div>
-				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>M.TECH :</p>
-						<p>CIVIL (STRUCTURAL</p>
-						<p>ENGINEERING-SE)</p>
-						<p>DURATION - 2 YEARS</p>
+						<p>B.TECH : CIVIL</p>
+
+						<p>DURATION-4YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
@@ -399,21 +398,20 @@
 			</div>
 			<div />
 			<div>
-				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
 				<div id="branch" class="flex items-center">
 					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
-						<p>B.TECH :</p>
-						<p>CIVIL ENGINEERING</p>
-						<p>DURATION – 4 YEARS</p>
+						<p>M.TECH : CIVIL</p>
+
+						<p>DURATION–2YEARS</p>
 					</div>
 				</div>
 				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
 				<div>
 					<p class="text-justify pt-5 text-[#08163d]">
-						BITS Engineering College admits candidates through the Engineering, Agriculture &
-						Pharmacy Common Entrance Test (EAPCET), conducted by AP STATE GOVERNMENT, on fulfilling
-						the eligibility requirements and under management quota.
+						BITS Engineering College admits candidates through the eligibility requirements and
+						under management quota.
 					</p>
 					<div class="flex pt-5">
 						<div>
