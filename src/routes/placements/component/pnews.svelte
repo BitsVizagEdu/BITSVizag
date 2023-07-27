@@ -41,6 +41,12 @@
 
 const Events = [
 	{
+		date: '22/07/2023',
+		name: 'MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK',
+		image: '/pevents/7.jpg',
+		description:'BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held. '
+	},
+	{
 		date: '15/06/2023',
 		name: 'MOU with i3 IT Solutionz and Rubicon Skill Development Pvt Ltd',
 		image: '/g4.jpg',
@@ -82,13 +88,7 @@ const Events = [
 		description:
 			' YouTube sensation Sudeer Sandra delivers captivating and inspiring motivational speeches that empower individuals to pursue their dreams and overcome obstacles.'
 	},
-	{
-		date: '18/02/2023',
-		name: 'Expert talks by T. Siva Rama Krishna on Blockchain Technology and Cryptography',
-		image: '/pevents/7.jpg',
-		description:
-			'T. Siva Rama Krishna delivers expert talks on blockchain and cryptography, empowering audiences in the digital landscape.'
-	},
+	
 	
 ];
 </script>
