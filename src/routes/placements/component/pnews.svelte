@@ -43,7 +43,7 @@ const Events = [
 	{
 		date: '22/07/2023',
 		name: 'MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK',
-		image: '/pevents/7.jpg',
+		image: '/pevents/lsdb.jpg',
 		description:'BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held. '
 	},
 	{
