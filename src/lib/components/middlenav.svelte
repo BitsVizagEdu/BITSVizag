@@ -285,7 +285,7 @@
                     <div class="content">
                         <div class="row">
                             <ul class="mega-links">
-                                <li><a href="">NIRF 2022</a></li>
+                                <li><a href="" target="_blank">NIRF 2022</a></li>
                                 <li><a href="">2021 - 2022</a></li>
                                 <li><a href="">2020 - 2021</a></li>
                                 <li><a href="">Institute Credentials</a></li>
@@ -616,7 +616,7 @@
 		}
 	}
 
-	@media screen and (max-width: 909px) {
+	@media screen and (max-width: 950px) {
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
 			padding-top: 30px;
