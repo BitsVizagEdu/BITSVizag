@@ -29,7 +29,7 @@
             image: "/events/5.jpeg",
             href:"https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
         },
-        
+
     ]
 
     import {animate} from "motion";
@@ -141,7 +141,7 @@
             </div>
         {/each}
         <div class="flex justify-end w-full p-4">
-            <a href="/events" class="underline text-gray-300 font-bold md:text-2xl sm:text-xl text-lg">Read More...</a>
+            <a href="#" class="underline text-gray-300 font-bold md:text-2xl sm:text-xl text-lg">Read More...</a>
         </div>
     </div>
 </section>
