@@ -20,14 +20,6 @@
     })
 </script>
 
-<svelte:head>
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-            data-cf-beacon='{"token": "84745c0a3c924105a8df1514acdb13d4"}'>
-    </script>
-    <!-- End Cloudflare Web Analytics -->
-</svelte:head>
-
 <main>
     {#if $showNavBar}
 
