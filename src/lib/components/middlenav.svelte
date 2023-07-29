@@ -310,7 +310,7 @@
                                 <li><a href="">PO's and PEO's</a></li>
                                 <li><a href="">Procedures and Policies</a></li>
                                 <li><a href="">Criteria - 7</a></li>
-                                <li><a href="">Students Satisfication Survey</a></li>
+                                <li><a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf">Students Satisfication Survey</a></li>
                                 <li><a href="">Others</a></li>
                                 <li><a href="">Critera - 5</a></li>
                             </ul>
