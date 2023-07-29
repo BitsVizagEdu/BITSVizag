@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import preprocess from "svelte-preprocess";
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
@@ -17,7 +17,6 @@ const config = {
 	kit: {
 		adapter: adapter({
 			runtime: 'nodejs18.x',
-			strict: false,
 		}),
 	},
 };
