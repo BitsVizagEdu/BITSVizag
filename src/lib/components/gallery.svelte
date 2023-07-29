@@ -1,7 +1,7 @@
 <script>
 	let pics = [
 		{
-			pic: '/gallery/img10.JPG',
+			pic: '/gallery/img10.jpg',
 			name: 'Graduation Day Celebration',
 			date: '01/05/2023',
 			href: '#',
