@@ -1,104 +1,24 @@
 <script>
-	
-    let show = ["false","false","false","false","false","false","false","false","false","false"]
+    import { AccordionItem, Accordion } from 'flowbite-svelte'
+  </script>
 
-function setValue(y){
-    if (!show[y]){
-        show = ["false","false","false","false","false","false","false","false","false","false"]
-        console.log("hello")
-    }
-    else{
-        show = ["false","false","false","false","false","false","false","false","false","false"]
-        show[y] = !show[y]
-        console.log("hi")
-    }
-
-    console.log(show[y])
-}
-
-
-    let criteria_4 = [
-
-    {
-        "name": "4.1.1",
-        "items" : [ "4.1.1.1"],
-        "link": ["https://drive.google.com/file/d/1gn7XHtDqyFJmooVwCru2B_AIGoNugfqi/view?usp=sharing"]
-
-    },
-    {
-        "name": "4.1.2",
-        "items" : ["4.1.2.1" ],
-        "link": ["https://drive.google.com/file/d/1xVWL3aJPKUlfcvwh1mkaY6FBKvhvsbCI/view?usp=sharing"]
-
-    },
-    {
-        "name": "4.1.3",
-        "items" : ["4.1.3" ],
-        "link": ["https://drive.google.com/file/d/1bJdFOJa2B1bAcHxoNl6ltcpfTB8QcWU_/view?usp=sharing"]
-
-    },
-    {
-        "name": "4.2.2.1",
-        "items" : ["4.2.2.1","4.2.2.2","4.2.2.3","4.2.2.4","4.2.2.5" ],
-        "link": ["https://drive.google.com/file/d/1L1pihkeyNoOSjRSZ3x3g4lDJpe1fo2DV/view?usp=sharing","https://drive.google.com/file/d/127lnLq1AzPaRkDWsZhpK-Pat2acEjkVl/view?usp=sharing","https://drive.google.com/file/d/1GQu892wXxwxJ_6_4lCf2q2-Se3ywHHZP/view?usp=sharing","https://drive.google.com/file/d/1-dojFSO-qqJ9pTQSDitPYvFvBDVXn8tp/view?usp=sharing","https://drive.google.com/file/d/11VVRp_CL5vL-3X6j0oL74y0ZDB_KTJSP/view?usp=sharing"]
-
-    },
-    ]
-</script>
-
-<div class="flex flex-row  ">
-    <div class="bg-indigo-800 hidden md:flex  rounded-2xl flex w-full flex-col md:w-auto mb-auto" >
-
-        {#each criteria_4 as list,y}
-        <div class="flex  max-w-min  rounded-2xl flex-row">
-            <div class=" flex  p-3">
-                <div class="cursor-pointer ] mx-2 max-h-[84px] ">
-                    <button on:focusin={() => setValue(y)} on:focusout={() => setValue(y)}
-                            class=" {(show[y]) ? '  text-white ' : ' bg-white text-black '} inline text-lg p-4 rounded-xl font-bold ">{list.name}</button>
-                </div>
-                <!--{#if show[y]}-->
-
-                <!--{/if}-->
-            </div>
-            <div id="left" class="{(show[y]) ? ' hidden ' : 'block '} z-10 w-52 max-h-min absolute 3xs:left-[46%]  2xs:left-[37%] xs:left-[33%]  rounded-md bg-sortwhite  ">
-                {#each list.items as sublist, i}
-                    <a id={y} href={list.link[i]}
-                       class="{(show[y]) ? ' hidden ' : 'block '} text-black text-center p-4 pl-6 text-xl  font-semibold">{sublist}</a>
-                {/each}
-            </div>
-        </div>
-        {/each}
-    </div>
-    <div class=" md:hidden mb-auto main flex flex-col bg-indigo-800 max-w-min  max-h-min  rounded-2xl">
-
-        {#each criteria_4 as list,y}
-            <div class="flex  max-w-min  rounded-2xl flex-row">
-                <div class=" flex  p-3">
-                    <div class="cursor-pointer ] mx-2 max-h-[84px] ">
-                        <button on:focusin={() => setValue(y)} on:focusout={() => setValue(y)}
-                                class=" {(show[y]) ? '  text-white ' : ' bg-white text-black'} inline text-lg p-4 rounded-xl font-bold">{list.name}</button>
-                    </div>
-                    <!--{#if show[y]}-->
-
-                    <!--{/if}-->
-                </div>
-                <div id="left" class="{(show[y]) ? ' hidden ' : 'block '} z-10 w-[50%] max-h-min absolute 3xs:left-[46%]  2xs:left-[37%] xs:left-[33%]  rounded-md bg-sortwhite  ">
-                    {#each list.items as sublist, i}
-                        <a id={y} href={list.link[i]}
-                           class="{(show[y]) ? ' hidden ' : 'block '} text-black text-center p-4 pl-6 text-xl  font-semibold">{sublist}</a>
-                    {/each}
-                </div>
-            </div>
-        {/each}
-    </div>
-    <div class=" md:flex-col text-center w-full m-4  md:flex">
-        <img src="./naaclogo.png" class=" ">
-        <p class="font-semibold text-justify 3xs:text-sm xs:text-base ">India has one of the largest and diverse education systems in the world. Privatization, widespread expansion, increased autonomy and introduction of Programmes in new and emerging areas have improved access to higher education. At the same time, it has also led to widespread concern on the quality and relevance of the higher education. To address these concerns, the National Policy on Education (NPE, 1986) and the Programme of Action (PoA, 1992) spelt out strategic plans for the policies, advocated the establishment of an independent National accreditation agency. Consequently, the National Assessment and Accreditation Council (NAAC) was established in 1994 as an autonomous institution of the University Grants Commission (UGC) with its Head Quarter in Bengaluru. The mandate of NAAC as reflected in its vision statement is in making quality assurance an integral part of the functioning of Higher Education Institutions (HEIs).<br><br><br>
-            The NAAC functions through its General Council (GC) and Executive Committee (EC) comprising educational administrators, policy makers and senior academicians from a cross-section of Indian higher education system. The Chairperson of the UGC is the President of the GC of the NAAC, the Chairperson of the EC is an eminent academician nominated by the President of GC (NAAC). The Director is the academic and administrative head of NAAC and is the member-secretary of both the GC and the EC. In addition to the statutory bodies that steer its policies and core staff to support its activities NAAC is advised by the advisory and consultative committees constituted from time to time.</p>
-    </div>
-</div>
-<style>
-#left{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-</style>
+<Accordion>
+    <AccordionItem>
+      <span slot="header">4.1.1</span>
+        <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.1.1</a>
+    </AccordionItem>
+    <AccordionItem>
+        <span slot="header">4.1.2</span>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.2.1</a> <br>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.2.2</a> <br>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.2.3</a> <br>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.2.4</a> <br>
+      </AccordionItem>
+      <AccordionItem>
+        <span slot="header">4.1.3</span>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.3.1</a> <br>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.3.2</a> <br>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.3.3</a> <br>
+          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">4.1.3.4</a> <br>
+      </AccordionItem>
+  </Accordion>
