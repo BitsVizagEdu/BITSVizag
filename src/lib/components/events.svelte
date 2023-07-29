@@ -19,7 +19,7 @@
             name: "GRADUATION DAY CELEBRATION",
             description: "Featuring Chief Guest Prof. G. Swami Naidu, Registrar - JNTU GV.",
             date: "September 2, 2022",
-            image: "/events/7.JPG",
+            image: "/events/7.jpg",
             href:"https://www.instagram.com/p/CrtQ2fwPY26/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
         },
         {
