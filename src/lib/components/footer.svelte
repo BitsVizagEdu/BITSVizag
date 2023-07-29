@@ -40,7 +40,7 @@
 	<div>
 		<div class="bg-[#0c1637]  rounded-t-[40px]">
 			<div
-                
+
 				id="joinnowf"
 				class=" bg-cover h-[500px] md:h-[75vh] rounded-[40px]"
 				style="background-image: url(/bgfooter.webp);"
@@ -72,7 +72,7 @@
 				<div class=" md:w-[50%] flex flex-col justify-between md:py-8">
 					<div>
 						<p class="text-center md:text-start text-white font-semibold 3xs:text-xl md:text-2xl md:mr-[5%]">
-							"The future belongs to those who believe in the beauty of their dreams." 
+							"The future belongs to those who believe in the beauty of their dreams."
 						</p>
 					</div>
 					<div class="flex 3xs:flex-col my-5 md:my-0 lg:flex-row items-center md:items-start lg:items-center  ">
@@ -115,7 +115,7 @@
 								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Department</a>
 							</div>
 							<div class="pb-2 w-max">
-								<a href="/facilites" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Facilities</a>
+								<a href="/facilities`" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Facilities</a>
 							</div>
 							<div class="pb-2 w-max">
 								<a href="/gallery" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Gallery</a>
