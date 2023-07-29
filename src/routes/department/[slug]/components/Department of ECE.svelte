@@ -57,7 +57,7 @@
 					<img class="first" src="/ece1.png" alt="" />
 					<img src="/ece.jpeg" alt="" />
 					<img src="/ece2.jpg" alt="" />
-					<img class="third" src="/ece6.JPG" alt="" />
+					<img class="third" src="/ece6.jpg" alt="" />
 					<img class="second" src="/ece3.png" alt="" />
 				</div>
 			</div>
