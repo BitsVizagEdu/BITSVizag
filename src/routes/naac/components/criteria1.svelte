@@ -21,7 +21,7 @@
     {
         "name": "1.1.1",
         "items" : [ "1.1.1"],
-        "link": ["https://drive.google.com/file/d/1dSYbEc4gKZiEwCd6VQBfKUJLkaO4vi3m/view?usp=sharing"]
+        "link": ["https://bitsvizag.com/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf"]
 
     },
     {
@@ -121,7 +121,7 @@
                 </div>
                 <div id="left" class="{(show[y]) ? ' hidden ' : 'block '} z-10 w-[50%] max-h-min absolute 3xs:left-[46%]  2xs:left-[37%] xs:left-[33%]  rounded-md bg-sortwhite  ">
                     {#each list.items as sublist, i}
-                        <a id={y} href={list.link[i]}
+                        <a id={y} href={list.link}
                            class="{(show[y]) ? ' hidden ' : 'block '} text-black text-center p-4 pl-6 text-xl  font-semibold">{sublist}</a>
                     {/each}
                 </div>
