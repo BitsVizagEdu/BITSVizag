@@ -1,8 +1,8 @@
 <script>
-    let activeTab = 'Criteria 1';
+    let activeTab = '2016-17';
    
 
-   let items = ['Criteria 1','Criteria 2','Criteria 3','Criteria 4','Criteria 5','Criteria 6', 'Criteria 7']
+   let items = ['2016-17','2017-18','2018-19','2019-20','2020-21','2021-22', '2022-23', '2023-24']
    
 
    import Criteria1 from './components/criteria1.svelte';
@@ -18,6 +18,8 @@
    import Criteria6 from './components/criteria6.svelte'
 
    import Criteria7 from './components/criteria7.svelte'
+
+   import Criteria8 from './components/criteria8.svelte';
 
    import Footer from '$lib/components/footer.svelte';
    
@@ -46,26 +48,29 @@
        </aside>
 
        <div class=" lg:w-[75%] p-5 rounded-lg ">
-           {#if activeTab === 'Criteria 1'}
+           {#if activeTab === '2016-17'}
                <Criteria1/>
            {/if}
-           {#if activeTab === 'Criteria 2'}
+           {#if activeTab === '2017-18'}
                <Criteria2/>
            {/if}
-           {#if activeTab === 'Criteria 3'}
+           {#if activeTab === '2018-19'}
                <Criteria3/>
            {/if}
-           {#if activeTab === 'Criteria 4'}
+           {#if activeTab === '2019-20'}
                <Criteria4/>
            {/if}
-           {#if activeTab === 'Criteria 5'}
+           {#if activeTab === '2020-21'}
                <Criteria5/>
            {/if}
-           {#if activeTab === 'Criteria 6'}
+           {#if activeTab === '2021-22'}
                <Criteria6/>
            {/if}
-           {#if activeTab === 'Criteria 7'}
+           {#if activeTab === '2022-23'}
                <Criteria7/>
+           {/if}
+           {#if activeTab === '2023-24'}
+               <Criteria8/>
            {/if}
            </div>
    </div>
