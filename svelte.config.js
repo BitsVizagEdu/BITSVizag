@@ -1,6 +1,5 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from "svelte-preprocess";
-import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {{preprocess: (PreprocessorGroup & {defaultLanguages: Readonly<{markup: string; style: string; script: string}>})[], kit: {methodOverride: {allowed: string[]}, adapter: Adapter}}} */
 const config = {
@@ -15,6 +14,9 @@ const config = {
 		})
 	],
 	kit: {
+		prerender: {
+			handleMissingId: 'warn'
+		},
 		adapter: adapter({
 			runtime: 'nodejs18.x',
 		}),
