@@ -2,7 +2,7 @@
     import {items, replaceHyphenWithSpace} from "./components/utils.js";
     import {activeTab, setActiveTabValue, showNavBar} from '$lib/stores/store.js';
 
-    import Secretary from './components/secretary.svelte';
+    import Chairman from './components/chairman.svelte';
 
     import Principal from "./components/principal.svelte";
 
@@ -48,8 +48,8 @@
             {#if $activeTab === 'About-BITS-Vizag'}
                 <Bits/>
             {/if}
-            {#if $activeTab === 'Message-from-Secretary-&-Correspondent'}
-                <Secretary/>
+            {#if $activeTab === 'Message-from-Chairman'}
+                <Chairman/>
             {/if}
             {#if $activeTab === 'Message-from-Principal'}
                 <Principal/>
