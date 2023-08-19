@@ -2,7 +2,7 @@
     <div class="flex flex-row xl:flex-row  3xs:flex-col-reverse justify-center items-center  mx-auto  xl:w-[90%] ">
         <div id="text" class=" xl:w-[900px] 3xs:mb-3 lg:px-10">
             <div class="text-red1 3xs:text-center xl:w-[438px] xs:text-[20px] sm:text-[25px] font-bold pb-6">
-                <h2>A MESSAGE FROM THE SECRETARY & CORRESPONDENT</h2>
+                <h2>A MESSAGE FROM THE CHAIRMAN</h2>
             </div>
             <div>
                 <p class="text-justify md:text-[15px] tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
