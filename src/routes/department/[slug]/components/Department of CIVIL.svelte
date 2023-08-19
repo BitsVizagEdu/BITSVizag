@@ -34,7 +34,7 @@
 		<div class="pt-10">
 			<h1 id="HOD" class="text-3xl font-bold text-indigo-900">HOD MESSAGE - Prof. M. Mohan</h1>
 			<div class="flex justify-center w-[100%] pt-8">
-				<img src="/lab.jpeg" alt="" />
+				<img src="/lab.jpg" alt="" />
 			</div>
 		</div>
 		<div class="text-justify mt-8 text-lg flex flex-col gap-5">

@@ -115,7 +115,7 @@
 								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Department</a>
 							</div>
 							<div class="pb-2 w-max">
-								<a href="/facilities`" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Facilities</a>
+								<a href="/facilities" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Facilities</a>
 							</div>
 							<div class="pb-2 w-max">
 								<a href="/gallery" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Gallery</a>
