@@ -37,7 +37,7 @@
 						<div
 							class="link-item cursor-pointer"
 							on:click={() =>
-								(window.location.href = '/aboutus/Message-from-Secretary-&-Correspondent')}
+								(window.location.href = '/aboutus/Message-from-Chairman')}
 						>
 							<div class="row">
 								<div class="dropdown__icon">
@@ -47,9 +47,9 @@
 									<div
 										class="link-item"
 										on:click={() =>
-											(window.location.href = '/aboutus/Message-from-Secretary-&-Correspondent')}
+											(window.location.href = '/aboutus/Message-from-Chairman')}
 									>
-										Message from Secretary & Correspondent
+										Message from Chairman
 									</div>
 								</header>
 							</div>
@@ -277,48 +277,7 @@
             </li>-->
 			<li><a href="/facilities">Facilities</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li>
-                <a href="#" class="desktop-item">IQAC</a>
-                <input type="checkbox" id="iqac" />
-                <label for="iqac" class="mobile-item">IQAC</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <ul class="mega-links">
-                                <li><a href="" target="_blank">NIRF 2022</a></li>
-                                <li><a href="">2021 - 2022</a></li>
-                                <li><a href="">2020 - 2021</a></li>
-                                <li><a href="">Institute Credentials</a></li>
-                                <li><a href="">RTA Act</a></li>
-                                <li><a href="">Principal Munites of Meeting</a></li>
-                                <li><a href="">Criteria - 5</a></li>
-                                <li><a href="">Criteria - 1</a></li>
-                                <li><a href="">2019 - 2020</a></li>
-                                <li><a href="">IIQA Self Declaration</a></li>
-                                <li><a href="">Minutes of Meeting and Actions Taken Reports</a></li>
-                                <li><a href="">Code of Conduct</a></li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <ul class="mega-links">
-                                <li><a href="">Criteria - 20</a></li>
-                                <li><a href="">Exam Cell Annual Report</a></li>
-                                <li><a href="">Critera - 6</a></li>
-                                <li><a href="">2018 - 2019</a></li>
-                                <li><a href="">2017 - 2018</a></li>
-                                <li><a href="">Feedback System</a></li>
-                                <li><a href="">PO's and PEO's</a></li>
-                                <li><a href="">Procedures and Policies</a></li>
-                                <li><a href="">Criteria - 7</a></li>
-                                <li><a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf">Students Satisfication Survey</a></li>
-                                <li><a href="">Others</a></li>
-                                <li><a href="">Critera - 5</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </li>
+			<li><a href="/IQAC">IQAC</a></li>
 			<li><a href="/naac">NAAC</a></li>
 			<li>
 				<a
