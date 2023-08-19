@@ -5,20 +5,24 @@
 <Accordion>
     <AccordionItem>
       <span slot="header">1.1.1</span>
-        <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.1</a>
+        <a href="">1.1.2 <i class="fa-solid fa-location-arrow"></i></a>
     </AccordionItem>
     <AccordionItem>
-        <span slot="header">1.1.2</span>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.2.1</a> <br>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.2.2</a> <br>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.2.3</a> <br>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.2.4</a> <br>
-      </AccordionItem>
-      <AccordionItem>
-        <span slot="header">1.1.3</span>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.3.1</a> <br>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.3.2</a> <br>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.3.3</a> <br>
-          <a href="/wp-content/uploads/2021/08/Student-Satisfaction-Survey-1.pdf ">1.1.3.4</a> <br>
-      </AccordionItem>
+      <span slot="header">2.1.1</span>
+        <a href="">1.1.2 <i class="fa-solid fa-location-arrow"></i></a>
+    </AccordionItem>
+    <AccordionItem>
+      <span slot="header">3.1.1</span>
+        <a href="/wp-content/uploads/2021/08/AQAR_2016-17-1.pdf">1.1.2 <i class="fa-solid fa-location-arrow"></i></a>
+    </AccordionItem>
+    <AccordionItem>
+      <span slot="header">4.1.1</span>
+        <a href="">1.1.2 <i class="fa-solid fa-location-arrow"></i></a>
+    </AccordionItem>
+    <AccordionItem>
+      <span slot="header">5.1.1</span>
+        <a href="">1.1.2 <i class="fa-solid fa-location-arrow"></i></a>
+    </AccordionItem>
+    
+    
   </Accordion>

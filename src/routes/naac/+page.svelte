@@ -1,8 +1,8 @@
 <script>
-    let activeTab = 'Criteria-1';
+    let activeTab = 'Criteria 1';
    
 
-   let items = ['Criteria-1','Criteria-2','Criteria-3','Criteria-4','Criteria-5','Criteria-6', 'Criteria-7']
+   let items = ['Criteria 1','Criteria 2','Criteria 3','Criteria 4','Criteria 5','Criteria 6', 'Criteria 7']
    
 
    import Criteria1 from './components/criteria1.svelte';
@@ -46,25 +46,25 @@
        </aside>
 
        <div class=" lg:w-[75%] p-5 rounded-lg ">
-           {#if activeTab === 'Criteria-1'}
+           {#if activeTab === 'Criteria 1'}
                <Criteria1/>
            {/if}
-           {#if activeTab === 'Criteria-2'}
+           {#if activeTab === 'Criteria 2'}
                <Criteria2/>
            {/if}
-           {#if activeTab === 'Criteria-3'}
+           {#if activeTab === 'Criteria 3'}
                <Criteria3/>
            {/if}
-           {#if activeTab === 'Criteria-4'}
+           {#if activeTab === 'Criteria 4'}
                <Criteria4/>
            {/if}
-           {#if activeTab === 'Criteria-5'}
+           {#if activeTab === 'Criteria 5'}
                <Criteria5/>
            {/if}
-           {#if activeTab === 'Criteria-6'}
+           {#if activeTab === 'Criteria 6'}
                <Criteria6/>
            {/if}
-           {#if activeTab === 'Criteria-7'}
+           {#if activeTab === 'Criteria 7'}
                <Criteria7/>
            {/if}
            </div>
