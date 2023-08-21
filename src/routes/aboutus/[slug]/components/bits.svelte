@@ -23,7 +23,37 @@
                 <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
                     The main goal is to prepare the students for all levels of leadership in business, science, and other areas of life through career-focused curriculum and mentoring programmes.The fundamental objective is to allow each student to meet his or her individual goal in life. Students are encouraged to follow dreams and ambitions in a rational and sustainable manner.
                  </p>
-           </div>̵
+           </div>
+           <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
+            <h2>Vision</h2>
+        </div>
+        <div>
+            <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
+                To become a leader in Engineering, Technology, Science and Management eduction by building the talent of youth into dynamic professionals.
+            </p>
+        </div>
+        <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 pt-3">
+            <h2>Mission</h2>
+        </div>
+        <div>
+            <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
+                The mission of the college is to achieve academic excellence in Techincal education
+            </p>
+        </div>
+        <div class="ml-10">
+            <ul class="list-disc text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
+                <li>The College aims to achieve high moral, ethical & professional standards to make students employable and globally competitive.</li>
+            </ul>
+            <ul class="list-disc pt-4 text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
+                <li>Providing Quality Education, student-centered Teching-Learning process and state of art infrastructure for professional aspirants hailing from both rural and urban areas.</li>
+            </ul>
+            <ul class="list-disc pt-4 md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
+                <li>Achieving self sufficiency to ensure qualitative Teaching-Learning practices.</li>
+            </ul>
+            <ul class="list-disc pt-4 text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
+                <li>Evolving thiks organization into a Centre of academic and research excellence</li>
+            </ul>
+        </div>
         </div>
         <div id="pic " class="flex flex-col justify-between ">
             <div class="rounded-lg">
