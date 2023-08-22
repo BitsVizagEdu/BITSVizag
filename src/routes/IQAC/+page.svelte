@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-   <title>NAAC</title>
+   <title>IQAC</title>
 </svelte:head>
 
 

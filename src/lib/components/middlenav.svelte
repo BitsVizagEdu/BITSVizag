@@ -72,6 +72,24 @@
 								</header>
 							</div>
 						</div>
+						<div
+							class="link-item cursor-pointer"
+							on:click={() => (window.location.href = '/affilation-reports')}
+						>
+							<div class="row">
+								<div class="dropdown__icon">
+									<i class="fa-solid fa-note-sticky"></i>
+								</div>
+								<header>
+									<div
+										class="link-item"
+										on:click={() => (window.location.href = '/affilation-reports')}
+									>
+										Affilation Reports
+									</div>
+								</header>
+							</div>
+						</div>
 					</div>
 				</div>
 			</li>
@@ -289,6 +307,9 @@
 			<li>
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
+			<li>
+				<a href="/feedback">Feedback</a>
+			</li>
 		</ul>
 		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
@@ -397,7 +418,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 15px;
+		font-size: 13px;
 		font-weight: 600;
 		padding: 9px 20px;
 		border-radius: 5px;
@@ -503,15 +524,15 @@
 
 	@media screen and (max-width: 1402px) {
 		.nav-links li a {
-			font-size: 13px;
+			font-size: 12px;
 			font-weight: 700;
 			padding: 9px 13px;
 		}
 	}
 
-	@media screen and (max-width: 1220px) {
+	@media screen and (max-width: 1240px) {
 		.nav-links li a {
-			font-size: 13px;
+			font-size: 12px;
 			font-weight: 700;
 			padding: 9px 10px;
 		}
@@ -521,29 +542,18 @@
 			font-weight: 700;
 		}
 	}
-	@media screen and (max-width:1141px){
+	@media screen and (max-width:1163px){
 		.nav-links li a {
-			font-size: 12px;
-			font-weight: 700;
-			padding: 9px 10px;
-		}
-	}
-	@media screen and (max-width: 1083px) {
-		.nav-links li a {
-			font-size: 10.5px;
-			font-weight: 700;
-			padding: 9px 10px;
-		}
-
-		.nav-links li .link-item {
 			font-size: 11px;
 			font-weight: 700;
+			padding: 9px 10px;
 		}
 	}
-	@media screen and (max-width: 1025px) {
+	@media screen and (max-width: 1101px) {
 		.nav-links li a {
 			font-size: 10px;
 			font-weight: 700;
+			padding: 9px 10px;
 		}
 
 		.nav-links li .link-item {
@@ -551,31 +561,36 @@
 			font-weight: 700;
 		}
 	}
-	@media screen and (max-width: 967px) {
-		.nav-links li a {
-			font-size: 9.5px;
-			font-weight: 700;
-		}
-
-		.nav-links li .link-item {
-			font-size: 11px;
-			font-weight: 700;
-		}
-	}
-	@media screen and (max-width:956px){
+	@media screen and (max-width: 1037px) {
 		.nav-links li a {
 			font-size: 9px;
 			font-weight: 700;
 		}
-	}
 
+		.nav-links li .link-item {
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	@media screen and (max-width: 975px) {
+		.nav-links li a {
+			font-size: 8px;
+			font-weight: 700;
+		}
+
+		.nav-links li .link-item {
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	
 	@media screen and (max-width: 430px) {
 		nav .wrapper {
 			max-width: 350px;
 		}
 	}
 
-	@media screen and (max-width: 950px) {
+	@media screen and (max-width: 957px) {
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
 			padding-top: 30px;
