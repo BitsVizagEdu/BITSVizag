@@ -41,6 +41,12 @@
 
 const Events = [
 	{
+		date: '10/08/2023',
+		name: 'BITS Vizag and G-TEC DST GITAM Join Hands Through Meaningful MOU Signing Ceremony.',
+		image: '/pevents/gitam.jpg',
+		description:'BITS Vizag and G-TEC | DST GITAM join in impactful MOU for enhanced collaboration. '
+	},
+	{
 		date: '22/07/2023',
 		name: 'MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK',
 		image: '/pevents/lsdb.jpg',

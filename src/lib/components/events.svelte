@@ -2,6 +2,34 @@
 <script>
     let events = [
         {
+            name: "The INDEPENDENCE DAY Celebrations at BITS Vizag",
+            description: "Students and staff joined hands in commemorating Independence Day at BITS Vizag, fostering a sense of patriotism and togetherness.",
+            date: "August 15, 2023",
+            image: "/events/independance.jpg",
+            href:"https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
+            name: "BITS Vizag and G-TEC DST GITAM Join Hands Through Meaningful MOU Signing Ceremony.",
+            description: "BITS Vizag and G-TEC | DST GITAM join in impactful MOU for enhanced collaboration.",
+            date: "August 10, 2023",
+            image: "/events/gitam.jpg",
+            href:"https://www.instagram.com/p/CvxX9zYvBow/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
+            name: "Mr. Joshua Raju, CSE Students, and KONKORDE Team Gain Invaluable Insights at BNI Kings Meet 2023.",
+            description: "Mr. Joshua Raju, CSE students, and KONKORDE Team gained insights at the BNI Kings Meet 2023, Hotel Ocean Vista Bay, August 10th.",
+            date: "August 10, 2023",
+            image: "/events/bni.jpg",
+            href:"https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
+            name: "The 234 Battalion CRPF organized a spectacular event at the Picturesque Campus of BITS Vizag",
+            description: "The serene campus of BITS Vizag was transformed into a mesmerizing venue as the 234 Battalion CRPF hosted an impressive event.",
+            date: "July 27, 2023",
+            image: "/events/crpf.jpg",
+            href:"https://www.instagram.com/p/CvMyAiwr3v3/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
             name: "MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK",
             description: "BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held.",
             date: "July 22, 2023",
