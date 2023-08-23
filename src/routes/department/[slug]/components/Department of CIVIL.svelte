@@ -85,7 +85,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Material Testing Laboratory</p>
+					<p>Basic of Civil Engineering Workshop</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -108,7 +108,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Structural Engineering Laboratory</p>
+					<p>Building Planning and Computer Aided Drawing</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -131,7 +131,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Geotechnical Engineering Laboratory</p>
+					<p>Concrete Technology Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -154,7 +154,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Hydraulacs Mechanical Laboratory</p>
+					<p>Highway Engineering Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -177,7 +177,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Fluid Mechanics Laboratory</p>
+					<p>Surveying Lab</p>
 				</div>
 			</div>
 			<div>
@@ -202,7 +202,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Surveying Laboratory</p>
+					<p>Environmental Engineering Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -225,7 +225,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Department Library</p>
+					<p>Strength of Material Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -248,7 +248,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>E-Class Rooms</p>
+					<p>Fluid Mechanics & Hydraulics Machinery Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -271,7 +271,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Seminar Hall</p>
+					<p>Geotechnical Engineering Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -294,8 +294,9 @@
 							</g>
 						</g>
 					</svg>
-					<p>Computer Simulation Lab</p>
+					<p>Engineering Geology Lab</p>
 				</div>
+				
 			</div>
 		</div>
 		<div class="parent mt-7">
