@@ -50,13 +50,13 @@
 			{#if activeTab === 'Sports'}
 				<Sports/>
 			{/if}
-			{#if activeTab === 'Laboratory'}
+			{#if activeTab === 'Laboratories'}
 				<Laboratory/>
 			{/if}
 			{#if activeTab === 'Cafeteria'}
 				<Cafeteria/>
 			{/if}
-			{#if activeTab === 'Hostel'}
+			{#if activeTab === 'Accomidation'}
 				<Hostel/>
 			{/if}
 			{#if activeTab === 'Transport'}
