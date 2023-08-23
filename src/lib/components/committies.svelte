@@ -17,7 +17,8 @@
     let items = [
         {
             title: "Anti Ragging Committee",
-            description: "Description"
+            description: "Description",
+            link: "/professional_commities/2023_2024 NSS COMMITTEE.pdf"
         },
         {
             title: "Online Grievance Redressal",
@@ -28,8 +29,9 @@
             description: "Description"
         },
         {
-            title: "Entrepreneurial Development Cell",
-            description: "Description"
+            title: "EDC & IPR Committee",
+            description: "Description",
+            link: "/professional_commities/EDC_IPR.pdf"
         },
         {
             title: "Women's Grievance &  Redressal",
@@ -44,7 +46,7 @@
             description: "Description"
         },
         {
-            title: "IPR",
+            title: "Student Welfare",
             description: "Description"
         },
         {
@@ -61,7 +63,8 @@
         },
         {
             title: "NSS",
-            description: "Description"
+            description: "Description",
+            link: "/professional_commities/2023_2024 NSS COMMITTEE.pdf"
         },
         {
             title: "Sports Committee",
@@ -90,10 +93,10 @@
         </div>
         <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-2  ">
             {#each items as item, i}
-                <div on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px]  bg-white flex justify-center shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] items-center  m-2 rounded-[5px] `}>
+                <a href={item.link}  on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px]  bg-white flex justify-center shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] items-center  m-2 rounded-[5px] `}>
                     <div class="p-[10px] text-center capitalize font-bold">{item.title}</div>
                     
-                </div>
+                </a>
             {/each}
         </div>
     </div>
