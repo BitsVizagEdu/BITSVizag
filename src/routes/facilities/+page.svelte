@@ -1,8 +1,8 @@
 <script>
-     let activeTab = 'Library';
+     let activeTab = 'Knowledge Resource Center';
     
 
-	let items = ['Library','Hostel','Cafeteria','Sports','Laboratory','Transport']
+	let items = ['Knowledge Resource Center','Accomidation','Cafeteria','Sports','Laboratories','Transport']
 	
 
     import Library from './components/library.svelte';
@@ -44,7 +44,7 @@
 		</aside>
 
 		<div class=" lg:w-[75%] p-5 rounded-lg ">
-			{#if activeTab === 'Library'}
+			{#if activeTab === 'Knowledge Resource Center'}
 				<Library/>
 			{/if}
 			{#if activeTab === 'Sports'}
