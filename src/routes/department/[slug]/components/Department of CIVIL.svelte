@@ -302,7 +302,7 @@
 			<div class="child flex items-center justify-center text-white">
 				<div class="">
 					<p id="aca" class="font-bold text-6xl">ACADEMIC PROGRAMMES</p>
-					<p id="basic" class="text-xl font-bold pt-4">BASIC SCIENCES AND ENGINEERING</p>
+					<p id="basic" class="text-xl font-bold pt-4">CIVIL ENGINEERING</p>
 				</div>
 			</div>
 		</div>

@@ -304,9 +304,9 @@
 				>
 			</li>
 			<li><a href="/contactus">Contact Us</a></li>
-			<li>
+			<!--<li>
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
-			</li>
+			</li>-->
 			<li>
 				<a href="/feedback">Feedback</a>
 			</li>
@@ -418,7 +418,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 13px;
+		font-size: 15px;
 		font-weight: 600;
 		padding: 9px 20px;
 		border-radius: 5px;
@@ -524,7 +524,7 @@
 
 	@media screen and (max-width: 1402px) {
 		.nav-links li a {
-			font-size: 12px;
+			font-size: 13px;
 			font-weight: 700;
 			padding: 9px 13px;
 		}

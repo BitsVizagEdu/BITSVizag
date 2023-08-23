@@ -1,8 +1,8 @@
 <script>
-    let activeTab = 'Aicte Approval';
+    let activeTab = 'AICTE Approval';
    
 
-   let items = ['Aicte Approval','Jntu Approval']
+   let items = ['AICTE Approval','JNTU Approval']
    
 
    import Aicte from './components/aicte.svelte';
@@ -36,10 +36,10 @@
        </aside>
 
        <div class=" lg:w-[75%] p-5 rounded-lg ">
-           {#if activeTab === 'Aicte Approval'}
+           {#if activeTab === 'AICTE Approval'}
                <Aicte/>
            {/if}
-           {#if activeTab === 'Jntu Approval'}
+           {#if activeTab === 'JNTU Approval'}
                <Jntu/>
            {/if}
            </div>
