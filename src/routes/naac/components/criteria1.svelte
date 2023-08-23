@@ -13,11 +13,11 @@
     </AccordionItem>
     <AccordionItem>
       <span slot="header">1.1.3</span>
-        <a href="/wp-content/uploads/2021/08/1.1.3.2.pdf">1.1.3.2 <i class="fa-solid fa-location-arrow"></i></a><br>
+        <a href="/wp-content/uploads/2022/08/1.1.3.2.pdf">1.1.3.2 <i class="fa-solid fa-location-arrow"></i></a><br>
         <p class="pt-7"></p>
-        <a href="/wp-content/uploads/2021/08/1.1.3.3.pdf">1.1.3.3 <i class="fa-solid fa-location-arrow"></i></a><br>
+        <a href="/wp-content/uploads/2022/08/1.1.3.3.pdf">1.1.3.3 <i class="fa-solid fa-location-arrow"></i></a><br>
         <p class="pt-7"></p>
-        <a href="/wp-content/uploads/2021/08/1.1.3.4.pdf">1.1.3.4<i class="fa-solid fa-location-arrow"></i></a><br>
+        <a href="/wp-content/uploads/2022/08/1.1.3.4.pdf">1.1.3.4<i class="fa-solid fa-location-arrow"></i></a><br>
     </AccordionItem>
     <AccordionItem>
       <span slot="header">1.2.1</span>
@@ -59,11 +59,11 @@
     </AccordionItem>
     <AccordionItem>
       <span slot="header">1.3.3</span>
-        <a href="/wp-content/uploads/2022/08/1.3.2.1.pdf">1.3.2.1 <i class="fa-solid fa-location-arrow"></i></a><br>
+        <a href="/wp-content/uploads/2022/08/1.3.3.1.pdf">1.3.3.1 <i class="fa-solid fa-location-arrow"></i></a><br>
         <p class="pt-7"></p>
-        <a href="/wp-content/uploads/2022/08/1.3.2.2.pdf">1.3.2.2 <i class="fa-solid fa-location-arrow"></i></a><br>
+        <a href="/wp-content/uploads/2022/08/1.3.3.2.pdf">1.3.3.2 <i class="fa-solid fa-location-arrow"></i></a><br>
         <p class="pt-7"></p>
-        <a href="/wp-content/uploads/2022/08/1.3.2.3.pdf">1.3.2.3 <i class="fa-solid fa-location-arrow"></i></a><br>
+        <a href="/wp-content/uploads/2022/08/1.3.3.3.pdf">1.3.3.3 <i class="fa-solid fa-location-arrow"></i></a><br>
     </AccordionItem>
     <AccordionItem>
       <span slot="header">1.4.2</span>
