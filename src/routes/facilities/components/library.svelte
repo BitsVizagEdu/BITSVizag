@@ -1,3 +1,52 @@
+<script>
+	let items = [
+		{
+  name: "Timings",
+  value: "8AM TO 8PM",
+  
+},
+{
+  name: "Reading Section Capacity",
+  value: "150",
+  
+},
+{
+  name: "Number of Volumes",
+  value: "22141",
+  
+},
+{
+  name: "Number of Ttiles ",
+  value: "3601",
+  
+},
+{
+  name: "E-Journals",
+  value: "DELNET,J-GATE,NDLI",
+  
+},
+{
+  name: "E-Books",
+  value: "EBSCO",
+  
+},
+{
+  name: "NPTEL Videos",
+  value: "Available",
+  
+},
+{
+  name: "Digital Library Computers",
+  value: "15",
+  
+},
+
+		
+	
+	]
+</script>
+
+
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
     <div class="flex  flex-col-reverse justify-center items-center  mx-auto   ">
         <div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
@@ -37,7 +86,19 @@
             The online journals are access at anywhere and  any time. Digital Library also has 920 general educational CDs, DVDs and NPTEL Videos, 6254 EBSCO E-Books (Covers all Branches) are available.                     
          </p>
    </div>
+   <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
+		
+    {#each items as item ,i}
+    <div class="card text-center 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+        
+        <div class="p-[10px] capitalize font-bold pt-14">{item.name}</div>
+        <div class="capitalize font-semibold">{item.value}</div>
+        
+    </div>
 
+{/each}
+    
+</div>
 
         </div>
         <div id="pic " class="flex flex-col justify-between ">
