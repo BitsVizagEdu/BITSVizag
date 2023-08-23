@@ -1,3 +1,74 @@
+<script>
+	let items = [
+		{
+  name: "Dr.Narasimhamurthy Dusi",
+  designation: "Asst.Prof & Hod",
+  qualification:" MSc,M.Phill,Ph.D",
+  mail:""
+},
+{
+  name: "Dr. Aditi Abhishikta",
+  designation: "Asst.Prof",
+  qualification:" Msc,M.Phill,Ph.D",
+  mail:""
+},
+{
+  name: "Dr.Ravi Kota",
+  designation: "Asst.Prof",
+  qualification:" M.Sc,Ph.D",
+  mail:""
+},
+{
+  name: "Dr. Tarini Venkata Rao",
+  designation: "Chief Librarian",
+  qualification:" M.A,MLIS,Ph.D",
+  mail:""
+},
+{
+  name: "Dr.Jayarangarao Prathipati",
+  designation: "Asst.Prof",
+  qualification:" M.Sc,M.Phill,Ph.D",
+  mail:""
+},
+{
+  name: "Palakollu Mahesh",
+  designation: "Asst.Prof",
+  qualification:" M.Sc,M.Phill,Ph.D",
+  mail:""
+},
+{
+  name: "Kathula Serisha",
+  designation: "Asst.Prof",
+  qualification:" M.Sc(Mathematics)",
+  mail:""
+},
+{
+  name: "Mondi Mounika",
+  designation: "Asst.Prof",
+  qualification:" Msc,B.Ed",
+  mail:""
+},
+{
+  name: "G Jayasree",
+  designation: "Asst.Prof",
+  qualification:" M.A,(Ph.D)",
+  mail:""
+},
+{
+  name: "Kavitha V Bonela",
+  designation: "Asst.Prof",
+  qualification:" M.Sc(Mathematics)",
+  mail:""
+},
+{
+  name: "Botta Prasannakumar Yadav ",
+  designation: "Pd ",
+  qualification:" M.P.Ed",
+  mail:""
+},
+
+	]
+</script>
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
 	<img src="/header/basic.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1">BASIC SCIENCE AND HUMANITIES</h1> -->
@@ -400,6 +471,35 @@
 			</div>
 			<div />
 		</div>
+	</div>
+	<div class="parent mt-7">
+		<div class="child flex items-center justify-center text-white">
+			<div class="">
+				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
+		
+		{#each items as item ,i}
+		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+			<div class="w-12 h-12 mt-4">
+				<img src="/faculty.svg" alt="" >
+			</div>
+			<div class="p-[10px] capitalize font-bold">{item.name}</div>
+			<div class="capitalize font-semibold">{item.designation}</div>
+			<div class="overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">{item.qualification}</a>
+			</div>
+		</div>
+	
+	{/each}
+		
+		
+		
+		
+
 	</div>
 </section>
 

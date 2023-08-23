@@ -1,3 +1,82 @@
+<script>
+	let items = [
+		{
+  name: "Srirangam Durga Prasad",
+  designation: "Asst Prof & HoD",
+  qualification:"MCA, M.TECH, (PhD) ",
+  mail:""
+},
+{
+  name: "Dr. S Vidyasagar Appaji",
+  designation: "Asst Prof",
+  qualification:"M.TECH., MBA, Ph.D",
+  mail:""
+},
+{
+  name: "Dr. Dharavathu Radha",
+  designation: "Asst Prof",
+  qualification:"M.TECH, Ph.D",
+  mail:""
+},
+{
+  name: "Padma Mohan ",
+  designation: "Asst Prof",
+  qualification:"MCA, M.Phill",
+  mail:""
+},
+{
+  name: "B Madhava Rao",
+  designation: "ASST PROF(Sr.)",
+  qualification:"MCA, M.TECH",
+  mail:""
+},
+{
+  name: "Joshuaraju Pulapalli",
+  designation: "ASST. PROF & TPO INC",
+  qualification:"M.TECH, (Ph.D)",
+  mail:""
+},
+{
+  name: "Surapareddy Samyukta",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "Chaitanya Thalluri",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "Kovvuri Sindhuja",
+  designation: "Asst Prof",
+  qualification:"MCA",
+  mail:""
+},
+{
+  name: "D D Shiva Prasad",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "Gadde Mohana Sowjanya",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "D Appala Raju",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+
+		
+	
+	]
+</script>
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
 	<img src="/header/cse.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
@@ -577,6 +656,30 @@
 			</div>
 			<div />
 		</div>
+	</div>
+	<div class="parent mt-7">
+		<div class="child flex items-center justify-center text-white">
+			<div class="">
+				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
+		
+		{#each items as item ,i}
+		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+			<div class="w-12 h-12 mt-4">
+				<img src="/faculty.svg" alt="" >
+			</div>
+			<div class="p-[10px] capitalize font-bold">{item.name}</div>
+			<div class="capitalize font-semibold">{item.designation}</div>
+			<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
+			</div>
+		</div>
+	
+	{/each}
+		
 	</div>
 </section>
 

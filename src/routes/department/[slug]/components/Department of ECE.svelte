@@ -1,3 +1,61 @@
+<script>
+	let items = [
+		{
+			name: "Kondapalli Pradeep",
+			designation: "Assoc Prof & HoD",
+			qualification:"MTech, (Ph.D)",
+			mail:""
+		},
+		{
+			name: "Dr. Rudra Pratap Das ",
+			designation: "Professor",
+			qualification:"Ph.D",
+			mail:""
+		},
+		{
+			name: "Ravi Kishore Maddugaru",
+			designation: "Asst Prof",
+			qualification:"M.Tech, (Ph.D)",
+			mail:""
+		},
+		{
+			name: "Y V Bhaskara Lakshmi",
+			designation: "Asst Prof",
+			qualification:"M.Tech, (Ph.D)",
+			mail:""
+		},
+		{
+			name: "M M Komali Chittapragada",
+			designation: "Asst Prof",
+			qualification:"M.Tech",
+			mail:""
+		},
+		
+		{
+			name: "Velamala Appala Naidu",
+			designation: "Asst Prof",
+			qualification:"M.Tech",
+			mail:""
+		},
+		
+		{
+			name: "T Vishnu Murty ",
+			designation: "Asst Prof",
+			qualification:"M.Tech",
+			mail:""
+		},
+		
+	
+		{
+			name: "Ch Santhoshi Kumari",
+			designation: "Asst Prof",
+			qualification:"M.Tech",
+			mail:""
+		},
+		
+	
+	]
+</script>
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
 	<img src="/header/ece.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Electronics and Communication Engineering</h1> -->
@@ -676,6 +734,35 @@
 				<div />
 			</div>
 		</div>
+	</div>
+
+	<div class="parent mt-7">
+		<div class="child flex items-center justify-center text-white">
+			<div class="">
+				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
+		
+		{#each items as item ,i}
+		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+			<div class="w-12 h-12 mt-4">
+				<img src="/faculty.svg" alt="" >
+			</div>
+			<div class="p-[10px] capitalize font-bold">{item.name}</div>
+			<div class="capitalize font-semibold">{item.designation}</div>
+			<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
+			</div>
+		</div>
+	
+	{/each}
+		
+		
+		
+		
+
 	</div>
 </section>
 
