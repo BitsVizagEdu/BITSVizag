@@ -457,7 +457,7 @@
 					<div class="w-12 h-12 mt-4">
 						<img src="/faculty.svg" alt="" >
 					</div>
-					<div class="p-[10px] capitalize font-bold">{item.name}</div>
+					<div class="p-[10px] capitalize font-bold text-center">{item.name}</div>
 					<div class="capitalize font-semibold">{item.designation}</div>
 					<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
 					</div>
