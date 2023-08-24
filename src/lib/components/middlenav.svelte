@@ -418,7 +418,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 15px;
+		font-size: 13.5px;
 		font-weight: 600;
 		padding: 9px 20px;
 		border-radius: 5px;
@@ -521,7 +521,13 @@
 			gap: 0px;
 		}
 	}
-
+	@media screen and (max-width:1436px){
+		.nav-links li a {
+			font-size: 12px;
+			font-weight: 700;
+			padding: 9px 13px;
+		}
+	}
 	@media screen and (max-width: 1402px) {
 		.nav-links li a {
 			font-size: 13px;
