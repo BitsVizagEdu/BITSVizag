@@ -18,11 +18,12 @@
         {
             title: "Anti Ragging Committee",
             description: "Description",
-            link: "/professional_commities/2023_2024 NSS COMMITTEE.pdf"
+            link: "/professional_commities/Anti ragging.pdf"
         },
         {
             title: "Online Grievance Redressal",
-            description: "Description"
+            description: "Description",
+            link: "/professional_commities/Grevieance.pdf"
         },
         {
             title: "Research & Development",
@@ -51,11 +52,13 @@
         },
         {
             title: "Disciplinary Committee",
-            description: "Description"
+            description: "Description",
+            link: "/professional_commities/Discipline committee 2023-24.pdf"
         },
         {
             title: "Cultural",
-            description: "Description"
+            description: "Description",
+            link: "/professional_commities/cultural.pdf"
         },
         {
             title: "Admissions",
@@ -76,7 +79,8 @@
         },
         {
             title: "Canteen",
-            description: "Description"
+            description: "Description",
+            link: "/professional_commities/canteen committie.pdf"
         },
         {
             title: "Library",
