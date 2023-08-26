@@ -100,7 +100,7 @@
                     class="flex flex-col xs:hidden md:flex 3xs:hidden justify-center xs:scale-[0.8] md:scale-[1] items-center "
             >
                 <div class="flex flex-col justify-center items-center 2xs:w-28">
-                    <img class="bg-white rounded-full p-1" src="/bits.jpg" alt="circle"/>
+                    <img id="bits" class="bg-white rounded-full p-1 md:hidden" src="/bits.jpg" alt="circle"/>
                 </div>
             </div>
         </div>

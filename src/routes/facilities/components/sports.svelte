@@ -4,6 +4,14 @@
             <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
                 <h2>SPORTS</h2>
             </div>
+            <div class="container pt-8">
+				<img class="first" src="/Facilities/s2.png" alt="" />
+				<img src="/Facilities/s7.png" alt="" />
+				<img src="/Facilities/s1.jpg" alt="" />
+				<img class="third" src="/Facilities/s5.png" alt="" />
+				<img class="second" src="/Facilities/s6.png" alt="" />
+			</div>
+            
             <div>
                 <p class="text-justify md:text-[15px]  3xs:tracking-normal lg:text-[20px] xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
                     Procuring education on consulted assurance in do. Is sympathize he expression mr no travelling.Preference he he at travelling in resolution. So striking at of to welcomed resolved.Northward by described up household therefore attention. Excellence.
@@ -26,11 +34,48 @@
            </div>
 
         </div>
-        <div id="pic " class="flex flex-col justify-between ">
-            <div class="rounded-lg"><img src="./sports.jpg" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3">
-            </div>
-            
-            
-        </div>
     </div>
 </section>
+
+<style>
+
+.container {
+		display: grid;
+		grid-gap: 5px;
+		grid-template-areas:
+			'A'
+			'B'
+			'C'
+			'D'
+			'E';
+	}
+	@media (min-width: 576px) {
+		.container {
+			grid-template-columns: 1.52fr 1fr 1fr 1.525fr;
+			grid-template-areas:
+				'A  B  C  E'
+				'A  D  D  E';
+		}
+	}
+
+	img:nth-child(1) {
+		grid-area: A;
+	}
+	img:nth-child(2) {
+		grid-area: B;
+	}
+	img:nth-child(3) {
+		grid-area: C;
+	}
+	img:nth-child(4) {
+		grid-area: D;
+	}
+	img:nth-child(5) {
+		grid-area: E;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	
+</style>
