@@ -53,6 +53,8 @@
             <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 pt-7">
                 <h2>Knowledge Resource Center</h2>
             </div>
+            <div class="rounded-lg"><img src="./Library-1.webp" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3">
+            </div>
             <div>
                 <p class="text-justify md:text-[15px]  3xs:tracking-normal lg:text-[20px] xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
                     The Knowledge Resource Centre uses E-CAP software Package, which is an integrated multi-user library management system that supports all in-house operations of the Library. The Software consists of modules, Cataloguing, Circulation, OPAC. 
@@ -102,8 +104,7 @@
 
         </div>
         <div id="pic " class="flex flex-col justify-between ">
-            <div class="rounded-lg"><img src="./Library-1.webp" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3">
-            </div>
+            
             
             
         </div>
