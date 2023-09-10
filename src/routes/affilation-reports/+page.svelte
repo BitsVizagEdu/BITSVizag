@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-   <title>Feedback</title>
+   <title>Academic Regulations</title>
 </svelte:head>
 
 
