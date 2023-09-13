@@ -3,6 +3,8 @@
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>BITS Vizag signs a Prestigious Global MOU with "The University of Memphis", Tennessee at the University Campus, United States on 7th Sep, 2023.</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
 				<span>International Interactive Workshop on Digital Education, Internships and Opportunities in UK. - 22 July 2023</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
 				<span>BITS Vizag signed an MOU with EXCELR to facilitate Faculty & Student Development Program. - 7 June 2023</span>&nbsp;&nbsp;&nbsp;
