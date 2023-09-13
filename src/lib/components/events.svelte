@@ -2,6 +2,13 @@
 <script>
     let events = [
         {
+            name: "Orientation Program - 2023",
+            description: "Connecting B.Tech Freshers, 5000+ alumni, 500+ classifications, 50+ entrepreneurs, 15+ countries. Endless possibilities, one place.",
+            date: "August 30, 2023",
+            image: "/events/op.jpg",
+            href:"https://www.instagram.com/p/CwkaJiwrcsa/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
             name: "The INDEPENDENCE DAY Celebrations at BITS Vizag",
             description: "Students and staff joined hands in commemorating Independence Day at BITS Vizag, fostering a sense of patriotism and togetherness.",
             date: "August 15, 2023",

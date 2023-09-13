@@ -382,7 +382,7 @@
 		margin: auto;
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 50px;
 	}
 
 	.wrapper .logo a {
@@ -516,19 +516,35 @@
 		top: 10px;
 	}
 
-	@media screen and (max-width: 1320px) {
+	@media screen and (max-width: 1347px) {
 		nav .wrapper {
-			gap: 0px;
+			gap: 50px;
 		}
 	}
-	@media screen and (max-width:1436px){
+	@media screen and (max-width:1447px){
+		nav .wrapper {
+			gap: 50px;
+		}
 		.nav-links li a {
-			font-size: 12px;
+			font-size: 13px;
 			font-weight: 700;
 			padding: 9px 13px;
 		}
 	}
 	@media screen and (max-width: 1402px) {
+		nav .wrapper {
+			gap: 30px;
+		}
+		.nav-links li a {
+			font-size: 14px;
+			font-weight: 700;
+			padding: 9px 13px;
+		}
+	}
+	@media screen and (max-width: 1300px) {
+		nav .wrapper {
+			gap: 30px;
+		}
 		.nav-links li a {
 			font-size: 13px;
 			font-weight: 700;
@@ -580,7 +596,7 @@
 	}
 	@media screen and (max-width: 975px) {
 		.nav-links li a {
-			font-size: 8px;
+			font-size: 9px;
 			font-weight: 700;
 		}
 
@@ -596,7 +612,7 @@
 		}
 	}
 
-	@media screen and (max-width: 957px) {
+	@media screen and (max-width: 970px) {
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
 			padding-top: 30px;

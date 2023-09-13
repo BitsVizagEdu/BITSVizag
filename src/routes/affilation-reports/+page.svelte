@@ -2,12 +2,14 @@
     let activeTab = 'AICTE Approval';
    
 
-   let items = ['AICTE Approval','JNTU Approval']
+   let items = ['AICTE Approval','JNTU Approval','Academic Regulations']
    
 
    import Aicte from './components/aicte.svelte';
 
    import Jntu from "./components/jntu.svelte";
+
+   import Academic from './components/academic.svelte';
    
    import Footer from '$lib/components/footer.svelte';
    
@@ -15,7 +17,7 @@
 </script>
 
 <svelte:head>
-   <title>Feedback</title>
+   <title>Academic Regulations</title>
 </svelte:head>
 
 
@@ -41,6 +43,9 @@
            {/if}
            {#if activeTab === 'JNTU Approval'}
                <Jntu/>
+           {/if}
+           {#if activeTab === 'Academic Regulations'}
+               <Academic/>
            {/if}
            </div>
    </div>
