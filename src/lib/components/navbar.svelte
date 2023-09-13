@@ -62,7 +62,7 @@
 />
 <div id="header" class="bg-gray-800 flex flex-col items-center w-full">
     <div class=" 2xl:mx-auto py-5 lg:px-7 md:pb-5 xs:p-4 sm:px-4 px-4 w-full">
-        <div class=" flex flex-row md:justify-between 3xs:justify-center w-full">
+        <div class=" flex flex-row lg:justify-between 3xs:justify-center w-full">
             <div class="flex flex-col lg:flex md:hidden  md:justify-center xs:justify-center">
                 <div
                         class=" flex space-x-3 lg:flex 3xs:hidden xs:hidden md:flex md:h-[100px] md:w-[100px] lg:h-[150px] lg:w-[150px]  items-center xs:w-20 xs:h-20 justify-start"
@@ -99,8 +99,8 @@
             <div
                     class="flex flex-col xs:hidden md:flex 3xs:hidden justify-center xs:scale-[0.8] md:scale-[1] items-center "
             >
-                <div class="flex flex-col justify-center items-center 2xs:w-28">
-                    <img id="bits" class="bg-white rounded-full p-1 md:hidden" src="/bits.jpg" alt="circle"/>
+                <div id="bits" class="flex flex-col justify-center items-center 2xs:w-28">
+                    <img  class="bg-white rounded-full p-1" src="/bits.jpg" alt="circle"/>
                 </div>
             </div>
         </div>
@@ -117,5 +117,10 @@
     a {
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
+    }
+    @media screen and (max-width:1023px){
+        #bits{
+            display: none;
+        }
     }
 </style>
