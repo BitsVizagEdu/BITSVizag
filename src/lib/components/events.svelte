@@ -2,6 +2,13 @@
 <script>
     let events = [
         {
+            name: "ENGINEER'S DAY CELEBRATIONS",
+            description: "On September 15th, 2023, BITS Vizag had the privilege of honouring the brilliant minds that shape our future on Engineers' Day at BITS Vizag.",
+            date: "September 15, 2023",
+            image: "/events/engg.jpg",
+            href:"https://www.instagram.com/p/CxP2vu5LiGo/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
             name: "Orientation Program - 2023",
             description: "Connecting B.Tech Freshers, 5000+ alumni, 500+ classifications, 50+ entrepreneurs, 15+ countries. Endless possibilities, one place.",
             date: "August 30, 2023",
