@@ -579,7 +579,7 @@
                 </svg>
             </div>
         </div>
-        <div class="">
+        <form class="">
             <div>
                 <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
                 <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -596,11 +596,11 @@
                         class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
             </div>
             <div class="mt-8">
-                <button
+                <button 
                         class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                     Send Message
                 </button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
