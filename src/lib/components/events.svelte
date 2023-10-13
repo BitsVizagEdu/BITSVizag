@@ -2,6 +2,13 @@
 <script>
     let events = [
         {
+            name: "Webinar on Career Prospects in AI and Data Science",
+            description: "Navigating AI Futures: Insights with CEO Suresh Kadari",
+            date: "October 6, 2023",
+            image: "/events/webinar.jpg",
+            href:"https://www.instagram.com/p/CyEI28sPLSf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
             name: "ENGINEER'S DAY CELEBRATIONS",
             description: "On September 15th, 2023, BITS Vizag had the privilege of honouring the brilliant minds that shape our future on Engineers' Day at BITS Vizag.",
             date: "September 15, 2023",
