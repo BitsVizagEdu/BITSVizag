@@ -110,9 +110,9 @@
 								<a href="/" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Home</a>						</div>
 							<div class="pb-2 w-max">
 								<a href="/aboutus/About-BITS-Vizag" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">About Us</a>
-							</div>
+							</div>e
 							<div class="pb-2 w-max">
-								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Department</a>
+								<a href="/department/Department of BS&H" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Academics</a>
 							</div>
 							<div class="pb-2 w-max">
 								<a href="/facilities" class="sm:hover:scale-[1.1] cursor-pointer  text-lg duration-300">Facilities</a>

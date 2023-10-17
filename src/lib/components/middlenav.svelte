@@ -159,7 +159,7 @@
 					on:click={() => (window.location.href = '/department/Department of BS&H')}
 					class="desktop-item cursor-pointer"
 				>
-					Departments
+				Academics
 				</a>
 				<input type="checkbox" id="departments" />
 				<label for="departments" class="mobile-item">Departments</label>
