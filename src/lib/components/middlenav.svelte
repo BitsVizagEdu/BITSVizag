@@ -19,6 +19,24 @@
 						<div class="row">
 							<div
 								class="link-item cursor-pointer"
+								on:click={() => (window.location.href = '/aboutus/About-Trust')}
+							>
+								<div class="row">
+									<div class="dropdown__icon">
+										<i class="fa-solid fa-user" />
+									</div>
+									<header>
+										<div
+											class="link-item"
+											on:click={() => (window.location.href = '/aboutus/About-Trust')}
+										>
+											About College Trust
+										</div>
+									</header>
+								</div>
+							</div>
+							<div
+								class="link-item cursor-pointer"
 								on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
 							>
 								<div class="dropdown__icon">
@@ -36,8 +54,7 @@
 						</div>
 						<div
 							class="link-item cursor-pointer"
-							on:click={() =>
-								(window.location.href = '/aboutus/Message-from-Chairman')}
+							on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
 						>
 							<div class="row">
 								<div class="dropdown__icon">
@@ -46,8 +63,7 @@
 								<header>
 									<div
 										class="link-item"
-										on:click={() =>
-											(window.location.href = '/aboutus/Message-from-Chairman')}
+										on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
 									>
 										Message from Chairman
 									</div>
@@ -72,7 +88,7 @@
 								</header>
 							</div>
 						</div>
-						<div
+						<!-- <div
 							class="link-item cursor-pointer"
 							on:click={() => (window.location.href = '/affilation-reports')}
 						>
@@ -89,7 +105,7 @@
 									</div>
 								</header>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</li>
@@ -521,7 +537,7 @@
 			gap: 50px;
 		}
 	}
-	@media screen and (max-width:1447px){
+	@media screen and (max-width: 1447px) {
 		nav .wrapper {
 			gap: 50px;
 		}
@@ -564,7 +580,7 @@
 			font-weight: 700;
 		}
 	}
-	@media screen and (max-width:1163px){
+	@media screen and (max-width: 1163px) {
 		.nav-links li a {
 			font-size: 11px;
 			font-weight: 700;
@@ -605,7 +621,7 @@
 			font-weight: 700;
 		}
 	}
-	
+
 	@media screen and (max-width: 430px) {
 		nav .wrapper {
 			max-width: 350px;

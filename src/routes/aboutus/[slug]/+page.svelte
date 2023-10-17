@@ -8,8 +8,8 @@
 
     import Bits from './components/bits.svelte';
 
-    import Footer from '$lib/components/footer.svelte';
     import {isActiveTabSet, toggleIsActiveTab} from "../../../lib/stores/store.js";
+	import Trust from "./components/trust.svelte";
 
     /** @type {import('./$types').PageData} */
     export let data;
@@ -45,6 +45,9 @@
         </aside>
 
         <div class=" lg:w-[75%] p-5 rounded-lg ">
+            {#if $activeTab === 'About-Trust'}
+                <Trust/>
+            {/if}
             {#if $activeTab === 'About-BITS-Vizag'}
                 <Bits/>
             {/if}
