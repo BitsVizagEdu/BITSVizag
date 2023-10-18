@@ -311,8 +311,8 @@
             </li>-->
 			<li><a href="/facilities">Facilities</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/IQAC">IQAC</a></li>
-			<li><a href="/naac">NAAC</a></li>
+			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
+			<!--<li><a href="/naac">NAAC</a></li>-->
 			<li>
 				<a
 					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"

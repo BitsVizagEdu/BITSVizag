@@ -70,7 +70,7 @@
 
     <div
             class="max-w-screen-xl p-32 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
-        <div class="flex flex-col justify-between">
+         <div class="flex flex-col justify-between">
             <div>
                 <h2 class="text-4xl lg:text-5xl font-bold leading-tight capitalize"> Seeking Answer<br> Ask Us!</h2>
                 <div class="text-gray-700 mt-8">
