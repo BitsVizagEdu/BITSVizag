@@ -54,11 +54,11 @@
 
 <div class="mt-10">
     <div class="flex flex-col md:flex-row h-1/2 items-center justify-around">
-        <img src="/graph1.jpg" alt="" class="md:w-[35vw] px-2">
-        <img src="/graph2.jpg" alt="" class="md:w-[35vw] px-2">
+        <img src="/graph1.png" alt="" class="md:w-[35vw] px-2">
+        <img src="/graph2.png" alt="" class="md:w-[35vw] px-2">
     </div>
     <div class="flex flex-col md:flex-row h-1/2 items-center justify-around">
-        <img src="/graph3.jpg" alt="" class="md:w-[35vw] px-2">
+        <img src="/graph3.png" alt="" class="md:w-[35vw] px-2">
         <img src="/graph4.jpg" alt="" class="md:w-[35vw] px-2">
     </div>
 
