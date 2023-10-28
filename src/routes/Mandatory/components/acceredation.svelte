@@ -8,6 +8,10 @@
       <a href="/naac" target="/">Visit <i class="fa-solid fa-location-arrow"></i></a>
   </AccordionItem>
   <AccordionItem>
+    <span slot="header">IQAC</span>
+      <a href="/IQAC" target="/">Visit <i class="fa-solid fa-location-arrow"></i></a>
+  </AccordionItem>
+  <AccordionItem>
     <span slot="header">NBA</span>
       <a href=" ">Visit <i class="fa-solid fa-location-arrow"></i></a>
   </AccordionItem>
