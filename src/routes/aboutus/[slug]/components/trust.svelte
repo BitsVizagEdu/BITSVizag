@@ -6,58 +6,39 @@
             </div>
             <div>
                 <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                    Baba Institute of Technology & Sciences (BITS) was founded in 2008. The college was founded by a group of well-known academicians. They are pioneering educators, having unmatched experience in the field of education with a belief that the continuous search for knowledge is the sole path to success. The primary focus of the institution is to expose the young minds to the world of technology and business, instilling in them confidence and fortitude to face new challenges that enable them to excel in their chosen fields. The college inculcates the development of all facets of the mind culminating in an intellectual and balanced personality.With100% seats filled from the year of inception itself, the institute feels confident that they can serve even better with every passing year. This is well equipped to bring out the inherent greatness in students because everyone here genuinely cares about them.
+                    Dr. B.R. Ambedkar Welfare Educational Society (ABWES), a non-profit organization deeply committed to the principles of social justice and education, has entered into a transformative partnership with BITS Vizag, the renowned Birla Institute of Technology and Science located in Visakhapatnam. This collaborative venture stands as a powerful testament to ABWES's unwavering dedication to extending the boundaries of accessible, high-quality education, particularly for marginalized and underprivileged communities.
                 </p>
             </div>
             <div>
                  <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The college is accredited by NAAC, approved by AICTE, New Delhi andis currently affiliated to Jawaharlal Nehru Technological University, Kakinada and Jawaharlal Nehru Technological University, GurajadaVizianagaram, Andhra Pradesh. It’s making further advancements in the field of technical education. The campus is located in Visakhapatnam, Andhra Pradesh, close to National Highway-16.
+                    Against the backdrop of Dr. B.R. Ambedkar's inspiring legacy as a champion of social justice and education, ABWES shares a common vision of using education as a means to promote inclusivity and empowerment. Driven by this shared vision, the society has contributed substantial funding to BITS Vizag, sparking remarkable advancements within the institution.
                 </p>
             </div>
             <div>
                  <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The college has signed several Memorandums of Understanding (MOUs) to strengthen the interaction among both academia and industry. The college's Training and Placement cell is very active, and it invites several renowned companies to the campus for placements. The Training and Placement Cell organises numerous training programmes for students in order to improve their employability skills.
+                    The impact of this partnership is evident in several ways, including significant improvements in infrastructure, the establishment of scholarships aimed at supporting students from disadvantaged backgrounds, and the initiation of groundbreaking research projects. Specific initiatives born from this collaboration have already begun to address long-standing disparities in education and to create tangible pathways for students who might not otherwise have had access to such opportunities.
                 </p>
             </div>
             <div>
                 <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The main goal is to prepare the students for all levels of leadership in business, science, and other areas of life through career-focused curriculum and mentoring programmes.The fundamental objective is to allow each student to meet his or her individual goal in life. Students are encouraged to follow dreams and ambitions in a rational and sustainable manner.
+                    Education, as Dr. B.R. Ambedkar firmly believed, holds the key to unlocking the potential of marginalized communities and serving as a catalyst for broader social and economic transformation. This partnership resonates deeply with his vision, and its effects are reverberating in the lives of countless individuals who are now better equipped to pursue their dreams and aspirations.
                  </p>
            </div>
-           <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
-            <h2>Vision</h2>
-        </div>
-        <div>
-            <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                To become a leader in Engineering, Technology, Science and Management eduction by building the talent of youth into dynamic professionals.
-            </p>
-        </div>
-        <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 pt-3">
-            <h2>Mission</h2>
-        </div>
-        <div>
-            <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                The mission of the college is to achieve academic excellence in Techincal education
-            </p>
-        </div>
-        <div class="ml-10">
-            <ul class="list-disc text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>The College aims to achieve high moral, ethical & professional standards to make students employable and globally competitive.</li>
-            </ul>
-            <ul class="list-disc pt-4 text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>Providing Quality Education, student-centered Teching-Learning process and state of art infrastructure for professional aspirants hailing from both rural and urban areas.</li>
-            </ul>
-            <ul class="list-disc pt-4 md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>Achieving self sufficiency to ensure qualitative Teaching-Learning practices.</li>
-            </ul>
-            <ul class="list-disc pt-4 text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>Evolving thiks organization into a Centre of academic and research excellence</li>
-            </ul>
-        </div>
+           <div>
+            <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
+                Like any significant endeavor, this partnership faces its share of challenges, but both ABWES and BITS Vizag remain resolute in their determination to overcome obstacles and further their mission of expanding educational opportunities and advancing social welfare. Their future plans are ambitious and inspiring, as they seek to not only sustain their current efforts but also to broaden their reach and impact in a way that continues to honor the enduring legacy of Dr. B.R. Ambedkar.
+             </p>
+       </div>
+       <div>
+        <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
+            In conclusion, the ABWES-BITS Vizag partnership embodies the transformative power of education and social justice, standing as a beacon of hope and progress in a world that still grapples with inequality and disparities in educational access. This partnership pays homage to Dr. B.R. Ambedkar's lasting influence and tireless efforts to create a more equitable and educated society, with the shared goal of leaving a legacy of empowerment for generations to come.
+         </p>
+   </div>
+           
         </div>
         <div id="pic " class="flex flex-col justify-between ">
             <div class="rounded-lg">
-                <img src="/baba.jpeg" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3" alt=""/>
+                <img src="/header/trust.png" class="w-full" alt=""/>
             </div>
         </div>
     </div>
