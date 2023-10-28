@@ -1,7 +1,7 @@
 <section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
     <div class="flex  flex-col-reverse justify-center items-center  mx-auto">
         <div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
-            <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
+            <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 p-10">
                 <h2>About Our College</h2>
             </div>
             <div>
