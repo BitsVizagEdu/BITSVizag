@@ -16,14 +16,14 @@
 				<label for="showMega" class="mobile-item">About Us</label>
 				<div class="mega-box">
 					<div class="content">
-						<div class="row">
+						<div class="row flex 3xs:gap-8 xl:gap-20 md:flex-col lg:flex-row">
 							<div
 								class="link-item cursor-pointer"
 								on:click={() => (window.location.href = '/aboutus/About-Trust')}
 							>
 								<div class="row">
 									<div class="dropdown__icon">
-										<i class="fa-solid fa-user" />
+										<i class="fa-solid fa-building"></i>
 									</div>
 									<header>
 										<div
@@ -39,17 +39,19 @@
 								class="link-item cursor-pointer"
 								on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
 							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-building-columns" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
-									>
-										About BITS VIZAG
+								<div class="row">
+									<div class="dropdown__icon">
+										<i class="fa-solid fa-building-columns" />
 									</div>
-								</header>
+									<header>
+										<div
+											class="link-item"
+											on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
+										>
+											About BITS VIZAG
+										</div>
+									</header>
+								</div>
 							</div>
 						</div>
 						<div
@@ -377,9 +379,12 @@
 	.dropdown__icon .fa-building-columns {
 		margin-left: -5px;
 	}
+	.dropdown__icon .fa-building {
+		margin-left: -5px;
+	}
 
 	.dropdown__icon .fa-user {
-		margin-left: -20px;
+		margin-left: -0px;
 	}
 
 	nav {
@@ -392,7 +397,7 @@
 	nav .wrapper {
 		position: relative;
 		max-width: 1600px;
-		padding: 30px 0px;
+		padding: 20px 0px;
 		height: 80px;
 		line-height: 70px;
 		margin: auto;
@@ -489,7 +494,7 @@
 	}
 
 	.mega-box .content .row {
-		line-height: 50px;
+		line-height: 45px;
 	}
 
 	.mega-box .content .row header a {
