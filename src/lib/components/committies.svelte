@@ -99,7 +99,6 @@
             {#each items as item, i}
                 <a href={item.link}  on:mouseenter={() => scaleUp(".card" + i.toString())} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[150px] w-[200px]  bg-white flex justify-center shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] items-center  m-2 rounded-[5px] `}>
                     <div class="p-[10px] text-center capitalize font-bold">{item.title}</div>
-                    
                 </a>
             {/each}
         </div>
