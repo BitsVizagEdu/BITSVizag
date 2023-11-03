@@ -8,6 +8,7 @@
     import Hero from "$lib/components/navbar.svelte"
     import AOS from 'aos';
     import Middlenav from "$lib/components/middlenav.svelte";
+    import Secondnav from "$lib/components/secondnav.svelte";
     import 'aos/dist/aos.css'; // You can also use <link> for styles
     // ..
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
@@ -28,6 +29,7 @@
 
         <Hero showNavBar={showNavBar}/>
         <Middlenav/>
+        <Secondnav/>
         <BackToTop/>
         <slot />
         <Footer/>

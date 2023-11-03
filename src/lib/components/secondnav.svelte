@@ -1,94 +1,13 @@
 <nav>
 	<div class="wrapper justify-center">
 		
-		<input type="radio" name="slider" id="menu-btn" />
-		<input type="radio" name="slider" id="close-btn" />
+		
 		<ul class="nav-links">
-			<label for="close-btn" class="btn close-btn">
-				<i class="fas fa-times text-[#242526]" />
-			</label>
-			<li><a href="/">Home</a></li>
-			<li>
-				<a href="/aboutus/About-BITS-Vizag" class="desktop-item"> About Us</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">About Us</label>
-				<div class="mega-box">
-					<div class="content">
-						<div class="row flex 3xs:gap-8 xl:gap-20 md:flex-col lg:flex-row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/aboutus/About-Trust')}
-							>
-								<div class="row">
-									<div class="dropdown__icon">
-										<i class="fa-solid fa-building"></i>
-									</div>
-									<header>
-										<div
-											class="link-item"
-											on:click={() => (window.location.href = '/aboutus/About-Trust')}
-										>
-											About College Trust
-										</div>
-									</header>
-								</div>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
-							>
-								<div class="row">
-									<div class="dropdown__icon">
-										<i class="fa-solid fa-building-columns" />
-									</div>
-									<header>
-										<div
-											class="link-item"
-											on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
-										>
-											About BITS VIZAG
-										</div>
-									</header>
-								</div>
-							</div>
-						</div>
-						<div
-							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-user" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
-									>
-										Message from Chairman
-									</div>
-								</header>
-							</div>
-						</div>
-						<div
-							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/aboutus/Message-from-Principal')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-user" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/aboutus/Message-from-Principal')}
-									>
-										Message From Principal
-									</div>
-								</header>
-							</div>
-						</div>
-						<!-- <div
+			
+			
+			
+						<!--<li>
+                           <div
 							class="link-item cursor-pointer"
 							on:click={() => (window.location.href = '/affilation-reports')}
 						>
@@ -105,231 +24,15 @@
 									</div>
 								</header>
 							</div>
-						</div> -->
-					</div>
-				</div>
-			</li>
-			<li>
-				<a href="/courses/Under Graduation" class="desktop-item">Courses</a>
-				<input type="checkbox" id="courses" />
-				<label for="courses" class="mobile-item">Courses</label>
-				<div class="mega-box">
-					<div class="content">
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/courses/Under Graduation')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-graduation-cap" />
-								</div>
-								<header>
-									<div
-										class="link-item ml-[-20px]"
-										on:click={() => (window.location.href = '/courses/Under Graduation')}
-									>
-										Under Graduation
-									</div>
-								</header>
-							</div>
-						</div>
-						<div
-							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/courses/Post Graduation')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-graduation-cap" />
-								</div>
-								<header>
-									<div
-										class="link-item ml-[-40px]"
-										on:click={() => (window.location.href = '/courses/Post Graduation')}
-									>
-										Post Graduation
-									</div>
-								</header>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<a
-					on:click={() => (window.location.href = '/department/Department of BS&H')}
-					class="desktop-item cursor-pointer"
-				>
-				Academics
-				</a>
-				<input type="checkbox" id="departments" />
-				<label for="departments" class="mobile-item">Departments</label>
-				<div class="mega-box">
-					<div class="content">
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of CSE')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-code" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of CSE')}
-									>
-										Computer Science and Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of BS&H')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-wand-magic-sparkles" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of BS&H')}
-									>
-										Basics Sciences & Humanities
-									</div>
-								</header>
-							</div>
-						</div>
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of ECE')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-lightbulb" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of ECE')}
-									>
-										Electronics and Communication Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of CIVIL')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-screwdriver-wrench" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of CIVIL')}
-									>
-										Civil Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of MBA')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-file-invoice" />
-								</div>
-								<header>
-									<div
-										class="link-item cursor-pointer"
-										on:click={() => (window.location.href = '/department/Department of MBA')}
-									>
-										Management Studies
-									</div>
-								</header>
-							</div>
-						</div>
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of EEE')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-lightbulb" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of EEE')}
-									>
-										Electrical and Electronics Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of MECH')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-gears" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of MECH')}
-									>
-										Mechanical Engineering
-									</div>
-								</header>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			
-			<li><a href="/placements">Career Development Cell</a></li>
+						</div> 
+                        </li>-->
+
 			<!--<li><a href="#">Academics</a></li>-->
-			<!--<li>
-                <a href="/examcell" class="desktop-item">Exam Cell</a>
-                <input type="checkbox" id="exam"/>
-                <label for="exam" class="mobile-item">Exam Cell</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user-graduate"/>
-                            </div>
-                            <header><a href="/examcell/Engineering">Engineering</a></header>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user-graduate"/>
-                            </div>
-                            <header><a href="/examcell/MBA">Management Studies</a></header>
-                        </div>
-                    </div>
-                </div>
-            </li>-->
-			<div class="logo">
-				<a href="/"><img class="w-[120px]" src="/1.png" alt="" /></a>
-			</div>
-			<li><a href="/facilities">Facilities</a></li>
 			
-			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
-			<li>
-				<a
-					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
-					target="_blank">Online Payment</a
-				>
-			</li>
-
-			<!--addons-->
-
-			<li class="addon lg:hidden"><a href="/contactus">Contact Us</a></li>
+			<li><a href="/contactus">Contact Us</a></li>
 			
-			<li class="addon lg:hidden"><a href="/alumini-data">Alumini</a></li>
-            <li class="addon lg:hidden">
+			<li><a href="/alumini-data">Alumini</a></li>
+            <li>
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -350,17 +53,13 @@
                     </div>
                 </div>
             </li>
-			<li class="addon lg:hidden">
+			<li>
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
-			<li class="addon lg:hidden">
+			<li>
 				<a href="/feedback">Feedback</a>
 			</li>
-
-			<!--addons-->
-
 		</ul>
-		<label for="menu-btn" class="btn menu-btn "><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>
 
@@ -665,9 +364,9 @@
 	}
 
 	@media screen and (max-width: 970px) {
-		.logo img{
-			display: none;
-		}
+        nav{
+            display: none;
+        }
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
 			padding-top: 30px;
