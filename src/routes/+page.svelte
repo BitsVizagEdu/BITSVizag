@@ -37,6 +37,7 @@
 
 <svelte:window bind:scrollY={y}/>
 {#if !$showNavBar}
+    
     <Notification/>
     <div id="overlay" class="overlay overflow-hidden flex relative z-[-1] min-h-[75vh]">
         <video playsinline autoplay muted loop>
