@@ -32,7 +32,7 @@
 			<li><a href="/contactus">Contact Us</a></li>
 			
 			<li><a href="/alumini-data">Alumini</a></li>
-            <li>
+            <!--<li>
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li>-->
 			<li>
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
