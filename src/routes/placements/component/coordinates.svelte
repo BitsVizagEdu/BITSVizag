@@ -53,7 +53,7 @@
             
             {#each items as item, i}
                 <div>
-                    <a href={item.link} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[200px] w-[300px]  bg-white flex flex-col justify-center shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] items-center  m-2 rounded-[5px] `}>
+                    <a href={item.link} on:mouseleave={() => {scaleDown(".card" + i.toString())}} class={`card${i} h-[200px] w-[225px]  lg:w-[300px]  bg-white flex flex-col justify-center shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] items-center  m-2 rounded-[5px] `}>
                         <div class="p-[10px] text-center capitalize font-bold text-xl">{item.title}</div>
                         <div class="p-[10px] text-center capitalize text-xl">{item.description}</div>
                     </a>

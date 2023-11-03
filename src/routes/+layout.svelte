@@ -13,6 +13,7 @@
     // ..
     import {  showNavBar, toggleNavBar } from '$lib/stores/store.js';
 	import Footer from "$lib/components/footer.svelte";
+	import Navmenu from "$lib/components/navmenu.svelte";
 
     onMount(() => {
 
@@ -26,10 +27,11 @@
 
 
     {:else}
-
+        
         <Hero showNavBar={showNavBar}/>
         <Middlenav/>
         <Secondnav/>
+      
         <BackToTop/>
         <slot />
         <Footer/>
