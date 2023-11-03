@@ -325,7 +325,7 @@
 			<li class="addon lg:hidden"><a href="/contactus">Contact Us</a></li>
 			
 			<li class="addon lg:hidden"><a href="/alumini-data">Alumini</a></li>
-            <li class="addon lg:hidden">
+            <!--<li class="addon lg:hidden">
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -345,7 +345,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li>-->
 			<li class="addon lg:hidden">
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
