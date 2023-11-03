@@ -2,7 +2,7 @@
 	<div class="wrapper justify-center">
 		
 		
-		<ul class="nav-links">
+		<ul class="nav-links gap-16">
 			
 			
 			
@@ -58,6 +58,15 @@
 			</li>
 			<li>
 				<a href="/feedback">Feedback</a>
+			</li>
+			<li><a href="/facilities">Facilities</a></li>
+			
+			<li><a href="/gallery">Gallery</a></li>
+			<li>
+				<a
+					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
+					target="_blank">Online Payment</a
+				>
 			</li>
 		</ul>
 	</div>
@@ -121,14 +130,14 @@
 		z-index: 99;
 		width: 100%;
 
-		background: hsl(220, 100%, 99%);
+		background: #d22626;
 	}
 
 	nav .wrapper {
 		position: relative;
 		max-width: 1600px;
 		padding: 20px 0px;
-		height: 80px;
+		height: 50px;
 		line-height: 70px;
 		margin: auto;
 		display: flex;
@@ -167,9 +176,9 @@
 	}
 
 	.nav-links li a {
-		color: #253c6a;
+		color: #ffffff;
 		text-decoration: none;
-		font-size: 13.5px;
+		font-size: 15px;
 		font-weight: 600;
 		padding: 9px 20px;
 		border-radius: 5px;
@@ -336,7 +345,7 @@
 	}
 	@media screen and (max-width: 1037px) {
 		.nav-links li a {
-			font-size: 9px;
+			font-size: 10px;
 			font-weight: 700;
 		}
 

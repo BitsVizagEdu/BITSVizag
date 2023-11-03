@@ -1,9 +1,13 @@
 <nav>
-	<div class="wrapper justify-center">
-		
+	<div class="wrapper ">
+		<div class="logo">
+			<a href="/"><img class="w-[120px]" src="/1.png" alt="" /></a>
+		</div>
 		<input type="radio" name="slider" id="menu-btn" />
 		<input type="radio" name="slider" id="close-btn" />
-		<ul class="nav-links">
+		
+		<ul class="nav-links gap-12">
+			
 			<label for="close-btn" class="btn close-btn">
 				<i class="fas fa-times text-[#242526]" />
 			</label>
@@ -154,6 +158,7 @@
 					</div>
 				</div>
 			</li>
+			
 			<li>
 				<a
 					on:click={() => (window.location.href = '/department/Department of BS&H')}
@@ -310,19 +315,10 @@
                     </div>
                 </div>
             </li>-->
-			<div class="logo">
-				<a href="/"><img class="w-[120px]" src="/1.png" alt="" /></a>
-			</div>
-			<li><a href="/facilities">Facilities</a></li>
 			
-			<li><a href="/gallery">Gallery</a></li>
+			
 			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
-			<li>
-				<a
-					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
-					target="_blank">Online Payment</a
-				>
-			</li>
+			
 
 			<!--addons-->
 
@@ -428,13 +424,13 @@
 	nav .wrapper {
 		position: relative;
 		max-width: 1600px;
-		padding: 20px 0px;
+		padding: 20px 45px;
 		height: 80px;
 		line-height: 70px;
 		margin: auto;
 		display: flex;
 		align-items: center;
-		gap: 50px;
+		gap: 80px;
 	}
 
 	.wrapper .logo a {
@@ -470,7 +466,7 @@
 	.nav-links li a {
 		color: #253c6a;
 		text-decoration: none;
-		font-size: 13.5px;
+		font-size: 15px;
 		font-weight: 600;
 		padding: 9px 20px;
 		border-radius: 5px;
@@ -570,12 +566,13 @@
 
 	@media screen and (max-width: 1347px) {
 		nav .wrapper {
-			gap: 50px;
+			gap: 70px;
 		}
 	}
+
 	@media screen and (max-width: 1447px) {
 		nav .wrapper {
-			gap: 50px;
+			gap: 70px;
 		}
 		.nav-links li a {
 			font-size: 13px;
@@ -583,9 +580,10 @@
 			padding: 9px 13px;
 		}
 	}
+
 	@media screen and (max-width: 1402px) {
 		nav .wrapper {
-			gap: 30px;
+			gap: 70px;
 		}
 		.nav-links li a {
 			font-size: 14px;
@@ -593,6 +591,7 @@
 			padding: 9px 13px;
 		}
 	}
+
 	@media screen and (max-width: 1300px) {
 		nav .wrapper {
 			gap: 30px;
@@ -616,6 +615,7 @@
 			font-weight: 700;
 		}
 	}
+
 	@media screen and (max-width: 1163px) {
 		.nav-links li a {
 			font-size: 11px;
@@ -623,6 +623,7 @@
 			padding: 9px 10px;
 		}
 	}
+
 	@media screen and (max-width: 1101px) {
 		.nav-links li a {
 			font-size: 10px;
@@ -635,10 +636,11 @@
 			font-weight: 700;
 		}
 	}
+
 	@media screen and (max-width: 1037px) {
 		.nav-links li a {
-			font-size: 9px;
-			font-weight: 700;
+			font-size: 10px;
+			font-weight: 900;
 		}
 
 		.nav-links li .link-item {
@@ -646,23 +648,20 @@
 			font-weight: 700;
 		}
 	}
+
 	@media screen and (max-width: 975px) {
 		.nav-links li a {
 			font-size: 9px;
 			font-weight: 700;
 		}
-
+				
 		.nav-links li .link-item {
 			font-size: 11px;
 			font-weight: 700;
 		}
 	}
 
-	@media screen and (max-width: 430px) {
-		nav .wrapper {
-			max-width: 350px;
-		}
-	}
+	
 
 	@media screen and (max-width: 970px) {
 		.logo img{
