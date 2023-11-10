@@ -2,6 +2,13 @@
 <script>
     let events = [
         {
+            name: "Industrial Visit | Dept. of CSE | KONKORDE | BITS Vizag - T Hub",
+            description: "They explored T-Hub's Innovative Workspace, gaining a firsthand understanding of its operation.",
+            date: "October 8, 2023",
+            image: "/events/thub.jpg",
+            href:"https://www.instagram.com/p/CzbRQZFr_rq/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        },
+        {
             name: "Webinar on Career Prospects in AI and Data Science",
             description: "Navigating AI Futures: Insights with CEO Suresh Kadari",
             date: "October 6, 2023",
