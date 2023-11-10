@@ -6,84 +6,96 @@
             description: "They explored T-Hub's Innovative Workspace, gaining a firsthand understanding of its operation.",
             date: "October 8, 2023",
             image: "/events/thub.jpg",
-            href:"https://www.instagram.com/p/CzbRQZFr_rq/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CzbRQZFr_rq/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "Webinar on Career Prospects in AI and Data Science",
             description: "Navigating AI Futures: Insights with CEO Suresh Kadari",
             date: "October 6, 2023",
             image: "/events/webinar.jpg",
-            href:"https://www.instagram.com/p/CyEI28sPLSf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CyEI28sPLSf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "ENGINEER'S DAY CELEBRATIONS",
             description: "On September 15th, 2023, BITS Vizag had the privilege of honouring the brilliant minds that shape our future on Engineers' Day at BITS Vizag.",
             date: "September 15, 2023",
             image: "/events/engg.jpg",
-            href:"https://www.instagram.com/p/CxP2vu5LiGo/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CxP2vu5LiGo/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "Orientation Program - 2023",
             description: "Connecting B.Tech Freshers, 5000+ alumni, 500+ classifications, 50+ entrepreneurs, 15+ countries. Endless possibilities, one place.",
             date: "August 30, 2023",
             image: "/events/op.jpg",
-            href:"https://www.instagram.com/p/CwkaJiwrcsa/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CwkaJiwrcsa/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "The INDEPENDENCE DAY Celebrations at BITS Vizag",
             description: "Students and staff joined hands in commemorating Independence Day at BITS Vizag, fostering a sense of patriotism and togetherness.",
             date: "August 15, 2023",
             image: "/events/independance.jpg",
-            href:"https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "BITS Vizag and G-TEC DST GITAM Join Hands Through Meaningful MOU Signing Ceremony.",
             description: "BITS Vizag and G-TEC | DST GITAM join in impactful MOU for enhanced collaboration.",
             date: "August 10, 2023",
             image: "/events/gitam.jpg",
-            href:"https://www.instagram.com/p/CvxX9zYvBow/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CvxX9zYvBow/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "Mr. Joshua Raju, CSE Students, and KONKORDE Team Gain Invaluable Insights at BNI Kings Meet 2023.",
             description: "Mr. Joshua Raju, CSE students, and KONKORDE Team gained insights at the BNI Kings Meet 2023, Hotel Ocean Vista Bay, August 10th.",
             date: "August 10, 2023",
             image: "/events/bni.jpg",
-            href:"https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "The 234 Battalion CRPF organized a spectacular event at the Picturesque Campus of BITS Vizag",
             description: "The serene campus of BITS Vizag was transformed into a mesmerizing venue as the 234 Battalion CRPF hosted an impressive event.",
             date: "July 27, 2023",
             image: "/events/crpf.jpg",
-            href:"https://www.instagram.com/p/CvMyAiwr3v3/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CvMyAiwr3v3/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK",
             description: "BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held.",
             date: "July 22, 2023",
             image: "/events/lsdb.jpg",
-            href:"https://www.instagram.com/p/CvBteqCLtbR/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CvBteqCLtbR/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "INTERNATIONAL YOGA DAY CELEBRATION",
             description: "Featuring Dr. Sundar Raj Perumali, Director, Aroghyadhatri.",
             date: "June 21, 2023",
             image: "/events/6.jpeg",
-            href:"https://www.instagram.com/p/Ctv-lUWroBU/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/Ctv-lUWroBU/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "GRADUATION DAY CELEBRATION",
             description: "Featuring Chief Guest Prof. G. Swami Naidu, Registrar - JNTU GV.",
             date: "September 2, 2022",
             image: "/events/7.jpg",
-            href:"https://www.instagram.com/p/CrtQ2fwPY26/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CrtQ2fwPY26/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
         {
             name: "BITS QUEST 2K23 - ANNUAL FEST",
             description: "Thrilled to witness Digitaries like Prof. K. Venkata Subbaiah, JNTU Vice Chancellor and Shri. K. Nagesh.",
             date: "August 26, 2022",
             image: "/events/5.jpeg",
-            href:"https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+            href:"https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
         },
 
     ]
@@ -123,6 +135,9 @@
                             <a href="{event.href}"><img  on:mouseenter={() => scaleUp(".img" + i.toString())} on:mouseleave={() => scaleDown(".img" + i.toString())} class={`img${i} image w-full rounded-2xl`}
                                 src={event.image} alt=""></a>
                         </div>
+                        <div class="text-center pt-3 text-gray-500 font-light">
+                            {event.click}
+                        </div>
                     </div>
                     <div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r"></div>
                 </div>
@@ -159,10 +174,13 @@
                 </div>
                 <div class="w-[400px] flex items-center justify-center py-16">
                     <div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r"></div>
-                    <div class="w-[800px] flex flex-col bg-white rounded-2xl border-2">
+                    <div class="w-[800px] flex flex-col bg-white rounded-2xl">
                         <div class="w-full">
                            <a href="{event.href}"> <img on:mouseenter={() => scaleUp(".img" + i.toString())} on:mouseleave={() => scaleDown(".img" + i.toString())} class={`img${i} image w-full rounded-2xl`}
                             src={event.image} alt=""></a>
+                        </div>
+                        <div class="text-center pt-3 text-gray-500 font-light">
+                            {event.click}
                         </div>
                     </div>
                 </div>
