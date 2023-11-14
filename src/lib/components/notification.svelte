@@ -3,6 +3,12 @@
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>"Students of BITS Vizag's CSE Department Explore Innovation - A Transformative Industrial Visit at T-Hub, Hyderabad  with KONKORDE, 1st Student Startup of BITS Vizag.</span>&nbsp;&nbsp;&nbsp;
+				
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span>BITS Vizag and KONKORDE Presents IDEATHON, Where Ideas Ignite Innovation!</span>&nbsp;&nbsp;&nbsp;
+				
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
 				<span>BITS Vizag signs a Prestigious Global MOU with "The University of Memphis", Tennessee at the University Campus, United States on 7th Sep, 2023.</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
 				<span>International Interactive Workshop on Digital Education, Internships and Opportunities in UK. - 22 July 2023</span>&nbsp;&nbsp;&nbsp;
