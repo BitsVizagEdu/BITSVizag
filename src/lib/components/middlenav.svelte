@@ -199,7 +199,7 @@
 										class="link-item"
 										on:click={() => (window.location.href = '/department/Department of BS&H')}
 									>
-										Basics Sciences & Humanities
+										Basic Sciences & Humanities
 									</div>
 								</header>
 							</div>
