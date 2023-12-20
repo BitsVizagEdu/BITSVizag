@@ -1,11 +1,11 @@
 <script>
-    let activeTab = 'AECTE Approval';
+    let activeTab = 'AICTE Approval';
    
 
-   let items = ['AECTE Approval','University Affilation Letter','Accredation & Ranking']
+   let items = ['AICTE Approval','University Affilation Letter','Accredation & Ranking']
    
 
-   import Aecte from './components/aecte.svelte';
+   import Aecte from './components/aicte.svelte';
    import Univesirty from './components/univesirty.svelte';
    import Acceredation from './components/acceredation.svelte';
    
@@ -35,7 +35,7 @@
        </aside>
 
        <div class=" lg:w-[75%] p-5 rounded-lg ">
-           {#if activeTab === 'AECTE Approval'}
+           {#if activeTab === 'AICTE Approval'}
                <Aecte/>
            {/if}
            {#if activeTab === 'University Affilation Letter'}
