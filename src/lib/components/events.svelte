@@ -2,6 +2,14 @@
 <script>
     let events = [
         {
+            name: "Conversation Unveiled by Prof. Sajjan Shiva ,University of Memphis, USA",
+            description: "Thrilled to witness Digitaries  Prof. Sajjan Shiva sharing valuable insights on higher studies and foreign educational opportunities.",
+            date: "January 9, 2024",
+            image: "/events/memphis.jpg",
+            href:"https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+            click:"Click to view more >>>"
+        },
+        {
             name: "Industrial Visit | Dept. of CSE | KONKORDE | BITS Vizag - T Hub",
             description: "They explored T-Hub's Innovative Workspace, gaining a firsthand understanding of its operation.",
             date: "October 8, 2023",
@@ -89,14 +97,7 @@
             href:"https://www.instagram.com/p/CrtQ2fwPY26/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
             click:"Click to view more >>>"
         },
-        {
-            name: "BITS QUEST 2K23 - ANNUAL FEST",
-            description: "Thrilled to witness Digitaries like Prof. K. Venkata Subbaiah, JNTU Vice Chancellor and Shri. K. Nagesh.",
-            date: "August 26, 2022",
-            image: "/events/5.jpeg",
-            href:"https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
-            click:"Click to view more >>>"
-        },
+        
 
     ]
 
