@@ -8,15 +8,15 @@
 			id: 'box-1'
 		},
 		{
-			pic: '/gallery/img2.jpeg',
-			name: 'Global Education Fair',
-			date: '15/06/2023',
+			pic: '/gallery/img2.jpg',
+			name: 'Sankranthi Celebration',
+			date: '11/01/2024',
 			href: '#',
 			id: 'box-2'
 		},
 		{
-			pic: '/gallery/img3.jpeg',
-			name: 'Yoga Day Celebration',
+			pic: '/gallery/e2.jpg',
+			name: 'T-Hub Industrial Visit',
 			date: '21/06/2023',
 			href: '#',
 			id: 'box-3'
@@ -24,14 +24,14 @@
 		{
 			pic: '/gallery/img4.jpeg',
 			name: 'Christmas Extravaganza',
-			date: '24/12/2022',
+			date: '24/12/2023',
 			href: '#',
 			id: 'box-4'
 		},
 		{
-			pic: '/gallery/img1.jpeg',
-			name: 'Beach Cleaning Drive',
-			date: '15/07/2023',
+			pic: '/gallery/e18.jpg',
+			name: 'International Acadamic Collabration',
+			date: '09/01/2024',
 			href: '#',
 			id: 'box-5'
 		}
