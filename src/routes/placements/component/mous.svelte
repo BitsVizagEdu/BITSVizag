@@ -15,7 +15,7 @@
 					/>
 				</div>
 				<div class="p-3 md:w-[25vw]">
-					<p class="font-thin">~Chairman</p>
+					<p class="font-thin">~Secretary & Correspondent</p>
 					<p class="block mb-1  text-2xl text-indigo-900">
 						Path to Success: Learn, Adapt, and Work with Passion and Integrity.
 					</p>
