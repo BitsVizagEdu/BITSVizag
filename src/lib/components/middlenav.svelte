@@ -69,7 +69,7 @@
 										class="link-item"
 										on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
 									>
-										Message from Chairman
+										Message from Secretary & Correspondent
 									</div>
 								</header>
 							</div>
