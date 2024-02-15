@@ -5,9 +5,8 @@
 		</div>
 		<input type="radio" name="slider" id="menu-btn" />
 		<input type="radio" name="slider" id="close-btn" />
-		
+
 		<ul class="nav-links gap-12">
-			
 			<label for="close-btn" class="btn close-btn">
 				<i class="fas fa-times text-[#242526]" />
 			</label>
@@ -21,18 +20,18 @@
 						<div class="row flex 3xs:gap-8 xl:gap-20 md:flex-col lg:flex-row">
 							<div
 								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/aboutus/About-Trust')}
+								on:click={() => (window.location.href = '/aboutus/About-ABWS')}
 							>
 								<div class="row">
 									<div class="dropdown__icon">
-										<i class="fa-solid fa-building"></i>
+										<i class="fa-solid fa-building" />
 									</div>
 									<header>
 										<div
 											class="link-item"
-											on:click={() => (window.location.href = '/aboutus/About-Trust')}
+											on:click={() => (window.location.href = '/aboutus/About-ABWS')}
 										>
-											About College Trust
+											About ABWS
 										</div>
 									</header>
 								</div>
@@ -158,13 +157,13 @@
 					</div>
 				</div>
 			</li>
-			
+
 			<li>
 				<a
 					on:click={() => (window.location.href = '/department/Department of BS&H')}
 					class="desktop-item cursor-pointer"
 				>
-				Academics
+					Academics
 				</a>
 				<input type="checkbox" id="departments" />
 				<label for="departments" class="mobile-item">Departments</label>
@@ -291,7 +290,7 @@
 					</div>
 				</div>
 			</li>
-			
+
 			<li><a href="/placements">Career Development Cell</a></li>
 			<!--<li><a href="#">Academics</a></li>-->
 			<!--<li>
@@ -315,17 +314,15 @@
                     </div>
                 </div>
             </li>-->
-			
-			
+
 			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
-			
 
 			<!--addons-->
 
 			<li class="addon lg:hidden"><a href="/contactus">Contact Us</a></li>
-			
+
 			<li class="addon lg:hidden"><a href="/alumini-data">Alumini</a></li>
-            <!--<li class="addon lg:hidden">
+			<!--<li class="addon lg:hidden">
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -354,7 +351,6 @@
 			</li>
 
 			<!--addons-->
-
 		</ul>
 		<label for="menu-btn" class="btn menu-btn "><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
@@ -654,17 +650,15 @@
 			font-size: 9px;
 			font-weight: 700;
 		}
-				
+
 		.nav-links li .link-item {
 			font-size: 11px;
 			font-weight: 700;
 		}
 	}
 
-	
-
 	@media screen and (max-width: 970px) {
-		.logo img{
+		.logo img {
 			display: none;
 		}
 		.dropdown__icon .fa-user {
