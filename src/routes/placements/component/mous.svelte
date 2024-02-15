@@ -1,4 +1,3 @@
-
 <section>
     <div class="font-font1 text-xl md:text-5xl text-center m-10 md:p-10">Address from Academic Authorities</div>
     <div class="flex w-[80%] ml-auto mr-auto md:flex-row flex-col my-8">
@@ -12,7 +11,7 @@
                 />
               </div>
               <div class="p-3 md:w-[25vw]">
-                <p class="font-thin">~Secretary & Correspondent</p>
+                <p class="font-thin">~Chairman</p>
                 <p class="block mb-1  text-2xl text-indigo-900">Path to Success: Learn, Adapt, and Work with Passion and Integrity.</p>
                 <p class="text-xs tracking-tighter text-gray-600  ">
                   "Embrace continuous learning, cultivate resilience, 
