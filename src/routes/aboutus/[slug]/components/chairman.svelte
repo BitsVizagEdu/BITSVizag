@@ -25,8 +25,8 @@
             <div>
                 <img src="/mam.jpg" class=" 3xs:h-[300px] xs:h-[400px] md:h-[550px] p-3 rounded-[50px] xl:h-auto" alt=""/>
             </div>
-            <div><p class=" text-center font-bold text-2xl" >Dr.K.Srilakshmi</p>
-                <p  class=" text-center font-bold  text-xl">Secretary & Correspondent</p>
+            <div><p class=" text-center font-bold text-2xl" >Dr. K. Srilakshmi</p>
+                <p  class=" text-center font-bold  text-xl">Secretary & Correspondent - BITS Vizag</p>
             </div>
         </div>
     </div>

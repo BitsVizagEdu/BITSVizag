@@ -51,7 +51,7 @@
             {#if $activeTab === 'About-BITS-Vizag'}
                 <Bits/>
             {/if}
-            {#if $activeTab === 'Message-from-Chairman'}
+            {#if $activeTab === 'Message-from-Secretary & Correspondent'}
                 <Chairman/>
             {/if}
             {#if $activeTab === 'Message-from-Principal'}
