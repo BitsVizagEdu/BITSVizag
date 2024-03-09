@@ -1,12 +1,7 @@
 <nav>
 	<div class="wrapper justify-center">
-		
-		
 		<ul class="nav-links gap-16">
-			
-			
-			
-						<!--<li>
+			<!--<li>
                            <div
 							class="link-item cursor-pointer"
 							on:click={() => (window.location.href = '/affilation-reports')}
@@ -28,11 +23,11 @@
                         </li>-->
 
 			<!--<li><a href="#">Academics</a></li>-->
-			
+
 			<li><a href="/contactus">Contact Us</a></li>
-			
+
 			<li><a href="/alumini-data">Alumini</a></li>
-            <!--<li>
+			<!--<li>
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
                 <label for="exam" class="mobile-item">Exam Cell</label>
@@ -60,7 +55,7 @@
 				<a href="/feedback">Feedback</a>
 			</li>
 			<li><a href="/facilities">Facilities</a></li>
-			
+
 			<li><a href="/gallery">Gallery</a></li>
 			<li>
 				<a
@@ -68,6 +63,7 @@
 					target="_blank">Online Payment</a
 				>
 			</li>
+			<li><a href="/NIRF">NIRF</a></li>
 		</ul>
 	</div>
 </nav>
@@ -373,9 +369,9 @@
 	}
 
 	@media screen and (max-width: 970px) {
-        nav{
-            display: none;
-        }
+		nav {
+			display: none;
+		}
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
 			padding-top: 30px;
