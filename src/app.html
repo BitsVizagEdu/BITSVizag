@@ -11,8 +11,21 @@
 	%sveltekit.head%
 	<script src="https://kit.fontawesome.com/daf19f7c34.js" crossorigin="anonymous"></script>
 	<!-- Cloudflare Web Analytics -->
-	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "84745c0a3c924105a8df1514acdb13d4"}'></script>
+	<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+		data-cf-beacon='{"token": "84745c0a3c924105a8df1514acdb13d4"}'></script>
 	<!-- End Cloudflare Web Analytics -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V4B6N4QLJC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-V4B6N4QLJC');
+	</script>
 </head>
 
 <body>
