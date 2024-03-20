@@ -166,7 +166,7 @@
 					Academics
 				</a>
 				<input type="checkbox" id="departments" />
-				<label for="departments" class="mobile-item">Departments</label>
+				<label for="departments" class="mobile-item">Academics</label>
 				<div class="mega-box">
 					<div class="content">
 						<div class="row">
@@ -346,9 +346,13 @@
 			<li class="addon lg:hidden">
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
-			<li class="addon lg:hidden">
+			<!-- <li class="addon lg:hidden">
 				<a href="/feedback">Feedback</a>
+			</li> -->
+			<li class="addon lg:hidden">
+				<a href="/feedback">Online Grievances</a>
 			</li>
+			
 
 			<!--addons-->
 		</ul>
