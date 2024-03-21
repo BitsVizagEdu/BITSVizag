@@ -52,7 +52,10 @@
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
 			<li>
-				<a href="#">Online Grievances</a>
+				<a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSeLM-fVFfXfLMtIzC2QcO-djxj14gqkW1F18eGdqG9m9mt-Sg/viewform"
+					>Online Grievances</a
+				>
 			</li>
 			<li><a href="/facilities">Facilities</a></li>
 
