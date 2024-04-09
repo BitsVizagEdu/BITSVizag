@@ -57,7 +57,7 @@
 						</div>
 						<div
 							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
+							on:click={() => (window.location.href = '/aboutus/Message-from-Secretary & Correspondent')}
 						>
 							<div class="row">
 								<div class="dropdown__icon">
