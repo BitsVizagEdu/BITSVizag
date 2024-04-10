@@ -1,6 +1,15 @@
 <script>
 	let events = [
 		{
+			name: 'An Interactive & Collaborative State of the Art Workshop exploring IOT & Robotics at BITS Vizag',
+			description:
+				'Tech Nexus at BITS Vizag: A collaborative workshop uniting students and startups to explore IoT & Robotics, led by Dr. BKC Ganesh, showcasing innovation amidst institutional initiatives.',
+			date: 'March 28, 2024',
+			image: '/events/technexus.jpg',
+			href: 'https://www.instagram.com/p/C5EG0ZsvdNK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
 			name: 'Beyond Limits - A Motivational Session on Life Skills ,featuring the Senior and Versatile actor, Mr. Vijay Thalaivasal',
 			description:
 				'Embark on a journey of inspiration and empowerment with Beyond Limits, a life-changing session featuring actor Vijay Thalaivasal, held at BITS Vizag!',
