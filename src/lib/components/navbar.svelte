@@ -82,8 +82,14 @@
                     <h1
                             class="text-4xl 3xs:text-[11px] 2xs:text-[13px] xs:text-[15px] leading-6 xl:text-3xl md:text-[19px] lg:text-xl font-bold text-white item-center tracking-wider justify-center text-center md:px-[10px] "
                     >
-                        BABA INSTITUTE OF TECHNOLOGY AND SCIENCES
+                        BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
                     </h1>
+
+                    <h5
+                            class="text-4xl 3xs:text-[11px] 2xs:text-[13px] xs:text-[15px] leading-6 xl:text-2xl md:text-[19px] lg:text-xl font-bold text-yellow-400 item-center tracking-wider justify-center text-center md:px-[10px] "
+                    >
+                        An Autonomous Institution
+                    </h5>
 
                     <div class="mt-1">
                         <h6
