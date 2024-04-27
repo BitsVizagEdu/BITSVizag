@@ -3,21 +3,40 @@
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>"Students of BITS Vizag's CSE Department Explore Innovation - A Transformative Industrial Visit at T-Hub, Hyderabad  with KONKORDE, 1st Student Startup of BITS Vizag.</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
 				
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>BITS Vizag and KONKORDE Presents IDEATHON, Where Ideas Ignite Innovation!</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#BDD237]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
 				
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>BITS Vizag signs a Prestigious Global MOU with "The University of Memphis", Tennessee at the University Campus, United States on 7th Sep, 2023.</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>International Interactive Workshop on Digital Education, Internships and Opportunities in UK. - 22 July 2023</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>BITS Vizag signed an MOU with EXCELR to facilitate Faculty & Student Development Program. - 7 June 2023</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>BITS VIZAG signed an MOU with i3 IT Solutionz - 13 July 2023</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span>BITS VIZAG signed MOU with Rubicon Skill Development Pvt Ltd to Facilitate Soft skills Training</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#FEC629]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#1BA7E5]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#E7087B]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#BDD237]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#FEC629]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#1BA7E5]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				
+				<span class="text-[#BDD237]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				
+				<span class="text-[#FEC629]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#1BA7E5]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#E7087B]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#BDD237]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#FEC629]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#1BA7E5]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;
 			</div>
