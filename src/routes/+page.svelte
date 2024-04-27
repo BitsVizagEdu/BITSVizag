@@ -2,6 +2,7 @@
 	import Events from '$lib/components/events.svelte';
 	import Strength from '$lib/components/strength.svelte';
 	import Committies from '$lib/components/committies.svelte';
+	
 
 	import Gallery from '$lib/components/gallery.svelte';
 	import Placement from '$lib/components/placement.svelte';
@@ -11,6 +12,7 @@
 	import { onMount } from 'svelte';
 	import Placementheader from '$lib/components/placementheader.svelte';
 	import Notification from '$lib/components/notification.svelte';
+	import Autonomous from '$lib/components/autonomous.svelte';
 
 	function scaleLogo(y) {
 		if (typeof y !== 'undefined') {
@@ -42,6 +44,7 @@
 			<img src="/sq-1.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
 		</div>
 	</div>
+	<Autonomous />
 	<Placementheader />
 
 	<h1 class="3xs:text-lg xs:text-xl md:text-4xl text-center p-4 md:p-10 bg-white ">
