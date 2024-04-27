@@ -1,1 +1,1 @@
-<video src="/header/autonomous.mp4" autoplay loop > </video>
+<video src="/header/autonomous.mp4" autoplay loop muted> </video>
