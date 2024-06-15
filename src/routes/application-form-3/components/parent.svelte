@@ -7,11 +7,11 @@
             </div>
             <div class="pt-5 font-semibold">
                 <b>I</b>, <span class="font-medium">(Name of the Student)</span>
-                <input type="text" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
+                <input type="text"   class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
                 and <span class="font-medium">(Name of the Parent/Guardian)</span>
-                <input type="text" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
+                <input type="text"  class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
                 (Specify the relationship of the candidate)
-                <input type="text" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg mt-3" required>
+                <input type="text"  class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg mt-3" required>
                 jointly undertake to abide by the following rules and regulations of the Institution
             </div>
             <div class="pt-7 text-justify">
@@ -36,7 +36,7 @@
                 <b>7.</b> Students are not permitted to use mobile phones in the college premises. If found mobile will be confisicated.
             </div>
             <div class="mt-5">
-                <input type="checkbox" class="border border-gray-400" required>
+                <input type="checkbox"   class="border border-gray-400" required>
                 <span>
                   I accept the <a href="#" class="text-purple-500 font-semibold">Terms of Use</a> &  <a href="#" class="text-purple-500 font-semibold">Privacy Policy</a> 
                 </span>
