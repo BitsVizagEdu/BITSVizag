@@ -1,3 +1,7 @@
+<script>
+	import { Button } from "flowbite-svelte";
+
+</script>
 <div class="min-h-screen lg:py-20 py-0" >
     <div class="container mx-auto" >
       <div class="flex flex-col lg:flex-row  bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
@@ -111,7 +115,7 @@
                 </span>
               </div>
               <div class="mt-5">
-                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit" on:click={() => (window.location.href = '/application-form-3')}><a href="/application-form-3">Next Step <i class="fa-solid fa-arrow-right"></i></a></button>
+                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit" >Next Step <i class="fa-solid fa-arrow-right"></i> </button>
               </div>            
             </form>
           </div>

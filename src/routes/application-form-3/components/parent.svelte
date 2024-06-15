@@ -42,7 +42,7 @@
                 </span>
               </div>
               <div class="mt-5">
-                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit" on:click={() => (window.location.href = '/application-form-4')}><a href="/application-form-4">Next Step <i class="fa-solid fa-arrow-right items-center"></i></a></button>
+                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit" >Next Step <i class="fa-solid fa-arrow-right items-center"></i></button>
               </div> 
             </div>
         </div>

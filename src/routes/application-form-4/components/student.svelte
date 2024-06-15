@@ -28,7 +28,7 @@
                 </span>
               </div>
               <div class="mt-5">
-                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit"><a href="/application-form-4">Submit <i class="fa-solid fa-arrow-right items-center"></i></a></button>
+                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit">Submit <i class="fa-solid fa-arrow-right items-center"></i></button>
               </div> 
             </div>
         </div>
