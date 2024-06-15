@@ -1,4 +1,4 @@
-<div class="min-h-screen lg:py-20 py-0" >
+<form class="min-h-screen lg:py-20 py-0" >
     <div class="container mx-auto" >
       <div class="flex flex-col lg:flex-row  bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
         <div class="w-full py-16 px-12">
@@ -33,4 +33,4 @@
             </div>
         </div>
     </div>
-</div>
+</form>
