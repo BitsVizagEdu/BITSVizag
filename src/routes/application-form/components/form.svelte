@@ -74,8 +74,8 @@
               </div>
               <h1 class="pt-3 font-medium">Phone Numbers :</h1>
               <div class="grid grid-cols-2 gap-5 pt-2">
-                <input type="text" placeholder="Mobile" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
-                <input type="text" placeholder="Residence No." class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
+                <input type="tel" placeholder="Mobile" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
+                <input type="tel" placeholder="Residence No." class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
               </div>
 
               <div >
@@ -159,7 +159,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="email" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <div>
@@ -167,7 +167,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="tel" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <h1 class="mt-4 font-medium pb-2">Permanent Address :</h1>
@@ -177,7 +177,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="email" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <div>
@@ -185,7 +185,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="tel" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <div class="mt-5">
