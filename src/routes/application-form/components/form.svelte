@@ -6,6 +6,7 @@
     <div class="min-h-screen lg:py-20 py-0" >
       <div class="container mx-auto" >
         <div class="flex flex-col lg:flex-row  bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
+          
           <div class="w-full lg:w-1/2 py-16 px-12">
             <h2  class="text-4xl mb-4 font-semibold">Registration Form</h2>
             <p class="mb-4">
@@ -195,7 +196,7 @@
                 </span>
               </div>
               <div class="mt-5">
-                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit" on:click={() => (window.location.href = '/application-form-2')}>Next Step <i class="fa-solid fa-arrow-right items-center"></i></button>
+                <button type="submit" class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300">Next Step <i class="fa-solid fa-arrow-right items-center"></i></button>
               </div> 
             </form>
           </div>
