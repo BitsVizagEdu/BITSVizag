@@ -6,6 +6,7 @@
     <div class="min-h-screen lg:py-20 py-0" >
       <div class="container mx-auto" >
         <div class="flex flex-col lg:flex-row  bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
+          
           <div class="w-full lg:w-1/2 py-16 px-12">
             <h2  class="text-4xl mb-4 font-semibold">Registration Form</h2>
             <p class="mb-4">
@@ -19,27 +20,27 @@
                 <h1 class="pb-2 font-medium">Branch :</h1>
      <div class="flex gap-10">
         <div class="flex items-center">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
-            <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">B.TECH</label>
+            <input id="branch-btech" type="radio" value="" name="branch" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+            <label for="branch-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">B.TECH</label>
         </div>
         <div class="flex items-center">
-            <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
-            <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">MBA</label>
+            <input id="branch-mba" type="radio" value="" name="branch" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+            <label for="branch-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">MBA</label>
         </div>
         <div class="flex items-center">
-            <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
-            <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">M.TECH</label>
+            <input id="branch-mtech" type="radio" value="" name="branch" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+            <label for="branch-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">M.TECH</label>
         </div>
      </div>
 
      <h1 class="pb-2 pt-4 font-medium">Under Quota :</h1>
      <div class="flex gap-8">
         <div class="flex items-center">
-            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+            <input id="default-checkbox" type="radio" value=""  name="quota" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
             <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Convener</label>
         </div>
         <div class="flex items-center">
-            <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+            <input id="checked-checkbox" type="radio" value=""  name="quota" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
             <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Management</label>
         </div>
      </div>
@@ -74,8 +75,8 @@
               </div>
               <h1 class="pt-3 font-medium">Phone Numbers :</h1>
               <div class="grid grid-cols-2 gap-5 pt-2">
-                <input type="text" placeholder="Mobile" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
-                <input type="text" placeholder="Residence No." class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
+                <input type="tel" placeholder="Mobile" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
+                <input type="tel" placeholder="Residence No." class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg" required>
               </div>
 
               <div >
@@ -87,10 +88,10 @@
               
               </div>
               <div class="flex gap-10">
-                <h1 class="pt-3 font-medium pb-2">Entrance Exam Written :</h1>
+                <h1 class="pt-3 font-medium pb-2">Entrance Exam :</h1>
                 <h1 class="pt-3 font-medium pb-2">Category :</h1>
               </div>
-              <div class="flex gap-28">
+              <div class="flex gap-10">
                 <div>
                     <select name="pg" id="pg" class="rounded-lg text-center p-2 bg-[#1d4275] text-white font-semibold" required>
                         <option value="UG" class="bg-white text-black">EAMCET</option>
@@ -142,11 +143,11 @@
                 
                  <div class="flex gap-8">
                     <div class="flex items-center">
-                        <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+                        <input id="default-checkbox" type="radio" name="transport" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
                         <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">OWN Transport</label>
                     </div>
                     <div class="flex items-center">
-                        <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
+                        <input id="checked-checkbox" type="radio" name="transport" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required>
                         <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">College Bus</label>
                     </div>
                  </div>
@@ -159,7 +160,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="email" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <div>
@@ -167,7 +168,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="tel" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <h1 class="mt-4 font-medium pb-2">Permanent Address :</h1>
@@ -177,7 +178,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="email" placeholder="E-mail ID" class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <div>
@@ -185,7 +186,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
+                <input type="tel" placeholder="Phone No." class="mt-3 border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg w-full" required>
               </div>
 
               <div class="mt-5">
@@ -195,113 +196,10 @@
                 </span>
               </div>
               <div class="mt-5">
-                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit" on:click={() => (window.location.href = '/application-form-2')}><a href="/application-form-2">Next Step <i class="fa-solid fa-arrow-right items-center"></i></a></button>
+                <button type="submit" class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300">Next Step <i class="fa-solid fa-arrow-right items-center"></i></button>
               </div> 
             </form>
           </div>
-
-          <!-- Right Side form -->
-
-
-          <!-- <div class="w-full lg:w-1/2 py-44 px-12">
-            <form action="#">
-
-                
-
-              <h1 class="mt-4 font-medium pb-2">Academic Details of the Student :</h1>
-
-              <h1 class="mt-4 font-medium pb-2">SSC :</h1>
-                
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Year of Passing" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="Institution Name" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Board/Univ" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="Medium of Instruction" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Marks Obtained" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="% of Marks" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Grade" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                </div>
-
-                <h1 class="mt-4 font-medium pb-2">Inter/+2/Diploma :</h1>
-                
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Year of Passing" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="Institution Name" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Board/Univ" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="Medium of Instruction" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Marks Obtained" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="% of Marks" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Grade" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                </div>
-
-                <h1 class="mt-4 font-medium pb-2">UG/PG :</h1>
-                
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Year of Passing" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="Institution Name" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Board/Univ" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="Medium of Instruction" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Marks Obtained" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                <input type="text" placeholder="% of Marks" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-              </div>
-
-              <div class="grid grid-cols-2 gap-5 pt-3">
-                <input type="text" placeholder="Grade" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                </div>
-
-                <h1 class="mt-4 font-medium pb-2">Identification Marks :</h1>
-
-                <div class="grid grid-cols-2 gap-5 pt-3">
-                  <input type="text" placeholder="Identification Mark 1" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                  <input type="text" placeholder="Identification Mark 2" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                </div>
-
-                <div class="grid grid-cols-2 gap-5 pt-5">
-                  <input type="text" placeholder="Local Guardian Telephone No." class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                  <input type="text" placeholder="Land Line" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                </div>
-                
-                <h1 class="mt-4 font-medium pb-2">Do you know anyone in BITS Vizag? (Reference) :</h1>
-
-                <div class="grid grid-cols-2 gap-5 pt-3">
-                  <input type="text" placeholder="If Yes Mention his/her Name" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-                  </div>
-          
-              <div class="mt-5">
-                <input type="checkbox" class="border border-gray-400">
-                <span>
-                  I accept the <a href="#" class="text-purple-500 font-semibold">Terms of Use</a> &  <a href="#" class="text-purple-500 font-semibold">Privacy Policy</a> 
-                </span>
-              </div>
-              <div class="mt-5">
-                <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl" type="submit">Submit</button>
-              </div>            
-            </form>
-          </div> -->
         </div>
       </div>
     </div>
