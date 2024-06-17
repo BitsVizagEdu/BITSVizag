@@ -1,7 +1,7 @@
 <body class="min-h-screen lg:py-20 py-0 bg-gray-100">
   <div class="container mx-auto">
     <div class="flex flex-col lg:flex-row bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
-      
+
       <!-- Left Section - Form -->
       <div class="w-full  p-10 px-12">
         <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbyOZOhXjlOazhsjU38pqY0usanIuDjn86GO7TXyRo1uy_1L0J65fA5gqbhZJFIBm_qBdQ/exec" method="POST" class="flex md:flex-row flex-col gap-10 ">
@@ -109,7 +109,38 @@
           <!-- Submit Button -->
           <div class="mt-5">
             <button id="submitButton" class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit">
-              Next Step <i class="fas fa-arrow-right"></i>
+              {#if $isLoading === true}
+                <div class="flex flex-row justify-center items-center">
+                  <div class="inline-block pr-4">
+                    <svg
+                            class={`animate-spin h-5} w-5 text-white`}
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                    >
+                      <circle
+                              class="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="4"
+                      ></circle>
+                      <path
+                              class="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p>Processing</p>
+                </div>
+              {:else}
+                <div class="flex flex-row justify-center items-center">
+                  <p class="pr-4">Next Step</p>
+                  <i class="fa-solid fa-arrow-right items-center"></i>
+                </div>
+              {/if}
             </button>
           </div>
           </div>
@@ -117,39 +148,47 @@
       </div>
 
       <!-- Right Section - Placeholder for Future Content -->
-      
+
 
     </div>
   </div>
 
   <!-- FontAwesome CDN for icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  <!-- Your custom JavaScript -->
-  <script>
-    // JavaScript to handle form submission
-    document.getElementById("registrationForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      var form = this;
-      var url = form.action;
+</body>
+
+<script>
+  import {writable} from "svelte/store";
+
+  const isLoading = writable(false)
+  import {onMount} from "svelte";
+
+  onMount(() => {
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      isLoading.set(true)
+      event.preventDefault();
+      var form = event.target;
+
+      // Create a FormData object from the form
       var formData = new FormData(form);
 
-      fetch(url, {
-        method: "POST",
+      // Send the form data to the Google Apps Script
+      fetch(form.action, {
+        method: 'POST',
         body: formData
-      })
-      .then(response => {
+      }).then(function(response) {
+        isLoading.set(false)
         if (response.ok) {
-          // Reset the form
-          form.reset();
-          alert("Form submitted successfully!");
+          window.location.href = '/application-form-3';
         } else {
-          throw new Error("Form submission failed!");
+          alert('There was a problem with the submission. Please try again.');
         }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("Form submission failed!");
+      }).catch(function(error) {
+        isLoading.set(false)
+        console.error('Error:', error);
+        alert('There was a problem with the submission. Please try again.');
       });
     });
-  </script>
-</body>
+  })
+
+</script>

@@ -1,4 +1,4 @@
-<form class="min-h-screen lg:py-20 py-0" action="https://script.google.com/macros/s/AKfycbwQRkWFOTjtk984N0NcgfsetMj2kfeEdR4vPJ2NfFHRkt0GrFjvxxPoWMK9VDyWSo0HZQ/exec" method="POST">
+<form id="application-form-3" class="min-h-screen lg:py-20 py-0" action="https://script.google.com/macros/s/AKfycbwQRkWFOTjtk984N0NcgfsetMj2kfeEdR4vPJ2NfFHRkt0GrFjvxxPoWMK9VDyWSo0HZQ/exec" method="POST">
     <div class="container mx-auto">
         <div class="flex flex-col lg:flex-row bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
             <div class="w-full py-16 px-12">
@@ -42,9 +42,78 @@
                     </span>
                 </div>
                 <div class="mt-5">
-                    <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit">Next Step <i class="fa-solid fa-arrow-right items-center"></i></button>
+                    <button class="w-full bg-[#397fe2] py-3 text-center text-white rounded-xl hover:bg-[#1D4275] transition-all ease-in-out duration-300" type="submit">
+                        {#if $isLoading === true}
+                            <div class="flex flex-row justify-center items-center">
+                                <div class="inline-block pr-4">
+                                    <svg
+                                            class={`animate-spin h-5} w-5 text-white`}
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                    >
+                                        <circle
+                                                class="opacity-25"
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                                stroke="currentColor"
+                                                stroke-width="4"
+                                        ></circle>
+                                        <path
+                                                class="opacity-75"
+                                                fill="currentColor"
+                                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <p>Processing</p>
+                            </div>
+                        {:else}
+                            <div class="flex flex-row justify-center items-center">
+                                <p class="pr-4">Next Step</p>
+                                <i class="fa-solid fa-arrow-right items-center"></i>
+                            </div>
+                        {/if}
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </form>
+
+<script>
+    import {writable} from "svelte/store";
+
+    const isLoading = writable(false)
+    import {onMount} from "svelte";
+
+    onMount(() => {
+        document.getElementById('application-form-3').addEventListener('submit', function(event) {
+            isLoading.set(true)
+            event.preventDefault();
+            var form = event.target;
+
+            // Create a FormData object from the form
+            var formData = new FormData(form);
+
+            // Send the form data to the Google Apps Script
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            }).then(function(response) {
+                isLoading.set(false)
+                if (response.ok) {
+                    window.location.href = '/application-form-4';
+                } else {
+                    alert('There was a problem with the submission. Please try again.');
+                }
+            }).catch(function(error) {
+                isLoading.set(false)
+                console.error('Error:', error);
+                alert('There was a problem with the submission. Please try again.');
+            });
+        });
+    })
+
+</script>
