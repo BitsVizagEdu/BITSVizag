@@ -21,7 +21,7 @@
                         </svg>
                     </div>
                     <div class="p-[10px] capitalize font-bold">Principal</div>
-                    <div class="capitalize font-semibold">Dr. M. Govinda Raju</div>
+                    <div class="capitalize font-semibold">Dr. B. Poorna Satyanarayana</div>
                     <div class="overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">principal@bitsvizag.com</a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         </svg>
                     </div>
                     <div class="p-[10px] capitalize font-bold">Training and placement officer</div>
-                    <div class="capitalize font-semibold">MR. P. Joshua Raju</div>
+                    <div class="capitalize font-semibold">Mr. P. Joshua Raju</div>
                     <div class="overflow-hidden text-center pt-2"><a href="mailto:tpo@bitsvizag.com">tpo@bitsvizag.com</a>
                     </div>
                 </div>
