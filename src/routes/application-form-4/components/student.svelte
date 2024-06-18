@@ -3,6 +3,22 @@
       <div class="flex flex-col lg:flex-row  bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
         <div class="w-full py-16 px-12">
             <div class="text-center font-bold lg:text-3xl text-xl">
+                <h1>PAY TO PROCEED APPLICATION</h1>
+            </div>
+            <div class="flex align-center justify-center items-center">
+                <img src="/qr.png" alt="" class="md:w-[30vw] ">
+            </div>
+            <div class="pt-2 text-center">
+                
+                <b> Please scan the QR code to make the payment.</b>
+                <br>
+                <b class="font-light md:font-bold text-sm md:text-base"> Enter the UTR (Unique Transaction Reference) ID to complete the application.</b>
+                <br>
+                <br>
+                <input required type="text" placeholder="ENTER UTR" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium placeholder:text-center rounded-lg">
+                
+            </div>
+            <div class="pt-7 text-center font-bold lg:text-3xl text-xl">
                 <h1>UNDERTAKING TO BE GIVEN BY THE STUDENT</h1>
             </div>
 
