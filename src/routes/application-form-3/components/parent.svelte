@@ -85,34 +85,28 @@
 <script>
     import {writable} from "svelte/store";
 
+    import { page } from '$app/stores';
+
+    let queryParams = $page.data.queryParams;
+
     const isLoading = writable(false)
     import {onMount} from "svelte";
 
     onMount(() => {
         document.getElementById('application-form-3').addEventListener('submit', function(event) {
-            isLoading.set(true)
             event.preventDefault();
             var form = event.target;
 
             // Create a FormData object from the form
             var formData = new FormData(form);
 
-            // Send the form data to the Google Apps Script
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            }).then(function(response) {
-                isLoading.set(false)
-                if (response.ok) {
-                    window.location.href = '/application-form-4';
-                } else {
-                    alert('There was a problem with the submission. Please try again.');
-                }
-            }).catch(function(error) {
-                isLoading.set(false)
-                console.error('Error:', error);
-                alert('There was a problem with the submission. Please try again.');
-            });
+            queryParams.Student_Name = formData.get("Student_Name")
+            queryParams.Parent_Guardian_Name = formData.get("Parent_Guardian_Name")
+            queryParams.Relationship = formData.get("Relationship")
+
+            window.location.href = ('/application-form-4?' +  Object.keys(queryParams)
+                .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(queryParams[key]))
+                .join('&'));
         });
     })
 

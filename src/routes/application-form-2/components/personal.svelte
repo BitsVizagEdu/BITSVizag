@@ -92,12 +92,6 @@
             <input type="text" required placeholder="Land Line" name="Land_Line" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
           </div>
 
-          <!-- Reference -->
-          <h1 class="mt-4 font-medium pb-2">Reference:</h1>
-          <div class="grid grid-cols-2 gap-5 pt-3">
-            <input type="text" required placeholder="If Yes Mention his/her Name" name="Reference_Name" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-          </div>
-
           <!-- Terms and Conditions -->
           <div class="mt-5">
             <input type="checkbox" required class="border border-gray-400" id="termsCheckbox">
@@ -163,6 +157,10 @@
   const isLoading = writable(false)
   import {onMount} from "svelte";
 
+  import { page } from '$app/stores';
+
+  let queryParams = $page.data.queryParams;
+
   onMount(() => {
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
       isLoading.set(true)
@@ -172,6 +170,8 @@
       // Create a FormData object from the form
       var formData = new FormData(form);
 
+      formData.set("Application ID", queryParams.id)
+
       // Send the form data to the Google Apps Script
       fetch(form.action, {
         method: 'POST',
@@ -179,7 +179,9 @@
       }).then(function(response) {
         isLoading.set(false)
         if (response.ok) {
-          window.location.href = '/application-form-3';
+          window.location.href = '/application-form-3?' + Object.keys(queryParams)
+                  .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(queryParams[key]))
+                  .join('&');
         } else {
           alert('There was a problem with the submission. Please try again.');
         }

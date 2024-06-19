@@ -227,6 +227,12 @@
                                    required>
                         </div>
 
+                        <!-- Reference -->
+                        <h1 class="mt-4 font-medium pb-2">Reference:</h1>
+                        <div class="grid grid-cols-2 gap-5 pt-3">
+                            <input type="text" required placeholder="If Yes Mention his/her Name" name="Reference_Name" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
+                        </div>
+
                         <div class="mt-5">
                             <input type="checkbox" name="Terms" class="border border-gray-400" required>
                             <span>
@@ -316,6 +322,7 @@
 
 <script>
     import {writable} from "svelte/store";
+    import {v4 as uuidv4} from 'uuid';
 
     const isLoading = writable(false)
     import {onMount} from "svelte";
@@ -329,14 +336,41 @@
             // Create a FormData object from the form
             var formData = new FormData(form);
 
-            // Send the form data to the Google Apps Script
+            formData.delete("Terms")
+
+            const name = formData.get("Student Name")
+            const branchUG = formData.get("Branch Allotted/Interested UG")
+            const branchPG = formData.get("Branch Allotted/Interested PG")
+
+            let branch = "";
+
+            if (branchUG !== "UG") {
+                branch = branchUG
+            } else {
+                branch = branchPG
+            }
+
+            const mobile = formData.get("Mobile")
+            const reference = formData.get("Reference_Name")
+            const data = {
+                name,
+                branch,
+                mobile,
+                reference,
+                id: "BABA-" + uuidv4().substring(0,8),
+            }
+
+            formData.set("Application ID", data.id)
+
             fetch(form.action, {
                 method: 'POST',
                 body: formData
             }).then(function (response) {
                 isLoading.set(false)
                 if (response.ok) {
-                    window.location.href = '/application-form-2';
+                    window.location.href = '/application-form-2?' + Object.keys(data)
+                        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+                        .join('&');
                 } else {
                     alert('There was a problem with the submission. Please try again.');
                 }
