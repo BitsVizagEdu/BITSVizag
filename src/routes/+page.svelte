@@ -2,7 +2,7 @@
 	import Events from '$lib/components/events.svelte';
 	import Strength from '$lib/components/strength.svelte';
 	import Committies from '$lib/components/committies.svelte';
-	
+
 
 	import Gallery from '$lib/components/gallery.svelte';
 	import Placement from '$lib/components/placement.svelte';
@@ -61,8 +61,8 @@
 	href="/application-form"
 	class="fixed font-bold top-1/2 right-8 transform -translate-y-1/2 translate-x-1/2 -rotate-90 bg-yellow-300 hover:bg-[#02ADEE] hover:text-white text-black px-6 py-4 md:py-8 md:rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer"
   >
-	Admission Form
+	Apply Now
   </a>
-  
+
 
 {/if}
