@@ -88,8 +88,8 @@
           <!-- Guardian Contact -->
           <h1 class="mt-4 font-medium pb-2">Guardian Contact:</h1>
           <div class="grid grid-cols-2 gap-5 pt-3">
-            <input type="text" required placeholder="Local Guardian Telephone No." name="Local_Guardian_Telephone_No" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
-            <input type="text" required placeholder="Land Line" name="Land_Line" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
+            <input type="text"  placeholder="Local Guardian Telephone No." name="Local_Guardian_Telephone_No" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
+            <input type="text"  placeholder="Land Line" name="Land_Line" class="border border-gray-400 py-1 px-2 placeholder:text-sm placeholder:font-medium rounded-lg">
           </div>
 
           <!-- Terms and Conditions -->

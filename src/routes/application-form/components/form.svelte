@@ -236,8 +236,7 @@
                         <div class="mt-5">
                             <input type="checkbox" name="Terms" class="border border-gray-400" required>
                             <span>
-              I accept the <a href="#" class="text-purple-500 font-semibold">Terms of Use</a> & <a href="#"
-                                                                                                   class="text-purple-500 font-semibold">Privacy Policy</a>
+              I accept the <a href="#" class="text-purple-500 font-semibold">Terms of Use</a> & <a href="#" class="text-purple-500 font-semibold">Privacy Policy</a>
             </span>
                         </div>
 
