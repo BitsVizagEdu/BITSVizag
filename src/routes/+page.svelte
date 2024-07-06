@@ -58,11 +58,29 @@
 	<Placement />
 	<Committies />
 	<a
-	href="/application-form"
-	class="fixed font-bold top-1/2 right-8 transform -translate-y-1/2 translate-x-1/2 -rotate-90 bg-yellow-300 hover:bg-[#02ADEE] hover:text-white text-black px-6 py-4 md:py-8 md:rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer"
+	href="/application-form" 
+	class="cbg fixed  font-bold top-1/2 right-8 transform -translate-y-1/2 translate-x-1/2 -rotate-90 bg-yellow-300 hover:bg-[#02ADEE] hover:text-white text-black px-10 py-4 md:py-8 md:rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer"
   >
-	ADMISSIONS OPEN
+	APPLY NOW
   </a>
 
 
 {/if}
+<style>
+	.cbg {
+  background: linear-gradient(
+    to bottom right,  
+	#DFFF00	, #FD746C, 
+    #FF8235, #ffff1c, 
+    #92FE9D, #00C9FF, 
+    #a044ff, #e73827);
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+</style>
