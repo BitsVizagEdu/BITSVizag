@@ -1,4 +1,3 @@
-<!-- Left Side Form -->
 <div class="min-h-screen lg:py-20 py-0">
     <div class="container mx-auto">
         <div class="flex flex-col lg:flex-row bg-white rounded-xl mx-auto shadow-2xl overflow-hidden">
@@ -15,6 +14,7 @@
                         <div class="flex gap-10">
                             <div class="flex items-center">
                                 <input id="branch-btech" type="radio" value="B.TECH" name="Branch"
+                                bind:group={selectedBranch}
                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                                        required>
                                 <label for="branch-btech"
@@ -22,6 +22,7 @@
                             </div>
                             <div class="flex items-center">
                                 <input id="branch-mba" type="radio" value="MBA" name="Branch"
+                                bind:group={selectedBranch}
                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                                        required>
                                 <label for="branch-mba"
@@ -29,6 +30,7 @@
                             </div>
                             <div class="flex items-center">
                                 <input id="branch-mtech" type="radio" value="M.TECH" name="Branch"
+                                bind:group={selectedBranch}
                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                                        required>
                                 <label for="branch-mtech"
@@ -56,19 +58,53 @@
 
                         <h1 class="pb-2 pt-4 font-medium">Branch Alloted/Interested :</h1>
                         <div class="flex gap-10">
+
+                            {#if selectedBranch === 'B.TECH'}
                             <div>
-                                <select name="Branch Allotted/Interested UG" id="ug"
+                                <select name="Course" id="ug"
                                         class="rounded-lg px-5 p-1 text-center bg-[#1b3c6b] text-white font-semibold"
                                         required>
-                                    <option value="UG" class="bg-white text-black">UG</option>
                                     <option value="CSE" class="bg-white text-black">CSE</option>
+                                    <option value="CSE-AI-ML" class="bg-white text-black">CSE - AI & ML</option>
+                                     <option value="CSE-CS" class="bg-white text-black">CSE - Cyber Security</option>
                                     <option value="ECE" class="bg-white text-black">ECE</option>
                                     <option value="MECH" class="bg-white text-black">MECH</option>
                                     <option value="CIVIL" class="bg-white text-black">CIVIL</option>
                                     <option value="EEE" class="bg-white text-black">EEE</option>
                                 </select>
                             </div>
+                            {/if}
+                            
+                            {#if selectedBranch === 'M.TECH'}
                             <div>
+                                <select name="Course" id="ug"
+                                        class="rounded-lg px-5 p-1 text-center bg-[#1b3c6b] text-white font-semibold"
+                                        required>
+                                    <option value="CST" class="bg-white text-black">CST</option>
+                                    <option value="ECE" class="bg-white text-black">ECE</option>
+                                    <option value="MECH" class="bg-white text-black">MECH</option>
+                                    <option value="CIVIL" class="bg-white text-black">CIVIL</option>
+                                    <option value="EEE" class="bg-white text-black">EEE</option>
+                                </select>
+                            </div>
+                            {/if}
+
+                            {#if selectedBranch === 'MBA'}
+                            <div>
+                                <select name="Course" id="ug"
+                                        class="rounded-lg px-5 p-1 text-center bg-[#1b3c6b] text-white font-semibold"
+                                        required>
+                                    <option value="HR" class="bg-white text-black">HR</option>
+                                    <option value="Finance" class="bg-white text-black">Finance</option>
+                                    <option value="Marketing" class="bg-white text-black">Marketing</option>
+                                </select>
+                            </div>
+                            {/if}
+
+                            
+
+                            
+                            <!-- <div>
                                 <select name="Branch Allotted/Interested PG" id="pg"
                                         class="rounded-lg px-5 p-1 text-center bg-[#1d4275] text-white font-semibold"
                                         required>
@@ -79,7 +115,7 @@
                                     <option value="CIVIL" class="bg-white text-black">CIVIL</option>
                                     <option value="EEE" class="bg-white text-black">EEE</option>
                                 </select>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="grid grid-cols-2 gap-5 pt-4">
@@ -325,6 +361,8 @@
 
     const isLoading = writable(false)
     import {onMount} from "svelte";
+
+     let selectedBranch = "";
 
     onMount(() => {
         document.getElementById('application-form-1').addEventListener('submit', function (event) {
