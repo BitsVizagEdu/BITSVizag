@@ -16,7 +16,7 @@
   
 },
 {
-  name: "Number of Ttiles ",
+  name: "Number of Titiles ",
   value: "3601",
   
 },

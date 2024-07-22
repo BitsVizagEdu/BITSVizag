@@ -149,6 +149,42 @@
                     </td>
                    
                   </tr>
+                  <tr>
+                    <td
+                      class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      6
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                    >
+                    Computer Science Engineering-  Artificial Intelligence <br> &  Machine Learning
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      60
+                    </td>
+                   
+                  </tr>
+                  <tr>
+                    <td
+                      class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      7
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                    >
+                    Computer Science Engineering- <br>Cyber Security
+                    </td>
+                    <td
+                      class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                    >
+                      60
+                    </td>
+                   
+                  </tr>
               </tbody>
             </table>
           </div>
