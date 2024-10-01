@@ -2,22 +2,20 @@
     <div class="flex  flex-col-reverse justify-center items-center  mx-auto   ">
         <div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
             <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
-                <h2 class="text-4xl">ACADEMIC REGULATION</h2>
+                <h2 class="text-4xl">CIRCULAR & NOTIFICATION</h2>
             </div>
             <div class="table-box">
                 <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
-                        <p>Stream/Year</p>
+                        <p>B.Tech</p>
                     </div>
-                    <div class="table-cell last-cell">
-                        <p>Links</p>
-                    </div> 
+                    
                 </div>
         
         
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-sm">B.Tech R20 Regulations</p>
+                        <p class="text-sm">Academic Calendar</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -27,7 +25,7 @@
         
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-sm">M.Tech-R13-Regulation</p>
+                        <p class="text-sm">List of Working days/ Holidays</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -36,44 +34,7 @@
         
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-sm">M.Tech-Regulation-modification-R16</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-        
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-sm">JNTUK B.Tech Academic Regulations (R16)</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-        
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-sm">M.Tech-R19-revised-regulations</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-        
-        
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-sm">B. Tech R19 REGULATIONS-18-7-2020</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-        
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-sm">B. Tech R19 REGULATIONS-18-7-2020</p>
+                        <p class="text-sm">Academic Calendar B.Tech</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
