@@ -310,14 +310,14 @@
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
                             </div>
-                            <header><a href="/examcell_docs/MTECH">Engineering - M.Tech</a></header>
+                            <header><a href="/examcell/MTECH">Engineering - M.Tech</a></header>
                         </div>
 
                         <div class="row">
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
                             </div>
-                            <header><a href="/examcell_docs/MBA">Management Studies</a></header>
+                            <header><a href="/examcell/MBA">Management Studies</a></header>
                         </div>
                     </div>
                 </div>
