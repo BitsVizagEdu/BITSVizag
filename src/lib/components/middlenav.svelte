@@ -365,6 +365,8 @@
 
 			<!--addons-->
 		</ul>
+		
+		
 		<label for="menu-btn" class="btn menu-btn "><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>
