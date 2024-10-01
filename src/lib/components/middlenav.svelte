@@ -303,7 +303,7 @@
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
                             </div>
-                            <header><a href="/examcell_docs/BTECH">Engineering - B.Tech</a></header>
+                            <header><a href="/examcell/BTECH">Engineering - B.Tech</a></header>
                         </div>
 
 						<div class="row">
