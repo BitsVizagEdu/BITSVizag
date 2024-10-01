@@ -19,7 +19,7 @@
 						<p class="text-lg sm:text-xl font-serif">I - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/I Year23-24.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/I Year23-24.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -30,7 +30,7 @@
 						<p class="text-lg sm:text-xl font-serif">II - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/II Year23-24.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/II Year23-24.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -41,7 +41,7 @@
 						<p class="text-lg sm:text-xl font-serif">III - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/III Year23-24.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/III Year23-24.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -52,7 +52,7 @@
 						<p class="text-lg sm:text-xl font-serif">IV - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/IV Year23-24.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/IV Year23-24.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -70,7 +70,7 @@
 						<p class="text-lg sm:text-xl font-serif">I - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/I Year22-23.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/I Year22-23.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -81,7 +81,7 @@
 						<p class="text-lg sm:text-xl font-serif">II - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/II Year22-23.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/II Year22-23.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -92,7 +92,7 @@
 						<p class="text-lg sm:text-xl font-serif">III - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/III Year22-23.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/III Year22-23.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -103,7 +103,7 @@
 						<p class="text-lg sm:text-xl font-serif">IV - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/III Year22-23.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/III Year22-23.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -122,7 +122,7 @@
 						<p class="text-lg sm:text-xl font-serif">I - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2021-22 I B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2021-22 I B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -133,7 +133,7 @@
 						<p class="text-lg sm:text-xl font-serif">II - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2021-22 II B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2021-22 II B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -144,7 +144,7 @@
 						<p class="text-lg sm:text-xl font-serif">III - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2021-22 III & IV B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2021-22 III & IV B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -155,7 +155,7 @@
 						<p class="text-lg sm:text-xl font-serif">IV - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2021-22 III & IV B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2021-22 III & IV B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -174,7 +174,7 @@
 						<p class="text-lg sm:text-xl font-serif">I - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2020-21 I B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2020-21 I B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -185,7 +185,7 @@
 						<p class="text-lg sm:text-xl font-serif">II - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2020-21 II, III & IV B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2020-21 II, III & IV B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -196,7 +196,7 @@
 						<p class="text-lg sm:text-xl font-serif">III - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2020-21 II, III & IV B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2020-21 II, III & IV B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -207,7 +207,7 @@
 						<p class="text-lg sm:text-xl font-serif">IV - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2020-21 II, III & IV B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2020-21 II, III & IV B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -226,7 +226,7 @@
 						<p class="text-lg sm:text-xl font-serif">I - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2019-20 I B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2019-20 I B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -237,7 +237,7 @@
 						<p class="text-lg sm:text-xl font-serif">II - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2019-20 II B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2019-20 II B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -248,7 +248,7 @@
 						<p class="text-lg sm:text-xl font-serif">III - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2019-20 III B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2019-20 III B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
@@ -259,7 +259,7 @@
 						<p class="text-lg sm:text-xl font-serif">IV - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell/BTech/calender/2019-20 IV B.Tech.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/2019-20 IV B.Tech.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>

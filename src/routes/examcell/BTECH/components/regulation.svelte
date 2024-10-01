@@ -11,27 +11,27 @@
                 <div class="table-cell first-cell last-cell">
                     <p class="text-lg sm:text-xl font-sans">B.Tech </p>
                 </div>
-                
+
             </div>
-    
-    
+
+
             <div class="table-row">
                 <div class="table-cell first-cell">
                     <p class="text-lg sm:text-xl font-serif"> R20 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href="/examcell/BTech/regulation/R20.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                </div>   
+                    <a href="/examcell_docs/BTech/regulation/R20.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                </div>
             </div>
-    
-    
+
+
             <div class="table-row">
                 <div class="table-cell first-cell">
                     <p class="text-lg sm:text-xl font-serif"> R19 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href="/examcell/BTech/regulation/R19.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                </div>   
+                    <a href="/examcell_docs/BTech/regulation/R19.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                </div>
             </div>
 
             <div class="table-row">
@@ -39,8 +39,8 @@
                     <p class="text-lg sm:text-xl font-serif">R16 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href="/examcell/BTech/regulation/R16.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                </div>   
+                    <a href="/examcell_docs/BTech/regulation/R16.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                </div>
             </div>
 
             <div class="table-row">
@@ -48,12 +48,12 @@
                     <p class="text-lg sm:text-xl font-serif">R13 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href="/examcell/BTech/regulation/R13.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                </div>   
-            
-        </div>   
+                    <a href="/examcell_docs/BTech/regulation/R13.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                </div>
+
         </div>
-        
+        </div>
+
     </div>
 </section>
 

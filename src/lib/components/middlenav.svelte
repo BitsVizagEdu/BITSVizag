@@ -312,7 +312,7 @@
                             </div>
                             <header><a href="/examcell/MTECH">Engineering - M.Tech</a></header>
                         </div>
-						
+
                         <div class="row">
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
@@ -324,7 +324,7 @@
             </li>
 
 			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
-			
+
 
 			<!--addons-->
 
@@ -361,7 +361,7 @@
 			<li class="addon lg:hidden">
 				<a href="/feedback">Online Grievances</a>
 			</li>
-			
+
 
 			<!--addons-->
 		</ul>
