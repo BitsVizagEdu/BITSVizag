@@ -303,28 +303,28 @@
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
                             </div>
-                            <header><a href="/examcell/BTECH">Engineering - B.Tech</a></header>
+                            <header><a href="/examcell_docs/BTECH">Engineering - B.Tech</a></header>
                         </div>
 
 						<div class="row">
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
                             </div>
-                            <header><a href="/examcell/MTECH">Engineering - M.Tech</a></header>
+                            <header><a href="/examcell_docs/MTECH">Engineering - M.Tech</a></header>
                         </div>
-						
+
                         <div class="row">
                             <div class="dropdown__icon">
                                 <i class="fa-solid fa-user-graduate"/>
                             </div>
-                            <header><a href="/examcell/MBA">Management Studies</a></header>
+                            <header><a href="/examcell_docs/MBA">Management Studies</a></header>
                         </div>
                     </div>
                 </div>
             </li>
 
 			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
-			
+
 
 			<!--addons-->
 
@@ -361,7 +361,7 @@
 			<li class="addon lg:hidden">
 				<a href="/feedback">Online Grievances</a>
 			</li>
-			
+
 
 			<!--addons-->
 		</ul>
