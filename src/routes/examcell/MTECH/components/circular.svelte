@@ -7,11 +7,9 @@
             <div class="table-box">
                 <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
-                        <p>Stream/Year</p>
+                        <p>B.Tech</p>
                     </div>
-                    <div class="table-cell last-cell">
-                        <p>Links</p>
-                    </div> 
+                    
                 </div>
         
         
