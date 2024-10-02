@@ -6,7 +6,7 @@
 		<input type="radio" name="slider" id="menu-btn" />
 		<input type="radio" name="slider" id="close-btn" />
 
-		<ul class="nav-links gap-6 xl:gap-12">
+		<ul class="nav-links gap-4 lg:gap-6 xl:gap-12">
 			<label for="close-btn" class="btn close-btn">
 				<i class="fas fa-times text-[#242526]" />
 			</label>
@@ -365,6 +365,8 @@
 
 			<!--addons-->
 		</ul>
+		
+		
 		<label for="menu-btn" class="btn menu-btn "><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>

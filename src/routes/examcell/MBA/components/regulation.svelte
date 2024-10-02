@@ -9,20 +9,13 @@
 
              <div class="table-row table-head">
                 <div class="table-cell first-cell last-cell">
-                    <p class="text-xl font-sans">B.Tech </p>
+                    <p class="text-xl font-sans">MBA </p>
                 </div>
                 
             </div>
     
     
-            <div class="table-row">
-                <div class="table-cell first-cell">
-                    <p class="text-xl font-serif"> R20 Academic Regulation</p>
-                </div>
-                <div class="table-cell last-cell">
-                    <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                </div>   
-            </div>
+            
     
     
             <div class="table-row">
@@ -30,7 +23,7 @@
                     <p class="text-xl font-serif"> R19 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    <a href="/examcell_docs/MBA/regulation/R19.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                 </div>   
             </div>
 
@@ -39,7 +32,7 @@
                     <p class="text-xl font-serif">R16 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    <a href="/examcell_docs/MBA/regulation/R16.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                 </div>   
             </div>
 
@@ -48,10 +41,10 @@
                     <p class="text-xl font-serif">R13 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    <a href="/examcell_docs/MBA/regulation/R13.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                 </div>   
-            
-        </div>   
+            </div>
+
         </div>
         
     </div>
