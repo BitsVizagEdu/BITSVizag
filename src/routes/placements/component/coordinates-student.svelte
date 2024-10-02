@@ -31,7 +31,7 @@
 			description: 'Computer Science & Engg'
 		},
 		{
-			title: 'Mr. Aditya',
+			title: 'Mr. Adithya',
 			description: 'Computer Science & Engg'
 		},
 		{
