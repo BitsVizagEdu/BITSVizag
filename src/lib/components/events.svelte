@@ -1,6 +1,25 @@
 <script>
 	let events = [
-		{
+		
+		{	
+			name: 'The Cloud Summit',
+			description:
+				'The Dept. of CSE and KONKORDE proudly announce The Cloud Summit, a 3-day AWS workshop, co-organized by BITS Vizag and The Skill Shop.',
+			date: 'September 28, 2024',
+			image: '/events/13.jpg',
+			href: 'https://www.instagram.com/p/DATssFDzK_Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{	
+			name: 'Career Unplugged',
+			description:
+				'Mr. Krishna Teja, CEO and Co-Founder of Packet Prep & Fresher Bot, shared insights on upskilling and the job market. The Principal and Head of CSE also addressed the students.',
+			date: 'September 24, 2024',
+			image: '/events/12.jpg',
+			href: 'https://www.instagram.com/p/DATssFDzK_Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{	
 			name: 'An Interactive & Collaborative State of the Art Workshop exploring IOT & Robotics at BITS Vizag',
 			description:
 				'Tech Nexus at BITS Vizag: A collaborative workshop uniting students and startups to explore IoT & Robotics, led by Dr. BKC Ganesh, showcasing innovation amidst institutional initiatives.',
