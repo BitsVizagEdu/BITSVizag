@@ -40,38 +40,41 @@
             {#if isTimeTableVisible}
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA I Sem Supplementary Examinations-Feb-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/timetable/5 MBA I SEM (R19) REG & SUPPLE EXAMS FEB 2024.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
+            </div>
+            <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA III Sem Reg & Supplementary Examinations-Dec-2023</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/timetable/11 MBA-III SEM (R19) REGULAR & SUPPLE EXAM TIME TABLE-DEC-2023.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
+            </div>
+            <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA II Sem Reg & Supplementary-July-2023</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/timetable/14 MBA II SEM Regular supple exams july 2023 -Time table.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
+            </div>
+            <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA IV Sem Reg & Supplementary-July-2023</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/timetable/15 Revised -MBA IV SEM External Time Table.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -89,9 +92,11 @@
 
             {#if isResultsVisible}
             <div id="dropdownContent" class="table-box">
+                
+
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                        <p class="text-xl font-serif">R19 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -100,7 +105,7 @@
 
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
+                        <p class="text-xl font-serif">R16 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -109,16 +114,7 @@
 
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
+                        <p class="text-xl font-serif">R13 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -142,38 +138,60 @@
             {#if isNotificationVisible}
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA IV Sem Reg & Supplementary Examinations-April-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/notifaction/5 Notification -MBA IV Semester Reg& Supple Exams April 2024.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
+            </div>
+            <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA I Sem Supplementary Examinations-Feb-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/notifaction/10 MBA 1st Sem Notification February 2023.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
+            </div>
+            <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA III Sem Project Work-Dec-2023</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/notifaction/14 Notification for MBA III Sem Project work viva voce Dec 2023.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
+            </div>
+            <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA III Sem Reg & Supplementary Examinations-Dec-2023</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/MBA/examination/notifaction/17 MBA III Sem Notification.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div id="dropdownContent" class="table-box">
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA II Sem Reg & Supplementary-July-2023</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/MBA/examination/notifaction/20 1685171760-56211MBA -II Sem R&S Exam Notification July- 2023 (1).pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+            </div><div id="dropdownContent" class="table-box">
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">MBA IV Sem Reg & Supplementary-July-2023</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/MBA/examination/notifaction/21 1684733160-87007MBA IV Sem R&S Exam Notification-July-2023_compressed (1).pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -194,39 +212,14 @@
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                        <p class="text-xl font-serif">Exam Cell Contact</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="mailto:examcell@bitsvizag.com"><i class="fa-solid fa-envelope fa-beat text-2xl"></i></a>
                     </div>
                 </div>
 
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
+                
             </div>
             {/if}
         </div>

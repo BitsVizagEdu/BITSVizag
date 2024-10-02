@@ -40,40 +40,62 @@
             {#if isTimeTableVisible}
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">I B.Tech II Sem Supplementary Examinations-Mar-2023</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/1 1-2 Supple Time Table.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">III B.Tech II Sem Supplementary Examinations-Feb-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/2 3-2 Supple.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">II B.Tech II Sem Supplementary Examinations-Feb-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/3 2-2 Supple.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">I B.Tech I Sem Supplementary Examinations-Jan-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/I B.Tech I Sem.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">II B.Tech I Sem Regular & Supplementary Examinations-Dec-2023</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/II B.Tech I Sem.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">III B.Tech I Sem Regular & Supplementary Examinations-Dec-2023</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/III B.Tech I Sem.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">IV B.Tech I Sem Regular & Supplementary Examinations-Dec-2023</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/IV B.Tech I Sem.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                
             </div>
             {/if}
 
@@ -91,7 +113,7 @@
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                        <p class="text-xl font-serif">R20 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -100,7 +122,7 @@
 
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
+                        <p class="text-xl font-serif">R19 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -109,7 +131,7 @@
 
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
+                        <p class="text-xl font-serif">R16 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -118,7 +140,7 @@
 
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
+                        <p class="text-xl font-serif">R13 Results</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
@@ -142,38 +164,59 @@
             {#if isNotificationVisible}
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">IV B.Tech I Sem Advanced Supplementary Examinations-April-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/notification/1 IV B. TECH I.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">IV B.Tech II Sem Reg & Supplementary Examinations-April-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/notification/2 IVB. TECH II.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">III B.Tech II Sem Reg & Supplementary Examinations-April-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/notification/3 B. TECH I.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
-
                 <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">II B.Tech II Sem Reg & Supplementary Examinations-April-2024</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="/examcell_docs/BTech/examination/notification/4 II B. TECH II.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">I B.Tech II Sem Supplementary Examinations-Mar-2023</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/notification/5 I B.TECH II.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">III B.Tech II Sem Supplementary Examinations-Feb-2024</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/notification/6 III B. Tech II.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">II B.Tech II Sem Supplementary Examinations-Feb-2024</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/notification/7 III B. Tech II.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -194,39 +237,14 @@
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R20 Academic Regulation</p>
+                        <p class="text-xl font-serif">Exam Cell Contact</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                        <a href="mailto:examcell@bitsvizag.com"><i class="fa-solid fa-envelope fa-beat text-2xl"></i></a>
                     </div>
                 </div>
 
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R19 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R16 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
-
-                <div class="table-row">
-                    <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">R13 Academic Regulation</p>
-                    </div>
-                    <div class="table-cell last-cell">
-                        <a href="#"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
-                    </div>
-                </div>
+                
             </div>
             {/if}
         </div>
