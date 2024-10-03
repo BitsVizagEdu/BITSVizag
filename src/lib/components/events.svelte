@@ -7,7 +7,7 @@
 				'The Dept. of CSE and KONKORDE proudly announce The Cloud Summit, a 3-day AWS workshop, co-organized by BITS Vizag and The Skill Shop.',
 			date: 'September 28, 2024',
 			image: '/events/13.jpg',
-			href: 'https://www.instagram.com/p/DATssFDzK_Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			href: 'https://www.instagram.com/p/DAeAMvWzoWn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
 		{	
