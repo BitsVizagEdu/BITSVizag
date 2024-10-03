@@ -6,7 +6,7 @@
 		<input type="radio" name="slider" id="menu-btn" />
 		<input type="radio" name="slider" id="close-btn" />
 
-		<ul class="nav-links gap-12">
+		<ul class="nav-links gap-0 lg:gap-12">
 			<label for="close-btn" class="btn close-btn">
 				<i class="fas fa-times text-[#242526]" />
 			</label>
@@ -57,7 +57,8 @@
 						</div>
 						<div
 							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/aboutus/Message-from-Secretary & Correspondent')}
+							on:click={() =>
+								(window.location.href = '/aboutus/Message-from-Secretary & Correspondent')}
 						>
 							<div class="row">
 								<div class="dropdown__icon">
@@ -293,30 +294,37 @@
 
 			<li><a href="/placements">Career Development Cell</a></li>
 			<!--<li><a href="#">Academics</a></li>-->
-			<!--<li>
-                <a href="/examcell" class="desktop-item">Exam Cell</a>
-                <input type="checkbox" id="exam"/>
-                <label for="exam" class="mobile-item">Exam Cell</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user-graduate"/>
-                            </div>
-                            <header><a href="/examcell/Engineering">Engineering</a></header>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user-graduate"/>
-                            </div>
-                            <header><a href="/examcell/MBA">Management Studies</a></header>
-                        </div>
-                    </div>
-                </div>
-            </li>-->
+			<li>
+				<a href="#" class="desktop-item">Exam Cell</a>
+				<input type="checkbox" id="exam" />
+				<label for="exam" class="mobile-item">Exam Cell</label>
+				<div class="mega-box">
+					<div class="content">
+						<div class="row">
+							<div class="dropdown__icon">
+								<i class="fa-solid fa-user-graduate" />
+							</div>
+							<header><a href="/examcell/BTECH">Engineering - B.Tech</a></header>
+						</div>
 
-			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
-			
+						<div class="row">
+							<div class="dropdown__icon">
+								<i class="fa-solid fa-user-graduate" />
+							</div>
+							<header><a href="/examcell/MTECH">Engineering - M.Tech</a></header>
+						</div>
+
+						<div class="row">
+							<div class="dropdown__icon">
+								<i class="fa-solid fa-user-graduate" />
+							</div>
+							<header><a href="/examcell/MBA">Management Studies</a></header>
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<!-- <li><a href="/Mandatory">Mandatory Disclosure</a></li> -->
 
 			<!--addons-->
 
@@ -353,10 +361,10 @@
 			<li class="addon lg:hidden">
 				<a href="/feedback">Online Grievances</a>
 			</li>
-			
 
 			<!--addons-->
 		</ul>
+
 		<label for="menu-btn" class="btn menu-btn "><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>

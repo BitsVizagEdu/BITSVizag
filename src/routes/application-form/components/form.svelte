@@ -74,7 +74,7 @@
                                 </select>
                             </div>
                             {/if}
-                            
+
                             {#if selectedBranch === 'M.TECH'}
                             <div>
                                 <select name="Course" id="ug"
@@ -101,9 +101,9 @@
                             </div>
                             {/if}
 
-                            
 
-                            
+
+
                             <!-- <div>
                                 <select name="Branch Allotted/Interested PG" id="pg"
                                         class="rounded-lg px-5 p-1 text-center bg-[#1d4275] text-white font-semibold"
@@ -376,16 +376,10 @@
             formData.delete("Terms")
 
             const name = formData.get("Student Name")
-            const branchUG = formData.get("Branch Allotted/Interested UG")
-            const branchPG = formData.get("Branch Allotted/Interested PG")
+            const branchName = formData.get("Branch")
+            const courseName = formData.get("Course")
 
-            let branch = "";
-
-            if (branchUG !== "UG") {
-                branch = branchUG
-            } else {
-                branch = branchPG
-            }
+            let branch = `${branchName} : ${courseName}`;
 
             const mobile = formData.get("Mobile")
             const reference = formData.get("Reference_Name")

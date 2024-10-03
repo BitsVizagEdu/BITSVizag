@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-	<title>Exam Cell - MBA</title>
+	<title>Exam Cell - M.TECH</title>
 </svelte:head>
 
 <div class="total flex lg:flex-row 3xs:flex-col  h-[100%] ">
