@@ -323,7 +323,8 @@
 					</div>
 				</div>
 			</li>
-
+			
+			<li><a href="/facilities">Facilities</a></li>
 			<!-- <li><a href="/Mandatory">Mandatory Disclosure</a></li> -->
 
 			<!--addons-->

@@ -23,8 +23,17 @@
                         </li>-->
 
 			<!--<li><a href="#">Academics</a></li>-->
-
-			<li><a href="/contactus">Contact Us</a></li>
+			<li>
+				<a
+					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
+					target="_blank">Online Payment</a
+				>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
+			</li>
+			
+			<li><a href="/gallery">Gallery</a></li>
 			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
 
 			<!-- <li><a href="/alumini-data">Alumini</a></li> -->
@@ -49,25 +58,20 @@
                     </div>
                 </div>
             </li>-->
-			<li>
-				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
-			</li>
+			
+			
+			<!-- <li><a href="/facilities">Facilities</a></li> -->
+<!-- 
+			<li><a href="/gallery">Gallery</a></li> -->
+			
+			<li><a href="/NIRF">NIRF</a></li>
 			<li>
 				<a
 					href="https://docs.google.com/forms/d/e/1FAIpQLSeLM-fVFfXfLMtIzC2QcO-djxj14gqkW1F18eGdqG9m9mt-Sg/viewform"
 					>Online Grievances</a
 				>
 			</li>
-			<li><a href="/facilities">Facilities</a></li>
-
-			<li><a href="/gallery">Gallery</a></li>
-			<li>
-				<a
-					href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=359985"
-					target="_blank">Online Payment</a
-				>
-			</li>
-			<li><a href="/NIRF">NIRF</a></li>
+			<li><a href="/contactus">Contact Us</a></li>
 		</ul>
 	</div>
 </nav>
