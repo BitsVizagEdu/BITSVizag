@@ -25,8 +25,9 @@
 			<!--<li><a href="#">Academics</a></li>-->
 
 			<li><a href="/contactus">Contact Us</a></li>
+			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
 
-			<li><a href="/alumini-data">Alumini</a></li>
+			<!-- <li><a href="/alumini-data">Alumini</a></li> -->
 			<!--<li>
                 <a href="/examcell" class="desktop-item">Exam Cell</a>
                 <input type="checkbox" id="exam"/>
