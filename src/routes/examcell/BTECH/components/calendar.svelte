@@ -10,7 +10,7 @@
 				<!-- B.Tech ( 2023-24 ) -->
 				<div class="table-row table-head">
 					<div class="table-cell first-cell last-cell">
-						<p class="text-lg sm:text-xl font-sans">B.Tech ( 2023-24 )</p>
+						<p class="text-lg sm:text-xl font-sans">B.Tech ( 2024-25 )</p>
 					</div>
 				</div>
 
@@ -24,7 +24,7 @@
 						>
 					</div>
 				</div>
-
+<!-- 
 				<div class="table-row">
 					<div class="table-cell first-cell">
 						<p class="text-lg sm:text-xl font-serif">II - B.Tech</p>
@@ -56,10 +56,10 @@
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- B.Tech ( 2022-23 ) -->
-				<div class="table-row table-head">
+				<!-- <div class="table-row table-head">
 					<div class="table-cell first-cell last-cell">
 						<p class="text-lg sm:text-xl font-sans">B.Tech ( 2022-23 )</p>
 					</div>
@@ -107,11 +107,11 @@
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- B.Tech ( 2021-22 ) -->
 
-				<div class="table-row table-head">
+				<!-- <div class="table-row table-head">
 					<div class="table-cell first-cell last-cell">
 						<p class="text-lg sm:text-xl font-sans">B.Tech ( 2021-22 )</p>
 					</div>
@@ -159,11 +159,11 @@
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- B.Tech ( 2020-21 ) -->
 
-				<div class="table-row table-head">
+				<!-- <div class="table-row table-head">
 					<div class="table-cell first-cell last-cell">
 						<p class="text-lg sm:text-xl font-sans">B.Tech ( 2020-21 )</p>
 					</div>
@@ -211,11 +211,11 @@
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- B.Tech ( 2019-20 ) -->
 
-				<div class="table-row table-head">
+				<!-- <div class="table-row table-head">
 					<div class="table-cell first-cell last-cell">
 						<p class="text-lg sm:text-xl font-sans">B.Tech ( 2019-20 )</p>
 					</div>
@@ -263,7 +263,7 @@
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

@@ -15,7 +15,14 @@
             </div>
     
     
-            
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <p class="text-xl font-serif"> BR - 24</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <a href="/examcell_docs/MBA/regulation/BR-24 MBA Regulation.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                </div>   
+            </div>
     
     
             <div class="table-row">
@@ -27,7 +34,7 @@
                 </div>   
             </div>
 
-            <div class="table-row">
+            <!-- <div class="table-row">
                 <div class="table-cell first-cell">
                     <p class="text-xl font-serif">R16 Academic Regulation</p>
                 </div>
@@ -43,7 +50,7 @@
                 <div class="table-cell last-cell">
                     <a href="/examcell_docs/MBA/regulation/R13.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                 </div>   
-            </div>
+            </div> -->
 
         </div>
         
