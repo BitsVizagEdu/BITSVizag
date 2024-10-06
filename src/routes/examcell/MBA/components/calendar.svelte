@@ -10,7 +10,7 @@
                 <!-- MBA ( 2023-24 ) -->
                 <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
-                        <p class="text-xl font-sans">MBA ( 2023-24 )</p>
+                        <p class="text-xl font-sans">MBA ( 2024-25 )</p>
                     </div>
                     
                 </div>
@@ -26,20 +26,20 @@
                 </div>
         
         
-                <div class="table-row">
+                <!-- <div class="table-row">
                     <div class="table-cell first-cell">
                         <p class="text-xl font-serif"> II - MBA</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/MBA/calendar/II MBA 23-24.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>   
-                </div>
+                </div> -->
 
                 
 
 
                 <!-- MBA ( 2022-23 ) -->
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">MBA ( 2022-23 )</p>
                     </div>
@@ -65,13 +65,13 @@
                         <a href="/examcell_docs/MBA/calendar/II MBA 22-23.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>   
                 </div>
-
+ -->
 
 
 
 
                 <!-- MBA ( 2021-22 ) -->
-
+<!-- 
                 <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">MBA ( 2021-22 )</p>
@@ -100,13 +100,13 @@
                 </div>
 
                 
-
+ -->
 
 
                 <!-- MBA ( 2020-21 ) -->
 
 
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">MBA ( 2020-21 )</p>
                     </div>
@@ -133,13 +133,13 @@
                     </div>   
                 </div>
 
-                
+                 -->
 
 
                 <!-- MBA ( 2019-20 ) -->
 
 
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">MBA ( 2019-20 )</p>
                     </div>
@@ -164,7 +164,7 @@
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/MBA/calendar/I MBA 19-20.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>   
-                </div>
+                </div> -->
 
                 
         

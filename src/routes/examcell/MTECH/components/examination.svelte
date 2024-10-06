@@ -28,7 +28,7 @@
             </div>
 
             <!-- Time Table Section -->
-            <div class="table-row table-head cursor-pointer" on:click={toggleTimeTable}>
+            <!-- <div class="table-row table-head cursor-pointer" on:click={toggleTimeTable}>
                 <div class="table-cell first-cell last-cell flex justify-between items-center">
                     <p class="text-xl font-sans">
                         Time Table
@@ -58,10 +58,10 @@
                     </div>
                 </div>
             </div>
-            {/if}
+            {/if} -->
 
             <!-- Results Section -->
-            <div class="table-row table-head cursor-pointer" on:click={toggleResults}>
+            <!-- <div class="table-row table-head cursor-pointer" on:click={toggleResults}>
                 <div class="table-cell first-cell last-cell flex justify-between items-center">
                     <p class="text-xl font-sans">
                         Results
@@ -101,12 +101,12 @@
                     </div>
                 </div>
             </div>
-            {/if}
+            {/if} -->
 
 
 
              <!-- Results Section -->
-             <div class="table-row table-head cursor-pointer" on:click={toggleNotification}>
+             <!-- <div class="table-row table-head cursor-pointer" on:click={toggleNotification}>
                 <div class="table-cell first-cell last-cell flex justify-between items-center">
                     <p class="text-xl font-sans">
                         Notifications
@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            {/if}
+            {/if} -->
 
 
              <!-- Results Section -->
@@ -157,14 +157,28 @@
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">Exam Cell Contact</p>
+                        <p class="text-xl font-serif">Land Line</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="mailto:examcell@bitsvizag.com"><i class="fa-solid fa-envelope fa-beat text-2xl"></i></a>
+                        <p class="text-xl font-serif">0891-2569944</p>
                     </div>
                 </div>
-
-                
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-xl font-serif">Assistant Controller of Examination</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p class="text-xl font-serif">Dr.D.N.Murti - 9398688852</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-xl font-serif">Controller of Examination</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p class="text-xl font-serif">Ravindra - 8919641346</p>
+                    </div>
+                </div>
             </div>
             {/if}
         </div>

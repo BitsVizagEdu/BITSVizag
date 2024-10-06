@@ -41,13 +41,24 @@
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
                     <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">I B.Tech I Sem Mid Examinations Time Table</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/1st B.Tech Mid Examination Time Table.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+
+            <!-- {#if isTimeTableVisible}
+            <div id="dropdownContent" class="table-box">
+                <div class="table-row">
+                    <div class="table-cell first-cell ">
                         <p class="text-sm font-serif">I B.Tech II Sem Supplementary Examinations-Mar-2023</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/BTech/examination/1 1-2 Supple Time Table.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
-                </div>
-                <div class="table-row">
+                </div> -->
+                <!-- <div class="table-row">
                     <div class="table-cell first-cell ">
                         <p class="text-sm font-serif">III B.Tech II Sem Supplementary Examinations-Feb-2024</p>
                     </div>
@@ -94,13 +105,13 @@
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/BTech/examination/IV B.Tech I Sem.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
-                </div>
+                </div> -->
                 
             </div>
             {/if}
 
             <!-- Results Section -->
-            <div class="table-row table-head cursor-pointer" on:click={toggleResults}>
+            <!-- <div class="table-row table-head cursor-pointer" on:click={toggleResults}>
                 <div class="table-cell first-cell last-cell flex justify-between items-center">
                     <p class="text-xl font-sans">
                         Results
@@ -148,10 +159,10 @@
                 </div>
             </div>
             {/if}
+ -->
 
 
-
-             <!-- Results Section -->
+             <!-- Notification Section -->
              <div class="table-row table-head cursor-pointer" on:click={toggleNotification}>
                 <div class="table-cell first-cell last-cell flex justify-between items-center">
                     <p class="text-xl font-sans">
@@ -164,6 +175,14 @@
             {#if isNotificationVisible}
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
+                    <div class="table-cell first-cell ">
+                        <p class="text-sm font-serif">IV B.Tech I Sem Regular and Supply <br> Examinations-October-2024</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <a href="/examcell_docs/BTech/examination/notification/IV-B.Tech Regular and Supply Examination.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="table-row">
                     <div class="table-cell first-cell ">
                         <p class="text-sm font-serif">IV B.Tech I Sem Advanced Supplementary Examinations-April-2024</p>
                     </div>
@@ -218,12 +237,12 @@
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/BTech/examination/notification/7 III B. Tech II.pdf"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>
-                </div>
+                </div> -->
             </div>
             {/if}
 
 
-             <!-- Results Section -->
+             <!-- Contact Us Section -->
              <div class="table-row table-head cursor-pointer" on:click={toggleContactUs}>
                 <div class="table-cell first-cell last-cell flex justify-between items-center">
                     <p class="text-xl font-sans">
@@ -237,14 +256,28 @@
             <div id="dropdownContent" class="table-box">
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">Exam Cell Contact</p>
+                        <p class="text-xl font-serif">Land Line</p>
                     </div>
                     <div class="table-cell last-cell">
-                        <a href="mailto:examcell@bitsvizag.com"><i class="fa-solid fa-envelope fa-beat text-2xl"></i></a>
+                        <p class="text-xl font-serif">0891-2569944</p>
                     </div>
                 </div>
-
-                
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-xl font-serif">Assistant Controller of Examination</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p class="text-xl font-serif">Dr.D.N.Murti - 9398688852</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell first-cell">
+                        <p class="text-xl font-serif">Controller of Examination</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p class="text-xl font-serif">Ravindra - 8919641346</p>
+                    </div>
+                </div>
             </div>
             {/if}
         </div>

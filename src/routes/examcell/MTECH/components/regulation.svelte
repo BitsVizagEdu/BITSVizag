@@ -4,7 +4,7 @@
             <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
                 <h2 class="text-4xl">ACADEMIC REGULATION</h2>
             </div>
-             <!-- B.Tech ( 2020-21 ) -->
+             <!-- M.Tech ( 2020-21 ) -->
 
 
              <div class="table-row table-head">
@@ -14,7 +14,14 @@
                 
             </div>
     
-    
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <p class="text-xl font-serif"> BR 24</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <a href="/examcell_docs/MTech/regulation/Br-24 M.Tech Regulation.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
+                </div>   
+            </div>
             
     
     
@@ -27,14 +34,14 @@
                 </div>   
             </div>
 
-            <div class="table-row">
+            <!-- <div class="table-row">
                 <div class="table-cell first-cell">
                     <p class="text-xl font-serif">R16 Academic Regulation</p>
                 </div>
                 <div class="table-cell last-cell">
                     <a href=""><i class="fa-solid fa-file-pdf fa-beat text-2xl" target="_blank"></i></a>
                 </div>   
-            </div>
+            </div> -->
 
            
         </div>

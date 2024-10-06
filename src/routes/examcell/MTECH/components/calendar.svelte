@@ -10,7 +10,7 @@
                 <!-- M.Tech ( 2023-24 ) -->
                 <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
-                        <p class="text-xl font-sans">M.Tech ( 2023-24 )</p>
+                        <p class="text-xl font-sans">M.Tech ( 2024-25 )</p>
                     </div>
                     
                 </div>
@@ -26,20 +26,20 @@
                 </div>
         
         
-                <div class="table-row">
+                <!-- <div class="table-row">
                     <div class="table-cell first-cell">
                         <p class="text-xl font-serif"> II - M.Tech</p>
                     </div>
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/MTech/calendar/II M.TECH 23-24.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>   
-                </div>
+                </div> -->
 
                 
 
 
                 <!-- M.Tech ( 2022-23 ) -->
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">M.Tech ( 2022-23 )</p>
                     </div>
@@ -65,14 +65,14 @@
                         <a href="/examcell_docs/MTech/calendar/II M.TECH 22-23.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>   
                 </div>
-
+ -->
 
 
 
 
                 <!-- M.Tech ( 2021-22 ) -->
 
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">M.Tech ( 2021-22 )</p>
                     </div>
@@ -99,14 +99,14 @@
                     </div>   
                 </div>
 
-                
+                 -->
 
 
 
                 <!-- M.Tech ( 2020-21 ) -->
 
 
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">M.Tech ( 2020-21 )</p>
                     </div>
@@ -133,13 +133,13 @@
                     </div>   
                 </div>
 
-                
+                 -->
 
 
                 <!-- M.Tech ( 2019-20 ) -->
 
 
-                <div class="table-row table-head">
+                <!-- <div class="table-row table-head">
                     <div class="table-cell first-cell last-cell">
                         <p class="text-xl font-sans">M.Tech ( 2019-20 )</p>
                     </div>
@@ -164,7 +164,7 @@
                     <div class="table-cell last-cell">
                         <a href="/examcell_docs/MTech/calendar/I M.TECH 19-20.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-beat text-2xl"></i></a>
                     </div>   
-                </div>
+                </div> -->
 
                 
         
