@@ -19,7 +19,7 @@
 						<p class="text-lg sm:text-xl font-serif">I - B.Tech</p>
 					</div>
 					<div class="table-cell last-cell">
-						<a href="/examcell_docs/BTech/calender/I Year23-24.pdf" target="_blank"
+						<a href="/examcell_docs/BTech/calender/BTech 1-1.pdf" target="_blank"
 							><i class="fa-solid fa-file-pdf fa-beat text-2xl" /></a
 						>
 					</div>
