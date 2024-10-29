@@ -2,6 +2,15 @@
 	let events = [
 		
 		{	
+			name: 'A 3-Day Employability Bootcamp',
+			description:
+				'The Training and Placement Cell successfully hosted a 3-Day Bootcamp on Developing Employability Competencies from October 22nd to 24th, 2024 at Central Seminar Hall, BITS Vizag.',
+			date: 'October 22, 2024',
+			image: '/events/14.jpg',
+			href: 'https://www.instagram.com/p/DBjYa6DT3D_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{	
 			name: 'The Cloud Summit',
 			description:
 				'The Dept. of CSE and KONKORDE proudly announce The Cloud Summit, a 3-day AWS workshop, co-organized by BITS Vizag and The Skill Shop.',
