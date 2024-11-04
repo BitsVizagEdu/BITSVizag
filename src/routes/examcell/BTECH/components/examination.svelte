@@ -264,7 +264,7 @@
                 </div>
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">Assistant Controller of Examination</p>
+                        <p class="text-xl font-serif">Controller of Examination</p>
                     </div>
                     <div class="table-cell last-cell">
                         <p class="text-xl font-serif">Dr.D.N.Murti - 9398688852</p>
@@ -272,12 +272,13 @@
                 </div>
                 <div class="table-row">
                     <div class="table-cell first-cell">
-                        <p class="text-xl font-serif">Controller of Examination</p>
+                        <p class="text-xl font-serif">Assistant Controller of Examination</p>
                     </div>
                     <div class="table-cell last-cell">
                         <p class="text-xl font-serif">Ravindra - 8919641346</p>
                     </div>
                 </div>
+                
             </div>
             {/if}
         </div>
