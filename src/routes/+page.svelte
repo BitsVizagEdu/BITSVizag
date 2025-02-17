@@ -13,7 +13,7 @@
 	import Placementheader from '$lib/components/placementheader.svelte';
 	import Notification from '$lib/components/notification.svelte';
 	import Autonomous from '$lib/components/autonomous.svelte';
-
+	
 	function scaleLogo(y) {
 		if (typeof y !== 'undefined') {
 			document.getElementById('scale-logo').style.transform = `scale(${1 + y / 700})`;
