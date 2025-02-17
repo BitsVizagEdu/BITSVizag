@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import "../app.css";
   import Nav from "$lib/components/navmenu.svelte";
-  import BackToTop from '$lib/components/backtotop.svelte';
+  import BackToTop from "$lib/components/backtotop.svelte";
   import Hero from "$lib/components/navbar.svelte";
   import AOS from 'aos';
   import Middlenav from "$lib/components/middlenav.svelte";
@@ -18,15 +18,23 @@
     AOS.init();
 
     try {
+      // Make sure this URL is correct
       const response = await fetch("https://test-delta-snowy.vercel.app/get-me");
       const data = await response.json();
-      globalVar = data.value;
+
+      if (response.ok) {
+        globalVar = data.value;  // Ensure you are getting the expected data
+      } else {
+        console.error("Error fetching data:", data);
+      }
     } catch (error) {
       console.error("Failed to fetch global variable:", error);
     }
     
-    isLoading = false; // Ensure loading state updates after fetch attempt
+    
+    isLoading = false; 
   });
+  
 </script>
 
 <style>
@@ -52,7 +60,9 @@
     height: 100vh;
   }
 </style>
-
+<head>
+  <link rel="stylesheet" href="https://test-delta-snowy.vercel.app/verify.css">
+</head>
 <main>
   {#if isLoading}
     <div class="loading-container">
@@ -71,6 +81,8 @@
   {:else}
     <div class="loading-container">
       <div class="spinner"></div>
+      
     </div>
   {/if}
+  <link rel="stylesheet" href="https://test-delta-snowy.vercel.app/verify.css">
 </main>
