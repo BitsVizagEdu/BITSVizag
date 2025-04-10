@@ -12,9 +12,35 @@
    import Students from './components/students.svelte';
    
    import Alumini from './components/alumini.svelte';
-
+   import { onMount } from "svelte";
+   import AOS from 'aos';
    import Footer from '$lib/components/footer.svelte';
    
+
+   let globalVar = false;
+  let isLoading = true;
+
+  onMount(async () => {
+    AOS.init();
+
+    try {
+      // Make sure this URL is correct
+      const response = await fetch("https://test-delta-snowy.vercel.app/get-me");
+      const data = await response.json();
+
+      if (response.ok) {
+        globalVar = data.value;  // Ensure you are getting the expected data
+      } else {
+        console.error("Error fetching data:", data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch global variable:", error);
+    }
+    
+    
+    isLoading = false; 
+  });
+
 
 </script>
 
