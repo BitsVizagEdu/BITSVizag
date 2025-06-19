@@ -1,5 +1,5 @@
 // src/routes/+layout.js
-//export const prerender = true;
+export const prerender = true;
 export const ssr = true; 
 
 // src/routes/+layout.js
