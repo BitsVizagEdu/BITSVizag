@@ -3,7 +3,7 @@
 		{
   name: "Srirangam Durga Prasad",
   designation: "Associate Prof & HoD",
-  qualification:"MCA, M.TECH, (PhD) ",
+  qualification:"MCA, M.TECH, (Ph.D) ",
   mail:""
 },
 {
