@@ -2,7 +2,7 @@
 	let items = [
 		{
   name: "Srirangam Durga Prasad",
-  designation: "Asst Prof & HoD",
+  designation: "Associate Prof & HoD",
   qualification:"MCA, M.TECH, (PhD) ",
   mail:""
 },
