@@ -4,8 +4,8 @@
 			name: 'Ekshetra',
 			description:
 				'Ekshetra 3.0',
-			date: 'October 22, 2024',
-			image: '/events/14.jpg',
+			date: 'February 22, 2025',
+			image: 'static/EKSHETRA.heic',
 			href: 'https://www.instagram.com/ekshetra_3.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
 			click: 'Click to view more >>>'
 		},
