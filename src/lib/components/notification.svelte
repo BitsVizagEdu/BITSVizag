@@ -34,7 +34,7 @@
 				<span class="text-red-700">|</span>
 				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
-				<span class="text-[#FEC629]">"BITS VIZAG is now Autonomous"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
 				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
