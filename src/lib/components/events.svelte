@@ -1,6 +1,14 @@
 <script>
 	let events = [
-		
+		{	
+			name: 'Ekshetra',
+			description:
+				'Ekshetra 3.0',
+			date: 'October 22, 2024',
+			image: '/events/14.jpg',
+			href: 'https://www.instagram.com/ekshetra_3.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+			click: 'Click to view more >>>'
+		},
 		{	
 			name: 'A 3-Day Employability Bootcamp',
 			description:
