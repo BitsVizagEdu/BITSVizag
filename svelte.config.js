@@ -18,7 +18,7 @@ const config = {
 			handleMissingId: 'warn'
 		},
 		adapter: adapter({
-			runtime: 'nodejs18.x',
+			runtime: 'nodejs22.x',
 		}),
 	},
 };
