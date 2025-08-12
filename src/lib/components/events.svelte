@@ -5,7 +5,7 @@
 			description:
 				'A blend of Innovation, Creativity, and Celebration !!!',
 			date: 'February 22, 2025',
-			image: 'E-Kshethra.jpg,
+			
 			href: 'https://www.instagram.com/ekshetra_3.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
 			click: 'Click to view more >>>'
 		},
