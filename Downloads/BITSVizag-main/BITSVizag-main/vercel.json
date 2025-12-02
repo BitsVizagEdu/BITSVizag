@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/storeForm/+server.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}

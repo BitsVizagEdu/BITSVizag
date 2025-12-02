@@ -1,0 +1,838 @@
+<script>
+	let items = [
+		{
+  name: "Srirangam Durga Prasad",
+  designation: "Associate Prof & HoD",
+  qualification:"MCA, M.TECH, (Ph.D) ",
+  mail:""
+},
+{
+  name: "Dr. S Vidyasagar Appaji",
+  designation: "Asst Prof",
+  qualification:"M.TECH., MBA, Ph.D",
+  mail:""
+},
+{
+  name: "Dr. Dharavathu Radha",
+  designation: "Asst Prof",
+  qualification:"M.TECH, Ph.D",
+  mail:""
+},
+{
+  name: "Padma Mohan ",
+  designation: "Asst Prof",
+  qualification:"MCA, M.Phill",
+  mail:""
+},
+{
+  name: "B Madhava Rao",
+  designation: "ASST PROF(Sr.)",
+  qualification:"MCA, M.TECH",
+  mail:""
+},
+{
+  name: "Joshuaraju Pulapalli",
+  designation: "ASST. PROF & TPO INC",
+  qualification:"M.TECH, (Ph.D)",
+  mail:""
+},
+{
+  name: "Surapareddy Samyukta",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "Chaitanya Thalluri",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "Kovvuri Sindhuja",
+  designation: "Asst Prof",
+  qualification:"MCA",
+  mail:""
+},
+{
+  name: "D D Shiva Prasad",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "Gadde Mohana Sowjanya",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+{
+  name: "D Appala Raju",
+  designation: "Asst Prof",
+  qualification:"M.TECH",
+  mail:""
+},
+
+		
+	
+	]
+</script>
+<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+	<img src="/header/cse.png" alt="" srcset="" />
+	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
+	<div class="flex justify-center w-[100%]">
+		<img src="/cse.jpg" alt="" />
+	</div>
+	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+		<div>
+			<p>
+				The Department of Computer Science and Engineering (CSE) at BITS Vizag Engineering College
+				is a dynamic and vibrant academic unit dedicated to providing top-notch education and
+				research opportunities in the field of computer science and engineering. It is committed to
+				producing skilled and competent professionals who can address the ever-changing demands of
+				the technology industry.
+			</p>
+		</div>
+		<div>
+			<p>
+				The CSE department at BITS Vizag Engineering College boasts world-class infrastructure and
+				facilities to support its academic and research endeavors.
+			</p>
+			<p class="pt-3">
+				The curriculum is designed to strike a balance between theoretical knowledge and practical
+				skills, empowering students with a strong foundation in core computer science concepts and
+				the ability to apply them to real-world problems.
+			</p>
+			<p class="pt-3">
+				The Department of Computer Science and Engineering at BITS Vizag Engineering College plays a
+				crucial role in shaping the future of the technology landscape.
+			</p>
+		</div>
+		<div class="pt-10">
+			<h1 id="HOD" class="text-3xl font-bold text-indigo-900">
+				HOD MESSAGE - Prof. S. Durga Prasad
+			</h1>
+			<div class="flex justify-center w-[100%] pt-8">
+				<img src="/cse hod.jpg" alt="" />
+			</div>
+		</div>
+		<div class="text-justify mt-8 text-lg flex flex-col gap-5">
+			<p>
+				The Department Head of Computer Science Engineering at BITS Vizag Engineering College is an
+				accomplished and esteemed academic leader with extensive experience in the field of computer
+				science and engineering. As a visionary and forward-thinking individual, the department head
+				oversees the department's academic and research activities with exceptional proficiency.
+				They foster a culture of innovation and excellence, ensuring that students and faculty are
+				equipped with the latest knowledge and skills. Their collaborative approach promotes strong
+				industry-academia interactions, creating valuable opportunities for students' growth,
+				placements, and research endeavors. Under their guidance, the department excels in producing
+				highly skilled graduates who are well-prepared to meet the challenges of the dynamic and
+				ever-evolving technology landscape.
+			</p>
+		</div>
+		<div>
+			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
+			<div class="container pt-8">
+				<img class="first" src="/cse8.png" alt="" />
+				<img src="/cse3.jpg" alt="" />
+				<img src="/cse6.jpg" alt="" />
+				<img class="third" src="/cse9.jpg" alt="" />
+				<img class="second" src="/cse7.png" alt="" />
+			</div>
+		</div>
+		<div id="facilities" class="flex gap-20 facilities">
+			<div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Computer Science Laboratory</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>C Programming Laboratory</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>IT Workshop</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Advance Data Structure Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>OOPs Through JAVA Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Computer Science Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Information Technology Workshop</p>
+				</div>
+			</div>
+			<div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Free & Open Source Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Operating System  & Compiler Designing Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Advance Data Structure Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Computer Network & Unix Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Advance JAVA & Web Development Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>UML & DP Lab</p>
+				</div>
+				<div id="icon" class="flex">
+					<svg
+						width="40px"
+						height="30px"
+						viewBox="0 0 24 24"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_checkbox_checked_24_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+								<path
+									d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+									id="🎨Color"
+								/>
+							</g>
+						</g>
+					</svg>
+					<p>Mobile Application Development Lab</p>
+				</div>
+			</div>
+		</div>
+		<div class="parent mt-7">
+			<div class="child flex items-center justify-center text-white">
+				<div class="">
+					<p id="aca" class="font-bold text-6xl">ACADEMIC PROGRAMMES</p>
+					<p id="basic" class="text-xl font-bold pt-4">COMPUTER SCIENCES AND ENGINEERING</p>
+				</div>
+			</div>
+		</div>
+		<div id="academic" class="flex gap-7">
+			<div>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">UNDERGRADUATE PROGRAMME</p>
+				<div id="branch" class="flex items-center">
+					<div class="w-[300px] h-[300px]"><img src="/hat.svg" alt="" /></div>
+					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
+						<p>B.TECH : CSE</p>
+
+						<p>DURATION -4YEARS</p>
+					</div>
+				</div>
+				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
+				<div>
+					<p class="text-justify pt-5 text-[#08163d]">
+						BITS Engineering College admits candidates through the Engineering, Agriculture &
+						Pharmacy Common Entrance Test (EAPCET), conducted by AP STATE GOVERNMENT, on fulfilling
+						the eligibility requirements and under management quota.
+					</p>
+					<div class="flex pt-5">
+						<div>
+							<svg
+								width="40px"
+								height="30px"
+								viewBox="0 0 24 24"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+								<title>ic_fluent_checkbox_checked_24_regular</title>
+								<desc>Created with Sketch.</desc>
+								<g
+									id="🔍-Product-Icons"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+										<path
+											d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+											id="🎨Color"
+										/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="text-[#08163d]">
+							<p>All admissions are on the basis of merit</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div>
+							<svg
+								width="40px"
+								height="30px"
+								viewBox="0 0 24 24"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+								<title>ic_fluent_checkbox_checked_24_regular</title>
+								<desc>Created with Sketch.</desc>
+								<g
+									id="🔍-Product-Icons"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+										<path
+											d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+											id="🎨Color"
+										/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="text-[#08163d] text-justify">
+							<p>
+								Categories of seats: The sanctioned seats in each program in the college are
+								classified into Convener Quota (CATEGORY – A) and Management Quota (CATEGORY – B) at
+								the first year level and Lateral Entry at the second year level.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div />
+			<div>
+				<p id="post" class="mt-10 text-2xl font-bold text-[#1e3a8a]">POSTGRADUATE PROGRAMME</p>
+				<div id="branch" class="flex items-center">
+					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
+					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
+						<p>M.TECH : CSE</p>
+						<p>DURATION–2 YEARS</p>
+					</div>
+				</div>
+				<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
+				<div>
+					<p class="text-justify pt-5 text-[#08163d]">
+						BITS Engineering College admits candidates through the eligibility requirements and
+						under management quota.
+					</p>
+					<div class="flex pt-5">
+						<div>
+							<svg
+								width="40px"
+								height="30px"
+								viewBox="0 0 24 24"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+								<title>ic_fluent_checkbox_checked_24_regular</title>
+								<desc>Created with Sketch.</desc>
+								<g
+									id="🔍-Product-Icons"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+										<path
+											d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+											id="🎨Color"
+										/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="text-[#08163d]">
+							<p>All admissions are on the basis of merit</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div>
+							<svg
+								width="40px"
+								height="30px"
+								viewBox="0 0 24 24"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+								<title>ic_fluent_checkbox_checked_24_regular</title>
+								<desc>Created with Sketch.</desc>
+								<g
+									id="🔍-Product-Icons"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+										<path
+											d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+											id="🎨Color"
+										/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="text-[#08163d] text-justify">
+							<p>
+								Categories of seats: The sanctioned seats in each program in the college are
+								classified into Convener Quota (CATEGORY – A) and Management Quota (CATEGORY – B) at
+								the first year level and Lateral Entry at the second year level.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div />
+		</div>
+	</div>
+	<div class="parent mt-7">
+		<div class="child flex items-center justify-center text-white">
+			<div class="">
+				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
+		
+		{#each items as item ,i}
+		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+			<div class="w-12 h-12 mt-4">
+				<img src="/faculty.svg" alt="" >
+			</div>
+			<div class="p-[10px] capitalize font-bold">{item.name}</div>
+			<div class="capitalize font-semibold">{item.designation}</div>
+			<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
+			</div>
+		</div>
+	
+	{/each}
+		
+	</div>
+</section>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+	}
+	.container {
+		display: grid;
+		grid-gap: 5px;
+		grid-template-areas:
+			'A'
+			'B'
+			'C'
+			'D'
+			'E';
+	}
+	@media (min-width: 576px) {
+		.container {
+			grid-template-columns: 1.52fr 1fr 1fr 1.525fr;
+			grid-template-areas:
+				'A  B  C  E'
+				'A  D  D  E';
+		}
+	}
+
+	img:nth-child(1) {
+		grid-area: A;
+	}
+	img:nth-child(2) {
+		grid-area: B;
+	}
+	img:nth-child(3) {
+		grid-area: C;
+	}
+	img:nth-child(4) {
+		grid-area: D;
+	}
+	img:nth-child(5) {
+		grid-area: E;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.first,
+	.second,
+	.third {
+		height: 92.2%;
+		width: 100%;
+	}
+	.third {
+		height: 88%;
+	}
+
+	@media screen and (max-width: 1024px) {
+		#facilities {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+		}
+	}
+	.parent {
+		height: 200px;
+		background: #cc0033;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20px;
+		text-align: center;
+	}
+
+	.child {
+		background-color: #1e3a8a;
+		width: 94%;
+		height: 88%;
+		border-radius: 20px;
+	}
+	@media screen and (max-width: 1024px) {
+		#aca {
+			font-size: 40px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		#basic {
+			font-size: 17px;
+		}
+	}
+	@media screen and (max-width: 425px) {
+		#aca {
+			font-size: 30px;
+		}
+		#basic {
+			font-size: 15 px;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		#aca {
+			font-size: 25px;
+		}
+		#basic {
+			font-size: 13px;
+			padding-top: 3px;
+		}
+		.parent {
+			height: 120px;
+		}
+		#facilities p {
+			font-size: 12px;
+			align-items: center;
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		#academic {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	@media screen and (max-width: 425px) {
+		#post {
+			font-size: 19px;
+		}
+		#eligible {
+			font-size: 20px;
+		}
+		#icons svg {
+			float: left;
+		}
+	}
+	@media screen and (max-width: 320px) {
+		#post {
+			font-size: 16px;
+		}
+		#eligible {
+			font-size: 15px;
+		}
+	}
+	@media screen and (max-width: 540px) {
+		#branch {
+			display: flex;
+			flex-direction: column;
+		}
+		#branch #branches p {
+			float: left;
+			font-size: 13px;
+		}
+	}
+	@media screen and (max-width: 375px) {
+		p {
+			text-align: left;
+		}
+	}
+</style>
