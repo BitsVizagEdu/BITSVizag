@@ -77,11 +77,10 @@
 					</div>
 					<div class="flex 3xs:flex-col my-5 md:my-0 lg:flex-row items-center md:items-start lg:items-center">
 						<a href="/contactus"
-							class="flex flex-row group text-center justify-center items-center 3xs:px-2 md:px-8 duration-700 bg-gradient-to-r hover:bg-gradient-to-t from-[#6edad8] via-[#64d9d6] to-[#1aa9e8] 3xs:w-[100%] 2xs:w-[300px] lg:w-[55%] lg:max-w-[350px] md:w-[90%] 3xs:my-4 sm:my-0 h-[10vh] rounded-3xl"
-						>
-							<p class="font-semibold text-xl group-hover:scale-[1.2] duration-300 w-full text-center flex items-center justify-center">
+							class="flex items-center justify-center group duration-700 bg-gradient-to-r hover:bg-gradient-to-t from-[#6edad8] via-[#64d9d6] to-[#1aa9e8] w-full max-w-[350px] h-[60px] rounded-3xl mx-auto my-4">
+							<span class="font-semibold text-xl group-hover:scale-110 duration-300 text-center w-full flex items-center justify-center">
 								Contact US
-							</p>
+							</span>
 						</a>
 						<div
 							class="grid grid-cols-5 items-center lg:px-4 3xs:my-4 md:my-0 justify-items-center 3xs:w-[100%] md:mt-5 lg:mt-0 md:w-[90%] lg:w-[50%]"
