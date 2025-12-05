@@ -1,15 +1,24 @@
 <script>
 	let events = [
-		{	
-			name: 'Ekshetra',
+		{
+			name: 'International Women’s Day 2025',
 			description:
-				'A blend of Innovation, Creativity, and Celebration !!!',
+				' Women leaders shared impactful stories and guided students toward building a more inclusive and progressive environment.',
+			date: 'March 8, 2025',
+			image: '/events/womensday2025.jpg',
+			href: 'https://www.instagram.com/p/DG-wBKtzN4Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+
+		{
+			name: 'Ekshetra',
+			description: 'A blend of Innovation, Creativity, and Celebration !!!',
 			date: 'February 22, 2025',
 			image: '/events/Ekshethra.jpg',
 			href: 'https://www.instagram.com/ekshetra_3.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
 			click: 'Click to view more >>>'
 		},
-		{	
+		{
 			name: 'A 3-Day Employability Bootcamp',
 			description:
 				'The Training and Placement Cell successfully hosted a 3-Day Bootcamp on Developing Employability Competencies from October 22nd to 24th, 2024 at Central Seminar Hall, BITS Vizag.',
@@ -18,7 +27,7 @@
 			href: 'https://www.instagram.com/p/DBjYa6DT3D_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
-		{	
+		{
 			name: 'The Cloud Summit',
 			description:
 				'The Dept. of CSE and KONKORDE proudly announce The Cloud Summit, a 3-day AWS workshop, co-organized by BITS Vizag and The Skill Shop.',
@@ -27,7 +36,7 @@
 			href: 'https://www.instagram.com/p/DAeAMvWzoWn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
-		{	
+		{
 			name: 'Career Unplugged',
 			description:
 				'Mr. Krishna Teja, CEO and Co-Founder of Packet Prep & Fresher Bot, shared insights on upskilling and the job market. The Principal and Head of CSE also addressed the students.',
@@ -36,7 +45,7 @@
 			href: 'https://www.instagram.com/p/DATssFDzK_Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
-		{	
+		{
 			name: 'An Interactive & Collaborative State of the Art Workshop exploring IOT & Robotics at BITS Vizag',
 			description:
 				'Tech Nexus at BITS Vizag: A collaborative workshop uniting students and startups to explore IoT & Robotics, led by Dr. BKC Ganesh, showcasing innovation amidst institutional initiatives.',
@@ -191,17 +200,17 @@
 		{#if i % 2 === 0}
 			<div class="flex divide-x-4 divide-purpleS1 justify-start">
 				<div class="w-[400px] flex items-center justify-center py-16">
-					<div class="w-[800px] flex flex-col">
-						<div class="w-full">
-							<a href={event.href}
-								><img
+					<div class="flex flex-col items-center">
+						<div class="w-[270px] h-[260px]">
+							<a href={event.href}>
+								<img
 									on:mouseenter={() => scaleUp('.img' + i.toString())}
 									on:mouseleave={() => scaleDown('.img' + i.toString())}
-									class={`img${i} image w-full rounded-2xl`}
+									class={`img${i} image w-full h-full object-cover rounded-2xl`}
 									src={event.image}
 									alt=""
-								/></a
-							>
+								/>
+							</a>
 						</div>
 						<div class="text-center pt-3 text-gray-500 font-light">
 							{event.click}
@@ -260,17 +269,17 @@
 				</div>
 				<div class="w-[400px] flex items-center justify-center py-16">
 					<div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r" />
-					<div class="w-[800px] flex flex-col bg-white rounded-2xl">
-						<div class="w-full">
+					<div class="flex flex-col items-center">
+						<div class="w-[270px] h-[260px]">
 							<a href={event.href}>
 								<img
 									on:mouseenter={() => scaleUp('.img' + i.toString())}
 									on:mouseleave={() => scaleDown('.img' + i.toString())}
-									class={`img${i} image w-full rounded-2xl`}
+									class={`img${i} image w-full h-full object-cover rounded-2xl`}
 									src={event.image}
 									alt=""
-								/></a
-							>
+								/>
+							</a>
 						</div>
 						<div class="text-center pt-3 text-gray-500 font-light">
 							{event.click}
@@ -283,14 +292,14 @@
 </section>
 
 <!--<1024px Smaller screens-->
-<section class="lg:hidden flex flex-col w-[100vw] bg-gray-800 ">
+<section class="lg:hidden flex flex-col w-[100vw] bg-gray-800">
 	<div class="flex md:p-10 sm:p-10 xs:py-5 xs:px-12 px-6 py-4 items-center justify-center">
 		<p class="md:text-4xl sm:text-2xl text-2xl font-bold text-gray-300">Events</p>
 	</div>
 	<div class="flex flex-wrap xs:p-10">
 		{#each events as event, i}
 			<div class="flex w-[300px] grow shrink-0 pb-6 justify-center">
-				<div class="flex flex-col bg-white xs:ml-5 mx-2 rounded-2xl items-center p-4 ">
+				<div class="flex flex-col bg-white xs:ml-5 mx-2 rounded-2xl items-center p-4">
 					<p class="md:text-sm sm:text-sm text-lg text-center py-2 font-bold">{event.name}</p>
 					<p class="md:text-sm sm:text-sm text-lg text-center py-2 text-gray-900 font-[400]">
 						{event.description}
@@ -329,3 +338,28 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Enhanced styling for all event images */
+	.image {
+		box-shadow:
+			0 10px 25px rgba(0, 0, 0, 0.15),
+			0 4px 10px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		transition: all 0.3s ease;
+		object-fit: cover;
+	}
+
+	.image:hover {
+		box-shadow:
+			0 15px 35px rgba(0, 0, 0, 0.2),
+			0 6px 15px rgba(0, 0, 0, 0.15);
+		transform: translateY(-2px);
+	}
+
+	/* Mobile image styling */
+	.xs\:h-\[300px\].xs\:w-\[300px\] {
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+</style>
