@@ -1,6 +1,42 @@
 <script>
 	let events = [
 		{
+			name: 'National-Level T10 Championship',
+			description:
+				'BITS Vizag players joined the Andhra Pradesh T10 team flagged off for the National Championship',
+			date: 'November 24, 2025',
+			image: '/events/Champions-T10.jpg',
+			href: 'https://www.instagram.com/p/DRcAh1bDdlP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'Visiting Vice-Chancellor,JNTU GV',
+			description:
+				'BITS Vizag Principal Prof. M. Rajan Babu and TPO Mr. Joshua Raju met the new Hon’ble Vice Chancellor of JNTU Gurajada to convey wishes and discuss future academic collaboration',
+			date: 'November 7, 2025',
+			image: '/events/vice-chancellor.jpg',
+			href: 'https://www.instagram.com/p/DQvtjDijfWw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: ' State-Level T10 Championship',
+			description:
+				'BITS Vizag students powered Andhra Pradesh to win the State T10 Championship, with eight players selected for the Nationals. Congrats to the team and mentor K. Vijay Kumar.',
+			date: 'November 6, 2025',
+			image: '/events/T-10.jpg',
+			href: 'https://www.instagram.com/p/DQuOMxUE_qx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'The Shield Protocol 25',
+			description:
+				'3-day Cybersecurity Essentials workshop with Supraja Technologies, where 200+ participants gained hands-on training in key security tools and emerging cyber trends.',
+			date: 'September 8, 2025',
+			image: '/events/S-Protocol.jpg',
+			href: 'https://www.instagram.com/p/DOq-sPxE1C1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
 			name: 'International Women’s Day 2025',
 			description:
 				' Women leaders shared impactful stories and guided students toward building a more inclusive and progressive environment.',
@@ -11,11 +47,38 @@
 		},
 
 		{
-			name: 'Ekshetra',
+			name: 'Launching Ekshetra 3.0',
 			description: 'A blend of Innovation, Creativity, and Celebration !!!',
 			date: 'February 22, 2025',
 			image: '/events/Ekshethra.jpg',
-			href: 'https://www.instagram.com/ekshetra_3.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+			href: 'https://www.instagram.com/p/DF3G85vt8Gc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'Sankranthi Sambaralu 8.0',
+			description:
+				'BITS Vizag celebrated Sankranti Sambaraalu 8.0 with vibrant festive spirit and warm togetherness.',
+			date: 'January 14, 2024',
+			image: '/events/Sambaralu8.jpg',
+			href: 'https://www.instagram.com/p/DEptB5rtBrV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'Christmas Extravaganza 2.0',
+			description:
+				'BITS Vizag celebrated Christmas Extravaganza 2.0 with joyful carols, vibrant performances, and a warm festive spirit shared by students and faculty.',
+			date: 'December 19, 2024',
+			image: '/events/Extravaganza2.0.jpg',
+			href: 'https://www.instagram.com/p/DB6xJgLtvcd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'HR Campus Connect',
+			description:
+				'BITS Vizag hosted the HR Campus Connect Business Event, bringing students and industry leaders together for impactful discussions on careers, recruitment, and future industry trends.',
+			date: 'November 03, 2024',
+			image: '/events/HRcampus.jpg',
+			href: 'https://www.instagram.com/p/DB6xJgLtvcd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
 		{
@@ -43,6 +106,25 @@
 			date: 'September 24, 2024',
 			image: '/events/12.jpg',
 			href: 'https://www.instagram.com/p/DATssFDzK_Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'Engineers Day Celebrations',
+			description:
+				'Ninety-three students received Meritorious Certificates for top performances.Chief Guest Er. Venkateswara Rao (Chief Engineer, GVMC) highlighted the role of engineers and awarded winners and runners.',
+			date: 'September 23, 2024',
+			image: '/events/EngineersDay.jpg',
+			href: 'https://www.instagram.com/p/DARGr6IToYT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+
+		{
+			name: 'High Performance Computing',
+			description:
+				'BITS Vizag’s CSE Department, in collaboration with CDAC and AICTE Sankalp, hosted an HPC awareness workshop featuring expert insights from HPC Master Trainer Mr. Venkat Kishore',
+			date: 'July 27, 2024',
+			image: '/events/HighperComputing.jpg',
+			href: 'https://www.instagram.com/p/C97LhIzvpuw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
 		{
@@ -181,9 +263,9 @@
 </script>
 
 <!--Bigger Screens-->
-<section class="lg:flex lg:flex-col lg:items-center hidden">
+<section class="lg:flex lg:flex-col lg:items-center hidden lg:py-2">
 	<div class="flex divide-x-4 divide-purpleS1 justify-start">
-		<div class="w-[400px] flex items-center justify-center py-16">
+		<div class="w-[400px] flex items-center justify-center py-8">
 			<div class="w-[800px] flex flex-col bg-white">
 				<div class="w-full">
 					<p class="text-4xl font-bold">Events</p>
@@ -191,8 +273,10 @@
 			</div>
 		</div>
 		<div class="w-[400px] flex py-16 justify-end">
-			<div class="flex flex-col justify-center items-center px-4">
-				<a href="/gallery" class="text-2xl font-bold underline">Explore More ></a>
+			<div class="text-right w-full -mr-24">
+				<a href="/gallery" class="text-2xl font-bold underline whitespace-nowrap"
+					>Explore More on our instagram handle ></a
+				>
 			</div>
 		</div>
 	</div>
