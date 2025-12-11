@@ -3,7 +3,6 @@
 	import Strength from '$lib/components/strength.svelte';
 	import Committies from '$lib/components/committies.svelte';
 
-
 	import Gallery from '$lib/components/gallery.svelte';
 	import Placement from '$lib/components/placement.svelte';
 	import { showNavBar, toggleNavBar } from '$lib/stores/store.js';
@@ -40,14 +39,17 @@
 		</video>
 
 		<div id="scale-logo" class="vidlogo absolute flex justify-center items-center h-full w-full">
-			<img src="/logow.svg" class="mb-24 w-auto lg:h-52 md:h-44 mr-[-35px] pb-10 3xs:h-24 xs:h-32" />
+			<img
+				src="/logow.svg"
+				class="mb-24 w-auto lg:h-52 md:h-44 mr-[-35px] pb-10 3xs:h-24 xs:h-32"
+			/>
 			<img src="/sq-1.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
 		</div>
 	</div>
 	<Autonomous />
 	<Placementheader />
 
-	<h1 class="3xs:text-lg xs:text-xl md:text-4xl text-center p-4 md:p-10 bg-white ">
+	<h1 class="3xs:text-lg xs:text-xl md:text-4xl font-bold text-center p-4 md:p-10 bg-white">
 		CELEBRATE LIFE AT BITS VIZAG
 	</h1>
 
@@ -63,24 +65,34 @@
   >
 	APPLY NOW
   </a> -->
-
-
 {/if}
+
 <style>
 	.cbg {
-  background: linear-gradient(
-    to bottom right,  
-	#DFFF00	, #FD746C, 
-    #FF8235, #ffff1c, 
-    #92FE9D, #00C9FF, 
-    #a044ff, #e73827);
-  background-repeat: no-repeat;
-  background-size: 1000% 1000%;
-  animation: gradient 15s ease infinite;
-}
-@keyframes gradient { 
-  0%{background-position:0% 0%}
-  50%{background-position:100% 100%}
-  100%{background-position:0% 0%}
-}
+		background: linear-gradient(
+			to bottom right,
+			#dfff00,
+			#fd746c,
+			#ff8235,
+			#ffff1c,
+			#92fe9d,
+			#00c9ff,
+			#a044ff,
+			#e73827
+		);
+		background-repeat: no-repeat;
+		background-size: 1000% 1000%;
+		animation: gradient 15s ease infinite;
+	}
+	@keyframes gradient {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 0% 0%;
+		}
+	}
 </style>

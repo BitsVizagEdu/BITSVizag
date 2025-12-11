@@ -33,7 +33,7 @@
 			>
 				<div class="flex justify-center items-center leading-none">
 					<img
-						src="/principal-2.jpg"
+						src="/principal copy.jpg"
 						alt="pic"
 						class="object-cover h-40 w-56 rounded-md shadow-2xl mt-6 transform -translate-y-10 hover:-translate-y-4 transition duration-700"
 					/>
