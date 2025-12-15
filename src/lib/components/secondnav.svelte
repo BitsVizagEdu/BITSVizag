@@ -375,7 +375,7 @@
 		}
 	}
 
-	@media screen and (max-width: 970px) {
+	@media screen and (max-width: 1200px) {
 		nav {
 			display: block;
 			width: 100%;

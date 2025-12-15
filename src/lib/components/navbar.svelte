@@ -62,7 +62,7 @@
 />
 <div id="header" class="bg-gray-800 flex flex-col items-center w-full">
 	<div class="2xl:mx-auto py-2 md:py-4 lg:px-7 w-full">
-		<div class=" flex flex-row lg:justify-between 3xs:justify-center w-full">
+		<div class="flex flex-row justify-between items-center w-full">
 			<!-- Left Logo: NAAC -->
 			<div class="flex flex-col justify-center">
 				<div
@@ -75,7 +75,7 @@
 					/>
 				</div>
 			</div>
-			<div class="flex flex-row justify-center items-center">
+			<div class="flex flex-row justify-center items-center px-1">
 				<div class="flex flex-col justify-center items-center text-center">
 					<h1
 						class="text-4xl 3xs:text-sm 2xs:text-base xs:text-lg sm:text-2xl md:text-2xl lg:text-3xl font-bold text-white tracking-wide text-center px-2"

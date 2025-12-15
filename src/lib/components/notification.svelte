@@ -2,52 +2,53 @@
 	<h3>
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
-				<span class="text-red-700">BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">BITS VIZAG -</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-[#E7087B]"
 					>"From Ideas to Impact: Pitch-A-Thon 2025 at BITS Vizag (A), Powered by Payzo"</span
 				>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
-
+				&nbsp;&nbsp;&nbsp;
 				<span class="text-[#FEC629]"
 					>"Where Academia Meets Industry: BITS Vizag (A) × Kaumodaki Nexus Grid Pvt. Ltd"</span
 				>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
 
 				<span class="text-[#1BA7E5]"
 					>"BITS VIZAG's Cricket Team flagged off for T10 National Championship"</span
 				>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B]">
+					"The Shield Protocol'25 — A Three-Day Cybersecurity Workshop by BITS Vizag (A)"</span
+				>
+			</div>
+			<div class="marquee-title">
+				<span class="text-red-700">|</span>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<span class="text-pink-700"> BITS VIZAG -</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B]"
+					>"From Ideas to Impact: Pitch-A-Thon 2025 at BITS Vizag (A), Powered by Payzo"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+				<span class="text-[#FEC629]"
+					>"Where Academia Meets Industry: BITS Vizag (A) × Kaumodaki Nexus Grid Pvt. Ltd"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+
+				<span class="text-[#1BA7E5]"
+					>"BITS VIZAG's Cricket Team flagged off for T10 National Championship"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
 				<span class="text-[#E7087B]"
 					>"The Shield Protocol'25 — A Three-Day Cybersecurity Workshop by BITS Vizag (A)"</span
 				>&nbsp;&nbsp;&nbsp;
-				<!-- <span class="text-red-700">|</span>
-				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#E7087B]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-
-				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-
-				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#E7087B]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-			</div> -->
-				<div class="marquee-title" />
 			</div>
 		</div>
 	</h3>
@@ -58,27 +59,35 @@
 
 	.marquee {
 		width: 100%;
-		padding: 5px 20px;
+		padding: 5px 0;
 		border-top: 1px solid #000000;
 		border-bottom: 1px solid #000000;
 		text-align: center;
 		overflow: hidden;
+		background: #ffffff;
 	}
 
 	.marquee h3 {
 		font-size: 20px;
 		font-weight: 700;
 		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+		line-height: 1.5;
 	}
 
 	.marquee .marquee-wrapper {
-		width: 100000px;
-		animation: marqueeAnimation 40s linear 0s infinite running;
+		display: flex;
+		width: max-content;
+		animation: marqueeAnimation 35s linear infinite;
 	}
 
 	.marquee h3 .marquee-title {
-		margin-right: 20px;
-		float: left;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		margin-right: 0;
+		padding-right: 50px;
 	}
 
 	.text-stroke-black {
@@ -88,20 +97,23 @@
 	}
 
 	@keyframes marqueeAnimation {
+		0% {
+			transform: translateX(0);
+		}
 		100% {
-			transform: translateX(-3500px);
+			transform: translateX(-50%);
 		}
 	}
 
 	@media (max-width: 992px) {
 		.marquee h3 {
-			font-size: 20px;
+			font-size: 16px;
 		}
 	}
 
 	@media (max-width: 549px) {
 		.marquee h3 {
-			font-size: 18px;
+			font-size: 14px;
 		}
 	}
 </style>
