@@ -55,7 +55,7 @@
 					<p class="text-center text-sm text-gray-600 italic mb-3">M.Tech, Ph.D.</p>
 					<div class="border-t-2 border-red1 w-20 mx-auto mb-3"></div>
 					<p class="text-center font-semibold text-xl text-red1">Principal</p>
-					<p class="text-center text-sm text-gray-900">BITS Vizag</p>
+					<p class="text-center text-sm font-semibold text-gray-900">BITS Vizag</p>
 				</div>
 			</div>
 		</div>

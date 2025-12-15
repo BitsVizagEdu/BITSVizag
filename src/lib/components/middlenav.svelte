@@ -1,5 +1,5 @@
 <nav>
-	<div class="wrapper ">
+	<div class="wrapper">
 		<div class="logo">
 			<a href="/"><img class="w-[120px]" src="/1.png" alt="" /></a>
 		</div>
@@ -323,7 +323,7 @@
 					</div>
 				</div>
 			</li>
-			
+
 			<li><a href="/facilities">Facilities</a></li>
 			<!-- <li><a href="/Mandatory">Mandatory Disclosure</a></li> -->
 
@@ -366,7 +366,7 @@
 			<!--addons-->
 		</ul>
 
-		<label for="menu-btn" class="btn menu-btn "><i class="fas fa-bars text-[#242526]" /></label>
+		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
 	</div>
 </nav>
 
@@ -672,8 +672,18 @@
 	}
 
 	@media screen and (max-width: 970px) {
+		nav {
+			position: sticky;
+			top: 0;
+			z-index: 999;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			width: 100%;
+		}
 		.logo img {
-			display: none;
+			display: block;
+			width: 80px; /* Reduced size for mobile */
+			position: relative;
+			z-index: 100;
 		}
 		.dropdown__icon .fa-user {
 			margin-left: -5px;
@@ -709,7 +719,8 @@
 			margin-left: -5px;
 		}
 		nav .wrapper {
-			justify-content: flex-end;
+			justify-content: space-between;
+			padding: 20px 20px; /* Reduced side padding slightly */
 		}
 
 		.wrapper .btn {

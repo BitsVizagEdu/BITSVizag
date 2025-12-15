@@ -2,13 +2,37 @@
 	<h3>
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B]"
+					>"From Ideas to Impact: Pitch-A-Thon 2025 at BITS Vizag (A), Powered by Payzo"</span
+				>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
-				
+
+				<span class="text-[#FEC629]"
+					>"Where Academia Meets Industry: BITS Vizag (A) × Kaumodaki Nexus Grid Pvt. Ltd"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+
+				<span class="text-[#1BA7E5]"
+					>"BITS VIZAG's Cricket Team flagged off for T10 National Championship"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#E7087B]"
+					>"The Shield Protocol'25 — A Three-Day Cybersecurity Workshop by BITS Vizag (A)"</span
+				>&nbsp;&nbsp;&nbsp;
+				<!-- <span class="text-red-700">|</span>
 				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
-				
+				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				<span class="text-[#E7087B]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+
+				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+
 				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
 				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
@@ -20,37 +44,17 @@
 				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-red-700">|</span>
 				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				
-				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				
-				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#E7087B]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#BDD237]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#FEC629]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				<span class="text-[#1BA7E5]">"Welcome to the Budding Engineers"</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;
+
+				<span class="text-red-700">-BITS VIZAG-</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+			</div> -->
+				<div class="marquee-title" />
 			</div>
-			<div class="marquee-title" />
 		</div>
 	</h3>
 </div>
 
-
 <style>
-
-
-
-    	/* Marquee Css */
+	/* Marquee Css */
 
 	.marquee {
 		width: 100%;

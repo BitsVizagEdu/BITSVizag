@@ -32,7 +32,7 @@
 			<li>
 				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
 			</li>
-			
+
 			<li><a href="/gallery">Gallery</a></li>
 			<li><a href="/Mandatory">Mandatory Disclosure</a></li>
 
@@ -58,12 +58,11 @@
                     </div>
                 </div>
             </li>-->
-			
-			
+
 			<!-- <li><a href="/facilities">Facilities</a></li> -->
-<!-- 
+			<!-- 
 			<li><a href="/gallery">Gallery</a></li> -->
-			
+
 			<li><a href="/NIRF">NIRF</a></li>
 			<li>
 				<a
@@ -378,206 +377,72 @@
 
 	@media screen and (max-width: 970px) {
 		nav {
-			display: none;
-		}
-		.dropdown__icon .fa-user {
-			margin-left: -5px;
-			padding-top: 30px;
-		}
-		.dropdown__icon .fa-graduation-cap {
-			margin-left: -28px;
-			padding-top: 30px;
-		}
-		.dropdown__icon .fa-wand-magic-sparkles {
-			margin-left: -10px;
-			padding-top: 40px;
-		}
-		.dropdown__icon .fa-lightbulb {
-			margin-left: -5px;
-			padding-top: 30px;
-		}
-		.dropdown__icon .fa-gears {
-			margin-left: -5px;
-			padding-top: 40px;
-		}
-
-		.dropdown__icon .fa-file-invoice {
-			margin-left: -5px;
-			padding-top: 40px;
-		}
-
-		.dropdown__icon .fa-screwdriver-wrench {
-			margin-left: -0px;
-			padding-top: 40px;
-		}
-		.dropdown__icon .fa-code {
-			margin-left: -5px;
-		}
-		nav .wrapper {
-			justify-content: flex-end;
-		}
-
-		.wrapper .btn {
 			display: block;
-			padding-right: 25px;
-		}
-
-		.wrapper .nav-links {
-			position: fixed;
-			height: 100vh;
 			width: 100%;
-			max-width: 350px;
-			top: 0;
-			left: -100%;
-			background: #ffffff;
-			display: block;
-			padding: 50px 10px;
-			line-height: 50px;
-			overflow-y: auto;
-			box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
-			transition: all 0.6s ease;
-			z-index: 1;
+			overflow-x: auto;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
+			background: #d22626; /* Ensure red background */
+			position: relative; /* Removed sticky */
+			/* top: 0; Removed top */
+			/* z-index: 50; Removed z-index */
+			box-shadow: none; /* Removed shadow */
 		}
 
-		/* custom scroll bar */
-		::-webkit-scrollbar {
-			width: 10px;
-		}
-
-		::-webkit-scrollbar-track {
-			background: #242526;
-		}
-
-		::-webkit-scrollbar-thumb {
-			background: #3a3b3c;
-		}
-
-		#menu-btn:checked ~ .nav-links {
-			left: 0%;
-		}
-
-		#menu-btn:checked ~ .btn.menu-btn {
+		nav::-webkit-scrollbar {
 			display: none;
 		}
 
-		#close-btn:checked ~ .btn.menu-btn {
-			display: block;
+		nav .wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start; /* Start from left to avoid hiding first item */
+			width: 100%;
+			padding: 0;
+			height: 40px;
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 15px; /* Reduced gap */
+			padding: 0;
+			margin: 0;
+			position: relative;
+			left: 0;
+			height: auto;
+			width: auto;
+			background: transparent;
+			box-shadow: none;
+			overflow: visible;
 		}
 
 		.nav-links li {
-			margin: 15px 10px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
 		}
 
 		.nav-links li a {
-			padding: 0 20px;
-			display: block;
-			font-size: 20px;
-		}
-
-		.nav-links li .link-item {
-			padding: 0 0px;
-			display: block;
-			font-size: 15px;
-			font-weight: 500;
-			line-height: 30px;
-			text-align: center;
-		}
-
-		.nav-links .drop-menu {
-			position: static;
-			opacity: 1;
-			top: 65px;
-			visibility: visible;
-			padding-left: 20px;
-			width: 100%;
-			max-height: 0px;
-			overflow: hidden;
-			box-shadow: none;
+			display: inline-block;
+			color: white; /* Ensure text is white */
+			font-size: 12px;
+			font-weight: 700; /* Bolder text */
+			text-transform: uppercase; /* Uppercase for premium feel */
+			letter-spacing: 0.5px;
+			padding: 0 5px;
+			background: transparent; /* Removed white shade */
+			border-radius: 4px;
+			text-decoration: none;
 			transition: all 0.3s ease;
 		}
 
-		#courses:checked ~ .mega-box,
-		#showMega:checked ~ .mega-box,
-		#departments:checked ~ .mega-box,
-		#exam:checked ~ .mega-box,
-		#iqac:checked ~ .mega-box {
-			max-height: 100%;
-		}
-
-		.nav-links .desktop-item {
-			display: none;
-		}
-
-		.nav-links .mobile-item {
-			display: block;
-			color: #2c426e;
-			font-size: 20px;
-			font-weight: 500;
-			padding-left: 20px;
-			cursor: pointer;
-			border-radius: 5px;
-			transition: all 0.3s ease;
-			font-weight: bold;
-		}
-
-		.nav-links .mobile-item:hover {
-			background: #2c426e;
+		.nav-links li a:hover,
+		.nav-links li a:active {
+			background: rgba(255, 255, 255, 0.25);
 			color: white;
 		}
 
-		.drop-menu li {
-			margin: 0;
-		}
-
-		.drop-menu li a {
-			border-radius: 5px;
-			font-size: 18px;
-		}
-
-		.mega-box {
-			position: static;
-			top: 65px;
-			opacity: 1;
-			visibility: visible;
-			padding: 0 20px;
-			max-height: 0px;
-			overflow: hidden;
-			transition: all 0.3s ease;
-		}
-
-		.mega-box .content {
-			box-shadow: none;
-			flex-direction: column;
-			padding: 20px 20px 0 20px;
-		}
-
-		.mega-box .content .row {
-			width: 100%;
-			margin-bottom: 15px;
-			border-top: 1px solid rgba(255, 255, 255, 0.08);
-		}
-
-		.mega-box .content .row:nth-child(1),
-		.mega-box .content .row:nth-child(2) {
-			border-top: 0px;
-		}
-
-		.content .row .mega-links {
-			border-left: 0px;
-			padding-left: 15px;
-		}
-
-		.row .mega-links li {
-			margin: 0;
-		}
-
-		.content .row header {
-			font-size: 19px;
-		}
-	}
-
-	nav input {
-		display: none;
+		/* Removed unused sidebar specific styles for mobile */
 	}
 
 	.body-text {

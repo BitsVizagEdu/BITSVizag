@@ -57,7 +57,7 @@
 					<h3 class="text-center font-bold text-2xl text-gray-800 mb-2">Dr. K. Srilakshmi</h3>
 					<div class="border-t-2 border-red1 w-20 mx-auto mb-3"></div>
 					<p class="text-center font-bold text-xl text-red1">Secretary & Correspondent</p>
-					<p class="text-center text-sm text-gray-900">BITS Vizag</p>
+					<p class="text-center text-sm font-semibold text-gray-900">BITS Vizag</p>
 				</div>
 			</div>
 		</div>

@@ -1,64 +1,123 @@
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
-    <div class="flex  flex-col-reverse justify-center items-center  mx-auto">
-        <div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
-            <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
-                <h2>About Our College</h2>
-            </div>
-            <div>
-                <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                    Baba Institute of Technology & Sciences (BITS) was founded in 2008. The college was founded by a group of well-known academicians. They are pioneering educators, having unmatched experience in the field of education with a belief that the continuous search for knowledge is the sole path to success. The primary focus of the institution is to expose the young minds to the world of technology and business, instilling in them confidence and fortitude to face new challenges that enable them to excel in their chosen fields. The college inculcates the development of all facets of the mind culminating in an intellectual and balanced personality.With100% seats filled from the year of inception itself, the institute feels confident that they can serve even better with every passing year. This is well equipped to bring out the inherent greatness in students because everyone here genuinely cares about them.
-                </p>
-            </div>
-            <div>
-                 <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The college is accredited by NAAC, approved by AICTE, New Delhi andis currently affiliated to Jawaharlal Nehru Technological University, Kakinada and Jawaharlal Nehru Technological University, GurajadaVizianagaram, Andhra Pradesh. It’s making further advancements in the field of technical education. The campus is located in Visakhapatnam, Andhra Pradesh, close to National Highway-16.
-                </p>
-            </div>
-            <div>
-                 <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The college has signed several Memorandums of Understanding (MOUs) to strengthen the interaction among both academia and industry. The college's Training and Placement cell is very active, and it invites several renowned companies to the campus for placements. The Training and Placement Cell organises numerous training programmes for students in order to improve their employability skills.
-                </p>
-            </div>
-            <div>
-                <p class="text-justify md:text-[15px] 3xs:tracking-normal  xs:tracking-widest mt-4  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1">
-                    The main goal is to prepare the students for all levels of leadership in business, science, and other areas of life through career-focused curriculum and mentoring programmes.The fundamental objective is to allow each student to meet his or her individual goal in life. Students are encouraged to follow dreams and ambitions in a rational and sustainable manner.
-                 </p>
-           </div>
-           <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6">
-            <h2>Vision</h2>
-        </div>
-        <div>
-            <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                To become a leader in Engineering, Technology, Science and Management eduction by building the talent of youth into dynamic professionals.
-            </p>
-        </div>
-        <div class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 pt-3">
-            <h2>Mission</h2>
-        </div>
-        <div>
-            <p class="text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                The mission of the college is to achieve academic excellence in Techincal education
-            </p>
-        </div>
-        <div class="ml-10">
-            <ul class="list-disc text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>The College aims to achieve high moral, ethical & professional standards to make students employable and globally competitive.</li>
-            </ul>
-            <ul class="list-disc pt-4 text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>Providing Quality Education, student-centered Teching-Learning process and state of art infrastructure for professional aspirants hailing from both rural and urban areas.</li>
-            </ul>
-            <ul class="list-disc pt-4 md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>Achieving self sufficiency to ensure qualitative Teaching-Learning practices.</li>
-            </ul>
-            <ul class="list-disc pt-4 text-justify md:text-[15px]  3xs:tracking-normal  xs:tracking-widest  md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm  tracking-wide py-1">
-                <li>Evolving thiks organization into a Centre of academic and research excellence</li>
-            </ul>
-        </div>
-        </div>
-        <div id="pic " class="flex flex-col justify-between ">
-            <div class="rounded-lg">
-                <img src="/baba.jpeg" class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1  md:p-3" alt=""/>
-            </div>
-        </div>
-    </div>
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
+	<div class="flex flex-col-reverse justify-center items-center mx-auto">
+		<div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
+			<div
+				class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6"
+			>
+				<h2>About Our College</h2>
+			</div>
+			<div>
+				<p
+					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					Baba Institute of Technology & Sciences (BITS) was founded in 2008. The college was
+					founded by a group of well-known academicians. They are pioneering educators, having
+					unmatched experience in the field of education with a belief that the continuous search
+					for knowledge is the sole path to success. The primary focus of the institution is to
+					expose the young minds to the world of technology and business, instilling in them
+					confidence and fortitude to face new challenges that enable them to excel in their chosen
+					fields. The college inculcates the development of all facets of the mind culminating in an
+					intellectual and balanced personality.With100% seats filled from the year of inception
+					itself, the institute feels confident that they can serve even better with every passing
+					year. This is well equipped to bring out the inherent greatness in students because
+					everyone here genuinely cares about them.
+				</p>
+			</div>
+			<div>
+				<p
+					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					The college is accredited by NAAC, approved by AICTE, New Delhi andis currently affiliated
+					to Jawaharlal Nehru Technological University, Kakinada and Jawaharlal Nehru Technological
+					University, GurajadaVizianagaram, Andhra Pradesh. It’s making further advancements in the
+					field of technical education. The campus is located in Visakhapatnam, Andhra Pradesh,
+					close to National Highway-16.
+				</p>
+			</div>
+			<div>
+				<p
+					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					The college has signed several Memorandums of Understanding (MOUs) to strengthen the
+					interaction among both academia and industry. The college's Training and Placement cell is
+					very active, and it invites several renowned companies to the campus for placements. The
+					Training and Placement Cell organises numerous training programmes for students in order
+					to improve their employability skills.
+				</p>
+			</div>
+			<div>
+				<p
+					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					The main goal is to prepare the students for all levels of leadership in business,
+					science, and other areas of life through career-focused curriculum and mentoring
+					programmes.The fundamental objective is to allow each student to meet his or her
+					individual goal in life. Students are encouraged to follow dreams and ambitions in a
+					rational and sustainable manner.
+				</p>
+			</div>
+			<div
+				class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6"
+			>
+				<h2>Vision</h2>
+			</div>
+			<div>
+				<p
+					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					To become a leader in Engineering, Technology, Science and Management eduction by building
+					the talent of youth into dynamic professionals.
+				</p>
+			</div>
+			<div
+				class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 pt-3"
+			>
+				<h2>Mission</h2>
+			</div>
+			<div>
+				<p
+					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					The mission of the college is to achieve academic excellence in Techincal education :
+				</p>
+			</div>
+			<div class="ml-10">
+				<ul
+					class="list-disc text-justify md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					<li>
+						The College aims to achieve high moral, ethical & professional standards to make
+						students employable and globally competitive.
+					</li>
+				</ul>
+				<ul
+					class="list-disc pt-4 text-justify md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					<li>
+						Providing Quality Education, student-centered Teching-Learning process and state of art
+						infrastructure for professional aspirants hailing from both rural and urban areas.
+					</li>
+				</ul>
+				<ul
+					class="list-disc pt-4 md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					<li>Achieving self sufficiency to ensure qualitative Teaching-Learning practices.</li>
+				</ul>
+				<ul
+					class="list-disc pt-4 text-justify md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+				>
+					<li>Evolving thiks organization into a Centre of academic and research excellence</li>
+				</ul>
+			</div>
+		</div>
+		<div id="pic " class="flex flex-col justify-between">
+			<div class="rounded-lg">
+				<img
+					src="/baba.jpeg"
+					class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1 md:p-3"
+					alt=""
+				/>
+			</div>
+		</div>
+	</div>
 </section>
