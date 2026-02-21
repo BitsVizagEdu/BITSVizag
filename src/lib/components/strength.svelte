@@ -27,7 +27,7 @@
 				<div class="pr-4 items-center">This is why we are Accredited by</div>
 				<div class="text-5xl font-bold p-4">NAAC A</div>
 			</div>
-			<a href="/aboutus/About-BITS-Vizag" class="flex justify-center items-center">
+			<a href="/aboutus/About-BITS" class="flex justify-center items-center">
 				<button
 					on:mouseenter={() => scaleUp('.button-strength')}
 					on:mouseleave={() => {
