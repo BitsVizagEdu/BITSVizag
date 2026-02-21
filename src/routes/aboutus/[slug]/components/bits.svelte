@@ -1,122 +1,63 @@
-<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
-	<div class="flex flex-col-reverse justify-center items-center mx-auto">
-		<div id="text" class=" lg:w-[90%] 3xs:mb-3 lg:px-10">
-			<div
-				class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6"
-			>
-				<h2>About Our College</h2>
-			</div>
-			<div>
-				<p
-					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					Baba Institute of Technology & Sciences (BITS) was founded in 2008. The college was
-					founded by a group of well-known academicians. They are pioneering educators, having
-					unmatched experience in the field of education with a belief that the continuous search
-					for knowledge is the sole path to success. The primary focus of the institution is to
-					expose the young minds to the world of technology and business, instilling in them
-					confidence and fortitude to face new challenges that enable them to excel in their chosen
-					fields. The college inculcates the development of all facets of the mind culminating in an
-					intellectual and balanced personality.With100% seats filled from the year of inception
-					itself, the institute feels confident that they can serve even better with every passing
-					year. This is well equipped to bring out the inherent greatness in students because
-					everyone here genuinely cares about them.
-				</p>
-			</div>
-			<div>
-				<p
-					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					The college is accredited by NAAC, approved by AICTE, New Delhi andis currently affiliated
-					to Jawaharlal Nehru Technological University, Kakinada and Jawaharlal Nehru Technological
-					University, GurajadaVizianagaram, Andhra Pradesh. It’s making further advancements in the
-					field of technical education. The campus is located in Visakhapatnam, Andhra Pradesh,
-					close to National Highway-16.
-				</p>
-			</div>
-			<div>
-				<p
-					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					The college has signed several Memorandums of Understanding (MOUs) to strengthen the
-					interaction among both academia and industry. The college's Training and Placement cell is
-					very active, and it invites several renowned companies to the campus for placements. The
-					Training and Placement Cell organises numerous training programmes for students in order
-					to improve their employability skills.
-				</p>
-			</div>
-			<div>
-				<p
-					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					The main goal is to prepare the students for all levels of leadership in business,
-					science, and other areas of life through career-focused curriculum and mentoring
-					programmes.The fundamental objective is to allow each student to meet his or her
-					individual goal in life. Students are encouraged to follow dreams and ambitions in a
-					rational and sustainable manner.
-				</p>
-			</div>
-			<div
-				class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6"
-			>
-				<h2>Vision</h2>
-			</div>
-			<div>
-				<p
-					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					To become a leader in Engineering, Technology, Science and Management eduction by building
-					the talent of youth into dynamic professionals.
-				</p>
-			</div>
-			<div
-				class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-6 pt-3"
-			>
-				<h2>Mission</h2>
-			</div>
-			<div>
-				<p
-					class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					The mission of the college is to achieve academic excellence in Techincal education :
-				</p>
-			</div>
-			<div class="ml-10">
-				<ul
-					class="list-disc text-justify md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					<li>
-						The College aims to achieve high moral, ethical & professional standards to make
-						students employable and globally competitive.
-					</li>
-				</ul>
-				<ul
-					class="list-disc pt-4 text-justify md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					<li>
-						Providing Quality Education, student-centered Teching-Learning process and state of art
-						infrastructure for professional aspirants hailing from both rural and urban areas.
-					</li>
-				</ul>
-				<ul
-					class="list-disc pt-4 md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					<li>Achieving self sufficiency to ensure qualitative Teaching-Learning practices.</li>
-				</ul>
-				<ul
-					class="list-disc pt-4 text-justify md:text-[15px] 3xs:tracking-normal xs:tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
-				>
-					<li>Evolving thiks organization into a Centre of academic and research excellence</li>
-				</ul>
-			</div>
+<section class=" bg-slate-200 p-10">
+	<div class="w-full max-w-[1200px] mx-auto px-4 md:px-10">
+		<div class="text-red1 text-center xs:text-[20px] sm:text-[25px] font-bold pb-6 xl:col-span-2">
+			<h2>ABOUT OUR COLLEGE</h2>
 		</div>
-		<div id="pic " class="flex flex-col justify-between">
-			<div class="rounded-lg">
-				<img
-					src="/baba.jpeg"
-					class=" 3xs:w-full xs:w-full md:h-[320px] lg:h-[420px] 3xs:p-1 md:p-3"
-					alt=""
-				/>
+		<div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-10 items-start">
+			<!-- Text content -->
+			<div id="text" class="text-justify">
+				<div>
+					<p
+						class="font-['Arial'] text-justify md:text-[15px] tracking-wider lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
+					>
+						Baba Institute of Technology & Sciences (BITS), established in 2008, is an autonomous,
+						NAAC-accredited institution approved by AICTE and affiliated with JNTU–GV. Located in
+						Visakhapatnam, BITS is committed to delivering value-based technical education through
+						strong academics, modern infrastructure, and industry-oriented learning. The institute
+						focuses on developing competent professionals with strong ethical values, leadership
+						qualities, and a sense of social responsibility.
+					</p>
+				</div>
+				<div></div>
+				<div
+					class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-1 pt-2"
+				>
+					<h2>Vision</h2>
+				</div>
+				<div>
+					<p
+						class="font-['Arial'] text-justify md:text-[15px] tracking-widest md:font-bold lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
+					>
+						To emerge as a leader in Engineering, Technology, Science, and Management education by
+						transforming youth into dynamic professionals.
+					</p>
+				</div>
+				<div
+					class="text-red1 3xs:text-center lg:text-center xs:text-[20px] sm:text-[25px] font-bold 3xs:pb-1 md:pb-1 pt-0"
+				>
+					<h2>Mission</h2>
+				</div>
+				<div>
+					<ul
+						class="font-['Arial'] list-disc text-justify md:text-[15px] tracking-widest md:font-bold lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
+					>
+						<li>Deliver quality, outcome-based technical education</li>
+						<li>Foster innovation, ethics, and professional competence</li>
+						<li>Strengthen industry–academia collaboration</li>
+						<li>Prepare students to be globally competitive and socially responsible</li>
+					</ul>
+				</div>
+			</div>
+			<div id="pic" class="flex flex-col items-center xl:items-start w-full">
+				<div
+					class="w-full max-w-[400px] 3xs:h-[450px] xs:h-[500px] md:h-[600px] xl:h-[400px] p-3 rounded-[50px] overflow-hidden"
+				>
+					<img src="/baba1.png" class="w-full h-full object-cover scale-110" alt="" />
+				</div>
+				<div class="mt-4 rounded-2xl w-full max-w-[400px]">
+					<h3 class="text-center font-bold text-2xl text-gray-800 mb-2">BITS Vizag</h3>
+					<div class="border-t-2 border-red1 w-20 mx-auto mb-3"></div>
+				</div>
 			</div>
 		</div>
 	</div>

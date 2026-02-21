@@ -1,569 +1,725 @@
+<script>
+	function closeMenus() {
+		if (typeof document !== 'undefined') {
+			const checkboxes = document.querySelectorAll('.nav-links input[type="checkbox"]');
+			checkboxes.forEach((cb) => {
+				if (cb instanceof HTMLInputElement) cb.checked = false;
+			});
+			const menuBtn = document.getElementById('menu-btn');
+			if (menuBtn instanceof HTMLInputElement) menuBtn.checked = false;
+		}
+	}
+</script>
+
 <nav>
 	<div class="wrapper">
-		<div class="logo">
-			<a href="/"><img class="w-[120px]" src="/1.png" alt="" /></a>
+		<div class="logo flex items-center">
+			<a href="/"
+				><img
+					class="w-[110px] md:w-[140px] xl:w-[160px] transition-all"
+					src="/1.png"
+					alt="BITS Vizag Logo"
+				/></a
+			>
 		</div>
 		<input type="radio" name="slider" id="menu-btn" />
 		<input type="radio" name="slider" id="close-btn" />
 
-		<ul class="nav-links gap-0 lg:gap-12">
+		<ul class="nav-links h-full">
 			<label for="close-btn" class="btn close-btn">
-				<i class="fas fa-times text-[#242526]" />
+				<i class="fas fa-times text-slate-800" />
 			</label>
-			<li><a href="/">Home</a></li>
+			<li><a href="/" on:click={closeMenus}>Home</a></li>
+
+			<!-- About Us -->
 			<li>
-				<a href="/aboutus/About-BITS-Vizag" class="desktop-item"> About Us</a>
+				<a href="/aboutus/About-BITS-Vizag" class="desktop-item">About Us</a>
 				<input type="checkbox" id="showMega" />
 				<label for="showMega" class="mobile-item">About Us</label>
 				<div class="mega-box">
-					<div class="content">
-						<div class="row flex 3xs:gap-8 xl:gap-20 md:flex-col lg:flex-row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/aboutus/About-ABWS')}
-							>
-								<div class="row">
-									<div class="dropdown__icon">
-										<i class="fa-solid fa-building" />
-									</div>
-									<header>
-										<div
-											class="link-item"
-											on:click={() => (window.location.href = '/aboutus/About-ABWS')}
-										>
-											About ABWS
-										</div>
-									</header>
-								</div>
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 px-10 border-r border-slate-50">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-building-columns text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-bold text-slate-900">The Institution</header>
 							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
-							>
-								<div class="row">
-									<div class="dropdown__icon">
-										<i class="fa-solid fa-building-columns" />
-									</div>
-									<header>
-										<div
-											class="link-item"
-											on:click={() => (window.location.href = '/aboutus/About-BITS-Vizag')}
-										>
-											About BITS VIZAG
-										</div>
-									</header>
-								</div>
+							<div class="flex flex-col gap-2">
+								<a
+									href="/aboutus/About-ABWS"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-shield-heart text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">About ABWS</span>
+								</a>
+								<a
+									href="/aboutus/About-BITS"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-landmark text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">About Bits Vizag</span>
+								</a>
 							</div>
 						</div>
-						<div
-							class="link-item cursor-pointer"
-							on:click={() =>
-								(window.location.href = '/aboutus/Message-from-Secretary & Correspondent')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-user" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/aboutus/Message-from-Chairman')}
+						<div class="flex-1 py-10 px-10">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-user-tie text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-bold text-slate-900">Leadership</header>
+							</div>
+							<div class="flex flex-col gap-2">
+								<a
+									href="/aboutus/Message-from-Secretary-&-Correspondent"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-pen-nib text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700"
+										>Message from Secretary & Correspondent</span
 									>
-										Message from Secretary & Correspondent
-									</div>
-								</header>
+								</a>
+
+								<a
+									href="/aboutus/Message-from-Principal"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-graduation-cap text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Message From Principal</span>
+								</a>
 							</div>
 						</div>
-						<div
-							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/aboutus/Message-from-Principal')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-user" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/aboutus/Message-from-Principal')}
-									>
-										Message From Principal
-									</div>
-								</header>
-							</div>
-						</div>
-						<!-- <div
-							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/affilation-reports')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-note-sticky"></i>
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/affilation-reports')}
-									>
-										Affilation Reports
-									</div>
-								</header>
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</li>
+
+			<!-- Governance -->
+			<li>
+				<a href="/governance" class="desktop-item">Governance</a>
+				<input type="checkbox" id="governance" />
+				<label for="governance" class="mobile-item">Governance</label>
+				<div class="mega-box">
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-balance-scale text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-extrabold text-slate-900 tracking-tight">
+									Administration
+								</header>
+							</div>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<a
+									href="/governance/board-of-trustees"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-users-rectangle text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">Board of Trustees</span>
+								</a>
+								<a
+									href="/governance/governing-body"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-sitemap text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">Governing Body</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<!-- Courses -->
 			<li>
 				<a href="/courses/Under Graduation" class="desktop-item">Courses</a>
 				<input type="checkbox" id="courses" />
 				<label for="courses" class="mobile-item">Courses</label>
-				<div class="mega-box">
-					<div class="content">
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/courses/Under Graduation')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-graduation-cap" />
+				<div class="mega-box !max-w-[1100px]">
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden"
+					>
+						<!-- Courses Main Section (UG) -->
+						<div class="flex-[1.5] py-10 px-12 text-left bg-white">
+							<div class="flex items-center gap-4 mb-10 border-b border-slate-100 pb-5">
+								<div class="w-10 h-10 flex items-center justify-center rounded-xl">
+									<i class="fa-solid fa-scroll text-[#2672d5] text-lg" />
 								</div>
-								<header>
+								<header class="text-xl font-bold text-slate-900">Under Graduation</header>
+							</div>
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+								<a
+									href="/department/Department of CSE"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+								>
 									<div
-										class="link-item ml-[-20px]"
-										on:click={() => (window.location.href = '/courses/Under Graduation')}
+										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
 									>
-										Under Graduation
+										<i
+											class="fa-solid fa-laptop-code text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+										/>
 									</div>
-								</header>
+									<div class="flex flex-col text-left">
+										<span class="text-[16px] font-bold text-slate-900">Computer Science</span>
+										<span class="text-[10px] text-slate-500 font-bold mt-0.5">Engineering</span>
+									</div>
+								</a>
+								<a
+									href="/department/Department of ECE"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<div
+										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+									>
+										<i
+											class="fa-solid fa-microchip text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[16px] font-bold text-slate-900"
+											>Electronics & Communication</span
+										>
+										<span class="text-[10px] text-slate-500 mt-0.5">Engineering</span>
+									</div>
+								</a>
+								<a
+									href="/department/Department of EEE"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<div
+										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+									>
+										<i
+											class="fa-solid fa-bolt-lightning text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[16px] font-bold text-slate-900"
+											>Electrical & Electronics</span
+										>
+										<span class="text-[10px] text-slate-500 mt-0.5">Engineering</span>
+									</div>
+								</a>
+								<a
+									href="/department/Department of BS&H"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<div
+										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+									>
+										<i
+											class="fa-solid fa-atom text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[16px] font-bold text-slate-900"
+											>Basic Sciences & Humanities</span
+										>
+										<span class="text-[10px] text-slate-500 mt-0.5">Basic Sciences</span>
+									</div>
+								</a>
+								<a
+									href="/department/Department of CIVIL"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<div
+										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+									>
+										<i
+											class="fa-solid fa-hard-hat text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[16px] font-bold text-slate-900">Civil Engineering</span>
+										<span class="text-[10px] text-slate-500 mt-0.5">Structure</span>
+									</div>
+								</a>
+								<a
+									href="/department/Department of MECH"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<div
+										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+									>
+										<i
+											class="fa-solid fa-gears w-6 h-6 text-[#2672d5] group-hover:scale-110 transition-transform"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[16px] flex-auto font-bold text-slate-900"
+											>Mechanical Engineering</span
+										>
+										<span class="text-[10px] text-slate-500 mt-0.5">Machinery</span>
+									</div>
+								</a>
 							</div>
 						</div>
-						<div
-							class="link-item cursor-pointer"
-							on:click={() => (window.location.href = '/courses/Post Graduation')}
-						>
-							<div class="row">
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-graduation-cap" />
+
+						<!-- Featured Section (PG) -->
+						<div class="flex-1 bg-slate-50/50 py-10 px-10 text-left border-l border-slate-100">
+							<div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-5">
+								<div
+									class="w-10 h-10 flex items-center justify-center bg-white rounded-xl shadow-sm"
+								>
+									<i class="fa-solid fa-award text-[#2672d5] text-lg" />
 								</div>
-								<header>
+								<header class="text-xl font-bold text-slate-900">Post Graduation</header>
+							</div>
+							<div class="flex flex-col gap-5">
+								<a
+									href="/department/Department of MBA"
+									on:click={closeMenus}
+									class="group flex items-center gap-6 bg-white p-5 rounded-2xl transition-all shadow-sm hover:shadow-md hover:bg-blue-50 border border-slate-100"
+								>
 									<div
-										class="link-item ml-[-40px]"
-										on:click={() => (window.location.href = '/courses/Post Graduation')}
+										class="w-14 h-14 flex items-center justify-center bg-[#2672d5]/[0.1] text-[#2672d5] rounded-2xl transition-all"
 									>
-										Post Graduation
+										<i class="fa-solid fa-briefcase text-2xl" />
 									</div>
-								</header>
+									<div class="flex flex-col">
+										<span class="text-lg font-bold text-slate-900">MBA</span>
+										<span class="text-[10px] text-slate-500 font-bold mt-2 tracking-widest"
+											>Management</span
+										>
+									</div>
+								</a>
+								<a
+									href="/courses/Post-Graduation"
+									on:click={closeMenus}
+									class="group flex items-center gap-6 bg-white p-5 rounded-2xl transition-all shadow-sm hover:shadow-md hover:bg-blue-50 border border-slate-100"
+								>
+									<div
+										class="w-14 h-14 flex items-center justify-center bg-[#2672d5]/[0.1] text-[#2672d5] rounded-2xl transition-all"
+									>
+										<i class="fa-solid fa-laptop-code text-2xl" />
+									</div>
+									<div class="flex flex-col">
+										<span class="text-lg font-bold text-slate-900">M.Tech</span>
+										<span class="text-[10px] text-slate-500 font-bold mt-2">Technology</span>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</li>
 
+			<!-- Faculty -->
 			<li>
-				<a
-					on:click={() => (window.location.href = '/department/Department of BS&H')}
-					class="desktop-item cursor-pointer"
-				>
-					Academics
-				</a>
-				<input type="checkbox" id="departments" />
-				<label for="departments" class="mobile-item">Academics</label>
+				<a href="/faculty/teaching-staff" class="desktop-item">Faculty</a>
+				<input type="checkbox" id="faculty" />
+				<label for="faculty" class="mobile-item">Faculty</label>
 				<div class="mega-box">
-					<div class="content">
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of CSE')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-code" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of CSE')}
-									>
-										Computer Science and Engineering
-									</div>
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 flex flex-col justify-center items-center py-10 px-10">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-chalkboard-user text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] flex items-center font-bold text-slate-900">
+									Our Educators
 								</header>
 							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of BS&H')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-wand-magic-sparkles" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of BS&H')}
-									>
-										Basic Sciences & Humanities
-									</div>
-								</header>
-							</div>
-						</div>
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of ECE')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-lightbulb" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of ECE')}
-									>
-										Electronics and Communication Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of CIVIL')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-screwdriver-wrench" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of CIVIL')}
-									>
-										Civil Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of MBA')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-file-invoice" />
-								</div>
-								<header>
-									<div
-										class="link-item cursor-pointer"
-										on:click={() => (window.location.href = '/department/Department of MBA')}
-									>
-										Management Studies
-									</div>
-								</header>
-							</div>
-						</div>
-						<div class="row">
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of EEE')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-lightbulb" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of EEE')}
-									>
-										Electrical and Electronics Engineering
-									</div>
-								</header>
-							</div>
-							<div
-								class="link-item cursor-pointer"
-								on:click={() => (window.location.href = '/department/Department of MECH')}
-							>
-								<div class="dropdown__icon">
-									<i class="fa-solid fa-gears" />
-								</div>
-								<header>
-									<div
-										class="link-item"
-										on:click={() => (window.location.href = '/department/Department of MECH')}
-									>
-										Mechanical Engineering
-									</div>
-								</header>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<a
+									href="/faculty/teaching-staff"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-user-graduate text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-900">Teaching Staff</span>
+								</a>
+								<a
+									href="/faculty/non-teaching-staff"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-user-gear text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-900">Non-Teaching Staff</span>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</li>
 
-			<li><a href="/placements">Career Development Cell</a></li>
-			<!--<li><a href="#">Academics</a></li>-->
+			<!-- Exam Cell -->
 			<li>
-				<a href="#" class="desktop-item">Exam Cell</a>
-				<input type="checkbox" id="exam" />
-				<label for="exam" class="mobile-item">Exam Cell</label>
+				<a href="/examcell/BTECH" class="desktop-item">Exam Cell</a>
+				<input type="checkbox" id="examcell" />
+				<label for="examcell" class="mobile-item">Exam Cell</label>
 				<div class="mega-box">
-					<div class="content">
-						<div class="row">
-							<div class="dropdown__icon">
-								<i class="fa-solid fa-user-graduate" />
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-file-invoice-dollar text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-bold text-slate-900">
+									Examination Services
+								</header>
 							</div>
-							<header><a href="/examcell/BTECH">Engineering - B.Tech</a></header>
-						</div>
-
-						<div class="row">
-							<div class="dropdown__icon">
-								<i class="fa-solid fa-user-graduate" />
+							<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+								<a
+									href="/examcell/BTECH"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-user-graduate text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">B.Tech</span>
+								</a>
+								<a
+									href="/examcell/MBA"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-briefcase text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">MBA</span>
+								</a>
+								<a
+									href="/examcell/MTECH"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-laptop-code text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">M.Tech</span>
+								</a>
 							</div>
-							<header><a href="/examcell/MTECH">Engineering - M.Tech</a></header>
-						</div>
-
-						<div class="row">
-							<div class="dropdown__icon">
-								<i class="fa-solid fa-user-graduate" />
-							</div>
-							<header><a href="/examcell/MBA">Management Studies</a></header>
 						</div>
 					</div>
 				</div>
 			</li>
 
-			<li><a href="/facilities">Facilities</a></li>
-			<!-- <li><a href="/Mandatory">Mandatory Disclosure</a></li> -->
-
-			<!--addons-->
-
-			<li class="addon xl:hidden"><a href="/contactus">Contact Us</a></li>
-
-			<li class="addon xl:hidden"><a href="/alumini-data">Alumini</a></li>
-			<!--<li class="addon xl:hidden">
-                <a href="/examcell" class="desktop-item">Exam Cell</a>
-                <input type="checkbox" id="exam"/>
-                <label for="exam" class="mobile-item">Exam Cell</label>
-                <div class="mega-box">
-                    <div class="content">
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user-graduate"/>
-                            </div>
-                            <header><a href="/examcell/Engineering">Engineering</a></header>
-                        </div>
-                        <div class="row">
-                            <div class="dropdown__icon">
-                                <i class="fa-solid fa-user-graduate"/>
-                            </div>
-                            <header><a href="/examcell/MBA">Management Studies</a></header>
-                        </div>
-                    </div>
-                </div>
-            </li>-->
-			<li class="addon xl:hidden">
-				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank">Social Life</a>
+			<!-- Facilities -->
+			<li>
+				<a href="/facilities" class="desktop-item">Facilities</a>
+				<input type="checkbox" id="facilities" />
+				<label for="facilities" class="mobile-item">Facilities</label>
+				<div class="mega-box !max-w-[1000px]">
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-building-circle-check text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-bold text-slate-900">Campus Amenities</header>
+							</div>
+							<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+								<a
+									href="/facilities/Knowledge-Resource-Center"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<i
+										class="fa-solid fa-book-atlas text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Knowledge Center</span>
+								</a>
+								<a
+									href="/facilities/Accomidation"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<i
+										class="fa-solid fa-bed text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Accomidation</span>
+								</a>
+								<a
+									href="/facilities/Cafeteria"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<i
+										class="fa-solid fa-utensils text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Cafeteria</span>
+								</a>
+								<a
+									href="/facilities/Sports"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<i
+										class="fa-solid fa-basketball text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Sports</span>
+								</a>
+								<a
+									href="/facilities/Laboratories"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<i
+										class="fa-solid fa-flask-vial text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Laboratories</span>
+								</a>
+								<a
+									href="/facilities/Transport"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+								>
+									<i
+										class="fa-solid fa-bus text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[15px] font-bold text-slate-700">Transport</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</li>
-			<!-- <li class="addon xl:hidden">
-				<a href="/feedback">Feedback</a>
-			</li> -->
-			<li class="addon xl:hidden">
-				<a href="/feedback">Online Grievances</a>
+
+			<!-- Research -->
+			<li>
+				<a href="/research/publications" class="desktop-item">Research</a>
+				<input type="checkbox" id="research" />
+				<label for="research" class="mobile-item">Research</label>
+				<div class="mega-box">
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-microscope text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-bold text-slate-900">Discovery & Growth</header>
+							</div>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<a
+									href="/research/publications"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-newspaper text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">Publications</span>
+								</a>
+								<a
+									href="/research/projects"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-vial-circle-check text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-700">Research Projects</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</li>
 
-			<!--addons-->
+			<!-- CDC (Career Development Cell) -->
+			<li>
+				<a href="/placements" class="desktop-item">CDC</a>
+				<input type="checkbox" id="cdc" />
+				<label for="cdc" class="mobile-item">CDC</label>
+				<div class="mega-box !max-w-[1000px]">
+					<div
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-rocket text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-extrabold text-slate-900">
+									Career Development Cell
+								</header>
+							</div>
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+								<a
+									href="/placements"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-briefcase text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<div class="flex flex-col">
+										<span class="text-[16px] text-slate-900">Training & Placements</span>
+										<span class="text-[11px] text-slate-500 font-medium mt-0.5"
+											>Career Opportunities</span
+										>
+									</div>
+								</a>
+								<a
+									href="/Industry-Linkages"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-handshake text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<div class="flex flex-col">
+										<span class="text-[16px] text-slate-900">Industry Linkages</span>
+										<span class="text-[11px] text-slate-500 font-medium mt-0.5"
+											>International Collaborations</span
+										>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
 		</ul>
 
-		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-[#242526]" /></label>
+		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-slate-800" /></label>
 	</div>
 </nav>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-	.dropdown__icon i {
-		font-size: 2.3rem;
-		color: hsl(220, 68%, 54%);
-		border-radius: 50%;
-		padding: 11px 10px;
-		margin-left: 20px;
-	}
-
-	.dropdown__icon .fa-code {
-		margin-left: -20px;
-	}
-
-	.dropdown__icon .fa-wand-magic-sparkles {
-		margin-left: -10px;
-	}
-
-	.dropdown__icon .fa-lightbulb {
-		margin-left: -5px;
-	}
-
-	.dropdown__icon .fa-gears {
-		margin-left: -5px;
-	}
-
-	.dropdown__icon .fa-file-invoice {
-		margin-left: -5px;
-	}
-
-	.dropdown__icon .fa-screwdriver-wrench {
-		margin-left: -0px;
-	}
-
-	.dropdown__icon .fa-user-graduate {
-		margin-left: -45px;
-	}
-
-	.dropdown__icon .fa-graduation-cap {
-		margin-left: -35px;
-	}
-
-	.dropdown__icon .fa-building-columns {
-		margin-left: -5px;
-	}
-	.dropdown__icon .fa-building {
-		margin-left: -5px;
-	}
-
-	.dropdown__icon .fa-user {
-		margin-left: -0px;
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 	nav {
 		z-index: 99;
 		width: 100%;
-
-		background: hsl(220, 100%, 99%);
+		background: #ffffff;
+		font-family: 'Outfit', sans-serif;
 	}
 
 	nav .wrapper {
 		position: relative;
 		max-width: 1600px;
-		padding: 20px 45px;
+		padding: 0 20px;
 		height: 80px;
-		line-height: 70px;
+		line-height: normal;
 		margin: auto;
 		display: flex;
 		align-items: center;
-		gap: 80px;
+		justify-content: space-between;
+		gap: 0;
 	}
 
-	.wrapper .logo a {
-		color: #253c6a;
-		font-size: 30px;
-		font-weight: 600;
-		text-decoration: none;
+	.wrapper .logo img {
+		width: 130px;
 	}
 
 	.wrapper .nav-links {
-		display: inline-flex;
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: space-evenly;
+		white-space: nowrap;
+		height: 100%;
 	}
 
 	.nav-links li {
 		list-style: none;
-	}
-
-	.nav-links li .link-item {
-		color: #253c6a;
-		text-decoration: none;
-		font-size: 16px;
-		font-weight: 600;
-		padding: 9px 10px;
-		border-radius: 5px;
-		transition: all 0.3s ease;
-		font-family: 'Poppins', sans-serif;
-	}
-
-	.nav-links li .link-item:hover {
-		color: hsl(220, 68%, 54%);
+		height: 100%;
+		display: flex;
+		align-items: center;
 	}
 
 	.nav-links li a {
-		color: #253c6a;
+		color: #334155;
 		text-decoration: none;
 		font-size: 15px;
-		font-weight: 600;
-		padding: 9px 20px;
-		border-radius: 5px;
-		transition: all 0.3s ease;
-		font-family: 'Poppins', sans-serif;
+		padding: 10px 14px;
+		border-radius: 10px;
+		transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		white-space: nowrap;
+		line-height: normal;
+		text-transform: none;
+		letter-spacing: 0.02em;
+		font-weight: 700;
+		font-family:
+			'Inter',
+			system-ui,
+			-apple-system,
+			Segoe UI,
+			Roboto,
+			sans-serif;
 	}
 
 	.nav-links li a:hover {
-		color: hsl(220, 68%, 54%);
+		color: #2672d5;
+		background: #f8fafc;
+		transform: translateY(-1px);
 	}
 
 	.nav-links .mobile-item {
 		display: none;
-		font-weight: bold;
-	}
-
-	.nav-links li:hover .drop-menu,
-	.nav-links li:hover .mega-box {
-		transition: all 0.3s ease;
-		top: 70px;
-		opacity: 1;
-		visibility: visible;
-	}
-
-	.drop-menu li a {
-		width: 100%;
-		display: block;
-		padding: 0 0 0 15px;
-		font-weight: 400;
-		border-radius: 0px;
+		font-weight: 800;
 	}
 
 	.mega-box {
 		position: absolute;
-		left: 0;
-		width: 100%;
-		top: 85px;
+		left: 50%;
+		transform: translateX(-50%) translateY(10px);
+		width: 95vw;
+		max-width: 950px;
 		opacity: 0;
 		visibility: hidden;
+		transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 		text-align: center;
-		z-index: 1;
+		z-index: 100;
+		top: 80px;
+		pointer-events: none;
 	}
 
-	.mega-box .content {
-		background: #ffffff;
-		padding: 11px 100px;
-		display: flex;
+	.mega-box::before {
+		content: '';
+		position: absolute;
+		top: -40px;
+		left: 0;
 		width: 100%;
-		justify-content: space-evenly;
-		box-shadow: 50px 40px 10px rgba(0, 0, 0, 0.15);
-		border-radius: 10px 10px 10px 10px;
+		height: 40px;
+		background: transparent;
 	}
 
-	.mega-box .content .row {
-		line-height: 45px;
+	.nav-links li:hover .mega-box {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(-50%) translateY(0);
+		pointer-events: auto;
 	}
 
-	.mega-box .content .row header a {
-		color: hsl(220, 48%, 28%);
-		font-weight: bold;
-		margin-left: -40px;
+	.content {
+		position: relative;
 	}
 
-	.content .row .mega-links {
-		margin-left: -40px;
-		border-left: 1px solid rgba(255, 255, 255, 0.09);
-	}
-
-	.row .mega-links li {
-		padding: 0 20px;
-	}
-
-	.row .mega-links li a {
-		padding: 0px;
-		padding: 0 20px;
-		color: #253c6a;
-		font-size: 15px;
-		display: block;
-	}
-
-	.row .mega-links li a:hover {
-		color: hsl(220, 68%, 54%);
+	.mega-box .content header {
+		font-family: 'Outfit', sans-serif !important;
 	}
 
 	.wrapper .btn {
-		color: #fff;
-		font-size: 20px;
+		color: #1e293b;
+		font-size: 24px;
 		cursor: pointer;
 		display: none;
 	}
@@ -571,333 +727,125 @@
 	.wrapper .btn.close-btn {
 		position: absolute;
 		right: 30px;
-		top: 10px;
+		top: 20px;
 	}
 
-	@media screen and (max-width: 1347px) {
-		nav .wrapper {
-			gap: 70px;
-		}
-	}
-
-	@media screen and (max-width: 1447px) {
-		nav .wrapper {
-			gap: 70px;
-		}
-		.nav-links li a {
-			font-size: 13px;
-			font-weight: 700;
-			padding: 9px 13px;
-		}
-	}
-
-	@media screen and (max-width: 1402px) {
-		nav .wrapper {
-			gap: 70px;
-		}
-		.nav-links li a {
-			font-size: 14px;
-			font-weight: 700;
-			padding: 9px 13px;
-		}
-	}
-
-	@media screen and (max-width: 1300px) {
-		nav .wrapper {
-			gap: 30px;
-		}
-		.nav-links li a {
-			font-size: 13px;
-			font-weight: 700;
-			padding: 9px 13px;
-		}
-	}
-
-	@media screen and (max-width: 1240px) {
-		.nav-links li a {
-			font-size: 12px;
-			font-weight: 700;
-			padding: 9px 10px;
-		}
-
-		.nav-links li .link-item {
-			font-size: 14px;
-			font-weight: 700;
-		}
-	}
-
-	@media screen and (max-width: 1163px) {
-		.nav-links li a {
-			font-size: 11px;
-			font-weight: 700;
-			padding: 9px 10px;
-		}
-	}
-
-	@media screen and (max-width: 1101px) {
-		.nav-links li a {
-			font-size: 10px;
-			font-weight: 700;
-			padding: 9px 10px;
-		}
-
-		.nav-links li .link-item {
-			font-size: 11px;
-			font-weight: 700;
-		}
-	}
-
-	@media screen and (max-width: 1037px) {
-		.nav-links li a {
-			font-size: 10px;
-			font-weight: 900;
-		}
-
-		.nav-links li .link-item {
-			font-size: 11px;
-			font-weight: 700;
-		}
-	}
-
-	@media screen and (max-width: 975px) {
-		.nav-links li a {
-			font-size: 9px;
-			font-weight: 700;
-		}
-
-		.nav-links li .link-item {
-			font-size: 11px;
-			font-weight: 700;
-		}
-	}
-
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 1280px) {
 		nav {
 			position: sticky;
 			top: 0;
 			z-index: 999;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 			width: 100%;
 		}
 		.logo img {
 			display: block;
-			width: 80px; /* Reduced size for mobile */
-			position: relative;
-			z-index: 100;
-		}
-		.dropdown__icon .fa-user {
-			margin-left: -5px;
-			padding-top: 30px;
-		}
-		.dropdown__icon .fa-graduation-cap {
-			margin-left: -28px;
-			padding-top: 30px;
-		}
-		.dropdown__icon .fa-wand-magic-sparkles {
-			margin-left: -10px;
-			padding-top: 40px;
-		}
-		.dropdown__icon .fa-lightbulb {
-			margin-left: -5px;
-			padding-top: 30px;
-		}
-		.dropdown__icon .fa-gears {
-			margin-left: -5px;
-			padding-top: 40px;
-		}
-
-		.dropdown__icon .fa-file-invoice {
-			margin-left: -5px;
-			padding-top: 40px;
-		}
-
-		.dropdown__icon .fa-screwdriver-wrench {
-			margin-left: -0px;
-			padding-top: 40px;
-		}
-		.dropdown__icon .fa-code {
-			margin-left: -5px;
+			width: 100px;
 		}
 		nav .wrapper {
 			justify-content: space-between;
-			padding: 20px 20px; /* Reduced side padding slightly */
+			padding: 0 20px;
+			height: 70px;
+			gap: 0;
 		}
 
 		.wrapper .btn {
 			display: block;
-			padding-right: 25px;
 		}
 
 		.wrapper .nav-links {
 			position: fixed;
 			height: 100vh;
 			width: 100%;
-			max-width: 350px;
+			max-width: 320px;
 			top: 0;
 			left: -100%;
 			background: #ffffff;
 			display: block;
-			padding: 50px 10px;
-			line-height: 50px;
+			padding: 70px 24px;
 			overflow-y: auto;
-			box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
-			transition: all 0.6s ease;
-			z-index: 1;
-		}
-
-		/* custom scroll bar */
-		::-webkit-scrollbar {
-			width: 10px;
-		}
-
-		::-webkit-scrollbar-track {
-			background: #242526;
-		}
-
-		::-webkit-scrollbar-thumb {
-			background: #3a3b3c;
+			box-shadow: 20px 0px 60px rgba(0, 0, 0, 0.08);
+			transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+			z-index: 1000;
 		}
 
 		#menu-btn:checked ~ .nav-links {
 			left: 0%;
 		}
 
-		#menu-btn:checked ~ .btn.menu-btn {
-			display: none;
-		}
-
-		#close-btn:checked ~ .btn.menu-btn {
-			display: block;
-		}
-
 		.nav-links li {
-			margin: 15px 10px;
+			margin: 12px 0;
+			display: block;
+			height: auto;
 		}
 
 		.nav-links li a {
-			padding: 0 20px;
+			padding: 14px 20px;
 			display: block;
-			font-size: 20px;
+			font-size: 17px;
+			font-weight: 800;
+			border-radius: 14px;
+			color: #0f172a;
+			line-height: normal;
 		}
 
-		.nav-links li .link-item {
-			padding: 0 0px;
+		.nav-links .mobile-item {
 			display: block;
-			font-size: 15px;
-			font-weight: 500;
-			line-height: 30px;
-			text-align: center;
+			padding: 14px 20px;
+			border-radius: 14px;
+			color: #0f172a;
+			cursor: pointer;
+			transition: background 0.2s;
 		}
 
-		.nav-links .drop-menu {
-			position: static;
-			opacity: 1;
-			top: 65px;
-			visibility: visible;
-			padding-left: 20px;
-			width: 100%;
-			max-height: 0px;
-			overflow: hidden;
-			box-shadow: none;
-			transition: all 0.3s ease;
-		}
-
-		#courses:checked ~ .mega-box,
-		#showMega:checked ~ .mega-box,
-		#departments:checked ~ .mega-box,
-		#exam:checked ~ .mega-box,
-		#iqac:checked ~ .mega-box {
-			max-height: 100%;
+		.nav-links .mobile-item:hover {
+			background: #f1f5f9;
 		}
 
 		.nav-links .desktop-item {
 			display: none;
 		}
 
-		.nav-links .mobile-item {
-			display: block;
-			color: #2c426e;
-			font-size: 20px;
-			font-weight: 500;
-			padding-left: 20px;
-			cursor: pointer;
-			border-radius: 5px;
-			transition: all 0.3s ease;
-			font-weight: bold;
-		}
-
-		.nav-links .mobile-item:hover {
-			background: #2c426e;
-			color: white;
-		}
-
-		.drop-menu li {
-			margin: 0;
-		}
-
-		.drop-menu li a {
-			border-radius: 5px;
-			font-size: 18px;
-		}
-
 		.mega-box {
 			position: static;
-			top: 65px;
+			transform: none;
+			width: 100%;
+			max-width: 100%;
 			opacity: 1;
 			visibility: visible;
-			padding: 0 20px;
-			max-height: 0px;
+			max-height: 0;
 			overflow: hidden;
-			transition: all 0.3s ease;
-		}
-
-		.mega-box .content {
+			transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			box-shadow: none;
-			flex-direction: column;
-			padding: 20px 20px 0 20px;
 		}
 
-		.mega-box .content .row {
-			width: 100%;
-			margin-bottom: 15px;
-			border-top: 1px solid rgba(255, 255, 255, 0.08);
+		#showMega:checked ~ .mega-box,
+		#governance:checked ~ .mega-box,
+		#courses:checked ~ .mega-box,
+		#faculty:checked ~ .mega-box,
+		#examcell:checked ~ .mega-box,
+		#facilities:checked ~ .mega-box,
+		#research:checked ~ .mega-box,
+		#cdc:checked ~ .mega-box {
+			max-height: 2000px;
+			margin-top: 15px;
 		}
 
-		.mega-box .content .row:nth-child(1),
-		.mega-box .content .row:nth-child(2) {
-			border-top: 0px;
+		.content {
+			box-shadow: none !important;
+			border: none !important;
+			background: #f8fafc !important;
+			border-radius: 20px !important;
 		}
 
-		.content .row .mega-links {
-			border-left: 0px;
-			padding-left: 15px;
-		}
-
-		.row .mega-links li {
-			margin: 0;
-		}
-
-		.content .row header {
-			font-size: 19px;
+		.content .flex-1 {
+			padding: 24px !important;
+			border: none !important;
 		}
 	}
 
-	nav input {
+	input[type='radio'],
+	input[type='checkbox'] {
 		display: none;
-	}
-
-	.body-text {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		text-align: center;
-		padding: 0 30px;
-	}
-
-	.body-text div {
-		font-size: 45px;
-		font-weight: 600;
 	}
 </style>

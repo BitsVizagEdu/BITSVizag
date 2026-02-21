@@ -1,59 +1,51 @@
 <section class=" bg-slate-200 p-10">
-	<div class="mx-auto xl:w-[90%]">
+	<div class="w-full max-w-[1200px] mx-auto px-4 md:px-10">
 		<!-- Heading section - full width -->
-		<div class="text-red1 text-center xs:text-[20px] sm:text-[25px] font-bold pb-6">
+		<div class="text-red1 text-center xs:text-[20px] sm:text-[25px] font-bold pb-6 xl:col-span-2">
 			<h2>MESSAGE FROM THE <br /> SECRETARY & CORRESPONDENT</h2>
 		</div>
-
-		<!-- Content section - image and text side by side -->
-		<div class="flex flex-row xl:flex-row 3xs:flex-col-reverse justify-center items-start gap-6">
+		<div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-10 items-start">
 			<!-- Text content -->
-			<div id="text" class="xl:w-[900px] 3xs:mb-3 lg:px-10">
-				<div>
+			<div id="text" class="text-justify">
+				<div class="space-y-4">
 					<p
-						class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+						class="font-['Arial'] text-justify md:text-[15px] tracking-wider lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
 					>
-						With an ideology that knowledge is one value that never ever diminishes is what helped
-						me and my husband establish BITS in 2008. For me those priceless satisfied smiles of
-						parents and students are indeed a blessing. Coming up to the pillars of my
-						entrepreneurial mind, I set my own code of conduct. Initially, the staff has to be paid
-						on time which makes them feel safe and secure. I assure faculty of my institution are
-						assumes of Health and Happiness.
+						Founded in 2008, BITS was built on a simple but powerful belief — knowledge is the only
+						asset that never diminishes. What began as a vision shared with my husband has grown
+						into an institution where the true reward lies in the satisfied smiles of students and
+						parents. That trust remains my greatest blessing.
 					</p>
-				</div>
-				<div>
 					<p
-						class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+						class="font-['Arial'] text-justify md:text-[15px] tracking-wider lg:leading-6 my-1 2xs:font-bold xs:text-sm"
 					>
-						If asked upon my Success secret, I would undoubtedly say – I walk the talk, Enjoy the
-						challenges and believe in transparency as well as hard work. I'm a kind of a woman who
-						believes that the best way to crack a problem is to go through it and finish it off.
-						With loads of dreams ahead to accomplish my dreams in accordance to BITS, I look forward
-						to mold even more young minds and shape them as responsible citizens for the country.
+						My entrepreneurial foundation is guided by discipline, responsibility, and people-first
+						leadership. Timely salaries ensure staff security, while a strong focus on health,
+						happiness, and dignity keeps our faculty motivated and committed. I believe institutions
+						don't grow through buildings alone, but through the well-being of the people who run
+						them.
 					</p>
-				</div>
-				<div>
 					<p
-						class="font-['Roboto'] text-justify md:text-[15px] tracking-widest md:font-normal lg:leading-6 my-1 3xs:font-light xs:text-sm tracking-wide py-1"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 2xs:font-bold xs:text-sm"
 					>
-						To wind up, I would say…its never an impossible task for a woman to fit the shoes of an
-						educational entrepreneur – Having a strong mind, a loving heart, dedicated opportunities
-						and a family like BITS Vizag always by your side is all you need to prove what you are
-						and what you can do.
+						My success mantra is simple — walk the talk, embrace challenges, and practice
+						transparency with relentless hard work. I don't avoid problems; I face them head-on and
+						finish what I start. With BITS Vizag as my extended family, I continue striving to shape
+						young minds into responsible citizens and prove that women can lead, build, and inspire
+						in education without limits.
 					</p>
 				</div>
 			</div>
 
 			<!-- Image section -->
-			<div id="pic" class="flex flex-col justify-start">
-				<div>
-					<img
-						src="/sec'mam.jpg"
-						class="3xs:h-[350px] xs:h-[450px] md:h-[500px] xl:h-[550px] w-auto max-w-[400px] p-3 rounded-[50px] object-cover"
-						alt="Dr. K. Srilakshmi"
-					/>
+			<div id="pic" class="flex flex-col items-center xl:items-start w-full">
+				<div
+					class="w-full max-w-[400px] 3xs:h-[450px] xs:h-[500px] md:h-[600px] xl:h-[400px] p-3 rounded-[50px] overflow-hidden"
+				>
+					<img src="/secmam.png" class="w-full h-full object-cover scale-110" alt="" />
 				</div>
-				<div class="mt-4 rounded-2xl">
+
+				<div class="mt-4 rounded-2xl w-full max-w-[400px]">
 					<h3 class="text-center font-bold text-2xl text-gray-800 mb-2">Dr. K. Srilakshmi</h3>
 					<div class="border-t-2 border-red1 w-20 mx-auto mb-3"></div>
 					<p class="text-center font-bold text-xl text-red1">Secretary & Correspondent</p>

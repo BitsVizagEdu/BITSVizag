@@ -33,12 +33,23 @@
 <svelte:window bind:scrollY={y} />
 {#if !$showNavBar}
 	<Notification />
-	<div id="overlay" class="overlay overflow-hidden flex relative z-[-1] min-h-[75vh]">
-		<video playsinline autoplay muted loop>
+	<div id="overlay" class="overlay overflow-hidden relative min-h-[75vh] bg-black">
+		<video
+			playsinline
+			autoplay
+			muted
+			loop
+			style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;"
+		>
 			<source src="/baba.webm" type="video/webm" />
+			<source src="/baba.mp4" type="video/mp4" />
 		</video>
 
-		<div id="scale-logo" class="vidlogo absolute flex justify-center items-center h-full w-full">
+		<div
+			id="scale-logo"
+			class="vidlogo absolute flex justify-center items-center h-full w-full"
+			style="z-index:1;"
+		>
 			<img
 				src="/logow.svg"
 				class="mb-24 w-auto lg:h-52 md:h-44 mr-[-35px] pb-10 3xs:h-24 xs:h-32"

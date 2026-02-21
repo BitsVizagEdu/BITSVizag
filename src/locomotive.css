@@ -2,6 +2,7 @@
 html.has-scroll-smooth {
     overflow: hidden;
 }
+
 html.has-scroll-dragging,
 html.has-scroll-dragging * {
     -webkit-user-select: none;
@@ -9,9 +10,11 @@ html.has-scroll-dragging * {
     -ms-user-select: none;
     user-select: none;
 }
+
 .has-scroll-smooth body {
     overflow: hidden;
 }
+
 .c-scrollbar {
     position: absolute;
     right: 0;
@@ -22,14 +25,17 @@ html.has-scroll-dragging * {
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0;
 }
+
 .c-scrollbar:hover {
     transform: scaleX(1.45);
 }
+
 .c-scrollbar:hover,
 .has-scroll-dragging .c-scrollbar,
 .has-scroll-scrolling .c-scrollbar {
     opacity: 1;
 }
+
 .c-scrollbar_thumb {
     position: absolute;
     top: 0;
@@ -42,6 +48,7 @@ html.has-scroll-dragging * {
     cursor: -webkit-grab;
     cursor: grab;
 }
+
 .has-scroll-dragging .c-scrollbar_thumb {
     cursor: -webkit-grabbing;
     cursor: grabbing;

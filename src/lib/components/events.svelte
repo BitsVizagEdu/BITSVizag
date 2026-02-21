@@ -275,8 +275,8 @@
 		<div class="w-[400px] flex py-16 justify-end">
 			<div class="text-right w-full -mr-24">
 				<a href="/gallery" class="text-2xl font-bold underline whitespace-nowrap"
-					>Explore More on our Instagram Handle ></a
-				>
+					>Explore More on our Instagram Handle
+				</a>
 			</div>
 		</div>
 	</div>

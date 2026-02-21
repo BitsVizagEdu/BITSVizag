@@ -41,12 +41,12 @@
 	];
 </script>
 
-<section class="text-center  font-sans xs:px-0 3xs:p-11  ">
-	<div class="flex flex-col justify-center items-center ">
-		<div class="flex flex-col items-center ">
+<section class="text-center font-sans xs:px-0 3xs:p-11">
+	<div class="flex flex-col justify-center items-center">
+		<div class="flex flex-col items-center">
 			<p class=" text-4xl font-bold pb-10">Student Coordinators</p>
 		</div>
-		<div class="grid xl:grid-cols-3 lg:grid-cols-3 gap-2 md:grid-cols-3 xs:grid-cols-1  ">
+		<div class="grid xl:grid-cols-3 lg:grid-cols-3 gap-2 md:grid-cols-3 xs:grid-cols-1">
 			{#each items as item, i}
 				<div>
 					<a
