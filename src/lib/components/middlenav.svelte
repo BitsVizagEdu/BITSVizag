@@ -33,7 +33,7 @@
 
 			<!-- About Us -->
 			<li>
-				<a href="/aboutus/About-BITS-Vizag" class="desktop-item">About Us</a>
+				<a href="/aboutus/About-BITS" class="desktop-item">About Us</a>
 				<input type="checkbox" id="showMega" />
 				<label for="showMega" class="mobile-item">About Us</label>
 				<div class="mega-box">
@@ -148,7 +148,7 @@
 
 			<!-- Courses -->
 			<li>
-				<a href="/courses/Under Graduation" class="desktop-item">Courses</a>
+				<a href="/courses/Under-Graduation" class="desktop-item">Courses</a>
 				<input type="checkbox" id="courses" />
 				<label for="courses" class="mobile-item">Courses</label>
 				<div class="mega-box !max-w-[1100px]">
