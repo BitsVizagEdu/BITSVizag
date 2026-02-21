@@ -60,11 +60,11 @@
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if $activeTab === 'Under Graduation'}
+				{#if $activeTab === 'Under-Graduation'}
 					<UnderGraduation />
 				{/if}
 
-				{#if $activeTab === 'Post Graduation'}
+				{#if $activeTab === 'Post-Graduation'}
 					<PostGraduation />
 				{/if}
 			</div>
