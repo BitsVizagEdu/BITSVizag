@@ -39,6 +39,7 @@
 	];
 
 	let nav2 = ['Staff', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
+	/** @param {string} item */
 	function onClick(item) {
 		toggleIsActiveTab(true);
 		setActiveTabValue(item);
@@ -60,64 +61,75 @@
 	href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
 	rel="stylesheet"
 />
-<div id="header" class="bg-gray-800 flex flex-col items-center w-full">
-	<div class="2xl:mx-auto py-2 md:py-4 lg:px-7 w-full">
-		<div class="flex flex-row justify-between items-center w-full">
+<!-- Top Bar: Quick Links & Socials -->
+
+<div
+	id="header"
+	class="bg-slate-900 border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl"
+>
+	<div class="2xl:mx-auto py-3 md:py-6 lg:px-12 w-full">
+		<div class="flex flex-row justify-between items-center w-full px-4">
 			<!-- Left Logo: NAAC -->
-			<div class="flex flex-col justify-center">
+			<div class="flex flex-col justify-center items-start shrink-0">
 				<div
-					class="flex items-center justify-center h-[60px] w-[60px] xs:h-[80px] xs:w-[80px] md:h-[100px] md:w-[100px] lg:h-[150px] lg:w-[150px]"
+					class="flex items-center justify-center h-[45px] w-[45px] xs:h-[70px] xs:w-[70px] md:h-[90px] md:w-[90px] lg:h-[130px] lg:w-[130px] drop-shadow-2xl"
 				>
 					<img
-						class="bg-transparent p-1 h-full w-full object-contain"
+						class="bg-transparent p-1 h-full w-full object-contain filter"
 						src="/naac.png"
 						alt="NAAC Accredited"
 					/>
 				</div>
 			</div>
-			<div class="flex flex-row justify-center items-center px-1">
-				<div class="flex flex-col justify-center items-center text-center">
-					<h1
-						class="text-4xl 3xs:text-sm 2xs:text-base xs:text-lg sm:text-2xl md:text-2xl lg:text-3xl font-bold text-white tracking-wide text-center px-2"
-					>
-						BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
-					</h1>
 
+			<!-- Center Content -->
+			<div
+				class="flex flex-col justify-center items-center text-center px-1 xs:px-4 flex-1 max-w-[1050px]"
+			>
+				<h1
+					class="text-[13px] 2xs:text-[15px] xs:text-base sm:text-xl md:text-2xl lg:text-4xl font-extrabold text-white tracking-[0.02em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg"
+				>
+					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
+				</h1>
+
+				<div class="flex items-center gap-1.5 xs:gap-2 mt-0.5 md:mt-2">
+					<div class="h-[1px] w-3 md:w-12 bg-yellow-400/50"></div>
 					<h5
-						class="mt-1 text-2xl 3xs:text-xs 2xs:text-sm xs:text-base sm:text-xl md:text-xl font-bold text-yellow-400 tracking-wide text-center"
+						class="text-[9px] 2xs:text-[11px] xs:text-xs sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase"
 					>
 						An Autonomous Institution
 					</h5>
+					<div class="h-[1px] w-3 md:w-12 bg-yellow-400/50"></div>
+				</div>
 
-					<div class="mt-1">
-						<div class="mt-2 text-white text-center opacity-90">
-							<h6
-								class="text-sm 3xs:text-[9px] 2xs:text-[10px] xs:text-xs md:text-sm leading-tight"
-							>
-								( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-Kakinada,
-								GV )
-								<br class="hidden sm:block" />
-								<span class="block sm:inline"
-									>(An ISO 9001:2015 Certified Educational Institution)</span
-								>
-							</h6>
-							<p
-								class="text-yellow-400 font-semibold uppercase text-sm md:text-lg mt-1 tracking-wider"
-							>
-								College Code : Baba
-							</p>
-						</div>
-					</div>
+				<div class="mt-1 md:mt-2 text-slate-300">
+					<h6
+						class="text-[7.5px] 2xs:text-[9px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[600px] mx-auto"
+					>
+						( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-Kakinada, GV )
+						<br class="hidden sm:block" />
+						<span class="block sm:inline">(An ISO 9001:2015 Certified Educational Institution)</span
+						>
+					</h6>
+					<p
+						class="inline-block mt-1.5 xs:mt-2 px-2 xs:px-3 py-0.5 xs:py-1 bg-white/5 border border-white/10 rounded-full text-yellow-400 font-bold uppercase text-[8px] xs:text-[9px] md:text-xs lg:text-sm tracking-widest"
+					>
+						College Code : <span class="text-white">Baba</span>
+					</p>
 				</div>
 			</div>
+
 			<!-- Right Logo: College Logo -->
-			<div class="flex flex-col justify-center items-center">
+			<div class="flex flex-col justify-center items-end shrink-0">
 				<div
 					id="bits"
-					class="flex items-center justify-center h-[45px] w-[45px] xs:h-[65px] xs:w-[65px] md:h-[85px] md:w-[85px] lg:h-[120px] lg:w-[120px]"
+					class="flex items-center justify-center h-[35px] w-[35px] xs:h-[60px] xs:w-[60px] md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px] relative group"
 				>
+					<div
+						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"
+					></div>
 					<img
-						class="bg-white rounded-full p-1 h-full w-full object-contain"
+						class="relative bg-white rounded-full p-2 h-full w-full object-contain shadow-2xl border-2 border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-500"
 						src="/bits.jpg"
 						alt="BITS Vizag Logo"
 					/>
@@ -128,11 +140,6 @@
 </div>
 
 <style>
-	button {
-		font-family: 'Lato', sans-serif;
-		font-weight: 900;
-	}
-
 	a {
 		font-family: 'Roboto', sans-serif;
 		font-weight: 500;

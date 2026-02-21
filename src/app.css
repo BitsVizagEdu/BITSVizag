@@ -1,208 +1,222 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+	html,
+	body {
+		font-family: 'Outfit', sans-serif;
+		background-color: #f8fafc;
+	}
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+}
+
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track { 
-    background: #ffffff;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #2a2a72;
-	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%); 
-    border-radius: 10px;
-  }
+	width: 10px;
+}
 
+::-webkit-scrollbar-track {
+	background: #ffffff;
+}
 
-
-html,body{
-    font-family: 'Poppins', sans-serif;
+::-webkit-scrollbar-thumb {
+	background-color: #2672d5;
+	border-radius: 10px;
+	border: 3px solid white;
 }
 
 #nav1 {
-    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-    height: 100%;
-    border-radius: 25px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+	background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+	height: 100%;
+	border-radius: 25px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 .dropdown:hover .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    max-height: 70vh;
-    width: max-content;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	max-height: 70vh;
+	width: max-content;
 }
 
 .dropdown-menu:hover .dropdown button {
-    scale: 1.2;
+	scale: 1.2;
 }
 
 .dropdown:hover .dropdown-menu li {
-    text-align: justify;
+	text-align: justify;
 }
 
 .dropdown-menu li a {
-    color: #f4f4f4;
-    transition: display 2s;
+	color: #f4f4f4;
+	transition: display 2s;
 }
 
 video {
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    z-index: -1;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }
 
 .dropdown-menu::-webkit-scrollbar {
-    width: 8px;
+	width: 8px;
 }
 
 .dropdown-menu::-webkit-scrollbar-track {
-    background-color: #e4e4e4;
-    border-radius: 100px;
+	background-color: #e4e4e4;
+	border-radius: 100px;
 }
 
 .dropdown-menu::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    border: 6px solid rgba(0, 0, 0, 0.18);
-    border-left: 0;
-    border-right: 0;
-    background-color: #8070d4;
+	border-radius: 100px;
+	border: 6px solid rgba(0, 0, 0, 0.18);
+	border-left: 0;
+	border-right: 0;
+	background-color: #8070d4;
 }
 
-nav {
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-}
+/* Removed overly broad nav background override that was conflicting with middlenav.svelte */
 
 @media (min-width: 320px) {
-    #overlay {
-        margin-right: 0;
-    }
+	#overlay {
+		margin-right: 0;
+	}
 
-    video {
-        top: 160px;
-    }
+	/* video top removed - was misplacing videos outside the home overlay */
 }
 
 /* Placement */
 .slider {
-    height: 60px;
-    position: relative;
-    width: 100%;
+	height: 60px;
+	position: relative;
+	width: 100%;
 
-    display: grid;
-    place-items: center;
-    overflow: hidden;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
 }
 
 .slider::before,
 .slider::after {
-    position: absolute;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    content: '';
-    height: 100%;
-    width: 25%;
-    z-index: 2;
-    pointer-events: none;
+	position: absolute;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	content: '';
+	height: 100%;
+	width: 25%;
+	z-index: 2;
+	pointer-events: none;
 }
 
 .slider::before {
-    left: 0;
-    top: 0;
+	left: 0;
+	top: 0;
 }
 
 .slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
 }
 
 /*  IMPORTANT CODE BELOW */
 
 .slide-track {
-    width: calc(150px * 20);
-    display: flex;
-    animation: scroll 20s linear infinite;
-    justify-content: space-between;
+	width: calc(150px * 20);
+	display: flex;
+	animation: scroll 20s linear infinite;
+	justify-content: space-between;
 }
 
 .slide-track2 {
-    width: calc(150px * 15);
-    display: flex;
-    animation: scroll2 15s linear infinite;
-    justify-content: space-between;
+	width: calc(150px * 15);
+	display: flex;
+	animation: scroll2 15s linear infinite;
+	justify-content: space-between;
 }
 
 .slide {
-    width: 150px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    transition: 0.5s;
-    cursor: pointer;
-    /* scale:1.5; */
+	width: 150px;
+	height: 60px;
+	display: grid;
+	place-items: center;
+	transition: 0.5s;
+	cursor: pointer;
+	/* scale:1.5; */
 }
 
 .slide:hover {
-    transform: scale(0.9)
+	transform: scale(0.9);
 }
 
-
 @keyframes scroll {
-    0% {
-        transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(calc(-150px * 10));
-    }
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(calc(-150px * 10));
+	}
 }
 
 @keyframes scroll2 {
-    0% {
-        transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(calc(-150px * 5));
-    }
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(calc(-150px * 5));
+	}
 }
 
 @media screen and (max-width: 768px) {
-    .slide-track {
-        width: calc(80px * 20);
-    }
+	.slide-track {
+		width: calc(80px * 20);
+	}
 
-    .slide-track2 {
-        width: calc(80px * 15);
-    }
+	.slide-track2 {
+		width: calc(80px * 15);
+	}
 
-    .slide {
-        width: 80px;
-    }
+	.slide {
+		width: 80px;
+	}
 
-    @keyframes scroll {
-        0% {
-            transform: translateX(0px);
-        }
-        100% {
-            transform: translateX(calc(-80px * 10));
-        }
-    }
+	@keyframes scroll {
+		0% {
+			transform: translateX(0px);
+		}
 
-    @keyframes scroll2 {
-        0% {
-            transform: translateX(0px);
-        }
-        100% {
-            transform: translateX(calc(-80px * 5));
-        }
-    }
+		100% {
+			transform: translateX(calc(-80px * 10));
+		}
+	}
+
+	@keyframes scroll2 {
+		0% {
+			transform: translateX(0px);
+		}
+
+		100% {
+			transform: translateX(calc(-80px * 5));
+		}
+	}
 }
-

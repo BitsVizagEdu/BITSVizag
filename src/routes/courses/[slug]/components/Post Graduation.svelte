@@ -1,11 +1,13 @@
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<div>
 		<h1 class="text-4xl font-bold text-center mb-10 text-red1">Post Graduation Programme</h1>
 		<div class="flex flex-col-reverse lg:flex-row items-center">
 			<div class="lg:w-[50%] pr-7">
-				<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0 ">Master of Technology</h1>
+				<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0">
+					Master of Technology
+				</h1>
 				<br />
-				<h1 class="text-justify ">
+				<h1 class="text-justify">
 					Master of Technology (M.Tech): Take your technical expertise to the next level with our
 					M.Tech program. Delve into advanced topics within your chosen field of specialization,
 					conduct cutting-edge research, and collaborate with renowned faculty and industry experts.
@@ -32,7 +34,7 @@
 		</div>
 		<br />
 		<!-- ====== Table Section Start -->
-		<section class="bg-white ">
+		<section class="bg-white">
 			<div class="container mx-auto">
 				<div class="-mx-4 flex flex-wrap">
 					<div class="w-[100%] px-4">
@@ -41,17 +43,17 @@
 								<thead>
 									<tr class="bg-red1 bg-opacity-90 text-center">
 										<th
-											class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+											class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
 										>
 											Sl.No
 										</th>
 										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
 										>
 											Courses Offered
 										</th>
 										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
 										>
 											Intake
 										</th>
@@ -157,9 +159,11 @@
 	<div>
 		<div class="flex flex-col-reverse lg:flex-row items-center">
 			<div class=" lg:w-[50%] pr-7">
-				<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0">Master of Business Administration</h1>
+				<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0">
+					Master of Business Administration
+				</h1>
 				<br />
-				<h1 class="text-justify ">
+				<h1 class="text-justify">
 					Master of Business Administration (MBA): Unlock your managerial potential and pave your
 					way to success in the dynamic business world with our MBA program. Develop a strong
 					foundation in business fundamentals, enhance your leadership abilities, and gain a
@@ -183,7 +187,7 @@
 			<h1 class="text-2xl">Courses Offered</h1>
 		</div>
 		<br />
-		<section class="bg-white ">
+		<section class="bg-white">
 			<div class="container mx-auto">
 				<div class="-mx-4 flex flex-wrap">
 					<div class="w-full px-4">
@@ -192,17 +196,17 @@
 								<thead>
 									<tr class="bg-red1 bg-opacity-90 text-center">
 										<th
-											class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+											class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
 										>
 											Sl.No
 										</th>
 										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
 										>
 											Courses Offered
 										</th>
 										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold  lg:py-7 lg:px-4 text-white"
+											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
 										>
 											Intake
 										</th>

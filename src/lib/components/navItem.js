@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 export const dropdown = writable([
-  false, false, false, false, false, false, false, false, false, false, false, false, false
+  false, false, false, false, false, false, false, false, false, false, false, false, false, false
 ])
 export const NavItems = writable([{
   "name": "Home",
@@ -19,6 +19,7 @@ export const NavItems = writable([{
         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
       </svg>`
 },
+
 {
   "name": "Courses",
   "folder": "/courses",
@@ -99,5 +100,14 @@ export const NavItems = writable([{
         <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
       </svg>`
 },
+{
+  "name": "CDC",
+  "folder": "/placements",
+  "items": [],
+  "icon": `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6 ">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.37m-4 .5V11m9.5 0v3.5l-2.5 2" />
+      </svg>`
+}
+  ,
 
 ])
