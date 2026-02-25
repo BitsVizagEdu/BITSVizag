@@ -19,19 +19,22 @@
 </nav>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+	/* Fonts are loaded in app.html */
 
 	nav {
-		z-index: 98;
+		position: sticky;
+		top: 56px; /* Below Middlenav */
+		z-index: 997;
 		width: 100%;
 		background: #d22626;
-		font-family: 'Outfit', sans-serif;
+		font-family: 'Roboto', sans-serif;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 	}
 
 	nav .wrapper {
 		max-width: 1600px;
-		padding: 0 20px;
-		height: 52px;
+		padding: 0 24px;
+		height: 40px;
 		margin: auto;
 		display: flex;
 		align-items: center;
@@ -62,15 +65,16 @@
 		color: rgba(255, 255, 255, 0.95);
 		text-decoration: none;
 		font-size: 14px;
-		padding: 10px 16px;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		text-transform: none;
-		letter-spacing: 0.03em;
+		padding: 8px 16px;
+		transition: all 0.25s ease;
+		text-transform: capitalize;
+		letter-spacing: 0.02em;
 		border-radius: 8px;
 		display: flex;
 		align-items: center;
-		font-weight: 700;
-		font-family: 'Source Sans 3', Arial, sans-serif;
+		font-weight: 500;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
 	}
 
 	.nav-links li a:hover {
@@ -109,9 +113,11 @@
 		}
 
 		.nav-links li a {
-			font-size: 10.5px;
-			padding: 8px 12px;
-			letter-spacing: normal;
+			font-size: 14px;
+			padding: 10px 18px;
+			letter-spacing: 0.02em;
+			background: rgba(255, 255, 255, 0.05);
+			border: 1px solid rgba(255, 255, 255, 0.1);
 		}
 	}
 </style>

@@ -5,6 +5,8 @@
 
 	import DepartmentofBsh from './components/Department of BS&H.svelte';
 	import DepartmentofCse from './components/Department of CSE.svelte';
+	import DepartmentofCseAiMl from './components/Department of CSE (AI & ML).svelte';
+	import DepartmentofCseCyber from './components/Department of CSE (Cyber Security).svelte';
 	import DepartmentofEce from './components/Department of ECE.svelte';
 	import DepartmentofEee from './components/Department of EEE.svelte';
 	import DepartmentofCivil from './components/Department of CIVIL.svelte';
@@ -67,6 +69,14 @@
 
 				{#if $activeTab === 'Department of CSE'}
 					<DepartmentofCse />
+				{/if}
+
+				{#if $activeTab === 'Department of CSE (AI & ML)'}
+					<DepartmentofCseAiMl />
+				{/if}
+
+				{#if $activeTab === 'Department of CSE (Cyber Security)'}
+					<DepartmentofCseCyber />
 				{/if}
 				{#if $activeTab === 'Department of ECE'}
 					<DepartmentofEce />
