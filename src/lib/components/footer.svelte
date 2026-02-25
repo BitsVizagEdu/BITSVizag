@@ -17,22 +17,28 @@
 
 		timeline_footer
 			.from('#joinnow', {
-				delay: 1,
-				// duration:1,
 				opacity: 0,
-				translateY: '-20px'
+				translateY: '-20px',
+				duration: 0.8
 			})
-			.from('#tagline-f', {
-				// duration:1,
-				opacity: 0,
-				translateY: '20px'
-			})
-			.from('#joinnowbtn', {
-				// duration:1,
-				opacity: 0,
-				// scaleX:0,
-				translateY: '15px'
-			});
+			.from(
+				'#tagline-f',
+				{
+					opacity: 0,
+					translateY: '20px',
+					duration: 0.8
+				},
+				'-=0.4'
+			)
+			.from(
+				'#joinnowbtn',
+				{
+					opacity: 0,
+					translateY: '15px',
+					duration: 0.8
+				},
+				'-=0.4'
+			);
 	});
 </script>
 
@@ -41,44 +47,57 @@
 		<div class="bg-[#0c1637] rounded-t-[40px]">
 			<div
 				id="joinnowf"
-				class=" bg-cover h-[500px] md:h-[75vh] rounded-[40px]"
-				style="background-image: url(/bgfooter.webp);"
+				class="cta-gradient relative h-[450px] sm:h-[550px] md:h-[75vh] rounded-[40px] overflow-hidden flex flex-col items-center justify-center p-6 sm:p-12 text-center"
 			>
+				<!-- Subtle pattern overlay -->
 				<div
-					class="3xs:h-[75vh] md:h-[75vh] backdrop-blur-none rounded-[40px] grid place-content-center"
-				>
-					<div id="joinnow" class="grid place-items-center">
-						<span class="font-extrabold text-white text-8xl xs:text-9xl lg:text-[150px] text-center"
-							>JOIN<br />NOW!</span
+					class="absolute inset-0 opacity-[0.03] pointer-events-none"
+					style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"
+				></div>
+
+				<div class="relative z-10 flex flex-col items-center">
+					<div id="joinnow" class="mb-2 sm:mb-6">
+						<h2
+							class="font-black text-white leading-[0.9] tracking-tighter text-[160px] sm:text-9xl lg:text-[140px] xl:text-[160px]"
 						>
+							JOIN NOW!
+						</h2>
 					</div>
-					<div id="tagline-f" class="flex justify-center mt-2">
-						<span class="font-semibold text-white 3xs:text-2xl xs:text-3xl md:text-4xl text-center"
-							>Be a Part of BITS FAMILY</span
+
+					<div id="tagline-f" class="mb-6 sm:mb-10">
+						<p
+							class="font-bold text-white/90 text-[5.5vw] xs:text-2xl sm:text-3xl md:text-4xl tracking-tight"
 						>
+							Be a Part of <span class="text-blue-200">BITS FAMILY</span>
+						</p>
 					</div>
-					<a href="/contactus" id="joinnowbtn" class="flex justify-center mt-4">
-						<button
-							class=" group flex flex-row bg-white shadow-2xl shadow-gray-600 text-[#0c1637] xl:text-xl text-base font-medium p-2 xl:p-4 rounded-full duration-700 hover:bg-[#0c1637] hover:text-white"
+
+					<div id="joinnowbtn">
+						<a
+							href="/contactus"
+							class="inline-block transform transition-all duration-500 hover:scale-105 active:scale-95"
 						>
-							<div class="px-3">
-								<svg
-									class="rotate-[315deg] duration-700 group-hover:fill-white"
-									viewBox="0 0 24 25"
-									role="img"
-									data-v-ab5c9590=""
-									width="24"
-									height="25"
-									><path
-										fill-rule="evenodd"
-										clip-rule="evenodd"
-										d="M16.961 18.085a.459.459 0 0 0 .023.68.545.545 0 0 0 .732-.02l5.648-5.592.333-.33-.333-.33-5.572-5.516a.545.545 0 0 0-.732-.02.459.459 0 0 0-.023.68l4.76 4.712H.713c-.276 0-.5.224-.498.5 0 .276.226.5.502.5h21.028l-4.784 4.736Z"
-									></path></svg
+							<button
+								class="group flex items-center gap-3 bg-white hover:bg-[#2672d5] text-[#0c1637] hover:text-white px-6 py-3.5 sm:px-10 sm:py-5 rounded-full text-base sm:text-xl font-bold shadow-2xl duration-500"
+							>
+								<div
+									class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-[#0c1637] group-hover:bg-white rounded-full transition-colors duration-500"
 								>
-							</div>
-							Admissions Enquiry
-						</button>
-					</a>
+									<svg
+										class="rotate-[-45deg] fill-white group-hover:fill-[#2672d5] w-3.5 h-3.5 sm:w-5 sm:h-5 transition-all duration-500"
+										viewBox="0 0 24 25"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M16.961 18.085a.459.459 0 0 0 .023.68.545.545 0 0 0 .732-.02l5.648-5.592.333-.33-.333-.33-5.572-5.516a.545.545 0 0 0-.732-.02.459.459 0 0 0-.023.68l4.76 4.712H.713c-.276 0-.5.224-.498.5 0 .276.226.5.502.5h21.028l-4.784 4.736Z"
+										></path>
+									</svg>
+								</div>
+								Admissions Enquiry
+							</button>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="md:h-[350px] flex 3xs:flex-col md:flex-row p-6">
@@ -108,24 +127,24 @@
 						>
 							<div>
 								<a href="https://www.facebook.com/BITSVizagOfficial/"
-									><img src="/facebook.svg" alt="#" /></a
+									><img src="/facebook.svg" alt="Facebook" /></a
 								>
 							</div>
 							<div>
 								<a href="https://www.instagram.com/bits_vizag_official/"
-									><img src="/instagram.svg" alt="#" /></a
+									><img src="/instagram.svg" alt="Instagram" /></a
 								>
 							</div>
 							<div>
 								<a href="https://www.youtube.com/@bitsmediacenter8449"
-									><img src="/youtube.svg" alt="#" /></a
+									><img src="/youtube.svg" alt="YouTube" /></a
 								>
 							</div>
-							<div><a href=""><img src="/twitter.svg" alt="#" /></a></div>
+							<div><a href=""><img src="/twitter.svg" alt="Twitter" /></a></div>
 							<div>
 								<a
 									href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"
-									><img src="/linkedin.svg" alt="#" /></a
+									><img src="/linkedin.svg" alt="LinkedIn" /></a
 								>
 							</div>
 						</div>
@@ -184,7 +203,7 @@
 							width="400"
 							height="300"
 							style="border:0;"
-							allowfullscreen=""
+							allowfullscreen={true}
 							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
 						></iframe>
@@ -199,3 +218,35 @@
 		>
 	</div>
 </section>
+
+<style>
+	.cta-gradient {
+		background: linear-gradient(-45deg, #0c1637, #1e3a8a, #2672d5, #0ea5e9);
+		background-size: 400% 400%;
+		animation: gradientShift 10s ease infinite;
+	}
+
+	@keyframes gradientShift {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	/* Fix for long tagline responsiveness */
+	#tagline-f p {
+		max-width: 90vw;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 640px) {
+		h2 {
+			font-size: 18vw;
+		}
+	}
+</style>

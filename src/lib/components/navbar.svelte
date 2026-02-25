@@ -49,7 +49,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link
 	rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -67,12 +67,12 @@
 	id="header"
 	class="bg-slate-900 border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl"
 >
-	<div class="2xl:mx-auto py-3 md:py-6 lg:px-12 w-full">
+	<div class="2xl:mx-auto py-2 md:py-3 lg:px-12 w-full">
 		<div class="flex flex-row justify-between items-center w-full px-4">
 			<!-- Left Logo: NAAC -->
 			<div class="flex flex-col justify-center items-start shrink-0">
 				<div
-					class="flex items-center justify-center h-[45px] w-[45px] xs:h-[70px] xs:w-[70px] md:h-[90px] md:w-[90px] lg:h-[130px] lg:w-[130px] drop-shadow-2xl"
+					class="flex items-center justify-center h-[50px] w-[50px] xs:h-[80px] xs:w-[80px] md:h-[105px] md:w-[105px] lg:h-[135px] lg:w-[135px] drop-shadow-2xl"
 				>
 					<img
 						class="bg-transparent p-1 h-full w-full object-contain filter"
@@ -87,12 +87,12 @@
 				class="flex flex-col justify-center items-center text-center px-1 xs:px-4 flex-1 max-w-[1050px]"
 			>
 				<h1
-					class="text-[13px] 2xs:text-[15px] xs:text-base sm:text-xl md:text-2xl lg:text-4xl font-extrabold text-white tracking-[0.02em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg"
+					class="text-[13px] 2xs:text-[15px] xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.02em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg"
 				>
 					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
 				</h1>
 
-				<div class="flex items-center gap-1.5 xs:gap-2 mt-0.5 md:mt-2">
+				<div class="flex items-center gap-1.5 xs:gap-2 mt-0 md:mt-1">
 					<div class="h-[1px] w-3 md:w-12 bg-yellow-400/50"></div>
 					<h5
 						class="text-[9px] 2xs:text-[11px] xs:text-xs sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase"
@@ -102,7 +102,7 @@
 					<div class="h-[1px] w-3 md:w-12 bg-yellow-400/50"></div>
 				</div>
 
-				<div class="mt-1 md:mt-2 text-slate-300">
+				<div class="mt-0.5 md:mt-1 text-slate-300">
 					<h6
 						class="text-[7.5px] 2xs:text-[9px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[600px] mx-auto"
 					>
@@ -111,11 +111,18 @@
 						<span class="block sm:inline">(An ISO 9001:2015 Certified Educational Institution)</span
 						>
 					</h6>
-					<p
-						class="inline-block mt-1.5 xs:mt-2 px-2 xs:px-3 py-0.5 xs:py-1 bg-white/5 border border-white/10 rounded-full text-yellow-400 font-bold uppercase text-[8px] xs:text-[9px] md:text-xs lg:text-sm tracking-widest"
+					<div
+						class="mt-2 inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
 					>
-						College Code : <span class="text-white">Baba</span>
-					</p>
+						<span class="text-[11px] md:text-xs font-bold text-amber-500 uppercase tracking-wider">
+							College Code :
+						</span>
+						<span
+							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-sm md:text-base leading-none"
+						>
+							BABA
+						</span>
+					</div>
 				</div>
 			</div>
 
@@ -123,7 +130,7 @@
 			<div class="flex flex-col justify-center items-end shrink-0">
 				<div
 					id="bits"
-					class="flex items-center justify-center h-[35px] w-[35px] xs:h-[60px] xs:w-[60px] md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px] relative group"
+					class="flex items-center justify-center h-[40px] w-[40px] xs:h-[65px] xs:w-[65px] md:h-[85px] md:w-[85px] lg:h-[105px] lg:w-[105px] relative group"
 				>
 					<div
 						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"
@@ -140,9 +147,23 @@
 </div>
 
 <style>
+	@keyframes gradient-x {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+	.animate-gradient-x {
+		animation: gradient-x 3s ease infinite;
+	}
 	a {
-		font-family: 'Roboto', sans-serif;
-		font-weight: 500;
+		font-family: 'Inter', sans-serif;
+		font-weight: 600;
+		text-transform: capitalize;
+		letter-spacing: 0.02em;
 	}
 	/* Converted #bits hiding rule to keeping it visible but ensuring standard sizing if needed.
        Actually, removing the hide rule completely is safer. */

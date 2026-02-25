@@ -25,15 +25,23 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<div class="back-to-top flex item-center justify-center" on:click={goTop} class:hidden>
+<button
+	class="back-to-top flex items-center justify-center"
+	on:click={goTop}
+	class:hidden
+	type="button"
+	aria-label="Back to top"
+>
 	<i class="fa-solid fa-arrow-up pr-2 pt-1" />
 	<p>BackToTop</p>
-</div>
+</button>
 
 <style>
 	.back-to-top {
 		opacity: 1;
-		transition: opacity 0.5s, visibility 0.5s;
+		transition:
+			opacity 0.5s,
+			visibility 0.5s;
 		position: fixed;
 		z-index: 99;
 		right: 30px;
@@ -53,7 +61,6 @@
 		visibility: hidden;
 	}
 	.back-to-top i {
-		
 		justify-content: center;
 		padding-bottom: 5px;
 	}

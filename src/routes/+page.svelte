@@ -52,9 +52,10 @@
 		>
 			<img
 				src="/logow.svg"
+				alt="BITS Vizag Logo"
 				class="mb-24 w-auto lg:h-52 md:h-44 mr-[-35px] pb-10 3xs:h-24 xs:h-32"
 			/>
-			<img src="/sq-1.svg" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
+			<img src="/sq-1.svg" alt="" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
 		</div>
 	</div>
 	<Autonomous />
