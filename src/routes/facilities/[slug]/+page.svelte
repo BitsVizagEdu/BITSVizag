@@ -30,26 +30,50 @@
 {#if !$showNavBar}
 	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">
 		<!-- Main Content Sidebar -->
-		<aside class="w-full lg:w-[320px] p-4 lg:p-6 lg:sticky lg:top-0 h-fit" aria-label="Sidebar">
+		<aside
+			class="w-full lg:w-[320px] p-4 lg:p-6 lg:sticky lg:top-0 h-fit z-10"
+			aria-label="Sidebar"
+		>
 			<div
-				class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 p-2 lg:p-3"
+				class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden"
 			>
-				<div class="px-4 py-3 mb-2 border-b border-slate-50 hidden lg:block">
+				<div
+					class="px-5 py-4 bg-slate-50/50 border-b border-slate-100 flex items-center justify-between"
+				>
 					<span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest"
 						>Campus Amenities</span
 					>
+					<i class="fa-solid fa-building-circle-check text-[#2672d5] lg:hidden"></i>
 				</div>
 
-				<!-- Responsive Navigation: Scrollable on mobile, List on desktop -->
-				<ul class="flex lg:flex-col overflow-x-auto lg:overflow-x-visible gap-2 no-scrollbar p-1">
-					{#each items as item}
-						<li class="flex-shrink-0">
+				<!-- Mobile Navigation: Pills -->
+				<div class="lg:hidden p-3 bg-white">
+					<div class="flex overflow-x-auto gap-2 no-scrollbar pb-1">
+						{#each items as item}
 							<a
 								href={`/facilities/${item}`}
 								on:click={() => setActiveTabValue(item)}
-								class="flex items-center px-5 py-3 lg:px-4 lg:py-3.5 text-[14px] font-semibold rounded-xl transition-all duration-300 whitespace-nowrap
+								class="flex-shrink-0 flex items-center px-4 py-2.5 text-[13px] font-bold rounded-xl transition-all whitespace-nowrap
 								{$activeTab === item
-									? 'bg-[#2672d5] text-white shadow-lg shadow-blue-100 lg:translate-x-1'
+									? 'bg-[#2672d5] text-white shadow-md'
+									: 'bg-slate-50 text-slate-600 border border-slate-100'} "
+							>
+								{replaceHyphenWithSpace(item)}
+							</a>
+						{/each}
+					</div>
+				</div>
+
+				<!-- Desktop Navigation: List -->
+				<ul class="hidden lg:flex lg:flex-col gap-1 p-2">
+					{#each items as item}
+						<li>
+							<a
+								href={`/facilities/${item}`}
+								on:click={() => setActiveTabValue(item)}
+								class="flex items-center px-4 py-3.5 text-[14px] font-semibold rounded-xl transition-all duration-300
+								{$activeTab === item
+									? 'bg-[#2672d5] text-white shadow-lg shadow-blue-100 translate-x-1'
 									: 'text-slate-600 hover:bg-slate-50 hover:text-[#2672d5]'} "
 							>
 								<i class="fa-solid fa-circle-info mr-3 text-[12px] opacity-70"></i>

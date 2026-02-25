@@ -16,7 +16,7 @@
 		<div class="logo flex items-center">
 			<a href="/"
 				><img
-					class="w-[110px] md:w-[140px] xl:w-[160px] transition-all"
+					class="w-[80px] md:w-[140px] xl:w-[160px] transition-all"
 					src="/1.png"
 					alt="BITS Vizag Logo"
 				/></a
@@ -43,7 +43,9 @@
 						<div class="flex-1 py-10 px-10 border-r border-slate-50">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
 								<i class="fa-solid fa-building-columns text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] font-bold text-slate-900">The Institution</header>
+								<header class="text-[1.15rem] font-extrabold text-slate-950 tracking-tight">
+									The Institution
+								</header>
 							</div>
 							<div class="flex flex-col gap-2">
 								<a
@@ -71,7 +73,9 @@
 						<div class="flex-1 py-10 px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
 								<i class="fa-solid fa-user-tie text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] font-bold text-slate-900">Leadership</header>
+								<header class="text-[1.15rem] font-extrabold text-slate-950 tracking-tight">
+									Leadership
+								</header>
 							</div>
 							<div class="flex flex-col gap-2">
 								<a
@@ -115,7 +119,7 @@
 						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
 								<i class="fa-solid fa-balance-scale text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] font-extrabold text-slate-900 tracking-tight">
+								<header class="text-[1.15rem] font-extrabold text-slate-950 tracking-tight">
 									Administration
 								</header>
 							</div>
@@ -156,169 +160,257 @@
 						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden"
 					>
 						<!-- Courses Main Section (UG) -->
-						<div class="flex-[1.5] py-10 px-12 text-left bg-white">
-							<div class="flex items-center gap-4 mb-10 border-b border-slate-100 pb-5">
-								<div class="w-10 h-10 flex items-center justify-center rounded-xl">
+						<div class="flex-[1.8] py-10 px-12 text-left bg-white">
+							<div class="flex items-center gap-4 mb-10 border-b border-slate-50 pb-6">
+								<div class="w-10 h-10 flex items-center justify-center bg-blue-50 rounded-xl">
 									<i class="fa-solid fa-scroll text-[#2672d5] text-lg" />
 								</div>
-								<header class="text-xl font-bold text-slate-900">Under Graduation</header>
+								<header class="text-[22px] font-black text-slate-950 tracking-tight">
+									Under Graduation
+								</header>
 							</div>
-							<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+							<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
 								<a
 									href="/department/Department of CSE"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
 								>
 									<div
-										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
 									>
 										<i
-											class="fa-solid fa-laptop-code text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+											class="fa-solid fa-laptop-code text-[#2672d5] text-lg group-hover:text-white transition-colors"
 										/>
 									</div>
 									<div class="flex flex-col text-left">
-										<span class="text-[16px] font-bold text-slate-900">Computer Science</span>
-										<span class="text-[10px] text-slate-500 font-bold mt-0.5">Engineering</span>
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>Computer Science</span
+										>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Programme</span
+										>
 									</div>
 								</a>
+
+								<a
+									href="/department/Department of CSE (AI & ML)"
+									on:click={closeMenus}
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
+								>
+									<div
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
+									>
+										<i
+											class="fa-solid fa-brain text-[#2672d5] text-lg group-hover:text-white transition-colors"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>CS (AI & ML)</span
+										>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Specialization</span
+										>
+									</div>
+								</a>
+
+								<a
+									href="/department/Department of CSE (Cyber Security)"
+									on:click={closeMenus}
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
+								>
+									<div
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
+									>
+										<i
+											class="fa-solid fa-shield-halved text-[#2672d5] text-lg group-hover:text-white transition-colors"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>CS (Cyber Security)</span
+										>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Specialization</span
+										>
+									</div>
+								</a>
+
 								<a
 									href="/department/Department of ECE"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
 								>
 									<div
-										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
 									>
 										<i
-											class="fa-solid fa-microchip text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+											class="fa-solid fa-microchip text-[#2672d5] text-lg group-hover:text-white transition-colors"
 										/>
 									</div>
 									<div class="flex flex-col text-left">
-										<span class="text-[16px] font-bold text-slate-900"
-											>Electronics & Communication</span
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>Electronics & Comm.</span
 										>
-										<span class="text-[10px] text-slate-500 mt-0.5">Engineering</span>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Programme</span
+										>
 									</div>
 								</a>
+
 								<a
 									href="/department/Department of EEE"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
 								>
 									<div
-										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
 									>
 										<i
-											class="fa-solid fa-bolt-lightning text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+											class="fa-solid fa-bolt-lightning text-[#2672d5] text-lg group-hover:text-white transition-colors"
 										/>
 									</div>
 									<div class="flex flex-col text-left">
-										<span class="text-[16px] font-bold text-slate-900"
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
 											>Electrical & Electronics</span
 										>
-										<span class="text-[10px] text-slate-500 mt-0.5">Engineering</span>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Programme</span
+										>
 									</div>
 								</a>
+
 								<a
 									href="/department/Department of BS&H"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
 								>
 									<div
-										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
 									>
 										<i
-											class="fa-solid fa-atom text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+											class="fa-solid fa-atom text-[#2672d5] text-lg group-hover:text-white transition-colors"
 										/>
 									</div>
 									<div class="flex flex-col text-left">
-										<span class="text-[16px] font-bold text-slate-900"
-											>Basic Sciences & Humanities</span
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>Basic Sci. & Hum.</span
 										>
-										<span class="text-[10px] text-slate-500 mt-0.5">Basic Sciences</span>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Programme</span
+										>
 									</div>
 								</a>
+
 								<a
 									href="/department/Department of CIVIL"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
 								>
 									<div
-										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
 									>
 										<i
-											class="fa-solid fa-hard-hat text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
+											class="fa-solid fa-hard-hat text-[#2672d5] text-lg group-hover:text-white transition-colors"
 										/>
 									</div>
 									<div class="flex flex-col text-left">
-										<span class="text-[16px] font-bold text-slate-900">Civil Engineering</span>
-										<span class="text-[10px] text-slate-500 mt-0.5">Structure</span>
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>Civil Engineering</span
+										>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Programme</span
+										>
 									</div>
 								</a>
+
 								<a
 									href="/department/Department of MECH"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
 								>
 									<div
-										class="w-10 h-10 flex items-center justify-center border border-slate-100 rounded-lg group-hover:bg-blue-200 group-hover:shadow-md transition-all"
+										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
 									>
 										<i
-											class="fa-solid fa-gears w-6 h-6 text-[#2672d5] group-hover:scale-110 transition-transform"
+											class="fa-solid fa-gears text-[#2672d5] text-lg group-hover:text-white transition-colors"
 										/>
 									</div>
 									<div class="flex flex-col text-left">
-										<span class="text-[16px] flex-auto font-bold text-slate-900"
-											>Mechanical Engineering</span
+										<span class="text-[15px] font-black text-slate-800 leading-tight"
+											>Mechanical Eng.</span
 										>
-										<span class="text-[10px] text-slate-500 mt-0.5">Machinery</span>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
+											>Programme</span
+										>
 									</div>
 								</a>
 							</div>
 						</div>
 
 						<!-- Featured Section (PG) -->
-						<div class="flex-1 bg-slate-50/50 py-10 px-10 text-left border-l border-slate-100">
-							<div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-5">
+						<div class="flex-1 bg-slate-50/40 py-10 px-10 text-left border-l border-slate-100">
+							<div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-6">
 								<div
 									class="w-10 h-10 flex items-center justify-center bg-white rounded-xl shadow-sm"
 								>
 									<i class="fa-solid fa-award text-[#2672d5] text-lg" />
 								</div>
-								<header class="text-xl font-bold text-slate-900">Post Graduation</header>
+								<header class="text-[20px] font-black text-slate-900 tracking-tight">
+									Post Graduation
+								</header>
 							</div>
-							<div class="flex flex-col gap-5">
+							<div class="flex flex-col gap-6">
 								<a
 									href="/department/Department of MBA"
 									on:click={closeMenus}
-									class="group flex items-center gap-6 bg-white p-5 rounded-2xl transition-all shadow-sm hover:shadow-md hover:bg-blue-50 border border-slate-100"
+									class="group flex items-center gap-6 bg-white p-6 rounded-3xl transition-all shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:bg-blue-50/50 border border-slate-100"
 								>
 									<div
-										class="w-14 h-14 flex items-center justify-center bg-[#2672d5]/[0.1] text-[#2672d5] rounded-2xl transition-all"
+										class="w-14 h-14 flex items-center justify-center bg-blue-50 text-[#2672d5] rounded-2xl group-hover:bg-[#2672d5] group-hover:text-white transition-all duration-500"
 									>
 										<i class="fa-solid fa-briefcase text-2xl" />
 									</div>
 									<div class="flex flex-col">
-										<span class="text-lg font-bold text-slate-900">MBA</span>
-										<span class="text-[10px] text-slate-500 font-bold mt-2 tracking-widest"
+										<span class="text-[17px] font-black text-slate-900 leading-none">MBA</span>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2.5"
 											>Management</span
 										>
 									</div>
+									<i
+										class="fa-solid fa-chevron-right ml-auto text-slate-200 group-hover:text-blue-400 transition-all duration-500 group-hover:translate-x-1 text-xs"
+									/>
 								</a>
+
 								<a
 									href="/courses/Post-Graduation"
 									on:click={closeMenus}
-									class="group flex items-center gap-6 bg-white p-5 rounded-2xl transition-all shadow-sm hover:shadow-md hover:bg-blue-50 border border-slate-100"
+									class="group flex items-center gap-6 bg-white p-6 rounded-3xl transition-all shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:bg-blue-50/50 border border-slate-100"
 								>
 									<div
-										class="w-14 h-14 flex items-center justify-center bg-[#2672d5]/[0.1] text-[#2672d5] rounded-2xl transition-all"
+										class="w-14 h-14 flex items-center justify-center bg-blue-50 text-[#2672d5] rounded-2xl group-hover:bg-[#2672d5] group-hover:text-white transition-all duration-500"
 									>
 										<i class="fa-solid fa-laptop-code text-2xl" />
 									</div>
 									<div class="flex flex-col">
-										<span class="text-lg font-bold text-slate-900">M.Tech</span>
-										<span class="text-[10px] text-slate-500 font-bold mt-2">Technology</span>
+										<span class="text-[17px] font-black text-slate-900 leading-none">M.Tech</span>
+										<span
+											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2.5"
+											>Programme</span
+										>
 									</div>
+									<i
+										class="fa-solid fa-chevron-right ml-auto text-slate-200 group-hover:text-blue-400 transition-all duration-500 group-hover:translate-x-1 text-xs"
+									/>
 								</a>
 							</div>
 						</div>
@@ -603,20 +695,20 @@
 </nav>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+	/* Fonts are loaded in app.html */
 
 	nav {
 		z-index: 99;
 		width: 100%;
 		background: #ffffff;
-		font-family: 'Outfit', sans-serif;
+		font-family: 'Roboto', sans-serif;
 	}
 
 	nav .wrapper {
 		position: relative;
 		max-width: 1600px;
-		padding: 0 20px;
-		height: 80px;
+		padding: 0 24px;
+		height: 56px;
 		line-height: normal;
 		margin: auto;
 		display: flex;
@@ -626,7 +718,7 @@
 	}
 
 	.wrapper .logo img {
-		width: 130px;
+		width: 100px;
 	}
 
 	.wrapper .nav-links {
@@ -646,29 +738,24 @@
 	}
 
 	.nav-links li a {
-		color: #334155;
+		color: #000000;
 		text-decoration: none;
 		font-size: 15px;
-		padding: 10px 14px;
-		border-radius: 10px;
-		transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		padding: 8px 14px;
+		border-radius: 8px;
+		transition: all 0.3s ease;
 		white-space: nowrap;
 		line-height: normal;
-		text-transform: none;
+		text-transform: capitalize;
 		letter-spacing: 0.02em;
-		font-weight: 700;
-		font-family:
-			'Inter',
-			system-ui,
-			-apple-system,
-			Segoe UI,
-			Roboto,
-			sans-serif;
+		font-weight: 500;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
 	}
 
 	.nav-links li a:hover {
 		color: #2672d5;
-		background: #f8fafc;
+		background: rgba(38, 114, 213, 0.05);
 		transform: translateY(-1px);
 	}
 
@@ -688,7 +775,7 @@
 		transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 		text-align: center;
 		z-index: 100;
-		top: 80px;
+		top: 64px;
 		pointer-events: none;
 	}
 
@@ -708,13 +795,24 @@
 		transform: translateX(-50%) translateY(0);
 		pointer-events: auto;
 	}
+	nav {
+		position: sticky;
+		top: 0;
+		z-index: 998;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+	}
 
 	.content {
 		position: relative;
 	}
 
 	.mega-box .content header {
-		font-family: 'Outfit', sans-serif !important;
+		font-family: 'Poppins', sans-serif !important;
+		font-weight: 700;
+	}
+
+	.mega-box .content span {
+		font-family: 'Roboto', sans-serif !important;
 	}
 
 	.wrapper .btn {
@@ -725,9 +823,28 @@
 	}
 
 	.wrapper .btn.close-btn {
+		display: none;
 		position: absolute;
-		right: 30px;
-		top: 20px;
+		right: 25px;
+		top: 25px;
+		width: 45px;
+		height: 45px;
+		background: #f1f5f9;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	}
+
+	.close-btn i {
+		font-size: 20px;
+		color: #1e293b;
+	}
+
+	.close-btn:hover {
+		background: #e2e8f0;
+		transform: rotate(90deg);
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -740,7 +857,7 @@
 		}
 		.logo img {
 			display: block;
-			width: 100px;
+			width: 75px;
 		}
 		nav .wrapper {
 			justify-content: space-between;
@@ -757,15 +874,14 @@
 			position: fixed;
 			height: 100vh;
 			width: 100%;
-			max-width: 320px;
 			top: 0;
 			left: -100%;
 			background: #ffffff;
 			display: block;
-			padding: 70px 24px;
+			padding: 80px 20px 40px;
 			overflow-y: auto;
-			box-shadow: 20px 0px 60px rgba(0, 0, 0, 0.08);
-			transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: none;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			z-index: 1000;
 		}
 
@@ -773,33 +889,74 @@
 			left: 0%;
 		}
 
+		.wrapper .btn.close-btn {
+			display: flex;
+		}
+
+		/* Added overlay when menu is open */
+		#menu-btn:checked ~ .btn.menu-btn::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.4);
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
+			z-index: 999;
+			cursor: default;
+		}
+
 		.nav-links li {
-			margin: 12px 0;
+			margin: 8px 0;
 			display: block;
 			height: auto;
 		}
 
 		.nav-links li a {
-			padding: 14px 20px;
+			padding: 12px 16px;
 			display: block;
-			font-size: 17px;
-			font-weight: 800;
-			border-radius: 14px;
-			color: #0f172a;
+			font-size: 16px;
+			font-weight: 700;
+			border-radius: 12px;
+			color: #1e293b;
 			line-height: normal;
 		}
 
 		.nav-links .mobile-item {
-			display: block;
-			padding: 14px 20px;
-			border-radius: 14px;
-			color: #0f172a;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 12px 16px;
+			border-radius: 12px;
+			color: #1e293b;
 			cursor: pointer;
+			font-size: 16px;
+			font-weight: 700;
 			transition: background 0.2s;
 		}
 
+		.nav-links .mobile-item::after {
+			content: '\f107';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			transition: transform 0.3s;
+		}
+
+		#showMega:checked + .mobile-item::after,
+		#governance:checked + .mobile-item::after,
+		#courses:checked + .mobile-item::after,
+		#faculty:checked + .mobile-item::after,
+		#examcell:checked + .mobile-item::after,
+		#facilities:checked + .mobile-item::after,
+		#research:checked + .mobile-item::after,
+		#cdc:checked + .mobile-item::after {
+			transform: rotate(180deg);
+		}
+
 		.nav-links .mobile-item:hover {
-			background: #f1f5f9;
+			background: #f8fafc;
 		}
 
 		.nav-links .desktop-item {
@@ -815,8 +972,9 @@
 			visibility: visible;
 			max-height: 0;
 			overflow: hidden;
-			transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			transition: all 0.3s ease;
 			box-shadow: none;
+			background: transparent;
 		}
 
 		#showMega:checked ~ .mega-box,
@@ -827,20 +985,88 @@
 		#facilities:checked ~ .mega-box,
 		#research:checked ~ .mega-box,
 		#cdc:checked ~ .mega-box {
-			max-height: 2000px;
-			margin-top: 15px;
+			max-height: 5000px;
+			margin-top: 5px;
+			margin-bottom: 15px;
 		}
 
 		.content {
 			box-shadow: none !important;
 			border: none !important;
-			background: #f8fafc !important;
+			background: #f1f5f9 !important;
 			border-radius: 20px !important;
+			padding: 20px 12px !important;
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center !important;
+			justify-content: center !important;
+			text-align: center !important;
 		}
 
-		.content .flex-1 {
-			padding: 24px !important;
-			border: none !important;
+		.flex-1 {
+			width: 100% !important;
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center !important;
+			justify-content: center !important;
+			padding: 12px 0 !important;
+		}
+
+		.content .grid {
+			width: 100% !important;
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center !important;
+			gap: 8px !important;
+		}
+
+		.content header {
+			font-size: 14px !important;
+			color: #64748b !important;
+			padding: 0 16px !important;
+			margin-bottom: 16px !important;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			font-weight: 800;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			gap: 10px !important;
+			width: 100% !important;
+		}
+
+		.flex-1 > div:first-child {
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+			width: 100% !important;
+		}
+
+		.content a {
+			padding: 16px 24px !important;
+			margin: 6px 0 !important;
+			background: white !important;
+			border-radius: 12px !important;
+			font-size: 15px !important;
+			border: 1px solid #e2e8f0 !important;
+			width: 100% !important;
+			max-width: 300px !important;
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+			text-align: center !important;
+		}
+
+		.content a:hover {
+			border-color: #2672d5 !important;
+			color: #2672d5 !important;
+			transform: translateY(-1px) !important;
+			box-shadow: 0 4px 12px rgba(38, 114, 213, 0.1) !important;
+		}
+
+		.content i {
+			font-size: 16px !important;
 		}
 	}
 

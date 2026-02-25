@@ -1,6 +1,45 @@
 <script>
 	let events = [
 		{
+			name: 'Samsung Innovation Campus X CSE',
+			description:
+				'The Dept. of CSE is pleased to share that the Samsung Innovation Campus, in association with Datapro Pvt Ltd. and the Department of CSE, BITS Vizag, successfully organized Artificial Intelligence Training Sessions for 250 students of BITS Vizag across all Departments..',
+			date: 'January 22, 2025',
+			image: '/events/samsung.jpg',
+			href: 'https://www.instagram.com/p/DT0QQlfiAI6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
+			name: 'Christmas Extravaganza 3.0',
+			description:
+				'The Campus of Baba Institute of Technology & Sciences Vizag was filled with Festive Grace through Live Carols, Heartfelt Christmas Greetings, Candle Service, Cake Cutting, and the Sharing of Gifts with our Working-Class.',
+			date: 'December 25, 2025',
+			image: '/events/christmas-3.0.jpg',
+			href: 'https://www.instagram.com/p/DSrMrnrCLs5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+
+		{
+			name: 'Pitch-A-Thon 2025 | BITS Vizag (A) | Powered by Payzo',
+			description:
+				'BITS Vizag (A), in association with Payzo, successfully organized Pitch-A-Thon 2025 on 9th December, providing a dynamic platform for students to showcase their startup ideas and entrepreneurial thinking..',
+			date: 'December 13, 2025',
+			image: '/events/payzo.jpg',
+			href: 'https://www.instagram.com/p/DSNLQBXE84Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+
+		{
+			name: 'BITS Vizag (A) × Kaumodaki Nexus Grid',
+			description:
+				'The Department of ECE, BITS Vizag(A) signed an MoU with Kaumodaki Nexus Grid Pvt. Ltd. in the presence of Principal, Dept Head and Delegates from the Organization, marking a meaningful step toward strengthening Industry–Academia collaboration.',
+			date: 'December 5, 2025',
+			image: '/events/kau.jpg',
+			href: 'https://www.instagram.com/p/DR43kIIiNBs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+
+		{
 			name: 'National-Level T10 Championship',
 			description:
 				'BITS Vizag players joined the Andhra Pradesh T10 team flagged off for the National Championship',
@@ -260,6 +299,11 @@
 	function scaleDown(element) {
 		animate(element, { scale: 1 }, { duration: 0.3 });
 	}
+
+	let limit = 10;
+	function showMore() {
+		limit = events.length;
+	}
 </script>
 
 <!--Bigger Screens-->
@@ -280,10 +324,10 @@
 			</div>
 		</div>
 	</div>
-	{#each events as event, i}
+	{#each events.slice(0, limit) as event, i}
 		{#if i % 2 === 0}
 			<div class="flex divide-x-4 divide-purpleS1 justify-start">
-				<div class="w-[400px] flex items-center justify-center py-16">
+				<div class="w-[400px] flex items-center justify-center py-10">
 					<div class="flex flex-col items-center">
 						<div class="w-[270px] h-[260px]">
 							<a href={event.href}>
@@ -302,7 +346,7 @@
 					</div>
 					<div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r" />
 				</div>
-				<div class="w-[400px] flex py-16">
+				<div class="w-[400px] flex py-10">
 					<div class="flex flex-col justify-center items-center px-4">
 						<p class="text-xl font-bold pb-4 text-center">{event.name}</p>
 						<p class="text-md font-normal pb-4 text-gray-800 text-center">{event.description}</p>
@@ -328,7 +372,7 @@
 			</div>
 		{:else}
 			<div class="flex divide-x-4 divide-purpleS1 justify-end">
-				<div class="w-[400px] py-16">
+				<div class="w-[400px] py-10">
 					<div class="flex flex-col justify-center items-center pt-4 px-4">
 						<p class="text-xl font-bold pb-4 text-center">{event.name}</p>
 						<p class="text-md font-normal pb-4 text-gray-800 text-center">{event.description}</p>
@@ -351,7 +395,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="w-[400px] flex items-center justify-center py-16">
+				<div class="w-[400px] flex items-center justify-center py-10">
 					<div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r" />
 					<div class="flex flex-col items-center">
 						<div class="w-[270px] h-[260px]">
@@ -373,6 +417,30 @@
 			</div>
 		{/if}
 	{/each}
+
+	{#if limit < events.length}
+		<div class="w-full flex flex-col items-center py-12 mt-4">
+			<div
+				class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-8 opacity-50"
+			></div>
+			<button
+				on:click={showMore}
+				class="group flex items-center gap-6 bg-transparent border-none cursor-pointer outline-none p-0 appearance-none"
+			>
+				<span
+					class="text-3xl lg:text-5xl font-black text-slate-800 lowercase tracking-wider group-hover:text-[#2672d5] transition-all duration-300"
+				>
+					explore for more .....
+				</span>
+				<div
+					class="h-12 w-12 rounded-full border-2 border-slate-200 flex items-center justify-center group-hover:border-[#2672d5] group-hover:bg-[#2672d5] group-hover:text-white transition-all duration-500 shadow-sm"
+				>
+					<i class="fa-solid fa-chevron-down text-xl group-hover:translate-y-1 transition-transform"
+					></i>
+				</div>
+			</button>
+		</div>
+	{/if}
 </section>
 
 <!--<1024px Smaller screens-->
@@ -381,7 +449,7 @@
 		<p class="md:text-4xl sm:text-2xl text-2xl font-bold text-gray-300">Events</p>
 	</div>
 	<div class="flex flex-wrap xs:p-10">
-		{#each events as event, i}
+		{#each events.slice(0, limit) as event, i}
 			<div class="flex w-[300px] grow shrink-0 pb-6 justify-center">
 				<div class="flex flex-col bg-white xs:ml-5 mx-2 rounded-2xl items-center p-4">
 					<p class="md:text-sm sm:text-sm text-lg text-center py-2 font-bold">{event.name}</p>
@@ -415,11 +483,28 @@
 				</div>
 			</div>
 		{/each}
-		<div class="flex justify-end w-full p-4">
-			<a href="#" class="underline text-gray-300 font-bold md:text-2xl sm:text-xl text-lg"
-				>Read More...</a
-			>
-		</div>
+		{#if limit < events.length}
+			<div class="flex flex-col items-center w-full py-10 mt-2">
+				<div
+					class="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6 opacity-50"
+				></div>
+				<button
+					on:click={showMore}
+					class="group flex items-center gap-4 bg-transparent border-none cursor-pointer outline-none p-0 appearance-none text-left"
+				>
+					<span
+						class="text-2xl font-black text-gray-300 lowercase tracking-tight group-hover:text-white transition-all"
+					>
+						explore for more .....
+					</span>
+					<div
+						class="h-10 w-10 rounded-full border border-gray-600 flex items-center justify-center group-hover:border-white group-hover:bg-white group-hover:text-gray-900 transition-all duration-500"
+					>
+						<i class="fa-solid fa-chevron-down text-sm"></i>
+					</div>
+				</button>
+			</div>
+		{/if}
 	</div>
 </section>
 

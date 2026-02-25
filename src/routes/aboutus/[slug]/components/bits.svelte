@@ -8,7 +8,7 @@
 			<div id="text" class="text-justify">
 				<div>
 					<p
-						class="font-['Arial'] text-justify md:text-[15px] tracking-wider lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
+						class="font-['Arial'] text-justify md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
 					>
 						Baba Institute of Technology & Sciences (BITS), established in 2008, is an autonomous,
 						NAAC-accredited institution approved by AICTE and affiliated with JNTU–GV. Located in
@@ -26,7 +26,7 @@
 				</div>
 				<div>
 					<p
-						class="font-['Arial'] text-justify md:text-[15px] tracking-widest md:font-bold lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
+						class="font-['Arial'] text-justify md:text-[15px] tracking-widest text-slate-700 font-bold lg:leading-6 my-1"
 					>
 						To emerge as a leader in Engineering, Technology, Science, and Management education by
 						transforming youth into dynamic professionals.
@@ -39,7 +39,7 @@
 				</div>
 				<div>
 					<ul
-						class="font-['Arial'] list-disc text-justify md:text-[15px] tracking-widest md:font-bold lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
+						class="font-['Arial'] list-disc text-justify md:text-[15px] tracking-widest text-slate-700 font-bold lg:leading-6 my-1 2xs:font-bold xs:text-sm py-0"
 					>
 						<li>Deliver quality, outcome-based technical education</li>
 						<li>Foster innovation, ethics, and professional competence</li>
