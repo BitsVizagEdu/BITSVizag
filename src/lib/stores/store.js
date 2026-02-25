@@ -1,53 +1,51 @@
+import { writable } from 'svelte/store';
 
-import { writable } from "svelte/store"
+export const isHidden = writable(true);
 
-export const isHidden =writable(true)
-
-export function toggleIsHidden(){
-    let value = isHidden
-    isHidden.set(!value)
+export function toggleIsHidden() {
+    isHidden.update((val) => !val);
 }
 
-export const showNavBar = writable(false)
-export let tempNavValue = false
+export const showNavBar = writable(false);
+export let tempNavValue = false;
 
-showNavBar.subscribe(value => {
-    tempNavValue = value
-})
+showNavBar.subscribe((value) => {
+    tempNavValue = value;
+});
 
-export function toggleNavBar(){
-    showNavBar.set(!tempNavValue)
+export function toggleNavBar() {
+    showNavBar.set(!tempNavValue);
 }
 
-export const showNavBar2 = writable(false)
-export let tempNavValue2 = false
+export const showNavBar2 = writable(false);
+export let tempNavValue2 = false;
 
-showNavBar2.subscribe(value => {
-    tempNavValue2 = value
-})
+showNavBar2.subscribe((value) => {
+    tempNavValue2 = value;
+});
 
-export function toggleNavBar2(){
-    showNavBar2.set(!tempNavValue2)
+export function toggleNavBar2() {
+    showNavBar2.set(!tempNavValue2);
 }
 
-export const activeTab = writable("")
-export let tempTabValue = ""
+export const activeTab = writable('');
+export let tempTabValue = '';
 
-activeTab.subscribe(value =>{
-    tempTabValue = value
-})
+activeTab.subscribe((value) => {
+    tempTabValue = value;
+});
 
 export function setActiveTabValue(value) {
-    activeTab.set(value)
+    activeTab.set(value);
 }
 
-export const isActiveTabSet = writable(false)
-export let tempIsActiveTabSet = false
+export const isActiveTabSet = writable(false);
+export let tempIsActiveTabSet = false;
 
-isActiveTabSet.subscribe(value => {
-    tempIsActiveTabSet = value
-})
+isActiveTabSet.subscribe((value) => {
+    tempIsActiveTabSet = value;
+});
 
-export function toggleIsActiveTab(value){
-    isActiveTabSet.set(value)
+export function toggleIsActiveTab(value) {
+    isActiveTabSet.set(value);
 }

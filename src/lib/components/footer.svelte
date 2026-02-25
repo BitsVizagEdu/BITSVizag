@@ -1,207 +1,363 @@
 <script>
+	/** @type {any} */
 	import gsap from 'gsap/dist/gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
+	/** @type {HTMLElement} */
+	let joinSection;
+	/** @type {HTMLElement[]} */
+	let bgElements = [];
 
-		let timeline_footer = gsap.timeline({
+	onMount(() => {
+		/** @type {any} */
+		const g = gsap;
+		g.registerPlugin(ScrollTrigger);
+
+		// Optimized Mouse move parallax with smoother interp
+		let xPos = 0;
+		let yPos = 0;
+		let mouseX = 0;
+		let mouseY = 0;
+
+		/** @param {MouseEvent} e */
+		const handleMouseMove = (e) => {
+			const { clientX, clientY } = e;
+			const { innerWidth, innerHeight } = window;
+			mouseX = (clientX / innerWidth - 0.5) * 30;
+			mouseY = (clientY / innerHeight - 0.5) * 30;
+		};
+
+		// Ticker for smooth non-laggy movement
+		const ticker = () => {
+			xPos += (mouseX - xPos) * 0.08;
+			yPos += (mouseY - yPos) * 0.08;
+
+			bgElements.forEach((el, i) => {
+				if (el) {
+					const factor = (i + 1) * 0.5;
+					g.set(el, {
+						x: xPos * factor,
+						y: yPos * factor
+					});
+				}
+			});
+
+			g.set('.cta-text-shadow', {
+				x: -xPos * 0.2,
+				y: -yPos * 0.2
+			});
+			requestAnimationFrame(ticker);
+		};
+		ticker();
+
+		window.addEventListener('mousemove', handleMouseMove);
+
+		// Entry Animations
+		let timeline_footer = g.timeline({
 			scrollTrigger: {
 				trigger: '#joinnowf',
 				toggleActions: 'play none none none',
-				start: '0% 80%'
-				// markers: true
+				start: 'top 80%'
 			}
 		});
 
+		// Split text animation for JOIN NOW!
+		const joinText = document.querySelector('#joinnow-text');
+		if (joinText && joinText.textContent) {
+			const letters = joinText.textContent.trim().split('');
+			joinText.textContent = '';
+			letters.forEach((char) => {
+				const span = document.createElement('span');
+				span.textContent = char === ' ' ? '\u00A0' : char;
+				span.style.display = 'inline-block';
+				joinText.appendChild(span);
+			});
+		}
+
 		timeline_footer
-			.from('#joinnow', {
+			.from('#joinnow-text span', {
 				opacity: 0,
-				translateY: '-20px',
-				duration: 0.8
+				y: 80,
+				scale: 0.8,
+				transformOrigin: '50% 100%',
+				stagger: 0.04,
+				duration: 1.2,
+				ease: 'power4.out'
 			})
 			.from(
 				'#tagline-f',
 				{
 					opacity: 0,
-					translateY: '20px',
-					duration: 0.8
+					y: 20,
+					duration: 1,
+					ease: 'power2.out'
 				},
-				'-=0.4'
+				'-=0.8'
 			)
 			.from(
 				'#joinnowbtn',
 				{
 					opacity: 0,
-					translateY: '15px',
-					duration: 0.8
+					y: 20,
+					duration: 1,
+					ease: 'power2.out'
 				},
-				'-=0.4'
+				'-=0.8'
+			)
+			.from(
+				'.floating-shape',
+				{
+					opacity: 0,
+					scale: 0,
+					stagger: 0.15,
+					duration: 1.5,
+					ease: 'power2.out'
+				},
+				'-=1.2'
 			);
+
+		return () => {
+			window.removeEventListener('mousemove', handleMouseMove);
+		};
 	});
 </script>
 
-<section class="" data-aos="fade-up" data-aos-anchor-placement="top-center">
+<section class="font-roboto" data-aos="fade-up" data-aos-anchor-placement="top-center">
 	<div>
-		<div class="bg-[#0c1637] rounded-t-[40px]">
+		<div class="bg-[#0c1637] rounded-t-[40px] overflow-hidden">
 			<div
 				id="joinnowf"
-				class="cta-gradient relative h-[450px] sm:h-[550px] md:h-[75vh] rounded-[40px] overflow-hidden flex flex-col items-center justify-center p-6 sm:p-12 text-center"
+				bind:this={joinSection}
+				class="cta-gradient relative h-[300px] sm:h-[350px] md:h-[45vh] flex flex-col items-center justify-center p-4 sm:p-8 text-center"
 			>
+				<!-- Simplified multi-layered background for better performance -->
+				<div class="absolute inset-0 overflow-hidden pointer-events-none">
+					<div
+						bind:this={bgElements[0]}
+						class="floating-shape absolute top-[15%] left-[10%] w-32 h-32 bg-white/10 rounded-full blur-2xl will-change-transform"
+					></div>
+					<div
+						bind:this={bgElements[1]}
+						class="floating-shape absolute bottom-[15%] right-[15%] w-48 h-48 bg-blue-500/10 rounded-full blur-3xl will-change-transform"
+					></div>
+				</div>
+
 				<!-- Subtle pattern overlay -->
 				<div
-					class="absolute inset-0 opacity-[0.03] pointer-events-none"
+					class="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay shadow-inner"
 					style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"
 				></div>
 
 				<div class="relative z-10 flex flex-col items-center">
-					<div id="joinnow" class="mb-2 sm:mb-6">
+					<div id="joinnow" class="mb-1 sm:mb-4 perspective-1000">
 						<h2
-							class="font-black text-white leading-[0.9] tracking-tighter text-[160px] sm:text-9xl lg:text-[140px] xl:text-[160px]"
+							id="joinnow-text"
+							class="font-black text-white leading-[0.8] tracking-tighter text-[50px] sm:text-[80px] lg:text-[100px] xl:text-[120px] uppercase select-none drop-shadow-2xl"
 						>
 							JOIN NOW!
 						</h2>
+						<!-- Decorative floating shadow text -->
+						<div
+							class="cta-text-shadow absolute inset-0 -z-10 opacity-10 blur-md pointer-events-none font-black text-[50px] sm:text-[80px] lg:text-[100px] xl:text-[120px] uppercase translate-x-1 translate-y-1"
+						>
+							JOIN NOW!
+						</div>
 					</div>
 
-					<div id="tagline-f" class="mb-6 sm:mb-10">
+					<div id="tagline-f" class="mb-4 sm:mb-8">
 						<p
-							class="font-bold text-white/90 text-[5.5vw] xs:text-2xl sm:text-3xl md:text-4xl tracking-tight"
+							class="font-medium text-white/90 text-base sm:text-xl md:text-2xl tracking-wide uppercase italic flex flex-wrap items-center justify-center gap-x-2 gap-y-3"
 						>
-							Be a Part of <span class="text-blue-200">BITS FAMILY</span>
+							Launch Your <span class="text-white font-black border-b-2 border-blue-400/50 pb-0.5"
+								>Greatness</span
+							>
+							at
+							<span
+								class="inline-flex gap-1 sm:gap-1 align-middle scale-[0.65] sm:scale-75 origin-center transition-transform duration-500 hover:scale-[0.85]"
+							>
+								<span
+									class="w-6 h-6 sm:w-9 sm:h-9 bg-[#ec4899] rounded-lg flex items-center justify-center text-white font-black shadow-[0_5px_15px_rgba(236,72,153,0.3)] border border-white/20 not-italic text-sm sm:text-xl"
+									>B</span
+								>
+								<span
+									class="w-6 h-6 sm:w-9 sm:h-9 bg-[#84cc16] rounded-lg flex items-center justify-center text-white font-black shadow-[0_5px_15px_rgba(132,204,22,0.3)] border border-white/20 not-italic text-sm sm:text-xl"
+									>I</span
+								>
+								<span
+									class="w-6 h-6 sm:w-9 sm:h-9 bg-[#f59e0b] rounded-lg flex items-center justify-center text-white font-black shadow-[0_5px_15px_rgba(245,158,11,0.3)] border border-white/20 not-italic text-sm sm:text-xl"
+									>T</span
+								>
+								<span
+									class="w-6 h-6 sm:w-9 sm:h-9 bg-[#0ea5e9] rounded-lg flex items-center justify-center text-white font-black shadow-[0_5px_15px_rgba(14,165,233,0.3)] border border-white/20 not-italic text-sm sm:text-xl"
+									>S</span
+								>
+							</span>
 						</p>
 					</div>
 
 					<div id="joinnowbtn">
-						<a
-							href="/contactus"
-							class="inline-block transform transition-all duration-500 hover:scale-105 active:scale-95"
-						>
+						<a href="/contactus" class="inline-block group relative">
+							<!-- Glow Effect behind button -->
+							<div
+								class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+							></div>
+
 							<button
-								class="group flex items-center gap-3 bg-white hover:bg-[#2672d5] text-[#0c1637] hover:text-white px-6 py-3.5 sm:px-10 sm:py-5 rounded-full text-base sm:text-xl font-bold shadow-2xl duration-500"
+								class="relative flex items-center gap-3 bg-white text-[#0c1637] px-6 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg font-bold shadow-[0_15px_40px_rgba(0,0,0,0.2)] transition-all duration-500 group-hover:-translate-y-1 group-active:translate-y-0"
 							>
+								Admissions Enquiry
 								<div
-									class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-[#0c1637] group-hover:bg-white rounded-full transition-colors duration-500"
+									class="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-[#0c1637] rounded-full transition-all duration-500 group-hover:rotate-45"
 								>
-									<svg
-										class="rotate-[-45deg] fill-white group-hover:fill-[#2672d5] w-3.5 h-3.5 sm:w-5 sm:h-5 transition-all duration-500"
-										viewBox="0 0 24 25"
-									>
+									<svg class="fill-white w-3 h-3 sm:w-4 sm:h-4" viewBox="0 0 24 25">
 										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
 											d="M16.961 18.085a.459.459 0 0 0 .023.68.545.545 0 0 0 .732-.02l5.648-5.592.333-.33-.333-.33-5.572-5.516a.545.545 0 0 0-.732-.02.459.459 0 0 0-.023.68l4.76 4.712H.713c-.276 0-.5.224-.498.5 0 .276.226.5.502.5h21.028l-4.784 4.736Z"
 										></path>
 									</svg>
 								</div>
-								Admissions Enquiry
 							</button>
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="md:h-[350px] flex 3xs:flex-col md:flex-row p-6">
-				<div class=" md:w-[50%] flex flex-col justify-between md:py-8">
-					<div>
+			<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 p-6 md:p-10">
+				<!-- Column 1: Brand & Contact -->
+				<div class="md:col-span-12 lg:col-span-4 space-y-6">
+					<div class="space-y-3">
 						<p
-							class="text-center md:text-start text-white font-semibold 3xs:text-xl md:text-2xl md:mr-[5%]"
+							class="text-white/80 font-medium text-base leading-relaxed italic border-l-4 border-blue-500 pl-4 py-1"
 						>
 							"The future belongs to those who believe in the beauty of their dreams."
 						</p>
 					</div>
-					<div
-						class="flex 3xs:flex-col my-5 md:my-0 lg:flex-row items-center md:items-start lg:items-center"
-					>
+
+					<div class="space-y-5 pt-2">
 						<a
 							href="/contactus"
-							class="flex items-center justify-center group duration-700 bg-gradient-to-r hover:bg-gradient-to-t from-[#6edad8] via-[#64d9d6] to-[#1aa9e8] w-full max-w-[350px] h-[60px] rounded-3xl mx-auto my-4"
+							class="group relative flex items-center justify-center w-full max-w-[280px] h-[54px] rounded-xl bg-gradient-to-r from-blue-600 to-[#1aa9e8] text-white font-bold text-base overflow-hidden transition-all duration-300 shadow-[0_10px_30px_rgba(37,99,235,0.2)] hover:shadow-[0_15px_40px_rgba(37,99,235,0.4)] hover:-translate-y-1"
 						>
-							<span
-								class="font-semibold text-xl group-hover:scale-110 duration-300 text-center w-full flex items-center justify-center"
-							>
-								Contact US
-							</span>
+							<span class="relative z-10">Contact Us Directly</span>
+							<div
+								class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+							></div>
 						</a>
-						<div
-							class="grid grid-cols-5 items-center lg:px-4 3xs:my-4 md:my-0 justify-items-center 3xs:w-[100%] md:mt-5 lg:mt-0 md:w-[90%] lg:w-[50%]"
-						>
-							<div>
-								<a href="https://www.facebook.com/BITSVizagOfficial/"
-									><img src="/facebook.svg" alt="Facebook" /></a
-								>
-							</div>
-							<div>
-								<a href="https://www.instagram.com/bits_vizag_official/"
-									><img src="/instagram.svg" alt="Instagram" /></a
-								>
-							</div>
-							<div>
-								<a href="https://www.youtube.com/@bitsmediacenter8449"
-									><img src="/youtube.svg" alt="YouTube" /></a
-								>
-							</div>
-							<div><a href=""><img src="/twitter.svg" alt="Twitter" /></a></div>
-							<div>
-								<a
-									href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"
-									><img src="/linkedin.svg" alt="LinkedIn" /></a
-								>
-							</div>
+
+						<div class="flex items-center gap-4">
+							<a
+								href="https://www.facebook.com/BITSVizagOfficial/"
+								class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/70 hover:bg-blue-600 hover:text-white hover:scale-110 transition-all duration-300"
+								aria-label="Facebook"
+							>
+								<i class="fa-brands fa-facebook-f text-base"></i>
+							</a>
+							<a
+								href="https://www.instagram.com/bits_vizag_official/"
+								class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/70 hover:bg-pink-600 hover:text-white hover:scale-110 transition-all duration-300"
+								aria-label="Instagram"
+							>
+								<i class="fa-brands fa-instagram text-base"></i>
+							</a>
+							<a
+								href="https://www.youtube.com/@bitsmediacenter8449"
+								class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/70 hover:bg-red-600 hover:text-white hover:scale-110 transition-all duration-300"
+								aria-label="YouTube"
+							>
+								<i class="fa-brands fa-youtube text-base"></i>
+							</a>
+							<a
+								href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"
+								class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/70 hover:bg-blue-700 hover:text-white hover:scale-110 transition-all duration-300"
+								aria-label="LinkedIn"
+							>
+								<i class="fa-brands fa-linkedin-in text-base"></i>
+							</a>
 						</div>
 					</div>
 				</div>
-				<div class="flex 2xs:flex-row md:w-[50%] justify-evenly">
-					<div class="flex 3xs:flex-col text-white pr-6 pt-6">
-						<div class="w-[60%] xl:w-[50%]">
-							<div class="pb-2 w-max">
-								<a href="/" class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300">Home</a
+
+				<!-- Column 2: Navigation Groups -->
+				<div class="md:col-span-6 lg:col-span-4 grid grid-cols-2 gap-4">
+					<div class="space-y-4">
+						<h4 class="text-white font-bold text-[11px] uppercase tracking-widest opacity-30">
+							Main Links
+						</h4>
+						<ul class="space-y-2.5">
+							<li>
+								<a
+									href="/"
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
+									>Home</a
 								>
-							</div>
-							<div class="pb-2 w-max">
+							</li>
+							<li>
 								<a
 									href="/aboutus/About-BITS"
-									class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300">About Us</a
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
+									>About Us</a
 								>
-							</div>
-							<div class="pb-2 w-max">
+							</li>
+							<li>
 								<a
 									href="/department/Department of BS&H"
-									class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300">Academics</a
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
+									>Academics</a
 								>
-							</div>
-							<div class="pb-2 w-max">
+							</li>
+							<li>
 								<a
 									href="/facilities"
-									class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300">Facilities</a
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
+									>Facilities</a
 								>
-							</div>
-							<div class="pb-2 w-max">
-								<a href="/gallery" class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300"
+							</li>
+						</ul>
+					</div>
+					<div class="space-y-4">
+						<h4 class="text-white font-bold text-[11px] uppercase tracking-widest opacity-30">
+							Resources
+						</h4>
+						<ul class="space-y-2.5">
+							<li>
+								<a
+									href="/gallery"
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
 									>Gallery</a
 								>
-							</div>
-							<!-- <div class="pb-2 w-max"><p class="sm:hover:scale-[1.1] cursor-pointer  duration-300">Credits</p></div> -->
-						</div>
-						<div class="w-[30%] xl:w-[50%] mt-10">
-							<div class="pb-2 w-max">
-								<a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300"
+							</li>
+							<li>
+								<a
+									href="#/"
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
 									>Exam Cell</a
 								>
-							</div>
-							<div class="pb-2 w-max">
-								<a href="#/" class="sm:hover:scale-[1.1] cursor-pointer text-lg duration-300"
+							</li>
+							<li>
+								<a
+									href="#/"
+									class="text-white/60 hover:text-white text-sm hover:translate-x-1 inline-block transition-all duration-300"
 									>Payment</a
 								>
-							</div>
-							<!-- <div class="pb-2 w-max"><p class="sm:hover:scale-[1.1] cursor-pointer  duration-300">NFB Education</p></div> -->
-						</div>
+							</li>
+						</ul>
 					</div>
-					<div class="">
+				</div>
+
+				<!-- Column 3: Location -->
+				<div class="md:col-span-6 lg:col-span-4 space-y-4">
+					<h4 class="text-white font-bold text-[11px] uppercase tracking-widest opacity-30">
+						Our Location
+					</h4>
+					<div class="relative rounded-xl overflow-hidden border border-white/10 shadow-xl group">
+						<div
+							class="absolute inset-0 bg-blue-600/5 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"
+						></div>
 						<iframe
-							class="rounded-2xl w-[100%] xl:w-auto"
+							title="BITS Campus Location"
+							class="w-full relative z-0 grayscale-[0.4] group-hover:grayscale-0 transition-all duration-700"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.5764681637656!2d83.32984371488234!3d17.811591387825697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395befa9dda303%3A0x5781c56a5df412!2sBaba%20Institute%20of%20Technology%20%26%20Sciences!5e0!3m2!1sen!2sin!4v1689674946811!5m2!1sen!2sin"
-							width="400"
-							height="300"
+							width="100%"
+							height="180"
 							style="border:0;"
 							allowfullscreen={true}
 							loading="lazy"
@@ -212,18 +368,41 @@
 			</div>
 		</div>
 	</div>
-	<div class="text-center bg-[#0c1637] my-[-2px] text-white py-2">
-		Made with ❤️ by <span class="text-orange-300"
-			><a href="https://www.konkorde.org">KONKORDE</a></span
-		>
+	<div class="text-center text-[12px] bg-[#070e24] border-t border-white/5 py-4">
+		<p class="text-white/20 font-medium tracking-widest uppercase">
+			Made with <span class="text-red-500 animate-pulse">❤️</span> by
+			<a href="https://www.konkorde.org" class="group transition-all duration-300">
+				<span
+					class="konkorde-gradient font-black tracking-widest transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]"
+					>KONKORDE</span
+				>
+			</a>
+		</p>
 	</div>
 </section>
 
 <style>
+	:global(.font-roboto) {
+		font-family: 'Roboto', sans-serif !important;
+	}
+
+	.perspective-1000 {
+		perspective: 1000px;
+	}
+
 	.cta-gradient {
-		background: linear-gradient(-45deg, #0c1637, #1e3a8a, #2672d5, #0ea5e9);
+		background: linear-gradient(-45deg, #0c1637, #1e3a8a, #4f46e5, #0ea5e9, #0c1637);
 		background-size: 400% 400%;
-		animation: gradientShift 10s ease infinite;
+		animation: gradientShift 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+		position: relative;
+	}
+
+	.cta-gradient::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+		pointer-events: none;
 	}
 
 	@keyframes gradientShift {
@@ -238,15 +417,35 @@
 		}
 	}
 
-	/* Fix for long tagline responsiveness */
-	#tagline-f p {
-		max-width: 90vw;
-		margin: 0 auto;
+	/* Parallax floating shapes animation */
+	.floating-shape {
+		will-change: transform;
+	}
+
+	#joinnow-text span {
+		display: inline-block;
+		transform-origin: bottom;
+		will-change: transform, opacity;
 	}
 
 	@media (max-width: 640px) {
 		h2 {
-			font-size: 18vw;
+			font-size: 15vw !important;
+		}
+	}
+
+	.konkorde-gradient {
+		background: linear-gradient(90deg, #3b82f6, #06b6d4, #3b82f6);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine 3s linear infinite;
+	}
+
+	@keyframes shine {
+		to {
+			background-position: 200% center;
 		}
 	}
 </style>

@@ -1,9 +1,9 @@
 import { error } from '@sveltejs/kit';
-import {items} from "./components/utils.js";
+import { items } from "./components/utils.js";
 
-function checkInArray(item){
-    for(let data of items){
-        if(data === item){
+function checkInArray(item) {
+    for (let data of items) {
+        if (data === item) {
             return true
         }
     }
