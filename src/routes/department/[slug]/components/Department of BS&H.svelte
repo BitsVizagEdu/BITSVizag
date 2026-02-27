@@ -1,81 +1,83 @@
 <script>
 	let items = [
 		{
-  name: "Dr.Narasimhamurthy Dusi",
-  designation: "Asst.Prof & Hod",
-  qualification:" MSc,M.Phill,Ph.D",
-  mail:""
-},
-{
-  name: "Dr. Aditi Abhishikta",
-  designation: "Asst.Prof",
-  qualification:" Msc,M.Phill,Ph.D",
-  mail:""
-},
-{
-  name: "Dr.Ravi Kota",
-  designation: "Asst.Prof",
-  qualification:" M.Sc,Ph.D",
-  mail:""
-},
-{
-  name: "Dr. Tarini Venkata Rao",
-  designation: "Chief Librarian",
-  qualification:" M.A,MLIS,Ph.D",
-  mail:""
-},
-{
-  name: "Dr.Jayarangarao Prathipati",
-  designation: "Asst.Prof",
-  qualification:" M.Sc,M.Phill,Ph.D",
-  mail:""
-},
-{
-  name: "Palakollu Mahesh",
-  designation: "Asst.Prof",
-  qualification:" M.Sc,M.Phill,Ph.D",
-  mail:""
-},
-{
-  name: "Kathula Serisha",
-  designation: "Asst.Prof",
-  qualification:" M.Sc(Mathematics)",
-  mail:""
-},
-{
-  name: "Mondi Mounika",
-  designation: "Asst.Prof",
-  qualification:" Msc,B.Ed",
-  mail:""
-},
-{
-  name: "G Jayasree",
-  designation: "Asst.Prof",
-  qualification:" M.A,(Ph.D)",
-  mail:""
-},
-{
-  name: "Kavitha V Bonela",
-  designation: "Asst.Prof",
-  qualification:" M.Sc(Mathematics)",
-  mail:""
-},
-{
-  name: "Botta Prasannakumar Yadav ",
-  designation: "Pd ",
-  qualification:" M.P.Ed",
-  mail:""
-},
-
-	]
+			name: 'Dr.Narasimhamurthy Dusi',
+			designation: 'Asst.Prof & Hod',
+			qualification: ' MSc,M.Phill,Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Dr. Aditi Abhishikta',
+			designation: 'Asst.Prof',
+			qualification: ' Msc,M.Phill,Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Dr.Ravi Kota',
+			designation: 'Asst.Prof',
+			qualification: ' M.Sc,Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Dr. Tarini Venkata Rao',
+			designation: 'Chief Librarian',
+			qualification: ' M.A,MLIS,Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Dr.Jayarangarao Prathipati',
+			designation: 'Asst.Prof',
+			qualification: ' M.Sc,M.Phill,Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Palakollu Mahesh',
+			designation: 'Asst.Prof',
+			qualification: ' M.Sc,M.Phill,Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Kathula Serisha',
+			designation: 'Asst.Prof',
+			qualification: ' M.Sc(Mathematics)',
+			mail: ''
+		},
+		{
+			name: 'Mondi Mounika',
+			designation: 'Asst.Prof',
+			qualification: ' Msc,B.Ed',
+			mail: ''
+		},
+		{
+			name: 'G Jayasree',
+			designation: 'Asst.Prof',
+			qualification: ' M.A,(Ph.D)',
+			mail: ''
+		},
+		{
+			name: 'Kavitha V Bonela',
+			designation: 'Asst.Prof',
+			qualification: ' M.Sc(Mathematics)',
+			mail: ''
+		},
+		{
+			name: 'Botta Prasannakumar Yadav ',
+			designation: 'Pd ',
+			qualification: ' M.P.Ed',
+			mail: ''
+		}
+	];
 </script>
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/header/basic.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1">BASIC SCIENCE AND HUMANITIES</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/lab.jpg" alt="" />
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class=" py-10 text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			<p>
 				The Department of Basic Sciences and Humanities at BITS Vizag Engineering College is a
@@ -105,28 +107,42 @@
 			</p>
 		</div>
 		<div class="pt-10">
-			<h1 id="HOD" class="text-3xl font-bold text-indigo-900">
-				HOD MESSAGE - Dr. Rama Rao
+			<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
+				HOD MESSAGE <span class="text-red-600"> - Dr. Rama Rao</span>
 			</h1>
-			<div class="flex justify-center w-[100%] pt-8">
-				<img src="/BHS-HOD.png" alt="" />
+			<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+				<div class="flex-shrink-0">
+					<img
+						src="/BHS-HOD.png"
+						class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
+						alt="HOD"
+					/>
+				</div>
+				<div
+					class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
+				>
+					<p>
+						Welcome to the Department of Basic Sciences and Humanities at BITS Vizag. As the
+						cornerstone of your engineering journey, our department is dedicated to building a
+						robust foundation in essential subjects. By integrating theoretical concepts with
+						analytical thinking, we ensure that our students grasp the fundamental principles of
+						mathematics, physics, chemistry, and communication.
+					</p>
+					<p>
+						Our passionate faculty provide an interactive learning environment that emphasizes
+						effective problem-solving and interdisciplinary education. This comprehensive approach
+						empowers you to excel in your chosen engineering discipline and adapt to future
+						innovations. We invite you to begin your academic journey with us: build a strong core,
+						think critically, and lay the vital groundwork for your successful career as a future
+						engineer.
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="text-justify mt-8 text-lg flex flex-col gap-5">
-			<p>
-				The Department Head of Basic Sciences and Humanities at BITS Vizag Engineering College is an
-				accomplished academic leader with expertise in foundational subjects. They oversee the
-				department's academic activities and foster a strong learning environment. With a passion
-				for interdisciplinary education, the department head emphasizes the importance of
-				mathematics, physics, chemistry, and communication skills in shaping well-rounded engineers.
-				Their guidance and interactive teaching methodologies inspire students to excel in their
-				chosen engineering disciplines while emphasizing effective communication and problem-solving
-				abilities. Under their leadership, the department serves as a vital pillar in providing a
-				solid academic foundation for future engineers.
-			</p>
-		</div>
-		<div>
-			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
+		<div class="pt-10">
+			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
+				Facilities & Infrastructure
+			</h1>
 			<div class="container pt-8">
 				<img class="first" src="/bsh1.png" alt="" />
 				<img src="/bsh3.jpg" alt="" />
@@ -386,7 +402,7 @@
 					<div class="w-[300px] h-[300px]"><img src="/book.svg" alt="" /></div>
 					<div id="branches" class="font-semibold text-[#1e3a8a] text-xs">
 						<p>B.TECH : BS&H</p>
-						
+
 						<p>DURATION –4YEARS</p>
 					</div>
 				</div>
@@ -478,28 +494,23 @@
 				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
 			</div>
 		</div>
-		
 	</div>
-	
-	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
-		
-		{#each items as item ,i}
-		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
-			<div class="w-12 h-12 mt-4">
-				<img src="/faculty.svg" alt="" >
-			</div>
-			<div class="p-[10px] capitalize font-bold text-center">{item.name}</div>
-			<div class="capitalize font-semibold">{item.designation}</div>
-			<div class="overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">{item.qualification}</a>
-			</div>
-		</div>
-	
-	{/each}
-		
-		
-		
-		
 
+	<div
+		class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
+	>
+		{#each items as item, i}
+			<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+				<div class="w-12 h-12 mt-4">
+					<img src="/faculty.svg" alt="" />
+				</div>
+				<div class="p-[10px] capitalize font-bold text-center">{item.name}</div>
+				<div class="capitalize font-semibold">{item.designation}</div>
+				<div class="overflow-hidden text-center pt-2">
+					<a href="mailto:principal@bitsvizag.com">{item.qualification}</a>
+				</div>
+			</div>
+		{/each}
 	</div>
 </section>
 
@@ -529,22 +540,22 @@
 		}
 	}
 
-	img:nth-child(1) {
+	.container img:nth-child(1) {
 		grid-area: A;
 	}
-	img:nth-child(2) {
+	.container img:nth-child(2) {
 		grid-area: B;
 	}
-	img:nth-child(3) {
+	.container img:nth-child(3) {
 		grid-area: C;
 	}
-	img:nth-child(4) {
+	.container img:nth-child(4) {
 		grid-area: D;
 	}
-	img:nth-child(5) {
+	.container img:nth-child(5) {
 		grid-area: E;
 	}
-	img {
+	.container img {
 		width: 100%;
 		height: 100%;
 	}
