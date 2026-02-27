@@ -1,76 +1,78 @@
 <script>
 	let items = [
 		{
-			name: "Elipilli Anil Kumar",
-			designation: "Asst Prof & Vice Principal",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Elipilli Anil Kumar',
+			designation: 'Asst Prof & Vice Principal',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "Kasi Venkateswara Rao",
-			designation: "Asst Prof & HoD",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Kasi Venkateswara Rao',
+			designation: 'Asst Prof & HoD',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "Dr. T Narasimhulu",
-			designation: "Assoc Prof",
-			qualification:"Ph.D",
-			mail:""
+			name: 'Dr. T Narasimhulu',
+			designation: 'Assoc Prof',
+			qualification: 'Ph.D',
+			mail: ''
 		},
 		{
-			name: "Mopada Sai Ganesh",
-			designation: "Asst Prof",
-			qualification:"M.E, (Ph.D)",
-			mail:""
+			name: 'Mopada Sai Ganesh',
+			designation: 'Asst Prof',
+			qualification: 'M.E, (Ph.D)',
+			mail: ''
 		},
 		{
-			name: "M V S Prem Sagar",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'M V S Prem Sagar',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "Chukka Nayak Bhukya",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Chukka Nayak Bhukya',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "Subbi Naidu Bora",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Subbi Naidu Bora',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "T Naveen Kumar",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'T Naveen Kumar',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
-		
+
 		{
-			name: "V Kama Raju",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'V Kama Raju',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "K Nooka Raju",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
-		},
-	
-	]
+			name: 'K Nooka Raju',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
+		}
+	];
 </script>
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/header/eee.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Electrical & Electronics Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/eee.jpg" alt="" />
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class=" py-10 text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			<p>
 				The Department of Electrical and Electronics Engineering (EEE) at BITS Vizag Engineering
@@ -99,29 +101,41 @@
 			</p>
 		</div>
 		<div class="pt-10">
-			<h1 id="HOD" class="text-3xl font-bold text-indigo-900">
-				HOD MESSAGE - Prof. K. Venkateswara Rao
+			<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
+				HOD MESSAGE <span class="text-red-600"> - Prof. K. Venkateswara Rao</span>
 			</h1>
-			<div class="flex justify-center w-[100%] pt-8">
-				<img src="/eee hod.jpg" alt="" />
+			<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+				<div class="flex-shrink-0">
+					<img
+						src="/eee hod.jpg"
+						class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
+						alt="HOD"
+					/>
+				</div>
+				<div
+					class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
+				>
+					<p>
+						Welcome to the Department of Electrical and Electronics Engineering at BITS Vizag. As an
+						eminent and dynamic academic community, we bring extensive expertise to the field of
+						electrical and electronics engineering. I oversee the department's academic and research
+						activities, striving to foster a culture of innovation, excellence, and collaboration
+						that inspires both our faculty and students.
+					</p>
+					<p>
+						Through strong industry connections and dedicated leadership, we promote meaningful
+						industry-academia interactions, creating valuable opportunities for student placements
+						and research projects. Join us as we drive cutting-edge research and work together to
+						shape future professionals who will contribute significantly to the advancement of
+						electrical and electronics engineering.
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="text-justify mt-8 text-lg flex flex-col gap-5">
-			<p>
-				The Department Head of Electrical and Electronics Engineering at BITS Vizag Engineering
-				College is an eminent and accomplished academic leader with extensive expertise in the field
-				of electrical and electronics engineering. As a visionary and dynamic individual, the
-				department head oversees the department's academic and research activities with great
-				proficiency. They foster a culture of innovation, excellence, and collaboration, inspiring
-				both faculty and students to excel in their pursuits. Through their strong industry
-				connections and leadership, they promote meaningful industry-academia interactions, creating
-				valuable opportunities for student placements and research projects. Under their guidance,
-				the department thrives as a hub of cutting-edge research, producing skilled graduates who
-				contribute significantly to the advancement of electrical and electronics engineering.
-			</p>
-		</div>
-		<div>
-			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
+		<div class="pt-10">
+			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
+				Facilities & Infrastructure
+			</h1>
 			<div class="container pt-8">
 				<img class="first" src="/eee4.png" alt="" />
 				<img src="/eee1.jpg" alt="" />
@@ -201,7 +215,6 @@
 					</svg>
 					<p>Electrical Measurements Lab</p>
 				</div>
-				
 			</div>
 			<div>
 				<div id="icon" class="flex">
@@ -273,8 +286,6 @@
 					</svg>
 					<p>Power System & System Lab</p>
 				</div>
-				
-				
 			</div>
 		</div>
 		<div class="parent mt-7">
@@ -467,29 +478,30 @@
 	</div>
 </section>
 <div class="parent mt-7">
-		<div class="child flex items-center justify-center text-white">
-			<div class="">
-				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
-			</div>
+	<div class="child flex items-center justify-center text-white">
+		<div class="">
+			<p id="aca" class="font-bold text-6xl">Faculty Details</p>
 		</div>
-		
 	</div>
-	
-	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
-		
-		{#each items as item ,i}
-		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+</div>
+
+<div
+	class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
+>
+	{#each items as item, i}
+		<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
 			<div class="w-12 h-12 mt-4">
-				<img src="/faculty.svg" alt="" >
+				<img src="/faculty.svg" alt="" />
 			</div>
 			<div class="p-[10px] capitalize font-bold">{item.name}</div>
 			<div class="capitalize font-semibold">{item.designation}</div>
-			<div class="overflow-hidden text-center pt-2"><a href="mailto:principal@bitsvizag.com">{item.qualification}</a>
+			<div class="overflow-hidden text-center pt-2">
+				<a href="mailto:principal@bitsvizag.com">{item.qualification}</a>
 			</div>
 		</div>
-	
 	{/each}
-	</div>
+</div>
+
 <style>
 	* {
 		box-sizing: border-box;
@@ -516,22 +528,22 @@
 		}
 	}
 
-	img:nth-child(1) {
+	.container img:nth-child(1) {
 		grid-area: A;
 	}
-	img:nth-child(2) {
+	.container img:nth-child(2) {
 		grid-area: B;
 	}
-	img:nth-child(3) {
+	.container img:nth-child(3) {
 		grid-area: C;
 	}
-	img:nth-child(4) {
+	.container img:nth-child(4) {
 		grid-area: D;
 	}
-	img:nth-child(5) {
+	.container img:nth-child(5) {
 		grid-area: E;
 	}
-	img {
+	.container img {
 		width: 100%;
 		height: 100%;
 	}

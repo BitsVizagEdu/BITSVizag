@@ -29,7 +29,7 @@
 {#if !$showNavBar}
 	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">
 		<!-- Main Content Sidebar -->
-		<aside class="w-full lg:w-[320px] p-4 lg:p-6 lg:sticky lg:top-0 h-fit" aria-label="Sidebar">
+		<aside class="w-full lg:w-[350px] p-4 lg:p-6 lg:sticky lg:top-0 h-fit" aria-label="Sidebar">
 			<div
 				class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 p-2 lg:p-3"
 			>

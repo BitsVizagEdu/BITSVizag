@@ -1,143 +1,186 @@
 <script>
 	let items = [
 		{
-  name: "Srirangam Durga Prasad",
-  designation: "Associate Prof & HoD",
-  qualification:"MCA, M.TECH, (Ph.D) ",
-  mail:""
-},
-{
-  name: "Dr. S Vidyasagar Appaji",
-  designation: "Asst Prof",
-  qualification:"M.TECH., MBA, Ph.D",
-  mail:""
-},
-{
-  name: "Dr. Dharavathu Radha",
-  designation: "Asst Prof",
-  qualification:"M.TECH, Ph.D",
-  mail:""
-},
-{
-  name: "Padma Mohan ",
-  designation: "Asst Prof",
-  qualification:"MCA, M.Phill",
-  mail:""
-},
-{
-  name: "B Madhava Rao",
-  designation: "ASST PROF(Sr.)",
-  qualification:"MCA, M.TECH",
-  mail:""
-},
-{
-  name: "Joshuaraju Pulapalli",
-  designation: "ASST. PROF & TPO INC",
-  qualification:"M.TECH, (Ph.D)",
-  mail:""
-},
-{
-  name: "Surapareddy Samyukta",
-  designation: "Asst Prof",
-  qualification:"M.TECH",
-  mail:""
-},
-{
-  name: "Chaitanya Thalluri",
-  designation: "Asst Prof",
-  qualification:"M.TECH",
-  mail:""
-},
-{
-  name: "Kovvuri Sindhuja",
-  designation: "Asst Prof",
-  qualification:"MCA",
-  mail:""
-},
-{
-  name: "D D Shiva Prasad",
-  designation: "Asst Prof",
-  qualification:"M.TECH",
-  mail:""
-},
-{
-  name: "Gadde Mohana Sowjanya",
-  designation: "Asst Prof",
-  qualification:"M.TECH",
-  mail:""
-},
-{
-  name: "D Appala Raju",
-  designation: "Asst Prof",
-  qualification:"M.TECH",
-  mail:""
-},
-
-		
-	
-	]
+			name: 'Srirangam Durga Prasad',
+			designation: 'Associate Prof & HoD',
+			qualification: 'MCA, M.TECH, (Ph.D) ',
+			mail: ''
+		},
+		{
+			name: 'Dr. S Vidyasagar Appaji',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH., MBA, Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Dr. Dharavathu Radha',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH, Ph.D',
+			mail: ''
+		},
+		{
+			name: 'Padma Mohan ',
+			designation: 'Asst Prof',
+			qualification: 'MCA, M.Phill',
+			mail: ''
+		},
+		{
+			name: 'B Madhava Rao',
+			designation: 'ASST PROF(Sr.)',
+			qualification: 'MCA, M.TECH',
+			mail: ''
+		},
+		{
+			name: 'Joshuaraju Pulapalli',
+			designation: 'ASST. PROF & TPO INC',
+			qualification: 'M.TECH, (Ph.D)',
+			mail: ''
+		},
+		{
+			name: 'Surapareddy Samyukta',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH',
+			mail: ''
+		},
+		{
+			name: 'Chaitanya Thalluri',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH',
+			mail: ''
+		},
+		{
+			name: 'Kovvuri Sindhuja',
+			designation: 'Asst Prof',
+			qualification: 'MCA',
+			mail: ''
+		},
+		{
+			name: 'D D Shiva Prasad',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH',
+			mail: ''
+		},
+		{
+			name: 'Gadde Mohana Sowjanya',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH',
+			mail: ''
+		},
+		{
+			name: 'D Appala Raju',
+			designation: 'Asst Prof',
+			qualification: 'M.TECH',
+			mail: ''
+		}
+	];
 </script>
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/header/cse.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/cse.jpg" alt="" />
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class=" py-10 text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			<p>
 				The Department of Computer Science and Engineering (CSE) at BITS Vizag Engineering College
 				is a dynamic and vibrant academic unit dedicated to providing top-notch education and
-				research opportunities in the field of computer science and engineering. It is committed to
-				producing skilled and competent professionals who can address the ever-changing demands of
-				the technology industry.
+				research opportunities in the field of computer science and engineering.
 			</p>
 		</div>
 		<div>
 			<p>
-				The CSE department at BITS Vizag Engineering College boasts world-class infrastructure and
-				facilities to support its academic and research endeavors.
+				It is committed to producing skilled and competent professionals who can address the
+				ever-changing demands of the technology industry.The CSE department at BITS Vizag
+				Engineering College boasts world-class infrastructure and facilities to support its academic
+				and research endeavors.
 			</p>
+
 			<p class="pt-3">
 				The curriculum is designed to strike a balance between theoretical knowledge and practical
 				skills, empowering students with a strong foundation in core computer science concepts and
-				the ability to apply them to real-world problems.
-			</p>
-			<p class="pt-3">
-				The Department of Computer Science and Engineering at BITS Vizag Engineering College plays a
-				crucial role in shaping the future of the technology landscape.
+				the ability to apply them to real-world problems.The Department of Computer Science and
+				Engineering at BITS Vizag Engineering College plays a crucial role in shaping the future of
+				the technology landscape.
 			</p>
 		</div>
 		<div class="pt-10">
-			<h1 id="HOD" class="text-3xl font-bold text-indigo-900">
-				HOD MESSAGE - Prof. S. Durga Prasad
+			<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
+				HOD MESSAGE <span class="text-red-600"> - Prof. S. Durga Prasad</span>
 			</h1>
-			<div class="flex justify-center w-[100%] pt-8">
-				<img src="/cse hod.jpg" alt="" />
+			<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+				<div class="flex-shrink-0">
+					<img
+						src="/cse hod.jpg"
+						class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
+						alt="HOD"
+					/>
+				</div>
+				<div
+					class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
+				>
+					<p>
+						Welcome to the Department of Computer Science. As an accomplished academic leader with
+						extensive experience in computer science and engineering, I oversee our academic and
+						research activities with a forward-thinking vision. We are committed to fostering a
+						culture of innovation and excellence, ensuring that both our students and faculty are
+						equipped with the latest knowledge and skills.
+					</p>
+					<p>
+						Through a collaborative approach, we promote strong industry-academia interactions,
+						creating valuable opportunities for student growth, placements, and research endeavors.
+						I invite you to join us as our department continues to excel in producing highly skilled
+						graduates who are well-prepared to navigate and lead in the dynamic, ever-evolving
+						technology landscape.
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="text-justify mt-8 text-lg flex flex-col gap-5">
-			<p>
-				The Department Head of Computer Science Engineering at BITS Vizag Engineering College is an
-				accomplished and esteemed academic leader with extensive experience in the field of computer
-				science and engineering. As a visionary and forward-thinking individual, the department head
-				oversees the department's academic and research activities with exceptional proficiency.
-				They foster a culture of innovation and excellence, ensuring that students and faculty are
-				equipped with the latest knowledge and skills. Their collaborative approach promotes strong
-				industry-academia interactions, creating valuable opportunities for students' growth,
-				placements, and research endeavors. Under their guidance, the department excels in producing
-				highly skilled graduates who are well-prepared to meet the challenges of the dynamic and
-				ever-evolving technology landscape.
-			</p>
-		</div>
-		<div>
-			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
-			<div class="container pt-8">
-				<img class="first" src="/cse8.png" alt="" />
-				<img src="/cse3.jpg" alt="" />
-				<img src="/cse6.jpg" alt="" />
-				<img class="third" src="/cse9.jpg" alt="" />
-				<img class="second" src="/cse7.png" alt="" />
+		<div class="pt-10">
+			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
+				Facilities & Infrastructure
+			</h1>
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8 max-w-5xl mx-auto">
+				<div
+					class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-md border border-slate-200 h-64 lg:h-full"
+				>
+					<img
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+						src="/cse8.png"
+						alt="CSE Facility"
+					/>
+				</div>
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
+					<img
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+						src="/cse3.jpg"
+						alt="CSE Facility"
+					/>
+				</div>
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
+					<img
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+						src="/cse6.jpg"
+						alt="CSE Facility"
+					/>
+				</div>
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
+					<img
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+						src="/cse9.jpg"
+						alt="CSE Facility"
+					/>
+				</div>
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
+					<img
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+						src="/cse7.png"
+						alt="CSE Facility"
+					/>
+				</div>
 			</div>
 		</div>
 		<div id="facilities" class="flex gap-20 facilities">
@@ -349,7 +392,7 @@
 							</g>
 						</g>
 					</svg>
-					<p>Operating System  & Compiler Designing Lab</p>
+					<p>Operating System & Compiler Designing Lab</p>
 				</div>
 				<div id="icon" class="flex">
 					<svg
@@ -663,23 +706,22 @@
 				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
 			</div>
 		</div>
-		
 	</div>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
-		
-		{#each items as item ,i}
-		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
-			<div class="w-12 h-12 mt-4">
-				<img src="/faculty.svg" alt="" >
+	<div
+		class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
+	>
+		{#each items as item, i}
+			<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+				<div class="w-12 h-12 mt-4">
+					<img src="/faculty.svg" alt="" />
+				</div>
+				<div class="p-[10px] capitalize font-bold">{item.name}</div>
+				<div class="capitalize font-semibold">{item.designation}</div>
+				<div class="overflow-hidden text-center pt-2">
+					<a href="mailto:{item.mail}">{item.qualification}</a>
+				</div>
 			</div>
-			<div class="p-[10px] capitalize font-bold">{item.name}</div>
-			<div class="capitalize font-semibold">{item.designation}</div>
-			<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
-			</div>
-		</div>
-	
-	{/each}
-		
+		{/each}
 	</div>
 </section>
 
@@ -689,53 +731,6 @@
 	}
 	body {
 		margin: 0;
-	}
-	.container {
-		display: grid;
-		grid-gap: 5px;
-		grid-template-areas:
-			'A'
-			'B'
-			'C'
-			'D'
-			'E';
-	}
-	@media (min-width: 576px) {
-		.container {
-			grid-template-columns: 1.52fr 1fr 1fr 1.525fr;
-			grid-template-areas:
-				'A  B  C  E'
-				'A  D  D  E';
-		}
-	}
-
-	img:nth-child(1) {
-		grid-area: A;
-	}
-	img:nth-child(2) {
-		grid-area: B;
-	}
-	img:nth-child(3) {
-		grid-area: C;
-	}
-	img:nth-child(4) {
-		grid-area: D;
-	}
-	img:nth-child(5) {
-		grid-area: E;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-	}
-	.first,
-	.second,
-	.third {
-		height: 92.2%;
-		width: 100%;
-	}
-	.third {
-		height: 88%;
 	}
 
 	@media screen and (max-width: 1024px) {

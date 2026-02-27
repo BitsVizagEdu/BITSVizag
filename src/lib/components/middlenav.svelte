@@ -1,4 +1,5 @@
 <script>
+	let activeCourseTab = 'ug';
 	function closeMenus() {
 		if (typeof document !== 'undefined') {
 			const checkboxes = document.querySelectorAll('.nav-links input[type="checkbox"]');
@@ -151,268 +152,336 @@
 			</li>
 
 			<!-- Courses -->
-			<li>
+			<li on:mouseleave={() => (activeCourseTab = 'ug')}>
 				<a href="/courses/Under-Graduation" class="desktop-item">Courses</a>
 				<input type="checkbox" id="courses" />
 				<label for="courses" class="mobile-item">Courses</label>
-				<div class="mega-box !max-w-[1100px]">
+				<div class="mega-box !max-w-[850px] !h-auto">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden"
+						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left min-h-[420px]"
 					>
-						<!-- Courses Main Section (UG) -->
-						<div class="flex-[1.8] py-10 px-12 text-left bg-white">
-							<div class="flex items-center gap-4 mb-10 border-b border-slate-50 pb-6">
-								<div class="w-10 h-10 flex items-center justify-center bg-blue-50 rounded-xl">
-									<i class="fa-solid fa-scroll text-[#2672d5] text-lg" />
-								</div>
-								<header class="text-[22px] font-black text-slate-950 tracking-tight">
-									Under Graduation
-								</header>
+						<!-- Sidebar Menu -->
+						<div
+							class="w-full md:w-[280px] bg-slate-50/60 border-r border-slate-100 p-6 flex flex-col shrink-0 relative custom-sidebar"
+						>
+							<header
+								class="text-[11px] font-bold text-slate-800 uppercase tracking-widest px-4 mb-5 mt-2"
+							>
+								Levels of Study
+							</header>
+
+							<div class="flex flex-col gap-2 relative z-10">
+								<button
+									on:mouseenter={() => (activeCourseTab = 'ug')}
+									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent
+										{activeCourseTab === 'ug'
+										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100'
+										: 'hover:bg-slate-100/80 text-slate-600'}"
+								>
+									<div
+										class="w-10 h-10 rounded-xl flex items-center justify-center transition-all {activeCourseTab ===
+										'ug'
+											? 'bg-blue-500 text-white shadow-sm'
+											: 'bg-white text-[#2672d5] border border-slate-100 shadow-sm'}"
+									>
+										<i class="fa-solid fa-scroll text-[16px]"></i>
+									</div>
+									<span
+										class="font-bold text-[15px] {activeCourseTab === 'ug'
+											? 'text-blue-600'
+											: 'text-slate-700'}">Under Graduation</span
+									>
+								</button>
+
+								<button
+									on:mouseenter={() => (activeCourseTab = 'pg')}
+									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent
+										{activeCourseTab === 'pg'
+										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100'
+										: 'hover:bg-slate-100/80 text-slate-600'}"
+								>
+									<div
+										class="w-10 h-10 rounded-xl flex items-center justify-center transition-all {activeCourseTab ===
+										'pg'
+											? 'bg-blue-500 text-white shadow-sm'
+											: 'bg-white text-[#2672d5] border border-slate-100 shadow-sm'}"
+									>
+										<i class="fa-solid fa-award text-[16px]"></i>
+									</div>
+									<span
+										class="font-bold text-[15px] {activeCourseTab === 'pg'
+											? 'text-blue-600'
+											: 'text-slate-700'}">Post Graduation</span
+									>
+								</button>
 							</div>
-							<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
-								<a
-									href="/department/Department of CSE"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-laptop-code text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>Computer Science</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Programme</span
-										>
-									</div>
-								</a>
 
-								<a
-									href="/department/Department of CSE (AI & ML)"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-brain text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>CS (AI & ML)</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Specialization</span
-										>
-									</div>
-								</a>
-
-								<a
-									href="/department/Department of CSE (Cyber Security)"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-shield-halved text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>CS (Cyber Security)</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Specialization</span
-										>
-									</div>
-								</a>
-
-								<a
-									href="/department/Department of ECE"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-microchip text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>Electronics & Comm.</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Programme</span
-										>
-									</div>
-								</a>
-
-								<a
-									href="/department/Department of EEE"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-bolt-lightning text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>Electrical & Electronics</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Programme</span
-										>
-									</div>
-								</a>
-
-								<a
-									href="/department/Department of BS&H"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-atom text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>Basic Sci. & Hum.</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Programme</span
-										>
-									</div>
-								</a>
-
-								<a
-									href="/department/Department of CIVIL"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-hard-hat text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>Civil Engineering</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Programme</span
-										>
-									</div>
-								</a>
-
-								<a
-									href="/department/Department of MECH"
-									on:click={closeMenus}
-									class="group flex flex-col items-start gap-4 p-5 rounded-3xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
-								>
-									<div
-										class="w-11 h-11 flex items-center justify-center bg-blue-50 rounded-full group-hover:bg-[#2672d5] transition-colors duration-500"
-									>
-										<i
-											class="fa-solid fa-gears text-[#2672d5] text-lg group-hover:text-white transition-colors"
-										/>
-									</div>
-									<div class="flex flex-col text-left">
-										<span class="text-[15px] font-black text-slate-800 leading-tight"
-											>Mechanical Eng.</span
-										>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2"
-											>Programme</span
-										>
-									</div>
-								</a>
-							</div>
+							<!-- subtle decorative background on sidebar -->
+							<div
+								class="absolute bottom-0 left-0 w-full h-[150px] opacity-[0.03] pointer-events-none"
+								style="background: linear-gradient(to top, #2672d5 0%, transparent 100%);"
+							></div>
 						</div>
 
-						<!-- Featured Section (PG) -->
-						<div class="flex-1 bg-slate-50/40 py-10 px-10 text-left border-l border-slate-100">
-							<div class="flex items-center gap-4 mb-10 border-b border-slate-200 pb-6">
-								<div
-									class="w-10 h-10 flex items-center justify-center bg-white rounded-xl shadow-sm"
-								>
-									<i class="fa-solid fa-award text-[#2672d5] text-lg" />
+						<!-- Tab Content Area -->
+						<div class="flex-1 p-8 md:p-10 bg-white relative">
+							{#if activeCourseTab === 'ug'}
+								<div class="animate-fade-in">
+									<header
+										class="text-[19px] font-bold text-slate-900 tracking-tight mb-7 px-1 flex items-center gap-3"
+									>
+										<span class="w-1.5 h-5 bg-blue-500 rounded-full inline-block shadow-sm"></span>
+										Under Graduation
+									</header>
+									<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+										<!-- UG Cards -->
+										<a
+											href="/department/Department of CSE"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-laptop-code text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Computer Science</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of CSE (AI & ML)"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-brain text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>CS (AI & ML)</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
+													>Specialization</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of CSE (Cyber Security)"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-shield-halved text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>CS (Cyber Security)</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
+													>Specialization</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of ECE"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-microchip text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Electronics & Communication</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of EEE"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-bolt-lightning text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Electrical & Electronics</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of BS&H"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-atom text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Basic Sciences</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of CIVIL"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-hard-hat text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Civil Engineering</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of MECH"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-gears text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Mechanical Eng.</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+									</div>
 								</div>
-								<header class="text-[20px] font-black text-slate-900 tracking-tight">
-									Post Graduation
-								</header>
-							</div>
-							<div class="flex flex-col gap-6">
-								<a
-									href="/department/Department of MBA"
-									on:click={closeMenus}
-									class="group flex items-center gap-6 bg-white p-6 rounded-3xl transition-all shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:bg-blue-50/50 border border-slate-100"
-								>
-									<div
-										class="w-14 h-14 flex items-center justify-center bg-blue-50 text-[#2672d5] rounded-2xl group-hover:bg-[#2672d5] group-hover:text-white transition-all duration-500"
+							{:else if activeCourseTab === 'pg'}
+								<div class="animate-fade-in flex flex-col h-full">
+									<header
+										class="text-[19px] font-bold text-slate-900 tracking-tight mb-7 px-1 flex items-center gap-3"
 									>
-										<i class="fa-solid fa-briefcase text-2xl" />
-									</div>
-									<div class="flex flex-col">
-										<span class="text-[17px] font-black text-slate-900 leading-none">MBA</span>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2.5"
-											>Management</span
+										<span class="w-1.5 h-5 bg-blue-500 rounded-full inline-block shadow-sm"></span>
+										Post Graduation
+									</header>
+									<div class="flex flex-col gap-4">
+										<!-- PG Cards -->
+										<a
+											href="/department/Department of MBA"
+											on:click={closeMenus}
+											class="group flex items-center gap-5 p-5 bg-slate-50/60 hover:bg-blue-50/40 rounded-2xl transition-all shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/10"
 										>
-									</div>
-									<i
-										class="fa-solid fa-chevron-right ml-auto text-slate-200 group-hover:text-blue-400 transition-all duration-500 group-hover:translate-x-1 text-xs"
-									/>
-								</a>
-
-								<a
-									href="/courses/Post-Graduation"
-									on:click={closeMenus}
-									class="group flex items-center gap-6 bg-white p-6 rounded-3xl transition-all shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:bg-blue-50/50 border border-slate-100"
-								>
-									<div
-										class="w-14 h-14 flex items-center justify-center bg-blue-50 text-[#2672d5] rounded-2xl group-hover:bg-[#2672d5] group-hover:text-white transition-all duration-500"
-									>
-										<i class="fa-solid fa-laptop-code text-2xl" />
-									</div>
-									<div class="flex flex-col">
-										<span class="text-[17px] font-black text-slate-900 leading-none">M.Tech</span>
-										<span
-											class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2.5"
-											>Programme</span
+											<div
+												class="w-12 h-12 flex items-center justify-center bg-white text-[#2672d5] border border-slate-100 rounded-xl group-hover:bg-[#2672d5] group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm shrink-0"
+											>
+												<i class="fa-solid fa-briefcase text-[18px]" />
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[15.5px] font-bold text-slate-900 leading-none group-hover:text-blue-600 transition-colors"
+													>MBA</span
+												>
+												<span
+													class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-2"
+													>Management</span
+												>
+											</div>
+											<i
+												class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-blue-500 transition-all duration-500 group-hover:translate-x-1 text-sm bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm border border-slate-50"
+											/>
+										</a>
+										<a
+											href="/courses/Post-Graduation"
+											on:click={closeMenus}
+											class="group flex items-center gap-5 p-5 bg-slate-50/60 hover:bg-blue-50/40 rounded-2xl transition-all shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/10"
 										>
+											<div
+												class="w-12 h-12 flex items-center justify-center bg-white text-[#2672d5] border border-slate-100 rounded-xl group-hover:bg-[#2672d5] group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm shrink-0"
+											>
+												<i class="fa-solid fa-laptop-code text-[18px]" />
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[15.5px] font-bold text-slate-900 leading-none group-hover:text-blue-600 transition-colors"
+													>M.Tech</span
+												>
+												<span
+													class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-2"
+													>Programme</span
+												>
+											</div>
+											<i
+												class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-blue-500 transition-all duration-500 group-hover:translate-x-1 text-sm bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm border border-slate-50"
+											/>
+										</a>
 									</div>
-									<i
-										class="fa-solid fa-chevron-right ml-auto text-slate-200 group-hover:text-blue-400 transition-all duration-500 group-hover:translate-x-1 text-xs"
-									/>
-								</a>
-							</div>
+								</div>
+							{/if}
 						</div>
 					</div>
 				</div>
@@ -749,7 +818,7 @@
 		text-transform: capitalize;
 		letter-spacing: 0.02em;
 		font-weight: 500;
-		font-family: 'Poppins', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-weight: 600;
 	}
 
@@ -761,7 +830,7 @@
 
 	.nav-links .mobile-item {
 		display: none;
-		font-weight: 800;
+		font-weight: 700;
 	}
 
 	.mega-box {
@@ -807,8 +876,8 @@
 	}
 
 	.mega-box .content header {
-		font-family: 'Poppins', sans-serif !important;
-		font-weight: 700;
+		font-family: 'Roboto', sans-serif !important;
+		font-weight: 600;
 	}
 
 	.mega-box .content span {
@@ -918,7 +987,7 @@
 			padding: 12px 16px;
 			display: block;
 			font-size: 16px;
-			font-weight: 700;
+			font-weight: 600;
 			border-radius: 12px;
 			color: #1e293b;
 			line-height: normal;
@@ -933,7 +1002,7 @@
 			color: #1e293b;
 			cursor: pointer;
 			font-size: 16px;
-			font-weight: 700;
+			font-weight: 600;
 			transition: background 0.2s;
 		}
 
@@ -1027,7 +1096,7 @@
 			margin-bottom: 16px !important;
 			letter-spacing: 0.12em;
 			text-transform: uppercase;
-			font-weight: 800;
+			font-weight: 600;
 			display: flex !important;
 			align-items: center !important;
 			justify-content: center !important;

@@ -1,77 +1,79 @@
 <script>
 	let items = [
 		{
-			name: "Marumudi Mohan",
-			designation: "Asst Prof & HoD",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Marumudi Mohan',
+			designation: 'Asst Prof & HoD',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "Pavani Sandra",
-			designation: "Asst Prof",
-			qualification:"M.Tech, (Ph.D)",
-			mail:""
+			name: 'Pavani Sandra',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech, (Ph.D)',
+			mail: ''
 		},
 		{
-			name: "Shahazadi Begum",
-			designation: "Asst Prof",
-			qualification:"M.Tech, (Ph.D)",
-			mail:""
+			name: 'Shahazadi Begum',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech, (Ph.D)',
+			mail: ''
 		},
 		{
-			name: "Killi Srinivasa Rao",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Killi Srinivasa Rao',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "Kuppili Harish",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Kuppili Harish',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
-		
+
 		{
-			name: "Rownoji Vijaya Durga",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
-		},
-		{
-			name: "Amar Narasinga Rao",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
-		},
-	
-		{
-			name: "Y Venkatesh",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Rownoji Vijaya Durga',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "S Sree Nandini",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Amar Narasinga Rao',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
+		},
+
+		{
+			name: 'Y Venkatesh',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
 		{
-			name: "G Venkata Lakshmi",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'S Sree Nandini',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
-	
-	]
+		{
+			name: 'G Venkata Lakshmi',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
+		}
+	];
 </script>
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/header/civil.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Civil Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/civil.jpg" alt="" />
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class=" py-10 text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			<p>
 				The Department of Civil Engineering at BITS Vizag Engineering College is a prominent and
@@ -99,28 +101,41 @@
 			</p>
 		</div>
 		<div class="pt-10">
-			<h1 id="HOD" class="text-3xl font-bold text-indigo-900">HOD MESSAGE - Prof. M. Mohan</h1>
-			<div class="flex justify-center w-[100%] pt-8">
-				<img src="/civil-hod.jpg" alt="" />
+			<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
+				HOD MESSAGE <span class="text-red-600"> - Prof. M. Mohan</span>
+			</h1>
+			<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+				<div class="flex-shrink-0">
+					<img
+						src="/civil-hod.jpg"
+						class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
+						alt="HOD"
+					/>
+				</div>
+				<div
+					class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
+				>
+					<p>
+						Welcome to the Department of Civil Engineering at BITS Vizag. As a highly respected and
+						experienced academician, I oversee all aspects of our academic and research activities
+						to ensure a conducive learning environment for both students and faculty. My profound
+						expertise and industry connections enable us to foster strong collaborations with
+						leading construction companies and research organizations.
+					</p>
+					<p>
+						Driven by a passion for excellence, I inspire and guide our students to excel in their
+						academic pursuits and actively participate in research projects that address real-world
+						engineering challenges. Under our collective guidance, the Civil Engineering department
+						thrives as a center of innovation, producing skilled and responsible civil engineers
+						poised to make a positive impact on society.
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="text-justify mt-8 text-lg flex flex-col gap-5">
-			<p>
-				The Department Head of Civil Engineering at BITS Vizag Engineering College is a highly
-				accomplished and respected academician with extensive experience in the field of civil
-				engineering. As a visionary leader, the department head oversees all aspects of the
-				department's academic and research activities, ensuring a conducive learning environment for
-				students and faculty. Their profound expertise and industry connections enable them to
-				foster strong collaborations with construction companies and research organizations. With a
-				passion for excellence, the department head inspires and guides students to excel in their
-				academic pursuits and encourages them to participate in research projects that address
-				real-world engineering challenges. Under their able guidance, the Civil Engineering
-				department thrives as a center of innovation, producing skilled and responsible civil
-				engineers poised to make a positive impact on society.
-			</p>
-		</div>
-		<div>
-			<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
+		<div class="pt-10">
+			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
+				Facilities & Infrastructure
+			</h1>
 			<div class="container pt-8">
 				<img class="first" src="/civil4.JPG" alt="" />
 				<img src="/civil1.png" alt="" />
@@ -363,7 +378,6 @@
 					</svg>
 					<p>Engineering Geology Lab</p>
 				</div>
-				
 			</div>
 		</div>
 		<div class="parent mt-7">
@@ -562,27 +576,22 @@
 				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
 			</div>
 		</div>
-		
 	</div>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
-		
-		{#each items as item ,i}
-		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
-			<div class="w-12 h-12 mt-4">
-				<img src="/faculty.svg" alt="" >
+	<div
+		class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
+	>
+		{#each items as item, i}
+			<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+				<div class="w-12 h-12 mt-4">
+					<img src="/faculty.svg" alt="" />
+				</div>
+				<div class="p-[10px] capitalize font-bold">{item.name}</div>
+				<div class="capitalize font-semibold">{item.designation}</div>
+				<div class="overflow-hidden text-center pt-2">
+					<a href="mailto:{item.mail}">{item.qualification}</a>
+				</div>
 			</div>
-			<div class="p-[10px] capitalize font-bold">{item.name}</div>
-			<div class="capitalize font-semibold">{item.designation}</div>
-			<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
-			</div>
-		</div>
-	
-	{/each}
-		
-		
-		
-		
-
+		{/each}
 	</div>
 </section>
 
@@ -612,22 +621,22 @@
 		}
 	}
 
-	img:nth-child(1) {
+	.container img:nth-child(1) {
 		grid-area: A;
 	}
-	img:nth-child(2) {
+	.container img:nth-child(2) {
 		grid-area: B;
 	}
-	img:nth-child(3) {
+	.container img:nth-child(3) {
 		grid-area: C;
 	}
-	img:nth-child(4) {
+	.container img:nth-child(4) {
 		grid-area: D;
 	}
-	img:nth-child(5) {
+	.container img:nth-child(5) {
 		grid-area: E;
 	}
-	img {
+	.container img {
 		width: 100%;
 		height: 100%;
 	}

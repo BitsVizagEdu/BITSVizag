@@ -1,68 +1,68 @@
 <script>
 	let items = [
 		{
-			name: "Kondapalli Pradeep",
-			designation: "Assoc Prof & HoD",
-			qualification:"MTech, (Ph.D)",
-			mail:""
+			name: 'Kondapalli Pradeep',
+			designation: 'Assoc Prof & HoD',
+			qualification: 'MTech, (Ph.D)',
+			mail: ''
 		},
 		{
-			name: "Dr. Rudra Pratap Das ",
-			designation: "Professor",
-			qualification:"Ph.D",
-			mail:""
+			name: 'Dr. Rudra Pratap Das ',
+			designation: 'Professor',
+			qualification: 'Ph.D',
+			mail: ''
 		},
 		{
-			name: "Ravi Kishore Maddugaru",
-			designation: "Asst Prof",
-			qualification:"M.Tech, (Ph.D)",
-			mail:""
+			name: 'Ravi Kishore Maddugaru',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech, (Ph.D)',
+			mail: ''
 		},
 		{
-			name: "Y V Bhaskara Lakshmi",
-			designation: "Asst Prof",
-			qualification:"M.Tech, (Ph.D)",
-			mail:""
+			name: 'Y V Bhaskara Lakshmi',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech, (Ph.D)',
+			mail: ''
 		},
 		{
-			name: "M M Komali Chittapragada",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'M M Komali Chittapragada',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
-		
+
 		{
-			name: "Velamala Appala Naidu",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'Velamala Appala Naidu',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
-		
+
 		{
-			name: "T Vishnu Murty ",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
+			name: 'T Vishnu Murty ',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
 		},
-		
-	
+
 		{
-			name: "Ch Santhoshi Kumari",
-			designation: "Asst Prof",
-			qualification:"M.Tech",
-			mail:""
-		},
-		
-	
-	]
+			name: 'Ch Santhoshi Kumari',
+			designation: 'Asst Prof',
+			qualification: 'M.Tech',
+			mail: ''
+		}
+	];
 </script>
-<section class=" bg-slate-200 3xs:p-4  md:p-10 rounded-lg">
+
+<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/header/ece.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Electronics and Communication Engineering</h1> -->
 	<div class="flex justify-center w-[100%]">
 		<img src="/ece.jpg" alt="" />
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class=" py-10 text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			<p>
 				The Department of Electronics and Communication Engineering (ECE) at BITS Vizag Engineering
@@ -88,29 +88,41 @@
 			</p>
 
 			<div class="pt-10">
-				<h1 id="HOD" class="text-3xl font-bold text-indigo-900">
-					HOD MESSAGE - Prof. K. Pradeep
+				<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
+					HOD MESSAGE <span class="text-red-600"> - Prof. K. Pradeep</span>
 				</h1>
-				<div class="flex justify-center w-[100%] pt-8">
-					<img src="/ece hod.jpg" alt="" />
+				<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+					<div class="flex-shrink-0">
+						<img
+							src="/ece hod.jpg"
+							class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
+							alt="HOD"
+						/>
+					</div>
+					<div
+						class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
+					>
+						<p>
+							Welcome to the Department of Electronics and Communication Engineering at BITS Vizag.
+							As an accomplished academician with extensive experience in the field, I am
+							responsible for overseeing our academic and research activities. I ensure the delivery
+							of high-quality education while nurturing a culture of continuous innovation and
+							excellence among our students and faculty.
+						</p>
+						<p>
+							Leveraging strong leadership and interpersonal skills, I closely collaborate with
+							industry experts to promote dynamic industry-academia interactions, creating valuable
+							opportunities for student growth and exciting placements. My guidance and mentorship
+							aim to inspire everyone to excel in their respective roles, establishing our
+							department as a leading hub of cutting-edge research and technical advancements.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="text-justify mt-8 text-lg flex flex-col gap-5">
-				<p>
-					The Department Head of Electronics and Communication Engineering at BITS Vizag Engineering
-					College is a distinguished and accomplished academician with extensive experience in the
-					field. As a visionary leader, the department head is responsible for overseeing the
-					academic and research activities, ensuring the delivery of high-quality education to
-					students, and fostering a culture of innovation and excellence. With strong leadership and
-					interpersonal skills, the department head collaborates with faculty, students, and
-					industry experts to promote industry-academia interactions and create valuable
-					opportunities for student growth and placements. Their guidance and mentorship inspire
-					students and faculty to excel in their respective roles, making the department a hub of
-					cutting-edge research and technical advancements.
-				</p>
-			</div>
-			<div>
-				<h1 class="uppercase pt-8 text-3xl font-bold">Facilities & Infrastructure</h1>
+			<div class="pt-10">
+				<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
+					Facilities & Infrastructure
+				</h1>
 				<div class="container pt-8">
 					<img class="first" src="/ece1.png" alt="" />
 					<img src="/ece.jpeg" alt="" />
@@ -535,7 +547,9 @@
 				<div class="child flex items-center justify-center text-white">
 					<div class="">
 						<p id="aca" class="font-bold text-6xl">ACADEMIC PROGRAMMES</p>
-						<p id="basic" class="text-xl font-bold pt-4">ELECTRONICS COMMUNICATION AND ENGINEERING</p>
+						<p id="basic" class="text-xl font-bold pt-4">
+							ELECTRONICS COMMUNICATION AND ENGINEERING
+						</p>
 					</div>
 				</div>
 			</div>
@@ -649,7 +663,8 @@
 					<p id="eligible" class="text-2xl font-bold text-[#1e3a8a] uppercase">Eligibility</p>
 					<div>
 						<p class="text-justify pt-5 text-[#08163d]">
-							BITS Engineering College admits candidates through the eligibility requirements and under management quota.
+							BITS Engineering College admits candidates through the eligibility requirements and
+							under management quota.
 						</p>
 						<div class="flex pt-5">
 							<div>
@@ -742,27 +757,22 @@
 				<p id="aca" class="font-bold text-6xl">Faculty Details</p>
 			</div>
 		</div>
-		
 	</div>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1    mt-10 items-center ">
-		
-		{#each items as item ,i}
-		<div class="card 	h-[200px]  bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
-			<div class="w-12 h-12 mt-4">
-				<img src="/faculty.svg" alt="" >
+	<div
+		class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
+	>
+		{#each items as item, i}
+			<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+				<div class="w-12 h-12 mt-4">
+					<img src="/faculty.svg" alt="" />
+				</div>
+				<div class="p-[10px] capitalize font-bold text-center">{item.name}</div>
+				<div class="capitalize font-semibold">{item.designation}</div>
+				<div class="overflow-hidden text-center pt-2">
+					<a href="mailto:{item.mail}">{item.qualification}</a>
+				</div>
 			</div>
-			<div class="p-[10px] capitalize font-bold text-center">{item.name}</div>
-			<div class="capitalize font-semibold">{item.designation}</div>
-			<div class="overflow-hidden text-center pt-2"><a href="mailto:{item.mail}">{item.qualification}</a>
-			</div>
-		</div>
-	
-	{/each}
-		
-		
-		
-		
-
+		{/each}
 	</div>
 </section>
 
@@ -792,22 +802,22 @@
 		}
 	}
 
-	img:nth-child(1) {
+	.container img:nth-child(1) {
 		grid-area: A;
 	}
-	img:nth-child(2) {
+	.container img:nth-child(2) {
 		grid-area: B;
 	}
-	img:nth-child(3) {
+	.container img:nth-child(3) {
 		grid-area: C;
 	}
-	img:nth-child(4) {
+	.container img:nth-child(4) {
 		grid-area: D;
 	}
-	img:nth-child(5) {
+	.container img:nth-child(5) {
 		grid-area: E;
 	}
-	img {
+	.container img {
 		width: 100%;
 		height: 100%;
 	}
