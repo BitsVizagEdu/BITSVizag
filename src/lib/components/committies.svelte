@@ -236,7 +236,7 @@
 	<div class="w-full px-6 md:px-12 lg:px-16">
 		<!-- Section Header -->
 		<div class="committees-header text-center mb-16">
-			<h3 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight uppercase">
+			<h3 class="text-2xl md:text-4xl font-black text-slate-900 tracking-none uppercase">
 				Operational <span class="text-red-600">Committees</span>
 			</h3>
 			<div class="h-1.5 w-32 bg-red-600 mx-auto mt-4 rounded-full"></div>

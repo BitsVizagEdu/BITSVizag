@@ -420,15 +420,13 @@
 
 	{#if limit < events.length}
 		<div class="w-full flex flex-col items-center py-12 mt-4">
-			<div
-				class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-8 opacity-50"
-			></div>
+			<div class="w-24 h-1 bg-blue-900 rounded-full mb-8"></div>
 			<button
 				on:click={showMore}
 				class="group flex items-center gap-6 bg-transparent border-none cursor-pointer outline-none p-0 appearance-none"
 			>
 				<span
-					class="text-3xl lg:text-5xl font-black text-slate-800 lowercase tracking-wider group-hover:text-[#2672d5] transition-all duration-300"
+					class="text-3xl lg:text-4xl text-black lowercase tracking-leading group-hover:text-[#2672d5] transition-all duration-300"
 				>
 					explore for more .....
 				</span>

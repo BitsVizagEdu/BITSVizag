@@ -78,10 +78,23 @@
 <section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/CS-Banners/image.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
-	<div class="flex justify-center w-[100%]">
-		<img src="/CS-Banners/image copy.png" alt="" />
+	<div class="flex justify-center w-full my-8 px-2 md:px-0">
+		<div
+			class="relative w-full max-w-6xl rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl border-4 border-white transition-all duration-500 ease-in-out hover:shadow-[0_20px_50px_rgba(30,_58,_138,_0.3)] hover:-translate-y-2 group bg-white"
+		>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+			></div>
+			<img
+				src="/CS-Banners/image copy.png"
+				alt="CSE AI & ML Department Banner"
+				class="w-full object-cover max-h-[400px] md:max-h-[550px] transition-transform duration-700 ease-out group-hover:scale-105"
+			/>
+		</div>
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class="text-justify py-10 text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			<p>
 				The Department of Computer Science at BITS Vizag is evolving alongside the digital
@@ -142,60 +155,59 @@
 			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
 				Facilities & Infrastructure
 			</h1>
-			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 pt-8">
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8 max-w-5xl mx-auto">
 				<div
-					class="col-span-2 row-span-2 md:col-span-2 rounded-2xl overflow-hidden shadow-md border border-slate-200"
+					class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-md border border-slate-200 h-64 lg:h-full"
 				>
 					<img
 						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-1.png"
-						alt="AI Facility 1"
+						alt="Facility"
 					/>
 				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
 					<img
 						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-2.png"
-						alt="AI Facility 2"
+						alt="Facility"
 					/>
 				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
 					<img
 						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-3.png"
-						alt="AI Facility 3"
+						alt="Facility"
 					/>
 				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
 					<img
 						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-4.png"
-						alt="AI Facility 4"
+						alt="Facility"
 					/>
 				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
 					<img
 						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-5.png"
-						alt="AI Facility 5"
+						alt="Facility"
 					/>
 				</div>
-				<div
-					class="col-span-2 md:col-span-2 lg:col-span-2 rounded-2xl overflow-hidden shadow-sm border border-slate-200"
-				>
+				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
+					<!-- svelte-ignore a11y-img-redundant-alt -->
 					<img
-						class="w-full h-48 md:h-64 object-cover transition-transform duration-500 hover:scale-105"
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-6.png"
-						alt="AI Facility 6"
+						alt=""
 					/>
 				</div>
 				<div
-					class="col-span-2 md:col-span-2 lg:col-span-2 rounded-2xl overflow-hidden shadow-sm border border-slate-200"
+					class="col-span-2 lg:col-span-3 rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48"
 				>
 					<img
-						class="w-full h-48 md:h-64 object-cover transition-transform duration-500 hover:scale-105"
+						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
 						src="/CS-Banners/CS-images/AI-7.png"
-						alt="AI Facility 7"
+						alt="Facility"
 					/>
 				</div>
 			</div>
