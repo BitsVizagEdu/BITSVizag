@@ -112,12 +112,12 @@
 	<div class="max-w-9xl mx-auto px-6 relative z-10">
 		<div class="text-center mb-16" data-aos="fade-up">
 			<h2 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight uppercase">
-				Top <span class="bg-gradient-to-r from-pink-700 to-red-900 bg-clip-text text-transparent"
+				Top <span class="bg-gradient-to-r from-pink-600 to-red-800 bg-clip-text text-transparent"
 					>Recruiters</span
 				>
 			</h2>
 			<div
-				class="h-1.5 w-32 bg-gradient-to-b from-pink-700 to-red-900 mx-auto mt-4 rounded-full"
+				class="h-1.5 w-32 bg-gradient-to-b from-pink-600 to-red-800 mx-auto mt-4 rounded-full"
 			></div>
 		</div>
 

@@ -78,10 +78,23 @@
 <section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<img src="/CS-Banners/image copy 3.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
-	<div class="flex justify-center w-full object-cover">
-		<img src="/CS-Banners/image copy 2.png" alt="" />
+	<div class="flex justify-center w-full my-8 px-2 md:px-0">
+		<div
+			class="relative w-full max-w-6xl rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl border-4 border-white transition-all duration-500 ease-in-out hover:shadow-[0_20px_50px_rgba(30,_58,_138,_0.3)] hover:-translate-y-2 group bg-white"
+		>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+			></div>
+			<img
+				src="/CS-Banners/image copy 2.png"
+				alt="CSE Cyber Security Department Banner"
+				class="w-full object-cover max-h-[400px] md:max-h-[550px] transition-transform duration-700 ease-out group-hover:scale-105"
+			/>
+		</div>
 	</div>
-	<div class="text-justify flex flex-col gap-5 mt-5 text-lg">
+	<div
+		class="text-justify py-10 text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
+	>
 		<div>
 			The Department of Computer Science at BITS Vizag is at the forefront of digital defense,
 			focusing on Cyber Security to prepare students for a rapidly evolving, interconnected world.
@@ -142,43 +155,72 @@
 			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
 				Facilities & Infrastructure
 			</h1>
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8 max-w-5xl mx-auto">
-				<div
-					class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-md border border-slate-200 h-64 lg:h-full"
-				>
-					<img
-						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-						src="/cse8.png"
-						alt="CSE Facility"
-					/>
+			<div
+				class="flex flex-col lg:flex-row gap-4 pt-8 px-2 lg:px-0 max-w-5xl mx-auto items-stretch"
+			>
+				<div class="w-full lg:w-1/2">
+					<div
+						class="w-full h-64 lg:h-full relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-md border-4 border-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+					>
+						<div
+							class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+						></div>
+						<img
+							class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+							src="/CS-Banners/CS-images/get.jpg"
+							alt="Facility"
+						/>
+					</div>
 				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
-					<img
-						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-						src="/cse3.jpg"
-						alt="CSE Facility"
-					/>
-				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
-					<img
-						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-						src="/cse6.jpg"
-						alt="CSE Facility"
-					/>
-				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
-					<img
-						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-						src="/cse9.jpg"
-						alt="CSE Facility"
-					/>
-				</div>
-				<div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-32 lg:h-48">
-					<img
-						class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-						src="/cse7.png"
-						alt="CSE Facility"
-					/>
+				<div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+					<div
+						class="relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border-4 border-white h-40 lg:h-56 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+					>
+						<div
+							class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+						></div>
+						<img
+							class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+							src="/CS-Banners/CS-images/get (1).jpg"
+							alt="Facility"
+						/>
+					</div>
+					<div
+						class="relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border-4 border-white h-40 lg:h-56 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+					>
+						<div
+							class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+						></div>
+						<img
+							class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+							src="/CS-Banners/CS-images/get4.jpg"
+							alt="Facility"
+						/>
+					</div>
+					<div
+						class="relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border-4 border-white h-40 lg:h-56 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+					>
+						<div
+							class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+						></div>
+						<img
+							class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+							src="/CS-Banners/CS-images/get3.jpg"
+							alt="Facility"
+						/>
+					</div>
+					<div
+						class="relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border-4 border-white h-40 lg:h-56 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+					>
+						<div
+							class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+						></div>
+						<img
+							class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+							src="/CS-Banners/CS-images/get5.jpg"
+							alt="Facility"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
