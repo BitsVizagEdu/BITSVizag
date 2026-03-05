@@ -218,7 +218,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="facilities" class="flex gap-20 facilities">
+			<div id="facilities" class="flex gap-20 py-10 facilities">
 				<div>
 					<div id="icon" class="flex">
 						<svg

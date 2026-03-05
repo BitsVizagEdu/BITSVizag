@@ -1,18 +1,31 @@
 <script>
 	let activeCourseTab = 'ug';
-	function closeMenus() {
-		if (typeof document !== 'undefined') {
-			const checkboxes = document.querySelectorAll('.nav-links input[type="checkbox"]');
-			checkboxes.forEach((cb) => {
-				if (cb instanceof HTMLInputElement) cb.checked = false;
-			});
-			const menuBtn = document.getElementById('menu-btn');
-			if (menuBtn instanceof HTMLInputElement) menuBtn.checked = false;
+	let isMobileMenuOpen = false;
+	let activeMobileDropdown = ''; // To track the currently open dropdown in mobile
+
+	function toggleMobileMenu() {
+		isMobileMenuOpen = !isMobileMenuOpen;
+		if (!isMobileMenuOpen) {
+			activeMobileDropdown = ''; // close all dropdowns when closing menu
 		}
+	}
+
+	/** @param {string} dropdownName */
+	function toggleMobileDropdown(dropdownName) {
+		if (activeMobileDropdown === dropdownName) {
+			activeMobileDropdown = '';
+		} else {
+			activeMobileDropdown = dropdownName;
+		}
+	}
+
+	function closeMenus() {
+		isMobileMenuOpen = false;
+		activeMobileDropdown = '';
 	}
 </script>
 
-<nav>
+<nav class={isMobileMenuOpen ? 'mobile-menu-active-state' : ''}>
 	<div class="wrapper">
 		<div class="logo flex items-center">
 			<a href="/"
@@ -23,23 +36,45 @@
 				/></a
 			>
 		</div>
-		<input type="radio" name="slider" id="menu-btn" />
-		<input type="radio" name="slider" id="close-btn" />
 
-		<ul class="nav-links h-full">
-			<label for="close-btn" class="btn close-btn">
-				<i class="fas fa-times text-slate-800" />
-			</label>
+		<!-- Mobile Overlay Backdrop -->
+		{#if isMobileMenuOpen}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
+			<div
+				class="mobile-backdrop xl:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[998]"
+				on:click={closeMenus}
+			></div>
+		{/if}
+
+		<ul class="nav-links h-full {isMobileMenuOpen ? 'mobile-open' : ''}">
+			<!-- Mobile Menu Header -->
+			<div
+				class="xl:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100/60 w-full pt-2"
+			>
+				<img src="/1.png" alt="BITS Vizag Logo" class="h-12 w-auto object-contain" />
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button type="button" class="btn close-btn" on:click={toggleMobileMenu}>
+					<i class="fas fa-times text-slate-800" />
+				</button>
+			</div>
+
 			<li><a href="/" on:click={closeMenus}>Home</a></li>
 
 			<!-- About Us -->
 			<li>
 				<a href="/aboutus/About-BITS" class="desktop-item">About Us</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">About Us</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'about' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('about')}>About Us</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'about' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 border-r border-slate-50">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -111,11 +146,16 @@
 			<!-- Governance -->
 			<li>
 				<a href="/governance" class="desktop-item">Governance</a>
-				<input type="checkbox" id="governance" />
-				<label for="governance" class="mobile-item">Governance</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'governance' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('governance')}>Governance</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'governance' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -154,11 +194,20 @@
 			<!-- Courses -->
 			<li on:mouseleave={() => (activeCourseTab = 'ug')}>
 				<a href="/courses/Under-Graduation" class="desktop-item">Courses</a>
-				<input type="checkbox" id="courses" />
-				<label for="courses" class="mobile-item">Courses</label>
-				<div class="mega-box !max-w-[850px] !h-auto">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'courses' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('courses')}>Courses</button
+				>
+				<div
+					class="mega-box !max-w-[1200px] !h-auto {activeMobileDropdown === 'courses'
+						? 'mobile-show'
+						: ''}"
+				>
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left min-h-[420px]"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left min-h-[420px]"
 					>
 						<!-- Sidebar Menu -->
 						<div
@@ -250,7 +299,30 @@
 											<div class="flex flex-col text-left">
 												<span
 													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Computer Science</span
+													>Computer Science & Engineering (CSE)</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of ECE"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-microchip text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Electronics & Communication Engineering (ECE)</span
 												>
 												<span
 													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
@@ -273,57 +345,11 @@
 											<div class="flex flex-col text-left">
 												<span
 													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>CS (AI & ML)</span
+													>Artificial Intelligence & Machine Learning (AI & ML)</span
 												>
 												<span
 													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
 													>Specialization</span
-												>
-											</div>
-										</a>
-										<a
-											href="/department/Department of CSE (Cyber Security)"
-											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
-										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-shield-halved text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>CS (Cyber Security)</span
-												>
-												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
-													>Specialization</span
-												>
-											</div>
-										</a>
-										<a
-											href="/department/Department of ECE"
-											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
-										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-microchip text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Electronics & Communication</span
-												>
-												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
-													>Programme</span
 												>
 											</div>
 										</a>
@@ -342,7 +368,53 @@
 											<div class="flex flex-col text-left">
 												<span
 													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Electrical & Electronics</span
+													>Electrical & Electronics Engineering (EEE)</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													>Programme</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of CSE (Cyber Security)"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-shield-halved text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Cyber Security (CS)</span
+												>
+												<span
+													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
+													>Specialization</span
+												>
+											</div>
+										</a>
+										<a
+											href="/department/Department of MECH"
+											on:click={closeMenus}
+											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+										>
+											<div
+												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
+											>
+												<i
+													class="fa-solid fa-gears text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+												/>
+											</div>
+											<div class="flex flex-col text-left">
+												<span
+													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+													>Mechanical Engineering (MECH)</span
 												>
 												<span
 													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
@@ -365,30 +437,7 @@
 											<div class="flex flex-col text-left">
 												<span
 													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Basic Sciences</span
-												>
-												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
-													>Programme</span
-												>
-											</div>
-										</a>
-										<a
-											href="/department/Department of CIVIL"
-											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
-										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-hard-hat text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Civil Engineering</span
+													>Basic Sciences & Humanities (BS&H)</span
 												>
 												<span
 													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
@@ -405,13 +454,13 @@
 												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
 											>
 												<i
-													class="fa-solid fa-gears text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
+													class="fa-solid fa-hard-hat text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
 												/>
 											</div>
 											<div class="flex flex-col text-left">
 												<span
 													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Mechanical Eng.</span
+													>Civil Engineering (CIVIL)</span
 												>
 												<span
 													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
@@ -490,11 +539,16 @@
 			<!-- Faculty -->
 			<li>
 				<a href="/faculty/teaching-staff" class="desktop-item">Faculty</a>
-				<input type="checkbox" id="faculty" />
-				<label for="faculty" class="mobile-item">Faculty</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'faculty' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('faculty')}>Faculty</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'faculty' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 flex flex-col justify-center items-center py-10 px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -533,11 +587,16 @@
 			<!-- Exam Cell -->
 			<li>
 				<a href="/examcell/BTECH" class="desktop-item">Exam Cell</a>
-				<input type="checkbox" id="examcell" />
-				<label for="examcell" class="mobile-item">Exam Cell</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'examcell' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('examcell')}>Exam Cell</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'examcell' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -586,11 +645,20 @@
 			<!-- Facilities -->
 			<li>
 				<a href="/facilities" class="desktop-item">Facilities</a>
-				<input type="checkbox" id="facilities" />
-				<label for="facilities" class="mobile-item">Facilities</label>
-				<div class="mega-box !max-w-[1000px]">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'facilities' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('facilities')}>Facilities</button
+				>
+				<div
+					class="mega-box !max-w-[1000px] {activeMobileDropdown === 'facilities'
+						? 'mobile-show'
+						: ''}"
+				>
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -667,11 +735,16 @@
 			<!-- Research -->
 			<li>
 				<a href="/research/publications" class="desktop-item">Research</a>
-				<input type="checkbox" id="research" />
-				<label for="research" class="mobile-item">Research</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'research' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('research')}>Research</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'research' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -708,11 +781,16 @@
 			<!-- CDC (Career Development Cell) -->
 			<li>
 				<a href="/placements" class="desktop-item">CDC</a>
-				<input type="checkbox" id="cdc" />
-				<label for="cdc" class="mobile-item">CDC</label>
-				<div class="mega-box !max-w-[1000px]">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'cdc' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('cdc')}>CDC</button
+				>
+				<div class="mega-box !max-w-[1000px] {activeMobileDropdown === 'cdc' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -759,12 +837,20 @@
 			</li>
 		</ul>
 
-		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-slate-800" /></label>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+		<button type="button" class="btn menu-btn" on:click={toggleMobileMenu}
+			><i class="fas fa-bars text-slate-800" /></button
+		>
 	</div>
 </nav>
 
 <style>
 	/* Fonts are loaded in app.html */
+
+	nav.mobile-menu-active-state {
+		z-index: 99999 !important;
+	}
 
 	nav {
 		z-index: 99;
@@ -889,6 +975,9 @@
 		font-size: 24px;
 		cursor: pointer;
 		display: none;
+		border: none;
+		background: transparent;
+		padding: 0;
 	}
 
 	.wrapper .btn.close-btn {
@@ -947,23 +1036,20 @@
 			left: -100%;
 			background: #ffffff;
 			display: block;
-			padding: 80px 20px 40px;
+			padding: 24px 20px 40px;
 			overflow-y: auto;
 			box-shadow: none;
 			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			z-index: 1000;
 		}
 
-		#menu-btn:checked ~ .nav-links {
-			left: 0%;
-		}
-
 		.wrapper .btn.close-btn {
 			display: flex;
+			position: static;
 		}
 
 		/* Added overlay when menu is open */
-		#menu-btn:checked ~ .btn.menu-btn::before {
+		.nav-links.mobile-open ~ .btn.menu-btn::before {
 			content: '';
 			position: fixed;
 			top: 0;
@@ -993,6 +1079,10 @@
 			line-height: normal;
 		}
 
+		.nav-links.mobile-open {
+			left: 0%;
+		}
+
 		.nav-links .mobile-item {
 			display: flex;
 			align-items: center;
@@ -1004,23 +1094,22 @@
 			font-size: 16px;
 			font-weight: 600;
 			transition: background 0.2s;
+			user-select: none;
+			width: 100%;
+			border: none;
+			background: transparent;
+			text-align: left;
+			font-family: inherit;
 		}
 
 		.nav-links .mobile-item::after {
 			content: '\f107';
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 900;
-			transition: transform 0.3s;
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		}
 
-		#showMega:checked + .mobile-item::after,
-		#governance:checked + .mobile-item::after,
-		#courses:checked + .mobile-item::after,
-		#faculty:checked + .mobile-item::after,
-		#examcell:checked + .mobile-item::after,
-		#facilities:checked + .mobile-item::after,
-		#research:checked + .mobile-item::after,
-		#cdc:checked + .mobile-item::after {
+		.nav-links .mobile-item.active-dropdown::after {
 			transform: rotate(180deg);
 		}
 
@@ -1041,19 +1130,12 @@
 			visibility: visible;
 			max-height: 0;
 			overflow: hidden;
-			transition: all 0.3s ease;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			box-shadow: none;
 			background: transparent;
 		}
 
-		#showMega:checked ~ .mega-box,
-		#governance:checked ~ .mega-box,
-		#courses:checked ~ .mega-box,
-		#faculty:checked ~ .mega-box,
-		#examcell:checked ~ .mega-box,
-		#facilities:checked ~ .mega-box,
-		#research:checked ~ .mega-box,
-		#cdc:checked ~ .mega-box {
+		.mega-box.mobile-show {
 			max-height: 5000px;
 			margin-top: 5px;
 			margin-bottom: 15px;
@@ -1137,10 +1219,5 @@
 		.content i {
 			font-size: 16px !important;
 		}
-	}
-
-	input[type='radio'],
-	input[type='checkbox'] {
-		display: none;
 	}
 </style>

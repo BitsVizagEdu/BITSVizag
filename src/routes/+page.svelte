@@ -13,16 +13,20 @@
 	import Notification from '$lib/components/notification.svelte';
 	import Autonomous from '$lib/components/autonomous.svelte';
 
+	/** @param {number} y */
 	function scaleLogo(y) {
-		if (typeof y !== 'undefined') {
-			document.getElementById('scale-logo').style.transform = `scale(${1 + y / 700})`;
-			document.getElementById('scale-logo').style.opacity = `${1 - y / 900}`;
+		if (typeof y !== 'undefined' && typeof document !== 'undefined') {
+			const logoElement = document.getElementById('scale-logo');
+			if (logoElement) {
+				logoElement.style.transform = `scale(${1 + y / 700})`;
+				logoElement.style.opacity = `${1 - y / 900}`;
+			}
 		}
 	}
 
 	onMount(() => {});
 
-	let y;
+	let y = 0;
 	$: scaleLogo(y);
 </script>
 
@@ -33,13 +37,16 @@
 <svelte:window bind:scrollY={y} />
 {#if !$showNavBar}
 	<Notification />
-	<div id="overlay" class="overlay overflow-hidden relative min-h-[75vh] bg-black">
+	<div
+		id="overlay"
+		class="overlay overflow-hidden relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] bg-black"
+	>
 		<video
 			playsinline
 			autoplay
 			muted
 			loop
-			style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;"
+			class="absolute top-0 left-0 w-full h-full object-cover z-0"
 		>
 			<source src="/baba.webm" type="video/webm" />
 			<source src="/baba.mp4" type="video/mp4" />
@@ -47,15 +54,18 @@
 
 		<div
 			id="scale-logo"
-			class="vidlogo absolute flex justify-center items-center h-full w-full"
-			style="z-index:1;"
+			class="vidlogo absolute flex flex-col sm:flex-row justify-center items-center h-full w-full z-[1] gap-4 sm:gap-0 px-4"
 		>
 			<img
 				src="/logow.svg"
 				alt="BITS Vizag Logo"
-				class="mb-24 w-auto lg:h-52 md:h-44 mr-[-35px] pb-10 3xs:h-24 xs:h-32"
+				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-52 sm:mr-[-20px] md:mr-[-35px] sm:pb-6 md:pb-10 mb-4 sm:mb-24 drop-shadow-2xl"
 			/>
-			<img src="/sq-1.svg" alt="" class=" w-auto mb-24 lg:h-60 h-72 md:h-44 3xs:h-24 xs:h-32" />
+			<img
+				src="/sq-1.svg"
+				alt=""
+				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-60 mb-8 sm:mb-24 drop-shadow-2xl"
+			/>
 		</div>
 	</div>
 	<Autonomous />

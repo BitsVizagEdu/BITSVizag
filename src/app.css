@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 @layer base {
-
 	html,
 	body {
 		font-family: 'Outfit', sans-serif;
@@ -118,7 +117,11 @@ video {
 .slider::before,
 .slider::after {
 	position: absolute;
-	background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
 	content: '';
 	height: 100%;
 	width: 25%;
