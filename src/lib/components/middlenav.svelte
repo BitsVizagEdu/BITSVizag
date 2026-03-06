@@ -814,226 +814,82 @@
 </nav>
 
 <style>
-	/* Fonts are loaded in app.html */
-
-	nav.mobile-menu-active-state {
-		z-index: 99999 !important;
-	}
-
-	nav {
-		z-index: 99;
-		width: 100%;
-		background: #ffffff;
-		font-family: 'Roboto', sans-serif;
-	}
-
-	nav .wrapper {
-		position: relative;
-		max-width: 1600px;
-		padding: 0 24px;
-		height: 56px;
-		line-height: normal;
-		margin: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 0;
-	}
-
-	.wrapper .logo img {
-		width: 100px;
-	}
-
-	.wrapper .nav-links {
-		display: flex;
-		flex: 1;
-		align-items: center;
-		justify-content: space-evenly;
-		white-space: nowrap;
-		height: 100%;
-	}
-
-	.nav-links li {
-		list-style: none;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
-
-	.nav-links li a {
-		color: #000000;
-		text-decoration: none;
-		font-size: 15px;
-		padding: 8px 14px;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-		white-space: nowrap;
-		line-height: normal;
-		text-transform: capitalize;
-		letter-spacing: 0.02em;
-		font-weight: 600;
-		font-family: 'Roboto';
-	}
-
-	.nav-links li a:hover {
-		color: #2672d5;
-		background: rgba(38, 114, 213, 0.05);
-		transform: translateY(-1px);
-	}
-
-	.nav-links .mobile-item {
-		display: none;
-		font-weight: 700;
-	}
-
-	.mega-box {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%) translateY(10px);
-		width: 95vw;
-		max-width: 950px;
-		opacity: 0;
-		visibility: hidden;
-		transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-		text-align: center;
-		z-index: 100;
-		top: 64px;
-		pointer-events: none;
-	}
-
-	.mega-box::before {
-		content: '';
-		position: absolute;
-		top: -40px;
-		left: 0;
-		width: 100%;
-		height: 40px;
-		background: transparent;
-	}
-
-	.nav-links li:hover .mega-box {
-		opacity: 1;
-		visibility: visible;
-		transform: translateX(-50%) translateY(0);
-		pointer-events: auto;
-	}
-	nav {
-		position: sticky;
-		top: 0;
-		z-index: 998;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-	}
-
-	.content {
-		position: relative;
-	}
-
-	.mega-box .content header {
-		font-family: 'Roboto', sans-serif !important;
-		font-weight: 600;
-	}
-
-	.mega-box .content span {
-		font-family: 'Roboto', sans-serif !important;
-	}
-
-	.wrapper .btn {
-		color: #1e293b;
-		font-size: 24px;
-		cursor: pointer;
-		display: none;
-		border: none;
-		background: transparent;
-		padding: 0;
-	}
-
-	.wrapper .btn.close-btn {
-		display: none;
-		position: absolute;
-		right: 25px;
-		top: 25px;
-		width: 45px;
-		height: 45px;
-		background: #f1f5f9;
-		border-radius: 50%;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-	}
-
-	.close-btn i {
-		font-size: 20px;
-		color: #1e293b;
-	}
-
-	.close-btn:hover {
-		background: #e2e8f0;
-		transform: rotate(90deg);
-	}
-
 	@media screen and (max-width: 1280px) {
 		nav {
 			position: sticky;
 			top: 0;
 			z-index: 999;
 			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-			width: 100%;
 		}
+
 		.logo img {
-			display: block;
 			width: 75px;
 		}
+
 		nav .wrapper {
 			justify-content: space-between;
 			padding: 0 20px;
 			height: 70px;
-			gap: 0;
 		}
 
 		.wrapper .btn {
 			display: block;
 		}
 
+		/* -------- CENTERED MOBILE MENU PANEL -------- */
+
 		.wrapper .nav-links {
 			position: fixed;
-			height: 100vh;
-			width: 100vw;
-			top: 0;
-			left: -100%;
+
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0.96);
+
+			width: 92%;
+			max-width: 420px;
+			height: 85vh;
+
 			background: #ffffff;
-			display: block;
-			padding: 20px 16px 80px;
+			border-radius: 26px;
+
+			padding: 22px 16px 70px;
+
 			overflow-y: auto;
 			overflow-x: hidden;
-			box-shadow: none;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+			box-shadow:
+				0 40px 80px rgba(0, 0, 0, 0.12),
+				0 10px 30px rgba(0, 0, 0, 0.06);
+
+			opacity: 0;
+			pointer-events: none;
+
+			transition:
+				transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+				opacity 0.35s ease;
+
 			z-index: 1000;
-			box-sizing: border-box !important;
-		}
-		* {
-			box-sizing: border-box;
 		}
 
-		.wrapper .btn.close-btn {
-			display: flex;
-			position: static;
+		/* OPEN STATE */
+
+		.nav-links.mobile-open {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate(-50%, -50%) scale(1);
 		}
 
-		/* Added overlay when menu is open */
-		.nav-links.mobile-open ~ .btn.menu-btn::before {
-			content: '';
+		/* BACKDROP */
+
+		.mobile-backdrop {
 			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			background: rgba(0, 0, 0, 0.4);
-			backdrop-filter: blur(8px);
-			-webkit-backdrop-filter: blur(8px);
-			z-index: 999;
-			cursor: default;
+			inset: 0;
+			background: rgba(0, 0, 0, 0.45);
+			backdrop-filter: blur(6px);
+			z-index: 998;
 		}
+
+		/* MENU ITEMS */
 
 		.nav-links li {
 			margin: 8px 0;
@@ -1042,47 +898,26 @@
 		}
 
 		.nav-links li a {
-			padding: 12px 16px;
 			display: block;
+			padding: 14px 16px;
 			font-size: 16px;
 			font-weight: 700;
 			border-radius: 12px;
-			color: #000000;
-			line-height: normal;
-		}
-
-		.nav-links.mobile-open {
-			left: 0%;
+			color: #000;
 		}
 
 		.nav-links .mobile-item {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 12px 16px;
+			padding: 14px 16px;
 			border-radius: 12px;
-			color: #000000;
-			cursor: pointer;
 			font-size: 16px;
 			font-weight: 700;
-			transition: background 0.2s;
-			user-select: none;
-			width: 100%;
-			border: none;
+			cursor: pointer;
 			background: transparent;
-			text-align: left;
-			font-family: inherit;
-		}
-
-		.nav-links .mobile-item::after {
-			content: '\f107';
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 900;
-			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		}
-
-		.nav-links .mobile-item.active-dropdown::after {
-			transform: rotate(180deg);
+			border: none;
+			width: 100%;
 		}
 
 		.nav-links .mobile-item:hover {
@@ -1090,9 +925,20 @@
 			color: #2672d5;
 		}
 
+		.nav-links .mobile-item::after {
+			content: '\f107';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			transition: transform 0.3s ease;
+		}
+		.nav-links .mobile-item.active-dropdown::after {
+			transform: rotate(180deg);
+		}
 		.nav-links .desktop-item {
 			display: none;
 		}
+
+		/* DROPDOWN CONTAINER */
 
 		.mega-box {
 			position: static;
@@ -1103,231 +949,132 @@
 			visibility: visible;
 			max-height: 0;
 			overflow: hidden;
-			transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-			box-shadow: none;
-			background: transparent;
+			transition: max-height 0.45s ease;
 		}
 
 		.mega-box.mobile-show {
-			max-height: 5000px;
-			margin-top: 10px;
-			margin-bottom: 20px;
+			max-height: 4000px;
+			margin-top: 12px;
+			margin-bottom: 16px;
 		}
+
+		/* CONTENT CARD */
 
 		.content {
-			box-shadow: none !important;
-			border: none !important;
-			background: #f8fafc !important;
-			border-radius: 24px !important;
-			padding: 20px 12px !important;
-			display: block !important;
-			text-align: left !important;
-			width: 100% !important;
-			box-sizing: border-box !important;
-			margin-left: 0 !important;
-			margin-right: 0 !important;
+			background: #f8fafc;
+			border-radius: 20px;
+			padding: 18px 16px;
+
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
 		}
 
-		.flex-1 {
-			width: 100% !important;
-			display: block !important;
-			padding: 0 !important;
-			border: none !important;
-		}
+		/* GRID INSIDE DROPDOWNS */
 
 		.content .grid {
-			width: 100% !important;
-			display: grid !important;
-			grid-template-columns: 1fr !important;
-			gap: 12px !important;
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 12px;
 		}
 
-		.content header,
-		.content a span,
-		.content a div,
-		.custom-sidebar span,
-		.custom-sidebar button {
-			color: #000000 !important;
-			text-transform: none !important;
-			opacity: 1 !important;
-			font-family: 'Roboto', sans-serif !important;
-		}
-
-		.content header {
-			font-size: 11px !important;
-			padding: 0 8px !important;
-			margin-bottom: 8px !important;
-			margin-top: 16px !important;
-			letter-spacing: 0.1em !important;
-			text-transform: uppercase !important;
-			font-weight: 700 !important;
-			display: flex !important;
-			align-items: center !important;
-			justify-content: flex-start !important;
-			gap: 8px !important;
-			width: 100% !important;
-			border: none !important;
-		}
-
-		/* Sub-headers adjustment */
-		.animate-fade-in header {
-			font-size: 15px !important;
-			margin-top: 6px !important;
-			letter-spacing: normal !important;
-			font-weight: 700 !important;
-		}
-
-		.flex-1:first-child header {
-			margin-top: 0 !important;
-		}
+		/* ITEM CARDS */
 
 		.content a {
-			padding: 10px 14px !important;
-			margin: 0 !important;
-			background: white !important;
-			border-radius: 10px !important;
-			font-size: 14px !important;
-			border: 1px solid #f1f5f9 !important;
-			width: 100% !important;
-			max-width: 100% !important;
-			display: flex !important;
-			justify-content: flex-start !important;
-			align-items: center !important;
-			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
-			text-align: left !important;
-			transition: all 0.3s ease !important;
-			box-sizing: border-box !important;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			padding: 12px 14px;
+
+			background: #ffffff;
+			border-radius: 12px;
+
+			border: 1px solid #f1f5f9;
+
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+
+			font-size: 14px;
+			font-weight: 600;
+
+			transition: all 0.25s ease;
 		}
 
-		.content a:active {
-			background: #f1f5f9 !important;
-			transform: scale(0.98);
-		}
-
-		.content a .flex-col {
-			display: flex !important;
-			flex-direction: column !important;
-			align-items: flex-start !important;
-			width: 100% !important;
-		}
-
-		.content a span:first-child {
-			font-weight: 600 !important;
-			line-height: 1.25 !important;
-			font-size: 14px !important;
-		}
-
-		.content a span:last-child {
-			font-size: 9px !important;
-			letter-spacing: 0.05em !important;
-			margin-top: 2px !important;
-			font-weight: 600 !important;
+		.content a:hover {
+			background: #f9fafb;
 		}
 
 		.content i {
-			font-size: 14px !important;
-			width: 24px !important;
-			text-align: center !important;
-			margin-right: 6px !important;
-			color: #2672d5 !important;
+			width: 22px;
+			text-align: center;
+			color: #2672d5;
 		}
 
-		/* Styling for the sidebar-like buttons in Courses mobile view */
+		/* HEADER */
+
+		.content header {
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			margin-bottom: 6px;
+		}
+
+		/* COURSES MOBILE SWITCHER */
+
 		.custom-sidebar {
-			width: 100% !important;
-			border: none !important;
-			background: transparent !important;
-			padding: 0 !important;
-			margin-bottom: 20px !important;
+			display: flex;
+			gap: 8px;
+			overflow-x: auto;
+			padding-bottom: 8px;
+		}
+
+		.custom-sidebar::-webkit-scrollbar {
+			display: none;
 		}
 
 		.custom-sidebar button {
-			width: 100% !important;
-			justify-content: flex-start !important;
-			padding: 16px 20px !important;
-			margin-bottom: 8px !important;
-			background: white !important;
-			border-radius: 16px !important;
-			border: 1px solid #f1f5f9 !important;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
-			font-weight: 800 !important;
-		}
+			white-space: nowrap;
+			padding: 10px 16px;
+			border-radius: 100px;
 
-		/* Insane Courses Mobile Switcher */
-		.courses-mega .custom-sidebar {
-			flex-direction: row !important;
-			gap: 8px !important;
-			overflow-x: auto !important;
-			padding: 0 4px 10px !important;
-			margin-top: 10px !important;
-			scrollbar-width: none !important;
-			-ms-overflow-style: none !important;
-		}
-		.courses-mega .custom-sidebar::-webkit-scrollbar {
-			display: none !important;
-		}
-		.courses-mega .custom-sidebar header {
-			display: none !important;
-		}
-		.courses-mega .custom-sidebar button {
-			white-space: nowrap !important;
-			width: auto !important;
-			flex: 1 !important;
-			padding: 12px 18px !important;
-			border-radius: 100px !important;
-			font-size: 13px !important;
-			background: #f1f5f9 !important;
-			border: none !important;
-			box-shadow: none !important;
-			color: #64748b !important;
-			margin-bottom: 0 !important;
-		}
-		.courses-mega .custom-sidebar button.active {
-			background: #2672d5 !important;
-			color: white !important;
-		}
-		.courses-mega .custom-sidebar button div {
-			display: none !important;
-		}
+			background: #f1f5f9;
+			border: none;
 
-		/* Premium Course Cards */
-		.course-card-mobile {
-			background: white !important;
-			border: 1px solid #f1f5f9 !important;
-			border-radius: 16px !important;
-			padding: 12px !important;
-			display: flex !important;
-			align-items: center !important;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
-			width: 100% !important;
-			box-sizing: border-box !important;
-		}
-		.course-icon-bg {
-			width: 40px !important;
-			height: 40px !important;
-			border-radius: 12px !important;
-			display: flex !important;
-			align-items: center !important;
-			justify-content: center !important;
-			font-size: 16px !important;
-		}
-		.course-card-mobile span:first-child {
-			font-size: 13px !important;
-			font-weight: 700 !important;
-			letter-spacing: -0.01em !important;
-			color: #000000 !important;
-		}
-		.course-card-mobile span:last-child {
-			font-size: 9px !important;
-			font-weight: 800 !important;
-			text-transform: uppercase !important;
-			letter-spacing: 0.1em !important;
-			margin-top: 2px !important;
+			font-size: 13px;
+			font-weight: 700;
+			color: #64748b;
 		}
 
 		.custom-sidebar button.active {
-			border-color: #2672d5 !important;
-			background: #f0f7ff !important;
+			background: #2672d5;
+			color: white;
+		}
+
+		.course-card-mobile {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			background: white;
+
+			border-radius: 14px;
+			border: 1px solid #f1f5f9;
+
+			padding: 12px;
+
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+		}
+
+		.course-icon-bg {
+			width: 38px;
+			height: 38px;
+
+			border-radius: 10px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 </style>
