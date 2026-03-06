@@ -65,8 +65,8 @@
 	];
 </script>
 
-<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
-	<img src="/header/mech.png" alt="" srcset="" />
+<section class="bg-slate-200 p-4 md:p-8 lg:p-10 rounded-xl md:rounded-3xl">
+	<img src="/header/mech.png" alt="Header" class="w-full h-auto object-contain rounded-xl shadow-sm mb-4 md:mb-6" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Mechanical Engineering</h1> -->
 	<div class="flex justify-center w-full my-8 px-2 md:px-0">
 		<div
@@ -82,9 +82,7 @@
 			/>
 		</div>
 	</div>
-	<div
-		class=" py-10 text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-5xl mx-auto"
-	>
+	<div class="hidden md:flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
 		<div>
 			<div>
 				<p>
@@ -115,20 +113,21 @@
 				</p>
 			</div>
 			<div class="pt-10">
-				<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
-					HOD MESSAGE <span class="text-red-600"> - Prof. A.S. Bhanu Prasana</span>
-				</h1>
+				<h1 id="HOD" class="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-6 md:mb-8 md:leading-tight font-outfit">
+				<span class="block text-[13px] md:text-[15px] text-slate-500 tracking-[0.2em] font-semibold uppercase mb-2">HOD Message</span>
+				 <span class="text-red-600"> - Prof. A.S. Bhanu Prasana</span>
+				
+			</h1>
 				<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
-					<div class="flex-shrink-0">
-						<img
-							src="/mec hod.jpg"
-							class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
-							alt="HOD"
-						/>
-					</div>
-					<div
-						class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
-					>
+					<div class="flex-shrink-0 relative group">
+					<div class="absolute -inset-2 bg-gradient-to-tr from-blue-100 to-indigo-50 border border-white rounded-[2rem] opacity-0 md:opacity-100 scale-95 md:group-hover:scale-100 transition-all duration-500 z-0 shadow-sm hidden md:block"></div>
+					<img
+						src="/mec hod.jpg"
+						class="relative h-48 w-48 md:h-80 md:w-80 object-cover object-top rounded-full md:rounded-[1.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border-[5px] md:border-[6px] border-white z-10"
+						alt="HOD"
+					/>
+				</div>
+					<div class="text-justify text-[15px] md:text-base text-slate-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-2xl px-1 md:px-0">
 						<p>
 							Welcome to the Department of Mechanical Engineering at BITS Vizag. With a profound
 							understanding of mechanical engineering principles, our department provides visionary
@@ -146,9 +145,9 @@
 				</div>
 			</div>
 			<div class="pt-10">
-				<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
-					Facilities & Infrastructure
-				</h1>
+				<h1 class="text-3xl md:text-4xl font-bold text-indigo-900 text-center uppercase mb-6 md:mb-8 mt-4 md:mt-8 font-outfit">
+				Facilities & Infrastructure
+			</h1>
 				<div
 					class="flex flex-col lg:flex-row gap-4 pt-8 px-2 lg:px-0 max-w-5xl mx-auto items-stretch"
 				>
@@ -219,11 +218,11 @@
 				</div>
 			</div>
 			<div id="facilities" class="flex gap-20 py-10 facilities">
-				<div>
-					<div id="icon" class="flex">
+				<div class="flex-1 flex flex-col gap-3 md:gap-4">
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
 						<svg
-							width="40px"
-							height="30px"
+							width="24px" height="24px"
 							viewBox="0 0 24 24"
 							version="1.1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -247,130 +246,13 @@
 								</g>
 							</g>
 						</svg>
-						<p>Engineering Workshop</p>
 					</div>
-					<div id="icon" class="flex">
-						<svg
-							width="40px"
-							height="30px"
-							viewBox="0 0 24 24"
-							version="1.1"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-						>
-							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-							<title>ic_fluent_checkbox_checked_24_regular</title>
-							<desc>Created with Sketch.</desc>
-							<g
-								id="🔍-Product-Icons"
-								stroke="none"
-								stroke-width="1"
-								fill="none"
-								fill-rule="evenodd"
-							>
-								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
-									<path
-										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
-										id="🎨Color"
-									/>
-								</g>
-							</g>
-						</svg>
-						<p>Production Technology Lab</p>
-					</div>
-					<div id="icon" class="flex">
-						<svg
-							width="40px"
-							height="30px"
-							viewBox="0 0 24 24"
-							version="1.1"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-						>
-							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-							<title>ic_fluent_checkbox_checked_24_regular</title>
-							<desc>Created with Sketch.</desc>
-							<g
-								id="🔍-Product-Icons"
-								stroke="none"
-								stroke-width="1"
-								fill="none"
-								fill-rule="evenodd"
-							>
-								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
-									<path
-										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
-										id="🎨Color"
-									/>
-								</g>
-							</g>
-						</svg>
-						<p>Metallurgy Lab</p>
-					</div>
-					<div id="icon" class="flex">
-						<svg
-							width="40px"
-							height="30px"
-							viewBox="0 0 24 24"
-							version="1.1"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-						>
-							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-							<title>ic_fluent_checkbox_checked_24_regular</title>
-							<desc>Created with Sketch.</desc>
-							<g
-								id="🔍-Product-Icons"
-								stroke="none"
-								stroke-width="1"
-								fill="none"
-								fill-rule="evenodd"
-							>
-								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
-									<path
-										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
-										id="🎨Color"
-									/>
-								</g>
-							</g>
-						</svg>
-						<p>Metrology Lab</p>
-					</div>
-					<div id="icon" class="flex">
-						<svg
-							width="40px"
-							height="30px"
-							viewBox="0 0 24 24"
-							version="1.1"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-						>
-							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-							<title>ic_fluent_checkbox_checked_24_regular</title>
-							<desc>Created with Sketch.</desc>
-							<g
-								id="🔍-Product-Icons"
-								stroke="none"
-								stroke-width="1"
-								fill="none"
-								fill-rule="evenodd"
-							>
-								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
-									<path
-										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
-										id="🎨Color"
-									/>
-								</g>
-							</g>
-						</svg>
-						<p>Thermal Engineering Lab</p>
-					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Engineering Workshop</p>
 				</div>
-				<div>
-					<div id="icon" class="flex">
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
 						<svg
-							width="40px"
-							height="30px"
+							width="24px" height="24px"
 							viewBox="0 0 24 24"
 							version="1.1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -394,12 +276,13 @@
 								</g>
 							</g>
 						</svg>
-						<p>ICS Lab</p>
 					</div>
-					<div id="icon" class="flex">
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Production Technology Lab</p>
+				</div>
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
 						<svg
-							width="40px"
-							height="30px"
+							width="24px" height="24px"
 							viewBox="0 0 24 24"
 							version="1.1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -423,12 +306,13 @@
 								</g>
 							</g>
 						</svg>
-						<p>Heat Transfer Lab</p>
 					</div>
-					<div id="icon" class="flex">
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Metallurgy Lab</p>
+				</div>
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
 						<svg
-							width="40px"
-							height="30px"
+							width="24px" height="24px"
 							viewBox="0 0 24 24"
 							version="1.1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -452,12 +336,13 @@
 								</g>
 							</g>
 						</svg>
-						<p>MCMT Lab</p>
 					</div>
-					<div id="icon" class="flex">
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Metrology Lab</p>
+				</div>
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
 						<svg
-							width="40px"
-							height="30px"
+							width="24px" height="24px"
 							viewBox="0 0 24 24"
 							version="1.1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -481,187 +366,173 @@
 								</g>
 							</g>
 						</svg>
-						<p>Simulation Lab</p>
 					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Thermal Engineering Lab</p>
+				</div>
+				</div>
+				<div class="flex-1 flex flex-col gap-3 md:gap-4">
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+							width="24px" height="24px"
+							viewBox="0 0 24 24"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+						>
+							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<title>ic_fluent_checkbox_checked_24_regular</title>
+							<desc>Created with Sketch.</desc>
+							<g
+								id="🔍-Product-Icons"
+								stroke="none"
+								stroke-width="1"
+								fill="none"
+								fill-rule="evenodd"
+							>
+								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+									<path
+										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+										id="🎨Color"
+									/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">ICS Lab</p>
+				</div>
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+							width="24px" height="24px"
+							viewBox="0 0 24 24"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+						>
+							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<title>ic_fluent_checkbox_checked_24_regular</title>
+							<desc>Created with Sketch.</desc>
+							<g
+								id="🔍-Product-Icons"
+								stroke="none"
+								stroke-width="1"
+								fill="none"
+								fill-rule="evenodd"
+							>
+								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+									<path
+										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+										id="🎨Color"
+									/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Heat Transfer Lab</p>
+				</div>
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+							width="24px" height="24px"
+							viewBox="0 0 24 24"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+						>
+							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<title>ic_fluent_checkbox_checked_24_regular</title>
+							<desc>Created with Sketch.</desc>
+							<g
+								id="🔍-Product-Icons"
+								stroke="none"
+								stroke-width="1"
+								fill="none"
+								fill-rule="evenodd"
+							>
+								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+									<path
+										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+										id="🎨Color"
+									/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">MCMT Lab</p>
+				</div>
+					<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+							width="24px" height="24px"
+							viewBox="0 0 24 24"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+						>
+							<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+							<title>ic_fluent_checkbox_checked_24_regular</title>
+							<desc>Created with Sketch.</desc>
+							<g
+								id="🔍-Product-Icons"
+								stroke="none"
+								stroke-width="1"
+								fill="none"
+								fill-rule="evenodd"
+							>
+								<g id="ic_fluent_checkbox_checked_24_regular" fill="#212121" fill-rule="nonzero">
+									<path
+										d="M18.25,3 C19.7687831,3 21,4.23121694 21,5.75 L21,18.25 C21,19.7687831 19.7687831,21 18.25,21 L5.75,21 C4.23121694,21 3,19.7687831 3,18.25 L3,5.75 C3,4.23121694 4.23121694,3 5.75,3 L18.25,3 Z M18.25,4.5 L5.75,4.5 C5.05964406,4.5 4.5,5.05964406 4.5,5.75 L4.5,18.25 C4.5,18.9403559 5.05964406,19.5 5.75,19.5 L18.25,19.5 C18.9403559,19.5 19.5,18.9403559 19.5,18.25 L19.5,5.75 C19.5,5.05964406 18.9403559,4.5 18.25,4.5 Z M10,14.4393398 L16.4696699,7.96966991 C16.7625631,7.6767767 17.2374369,7.6767767 17.5303301,7.96966991 C17.7965966,8.23593648 17.8208027,8.65260016 17.6029482,8.94621165 L17.5303301,9.03033009 L10.5303301,16.0303301 C10.2640635,16.2965966 9.84739984,16.3208027 9.55378835,16.1029482 L9.46966991,16.0303301 L6.46966991,13.0303301 C6.1767767,12.7374369 6.1767767,12.2625631 6.46966991,11.9696699 C6.73593648,11.7034034 7.15260016,11.6791973 7.44621165,11.8970518 L7.53033009,11.9696699 L10,14.4393398 L16.4696699,7.96966991 L10,14.4393398 Z"
+										id="🎨Color"
+									/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Simulation Lab</p>
+				</div>
 				</div>
 			</div>
-			<div class="parent mt-7">
-				<div class="child flex items-center justify-center text-white">
-					<div class="">
-						<p id="aca" class="font-bold text-6xl">Faculty Details</p>
-					</div>
-				</div>
+			<div class="w-full bg-[#cc0033] rounded-2xl md:rounded-[1.5rem] p-2 md:p-3 mt-12 md:mt-20 shadow-lg flex items-center justify-center h-24 sm:h-32 md:h-40 xl:h-48 mb-8 mx-auto w-[calc(100%-8px)] lg:w-full">
+			<div class="w-full h-full bg-[#1e3a8a] rounded-xl md:rounded-[1.25rem] flex items-center justify-center shadow-inner py-4 md:py-0">
+				<h2 class="font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-wide text-center px-4 font-outfit">Faculty Details</h2>
 			</div>
-			<div
-				class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
-			>
+		</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 mt-8 md:mt-12 px-2 md:px-0 items-stretch">
 				{#each items as item, i}
-					<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
-						<div class="w-12 h-12 mt-4">
-							<img src="/faculty.svg" alt="" />
-						</div>
-						<div class="p-[10px] capitalize font-bold">{item.name}</div>
-						<div class="capitalize font-semibold">{item.designation}</div>
-						<div class="overflow-hidden text-center pt-2">
-							<a href="mailto:{item.mail}">{item.qualification}</a>
-						</div>
+					<div class="bg-white flex flex-col items-center p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group hover:-translate-y-1">
+					<div class="w-14 h-14 md:w-16 md:h-16 mb-4 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors shrink-0">
+						<img src="/faculty.svg" alt="Faculty" class="w-8 h-8 md:w-10 md:h-10 opacity-70 group-hover:opacity-100 transition-opacity" />
 					</div>
+					<div class="text-[17px] md:text-lg font-bold text-slate-900 text-center mb-1 leading-tight">{item.name}</div>
+					<div class="text-[12px] md:text-[13px] font-semibold text-[#2672d5] text-center mb-4 md:mb-5 uppercase tracking-wider">{item.designation}</div>
+					<div class="text-[12px] md:text-[13px] font-medium text-slate-600 text-center bg-slate-50 px-3 md:px-4 py-2 rounded-full mt-auto w-full truncate border border-slate-100 shadow-sm">
+						<a href="mailto:{item.mail}">{item.qualification}</a>
+					</div>
+				</div>
 				{/each}
 			</div>
 		</div>
 	</div>
+	
+	<div class="flex md:hidden flex-col gap-3 px-2 md:px-0 mt-4 md:mt-0 pb-4">
+		<p class="text-[14px] leading-relaxed text-slate-700 text-left">The Department of Mechanical Engineering at BITS Vizag Engineering College is one of the prestigious academic units dedicated to providing high-quality education and research opportunities in the field of mechanical engineering.</p>
+		<ul class="flex flex-col gap-2 mt-2">
+            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-check-circle text-blue-500 text-[14px] mt-0.5 shrink-0"></i>
+                <span class="text-[13px] text-slate-600 leading-snug tracking-wide">This department plays a vital role in producing skilled engineers who contribute to various industries, including manufacturing, automotive, aerospace, energy, and more.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-check-circle text-blue-500 text-[14px] mt-0.5 shrink-0"></i>
+                <span class="text-[13px] text-slate-600 leading-snug tracking-wide">The Mechanical Engineering department offers a comprehensive and up-to-date curriculum that covers a wide range of subjects related to mechanical engineering.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-check-circle text-blue-500 text-[14px] mt-0.5 shrink-0"></i>
+                <span class="text-[13px] text-slate-600 leading-snug tracking-wide">The curriculum is designed to provide students with a strong foundation in core concepts such as mechanics, thermodynamics, fluid mechanics, materials science, and design engineering.</span>
+            </li>
+		</ul>
+	</div>
+
 </section>
 
-<style>
-	* {
-		box-sizing: border-box;
-	}
-	body {
-		margin: 0;
-	}
-	.container {
-		display: grid;
-		grid-gap: 5px;
-		grid-template-areas:
-			'A'
-			'B'
-			'C'
-			'D'
-			'E';
-	}
-	@media (min-width: 576px) {
-		.container {
-			grid-template-columns: 1.52fr 1fr 1fr 1.525fr;
-			grid-template-areas:
-				'A  B  C  E'
-				'A  D  D  E';
-		}
-	}
 
-	.container img:nth-child(1) {
-		grid-area: A;
-	}
-	.container img:nth-child(2) {
-		grid-area: B;
-	}
-	.container img:nth-child(3) {
-		grid-area: C;
-	}
-	.container img:nth-child(4) {
-		grid-area: D;
-	}
-	.container img:nth-child(5) {
-		grid-area: E;
-	}
-	.container img {
-		width: 100%;
-		height: 100%;
-	}
-	.first,
-	.second,
-	.third {
-		height: 92.2%;
-		width: 100%;
-	}
-	.third {
-		height: 88%;
-	}
-
-	@media screen and (max-width: 1024px) {
-		#facilities {
-			display: flex;
-			flex-direction: column;
-			gap: 30px;
-		}
-	}
-	.parent {
-		height: 200px;
-		background: #cc0033;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 20px;
-		text-align: center;
-	}
-
-	.child {
-		background-color: #1e3a8a;
-		width: 94%;
-		height: 88%;
-		border-radius: 20px;
-	}
-	@media screen and (max-width: 1024px) {
-		#aca {
-			font-size: 40px;
-		}
-	}
-	@media screen and (max-width: 768px) {
-		#basic {
-			font-size: 17px;
-		}
-	}
-	@media screen and (max-width: 425px) {
-		#aca {
-			font-size: 30px;
-		}
-		#basic {
-			font-size: 15 px;
-		}
-	}
-	@media screen and (max-width: 400px) {
-		#aca {
-			font-size: 25px;
-		}
-		#basic {
-			font-size: 13px;
-			padding-top: 3px;
-		}
-		.parent {
-			height: 120px;
-		}
-		#facilities p {
-			font-size: 12px;
-			align-items: center;
-		}
-	}
-	@media screen and (max-width: 1024px) {
-		#academic {
-			display: flex;
-			flex-direction: column;
-		}
-	}
-	@media screen and (max-width: 425px) {
-		#post {
-			font-size: 19px;
-		}
-		#eligible {
-			font-size: 20px;
-		}
-		#icons svg {
-			float: left;
-		}
-	}
-	@media screen and (max-width: 320px) {
-		#post {
-			font-size: 16px;
-		}
-		#eligible {
-			font-size: 15px;
-		}
-	}
-	@media screen and (max-width: 540px) {
-		#branch {
-			display: flex;
-			flex-direction: column;
-		}
-		#branch #branches p {
-			float: left;
-			font-size: 13px;
-		}
-	}
-	@media screen and (max-width: 375px) {
-		p {
-			text-align: left;
-		}
-	}
-</style>

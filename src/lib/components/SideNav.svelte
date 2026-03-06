@@ -128,11 +128,11 @@
 		font-family: 'Roboto', sans-serif;
 	}
 	.uppercase {
-		font-family: 'Poppins', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-weight: 700;
 		letter-spacing: 0.1em;
 	}
 	.font-semibold {
-		font-family: 'Poppins', sans-serif;
+		font-family: 'Roboto', sans-serif;
 	}
 </style>
