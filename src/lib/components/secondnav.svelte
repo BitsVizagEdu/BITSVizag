@@ -73,7 +73,7 @@
 		display: flex;
 		align-items: center;
 		font-weight: 500;
-		font-family: 'Poppins', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-weight: 600;
 	}
 
