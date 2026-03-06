@@ -82,7 +82,7 @@
 			/>
 		</div>
 	</div>
-	<div class="hidden md:flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
+	<div class="hidden md:flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
 		<div>
 			<div>
 				<p>
@@ -112,7 +112,11 @@
 					well-prepared to meet the demands of the ever-evolving engineering industry.
 				</p>
 			</div>
-			<div class="pt-10">
+		</div>
+	</div>
+
+	<div class="flex flex-col max-w-5xl mx-auto w-full px-1 md:px-0">
+		<div class="pt-10">
 				<h1 id="HOD" class="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-6 md:mb-8 md:leading-tight font-outfit">
 				<span class="block text-[13px] md:text-[15px] text-slate-500 tracking-[0.2em] font-semibold uppercase mb-2">HOD Message</span>
 				 <span class="text-red-600"> - Prof. A.S. Bhanu Prasana</span>
