@@ -140,94 +140,94 @@
 	/** @type {Record<string, {text: string, bg: string, badge: string, cardBg: string}>} */
 	const themes = {
 		rose: {
-			text: 'text-white',
+			text: 'text-rose-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-rose-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#f43f5e] to-[#be123c]'
 		},
 		indigo: {
-			text: 'text-white',
+			text: 'text-indigo-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-indigo-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#6366f1] to-[#4338ca]'
 		},
 		amber: {
-			text: 'text-white',
+			text: 'text-amber-50',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-amber-500'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#f59e0b] to-[#d97706]'
 		},
 		purple: {
-			text: 'text-white',
+			text: 'text-purple-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-purple-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#a855f7] to-[#7e22ce]'
 		},
 		blue: {
-			text: 'text-white',
+			text: 'text-blue-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-blue-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8]'
 		},
 		emerald: {
-			text: 'text-white',
+			text: 'text-emerald-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-emerald-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#10b981] to-[#047857]'
 		},
 		cyan: {
-			text: 'text-white',
+			text: 'text-cyan-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-cyan-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#06b6d4] to-[#0e7490]'
 		},
 		slate: {
-			text: 'text-white',
+			text: 'text-slate-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-slate-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#64748b] to-[#334155]'
 		},
 		pink: {
-			text: 'text-white',
+			text: 'text-pink-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-pink-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#ec4899] to-[#be185d]'
 		},
 		sky: {
-			text: 'text-white',
+			text: 'text-sky-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-sky-500'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#0ea5e9] to-[#0369a1]'
 		},
 		orange: {
-			text: 'text-white',
+			text: 'text-orange-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-orange-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#f97316] to-[#c2410c]'
 		},
 		yellow: {
-			text: 'text-white',
+			text: 'text-yellow-50',
 			bg: 'bg-white/10 text-white',
-			badge: 'bg-white/10 text-white',
-			cardBg: 'bg-yellow-500'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#eab308] to-[#a16207]'
 		},
 		teal: {
-			text: 'text-white',
+			text: 'text-teal-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-teal-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#14b8a6] to-[#0f766e]'
 		},
 		lime: {
-			text: 'text-white',
+			text: 'text-lime-50',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-lime-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#84cc16] to-[#4d7c0f]'
 		},
 		violet: {
-			text: 'text-white',
+			text: 'text-violet-100',
 			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white',
-			cardBg: 'bg-violet-600'
+			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
+			cardBg: 'bg-gradient-to-br from-[#8b5cf6] to-[#5b21b6]'
 		}
 	};
 </script>
@@ -244,7 +244,7 @@
 
 		<!-- Cards Grid - Spread End-to-End -->
 		<div
-			class="committees-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"
+			class="committees-grid grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 md:gap-5"
 		>
 			{#each items as item, i}
 				{@const style = themes[item.theme]}
@@ -252,46 +252,51 @@
 					<a
 						href={item.link || '#'}
 						target={item.link ? '_blank' : '_self'}
-						class="group relative h-full {style.cardBg} border border-white/10 hover:border-white/30 transition-all duration-500 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 flex flex-col"
+						class="group relative h-full {style.cardBg} border border-white/10 hover:border-white/30 transition-all duration-500 rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 md:hover:-translate-y-2 flex flex-col"
 					>
-						<div class="p-6 flex flex-col h-full text-white">
+						<div class="p-4 md:p-6 flex flex-col h-full text-white">
 							<!-- Header: Icon and Category -->
-							<div class="flex items-start justify-between mb-8">
+							<div class="flex items-start justify-between mb-4 md:mb-8">
 								<div
-									class="w-10 h-10 bg-white/20 {style.text} rounded-2xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-white/30 duration-500 shadow-sm border border-white/10"
+									class="w-8 h-8 md:w-10 md:h-10 bg-white/20 {style.text} rounded-[10px] md:rounded-2xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-white/30 duration-500 shadow-sm border border-white/10"
 								>
-									<i class={`fa-solid ${item.icon} text-xl`}></i>
+									<i class={`fa-solid ${item.icon} text-base md:text-xl`}></i>
 								</div>
 								<span
-									class="px-3 py-1 {style.badge} rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10"
+									class="px-2 py-0.5 md:px-3 md:py-1 {style.badge} rounded-full text-[8.5px] md:text-[10px] font-black uppercase tracking-widest border border-white/10"
 								>
 									{item.category}
 								</span>
 							</div>
 
 							<!-- Title -->
-							<div class="mb-6">
+							<div class="mb-4 md:mb-6">
 								<h3
-									class="text-lg font-bold text-white leading-tight transition-colors tracking-tight min-h-[3rem]"
+									class="text-[15px] md:text-lg font-bold text-white leading-tight transition-colors tracking-tight min-h-[2.5rem] md:min-h-[3rem]"
 								>
 									{item.title}
 								</h3>
 							</div>
 
 							<!-- Footer: Action Indicator -->
-							<div class="mt-auto pt-4 flex items-center justify-between border-t border-white/10">
+							<div
+								class="mt-auto pt-3 md:pt-4 flex items-center justify-between border-t border-white/10"
+							>
 								{#if item.link}
-									<div class="flex items-center gap-3">
-										<i class="fa-solid fa-file-pdf text-white/80 text-sm"></i>
-										<span class="text-[11px] font-bold text-white/90 uppercase tracking-widest"
+									<div class="flex items-center gap-2 md:gap-3">
+										<i class="fa-solid fa-file-pdf text-white/80 text-[10px] md:text-sm"></i>
+										<span
+											class="text-[9px] md:text-[11px] font-bold text-white/90 uppercase tracking-widest"
 											>Guidelines</span
 										>
 									</div>
 									<div
-										class="w-4 h-4 rounded-full bg-white text-slate-800 flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-md"
+										class="w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-white text-slate-800 flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-md"
 									>
-										<i class="fa-solid fa-arrow-right text-[10px]"></i>
+										<i class="fa-solid fa-arrow-right text-[7px] md:text-[10px]"></i>
 									</div>
+								{:else}
+									<div class="min-h-[14px] md:min-h-[16px]"></div>
 								{/if}
 							</div>
 						</div>

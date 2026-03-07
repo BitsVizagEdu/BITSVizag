@@ -68,14 +68,14 @@
 	class="bg-slate-900 border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl"
 >
 	<div class="2xl:mx-auto py-2 md:py-3 lg:px-12 w-full">
-		<div class="flex flex-row justify-between items-center w-full px-4">
+		<div class="flex flex-row justify-between items-center w-full px-2 sm:px-4">
 			<!-- Left Logo: NAAC -->
 			<div class="flex flex-col justify-center items-start shrink-0">
 				<div
-					class="flex items-center justify-center h-[50px] w-[50px] xs:h-[80px] xs:w-[80px] md:h-[105px] md:w-[105px] lg:h-[135px] lg:w-[135px] drop-shadow-2xl"
+					class="flex items-center justify-center h-[40px] w-[40px] 2xs:h-[50px] 2xs:w-[50px] xs:h-[70px] xs:w-[70px] md:h-[105px] md:w-[105px] lg:h-[135px] lg:w-[135px] drop-shadow-2xl"
 				>
 					<img
-						class="bg-transparent p-1 h-full w-full object-contain filter"
+						class="bg-transparent p-0.5 xs:p-1 h-full w-full object-contain filter"
 						src="/naac.png"
 						alt="NAAC Accredited"
 					/>
@@ -84,27 +84,27 @@
 
 			<!-- Center Content -->
 			<div
-				class="flex flex-col justify-center items-center text-center px-1 xs:px-4 flex-1 max-w-[1050px]"
+				class="flex flex-col justify-center items-center text-center px-1 xs:px-2 flex-1 max-w-[1050px]"
 			>
 				<h1
-					class="text-[13px] 2xs:text-[15px] xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.02em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg"
+					class="text-[10px] 3xs:text-[12px] 2xs:text-[14px] xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.01em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg"
 				>
 					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
 				</h1>
 
-				<div class="flex items-center gap-1.5 xs:gap-2 mt-0 md:mt-1">
-					<div class="h-[1px] w-3 md:w-12 bg-yellow-400/50"></div>
+				<div class="flex items-center gap-1 xs:gap-2 mt-0 md:mt-1">
+					<div class="h-[1px] w-2 xs:w-3 md:w-12 bg-yellow-400/50"></div>
 					<h5
-						class="text-[9px] 2xs:text-[11px] xs:text-xs sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase"
+						class="text-[7.5px] 3xs:text-[8px] 2xs:text-[10px] xs:text-xs sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase"
 					>
 						An Autonomous Institution
 					</h5>
-					<div class="h-[1px] w-3 md:w-12 bg-yellow-400/50"></div>
+					<div class="h-[1px] w-2 xs:w-3 md:w-12 bg-yellow-400/50"></div>
 				</div>
 
 				<div class="mt-0.5 md:mt-1 text-slate-300">
 					<h6
-						class="text-[7.5px] 2xs:text-[9px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[600px] mx-auto"
+						class="text-[6.5px] 3xs:text-[7px] 2xs:text-[8.5px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[600px] mx-auto"
 					>
 						( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-Kakinada, GV )
 						<br class="hidden sm:block" />
@@ -112,13 +112,15 @@
 						>
 					</h6>
 					<div
-						class="mt-2 inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
+						class="mt-1 xs:mt-2 inline-flex items-center gap-1 xs:gap-1.5 px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
 					>
-						<span class="text-[11px] md:text-xs font-bold text-amber-500 uppercase tracking-wider">
+						<span
+							class="text-[9px] 2xs:text-[10px] md:text-xs font-bold text-amber-500 uppercase tracking-wider"
+						>
 							College Code :
 						</span>
 						<span
-							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-sm md:text-base leading-none"
+							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-[10px] xs:text-sm md:text-base leading-none"
 						>
 							BABA
 						</span>
@@ -130,13 +132,13 @@
 			<div class="flex flex-col justify-center items-end shrink-0">
 				<div
 					id="bits"
-					class="flex items-center justify-center h-[40px] w-[40px] xs:h-[65px] xs:w-[65px] md:h-[85px] md:w-[85px] lg:h-[105px] lg:w-[105px] relative group"
+					class="flex items-center justify-center h-[35px] w-[35px] 2xs:h-[45px] 2xs:w-[45px] xs:h-[60px] xs:w-[60px] md:h-[85px] md:w-[85px] lg:h-[105px] lg:w-[105px] relative group"
 				>
 					<div
 						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"
 					></div>
 					<img
-						class="relative bg-white rounded-full p-2 h-full w-full object-contain shadow-2xl border-2 border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-500"
+						class="relative bg-white rounded-full p-1 xs:p-2 h-full w-full object-contain shadow-2xl border-2 border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-500"
 						src="/bits.jpg"
 						alt="BITS Vizag Logo"
 					/>

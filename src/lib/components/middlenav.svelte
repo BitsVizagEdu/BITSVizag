@@ -1,18 +1,31 @@
 <script>
 	let activeCourseTab = 'ug';
-	function closeMenus() {
-		if (typeof document !== 'undefined') {
-			const checkboxes = document.querySelectorAll('.nav-links input[type="checkbox"]');
-			checkboxes.forEach((cb) => {
-				if (cb instanceof HTMLInputElement) cb.checked = false;
-			});
-			const menuBtn = document.getElementById('menu-btn');
-			if (menuBtn instanceof HTMLInputElement) menuBtn.checked = false;
+	let isMobileMenuOpen = false;
+	let activeMobileDropdown = ''; // To track the currently open dropdown in mobile
+
+	function toggleMobileMenu() {
+		isMobileMenuOpen = !isMobileMenuOpen;
+		if (!isMobileMenuOpen) {
+			activeMobileDropdown = ''; // close all dropdowns when closing menu
 		}
+	}
+
+	/** @param {string} dropdownName */
+	function toggleMobileDropdown(dropdownName) {
+		if (activeMobileDropdown === dropdownName) {
+			activeMobileDropdown = '';
+		} else {
+			activeMobileDropdown = dropdownName;
+		}
+	}
+
+	function closeMenus() {
+		isMobileMenuOpen = false;
+		activeMobileDropdown = '';
 	}
 </script>
 
-<nav>
+<nav class={isMobileMenuOpen ? 'mobile-menu-active-state' : ''}>
 	<div class="wrapper">
 		<div class="logo flex items-center">
 			<a href="/"
@@ -23,28 +36,50 @@
 				/></a
 			>
 		</div>
-		<input type="radio" name="slider" id="menu-btn" />
-		<input type="radio" name="slider" id="close-btn" />
 
-		<ul class="nav-links h-full">
-			<label for="close-btn" class="btn close-btn">
-				<i class="fas fa-times text-slate-800" />
-			</label>
+		<!-- Mobile Overlay Backdrop -->
+		{#if isMobileMenuOpen}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
+			<div
+				class="mobile-backdrop xl:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[998]"
+				on:click={closeMenus}
+			></div>
+		{/if}
+
+		<ul class="nav-links h-full {isMobileMenuOpen ? 'mobile-open' : ''}">
+			<!-- Mobile Menu Header -->
+			<div
+				class="xl:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100/60 w-full pt-2"
+			>
+				<img src="/1.png" alt="BITS Vizag Logo" class="h-12 w-auto object-contain" />
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button type="button" class="btn close-btn" on:click={toggleMobileMenu}>
+					<i class="fas fa-times text-slate-800" />
+				</button>
+			</div>
+
 			<li><a href="/" on:click={closeMenus}>Home</a></li>
 
 			<!-- About Us -->
 			<li>
 				<a href="/aboutus/About-BITS" class="desktop-item">About Us</a>
-				<input type="checkbox" id="showMega" />
-				<label for="showMega" class="mobile-item">About Us</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'about' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('about')}>About Us</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'about' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 border-r border-slate-50">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
 								<i class="fa-solid fa-building-columns text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] font-extrabold text-slate-950 tracking-tight">
+								<header class="text-[1.15rem] font-extrabold text-slate-900 tracking-tight">
 									The Institution
 								</header>
 							</div>
@@ -57,7 +92,7 @@
 									<i
 										class="fa-solid fa-shield-heart text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">About ABWS</span>
+									<span class="text-[15px] font-bold text-slate-800">About ABWS</span>
 								</a>
 								<a
 									href="/aboutus/About-BITS"
@@ -67,7 +102,7 @@
 									<i
 										class="fa-solid fa-landmark text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">About Bits Vizag</span>
+									<span class="text-[15px] font-bold text-slate-800">About Bits Vizag</span>
 								</a>
 							</div>
 						</div>
@@ -87,7 +122,7 @@
 									<i
 										class="fa-solid fa-pen-nib text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700"
+									<span class="text-[15px] font-bold text-slate-800"
 										>Message from Secretary & Correspondent</span
 									>
 								</a>
@@ -100,7 +135,7 @@
 									<i
 										class="fa-solid fa-graduation-cap text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Message From Principal</span>
+									<span class="text-[15px] font-bold text-slate-800">Message From Principal</span>
 								</a>
 							</div>
 						</div>
@@ -111,11 +146,16 @@
 			<!-- Governance -->
 			<li>
 				<a href="/governance" class="desktop-item">Governance</a>
-				<input type="checkbox" id="governance" />
-				<label for="governance" class="mobile-item">Governance</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'governance' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('governance')}>Governance</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'governance' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -133,7 +173,7 @@
 									<i
 										class="fa-solid fa-users-rectangle text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[16px] font-bold text-slate-700">Board of Trustees</span>
+									<span class="text-[16px] font-bold text-slate-800">Board of Trustees</span>
 								</a>
 								<a
 									href="/governance/governing-body"
@@ -143,7 +183,7 @@
 									<i
 										class="fa-solid fa-sitemap text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[16px] font-bold text-slate-700">Governing Body</span>
+									<span class="text-[16px] font-bold text-slate-800">Governing Body</span>
 								</a>
 							</div>
 						</div>
@@ -154,11 +194,20 @@
 			<!-- Courses -->
 			<li on:mouseleave={() => (activeCourseTab = 'ug')}>
 				<a href="/courses/Under-Graduation" class="desktop-item">Courses</a>
-				<input type="checkbox" id="courses" />
-				<label for="courses" class="mobile-item">Courses</label>
-				<div class="mega-box !max-w-[850px] !h-auto">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'courses' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('courses')}>Courses</button
+				>
+				<div
+					class="mega-box courses-mega !max-w-[1200px] !h-auto {activeMobileDropdown === 'courses'
+						? 'mobile-show'
+						: ''}"
+				>
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left min-h-[420px]"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left min-h-[420px]"
 					>
 						<!-- Sidebar Menu -->
 						<div
@@ -170,12 +219,12 @@
 								Levels of Study
 							</header>
 
-							<div class="flex flex-col gap-2 relative z-10">
+							<div class="flex flex-col gap-2 relative z-10 w-full">
 								<button
-									on:mouseenter={() => (activeCourseTab = 'ug')}
-									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent
+									on:click={() => (activeCourseTab = 'ug')}
+									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent w-full
 										{activeCourseTab === 'ug'
-										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100'
+										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100 active'
 										: 'hover:bg-slate-100/80 text-slate-600'}"
 								>
 									<div
@@ -189,15 +238,15 @@
 									<span
 										class="font-bold text-[15px] {activeCourseTab === 'ug'
 											? 'text-blue-600'
-											: 'text-slate-700'}">Under Graduation</span
+											: 'text-slate-800'}">Under Graduation</span
 									>
 								</button>
 
 								<button
-									on:mouseenter={() => (activeCourseTab = 'pg')}
-									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent
+									on:click={() => (activeCourseTab = 'pg')}
+									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent w-full
 										{activeCourseTab === 'pg'
-										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100'
+										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100 active'
 										: 'hover:bg-slate-100/80 text-slate-600'}"
 								>
 									<div
@@ -211,7 +260,7 @@
 									<span
 										class="font-bold text-[15px] {activeCourseTab === 'pg'
 											? 'text-blue-600'
-											: 'text-slate-700'}">Post Graduation</span
+											: 'text-slate-800'}">Post Graduation</span
 									>
 								</button>
 							</div>
@@ -238,186 +287,154 @@
 										<a
 											href="/department/Department of CSE"
 											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-laptop-code text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-blue-50 text-blue-600">
+												<i class="fa-solid fa-laptop-code text-[14px]"></i>
 											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Computer Science</span
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Computer Science & Engineering (CSE)</span
 												>
 												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													class="text-[9px] text-blue-600 font-bold uppercase tracking-wider mt-0.5"
 													>Programme</span
 												>
 											</div>
-										</a>
-										<a
-											href="/department/Department of CSE (AI & ML)"
-											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
-										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-brain text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>CS (AI & ML)</span
-												>
-												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
-													>Specialization</span
-												>
-											</div>
-										</a>
-										<a
-											href="/department/Department of CSE (Cyber Security)"
-											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
-										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-shield-halved text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>CS (Cyber Security)</span
-												>
-												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-1"
-													>Specialization</span
-												>
-											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
 											href="/department/Department of ECE"
 											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-microchip text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-indigo-50 text-indigo-600">
+												<i class="fa-solid fa-microchip text-[14px]"></i>
 											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Electronics & Communication</span
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Electronics & Communication Engineering (ECE)</span
 												>
 												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													class="text-[9px] text-indigo-600 font-bold uppercase tracking-wider mt-0.5"
 													>Programme</span
 												>
 											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+										</a>
+										<a
+											href="/department/Department of CSE (AI & ML)"
+											on:click={closeMenus}
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
+										>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-purple-50 text-purple-600">
+												<i class="fa-solid fa-brain text-[14px]"></i>
+											</div>
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Artificial Intelligence & Machine Learning</span
+												>
+												<span
+													class="text-[9px] text-purple-600 font-bold uppercase tracking-wider mt-0.5"
+													>Specialization</span
+												>
+											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
 											href="/department/Department of EEE"
 											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-bolt-lightning text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-yellow-50 text-yellow-600">
+												<i class="fa-solid fa-bolt-lightning text-[14px]"></i>
 											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Electrical & Electronics</span
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Electrical & Electronics Engineering (EEE)</span
 												>
 												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													class="text-[9px] text-yellow-600 font-bold uppercase tracking-wider mt-0.5"
 													>Programme</span
 												>
 											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of BS&H"
+											href="/department/Department of CSE (Cyber Security)"
 											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-atom text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-red-50 text-red-600">
+												<i class="fa-solid fa-shield-halved text-[14px]"></i>
 											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Basic Sciences</span
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Cyber Security (CS)</span
 												>
 												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
-													>Programme</span
+													class="text-[9px] text-red-600 font-bold uppercase tracking-wider mt-0.5"
+													>Specialization</span
 												>
 											</div>
-										</a>
-										<a
-											href="/department/Department of CIVIL"
-											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
-										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-hard-hat text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Civil Engineering</span
-												>
-												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
-													>Programme</span
-												>
-											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
 											href="/department/Department of MECH"
 											on:click={closeMenus}
-											class="group flex items-center gap-4 p-3.5 rounded-2xl border border-slate-50 hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/40 transition-all duration-300"
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
-											<div
-												class="w-9 h-9 flex items-center justify-center bg-blue-50/60 rounded-xl group-hover:bg-[#2672d5] transition-colors duration-500 shadow-sm shrink-0"
-											>
-												<i
-													class="fa-solid fa-gears text-[#2672d5] text-[14px] group-hover:text-white transition-colors"
-												/>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-teal-50 text-teal-600">
+												<i class="fa-solid fa-gears text-[14px]"></i>
 											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[13.5px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
-													>Mechanical Eng.</span
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Mechanical Engineering (MECH)</span
 												>
 												<span
-													class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1"
+													class="text-[9px] text-teal-600 font-bold uppercase tracking-wider mt-0.5"
 													>Programme</span
 												>
 											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+										</a>
+										<a
+											href="/department/Department of BS&H"
+											on:click={closeMenus}
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
+										>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-emerald-50 text-emerald-600">
+												<i class="fa-solid fa-atom text-[14px]"></i>
+											</div>
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Basic Sciences & Humanities (BS&H)</span
+												>
+												<span
+													class="text-[9px] text-emerald-600 font-bold uppercase tracking-wider mt-0.5"
+													>Programme</span
+												>
+											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+										</a>
+										<a
+											href="/department/Department of CIVIL"
+											on:click={closeMenus}
+											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
+										>
+											<div class="course-icon-bg shadow-sm shrink-0 bg-orange-50 text-orange-600">
+												<i class="fa-solid fa-hard-hat text-[14px]"></i>
+											</div>
+											<div class="flex flex-col text-left flex-1 min-w-0">
+												<span class="text-[15px] font-slate-800 tracking-wider"
+													>Civil Engineering (CIVIL)</span
+												>
+												<span
+													class="text-[9px] text-orange-600 font-bold uppercase tracking-wider mt-0.5"
+													>Programme</span
+												>
+											</div>
+											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 									</div>
 								</div>
@@ -443,11 +460,11 @@
 											</div>
 											<div class="flex flex-col text-left">
 												<span
-													class="text-[15.5px] font-bold text-slate-900 leading-none group-hover:text-blue-600 transition-colors"
+													class="text-[15.5px] font-bold text-slate-800 leading-none group-hover:text-blue-600 transition-colors"
 													>MBA</span
 												>
 												<span
-													class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-2"
+													class="text-[10px] text-blue-600 font-bold uppercase tracking-widest mt-2"
 													>Management</span
 												>
 											</div>
@@ -467,11 +484,11 @@
 											</div>
 											<div class="flex flex-col text-left">
 												<span
-													class="text-[15.5px] font-bold text-slate-900 leading-none group-hover:text-blue-600 transition-colors"
+													class="text-[15.5px] font-bold text-slate-800 leading-none group-hover:text-blue-600 transition-colors"
 													>M.Tech</span
 												>
 												<span
-													class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-2"
+													class="text-[10px] text-green-600 font-bold uppercase tracking-widest mt-2"
 													>Programme</span
 												>
 											</div>
@@ -490,11 +507,16 @@
 			<!-- Faculty -->
 			<li>
 				<a href="/faculty/teaching-staff" class="desktop-item">Faculty</a>
-				<input type="checkbox" id="faculty" />
-				<label for="faculty" class="mobile-item">Faculty</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'faculty' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('faculty')}>Faculty</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'faculty' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 flex flex-col justify-center items-center py-10 px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -533,11 +555,16 @@
 			<!-- Exam Cell -->
 			<li>
 				<a href="/examcell/BTECH" class="desktop-item">Exam Cell</a>
-				<input type="checkbox" id="examcell" />
-				<label for="examcell" class="mobile-item">Exam Cell</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'examcell' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('examcell')}>Exam Cell</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'examcell' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -586,11 +613,20 @@
 			<!-- Facilities -->
 			<li>
 				<a href="/facilities" class="desktop-item">Facilities</a>
-				<input type="checkbox" id="facilities" />
-				<label for="facilities" class="mobile-item">Facilities</label>
-				<div class="mega-box !max-w-[1000px]">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'facilities' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('facilities')}>Facilities</button
+				>
+				<div
+					class="mega-box !max-w-[1000px] {activeMobileDropdown === 'facilities'
+						? 'mobile-show'
+						: ''}"
+				>
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -667,11 +703,16 @@
 			<!-- Research -->
 			<li>
 				<a href="/research/publications" class="desktop-item">Research</a>
-				<input type="checkbox" id="research" />
-				<label for="research" class="mobile-item">Research</label>
-				<div class="mega-box">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'research' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('research')}>Research</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'research' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -708,11 +749,16 @@
 			<!-- CDC (Career Development Cell) -->
 			<li>
 				<a href="/placements" class="desktop-item">CDC</a>
-				<input type="checkbox" id="cdc" />
-				<label for="cdc" class="mobile-item">CDC</label>
-				<div class="mega-box !max-w-[1000px]">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'cdc' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('cdc')}>CDC</button
+				>
+				<div class="mega-box !max-w-[1000px] {activeMobileDropdown === 'cdc' ? 'mobile-show' : ''}">
 					<div
-						class="content flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
 					>
 						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
 							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
@@ -759,12 +805,20 @@
 			</li>
 		</ul>
 
-		<label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars text-slate-800" /></label>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+		<button type="button" class="btn menu-btn" on:click={toggleMobileMenu}
+			><i class="fas fa-bars text-slate-800" /></button
+		>
 	</div>
 </nav>
 
 <style>
 	/* Fonts are loaded in app.html */
+
+	nav.mobile-menu-active-state {
+		z-index: 99999 !important;
+	}
 
 	nav {
 		z-index: 99;
@@ -817,9 +871,8 @@
 		line-height: normal;
 		text-transform: capitalize;
 		letter-spacing: 0.02em;
-		font-weight: 500;
-		font-family: 'Roboto', sans-serif;
 		font-weight: 600;
+		font-family: 'Roboto';
 	}
 
 	.nav-links li a:hover {
@@ -889,6 +942,9 @@
 		font-size: 24px;
 		cursor: pointer;
 		display: none;
+		border: none;
+		background: transparent;
+		padding: 0;
 	}
 
 	.wrapper .btn.close-btn {
@@ -942,28 +998,30 @@
 		.wrapper .nav-links {
 			position: fixed;
 			height: 100vh;
-			width: 100%;
+			width: 100vw;
 			top: 0;
 			left: -100%;
 			background: #ffffff;
 			display: block;
-			padding: 80px 20px 40px;
+			padding: 20px 16px 80px;
 			overflow-y: auto;
+			overflow-x: hidden;
 			box-shadow: none;
 			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			z-index: 1000;
+			box-sizing: border-box !important;
 		}
-
-		#menu-btn:checked ~ .nav-links {
-			left: 0%;
+		* {
+			box-sizing: border-box;
 		}
 
 		.wrapper .btn.close-btn {
 			display: flex;
+			position: static;
 		}
 
 		/* Added overlay when menu is open */
-		#menu-btn:checked ~ .btn.menu-btn::before {
+		.nav-links.mobile-open ~ .btn.menu-btn::before {
 			content: '';
 			position: fixed;
 			top: 0;
@@ -987,10 +1045,14 @@
 			padding: 12px 16px;
 			display: block;
 			font-size: 16px;
-			font-weight: 600;
+			font-weight: 700;
 			border-radius: 12px;
-			color: #1e293b;
+			color: #000000;
 			line-height: normal;
+		}
+
+		.nav-links.mobile-open {
+			left: 0%;
 		}
 
 		.nav-links .mobile-item {
@@ -999,33 +1061,33 @@
 			justify-content: space-between;
 			padding: 12px 16px;
 			border-radius: 12px;
-			color: #1e293b;
+			color: #000000;
 			cursor: pointer;
 			font-size: 16px;
-			font-weight: 600;
+			font-weight: 700;
 			transition: background 0.2s;
+			user-select: none;
+			width: 100%;
+			border: none;
+			background: transparent;
+			text-align: left;
+			font-family: inherit;
 		}
 
 		.nav-links .mobile-item::after {
 			content: '\f107';
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 900;
-			transition: transform 0.3s;
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		}
 
-		#showMega:checked + .mobile-item::after,
-		#governance:checked + .mobile-item::after,
-		#courses:checked + .mobile-item::after,
-		#faculty:checked + .mobile-item::after,
-		#examcell:checked + .mobile-item::after,
-		#facilities:checked + .mobile-item::after,
-		#research:checked + .mobile-item::after,
-		#cdc:checked + .mobile-item::after {
+		.nav-links .mobile-item.active-dropdown::after {
 			transform: rotate(180deg);
 		}
 
 		.nav-links .mobile-item:hover {
 			background: #f8fafc;
+			color: #2672d5;
 		}
 
 		.nav-links .desktop-item {
@@ -1041,106 +1103,231 @@
 			visibility: visible;
 			max-height: 0;
 			overflow: hidden;
-			transition: all 0.3s ease;
+			transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 			box-shadow: none;
 			background: transparent;
 		}
 
-		#showMega:checked ~ .mega-box,
-		#governance:checked ~ .mega-box,
-		#courses:checked ~ .mega-box,
-		#faculty:checked ~ .mega-box,
-		#examcell:checked ~ .mega-box,
-		#facilities:checked ~ .mega-box,
-		#research:checked ~ .mega-box,
-		#cdc:checked ~ .mega-box {
+		.mega-box.mobile-show {
 			max-height: 5000px;
-			margin-top: 5px;
-			margin-bottom: 15px;
+			margin-top: 10px;
+			margin-bottom: 20px;
 		}
 
 		.content {
 			box-shadow: none !important;
 			border: none !important;
-			background: #f1f5f9 !important;
-			border-radius: 20px !important;
+			background: #f8fafc !important;
+			border-radius: 24px !important;
 			padding: 20px 12px !important;
-			display: flex !important;
-			flex-direction: column !important;
-			align-items: center !important;
-			justify-content: center !important;
-			text-align: center !important;
+			display: block !important;
+			text-align: left !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
 		}
 
 		.flex-1 {
 			width: 100% !important;
-			display: flex !important;
-			flex-direction: column !important;
-			align-items: center !important;
-			justify-content: center !important;
-			padding: 12px 0 !important;
+			display: block !important;
+			padding: 0 !important;
+			border: none !important;
 		}
 
 		.content .grid {
 			width: 100% !important;
-			display: flex !important;
-			flex-direction: column !important;
-			align-items: center !important;
-			gap: 8px !important;
+			display: grid !important;
+			grid-template-columns: 1fr !important;
+			gap: 12px !important;
+		}
+
+		.content header,
+		.content a span,
+		.content a div,
+		.custom-sidebar span,
+		.custom-sidebar button {
+			color: #000000 !important;
+			text-transform: none !important;
+			opacity: 1 !important;
+			font-family: 'Roboto', sans-serif !important;
 		}
 
 		.content header {
-			font-size: 14px !important;
-			color: #64748b !important;
-			padding: 0 16px !important;
-			margin-bottom: 16px !important;
-			letter-spacing: 0.12em;
-			text-transform: uppercase;
-			font-weight: 600;
+			font-size: 11px !important;
+			padding: 0 8px !important;
+			margin-bottom: 8px !important;
+			margin-top: 16px !important;
+			letter-spacing: 0.1em !important;
+			text-transform: uppercase !important;
+			font-weight: 700 !important;
 			display: flex !important;
 			align-items: center !important;
-			justify-content: center !important;
-			gap: 10px !important;
+			justify-content: flex-start !important;
+			gap: 8px !important;
 			width: 100% !important;
+			border: none !important;
 		}
 
-		.flex-1 > div:first-child {
-			display: flex !important;
-			justify-content: center !important;
-			align-items: center !important;
-			width: 100% !important;
+		/* Sub-headers adjustment */
+		.animate-fade-in header {
+			font-size: 15px !important;
+			margin-top: 6px !important;
+			letter-spacing: normal !important;
+			font-weight: 700 !important;
+		}
+
+		.flex-1:first-child header {
+			margin-top: 0 !important;
 		}
 
 		.content a {
-			padding: 16px 24px !important;
-			margin: 6px 0 !important;
+			padding: 10px 14px !important;
+			margin: 0 !important;
 			background: white !important;
-			border-radius: 12px !important;
-			font-size: 15px !important;
-			border: 1px solid #e2e8f0 !important;
+			border-radius: 10px !important;
+			font-size: 14px !important;
+			border: 1px solid #f1f5f9 !important;
 			width: 100% !important;
-			max-width: 300px !important;
+			max-width: 100% !important;
 			display: flex !important;
-			justify-content: center !important;
+			justify-content: flex-start !important;
 			align-items: center !important;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
-			text-align: center !important;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
+			text-align: left !important;
+			transition: all 0.3s ease !important;
+			box-sizing: border-box !important;
 		}
 
-		.content a:hover {
-			border-color: #2672d5 !important;
-			color: #2672d5 !important;
-			transform: translateY(-1px) !important;
-			box-shadow: 0 4px 12px rgba(38, 114, 213, 0.1) !important;
+		.content a:active {
+			background: #f1f5f9 !important;
+			transform: scale(0.98);
+		}
+
+		.content a .flex-col {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+			width: 100% !important;
+		}
+
+		.content a span:first-child {
+			font-weight: 600 !important;
+			line-height: 1.25 !important;
+			font-size: 14px !important;
+		}
+
+		.content a span:last-child {
+			font-size: 9px !important;
+			letter-spacing: 0.05em !important;
+			margin-top: 2px !important;
+			font-weight: 600 !important;
 		}
 
 		.content i {
+			font-size: 14px !important;
+			width: 24px !important;
+			text-align: center !important;
+			margin-right: 6px !important;
+			color: #2672d5 !important;
+		}
+
+		/* Styling for the sidebar-like buttons in Courses mobile view */
+		.custom-sidebar {
+			width: 100% !important;
+			border: none !important;
+			background: transparent !important;
+			padding: 0 !important;
+			margin-bottom: 20px !important;
+		}
+
+		.custom-sidebar button {
+			width: 100% !important;
+			justify-content: flex-start !important;
+			padding: 16px 20px !important;
+			margin-bottom: 8px !important;
+			background: white !important;
+			border-radius: 16px !important;
+			border: 1px solid #f1f5f9 !important;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+			font-weight: 800 !important;
+		}
+
+		/* Insane Courses Mobile Switcher */
+		.courses-mega .custom-sidebar {
+			flex-direction: row !important;
+			gap: 8px !important;
+			overflow-x: auto !important;
+			padding: 0 4px 10px !important;
+			margin-top: 10px !important;
+			scrollbar-width: none !important;
+			-ms-overflow-style: none !important;
+		}
+		.courses-mega .custom-sidebar::-webkit-scrollbar {
+			display: none !important;
+		}
+		.courses-mega .custom-sidebar header {
+			display: none !important;
+		}
+		.courses-mega .custom-sidebar button {
+			white-space: nowrap !important;
+			width: auto !important;
+			flex: 1 !important;
+			padding: 12px 18px !important;
+			border-radius: 100px !important;
+			font-size: 13px !important;
+			background: #f1f5f9 !important;
+			border: none !important;
+			box-shadow: none !important;
+			color: #64748b !important;
+			margin-bottom: 0 !important;
+		}
+		.courses-mega .custom-sidebar button.active {
+			background: #2672d5 !important;
+			color: white !important;
+		}
+		.courses-mega .custom-sidebar button div {
+			display: none !important;
+		}
+
+		/* Premium Course Cards */
+		.course-card-mobile {
+			background: white !important;
+			border: 1px solid #f1f5f9 !important;
+			border-radius: 16px !important;
+			padding: 12px !important;
+			display: flex !important;
+			align-items: center !important;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+		}
+		.course-icon-bg {
+			width: 40px !important;
+			height: 40px !important;
+			border-radius: 12px !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
 			font-size: 16px !important;
 		}
-	}
+		.course-card-mobile span:first-child {
+			font-size: 13px !important;
+			font-weight: 700 !important;
+			letter-spacing: -0.01em !important;
+			color: #000000 !important;
+		}
+		.course-card-mobile span:last-child {
+			font-size: 9px !important;
+			font-weight: 800 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 0.1em !important;
+			margin-top: 2px !important;
+		}
 
-	input[type='radio'],
-	input[type='checkbox'] {
-		display: none;
+		.custom-sidebar button.active {
+			border-color: #2672d5 !important;
+			background: #f0f7ff !important;
+		}
 	}
 </style>

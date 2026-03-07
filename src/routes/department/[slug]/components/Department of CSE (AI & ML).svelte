@@ -75,7 +75,7 @@
 	];
 </script>
 
-<section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
+<section class="bg-slate-200 p-4 md:p-8 lg:p-10 rounded-xl md:rounded-3xl">
 	<img src="/CS-Banners/image.png" alt="" srcset="" />
 	<!-- <h1 class="text-4xl font-bold text-center mb-10 text-red1 uppercase">Computer Science & Engineering</h1> -->
 	<div class="flex justify-center w-full my-8 px-2 md:px-0">
@@ -120,20 +120,21 @@
 			</p>
 		</div>
 		<div class="pt-10">
-			<h1 id="HOD" class="text-4xl font-bold text-indigo-900 text-center mb-8">
-				HOD MESSAGE <span class="text-red-600"> - Prof. S Durga Prasad</span>
+			<h1 id="HOD" class="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-6 md:mb-8 md:leading-tight font-outfit">
+				<span class="block text-[13px] md:text-[15px] text-slate-500 tracking-[0.2em] font-semibold uppercase mb-2">HOD Message</span>
+				 <span class="text-red-600"> - Prof. S Durga Prasad</span>
+			
 			</h1>
 			<div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
-				<div class="flex-shrink-0">
+				<div class="flex-shrink-0 relative group">
+					<div class="absolute -inset-2 bg-gradient-to-tr from-blue-100 to-indigo-50 border border-white rounded-[2rem] opacity-0 md:opacity-100 scale-95 md:group-hover:scale-100 transition-all duration-500 z-0 shadow-sm hidden md:block"></div>
 					<img
 						src="/cse hod.jpg"
-						class="h-56 w-56 md:h-80 md:w-80 object-cover object-top rounded-xl shadow-xl border-4 border-white"
+						class="relative h-48 w-48 md:h-80 md:w-80 object-cover object-top rounded-full md:rounded-[1.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border-[5px] md:border-[6px] border-white z-10"
 						alt="HOD"
 					/>
 				</div>
-				<div
-					class="text-justify text-base text-gray-700 flex flex-col gap-5 leading-relaxed max-w-2xl"
-				>
+				<div class="hidden md:flex flex-col text-justify text-[15px] md:text-base text-slate-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-2xl px-1 md:px-0">
 					<p>
 						Welcome to the Department of Computer Science. As an accomplished academic leader with
 						extensive experience in computer science and engineering, I oversee our academic and
@@ -149,10 +150,29 @@
 						technology landscape.
 					</p>
 				</div>
+	
+	<div class="flex md:hidden flex-col gap-3 px-2 md:px-0 mt-4 md:mt-0 pb-4">
+		<p class="text-[14px] leading-relaxed text-slate-700 text-left font-medium">"Welcome to the Department of Computer Science."</p>
+		<ul class="flex flex-col gap-2 mt-2">
+            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-check-circle text-blue-500 text-[14px] mt-0.5 shrink-0"></i>
+                <span class="text-[13px] text-slate-600 leading-snug tracking-wide">As an accomplished academic leader with extensive experience in computer science and engineering, I oversee our academic and research activities with a forward-thinking vision.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-check-circle text-blue-500 text-[14px] mt-0.5 shrink-0"></i>
+                <span class="text-[13px] text-slate-600 leading-snug tracking-wide">We are committed to fostering a culture of innovation and excellence, ensuring that both our students and faculty are equipped with the latest knowledge and skills.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-check-circle text-blue-500 text-[14px] mt-0.5 shrink-0"></i>
+                <span class="text-[13px] text-slate-600 leading-snug tracking-wide">Through a collaborative approach, we promote strong industry-academia interactions, creating valuable opportunities for student growth, placements, and research endeavors.</span>
+            </li>
+		</ul>
+	</div>
+
 			</div>
 		</div>
 		<div class="pt-10">
-			<h1 class="text-4xl font-bold text-indigo-900 text-center uppercase mb-8">
+			<h1 class="text-3xl md:text-4xl font-bold text-indigo-900 text-center uppercase mb-6 md:mb-8 mt-4 md:mt-8 font-outfit">
 				Facilities & Infrastructure
 			</h1>
 			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8 max-w-5xl mx-auto">
@@ -212,12 +232,12 @@
 				</div>
 			</div>
 		</div>
-		<div id="facilities" class="flex gap-20 facilities">
-			<div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+		<div id="facilities" class="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-20 w-full max-w-5xl mx-auto pt-4 md:pt-8 px-2 lg:px-0">
+			<div class="flex-1 flex flex-col gap-3">
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -235,12 +255,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Artificial Intelligence Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Artificial Intelligence Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -258,12 +279,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Machine Learning Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Machine Learning Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -281,12 +303,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Deep Learning & Neural Networks Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Deep Learning & Neural Networks Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -304,12 +327,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Data Science & Analytics Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Data Science & Analytics Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -327,12 +351,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Python Programming for AI Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Python Programming for AI Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -350,12 +375,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Natural Language Processing Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Natural Language Processing Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -373,14 +399,15 @@
 							</g>
 						</g>
 					</svg>
-					<p>Computer Vision Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Computer Vision Lab</p>
 				</div>
 			</div>
-			<div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+			<div class="flex-1 flex flex-col gap-3 md:gap-4">
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -398,12 +425,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Big Data Analytics Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Big Data Analytics Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -421,12 +449,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Cognitive Computing Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Cognitive Computing Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -444,12 +473,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>AI & IoT Integration Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">AI & IoT Integration Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -467,12 +497,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Cloud Computing for AI Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Cloud Computing for AI Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -490,12 +521,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>Advanced Robotics Lab</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">Advanced Robotics Lab</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -513,12 +545,13 @@
 							</g>
 						</g>
 					</svg>
-					<p>R Programming Laboratory</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">R Programming Laboratory</p>
 				</div>
-				<div id="icon" class="flex">
-					<svg
-						width="40px"
-						height="30px"
+				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+						<svg
+						width="24px" height="24px"
 						viewBox="0 0 24 24"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -536,29 +569,26 @@
 							</g>
 						</g>
 					</svg>
-					<p>High-Performance GPU Computing Center</p>
+					</div>
+					<p class="font-semibold text-slate-800 text-[14.5px] md:text-[15px] text-left flex-1 leading-snug tracking-normal">High-Performance GPU Computing Center</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="parent mt-7">
-			<div class="child flex items-center justify-center text-white">
-				<div class="">
-					<p id="aca" class="font-bold text-6xl">Faculty Details</p>
-				</div>
+		<div class="w-full bg-[#cc0033] rounded-2xl md:rounded-[1.5rem] p-2 md:p-3 mt-12 md:mt-20 shadow-lg flex items-center justify-center h-24 sm:h-32 md:h-40 xl:h-48 mb-8 mx-auto w-[calc(100%-8px)] lg:w-full">
+			<div class="w-full h-full bg-[#1e3a8a] rounded-xl md:rounded-[1.25rem] flex items-center justify-center shadow-inner py-4 md:py-0">
+				<h2 class="font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-wide text-center px-4 font-outfit">Faculty Details</h2>
 			</div>
 		</div>
-		<div
-			class="grid xl:grid-cols-4 lg:grid-cols-4 gap-2 md:grid-cols-2 xs:grid-cols-1 mt-10 items-center"
-		>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 mt-8 md:mt-12 px-2 md:px-0 items-stretch">
 			{#each items as item, i}
-				<div class="card h-[200px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
-					<div class="w-12 h-12 mt-4">
-						<img src="/faculty.svg" alt="" />
+				<div class="bg-white flex flex-col items-center p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group hover:-translate-y-1">
+					<div class="w-14 h-14 md:w-16 md:h-16 mb-4 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors shrink-0">
+						<img src="/faculty.svg" alt="Faculty" class="w-8 h-8 md:w-10 md:h-10 opacity-70 group-hover:opacity-100 transition-opacity" />
 					</div>
-					<div class="p-[10px] capitalize font-bold">{item.name}</div>
-					<div class="capitalize font-semibold">{item.designation}</div>
-					<div class="overflow-hidden text-center pt-2">
+					<div class="text-[17px] md:text-lg font-bold text-slate-900 text-center mb-1 leading-tight">{item.name}</div>
+					<div class="text-[12px] md:text-[13px] font-semibold text-[#2672d5] text-center mb-4 md:mb-5 uppercase tracking-wider">{item.designation}</div>
+					<div class="text-[12px] md:text-[13px] font-medium text-slate-600 text-center bg-slate-50 px-3 md:px-4 py-2 rounded-full mt-auto w-full truncate border border-slate-100 shadow-sm">
 						<a href="mailto:{item.mail}">{item.qualification}</a>
 					</div>
 				</div>
@@ -567,109 +597,4 @@
 	</div>
 </section>
 
-<style>
-	* {
-		box-sizing: border-box;
-	}
-	body {
-		margin: 0;
-	}
 
-	@media screen and (max-width: 1024px) {
-		#facilities {
-			display: flex;
-			flex-direction: column;
-			gap: 30px;
-		}
-	}
-	.parent {
-		height: 200px;
-		background: #cc0033;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 20px;
-		text-align: center;
-	}
-
-	.child {
-		background-color: #1e3a8a;
-		width: 94%;
-		height: 88%;
-		border-radius: 20px;
-	}
-	@media screen and (max-width: 1024px) {
-		#aca {
-			font-size: 40px;
-		}
-	}
-	@media screen and (max-width: 768px) {
-		#basic {
-			font-size: 17px;
-		}
-	}
-	@media screen and (max-width: 425px) {
-		#aca {
-			font-size: 30px;
-		}
-		#basic {
-			font-size: 15 px;
-		}
-	}
-	@media screen and (max-width: 400px) {
-		#aca {
-			font-size: 25px;
-		}
-		#basic {
-			font-size: 13px;
-			padding-top: 3px;
-		}
-		.parent {
-			height: 120px;
-		}
-		#facilities p {
-			font-size: 12px;
-			align-items: center;
-		}
-	}
-	@media screen and (max-width: 1024px) {
-		#academic {
-			display: flex;
-			flex-direction: column;
-		}
-	}
-	@media screen and (max-width: 425px) {
-		#post {
-			font-size: 19px;
-		}
-		#eligible {
-			font-size: 20px;
-		}
-		#icons svg {
-			float: left;
-		}
-	}
-	@media screen and (max-width: 320px) {
-		#post {
-			font-size: 16px;
-		}
-		#eligible {
-			font-size: 15px;
-		}
-	}
-	@media screen and (max-width: 540px) {
-		#branch {
-			display: flex;
-			flex-direction: column;
-		}
-		#branch #branches p {
-			float: left;
-			font-size: 13px;
-		}
-	}
-	@media screen and (max-width: 375px) {
-		p {
-			text-align: left;
-		}
-	}
-</style>
