@@ -814,17 +814,28 @@
 </nav>
 
 <style>
-	/* Fonts are loaded in app.html */
+	/* ═══════════════════════════════════════════════════════════════
+	   MIDDLENAV — Navbar + Mobile Sidebar
+	   Desktop (>1280px): UNTOUCHED — only layout/font/spacing preserved
+	   Mobile  (≤1280px): Full rewrite — slide-in sidebar
+	═══════════════════════════════════════════════════════════════ */
+
+	/* ─────────────────────────────────────────────────────────────
+	   DESKTOP BASE STYLES  (above 1280px — do not change)
+	───────────────────────────────────────────────────────────── */
 
 	nav.mobile-menu-active-state {
 		z-index: 99999 !important;
 	}
 
 	nav {
-		z-index: 99;
+		position: sticky;
+		top: 0;
+		z-index: 998;
 		width: 100%;
 		background: #ffffff;
 		font-family: 'Roboto', sans-serif;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 	}
 
 	nav .wrapper {
@@ -917,12 +928,6 @@
 		transform: translateX(-50%) translateY(0);
 		pointer-events: auto;
 	}
-	nav {
-		position: sticky;
-		top: 0;
-		z-index: 998;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-	}
 
 	.content {
 		position: relative;
@@ -972,236 +977,311 @@
 		transform: rotate(90deg);
 	}
 
+	/* ─────────────────────────────────────────────────────────────
+	   MOBILE SIDEBAR  (≤1280px)
+	   NOTE: We use !important where Tailwind utility classes on the
+	   HTML would otherwise win (py-10, px-10, flex, md:flex-row …)
+	───────────────────────────────────────────────────────────── */
+
 	@media screen and (max-width: 1280px) {
-		nav {
-			position: sticky;
-			top: 0;
-			z-index: 999;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-			width: 100%;
-		}
-		.logo img {
-			display: block;
-			width: 75px;
-		}
-		nav .wrapper {
-			justify-content: space-between;
-			padding: 0 20px;
-			height: 70px;
-			gap: 0;
-		}
-
-		.wrapper .btn {
-			display: block;
-		}
-
-		.wrapper .nav-links {
-			position: fixed;
-			height: 100vh;
-			width: 100vw;
-			top: 0;
-			left: -100%;
-			background: #ffffff;
-			display: block;
-			padding: 20px 16px 80px;
-			overflow-y: auto;
-			overflow-x: hidden;
-			box-shadow: none;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			z-index: 1000;
-			box-sizing: border-box !important;
-		}
 		* {
 			box-sizing: border-box;
 		}
 
+		nav {
+			z-index: 999;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+		}
+
+		nav .wrapper {
+			justify-content: space-between;
+			padding: 0 20px;
+			height: 70px;
+		}
+
+		.logo img {
+			display: block;
+			width: 75px;
+		}
+
+		/* ── Show hamburger ── */
+		.wrapper .btn {
+			display: block;
+		}
+
+		/* ════════════════════════════════
+		   SIDEBAR PANEL
+		════════════════════════════════ */
+		.wrapper .nav-links {
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			height: 100vh !important;
+			width: 82% !important;
+			max-width: 380px !important;
+			background: #ffffff !important;
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: stretch !important;
+			justify-content: flex-start !important;
+			padding: 0 0 60px !important;
+			overflow-y: auto !important;
+			overflow-x: hidden !important;
+			scrollbar-width: none !important;
+			-ms-overflow-style: none !important;
+			z-index: 1000 !important;
+			border-radius: 0 24px 24px 0 !important;
+			box-shadow: 10px 0 50px rgba(0, 0, 0, 0.18) !important;
+			transform: translateX(-110%) !important;
+			transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1) !important;
+			white-space: normal !important;
+		}
+
+		.wrapper .nav-links::-webkit-scrollbar {
+			display: none;
+		}
+
+		/* Slide in when open */
+		.wrapper .nav-links.mobile-open {
+			transform: translateX(0) !important;
+		}
+
+		/* ── Close button ── */
 		.wrapper .btn.close-btn {
 			display: flex;
 			position: static;
 		}
 
-		/* Added overlay when menu is open */
-		.nav-links.mobile-open ~ .btn.menu-btn::before {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			background: rgba(0, 0, 0, 0.4);
-			backdrop-filter: blur(8px);
-			-webkit-backdrop-filter: blur(8px);
-			z-index: 999;
-			cursor: default;
-		}
-
+		/* ════════════════════════════════
+		   NAV LIST ITEMS
+		════════════════════════════════ */
 		.nav-links li {
-			margin: 8px 0;
-			display: block;
-			height: auto;
+			display: block !important;
+			height: auto !important;
+			width: 100% !important;
+			margin: 0 !important;
 		}
 
-		.nav-links li a {
-			padding: 12px 16px;
-			display: block;
-			font-size: 16px;
-			font-weight: 700;
-			border-radius: 12px;
-			color: #000000;
-			line-height: normal;
+		/* Direct links (e.g. Home) */
+		.nav-links li > a {
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			padding: 14px 20px !important;
+			margin: 3px 14px !important;
+			width: calc(100% - 28px) !important;
+			font-size: 15px !important;
+			font-weight: 700 !important;
+			color: #1e293b !important;
+			border-radius: 12px !important;
+			text-decoration: none !important;
+			transition: background 0.2s ease, color 0.2s ease !important;
+			white-space: normal !important;
+			text-align: center !important;
 		}
 
-		.nav-links.mobile-open {
-			left: 0%;
+		.nav-links li > a:hover {
+			background: #f0f7ff !important;
+			color: #2672d5 !important;
+			transform: none !important;
 		}
 
+		/* Hide desktop anchors on items that have a mobile-item button */
+		.nav-links .desktop-item {
+			display: none !important;
+		}
+
+		/* ════════════════════════════════
+		   MOBILE DROPDOWN TRIGGER
+		════════════════════════════════ */
 		.nav-links .mobile-item {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 12px 16px;
-			border-radius: 12px;
-			color: #000000;
-			cursor: pointer;
-			font-size: 16px;
-			font-weight: 700;
-			transition: background 0.2s;
-			user-select: none;
-			width: 100%;
-			border: none;
-			background: transparent;
-			text-align: left;
-			font-family: inherit;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: space-between !important;
+			width: calc(100% - 28px) !important;
+			margin: 3px 14px !important;
+			padding: 14px 18px !important;
+			border-radius: 12px !important;
+			background: transparent !important;
+			border: none !important;
+			color: #1e293b !important;
+			font-size: 15px !important;
+			font-weight: 700 !important;
+			cursor: pointer !important;
+			user-select: none !important;
+			font-family: 'Roboto', sans-serif !important;
+			text-align: left !important;
+			transition: background 0.2s ease, color 0.2s ease !important;
 		}
 
+		/* Down-arrow via ::after */
 		.nav-links .mobile-item::after {
 			content: '\f107';
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 900;
-			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			font-size: 13px;
+			color: #94a3b8;
+			flex-shrink: 0;
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+			margin-left: auto;
+			padding-left: 10px;
+		}
+
+		.nav-links .mobile-item:hover {
+			background: #f8fafc !important;
+			color: #2672d5 !important;
+		}
+
+		.nav-links .mobile-item.active-dropdown {
+			background: #f0f7ff !important;
+			color: #2672d5 !important;
 		}
 
 		.nav-links .mobile-item.active-dropdown::after {
 			transform: rotate(180deg);
-		}
-
-		.nav-links .mobile-item:hover {
-			background: #f8fafc;
 			color: #2672d5;
 		}
 
-		.nav-links .desktop-item {
-			display: none;
-		}
-
+		/* ════════════════════════════════
+		   MEGA-BOX DROPDOWN PANEL
+		════════════════════════════════ */
 		.mega-box {
-			position: static;
-			transform: none;
-			width: 100%;
-			max-width: 100%;
-			opacity: 1;
-			visibility: visible;
-			max-height: 0;
-			overflow: hidden;
-			transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-			box-shadow: none;
-			background: transparent;
+			position: static !important;
+			transform: none !important;
+			width: 100% !important;
+			max-width: 100% !important;
+			opacity: 1 !important;
+			visibility: visible !important;
+			max-height: 0 !important;
+			overflow: hidden !important;
+			pointer-events: auto !important;
+			box-shadow: none !important;
+			background: transparent !important;
+			top: auto !important;
+			left: auto !important;
+			transition: max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1) !important;
 		}
 
 		.mega-box.mobile-show {
-			max-height: 5000px;
-			margin-top: 10px;
-			margin-bottom: 20px;
+			max-height: 5000px !important;
 		}
 
+		/* ════════════════════════════════
+		   DROPDOWN CONTENT AREA
+		   Override Tailwind: flex, flex-col md:flex-row, py-10, px-10,
+		   shadow, border, rounded-3xl, overflow-hidden, etc.
+		════════════════════════════════ */
 		.content {
-			box-shadow: none !important;
-			border: none !important;
-			background: #f8fafc !important;
-			border-radius: 24px !important;
-			padding: 20px 12px !important;
 			display: block !important;
-			text-align: left !important;
-			width: 100% !important;
+			flex-direction: column !important;
+			background: #f4f7fb !important;
+			border-radius: 16px !important;
+			border: 1px solid #e8eef6 !important;
+			box-shadow: none !important;
+			padding: 10px 10px 14px !important;
+			margin: 4px 14px 12px !important;
+			width: calc(100% - 28px) !important;
 			box-sizing: border-box !important;
-			margin-left: 0 !important;
-			margin-right: 0 !important;
+			text-align: left !important;
+			overflow: hidden !important;
 		}
 
-		.flex-1 {
-			width: 100% !important;
+		/* Flatten Tailwind flex-1 divs (py-10 px-10 border-r etc.) */
+		.mega-box .flex-1 {
 			display: block !important;
+			flex: none !important;
+			width: 100% !important;
 			padding: 0 !important;
 			border: none !important;
+			box-shadow: none !important;
 		}
 
-		.content .grid {
-			width: 100% !important;
-			display: grid !important;
-			grid-template-columns: 1fr !important;
-			gap: 12px !important;
-		}
-
-		.content header,
-		.content a span,
-		.content a div,
-		.custom-sidebar span,
-		.custom-sidebar button {
-			color: #000000 !important;
-			text-transform: none !important;
-			opacity: 1 !important;
-			font-family: 'Roboto', sans-serif !important;
-		}
-
+		/* ── Section headers inside dropdown ── */
 		.content header {
-			font-size: 11px !important;
-			padding: 0 8px !important;
-			margin-bottom: 8px !important;
-			margin-top: 16px !important;
-			letter-spacing: 0.1em !important;
-			text-transform: uppercase !important;
-			font-weight: 700 !important;
 			display: flex !important;
 			align-items: center !important;
-			justify-content: flex-start !important;
-			gap: 8px !important;
-			width: 100% !important;
+			gap: 6px !important;
+			font-size: 10px !important;
+			font-weight: 800 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 0.12em !important;
+			color: #64748b !important;
+			padding: 4px 6px !important;
+			margin: 14px 0 6px !important;
 			border: none !important;
+			width: 100% !important;
+			font-family: 'Roboto', sans-serif !important;
+			background: transparent !important;
 		}
 
-		/* Sub-headers adjustment */
-		.animate-fade-in header {
-			font-size: 15px !important;
+		.mega-box .flex-1:first-child header {
 			margin-top: 6px !important;
-			letter-spacing: normal !important;
-			font-weight: 700 !important;
 		}
 
-		.flex-1:first-child header {
-			margin-top: 0 !important;
-		}
-
-		.content a {
-			padding: 10px 14px !important;
-			margin: 0 !important;
-			background: white !important;
-			border-radius: 10px !important;
+		/* Larger headers for UG/PG content area */
+		.animate-fade-in header {
 			font-size: 14px !important;
-			border: 1px solid #f1f5f9 !important;
+			font-weight: 700 !important;
+			text-transform: none !important;
+			letter-spacing: normal !important;
+			color: #1e293b !important;
+			margin-top: 4px !important;
+			margin-bottom: 10px !important;
+		}
+
+		/* ── Links inside dropdown ── */
+		.content a {
+			display: flex !important;
+			align-items: center !important;
+			gap: 10px !important;
+			padding: 10px 12px !important;
+			margin: 0 0 6px !important;
+			background: #ffffff !important;
+			border-radius: 10px !important;
+			border: 1px solid #e8eef6 !important;
+			font-size: 13.5px !important;
+			font-weight: 600 !important;
+			color: #1e293b !important;
+			text-decoration: none !important;
 			width: 100% !important;
 			max-width: 100% !important;
-			display: flex !important;
-			justify-content: flex-start !important;
-			align-items: center !important;
-			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
-			text-align: left !important;
-			transition: all 0.3s ease !important;
 			box-sizing: border-box !important;
+			transition: background 0.2s ease, border-color 0.2s ease !important;
+			text-align: left !important;
+			box-shadow: none !important;
+			transform: none !important;
+		}
+
+		.content a:hover {
+			background: #f0f7ff !important;
+			border-color: #c2d9f5 !important;
 		}
 
 		.content a:active {
-			background: #f1f5f9 !important;
-			transform: scale(0.98);
+			background: #ddeeff !important;
+			transform: scale(0.985) !important;
+		}
+
+		/* Text inside dropdown links */
+		.content a span {
+			color: #1e293b !important;
+			font-family: 'Roboto', sans-serif !important;
+			text-transform: none !important;
+			opacity: 1 !important;
+		}
+
+		.content a span:first-child {
+			font-size: 13.5px !important;
+			font-weight: 600 !important;
+			line-height: 1.3 !important;
+		}
+
+		.content a span:last-child {
+			font-size: 9px !important;
+			font-weight: 700 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 0.05em !important;
+			margin-top: 2px !important;
 		}
 
 		.content a .flex-col {
@@ -1211,123 +1291,245 @@
 			width: 100% !important;
 		}
 
-		.content a span:first-child {
-			font-weight: 600 !important;
-			line-height: 1.25 !important;
-			font-size: 14px !important;
-		}
-
-		.content a span:last-child {
-			font-size: 9px !important;
-			letter-spacing: 0.05em !important;
-			margin-top: 2px !important;
-			font-weight: 600 !important;
-		}
-
+		/* Icons inside links */
 		.content i {
 			font-size: 14px !important;
-			width: 24px !important;
+			width: 22px !important;
 			text-align: center !important;
-			margin-right: 6px !important;
 			color: #2672d5 !important;
+			flex-shrink: 0 !important;
+			margin-right: 0 !important;
 		}
 
-		/* Styling for the sidebar-like buttons in Courses mobile view */
+		/* Grids → single column */
+		.content .grid {
+			display: grid !important;
+			grid-template-columns: 1fr !important;
+			gap: 6px !important;
+			width: 100% !important;
+		}
+
+		/* ════════════════════════════════
+		   COURSES — Tab Switcher
+		════════════════════════════════ */
 		.custom-sidebar {
 			width: 100% !important;
 			border: none !important;
 			background: transparent !important;
 			padding: 0 !important;
-			margin-bottom: 20px !important;
+			margin-bottom: 14px !important;
 		}
 
 		.custom-sidebar button {
-			width: 100% !important;
+			display: flex !important;
+			align-items: center !important;
 			justify-content: flex-start !important;
-			padding: 16px 20px !important;
-			margin-bottom: 8px !important;
-			background: white !important;
-			border-radius: 16px !important;
-			border: 1px solid #f1f5f9 !important;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
-			font-weight: 800 !important;
+			gap: 10px !important;
+			width: 100% !important;
+			padding: 13px 16px !important;
+			margin-bottom: 6px !important;
+			background: #ffffff !important;
+			border-radius: 12px !important;
+			border: 1px solid #e8eef6 !important;
+			box-shadow: none !important;
+			font-size: 14px !important;
+			font-weight: 700 !important;
+			color: #1e293b !important;
+			cursor: pointer !important;
+			font-family: 'Roboto', sans-serif !important;
+			transition: background 0.2s ease, border-color 0.2s ease !important;
 		}
 
-		/* Insane Courses Mobile Switcher */
+		.custom-sidebar button.active {
+			background: #f0f7ff !important;
+			border-color: #2672d5 !important;
+			color: #2672d5 !important;
+		}
+
+		/* Pill-row switcher for Courses */
 		.courses-mega .custom-sidebar {
+			display: flex !important;
 			flex-direction: row !important;
 			gap: 8px !important;
 			overflow-x: auto !important;
-			padding: 0 4px 10px !important;
-			margin-top: 10px !important;
+			padding: 2px 0 10px !important;
+			margin-top: 6px !important;
 			scrollbar-width: none !important;
 			-ms-overflow-style: none !important;
 		}
+
 		.courses-mega .custom-sidebar::-webkit-scrollbar {
-			display: none !important;
+			display: none;
 		}
+
 		.courses-mega .custom-sidebar header {
 			display: none !important;
 		}
+
 		.courses-mega .custom-sidebar button {
-			white-space: nowrap !important;
-			width: auto !important;
 			flex: 1 !important;
-			padding: 12px 18px !important;
+			white-space: nowrap !important;
+			padding: 9px 16px !important;
 			border-radius: 100px !important;
 			font-size: 13px !important;
-			background: #f1f5f9 !important;
+			background: #edf2f7 !important;
 			border: none !important;
 			box-shadow: none !important;
 			color: #64748b !important;
 			margin-bottom: 0 !important;
+			justify-content: center !important;
 		}
+
 		.courses-mega .custom-sidebar button.active {
 			background: #2672d5 !important;
-			color: white !important;
+			color: #ffffff !important;
+			border-color: transparent !important;
 		}
+
 		.courses-mega .custom-sidebar button div {
 			display: none !important;
 		}
 
-		/* Premium Course Cards */
+		/* ════════════════════════════════
+		   COURSE CARDS
+		════════════════════════════════ */
 		.course-card-mobile {
-			background: white !important;
-			border: 1px solid #f1f5f9 !important;
-			border-radius: 16px !important;
-			padding: 12px !important;
+			background: #ffffff !important;
+			border: 1px solid #e8eef6 !important;
+			border-radius: 12px !important;
+			padding: 10px 12px !important;
 			display: flex !important;
 			align-items: center !important;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+			gap: 10px !important;
+			box-shadow: none !important;
 			width: 100% !important;
 			box-sizing: border-box !important;
+			transition: background 0.2s ease !important;
 		}
+
+		.course-card-mobile:hover {
+			background: #f0f7ff !important;
+		}
+
 		.course-icon-bg {
-			width: 40px !important;
-			height: 40px !important;
-			border-radius: 12px !important;
+			width: 36px !important;
+			height: 36px !important;
+			border-radius: 10px !important;
 			display: flex !important;
 			align-items: center !important;
 			justify-content: center !important;
-			font-size: 16px !important;
+			font-size: 14px !important;
+			flex-shrink: 0 !important;
 		}
+
 		.course-card-mobile span:first-child {
 			font-size: 13px !important;
 			font-weight: 700 !important;
+			color: #1e293b !important;
 			letter-spacing: -0.01em !important;
-			color: #000000 !important;
+			line-height: 1.3 !important;
 		}
+
 		.course-card-mobile span:last-child {
 			font-size: 9px !important;
 			font-weight: 800 !important;
 			text-transform: uppercase !important;
-			letter-spacing: 0.1em !important;
+			letter-spacing: 0.08em !important;
 			margin-top: 2px !important;
 		}
+	}
 
-		.custom-sidebar button.active {
-			border-color: #2672d5 !important;
-			background: #f0f7ff !important;
+	/* ─────────────────────────────────────────────────────────────
+	   TABLET  (≤768px)  — size refinements only
+	───────────────────────────────────────────────────────────── */
+
+	@media screen and (max-width: 768px) {
+		nav .wrapper {
+			height: 64px;
+			padding: 0 16px;
+		}
+
+		.logo img {
+			width: 68px !important;
+		}
+
+		.wrapper .nav-links {
+			width: 83% !important;
+			max-width: 340px !important;
+		}
+
+		.nav-links li > a,
+		.nav-links .mobile-item {
+			font-size: 14.5px !important;
+			padding: 13px 16px !important;
+			margin: 2px 12px !important;
+			width: calc(100% - 24px) !important;
+		}
+
+		.content {
+			margin: 4px 12px 10px !important;
+			width: calc(100% - 24px) !important;
+		}
+	}
+
+	/* ─────────────────────────────────────────────────────────────
+	   PHONE  (≤576px)  — size refinements only
+	───────────────────────────────────────────────────────────── */
+
+	@media screen and (max-width: 576px) {
+		nav .wrapper {
+			height: 58px;
+			padding: 0 12px;
+		}
+
+		.logo img {
+			width: 60px !important;
+		}
+
+		.wrapper .nav-links {
+			width: 85% !important;
+			max-width: 300px !important;
+			border-radius: 0 20px 20px 0 !important;
+		}
+
+		.nav-links li > a,
+		.nav-links .mobile-item {
+			font-size: 14px !important;
+			padding: 12px 14px !important;
+			margin: 2px 10px !important;
+			width: calc(100% - 20px) !important;
+		}
+
+		.content {
+			margin: 4px 10px 10px !important;
+			width: calc(100% - 20px) !important;
+			padding: 8px 8px 12px !important;
+			border-radius: 12px !important;
+		}
+
+		.content a {
+			padding: 9px 10px !important;
+			font-size: 13px !important;
+		}
+
+		.content i {
+			font-size: 13px !important;
+			width: 18px !important;
+		}
+
+		.course-card-mobile {
+			padding: 9px 10px !important;
+		}
+
+		.course-icon-bg {
+			width: 32px !important;
+			height: 32px !important;
+			border-radius: 8px !important;
+			font-size: 12px !important;
+		}
+
+		.course-card-mobile span:first-child {
+			font-size: 12px !important;
 		}
 	}
 </style>
