@@ -12,6 +12,7 @@
 	import Placementheader from '$lib/components/placementheader.svelte';
 	import Notification from '$lib/components/notification.svelte';
 	import Autonomous from '$lib/components/autonomous.svelte';
+	import CSBanner from '$lib/components/csbanner.svelte';
 
 	/** @param {number} y */
 	function scaleLogo(y) {
@@ -51,7 +52,6 @@
 			<source src="/baba.webm" type="video/webm" />
 			<source src="/baba.mp4" type="video/mp4" />
 		</video>
-
 		<div
 			id="scale-logo"
 			class="vidlogo absolute flex flex-col sm:flex-row justify-center items-center h-full w-full z-[1] gap-4 sm:gap-0 px-4"
@@ -68,8 +68,12 @@
 			/>
 		</div>
 	</div>
+	<div class="h-8 md:h-6 bg-white"></div>
+	<CSBanner />
+	<div class="h-4 md:h-6 bg-white"></div>
 	<Autonomous />
 	<Placementheader />
+	
 
 	<h1 class="3xs:text-lg xs:text-xl md:text-4xl font-bold text-center p-4 md:p-10 bg-white">
 		CELEBRATE LIFE AT BITS VIZAG

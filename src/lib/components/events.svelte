@@ -1,10 +1,19 @@
 <script>
 	let events = [
 		{
+			name: 'Mega Job Fair 2026',
+			description:
+				'The Mega Job Fair 2026, organized by BITS Vizag (A) and Magic Bus Foundation on 10th March 2026, saw 1,786 students from 121 colleges attend, with 696 selected and 368 shortlisted by 38 companies. The event was a grand success, empowering youth through meaningful industry connections.',
+			date: 'March 10, 2026',
+			image: '/events/job-fair.jpg',
+			href: 'https://www.instagram.com/p/DV3uIZcmtvW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
 			name: 'Samsung Innovation Campus X CSE',
 			description:
 				'The Dept. of CSE is pleased to share that the Samsung Innovation Campus, in association with Datapro Pvt Ltd. and the Department of CSE, BITS Vizag, successfully organized Artificial Intelligence Training Sessions for 250 students of BITS Vizag across all Departments..',
-			date: 'January 22, 2025',
+			date: 'January 22, 2026',
 			image: '/events/samsung.jpg',
 			href: 'https://www.instagram.com/p/DT0QQlfiAI6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'

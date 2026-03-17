@@ -1,9 +1,9 @@
 <script>
 	let pics = [
 		{
-			pic: '/gallery/g1.jpg',
-			name: 'Bootcamp on Developing Employability Competencies',
-			date: '25/10/2024',
+			pic: '/gallery/RAJ_4078.JPG.jpeg',
+			name: 'Mega Job Fair 2026 A Remarkable Success !!!',
+			date: '10/03/2026',
 			href: '#',
 			id: 'box-1'
 		},
@@ -34,7 +34,43 @@
 			date: '16/09/2025',
 			href: '#',
 			id: 'box-5'
-		}
+		},
+		{
+
+			pic: '/gallery/sankranthi.jpeg',
+			name: 'Sankranthi Celebrations',
+			date: '14/01/2026',
+			href: '#',
+			id: 'box-6'
+		},
+		{
+			pic: '/gallery/payzo.jpeg',
+			name: 'Payzo Pitch-A-Thon',
+			date: '13/12/2025',
+			href: '#',
+			id: 'box-8'
+		},
+		{
+			pic: '/gallery/cloud.jpeg',
+			name: 'The Cloud Summit',
+			date: '01/10/2024',
+			href: '#',
+			id: 'box-7'
+		},
+	
+		{
+			pic: '/gallery/Christmas.jpeg',
+			name: 'Christmas Celebrations',
+			date: '25/12/2025',
+			href: '#',
+			id: 'box-9'
+		},
+		
+		
+			
+		
+
+
 	];
 </script>
 
@@ -66,7 +102,9 @@
 		grid-template-areas:
 			'item-1 item-1'
 			'item-2 item-3'
-			'item-4 item-5';
+			'item-4 item-5'
+			'item-6 item-7'
+			'item-8 item-9';
 	}
 
 	.box-1 {
@@ -100,6 +138,22 @@
 		grid-area: item-5;
 	}
 
+	.box-6 {
+		grid-area: item-6;
+	}
+
+	.box-7 {
+		grid-area: item-7;
+	}
+
+	.box-8 {
+		grid-area: item-8;
+	}
+
+	.box-9 {
+		grid-area: item-9;
+	}
+
 	.image-grid div {
 		object-fit: cover;
 		overflow: hidden;
@@ -118,11 +172,12 @@
 		.image-grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-template-rows: 19vw 24vw;
+			grid-template-rows: 19vw 24vw 24vw;
 			box-sizing: border-box;
 			grid-template-areas:
 				'item-1 item-1 item-2 item-3'
-				'item-1 item-1 item-4 item-5';
+				'item-1 item-1 item-4 item-5'
+				'item-6 item-7 item-8 item-9';
 		}
 	}
 </style>
