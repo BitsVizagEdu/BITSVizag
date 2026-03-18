@@ -104,7 +104,14 @@
 				rel="noopener noreferrer"
 				tabindex={i === current ? 0 : -1}
 			>
-				<img class="sl-img" src={slide.img} alt={slide.alt} draggable="false" />
+				<img
+					class="sl-img"
+					src={slide.img}
+					alt={slide.alt}
+					draggable="false"
+					loading={i === 0 ? 'eager' : 'lazy'}
+					decoding="async"
+				/>
 			</a>
 		</div>
 	{/each}

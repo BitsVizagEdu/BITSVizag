@@ -2,6 +2,7 @@
 	import Events from '$lib/components/events.svelte';
 	import Strength from '$lib/components/strength.svelte';
 	import Committies from '$lib/components/committies.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	import Gallery from '$lib/components/gallery.svelte';
 	import Placement from '$lib/components/placement.svelte';
@@ -14,22 +15,71 @@
 	import Autonomous from '$lib/components/autonomous.svelte';
 	import CSBanner from '$lib/components/csbanner.svelte';
 
-	/** @param {number} y */
-	function scaleLogo(y) {
-		if (typeof y !== 'undefined' && typeof document !== 'undefined') {
+	let y = 0; // Scroll position for bindable variable
+
+	/** @param {number} scrollY */
+	function scaleLogo(scrollY) {
+		if (typeof scrollY !== 'undefined' && typeof document !== 'undefined') {
 			const logoElement = document.getElementById('scale-logo');
 			if (logoElement) {
-				logoElement.style.transform = `scale(${1 + y / 700})`;
-				logoElement.style.opacity = `${1 - y / 900}`;
+				logoElement.style.transform = `scale(${1 + scrollY / 700})`;
+				logoElement.style.opacity = `${1 - scrollY / 900}`;
 			}
 		}
 	}
 
-	onMount(() => {});
+	let lastScrollY = 0;
+	let animationFrameId = null;
 
-	let y = 0;
-	$: scaleLogo(y);
+	function onScroll(newY) {
+		scaleLogo(newY);
+	}
+
+	onMount(() => {
+		const handleScroll = () => {
+			cancelAnimationFrame(animationFrameId);
+			animationFrameId = requestAnimationFrame(() => {
+				onScroll(window.scrollY);
+			});
+		};
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	});
+
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'CollegeOrUniversity',
+		name: 'BITS Vizag',
+		url: 'https://bitsvizag.com',
+		logo: 'https://bitsvizag.com/logo-150-2/logo-150-2.png',
+		contactPoint: {
+			'@type': 'ContactPoint',
+			telephone: '+91-8886634502',
+			contactType: 'customer service'
+		},
+		sameAs: [
+			'https://www.facebook.com/bits.vizag/',
+			'https://twitter.com/bitsvizag',
+			'https://www.instagram.com/bitsvizag/',
+			'https://www.youtube.com/channel/UC_Bw_s-l_x9_x_x_x_x_x'
+		],
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: 'https://bitsvizag.com/search?q={search_term_string}',
+			'query-input': 'required name=search_term_string'
+		}
+	};
 </script>
+
+<Seo
+	title="BITS Vizag - Top Engineering College in Visakhapatnam"
+	description="Bhogawati Institute of Technology and Science (BITS Vizag), a premier engineering college in Visakhapatnam, offering a world-class education in various disciplines."
+	url="https://bitsvizag.com"
+	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
+	siteName="BITS Vizag"
+	{structuredData}
+/>
 
 <svelte:head>
 	<title>Home</title>

@@ -19,6 +19,11 @@
 		activeTab = item;
 		onSelect(item);
 	}
+
+	/** @param {string} item */
+	function getItemHref(item) {
+		return `${basePath}/${encodeURIComponent(item)}`;
+	}
 </script>
 
 <aside class="w-full lg:w-[320px] p-4 lg:p-6 lg:sticky lg:top-0 h-fit z-10" aria-label="Sidebar">
@@ -48,7 +53,7 @@
 						</button>
 					{:else}
 						<a
-							href={`${basePath}/${item}`}
+							href={getItemHref(item)}
 							on:click={() => handleSelect(item)}
 							class="flex-shrink-0 flex items-center px-4 py-2.5 text-[13px] font-bold rounded-xl transition-all whitespace-nowrap
                             {activeTab === item
@@ -90,7 +95,7 @@
 						</button>
 					{:else}
 						<a
-							href={`${basePath}/${item}`}
+							href={getItemHref(item)}
 							on:click={() => handleSelect(item)}
 							class="w-full group flex items-center px-4 py-3 text-[14px] font-semibold rounded-xl transition-all duration-300
                             {activeTab === item

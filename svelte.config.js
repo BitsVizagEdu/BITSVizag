@@ -15,12 +15,31 @@ const config = {
 	],
 	kit: {
 		prerender: {
-			handleMissingId: 'warn'
+			handleMissingId: 'warn',
+			handleHttpError: 'warn'
 		},
 		adapter: adapter({
 			runtime: 'nodejs22.x',
+			isr: {
+				// Cache static routes for 3600 seconds (1 hour)
+				expiration: 3600,
+				bypassToken: process.env.VERCEL_AUTOMATION_BYPASS_TOKEN
+			}
 		}),
+		env: {
+			publicPrefix: 'PUBLIC_'
+		}
 	},
+	compilerOptions: {
+		dev: false,
+		// Enable performance optimizations
+		immutable: false,
+		legacy: false,
+		accessors: false,
+		customElement: false,
+		preserveComments: false,
+		preserveWhitespace: false
+	}
 };
 
 export default config;
