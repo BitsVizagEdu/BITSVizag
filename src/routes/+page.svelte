@@ -15,21 +15,20 @@
 	import Autonomous from '$lib/components/autonomous.svelte';
 	import CSBanner from '$lib/components/csbanner.svelte';
 
-	let y = 0; // Scroll position for bindable variable
-
-	/** @param {number} scrollY */
-	function scaleLogo(scrollY) {
-		if (typeof scrollY !== 'undefined' && typeof document !== 'undefined') {
+	/** @param {number} y */
+	function scaleLogo(y) {
+		if (typeof y !== 'undefined' && typeof document !== 'undefined') {
 			const logoElement = document.getElementById('scale-logo');
 			if (logoElement) {
-				logoElement.style.transform = `scale(${1 + scrollY / 700})`;
-				logoElement.style.opacity = `${1 - scrollY / 900}`;
+				logoElement.style.transform = `scale(${1 + y / 700})`;
+				logoElement.style.opacity = `${1 - y / 900}`;
 			}
 		}
 	}
 
 	let lastScrollY = 0;
 	let animationFrameId = null;
+	let y = 0;
 
 	function onScroll(newY) {
 		scaleLogo(newY);
@@ -83,6 +82,8 @@
 
 <svelte:head>
 	<title>Home</title>
+	<link rel="preload" as="image" href="/CS-Banners/1.webp" type="image/webp" />
+	<link rel="preload" as="image" href="/header/T10main.webp" type="image/webp" />
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
@@ -118,9 +119,27 @@
 			/>
 		</div>
 	</div>
-	<div class="h-8 md:h-6 bg-white"></div>
+	<!-- <div class="h-4 md:h-12 bg-white"></div>
+	<div class="bg-black">
+		<video
+			playsinline
+			autoplay
+			muted
+			loop
+			preload="auto"
+			class="w-full h-auto block pointer-events-none select-none"
+		>
+			<source
+				src="/gallery/Black%20White%20Welcome%20To%20My%20Chanel%20YouTube%20Intro%20(online-video-cutter.com).mp4"
+				type="video/mp4"
+			/>
+			Your browser does not support the video tag.
+		</video>
+	</div> -->
+
+	<div class="h-4 md:h-12 bg-white"></div>
 	<CSBanner />
-	<div class="h-4 md:h-6 bg-white"></div>
+	<div class="h-4 md:h-12 bg-white"></div>
 	<Autonomous />
 	<Placementheader />
 	
