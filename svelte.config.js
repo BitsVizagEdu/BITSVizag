@@ -25,8 +25,6 @@ const config = {
 				bypassToken: process.env.VERCEL_AUTOMATION_BYPASS_TOKEN
 			}
 		}),
-		// Optimize client-side bundle
-		splitter: 'sequential',
 		env: {
 			publicPrefix: 'PUBLIC_'
 		}

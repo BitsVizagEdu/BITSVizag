@@ -1,7 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
 
-export default defineConfig({
+export default {
 	plugins: [sveltekit()],
 	build: {
 		// Rollup output configuration
@@ -23,11 +22,6 @@ export default defineConfig({
 		},
 		// Minify CSS and JS
 		minify: 'terser',
-		terserOptions: {
-			compress: {
-				drop_console: false
-			}
-		},
 		// Create small CSS chunks
 		cssCodeSplit: true,
 		// Report compressed size
@@ -37,4 +31,4 @@ export default defineConfig({
 	optimizeDeps: {
 		include: ['aos', 'gsap', 'swiper']
 	}
-});
+};
