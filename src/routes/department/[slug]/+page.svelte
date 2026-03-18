@@ -2,6 +2,8 @@
 	import { items, replaceHyphenWithSpace } from './components/utils.js';
 	import { activeTab, setActiveTabValue, showNavBar } from '$lib/stores/store.js';
 	import { toggleIsActiveTab } from '$lib/stores/store.js';
+	import Seo from '$lib/components/Seo.svelte';
+	import { page } from '$app/stores';
 
 	import DepartmentofBsh from './components/Department of BS&H.svelte';
 	import DepartmentofCse from './components/Department of CSE.svelte';
@@ -20,11 +22,94 @@
 		setActiveTabValue(data.route);
 		toggleIsActiveTab(false);
 	}
+
+	const getDepartmentMetadata = (slug) => {
+		const defaultTitle = 'Engineering Departments | BITS Vizag';
+		const defaultDescription =
+			'Explore engineering and management departments at BITS Vizag including CSE, ECE, EEE, Civil, Mechanical, MBA and specialized programs in AI & ML and Cyber Security.';
+		let title = defaultTitle;
+		let description = defaultDescription;
+
+		switch (slug) {
+			case 'Department of CSE':
+				title = 'CSE Department | Computer Science & Engineering at BITS Vizag';
+				description =
+					'CSE Department at BITS Vizag offers innovative Computer Science & Engineering curriculum with focus on modern programming, software development, and IT trends.';
+				break;
+			case 'Department of CSE (AI & ML)':
+				title = 'CSE AI & ML Department | Artificial Intelligence at BITS Vizag';
+				description =
+					'Specialized CSE department focusing on Artificial Intelligence and Machine Learning with hands-on training in AI/ML technologies and applications.';
+				break;
+			case 'Department of CSE (Cyber Security)':
+				title = 'Cyber Security Department | Information Security at BITS Vizag';
+				description =
+					'Dedicated Cyber Security program at BITS Vizag providing in-depth knowledge in network security, cryptography, and ethical hacking.';
+				break;
+			case 'Department of ECE':
+				title = 'ECE Department | Electronics & Communication Engineering at BITS Vizag';
+				description =
+					'Electronics and Communication Engineering department offering comprehensive curriculum in signal processing, wireless communication, and embedded systems.';
+				break;
+			case 'Department of EEE':
+				title = 'EEE Department | Electrical & Electronics Engineering at BITS Vizag';
+				description =
+					'Electrical & Electronics Engineering department with programs in power systems, electrical machines, and modern power generation technologies.';
+				break;
+			case 'Department of CIVIL':
+				title = 'Civil Engineering Department | Infrastructure at BITS Vizag';
+				description =
+					'Civil Engineering department focusing on construction, structural design, environmental engineering, and sustainable infrastructure development.';
+				break;
+			case 'Department of MECH':
+				title = 'Mechanical Engineering Department | BITS Vizag';
+				description =
+					'Mechanical Engineering department offering programs in thermal systems, design engineering, manufacturing, and mechanical innovations.';
+				break;
+			case 'Department of MBA':
+				title = 'MBA Program | Management Studies at BITS Vizag';
+				description =
+					'MBA program at BITS Vizag providing management education in finance, marketing, operations, and business strategy for industry leadership.';
+				break;
+			case 'Department of BS&H':
+				title = 'Humanities Department | Basic Sciences at BITS Vizag';
+				description =
+					'Department of Basic Sciences & Humanities providing foundational knowledge in physics, chemistry, mathematics, and soft skills development.';
+				break;
+		}
+
+		return { title, description };
+	};
+
+	let meta;
+	$: meta = getDepartmentMetadata($page.params.slug);
+
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'EducationalOrganization',
+		name: meta.title,
+		description: meta.description,
+		url: `https://bitsvizag.com/department/${$page.params.slug}`,
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': `https://bitsvizag.com/department/${$page.params.slug}`
+		},
+		parentOrganization: {
+			'@type': 'EducationalOrganization',
+			name: 'BITS Vizag',
+			url: 'https://bitsvizag.com'
+		}
+	};
 </script>
 
-<svelte:head>
-	<title>Departments | BITS Vizag</title>
-</svelte:head>
+<Seo
+	title={meta.title}
+	description={meta.description}
+	url={`https://bitsvizag.com/department/${$page.params.slug}`}
+	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
+	siteName="BITS Vizag"
+	{structuredData}
+/>
 
 {#if !$showNavBar}
 	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">

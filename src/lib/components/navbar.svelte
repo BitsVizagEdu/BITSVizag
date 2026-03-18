@@ -45,22 +45,6 @@
 		setActiveTabValue(item);
 	}
 </script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-	rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link
-	href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-	rel="stylesheet"
-/>
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-	rel="stylesheet"
-/>
 <!-- Top Bar: Quick Links & Socials -->
 
 <div
@@ -160,6 +144,8 @@
 	}
 	.animate-gradient-x {
 		animation: gradient-x 3s ease infinite;
+		will-change: background-position;
+		transform: translateZ(0);
 	}
 	a {
 		font-family: 'Inter', sans-serif;
@@ -167,8 +153,10 @@
 		text-transform: capitalize;
 		letter-spacing: 0.02em;
 	}
-	/* Converted #bits hiding rule to keeping it visible but ensuring standard sizing if needed.
-       Actually, removing the hide rule completely is safer. */
+	/* Optimize images for faster rendering */
+	img {
+		contain: layout style paint;
+	}
 	@media screen and (max-width: 1023px) {
 		/* Removed display:none for #bits to ensure visibility on mobile */
 	}

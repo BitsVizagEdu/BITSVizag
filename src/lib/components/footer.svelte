@@ -19,6 +19,8 @@
 		let yPos = 0;
 		let mouseX = 0;
 		let mouseY = 0;
+		let isMoving = false;
+		let animationId = null;
 
 		/** @param {MouseEvent} e */
 		const handleMouseMove = (e) => {
@@ -26,9 +28,15 @@
 			const { innerWidth, innerHeight } = window;
 			mouseX = (clientX / innerWidth - 0.5) * 30;
 			mouseY = (clientY / innerHeight - 0.5) * 30;
+
+			// Only start animation if not already running
+			if (!isMoving && !animationId) {
+				isMoving = true;
+				ticker();
+			}
 		};
 
-		// Ticker for smooth non-laggy movement
+		// Ticker for smooth non-laggy movement - only runs when mouse moves
 		const ticker = () => {
 			xPos += (mouseX - xPos) * 0.08;
 			yPos += (mouseY - yPos) * 0.08;
@@ -38,18 +46,26 @@
 					const factor = (i + 1) * 0.5;
 					g.set(el, {
 						x: xPos * factor,
-						y: yPos * factor
+						y: yPos * factor,
+						willChange: 'transform'
 					});
 				}
 			});
 
 			g.set('.cta-text-shadow', {
 				x: -xPos * 0.2,
-				y: -yPos * 0.2
+				y: -yPos * 0.2,
+				willChange: 'transform'
 			});
-			requestAnimationFrame(ticker);
+
+			// Continue animation only if movement is happening
+			if (Math.abs(mouseX - xPos) > 0.1 || Math.abs(mouseY - yPos) > 0.1) {
+				animationId = requestAnimationFrame(ticker);
+			} else {
+				isMoving = false;
+				animationId = null;
+			}
 		};
-		ticker();
 
 		window.addEventListener('mousemove', handleMouseMove);
 
@@ -119,6 +135,9 @@
 
 		return () => {
 			window.removeEventListener('mousemove', handleMouseMove);
+			if (animationId) {
+				cancelAnimationFrame(animationId);
+			}
 		};
 	});
 </script>
@@ -259,14 +278,14 @@
 								<i class="fa-brands fa-instagram text-base"></i>
 							</a>
 							<a
-								href="https://www.youtube.com/@bitsmediacenter8449"
+								href="https://www.youtube.com/@bitsmediacenter8449/videos"
 								class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/70 hover:bg-red-600 hover:text-white hover:scale-110 transition-all duration-300"
 								aria-label="YouTube"
 							>
 								<i class="fa-brands fa-youtube text-base"></i>
 							</a>
 							<a
-								href="https://www.linkedin.com/school/baba-institute-of-technology-&-science-p.m.-palem-/about/"
+								href="https://www.linkedin.com/company/bits-vizag/posts/?feedView=all"
 								class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/70 hover:bg-blue-700 hover:text-white hover:scale-110 transition-all duration-300"
 								aria-label="LinkedIn"
 							>
@@ -374,7 +393,8 @@
 			<a href="https://www.konkorde.org" class="group transition-all duration-300">
 				<span
 					class="konkorde-gradient font-black tracking-widest transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]"
-					>KONKORDE</span
+					>BITS STUDENTS</span
+				
 				>
 			</a>
 		</p>

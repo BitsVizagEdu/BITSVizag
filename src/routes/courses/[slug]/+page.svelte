@@ -8,6 +8,8 @@
 		toggleIsActiveTab
 	} from '$lib/stores/store.js';
 	import SideNav from '$lib/components/SideNav.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import { page } from '$app/stores';
 
 	import PostGraduation from './components/Post Graduation.svelte';
 	import UnderGraduation from './components/Under Graduation.svelte';
@@ -19,11 +21,53 @@
 		setActiveTabValue(data.route);
 		toggleIsActiveTab(false);
 	}
+
+	const getCourseMetadata = (slug) => {
+		let title = 'Engineering Courses | BITS Vizag';
+		let description =
+			'Explore B.Tech, MBA, and M.Tech programs at BITS Vizag offering world-class engineering education in multiple specializations.';
+
+		switch (slug) {
+			case 'Under-Graduation':
+				title = 'B.Tech Programs | Engineering Courses at BITS Vizag';
+				description =
+					'B.Tech (Under-Graduate) programs at BITS Vizag in CSE, ECE, EEE, Mechanical, Civil and specialized branches with 4-year curriculum.';
+				break;
+			case 'Post-Graduation':
+				title = 'M.Tech & MBA Programs | Post-Graduation at BITS Vizag';
+				description =
+					'M.Tech and MBA post-graduation programs at BITS Vizag offering advanced technical and management education for career advancement.';
+				break;
+		}
+
+		return { title, description };
+	};
+
+	let meta;
+	$: meta = getCourseMetadata($page.params.slug);
+
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'EducationalOccupationalProgram',
+		name: meta.title,
+		description: meta.description,
+		url: `https://bitsvizag.com/courses/${$page.params.slug}`,
+		provider: {
+			'@type': 'EducationalOrganization',
+			name: 'BITS Vizag',
+			url: 'https://bitsvizag.com'
+		}
+	};
 </script>
 
-<svelte:head>
-	<title>Courses Offered | BITS Vizag</title>
-</svelte:head>
+<Seo
+	title={meta.title}
+	description={meta.description}
+	url={`https://bitsvizag.com/courses/${$page.params.slug}`}
+	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
+	siteName="BITS Vizag"
+	{structuredData}
+/>
 
 {#if !$showNavBar}
 	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">

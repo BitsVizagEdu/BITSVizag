@@ -104,7 +104,14 @@
 				rel="noopener noreferrer"
 				tabindex={i === current ? 0 : -1}
 			>
-				<img class="sl-img" src={slide.img} alt={slide.alt} draggable="false" />
+				<img
+					class="sl-img"
+					src={slide.img}
+					alt={slide.alt}
+					draggable="false"
+					loading={i === 0 ? 'eager' : 'lazy'}
+					decoding="async"
+				/>
 			</a>
 		</div>
 	{/each}
@@ -116,9 +123,9 @@
 		</svg>
 	</button>
 
-	<button class="sl-arrow sl-arrow--right" on:click={next} aria-label="Next slide">
+	<button class="sl-arrow sl-arrow--right" on:click={next} aria-laSSbel="Next slide">
 		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-			stroke-linecap="round" stroke-linejoin="round">
+			stroke-linecap="round" stroke-linejoin="round">4
 			<polyline points="9 18 15 12 9 6" />
 		</svg>
 	</button>

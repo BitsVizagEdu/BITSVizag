@@ -142,7 +142,9 @@
 				src={slide.img}
 				alt={slide.alt}
 				draggable="false"
+				loading={i === 0 ? 'eager' : 'lazy'}
 				bind:this={imgEls[i]}
+				decoding="async"
 			/>
 		</div>
 	{/each}
