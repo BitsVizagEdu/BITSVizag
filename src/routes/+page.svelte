@@ -15,13 +15,15 @@
 	import Autonomous from '$lib/components/autonomous.svelte';
 	import CSBanner from '$lib/components/csbanner.svelte';
 
-	/** @param {number} y */
-	function scaleLogo(y) {
-		if (typeof y !== 'undefined' && typeof document !== 'undefined') {
+	let y = 0; // Scroll position for bindable variable
+
+	/** @param {number} scrollY */
+	function scaleLogo(scrollY) {
+		if (typeof scrollY !== 'undefined' && typeof document !== 'undefined') {
 			const logoElement = document.getElementById('scale-logo');
 			if (logoElement) {
-				logoElement.style.transform = `scale(${1 + y / 700})`;
-				logoElement.style.opacity = `${1 - y / 900}`;
+				logoElement.style.transform = `scale(${1 + scrollY / 700})`;
+				logoElement.style.opacity = `${1 - scrollY / 900}`;
 			}
 		}
 	}
@@ -83,6 +85,7 @@
 	<title>Home</title>
 </svelte:head>
 
+<svelte:window bind:scrollY={y} />
 {#if !$showNavBar}
 	<Notification />
 	<div

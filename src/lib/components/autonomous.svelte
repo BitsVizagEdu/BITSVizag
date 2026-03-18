@@ -123,9 +123,9 @@
 		</svg>
 	</button>
 
-	<button class="sl-arrow sl-arrow--right" on:click={next} aria-laSSbel="Next slide">
+	<button class="sl-arrow sl-arrow--right" on:click={next} aria-label="Next slide">
 		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-			stroke-linecap="round" stroke-linejoin="round">4
+			stroke-linecap="round" stroke-linejoin="round">
 			<polyline points="9 18 15 12 9 6" />
 		</svg>
 	</button>

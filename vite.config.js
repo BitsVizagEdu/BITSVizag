@@ -3,10 +3,8 @@ import { sveltekit } from '@sveltejs/kit/vite';
 export default {
 	plugins: [sveltekit()],
 	build: {
-		// Rollup output configuration
 		rollupOptions: {
 			output: {
-				// Code splitting strategy - each route gets its own chunk
 				manualChunks: (id) => {
 					if (id.includes('node_modules')) {
 						if (id.includes('gsap') || id.includes('locomotion')) {
@@ -20,14 +18,9 @@ export default {
 				}
 			}
 		},
-		// Minify CSS and JS
-		minify: 'terser',
-		// Create small CSS chunks
 		cssCodeSplit: true,
-		// Report compressed size
 		reportCompressedSize: true
 	},
-	// Optimization hints
 	optimizeDeps: {
 		include: ['aos', 'gsap', 'swiper']
 	}
