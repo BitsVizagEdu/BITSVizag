@@ -3,17 +3,20 @@
 
 	const slides = [
 		{
-			img: '/header/T10main.png',
+			webp: '/header/T10main.webp',
+			fallback: '/header/T10main.png',
 			href: 'https://www.instagram.com/p/DQuOMxUE_qx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			alt: 'T10 Cricket Championship'
 		},
 		{
-			img: '/header/pitchathon.png',
+			webp: '/header/pitchathon.webp',
+			fallback: '/header/pitchathon.png',
 			href: '/placements',
 			alt: 'Pitchathon'
 		},
 		{
-			img: '/header/ViceChancellor-Banner.png',
+			webp: '/header/ViceChancellor-Banner.webp',
+			fallback: '/header/ViceChancellor-Banner.png',
 			href: 'https://www.instagram.com/p/DQvtjDijfWw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			alt: 'Vice Chancellor'
 		}
@@ -104,14 +107,19 @@
 				rel="noopener noreferrer"
 				tabindex={i === current ? 0 : -1}
 			>
-				<img
-					class="sl-img"
-					src={slide.img}
-					alt={slide.alt}
-					draggable="false"
-					loading={i === 0 ? 'eager' : 'lazy'}
-					decoding="async"
-				/>
+				<picture>
+					<source srcset={slide.webp} type="image/webp" />
+					<img
+						class="sl-img"
+						src={slide.fallback}
+						alt={slide.alt}
+						draggable="false"
+						loading={i === 0 ? 'eager' : 'lazy'}
+						fetchpriority={i === 0 ? 'high' : 'auto'}
+						sizes="100vw"
+						decoding="async"
+					/>
+				</picture>
 			</a>
 		</div>
 	{/each}

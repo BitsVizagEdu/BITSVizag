@@ -2,10 +2,10 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	const images = [
-		{ img: '/CS-Banners/1.png', alt: 'CS Banner 1' },
-		{ img: '/CS-Banners/2.png', alt: 'CS Banner 2' },
-		{ img: '/CS-Banners/3.png', alt: 'CS Banner 3' },
-		{ img: '/CS-Banners/4.png', alt: 'CS Banner 4' }
+		{ webp: '/CS-Banners/1.webp', fallback: '/CS-Banners/1.png', alt: 'CS Banner 1' },
+		{ webp: '/CS-Banners/2.webp', fallback: '/CS-Banners/2.png', alt: 'CS Banner 2' },
+		{ webp: '/CS-Banners/3.webp', fallback: '/CS-Banners/3.png', alt: 'CS Banner 3' },
+		{ webp: '/CS-Banners/4.webp', fallback: '/CS-Banners/4.png', alt: 'CS Banner 4' }
 	];
 
 	const sequence = [0, 1, 0, 2, 0, 3];
@@ -137,15 +137,20 @@
 >
 	{#each images as slide, i}
 		<div class="cb-slide" bind:this={slideEls[i]} aria-hidden={i !== current}>
-			<img
-				class="cb-img"
-				src={slide.img}
-				alt={slide.alt}
-				draggable="false"
-				loading={i === 0 ? 'eager' : 'lazy'}
-				bind:this={imgEls[i]}
-				decoding="async"
-			/>
+			<picture>
+				<source srcset={slide.webp} type="image/webp" />
+				<img
+					class="cb-img"
+					src={slide.fallback}
+					alt={slide.alt}
+					draggable="false"
+					loading={i === 0 ? 'eager' : 'lazy'}
+					fetchpriority={i === 0 ? 'high' : 'auto'}
+					sizes="100vw"
+					bind:this={imgEls[i]}
+					decoding="async"
+				/>
+			</picture>
 		</div>
 	{/each}
 
