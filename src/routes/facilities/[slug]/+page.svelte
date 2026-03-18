@@ -66,14 +66,16 @@
 	};
 
 	let meta;
-	$: meta = getFacilityMetadata($page.params.slug);
-
-	const structuredData = {
+	let currentSlug;
+	let structuredData;
+	$: currentSlug = data?.route || $page.params.slug;
+	$: meta = getFacilityMetadata(currentSlug);
+	$: structuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'Place',
 		name: meta.title,
 		description: meta.description,
-		url: `https://bitsvizag.com/facilities/${$page.params.slug}`,
+		url: `https://bitsvizag.com/facilities/${currentSlug}`,
 		address: {
 			'@type': 'PostalAddress',
 			addressCountry: 'India'
@@ -89,7 +91,7 @@
 <Seo
 	title={meta.title}
 	description={meta.description}
-	url={`https://bitsvizag.com/facilities/${$page.params.slug}`}
+	url={`https://bitsvizag.com/facilities/${currentSlug}`}
 	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
 	siteName="BITS Vizag"
 	{structuredData}
@@ -119,7 +121,7 @@
 					<div class="flex overflow-x-auto gap-2 no-scrollbar pb-1">
 						{#each items as item}
 							<a
-								href={`/facilities/${item}`}
+								href={`/facilities/${encodeURIComponent(item)}`}
 								on:click={() => setActiveTabValue(item)}
 								class="flex-shrink-0 flex items-center px-4 py-2.5 text-[13px] font-bold rounded-xl transition-all whitespace-nowrap
 								{$activeTab === item
@@ -137,7 +139,7 @@
 					{#each items as item}
 						<li>
 							<a
-								href={`/facilities/${item}`}
+								href={`/facilities/${encodeURIComponent(item)}`}
 								on:click={() => setActiveTabValue(item)}
 								class="flex items-center px-4 py-3.5 text-[14px] font-semibold rounded-xl transition-all duration-300
 								{$activeTab === item
@@ -156,22 +158,22 @@
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if $activeTab === 'Knowledge-Resource-Center'}
+				{#if currentSlug === 'Knowledge-Resource-Center'}
 					<Library />
 				{/if}
-				{#if $activeTab === 'Sports'}
+				{#if currentSlug === 'Sports'}
 					<Sports />
 				{/if}
-				{#if $activeTab === 'Laboratories'}
+				{#if currentSlug === 'Laboratories'}
 					<Laboratory />
 				{/if}
-				{#if $activeTab === 'Cafeteria'}
+				{#if currentSlug === 'Cafeteria'}
 					<Cafeteria />
 				{/if}
-				{#if $activeTab === 'Accomidation'}
+				{#if currentSlug === 'Accomidation'}
 					<Hostel />
 				{/if}
-				{#if $activeTab === 'Transport'}
+				{#if currentSlug === 'Transport'}
 					<Transport />
 				{/if}
 			</div>

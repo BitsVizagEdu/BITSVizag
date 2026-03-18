@@ -115,7 +115,7 @@
 							</div>
 							<div class="flex flex-col gap-2">
 								<a
-									href="/aboutus/Message-from-Secretary-&-Correspondent"
+									href="/aboutus/Message-from-Secretary-%26-Correspondent"
 									on:click={closeMenus}
 									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
 								>
@@ -145,7 +145,7 @@
 
 			<!-- Governance -->
 			<li>
-				<a href="/governance" class="desktop-item">Governance</a>
+				<a href="/governance/board-of-trustees" class="desktop-item">Governance</a>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 				<button
@@ -285,7 +285,7 @@
 									<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 										<!-- UG Cards -->
 										<a
-											href="/department/Department of CSE"
+											href="/department/Department%20of%20CSE"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -304,7 +304,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of ECE"
+											href="/department/Department%20of%20ECE"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -323,7 +323,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of CSE (AI & ML)"
+											href="/department/Department%20of%20CSE%20(AI%20%26%20ML)"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -342,7 +342,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of EEE"
+											href="/department/Department%20of%20EEE"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -361,7 +361,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of CSE (Cyber Security)"
+											href="/department/Department%20of%20CSE%20(Cyber%20Security)"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -380,7 +380,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of MECH"
+											href="/department/Department%20of%20MECH"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -399,7 +399,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of BS&H"
+											href="/department/Department%20of%20BS%26H"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -418,7 +418,7 @@
 											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
 										</a>
 										<a
-											href="/department/Department of CIVIL"
+											href="/department/Department%20of%20CIVIL"
 											on:click={closeMenus}
 											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
 										>
@@ -449,7 +449,7 @@
 									<div class="flex flex-col gap-4">
 										<!-- PG Cards -->
 										<a
-											href="/department/Department of MBA"
+											href="/department/Department%20of%20MBA"
 											on:click={closeMenus}
 											class="group flex items-center gap-5 p-5 bg-slate-50/60 hover:bg-blue-50/40 rounded-2xl transition-all shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/10"
 										>
@@ -468,9 +468,7 @@
 													>Management</span
 												>
 											</div>
-											<i
-												class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-blue-500 transition-all duration-500 group-hover:translate-x-1 text-sm bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm border border-slate-50"
-											/>
+											<i class="fa-solid fa-chevron-right text-[11px] text-slate-300"></i>
 										</a>
 										<a
 											href="/courses/Post-Graduation"
@@ -779,8 +777,7 @@
 									<div class="flex flex-col">
 										<span class="text-[16px] text-slate-900">Training & Placements</span>
 										<span class="text-[11px] text-slate-500 font-medium mt-0.5"
-											>Career Opportunities</span
-										>
+											>Career Opportunities</span>
 									</div>
 								</a>
 								<a
@@ -794,8 +791,7 @@
 									<div class="flex flex-col">
 										<span class="text-[16px] text-slate-900">Industry Linkages</span>
 										<span class="text-[11px] text-slate-500 font-medium mt-0.5"
-											>International Collaborations</span
-										>
+											>International Collaborations</span>
 									</div>
 								</a>
 							</div>

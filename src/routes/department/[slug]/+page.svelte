@@ -82,17 +82,19 @@
 	};
 
 	let meta;
-	$: meta = getDepartmentMetadata($page.params.slug);
-
-	const structuredData = {
+	let currentSlug;
+	let structuredData;
+	$: currentSlug = data?.route || $page.params.slug;
+	$: meta = getDepartmentMetadata(currentSlug);
+	$: structuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'EducationalOrganization',
 		name: meta.title,
 		description: meta.description,
-		url: `https://bitsvizag.com/department/${$page.params.slug}`,
+		url: `https://bitsvizag.com/department/${currentSlug}`,
 		mainEntityOfPage: {
 			'@type': 'WebPage',
-			'@id': `https://bitsvizag.com/department/${$page.params.slug}`
+			'@id': `https://bitsvizag.com/department/${currentSlug}`
 		},
 		parentOrganization: {
 			'@type': 'EducationalOrganization',
@@ -105,7 +107,7 @@
 <Seo
 	title={meta.title}
 	description={meta.description}
-	url={`https://bitsvizag.com/department/${$page.params.slug}`}
+	url={`https://bitsvizag.com/department/${currentSlug}`}
 	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
 	siteName="BITS Vizag"
 	{structuredData}
@@ -133,7 +135,7 @@
 					{#each items as item}
 						<li class="flex-shrink-0">
 							<a
-								href={`/department/${item}`}
+								href={`/department/${encodeURIComponent(item)}`}
 								on:click={() => setActiveTabValue(item)}
 								class="flex items-center px-5 py-3 lg:px-4 lg:py-3.5 text-[14px] font-semibold rounded-xl transition-all duration-300 whitespace-nowrap
 								{$activeTab === item
@@ -152,40 +154,36 @@
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if $activeTab === 'Department of BS&H'}
+				{#if currentSlug === 'Department of BS&H'}
 					<DepartmentofBsh />
 				{/if}
-
-				{#if $activeTab === 'Department of CSE'}
+				{#if currentSlug === 'Department of CSE'}
 					<DepartmentofCse />
 				{/if}
-
-				{#if $activeTab === 'Department of CSE (AI & ML)'}
+				{#if currentSlug === 'Department of CSE (AI & ML)'}
 					<DepartmentofCseAiMl />
 				{/if}
-
-				{#if $activeTab === 'Department of CSE (Cyber Security)'}
+				{#if currentSlug === 'Department of CSE (Cyber Security)'}
 					<DepartmentofCseCyber />
 				{/if}
-				{#if $activeTab === 'Department of ECE'}
+				{#if currentSlug === 'Department of ECE'}
 					<DepartmentofEce />
 				{/if}
-				{#if $activeTab === 'Department of EEE'}
+				{#if currentSlug === 'Department of EEE'}
 					<DepartmentofEee />
 				{/if}
-				{#if $activeTab === 'Department of CIVIL'}
+				{#if currentSlug === 'Department of CIVIL'}
 					<DepartmentofCivil />
 				{/if}
-				{#if $activeTab === 'Department of MECH'}
+				{#if currentSlug === 'Department of MECH'}
 					<DepartmentofMech />
 				{/if}
-				{#if $activeTab === 'Department of MBA'}
+				{#if currentSlug === 'Department of MBA'}
 					<DepartmentofMba />
 				{/if}
 			</div>
 		</main>
 	</div>
 {/if}
-
 <style>
 </style>

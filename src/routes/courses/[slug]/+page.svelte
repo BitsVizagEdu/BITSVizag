@@ -1,6 +1,5 @@
 <script>
 	import { items } from './components/utils.js';
-	import { replaceHyphenWithSpace } from '$lib/utils.js';
 	import {
 		activeTab,
 		setActiveTabValue,
@@ -44,14 +43,16 @@
 	};
 
 	let meta;
-	$: meta = getCourseMetadata($page.params.slug);
-
-	const structuredData = {
+	let currentSlug;
+	let structuredData;
+	$: currentSlug = data?.route || $page.params.slug;
+	$: meta = getCourseMetadata(currentSlug);
+	$: structuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'EducationalOccupationalProgram',
 		name: meta.title,
 		description: meta.description,
-		url: `https://bitsvizag.com/courses/${$page.params.slug}`,
+		url: `https://bitsvizag.com/courses/${currentSlug}`,
 		provider: {
 			'@type': 'EducationalOrganization',
 			name: 'BITS Vizag',
@@ -63,7 +64,7 @@
 <Seo
 	title={meta.title}
 	description={meta.description}
-	url={`https://bitsvizag.com/courses/${$page.params.slug}`}
+	url={`https://bitsvizag.com/courses/${currentSlug}`}
 	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
 	siteName="BITS Vizag"
 	{structuredData}
@@ -73,7 +74,7 @@
 	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">
 		<SideNav
 			{items}
-			activeTab={$activeTab}
+			activeTab={currentSlug}
 			title="Academic Levels"
 			basePath="/courses"
 			onSelect={(item) => setActiveTabValue(item)}
@@ -82,11 +83,11 @@
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if $activeTab === 'Under-Graduation'}
+				{#if currentSlug === 'Under-Graduation'}
 					<UnderGraduation />
 				{/if}
 
-				{#if $activeTab === 'Post-Graduation'}
+				{#if currentSlug === 'Post-Graduation'}
 					<PostGraduation />
 				{/if}
 			</div>

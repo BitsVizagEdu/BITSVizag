@@ -9,9 +9,8 @@
 	import Middlenav from '$lib/components/middlenav.svelte';
 	import Secondnav from '$lib/components/secondnav.svelte';
 	import 'aos/dist/aos.css';
-	import { showNavBar, toggleNavBar } from '$lib/stores/store.js';
+	import { showNavBar } from '$lib/stores/store.js';
 	import Footer from '$lib/components/footer.svelte';
-	import Navmenu from '$lib/components/navmenu.svelte';
 
 	let aosInitialized = false;
 
@@ -59,8 +58,10 @@
 </svelte:head>
 
 <main>
-	{#if $showNavBar}{:else}
-		<Hero {showNavBar} />
+	{#if $showNavBar}
+		<Nav />
+	{:else}
+		<Hero />
 		<Middlenav />
 		<Secondnav />
 

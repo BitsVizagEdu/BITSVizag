@@ -25,6 +25,13 @@
 		setActiveTabValue(item);
 		toggleNavBar();
 	}
+
+	/** @param {string} folder
+	 * @param {string} item
+	 */
+	function getItemHref(folder, item) {
+		return `${folder}/${encodeURIComponent(item)}`;
+	}
 </script>
 
 <div
@@ -99,7 +106,7 @@
 							>
 								<a
 									on:click={() => onClick(item)}
-									href={`${navName.folder}/${item}`}
+									href={getItemHref(navName.folder, item)}
 									class="flex items-center justify-between mx-14 my-2"
 								>
 									<span class="text-black text-left py-1 font-semibold text-lg mr-2 capitalize"

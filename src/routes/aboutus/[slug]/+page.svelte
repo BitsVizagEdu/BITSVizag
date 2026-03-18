@@ -1,6 +1,5 @@
 <script>
 	import { items } from './components/utils.js';
-	import { replaceHyphenWithSpace } from '$lib/utils.js';
 	import { activeTab, setActiveTabValue, showNavBar } from '$lib/stores/store.js';
 	import { toggleIsActiveTab } from '$lib/stores/store.js';
 	import SideNav from '$lib/components/SideNav.svelte';
@@ -11,7 +10,6 @@
 	import Trust from './components/trust.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
-	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
 	/** @type {import('./$types').PageData} */
@@ -25,7 +23,7 @@
 	const getPageMetadata = (slug) => {
 		const defaultTitle = 'About Us | BITS Vizag';
 		const defaultDescription =
-			'Learn more about Bhogawati Institute of Technology and Science (BITS Vizag).';
+			'Learn more about Baba Institute of Technology and Science (BITS Vizag).';
 		let title = defaultTitle;
 		let description = defaultDescription;
 
@@ -53,17 +51,19 @@
 	};
 
 	let meta;
-	$: meta = getPageMetadata($page.params.slug);
-
-	const structuredData = {
+	let currentSlug;
+	let structuredData;
+	$: currentSlug = data?.route || $page.params.slug;
+	$: meta = getPageMetadata(currentSlug);
+	$: structuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'AboutPage',
 		name: meta.title,
 		description: meta.description,
-		url: `https://bitsvizag.com/aboutus/${$page.params.slug}`,
+		url: `https://bitsvizag.com/aboutus/${currentSlug}`,
 		mainEntityOfPage: {
 			'@type': 'WebPage',
-			'@id': `https://bitsvizag.com/aboutus/${$page.params.slug}`
+			'@id': `https://bitsvizag.com/aboutus/${currentSlug}`
 		}
 	};
 </script>
@@ -71,7 +71,7 @@
 <Seo
 	title={meta.title}
 	description={meta.description}
-	url={`https://bitsvizag.com/aboutus/${$page.params.slug}`}
+	url={`https://bitsvizag.com/aboutus/${currentSlug}`}
 	siteName="BITS Vizag"
 	{structuredData}
 />
@@ -80,7 +80,7 @@
 	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">
 		<SideNav
 			{items}
-			activeTab={$activeTab}
+			activeTab={currentSlug}
 			title="About Institution"
 			basePath="/aboutus"
 			onSelect={(item) => setActiveTabValue(item)}
@@ -89,16 +89,16 @@
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if $activeTab === 'About-ABWS'}
+				{#if currentSlug === 'About-ABWS'}
 					<Trust />
 				{/if}
-				{#if $activeTab === 'About-BITS'}
+				{#if currentSlug === 'About-BITS'}
 					<Bits />
 				{/if}
-				{#if $activeTab === 'Message-from-Secretary' || $activeTab === 'Message-from-Secretary-&-Correspondent'}
+				{#if currentSlug === 'Message-from-Secretary-&-Correspondent'}
 					<Chairman />
 				{/if}
-				{#if $activeTab === 'Message-from-Principal'}
+				{#if currentSlug === 'Message-from-Principal'}
 					<Principal />
 				{/if}
 			</div>
