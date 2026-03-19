@@ -82,7 +82,7 @@
 			/>
 		</div>
 	</div>
-	<div class="hidden md:flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
+	<div class="flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
 		<div>
 			<p>
 				The Department of Civil Engineering at BITS Vizag Engineering College is a prominent and
@@ -482,7 +482,7 @@
 		</div>
 	</div>
 	
-	<div class="flex md:hidden flex-col gap-3 px-2 md:px-0 mt-4 md:mt-0 pb-4">
+	<div class="hidden flex-col gap-3 px-2 md:px-0 mt-4 md:mt-0 pb-4">
 		<p class="text-[14px] leading-relaxed text-slate-700 text-left">The Department of Civil Engineering at BITS Vizag Engineering College is a prominent and integral academic unit committed to providing comprehensive education and research opportunities in the field of civil engineering.</p>
 		<ul class="flex flex-col gap-2 mt-2">
             <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">

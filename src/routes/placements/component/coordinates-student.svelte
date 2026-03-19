@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	// import {onMount} from "svelte";
 	//
 	// onMount(async () => {
@@ -73,4 +73,4 @@
 			{/each}
 		</div>
 	</div>
-</section>
+</section> -->

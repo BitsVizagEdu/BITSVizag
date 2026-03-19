@@ -1,27 +1,118 @@
+<script>
+	import { onDestroy } from 'svelte';
+	import { browser } from '$app/environment';
+
+	let isMobileMenuOpen = false;
+
+	function toggleMobileMenu() {
+		isMobileMenuOpen = !isMobileMenuOpen;
+	}
+
+	function closeMobileMenu() {
+		isMobileMenuOpen = false;
+	}
+
+	/** @param {KeyboardEvent} event */
+	function handleEscape(event) {
+		if (event.key === 'Escape') {
+			closeMobileMenu();
+		}
+	}
+
+	$: if (browser) {
+		document.body.classList.toggle('secondnav-drawer-open', isMobileMenuOpen);
+	}
+
+	onDestroy(() => {
+		if (browser) {
+			document.body.classList.remove('secondnav-drawer-open');
+		}
+	});
+</script>
+
+<svelte:window on:keydown={handleEscape} />
+
 <nav>
 	<div class="wrapper">
-		<ul class="nav-links">
-			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/Students">Students</a></li>
-			<li><a href="/Industry-Linkages">Industry & International Linkages</a></li>
-			<li><a href="/infrastructure">Infrastructure</a></li>
-			<li><a href="/finance-quality">Finance & Quality</a></li>
-			<li><a href="/Mandatory">Disclosures</a></li>
+		<div class="mobile-visible-links">
+			<a href="/gallery" class="mobile-visible-link" on:click={closeMobileMenu}>Gallery</a>
+			<a href="/Students" class="mobile-visible-link" on:click={closeMobileMenu}>Students</a>
+			<a
+				href="/infrastructure"
+				class="mobile-visible-link"
+				title="Infrastructure"
+				aria-label="Infrastructure"
+				on:click={closeMobileMenu}>Infrastructure</a
+			>
+			<a href="/contactus" class="mobile-visible-link" on:click={closeMobileMenu}>Contact</a>
+		</div>
+
+		<button
+			type="button"
+			class="mobile-menu-btn"
+			on:click={toggleMobileMenu}
+			aria-label="Open quick links sidebar"
+			aria-expanded={isMobileMenuOpen}
+		>
+			{#if isMobileMenuOpen}
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="h-5 w-5">
+					<path
+						d="M6 6l12 12M18 6 6 18"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			{:else}
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="h-5 w-5">
+					<path
+						d="M4 7h16M4 12h16M4 17h16"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			{/if}
+		</button>
+
+		<ul class="nav-links {isMobileMenuOpen ? 'drawer-open' : ''}">
+			<li class="mobile-featured-hidden"><a href="/gallery" on:click={closeMobileMenu}>Gallery</a></li>
+			<li class="mobile-featured-hidden"><a href="/Students" on:click={closeMobileMenu}>Students</a></li>
+			<li><a href="/Industry-Linkages" on:click={closeMobileMenu}>Industry & International Linkages</a></li>
+			<li class="mobile-featured-hidden">
+				<a href="/infrastructure" on:click={closeMobileMenu}>Infrastructure</a>
+			</li>
+			<li><a href="/finance-quality" on:click={closeMobileMenu}>Finance & Quality</a></li>
+			<li><a href="/Mandatory" on:click={closeMobileMenu}>Disclosures</a></li>
 			<li>
 				<a
 					href="https://docs.google.com/forms/d/e/1FAIpQLSeLM-fVFfXfLMtIzC2QcO-djxj14gqkW1F18eGdqG9m9mt-Sg/viewform"
-					target="_blank">Online Grievances</a
+					target="_blank"
+					on:click={closeMobileMenu}>Online Grievances</a
 				>
 			</li>
-			<li><a href="/contactus">Contact Us</a></li>
+			<li class="mobile-featured-hidden"><a href="/contactus" on:click={closeMobileMenu}>Contact Us</a></li>
 		</ul>
 	</div>
+
+	{#if isMobileMenuOpen}
+		<button
+			type="button"
+			class="mobile-backdrop"
+			on:click={closeMobileMenu}
+			aria-label="Close quick links sidebar"
+		></button>
+	{/if}
 </nav>
 
 <style>
 	/* Fonts are loaded in app.html */
 
 	nav {
+		--middlenav-mobile-height: 56px;
+		--secondnav-mobile-height: 50px;
 		position: sticky;
 		top: 56px; /* Below Middlenav */
 		z-index: 997;
@@ -39,6 +130,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: stretch;
+	}
+
+	.mobile-visible-links,
+	.mobile-menu-btn,
+	.mobile-backdrop {
+		display: none;
+	}
+
+	.mobile-visible-link {
+		text-decoration: none;
 	}
 
 	.nav-links {
@@ -74,6 +175,7 @@
 		align-items: center;
 		font-weight: 500;
 		font-family: 'Roboto', sans-serif;
+
 		font-weight: 600;
 	}
 
@@ -118,6 +220,175 @@
 			letter-spacing: 0.02em;
 			background: rgba(255, 255, 255, 0.05);
 			border: 1px solid rgba(255, 255, 255, 0.1);
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		nav {
+			overflow: visible;
+			z-index: 1001;
+		}
+
+		nav .wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: var(--secondnav-mobile-height);
+			padding: 0 10px;
+			overflow: visible;
+			gap: 7px;
+		}
+
+		.mobile-visible-links {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			align-items: center;
+			gap: 6px;
+			flex: 1;
+			width: 100%;
+			min-width: 0;
+			justify-items: stretch;
+			overflow: hidden;
+		}
+
+		.mobile-visible-links::-webkit-scrollbar {
+			display: none;
+		}
+
+		.mobile-visible-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			min-width: 0;
+			min-height: 32px;
+			padding: 6px 5px;
+			font-size: 10.5px;
+			font-weight: 700;
+			color: rgba(255, 255, 255, 0.96);
+			background: rgba(255, 255, 255, 0.12);
+			border: 1px solid rgba(255, 255, 255, 0.24);
+			border-radius: 9px;
+			white-space: nowrap;
+			line-height: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-align: center;
+			letter-spacing: 0.01em;
+		}
+
+		.mobile-visible-link:active {
+			transform: scale(0.98);
+		}
+
+		.mobile-menu-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 36px;
+			width: 36px;
+			color: #ffffff;
+			background: rgba(255, 255, 255, 0.14);
+			border: 1px solid rgba(255, 255, 255, 0.24);
+			border-radius: 10px;
+			cursor: pointer;
+			transition: background 0.25s ease, transform 0.2s ease;
+			flex-shrink: 0;
+		}
+
+		.mobile-menu-btn:active {
+			transform: scale(0.96);
+		}
+
+		.mobile-menu-btn:hover {
+			background: rgba(255, 255, 255, 0.22);
+		}
+
+		.nav-links {
+			position: fixed;
+			top: calc(var(--middlenav-mobile-height) + var(--secondnav-mobile-height));
+			right: 0;
+			width: min(84vw, 320px);
+			height: calc(100dvh - (var(--middlenav-mobile-height) + var(--secondnav-mobile-height)));
+			padding: 14px;
+			margin: 0;
+			gap: 10px;
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: flex-start;
+			background: linear-gradient(180deg, #d22626 0%, #b91f1f 100%);
+			border-left: 1px solid rgba(255, 255, 255, 0.26);
+			border-top-left-radius: 16px;
+			border-bottom-left-radius: 16px;
+			box-shadow: -16px 0 34px rgba(8, 10, 20, 0.32);
+			overflow-y: auto;
+			transform: translateX(105%);
+			transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+			z-index: 1003;
+		}
+
+		.nav-links.drawer-open {
+			transform: translateX(0);
+		}
+
+		.nav-links li {
+			height: auto;
+		}
+
+		.nav-links li.mobile-featured-hidden {
+			display: none;
+		}
+
+		.nav-links li a {
+			font-size: 14px;
+			padding: 12px 15px;
+			border-radius: 10px;
+			background: rgba(255, 255, 255, 0.12);
+			border: 1px solid rgba(255, 255, 255, 0.22);
+			justify-content: flex-start;
+			text-transform: none;
+			white-space: normal;
+			line-height: 1.35;
+		}
+
+		.nav-links li a:hover {
+			transform: none;
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		.mobile-backdrop {
+			display: block;
+			position: fixed;
+			top: calc(var(--middlenav-mobile-height) + var(--secondnav-mobile-height));
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border: 0;
+			background: rgba(8, 12, 26, 0.38);
+			backdrop-filter: blur(2px);
+			z-index: 1002;
+		}
+
+		@media screen and (max-width: 420px) {
+			nav .wrapper {
+				padding: 0 8px;
+				gap: 6px;
+			}
+
+			.mobile-menu-btn {
+				width: 34px;
+				height: 34px;
+			}
+
+			.mobile-visible-links {
+				gap: 5px;
+			}
+
+			.mobile-visible-link {
+				min-height: 30px;
+				font-size: 9.5px;
+				padding: 5px 4px;
+			}
 		}
 	}
 </style>
