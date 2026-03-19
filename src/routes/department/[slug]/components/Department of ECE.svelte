@@ -71,7 +71,7 @@
 			/>
 		</div>
 	</div>
-	<div class="hidden md:flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
+	<div class="flex flex-col py-6 md:py-10 text-justify text-[15px] md:text-base text-gray-700 flex flex-col gap-4 md:gap-5 leading-relaxed max-w-5xl mx-auto px-1 md:px-0">
 		<div>
 			<p>
 				The Department of Electronics and Communication Engineering (ECE) at BITS Vizag Engineering
@@ -202,7 +202,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="facilities" class="flex gap-20 py-10 facilities">
+			<div
+				id="facilities"
+				class="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-20 w-full max-w-5xl mx-auto py-10 px-2 lg:px-0"
+			>
 				<div class="flex-1 flex flex-col gap-3 md:gap-4">
 				<div class="flex items-center gap-4 bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
 					<div class="shrink-0 text-blue-600 bg-blue-50 p-2 md:p-2.5 rounded-lg group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
@@ -650,7 +653,7 @@
 		</div>
 	</div>
 	
-	<div class="flex md:hidden flex-col gap-3 px-2 md:px-0 mt-4 md:mt-0 pb-4">
+	<div class="hidden flex-col gap-3 px-2 md:px-0 mt-4 md:mt-0 pb-4">
 		<p class="text-[14px] leading-relaxed text-slate-700 text-left">The Department of Electronics and Communication Engineering (ECE) at BITS Vizag Engineering College is an integral part of the institution's commitment to providing high-quality education and research opportunities in the field of electronics and communication.</p>
 		<ul class="flex flex-col gap-2 mt-2">
             <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">

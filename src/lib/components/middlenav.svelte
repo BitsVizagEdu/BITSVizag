@@ -1,10 +1,33 @@
 <script>
 	let activeCourseTab = 'ug';
 	let isMobileMenuOpen = false;
+	let isMobileCoursesDropdownOpen = false;
 	let activeMobileDropdown = ''; // To track the currently open dropdown in mobile
+
+	const mobileQuickCourseLinks = [
+		{ label: 'CSE', href: '/department/Department%20of%20CSE', level: 'UG' },
+		{ label: 'ECE', href: '/department/Department%20of%20ECE', level: 'UG' },
+		{ label: 'EEE', href: '/department/Department%20of%20EEE', level: 'UG' },
+		{ label: 'Mechanical', href: '/department/Department%20of%20MECH', level: 'UG' },
+		{ label: 'Civil', href: '/department/Department%20of%20CIVIL', level: 'UG' },
+		{ label: 'BS&H', href: '/department/Department%20of%20BS%26H', level: 'UG' },
+		{
+			label: 'CSE (AI & ML)',
+			href: '/department/Department%20of%20CSE%20(AI%20%26%20ML)',
+			level: 'UG'
+		},
+		{
+			label: 'CSE (Cyber Security)',
+			href: '/department/Department%20of%20CSE%20(Cyber%20Security)',
+			level: 'UG'
+		},
+		{ label: 'MBA', href: '/department/Department%20of%20MBA', level: 'PG' },
+		{ label: 'M.Tech', href: '/courses/Post-Graduation', level: 'PG' }
+	];
 
 	function toggleMobileMenu() {
 		isMobileMenuOpen = !isMobileMenuOpen;
+		isMobileCoursesDropdownOpen = false;
 		if (!isMobileMenuOpen) {
 			activeMobileDropdown = ''; // close all dropdowns when closing menu
 		}
@@ -12,6 +35,7 @@
 
 	/** @param {string} dropdownName */
 	function toggleMobileDropdown(dropdownName) {
+		isMobileCoursesDropdownOpen = false;
 		if (activeMobileDropdown === dropdownName) {
 			activeMobileDropdown = '';
 		} else {
@@ -19,13 +43,25 @@
 		}
 	}
 
+	function toggleMobileCoursesDropdown() {
+		isMobileCoursesDropdownOpen = !isMobileCoursesDropdownOpen;
+		if (isMobileCoursesDropdownOpen) {
+			activeMobileDropdown = '';
+		}
+	}
+
 	function closeMenus() {
 		isMobileMenuOpen = false;
 		activeMobileDropdown = '';
+		isMobileCoursesDropdownOpen = false;
 	}
 </script>
 
-<nav class={isMobileMenuOpen ? 'mobile-menu-active-state' : ''}>
+<nav
+	class={`${isMobileMenuOpen ? 'mobile-menu-active-state' : ''} ${isMobileCoursesDropdownOpen
+		? 'mobile-courses-open-state'
+		: ''}`.trim()}
+>
 	<div class="wrapper">
 		<div class="logo flex items-center">
 			<a href="/"
@@ -35,6 +71,39 @@
 					alt="BITS Vizag Logo"
 				/></a
 			>
+		</div>
+
+		<div class="mobile-quick-nav xl:hidden">
+			<div class="mobile-quick-links-track">
+				<a href="/aboutus/About-BITS" class="mobile-quick-link" on:click={closeMenus}>About Us</a>
+				<a href="/faculty/teaching-staff" class="mobile-quick-link" on:click={closeMenus}>Faculty</a>
+				<button
+					type="button"
+					class="mobile-quick-link mobile-courses-trigger {isMobileCoursesDropdownOpen ? 'open' : ''}"
+					on:click={toggleMobileCoursesDropdown}
+					aria-expanded={isMobileCoursesDropdownOpen}
+					aria-controls="mobile-courses-dropdown"
+				>
+					<span>Courses</span>
+					<i class="fa-solid fa-chevron-down"></i>
+				</button>
+				<a href="/facilities" class="mobile-quick-link" on:click={closeMenus}>Facilities</a>
+				<a href="/placements" class="mobile-quick-link" on:click={closeMenus}>CDC</a>
+			</div>
+
+			<div
+				id="mobile-courses-dropdown"
+				class="mobile-courses-dropdown {isMobileCoursesDropdownOpen ? 'open' : ''}"
+			>
+				<div class="mobile-courses-dropdown-inner">
+					{#each mobileQuickCourseLinks as course}
+						<a href={course.href} class="mobile-course-link" on:click={closeMenus}>
+							<span>{course.label}</span>
+							<small>{course.level}</small>
+						</a>
+					{/each}
+				</div>
+			</div>
 		</div>
 
 		<!-- Mobile Overlay Backdrop -->
@@ -63,7 +132,7 @@
 			<li><a href="/" on:click={closeMenus}>Home</a></li>
 
 			<!-- About Us -->
-			<li>
+			<li class="mobile-priority-item">
 				<a href="/aboutus/About-BITS" class="desktop-item">About Us</a>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -192,7 +261,7 @@
 			</li>
 
 			<!-- Courses -->
-			<li on:mouseleave={() => (activeCourseTab = 'ug')}>
+			<li class="mobile-priority-item" on:mouseleave={() => (activeCourseTab = 'ug')}>
 				<a href="/courses/Under-Graduation" class="desktop-item">Courses</a>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -503,7 +572,7 @@
 			</li>
 
 			<!-- Faculty -->
-			<li>
+			<li class="mobile-priority-item">
 				<a href="/faculty/teaching-staff" class="desktop-item">Faculty</a>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -609,7 +678,7 @@
 			</li>
 
 			<!-- Facilities -->
-			<li>
+			<li class="mobile-priority-item">
 				<a href="/facilities" class="desktop-item">Facilities</a>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -745,7 +814,7 @@
 			</li>
 
 			<!-- CDC (Career Development Cell) -->
-			<li>
+			<li class="mobile-priority-item">
 				<a href="/placements" class="desktop-item">CDC</a>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -824,6 +893,10 @@
 		z-index: 99999 !important;
 	}
 
+	nav.mobile-courses-open-state {
+		z-index: 1006;
+	}
+
 	nav {
 		position: sticky;
 		top: 0;
@@ -849,6 +922,10 @@
 
 	.wrapper .logo img {
 		width: 100px;
+	}
+
+	.mobile-quick-nav {
+		display: none;
 	}
 
 	.wrapper .nav-links {
@@ -984,25 +1061,199 @@
 			box-sizing: border-box;
 		}
 
+		:global(body.secondnav-drawer-open) .mobile-quick-nav {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		:global(body.secondnav-drawer-open) .mobile-courses-dropdown {
+			max-height: 0 !important;
+			opacity: 0 !important;
+			pointer-events: none !important;
+		}
+
 		nav {
 			z-index: 999;
 			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 		}
 
 		nav .wrapper {
-			justify-content: space-between;
-			padding: 0 20px;
-			height: 70px;
+			display: grid;
+			grid-template-columns: 56px minmax(0, 1fr) 56px;
+			align-items: center;
+			padding: 0 12px;
+			height: 56px;
+			column-gap: 8px;
+		}
+
+		.logo {
+			grid-column: 1;
+			flex-shrink: 0;
 		}
 
 		.logo img {
 			display: block;
-			width: 75px;
+			width: 50px;
+		}
+
+		.mobile-quick-nav {
+			grid-column: 2;
+			display: block !important;
+			width: 100%;
+			min-width: 0;
+			position: relative;
+		}
+
+		.mobile-quick-links-track {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 7px;
+			overflow-x: auto;
+			overflow-y: hidden;
+			padding: 0 2px;
+			scroll-padding-inline: 6px;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+		}
+
+		.mobile-quick-links-track::-webkit-scrollbar {
+			display: none;
+		}
+
+		.mobile-quick-link {
+			flex: 0 0 auto;
+			min-height: 30px;
+			padding: 5px 9px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 6px;
+			border-radius: 999px;
+			border: 1px solid #d9e3f1;
+			background: #f8fbff;
+			color: #1e293b;
+			font-size: 10.5px;
+			font-weight: 700;
+			letter-spacing: 0.01em;
+			text-decoration: none;
+			text-align: center;
+			line-height: 1;
+			white-space: nowrap;
+			font-family: 'Roboto', sans-serif;
+			transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+		}
+
+		.mobile-quick-link:hover {
+			background: #eef5ff;
+			border-color: #bfd7f7;
+			color: #1d4ed8;
+		}
+
+		.mobile-courses-trigger {
+			cursor: pointer;
+			width: auto;
+		}
+
+		.mobile-courses-trigger i {
+			font-size: 10px;
+			color: #64748b;
+			transition: transform 0.25s ease, color 0.2s ease;
+		}
+
+		.mobile-courses-trigger.open {
+			background: #eaf3ff;
+			border-color: #2672d5;
+			color: #1d4ed8;
+		}
+
+		.mobile-courses-trigger.open i {
+			transform: rotate(180deg);
+			color: #1d4ed8;
+		}
+
+		.mobile-courses-dropdown {
+			position: absolute;
+			top: calc(100% + 7px);
+			left: 0;
+			right: 0;
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			pointer-events: none;
+			transform: translateY(-6px);
+			transition: max-height 0.3s ease, opacity 0.22s ease, transform 0.22s ease;
+			z-index: 1001;
+		}
+
+		.mobile-courses-dropdown.open {
+			max-height: 68vh;
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0);
+		}
+
+		.mobile-courses-dropdown-inner {
+			background: #ffffff;
+			border: 1px solid #dbe5f2;
+			border-radius: 14px;
+			padding: 10px;
+			box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 8px;
+		}
+
+		.mobile-course-link {
+			min-height: 44px;
+			padding: 10px 12px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			border-radius: 10px;
+			border: 1px solid #e2e8f0;
+			background: #f8fafc;
+			text-decoration: none;
+			transition: background 0.2s ease, border-color 0.2s ease;
+		}
+
+		.mobile-course-link:hover {
+			background: #eef5ff;
+			border-color: #bfdbfe;
+		}
+
+		.mobile-course-link span {
+			font-size: 12.5px;
+			font-weight: 700;
+			color: #1e293b;
+			line-height: 1.2;
+			white-space: normal;
+		}
+
+		.mobile-course-link small {
+			flex-shrink: 0;
+			font-size: 10px;
+			font-weight: 700;
+			letter-spacing: 0.07em;
+			text-transform: uppercase;
+			color: #2563eb;
+			background: #e8f1ff;
+			padding: 2px 7px;
+			border-radius: 999px;
 		}
 
 		/* ── Show hamburger ── */
 		.wrapper .btn {
 			display: block;
+		}
+
+		.wrapper .btn.menu-btn {
+			grid-column: 3;
+			justify-self: end;
+			margin-left: 0;
+			flex-shrink: 0;
 		}
 
 		/* ════════════════════════════════
@@ -1056,6 +1307,10 @@
 			height: auto !important;
 			width: 100% !important;
 			margin: 0 !important;
+		}
+
+		.nav-links li.mobile-priority-item {
+			display: none !important;
 		}
 
 		/* Direct links (e.g. Home) */
@@ -1441,12 +1696,42 @@
 
 	@media screen and (max-width: 768px) {
 		nav .wrapper {
-			height: 64px;
-			padding: 0 16px;
+			grid-template-columns: 58px minmax(0, 1fr) 58px;
+			height: 56px;
+			padding: 0 10px;
+			column-gap: 6px;
 		}
 
 		.logo img {
-			width: 68px !important;
+			width: 54px !important;
+		}
+
+		.mobile-quick-links-track {
+			gap: 5px;
+		}
+
+		.mobile-quick-link {
+			min-height: 29px;
+			font-size: 10px;
+			padding: 4px 8px;
+		}
+
+		.mobile-courses-dropdown {
+			top: calc(100% + 6px);
+		}
+
+		.mobile-courses-dropdown.open {
+			max-height: 64vh;
+		}
+
+		.mobile-courses-dropdown-inner {
+			grid-template-columns: 1fr;
+			max-height: 58vh;
+			overflow-y: auto;
+		}
+
+		.mobile-course-link {
+			padding: 9px 10px;
 		}
 
 		.wrapper .nav-links {
@@ -1474,12 +1759,49 @@
 
 	@media screen and (max-width: 576px) {
 		nav .wrapper {
-			height: 58px;
-			padding: 0 12px;
+			grid-template-columns: 54px minmax(0, 1fr) 54px;
+			height: 56px;
+			padding: 0 8px;
+			column-gap: 4px;
 		}
 
 		.logo img {
-			width: 60px !important;
+			width: 50px !important;
+		}
+
+		.mobile-quick-links-track {
+			gap: 4px;
+		}
+
+		.mobile-quick-link {
+			min-height: 28px;
+			font-size: 9.5px;
+			padding: 4px 7px;
+		}
+
+		.mobile-courses-dropdown {
+			top: calc(100% + 6px);
+		}
+
+		.mobile-courses-dropdown-inner {
+			padding: 8px;
+			gap: 6px;
+			border-radius: 12px;
+		}
+
+		.mobile-course-link {
+			min-height: 42px;
+			padding: 8px 9px;
+			border-radius: 9px;
+		}
+
+		.mobile-course-link span {
+			font-size: 12px;
+		}
+
+		.mobile-course-link small {
+			font-size: 9px;
+			padding: 2px 6px;
 		}
 
 		.wrapper .nav-links {

@@ -36,11 +36,38 @@
 	siteName="BITS Vizag"
 	{structuredData}
 />
-<Pheader/>
-<Mous/>
-<Coordinates/>
-<CoordinatesStudent/>
-<Companies/>
-<Statistics/>
-<Startup/>
-<Pnews/>
+
+<main class="cdc-page">
+	<Pheader />
+	<section class="cdc-section"><Mous /></section>
+	<section class="cdc-section cdc-section-soft"><Coordinates /></section>
+	<section class="cdc-section"><CoordinatesStudent /></section>
+	<section class="cdc-section cdc-section-soft"><Companies /></section>
+	<section class="cdc-section"><Statistics /></section>
+	<section class="cdc-section cdc-section-soft"><Startup /></section>
+	<section class="cdc-section"><Pnews /></section>
+</main>
+
+<style>
+	.cdc-page {
+		background:
+			radial-gradient(circle at 12% 0%, rgba(37, 99, 235, 0.08), transparent 35%),
+			linear-gradient(180deg, #f4f8ff 0%, #ffffff 28%, #f8fbff 100%);
+	}
+
+	.cdc-section {
+		position: relative;
+	}
+
+	.cdc-section + .cdc-section {
+		margin-top: clamp(0.2rem, 0.65vw, 0.9rem);
+	}
+
+	.cdc-section-soft::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(241, 245, 255, 0.64), rgba(248, 250, 255, 0));
+		pointer-events: none;
+	}
+</style>

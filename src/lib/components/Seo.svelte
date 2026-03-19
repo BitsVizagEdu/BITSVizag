@@ -5,6 +5,7 @@
 	export let url;
 	export let imageUrl;
 	export let siteName;
+	/** @type {Record<string, unknown> | null} */
 	export let structuredData = null;
 </script>
 
