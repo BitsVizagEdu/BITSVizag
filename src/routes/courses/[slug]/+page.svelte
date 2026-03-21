@@ -6,7 +6,6 @@
 		showNavBar,
 		toggleIsActiveTab
 	} from '$lib/stores/store.js';
-	import SideNav from '$lib/components/SideNav.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import { page } from '$app/stores';
 
@@ -70,18 +69,41 @@
 	{structuredData}
 />
 
-{#if !$showNavBar}
-	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">
-		<SideNav
-			{items}
-			activeTab={currentSlug}
-			title="Academic Levels"
-			basePath="/courses"
-			onSelect={(item) => setActiveTabValue(item)}
-		/>
 
-		<!-- Main Content Area -->
-		<main class="flex-1 p-4 lg:p-6">
+
+{#if !$showNavBar}
+	<div class="min-h-screen bg-slate-50/30">
+		<!-- Course Navigation Tabs -->
+		<div class="w-full bg-white border-b border-slate-200">
+			<div class="max-w-6xl mx-auto px-4 lg:px-6 py-6">
+				<h1 class="text-3xl font-bold text-slate-900 mb-6">Engineering Courses</h1>
+				<div class="flex gap-3 flex-wrap">
+					<a
+						href="/courses/Under-Graduation"
+						class="px-6 py-3 rounded-lg font-bold transition-all duration-200
+						{currentSlug === 'Under-Graduation'
+							? 'bg-[#2672d5] text-white shadow-lg'
+							: 'bg-slate-100 text-slate-700 hover:bg-slate-200'}"
+					>
+						<i class="fa-solid fa-scroll mr-2"></i>
+						Under Graduation
+					</a>
+					<a
+						href="/courses/Post-Graduation"
+						class="px-6 py-3 rounded-lg font-bold transition-all duration-200
+						{currentSlug === 'Post-Graduation'
+							? 'bg-[#2672d5] text-white shadow-lg'
+							: 'bg-slate-100 text-slate-700 hover:bg-slate-200'}"
+					>
+						<i class="fa-solid fa-award mr-2"></i>
+						Post Graduation
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Content Area - Full Width Centered -->
+		<main class="w-full max-w-6xl mx-auto p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
 				{#if currentSlug === 'Under-Graduation'}
 					<UnderGraduation />

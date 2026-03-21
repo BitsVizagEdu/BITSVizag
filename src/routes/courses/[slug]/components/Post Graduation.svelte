@@ -1,10 +1,12 @@
 <section class=" bg-slate-200 3xs:p-4 md:p-10 rounded-lg">
 	<div>
 		<h1 class="text-4xl font-bold text-center mb-10 text-red1">Post Graduation Programme</h1>
-		<div class="flex flex-col-reverse lg:flex-row items-center">
+		
+		<!-- M.Tech Section -->
+		<div class="flex flex-col-reverse lg:flex-row items-center mb-12">
 			<div class="lg:w-[50%] pr-7">
 				<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0">
-					Master of Technology
+					Master of Technology (M.Tech)
 				</h1>
 				<br />
 				<h1 class="text-justify">
@@ -25,142 +27,17 @@
 			</div>
 
 			<div class="w-[75%] lg:w-[50%]">
-				<img src="/pg1.jpg" alt="" />
+				<img src="/pg1.jpg" alt="M.Tech Program" />
 			</div>
 		</div>
-		<br />
-		<div>
-			<h1 class="text-2xl">Courses Offered</h1>
-		</div>
-		<br />
-		<!-- ====== Table Section Start -->
-		<section class="bg-white">
-			<div class="container mx-auto">
-				<div class="-mx-4 flex flex-wrap">
-					<div class="w-[100%] px-4">
-						<div class="max-w-full overflow-x-auto">
-							<table class="w-full table-auto">
-								<thead>
-									<tr class="bg-red1 bg-opacity-90 text-center">
-										<th
-											class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-										>
-											Sl.No
-										</th>
-										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-										>
-											Courses Offered
-										</th>
-										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-										>
-											Intake
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											1
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											CIVIL(STRUCTURAL ENGINEERING-SE)
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											18
-										</td>
-									</tr>
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											2
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											EEE(POWER ELECTRONICS & ELECTRICAL DRIVES-PEED)
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											18
-										</td>
-									</tr>
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											3
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											ECE(VLSI DESIGN-VLSI)
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											18
-										</td>
-									</tr>
-
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											4
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											MECHANICAL(CAD-CAM)
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											18
-										</td>
-									</tr>
-
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											5
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											CSE(COMPUTER SCIENCE & TECHNOLOGY-CST)
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											18
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 	</div>
-	<br />
+
+	<!-- MBA Section -->
 	<div>
 		<div class="flex flex-col-reverse lg:flex-row items-center">
 			<div class=" lg:w-[50%] pr-7">
 				<h1 class="text-2xl xl:text-3xl font-bold mt-5 text-center lg:text-left lg:mt-0">
-					Master of Business Administration
+					Master of Business Administration (MBA)
 				</h1>
 				<br />
 				<h1 class="text-justify">
@@ -179,98 +56,8 @@
 			</div>
 
 			<div class="w-[75%] lg:w-[50%]">
-				<img src="/pg.jpg" alt="" />
+				<img src="/pg.jpg" alt="MBA Program" />
 			</div>
 		</div>
-		<br />
-		<div>
-			<h1 class="text-2xl">Courses Offered</h1>
-		</div>
-		<br />
-		<section class="bg-white">
-			<div class="container mx-auto">
-				<div class="-mx-4 flex flex-wrap">
-					<div class="w-full px-4">
-						<div class="max-w-full overflow-x-auto">
-							<table class="w-full table-auto">
-								<thead>
-									<tr class="bg-red1 bg-opacity-90 text-center">
-										<th
-											class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-										>
-											Sl.No
-										</th>
-										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-										>
-											Courses Offered
-										</th>
-										<th
-											class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-										>
-											Intake
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											1
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											HUMAN RESOURCES
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											60
-										</td>
-									</tr>
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											2
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											MARKETING
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											60
-										</td>
-									</tr>
-
-									<tr>
-										<td
-											class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											3
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-										>
-											FINANCE
-										</td>
-										<td
-											class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-										>
-											60
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 	</div>
 </section>
