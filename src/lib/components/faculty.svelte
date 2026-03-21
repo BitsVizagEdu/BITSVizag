@@ -8,16 +8,15 @@
 	import FacultySkeleton from '$lib/components/faculty/FacultySkeleton.svelte';
 
 	const departmentOptions = [
-		'All Departments',
+		'ALL DEPARTMENTS',
 		'CSE',
 		'BS&H',
-		'CSE (AI & ML)',
 		'ECE',
 		'EEE',
-		'Mechanical',
-		'Civil',
+		'MECHANICAL',
+		'CIVIL',
 		'MBA',
-		'M.Tech',
+		'M.TECH',
 		'Lab Programmers'
 	];
 
@@ -26,6 +25,36 @@
 		'Nidigantla Raju': 17,
 		'D.Sriya Rani': 1.7,
 		'KONA JANSHI VENKATA MODHA SAI SRINIJA': 1,
+		'Gudivada sushma': 1,
+		'I.Saranya': 5,
+		'PUSARLA LAVANYA': 5,
+		'K. Lavanya': 0.9,
+		'Dr.Shahazadi Begum': 6,
+		'Dr Y V Bhaskara Lakshmi': 15,
+		'Dr .B.Kiranmai': 25,
+		'Ravi Kishore Maddugaru': 15,
+		'Ch SANTOSHI KUMARI': 3,
+		'Vishnu murty tammineni': 20,
+		'P Arun Tez': 16,
+		'M V S PREM SAGAR': 15,
+		'KAMARAJU VECHALAPU': 14,
+		'PATHEM UMA CHAITHANYA': 16,
+		'MALLAPU SATYANARAYANA': 14,
+		'Dr A S Bhanu Prasanna': 19,
+		'Vadapalli Preetham Kumar': 0.7,
+		'Vikas Ranjan': 11,
+		'B G S Prasad': 14,
+		'B.santoshi kumari': 8,
+		'NARESHKUMAR KUPPILI': 11,
+		'Sairama': 3,
+		'G.JYOTHI': 15,
+		'P. V.Murali': 25,
+		'Dr Paromita Mukherjee': 19,
+		'Piyali Varma': 20,
+		'M Mounika': 9,
+		'Dr.T.Suneetha Rani': 12,
+		'P.Surya Kumari': 16,
+		'B V KAVITHA': 13,
 		'G kishore': 4,
 		'B.PRASAD': 13,
 		'M.Sai prasanna': 2,
@@ -92,7 +121,18 @@
 			department: 'CSE',
 			mobile: '8309666292',
 			email: 'saisrinija226@gmail.com',
-			linkedin: '',
+			linkedin: 'https://www.linkedin.com/in/kona-janshi-venkata-modha-sai-srinija-439b5718b',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Gudivada sushma',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8328181573',
+			email: 'gudivadasushma30@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/sushma-gudivada-58563b335',
 			photo: ''
 		},
 		{
@@ -457,13 +497,338 @@
 			email: 'mahe2vec@gmail.com',
 			linkedin: 'https://in.linkedin.com/in/palakollu-mahesh-13ab21335',
 			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'I.Saranya',
+			qualification: 'M tech',
+			designation: 'Assistant Professor',
+			department: 'Civil',
+			mobile: '7080907889',
+			email: 'saranya.imandi@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'PUSARLA LAVANYA',
+			qualification: 'M.TECH',
+			designation: 'Assistant Professor',
+			department: 'Civil',
+			mobile: '7981764784',
+			email: 'lavanyapusarla9494@gmail.com',
+			linkedin: 'www.linkedin.com/in/lavanya-pusarla-a32a7838b',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'K. Lavanya',
+			qualification: 'M.tech',
+			designation: 'Assistant Professor',
+			department: 'Civil',
+			mobile: '9182357411',
+			email: 'kotnilavanya1013@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Dr.Shahazadi Begum',
+			qualification: 'Ph.D M.Tech B.Tech Inter SSC',
+			designation: 'Associate Professor',
+			department: 'Civil',
+			mobile: '9032972944',
+			email: 'drshahazadibegum@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/dr-shahazadi-begum-788638335',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Dr Y V Bhaskara Lakshmi',
+			qualification: 'PhD, M Tech, B Tech',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '7893676891',
+			email: 'lakshmijeevan2000@gmail.com',
+			linkedin:
+				'https://www.linkedin.com/in/dr-bhaskara-lakshmi-yaddanapudi-439b58335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Dr .B.Kiranmai',
+			qualification: 'Ph.D',
+			designation: 'Professor',
+			department: 'ECE',
+			mobile: '8500267193',
+			email: 'kbabburu@gmail.com',
+			linkedin: 'www.linkedin.com/in/kiranmai-b-5b5b4a3b8',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Ravi Kishore Maddugaru',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '7989527137',
+			email: 'mrkishore7709@gmail.com',
+			linkedin:
+				'https://www.linkedin.com/in/dr-m-ravi-kishore-6416448b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Ch SANTOSHI KUMARI',
+			qualification: 'Mtech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '7731993013',
+			email: 'chintass3796@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vishnu murty tammineni',
+			qualification: 'M. Tech',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '9154628433',
+			email: 'vishnutbits@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'P Arun Tez',
+			qualification: 'MTECH',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9494518461',
+			email: 'bitsaruntez@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'M V S PREM SAGAR',
+			qualification: 'MTECH MBA',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9985742615',
+			email: 'sagarmanthri@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/sagar-manthri-726979113?trk=contact-info',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'KAMARAJU VECHALAPU',
+			qualification: 'Ph.D.',
+			designation: 'Associate Professor',
+			department: 'EEE',
+			mobile: '9963268636',
+			email: 'raju.vechalapu@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/dr-kamaraju-vechalapu-826b5b335?utm_source',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'PATHEM UMA CHAITHANYA',
+			qualification: 'Ph D',
+			designation: 'Associate Professor',
+			department: 'Mechanical',
+			mobile: '9817049898',
+			email: 'uma.nitw@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/dr-pathem-uma-chaithanya',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'MALLAPU SATYANARAYANA',
+			qualification: 'M Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9491626873',
+			email: 'satyamallapu@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/satyanarayana-mallapu-200444242',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Dr A S Bhanu Prasanna',
+			qualification: 'Ph D',
+			designation: 'Associate Professor',
+			department: 'Mechanical',
+			mobile: '8008633321',
+			email: 'bhanu.3549@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vadapalli Preetham Kumar',
+			qualification: 'M. Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9701161391',
+			email: 'preethamraju96@gmail.com',
+			linkedin:
+				'https://www.linkedin.com/in/preetham-kumar-341521125?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vikas Ranjan',
+			qualification: '(Ph.D)',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9391339296',
+			email: 'vikas.ranjan7@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'B G S Prasad',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9298052173',
+			email: 'sivaprasadh14@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'B.santoshi kumari',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8688914413',
+			email: 'santoshi.bugatha@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'NARESHKUMAR KUPPILI',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9550448999',
+			email: 'nareshpatnaik.k@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Sairama',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8074558577',
+			email: 'sairamalanda96@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'G.JYOTHI',
+			qualification:
+				'M.Phil(Maths); M.Sc(Pure Maths); B.Sc(M.P.C); Inter(M.P.C)',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9989609399',
+			email: 'jyothi.satapathy@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'P. V.Murali',
+			qualification: 'M.A, B. Ed (Ph.,D)',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9492535197',
+			email: 'pvmurali2000@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Dr Paromita Mukherjee',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9313184040',
+			email: 'drparomitabitsvizag@gmail.com',
+			linkedin:
+				'https://www.linkedin.com/in/dr-paromita-mukherjee-7b301771?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Piyali Varma',
+			qualification: 'MA (English Literature)',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9642932971',
+			email: 'mukherjeepiyali28@gmail.com',
+			linkedin:
+				'https://www.linkedin.com/in/piyali-varma-0794413b4?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'M Mounika',
+			qualification: 'M.Sc Mathematics, B.Ed.',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9515099654',
+			email: 'mounika.mondi@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/mondi-mounika-b73562283',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Dr.T.Suneetha Rani',
+			qualification: 'Ph.D',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '8008506949',
+			email: 'sunita.gandham@gmail.com',
+			linkedin: 'https://linkedin.com/in/dr-suneetha-rani-gandham-a2b68113',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'P.Surya Kumari',
+			qualification: 'MSc (organic chemistry)',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9951934411',
+			email: 'suryakumari.p85@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'B V KAVITHA',
+			qualification: 'MSc (applied maths) BEd(PhD)',
+			designation: 'Senior Assistant Professor',
+			department: 'BS&H',
+			mobile: '9985388148',
+			email: 'sukkajatin@gmail.com',
+			linkedin: '',
+			photo: ''
 		}
 	].map((faculty) => ({
 		...faculty,
 		experience: experienceByName[faculty.name] ?? null
 	}));
 
-	let selectedDepartment = 'All Departments';
+	let selectedDepartment = 'ALL DEPARTMENTS';
 	let searchTerm = '';
 	let isLoading = true;
 
@@ -531,11 +896,11 @@
 	$: query = normalize(searchTerm);
 	$: filteredFaculty = facultyData.filter((person) => {
 		const departmentMatch =
-			selectedDepartment === 'All Departments'
+			selectedDepartment === 'ALL DEPARTMENTS'
 				? true
 				: selectedDepartment === 'Lab Programmers'
 					? isLabProgrammer(person.designation)
-					: person.department === selectedDepartment;
+					: normalize(person.department) === normalize(selectedDepartment);
 
 		const searchableText = normalize(
 			`${person.name} ${person.qualification} ${person.designation} ${person.department}`
@@ -552,6 +917,48 @@
 			(a, b) =>
 				getQualificationRank(b.qualification) - getQualificationRank(a.qualification)
 		);
+
+	const departmentDisplayOrder = [
+		'CSE',
+		'ECE',
+		'EEE',
+		'Mechanical',
+		'Civil',
+		'MBA',
+		'BS&H',
+		'CSE (AI & ML)',
+		'M.Tech'
+	];
+
+	$: groupedFacultyMembers = facultyMembers.reduce(
+		(groups, person) => {
+			if (!groups[person.department]) {
+				groups[person.department] = [];
+			}
+			groups[person.department].push(person);
+			return groups;
+		},
+		/** @type {Record<string, Array<(typeof facultyMembers)[number]>>} */ ({})
+	);
+
+	$: orderedDepartmentGroups = Object.entries(groupedFacultyMembers).sort(([a], [b]) => {
+		const indexA = departmentDisplayOrder.indexOf(a);
+		const indexB = departmentDisplayOrder.indexOf(b);
+
+		if (indexA === -1 && indexB === -1) {
+			return a.localeCompare(b);
+		}
+
+		if (indexA === -1) {
+			return 1;
+		}
+
+		if (indexB === -1) {
+			return -1;
+		}
+
+		return indexA - indexB;
+	});
 
 	$: labProgrammers = filteredFaculty
 		.filter((person) => isLabProgrammer(person.designation))
@@ -595,16 +1002,28 @@
 				<div class="results-wrap" in:fade={{ duration: 220 }} out:fade={{ duration: 180 }}>
 					{#if facultyMembers.length > 0}
 						<div class="group-block" in:fly={{ y: 20, duration: 420, easing: cubicOut }}>
-							<div class="faculty-grid">
-								{#each facultyMembers as person, index (person.name + person.mobile)}
-									<FacultyCard faculty={person} {index} />
-								{/each}
-							</div>
+							{#each orderedDepartmentGroups as [department, people]}
+								<section class="department-block">
+									<header class="department-header">
+										<h3>{department}</h3>
+										<p>{people.length} Faculty</p>
+									</header>
+									<div class="faculty-grid">
+										{#each people as person, index (person.name + person.mobile)}
+											<FacultyCard faculty={person} {index} />
+										{/each}
+									</div>
+								</section>
+							{/each}
 						</div>
 					{/if}
 
 					{#if labProgrammers.length > 0}
 						<div class="group-block" in:fly={{ y: 20, duration: 520, easing: cubicOut }}>
+							<header class="department-header">
+								<h3>Lab Programmers</h3>
+								<p>{labProgrammers.length} Faculty</p>
+							</header>
 							<div class="faculty-grid">
 								{#each labProgrammers as person, index (person.name + person.mobile)}
 									<FacultyCard faculty={person} isLab={true} {index} />
@@ -683,6 +1102,38 @@
 	.group-block {
 		display: grid;
 		gap: 0.9rem;
+	}
+
+	.department-block {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.department-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		padding: 0.5rem 0.2rem 0.15rem;
+		border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+	}
+
+	.department-header h3 {
+		margin: 0;
+		font-size: clamp(1rem, 1.5vw, 1.2rem);
+		font-weight: 800;
+		letter-spacing: 0.03em;
+		color: #0f172a;
+	}
+
+	.department-header p {
+		margin: 0;
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: #334155;
+		background: rgba(226, 232, 240, 0.8);
+		padding: 0.22rem 0.6rem;
+		border-radius: 999px;
 	}
 
 	.faculty-grid {
