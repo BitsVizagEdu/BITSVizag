@@ -31,160 +31,91 @@
 	</div>
 
 	<br />
-	<!-- ====== Table Section Start -->
-	<section class="bg-white">
-		<div class="container mx-auto">
-			<div class="-mx-4 flex flex-wrap">
-				<div class="w-full px-4">
-					<div class="max-w-full overflow-x-auto">
-						<table class="w-full table-auto">
-							<thead>
-								<tr class="bg-red1 bg-opacity-90 text-center">
-									<th
-										class="w-1/3 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-									>
-										Sl.No
-									</th>
-									<th
-										class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-									>
-										Courses Offered
-									</th>
-									<th
-										class="w-1/3 min-w-[160px] py-4 px-3 text-lg font-semibold lg:py-7 lg:px-4 text-white"
-									>
-										Intake
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										1
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Civil Engineering
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										60
-									</td>
-								</tr>
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										2
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Electrical and Electronic Engineering
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										60
-									</td>
-								</tr>
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										3
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Electronics and Communication Engineering
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										120
-									</td>
-								</tr>
-
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										4
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Mechanical Engineering
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										60
-									</td>
-								</tr>
-
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										5
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Computer Science Engineering
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										180
-									</td>
-								</tr>
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										6
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Computer Science Engineering- Artificial Intelligence <br /> & Machine Learning
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										60
-									</td>
-								</tr>
-								<tr>
-									<td
-										class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										7
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
-									>
-										Computer Science Engineering- <br />Cyber Security
-									</td>
-									<td
-										class="text-dark border-b border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
-									>
-										60
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+	<!-- Department Cards Grid -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+		<!-- Computer Science Engineering -->
+		<a href="/department/Department%20of%20CSE" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">Computer Science Engineering</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
 				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 180</p>
+				<div class="mt-auto inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
 			</div>
-		</div>
-	</section>
-	<!-- ====== Table Section End -->
+		</a>
+
+		<!-- CSE AI & ML -->
+		<a href="/department/Department%20of%20CSE%20(AI%20%26%20ML)" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">CSE - AI & Machine Learning</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 60</p>
+				<div class="inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
+			</div>
+		</a>
+
+		<!-- CSE Cyber Security -->
+		<a href="/department/Department%20of%20CSE%20(Cyber%20Security)" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">CSE - Cyber Security</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 60</p>
+				<div class="mt-auto inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
+			</div>
+		</a>
+
+		<!-- Electronics and Communication Engineering -->
+		<a href="/department/Department%20of%20ECE" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">Electronics & Communication Engineering</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 120</p>
+				<div class="mt-auto inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
+			</div>
+		</a>
+
+		<!-- Electrical and Electronic Engineering -->
+		<a href="/department/Department%20of%20EEE" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">Electrical & Electronic Engineering</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 60</p>
+				<div class="mt-auto inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
+			</div>
+		</a>
+
+		<!-- Mechanical Engineering -->
+		<a href="/department/Department%20of%20MECH" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">Mechanical Engineering</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 60</p>
+				<div class="mt-auto inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
+			</div>
+		</a>
+
+		<!-- Civil Engineering -->
+		<a href="/department/Department%20of%20CIVIL" class="group h-full">
+			<div class="bg-white rounded-xl shadow-sm hover:shadow-lg border border-slate-200 p-6 transition-all duration-300 hover:border-[#2672d5] cursor-pointer h-full flex flex-col">
+				<div class="flex items-center justify-between mb-4">
+					<h3 class="text-lg font-bold text-slate-900 group-hover:text-[#2672d5] transition-colors">Civil Engineering</h3>
+					<i class="fa-solid fa-arrow-right text-[#2672d5] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+				</div>
+				<p class="text-sm text-slate-600 mb-4">Intake: 60</p>
+				<div class="mt-auto inline-block px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-[#2672d5]">View Department</div>
+			</div>
+		</a>
+	</div>
+	<!-- End Department Cards -->
 </section>

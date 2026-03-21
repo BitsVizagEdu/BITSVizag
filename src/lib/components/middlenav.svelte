@@ -76,7 +76,7 @@
 		<div class="mobile-quick-nav xl:hidden">
 			<div class="mobile-quick-links-track">
 				<a href="/aboutus/About-BITS" class="mobile-quick-link" on:click={closeMenus}>About Us</a>
-				<a href="/faculty/teaching-staff" class="mobile-quick-link" on:click={closeMenus}>Faculty</a>
+				<a href="/faculty" class="mobile-quick-link" on:click={closeMenus}>Faculty</a>
 				<button
 					type="button"
 					class="mobile-quick-link mobile-courses-trigger {isMobileCoursesDropdownOpen ? 'open' : ''}"
@@ -261,362 +261,16 @@
 			</li>
 
 			<!-- Courses -->
-			<li class="mobile-priority-item" on:mouseleave={() => (activeCourseTab = 'ug')}>
-				<a href="/courses/Under-Graduation" class="desktop-item">Courses</a>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<button
-					type="button"
-					class="mobile-item {activeMobileDropdown === 'courses' ? 'active-dropdown' : ''}"
-					on:click={() => toggleMobileDropdown('courses')}>Courses</button
-				>
-				<div
-					class="mega-box courses-mega !max-w-[1200px] !h-auto {activeMobileDropdown === 'courses'
-						? 'mobile-show'
-						: ''}"
-				>
-					<div
-						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left min-h-[420px]"
-					>
-						<!-- Sidebar Menu -->
-						<div
-							class="w-full md:w-[280px] bg-slate-50/60 border-r border-slate-100 p-6 flex flex-col shrink-0 relative custom-sidebar"
-						>
-							<header
-								class="text-[11px] font-bold text-slate-800 uppercase tracking-widest px-4 mb-5 mt-2"
-							>
-								Levels of Study
-							</header>
-
-							<div class="flex flex-col gap-2 relative z-10 w-full">
-								<button
-									on:click={() => (activeCourseTab = 'ug')}
-									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent w-full
-										{activeCourseTab === 'ug'
-										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100 active'
-										: 'hover:bg-slate-100/80 text-slate-600'}"
-								>
-									<div
-										class="w-10 h-10 rounded-xl flex items-center justify-center transition-all {activeCourseTab ===
-										'ug'
-											? 'bg-blue-500 text-white shadow-sm'
-											: 'bg-white text-[#2672d5] border border-slate-100 shadow-sm'}"
-									>
-										<i class="fa-solid fa-scroll text-[16px]"></i>
-									</div>
-									<span
-										class="font-bold text-[15px] {activeCourseTab === 'ug'
-											? 'text-blue-600'
-											: 'text-slate-800'}">Under Graduation</span
-									>
-								</button>
-
-								<button
-									on:click={() => (activeCourseTab = 'pg')}
-									class="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent w-full
-										{activeCourseTab === 'pg'
-										? 'bg-white shadow-md shadow-blue-500/5 border-slate-100 active'
-										: 'hover:bg-slate-100/80 text-slate-600'}"
-								>
-									<div
-										class="w-10 h-10 rounded-xl flex items-center justify-center transition-all {activeCourseTab ===
-										'pg'
-											? 'bg-blue-500 text-white shadow-sm'
-											: 'bg-white text-[#2672d5] border border-slate-100 shadow-sm'}"
-									>
-										<i class="fa-solid fa-award text-[16px]"></i>
-									</div>
-									<span
-										class="font-bold text-[15px] {activeCourseTab === 'pg'
-											? 'text-blue-600'
-											: 'text-slate-800'}">Post Graduation</span
-									>
-								</button>
-							</div>
-
-							<!-- subtle decorative background on sidebar -->
-							<div
-								class="absolute bottom-0 left-0 w-full h-[150px] opacity-[0.03] pointer-events-none"
-								style="background: linear-gradient(to top, #2672d5 0%, transparent 100%);"
-							></div>
-						</div>
-
-						<!-- Tab Content Area -->
-						<div class="flex-1 p-8 md:p-10 bg-white relative">
-							{#if activeCourseTab === 'ug'}
-								<div class="animate-fade-in">
-									<header
-										class="text-[19px] font-bold text-slate-900 tracking-tight mb-7 px-1 flex items-center gap-3"
-									>
-										<span class="w-1.5 h-5 bg-blue-500 rounded-full inline-block shadow-sm"></span>
-										Under Graduation
-									</header>
-									<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-										<!-- UG Cards -->
-										<a
-											href="/department/Department%20of%20CSE"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-blue-50 text-blue-600">
-												<i class="fa-solid fa-laptop-code text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Computer Science & Engineering (CSE)</span
-												>
-												<span
-													class="text-[9px] text-blue-600 font-bold uppercase tracking-wider mt-0.5"
-													>Programme</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20ECE"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-indigo-50 text-indigo-600">
-												<i class="fa-solid fa-microchip text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Electronics & Communication Engineering (ECE)</span
-												>
-												<span
-													class="text-[9px] text-indigo-600 font-bold uppercase tracking-wider mt-0.5"
-													>Programme</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20CSE%20(AI%20%26%20ML)"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-purple-50 text-purple-600">
-												<i class="fa-solid fa-brain text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Artificial Intelligence & Machine Learning</span
-												>
-												<span
-													class="text-[9px] text-purple-600 font-bold uppercase tracking-wider mt-0.5"
-													>Specialization</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20EEE"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-yellow-50 text-yellow-600">
-												<i class="fa-solid fa-bolt-lightning text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Electrical & Electronics Engineering (EEE)</span
-												>
-												<span
-													class="text-[9px] text-yellow-600 font-bold uppercase tracking-wider mt-0.5"
-													>Programme</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20CSE%20(Cyber%20Security)"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-red-50 text-red-600">
-												<i class="fa-solid fa-shield-halved text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Cyber Security (CS)</span
-												>
-												<span
-													class="text-[9px] text-red-600 font-bold uppercase tracking-wider mt-0.5"
-													>Specialization</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20MECH"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-teal-50 text-teal-600">
-												<i class="fa-solid fa-gears text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Mechanical Engineering (MECH)</span
-												>
-												<span
-													class="text-[9px] text-teal-600 font-bold uppercase tracking-wider mt-0.5"
-													>Programme</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20BS%26H"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-emerald-50 text-emerald-600">
-												<i class="fa-solid fa-atom text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Basic Sciences & Humanities (BS&H)</span
-												>
-												<span
-													class="text-[9px] text-emerald-600 font-bold uppercase tracking-wider mt-0.5"
-													>Programme</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-										<a
-											href="/department/Department%20of%20CIVIL"
-											on:click={closeMenus}
-											class="course-card-mobile group flex items-center gap-4 p-3 rounded-xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300"
-										>
-											<div class="course-icon-bg shadow-sm shrink-0 bg-orange-50 text-orange-600">
-												<i class="fa-solid fa-hard-hat text-[14px]"></i>
-											</div>
-											<div class="flex flex-col text-left flex-1 min-w-0">
-												<span class="text-[15px] font-slate-800 tracking-wider"
-													>Civil Engineering (CIVIL)</span
-												>
-												<span
-													class="text-[9px] text-orange-600 font-bold uppercase tracking-wider mt-0.5"
-													>Programme</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
-										</a>
-									</div>
-								</div>
-							{:else if activeCourseTab === 'pg'}
-								<div class="animate-fade-in flex flex-col h-full">
-									<header
-										class="text-[19px] font-bold text-slate-900 tracking-tight mb-7 px-1 flex items-center gap-3"
-									>
-										<span class="w-1.5 h-5 bg-blue-500 rounded-full inline-block shadow-sm"></span>
-										Post Graduation
-									</header>
-									<div class="flex flex-col gap-4">
-										<!-- PG Cards -->
-										<a
-											href="/department/Department%20of%20MBA"
-											on:click={closeMenus}
-											class="group flex items-center gap-5 p-5 bg-slate-50/60 hover:bg-blue-50/40 rounded-2xl transition-all shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/10"
-										>
-											<div
-												class="w-12 h-12 flex items-center justify-center bg-white text-[#2672d5] border border-slate-100 rounded-xl group-hover:bg-[#2672d5] group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm shrink-0"
-											>
-												<i class="fa-solid fa-briefcase text-[18px]" />
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[15.5px] font-bold text-slate-800 leading-none group-hover:text-blue-600 transition-colors"
-													>MBA</span
-												>
-												<span
-													class="text-[10px] text-blue-600 font-bold uppercase tracking-widest mt-2"
-													>Management</span
-												>
-											</div>
-											<i class="fa-solid fa-chevron-right text-[11px] text-slate-300"></i>
-										</a>
-										<a
-											href="/courses/Post-Graduation"
-											on:click={closeMenus}
-											class="group flex items-center gap-5 p-5 bg-slate-50/60 hover:bg-blue-50/40 rounded-2xl transition-all shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/10"
-										>
-											<div
-												class="w-12 h-12 flex items-center justify-center bg-white text-[#2672d5] border border-slate-100 rounded-xl group-hover:bg-[#2672d5] group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm shrink-0"
-											>
-												<i class="fa-solid fa-laptop-code text-[18px]" />
-											</div>
-											<div class="flex flex-col text-left">
-												<span
-													class="text-[15.5px] font-bold text-slate-800 leading-none group-hover:text-blue-600 transition-colors"
-													>M.Tech</span
-												>
-												<span
-													class="text-[10px] text-green-600 font-bold uppercase tracking-widest mt-2"
-													>Programme</span
-												>
-											</div>
-											<i
-												class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-blue-500 transition-all duration-500 group-hover:translate-x-1 text-sm bg-white w-8 h-8 rounded-full flex items-center justify-center shadow-sm border border-slate-50"
-											/>
-										</a>
-									</div>
-								</div>
-							{/if}
-						</div>
-					</div>
-				</div>
+			<li>
+				<a href="/courses/Under-Graduation" class="desktop-item">
+					Courses
+				</a>
 			</li>
 
 			<!-- Faculty -->
 			<li class="mobile-priority-item">
-				<a href="/faculty/teaching-staff" class="desktop-item">Faculty</a>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<button
-					type="button"
-					class="mobile-item {activeMobileDropdown === 'faculty' ? 'active-dropdown' : ''}"
-					on:click={() => toggleMobileDropdown('faculty')}>Faculty</button
-				>
-				<div class="mega-box {activeMobileDropdown === 'faculty' ? 'mobile-show' : ''}">
-					<div
-						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
-					>
-						<div class="flex-1 flex flex-col justify-center items-center py-10 px-10">
-							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
-								<i class="fa-solid fa-chalkboard-user text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] flex items-center font-bold text-slate-900">
-									Our Educators
-								</header>
-							</div>
-							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-								<a
-									href="/faculty/teaching-staff"
-									on:click={closeMenus}
-									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
-								>
-									<i
-										class="fa-solid fa-user-graduate text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
-									/>
-									<span class="text-[16px] font-bold text-slate-900">Teaching Staff</span>
-								</a>
-								<a
-									href="/faculty/non-teaching-staff"
-									on:click={closeMenus}
-									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
-								>
-									<i
-										class="fa-solid fa-user-gear text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
-									/>
-									<span class="text-[16px] font-bold text-slate-900">Non-Teaching Staff</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				<a href="/faculty" class="desktop-item" on:click={closeMenus}>Faculty</a>
+				<a href="/faculty" class="mobile-item" on:click={closeMenus}>Faculty</a>
 			</li>
 
 			<!-- Exam Cell -->
@@ -870,6 +524,15 @@
 			</li>
 		</ul>
 
+		{#if activeMobileDropdown === 'courses'}
+			<button
+				type="button"
+				class="courses-sidebar-overlay"
+				on:click={closeMenus}
+				aria-label="Close courses sidebar"
+			></button>
+		{/if}
+
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<button type="button" class="btn menu-btn" on:click={toggleMobileMenu}
@@ -910,14 +573,14 @@
 	nav .wrapper {
 		position: relative;
 		max-width: 1600px;
-		padding: 0 24px;
+		padding: 0 16px;
 		height: 56px;
 		line-height: normal;
 		margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 0;
+		gap: 10px;
 	}
 
 	.wrapper .logo img {
@@ -929,12 +592,15 @@
 	}
 
 	.wrapper .nav-links {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(9, minmax(0, 1fr));
 		flex: 1;
 		align-items: center;
-		justify-content: space-evenly;
-		white-space: nowrap;
+		justify-content: stretch;
+		column-gap: clamp(2px, 0.45vw, 10px);
+		white-space: normal;
 		height: 100%;
+		min-width: 0;
 	}
 
 	.nav-links li {
@@ -942,32 +608,72 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		min-width: 0;
 	}
 
 	.nav-links li a {
-		color: #000000;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #1e293b;
 		text-decoration: none;
-		font-size: 15px;
-		padding: 8px 14px;
-		border-radius: 8px;
-		transition: all 0.3s ease;
+		font-size: clamp(14px, 0.72vw, 14px);
+		padding: 8px 6px;
+		border-radius: 6px;
+		transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 		white-space: nowrap;
+		width: 100%;
+		max-width: none;
 		line-height: normal;
 		text-transform: capitalize;
 		letter-spacing: 0.02em;
-		font-weight: 600;
-		font-family: 'Roboto';
+		font-weight: 900;
+		font-family: 'Roboto', 'Outfit', sans-serif;
 	}
 
 	.nav-links li a:hover {
 		color: #2672d5;
-		background: rgba(38, 114, 213, 0.05);
-		transform: translateY(-1px);
+		background: rgba(38, 114, 213, 0.08);
+	}
+
+	.nav-links li a:focus-visible {
+		outline: none;
+		color: #1d4ed8;
+		box-shadow: none;
 	}
 
 	.nav-links .mobile-item {
 		display: none;
 		font-weight: 700;
+	}
+
+	.desktop-courses-trigger {
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #1e293b !important;
+		text-decoration: none;
+		font-size: clamp(14px, 0.72vw, 14px);
+		padding: 8px 6px;
+		border-radius: 6px;
+		transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+		white-space: nowrap;
+		width: 100%;
+		max-width: none;
+		line-height: normal;
+		text-transform: capitalize;
+		letter-spacing: 0.02em;
+		font-weight: 900;
+		font-family: 'Roboto', 'Outfit', sans-serif;
+	}
+
+	.desktop-courses-trigger:hover {
+		color: #2672d5;
+		background: rgba(38, 114, 213, 0.08);
 	}
 
 	.mega-box {
@@ -985,17 +691,65 @@
 		pointer-events: none;
 	}
 
+	.courses-sidebar-overlay {
+		position: fixed;
+		inset: 56px 0 0 0;
+		background: rgba(15, 23, 42, 0.28);
+		border: none;
+		padding: 0;
+		margin: 0;
+		z-index: 999;
+	}
+
+	.mega-box.courses-mega {
+		position: fixed;
+		top: 56px;
+		right: 0;
+		left: auto;
+		width: min(430px, 92vw);
+		max-width: 430px;
+		height: calc(100vh - 56px);
+		transform: translateX(104%);
+		opacity: 1;
+		visibility: hidden;
+		pointer-events: none;
+		transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.28s ease;
+		z-index: 1000;
+		display: none;
+	}
+
+	.mega-box.courses-mega.mobile-show {
+		transform: translateX(0);
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.courses-mega .content {
+		height: 100%;
+		min-height: 100%;
+		border-radius: 0;
+		border-left: 1px solid #e5e7eb;
+		border-top: none;
+		border-right: none;
+		border-bottom: none;
+		box-shadow: -8px 0 24px rgba(15, 23, 42, 0.08);
+		overflow-y: auto;
+	}
+
 	.mega-box::before {
 		content: '';
 		position: absolute;
-		top: -40px;
+		top: -14px;
 		left: 0;
 		width: 100%;
-		height: 40px;
+		height: 14px;
 		background: transparent;
 	}
 
-	.nav-links li:hover .mega-box {
+	:global(.nav-links li > a:hover + .mega-box),
+	:global(.nav-links li > a:focus-visible + .mega-box),
+	:global(.nav-links li .mega-box:hover),
+	:global(.nav-links li:focus-within .mega-box) {
 		opacity: 1;
 		visibility: visible;
 		transform: translateX(-50%) translateY(0);
@@ -1057,6 +811,10 @@
 	───────────────────────────────────────────────────────────── */
 
 	@media screen and (max-width: 1280px) {
+		.courses-sidebar-overlay {
+			display: none !important;
+		}
+
 		* {
 			box-sizing: border-box;
 		}
