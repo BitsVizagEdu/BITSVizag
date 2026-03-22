@@ -1,148 +1,31 @@
-<script>
-	let details = [
-		{
-			name: 'Sandeep',
-			job: 'Infinite Proxies',
-			branch: 'CSE'
-		},
-		{
-			name: 'Rahul',
-			job: 'TCS',
-			branch: 'CSE'
-		},
-		{
-			name: 'Chaitanya',
-			job: 'TCS',
-			branch: 'CSE'
-		},
-		{
-			name: 'Keerthana',
-			job: 'TCS',
-			branch: 'CSE'
-		},
-		{
-			name: 'Sai Prasad',
-			job: 'TCS',
-			branch: 'CSE'
-		},
-		{
-			name: 'Sunitha',
-			job: 'TCS',
-			branch: 'CSE'
-		},
-		{
-			name: 'Manikanta',
-			job: 'Infosys',
-			branch: 'CSE'
-		},
-		{
-			name: 'Dan Alfred',
-			job: 'Infosys',
-			branch: 'CSE'
-		},
-		{
-			name: 'Tejaswini',
-			job: 'Infosys',
-			branch: 'CSE'
-		},
-		{
-			name: 'Mounika',
-			job: 'Infosys',
-			branch: 'ECE'
-		},
-		{
-			name: 'Ramesh',
-			job: 'Tech Mahindra',
-			branch: 'MECH'
-		},
-		{
-			name: 'Kishore',
-			job: 'Tech Mahindra',
-			branch: 'MECH'
-		},
-		{
-			name: 'Satish',
-			job: 'Tech Mahindra',
-			branch: 'MECH'
-		},
-		{
-			name: 'Jyothi',
-			job: 'Tech Mahindra',
-			branch: 'MECH'
-		},
-		{
-			name: 'Divya',
-			job: 'Tech Mahindra',
-			branch: 'MECH'
-		},
-		{
-			name: 'Ankith',
-			job: 'Teleperformance',
-			branch: 'ECE'
-		},
-		{
-			name: 'Nihal',
-			job: 'Teleperformance',
-			branch: 'ECE'
-		},
-		{
-			name: 'Naveen',
-			job: 'Teleperformance',
-			branch: 'ECE'
-		},
-		{
-			name: 'Srinivas Rao',
-			job: 'Teleperformance',
-			branch: 'ECE'
-		}
-	];
-</script>
+<section class="recruiters-premium">
+	<div class="ambient one" aria-hidden="true"></div>
+	<div class="ambient two" aria-hidden="true"></div>
 
-<section class="relative py-20 bg-slate-50 font-sans overflow-hidden">
-	<!-- Background Accents -->
-	<div class="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
-		<div
-			class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/10 blur-[120px] rounded-full"
-		></div>
-		<div
-			class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-400/10 blur-[120px] rounded-full"
-		></div>
-	</div>
-
-	<div class="max-w-9xl mx-auto px-6 relative z-10">
-		<div class="text-center mb-16" data-aos="fade-up">
-			<h2 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight uppercase">
-				Top <span class="bg-gradient-to-r from-pink-600 to-red-800 bg-clip-text text-transparent"
-					>Recruiters</span
-				>
+	<div class="inner-shell">
+		<div class="heading" data-aos="fade-up">
+			<p class="eyebrow">Industry Network</p>
+			<h2>
+				Top <span>Recruiters</span>
 			</h2>
-			<div
-				class="h-1.5 w-32 bg-gradient-to-b from-pink-600 to-red-800 mx-auto mt-4 rounded-full"
-			></div>
+			<p class="subtitle">
+				Trusted hiring partners that create strong career outcomes and real student impact.
+			</p>
 		</div>
 
-		<div class="marquee-wrapper relative">
-			<!-- Side Gradients for Smoothness -->
-			<div
-				class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-20 pointer-events-none"
-			></div>
-			<div
-				class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-20 pointer-events-none"
-			></div>
+		<div class="marquee-wrapper">
+			<div class="fade-edge left" aria-hidden="true"></div>
+			<div class="fade-edge right" aria-hidden="true"></div>
 
 			<div class="marquee-content">
 				<div class="marquee-track">
-					<!-- Double the items for seamless loop -->
 					{#each [...Array(10), ...Array(10)] as _, i}
 						{@const logoNum = (i % 10) + 1}
-						<div class="logo-card group">
+						<div class="logo-card group" data-aos="zoom-in" data-aos-delay={Math.min(i * 20, 200)}>
 							<div class="logo-inner">
 								<img src="/logo-150/{logoNum}.png" alt="Recruiter {logoNum}" class="company-logo" />
 							</div>
-							<!-- Subtle glow on hover -->
-							<div
-								class="absolute inset-0 bg-blue-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-							></div>
+							<div class="logo-glow" aria-hidden="true"></div>
 						</div>
 					{/each}
 				</div>
@@ -152,12 +35,115 @@
 </section>
 
 <style>
+	.recruiters-premium {
+		position: relative;
+		overflow: hidden;
+		padding: 5rem 0;
+		font-family: 'Roboto', 'Segoe UI', sans-serif;
+		background:
+			radial-gradient(1150px 500px at -8% -28%, rgba(255, 193, 126, 0.22), transparent 58%),
+			radial-gradient(900px 450px at 102% 112%, rgba(116, 177, 255, 0.2), transparent 58%),
+			linear-gradient(128deg, #061430 0%, #091f47 46%, #0b2858 100%);
+	}
+
+	.ambient {
+		position: absolute;
+		width: 320px;
+		height: 320px;
+		border-radius: 50%;
+		filter: blur(52px);
+		opacity: 0.45;
+		pointer-events: none;
+	}
+
+	.ambient.one {
+		top: -180px;
+		left: -90px;
+		background: rgba(255, 174, 84, 0.52);
+	}
+
+	.ambient.two {
+		right: -120px;
+		bottom: -190px;
+		background: rgba(121, 169, 255, 0.48);
+	}
+
+	.inner-shell {
+		position: relative;
+		z-index: 2;
+		width: min(1500px, 95vw);
+		margin: 0 auto;
+		padding: 2rem clamp(1rem, 2vw, 2rem);
+		border-radius: 1.7rem;
+		border: 1px solid rgba(180, 209, 255, 0.22);
+		background: linear-gradient(120deg, rgba(8, 24, 59, 0.85), rgba(15, 38, 81, 0.74));
+		box-shadow: 0 26px 70px -36px rgba(0, 0, 0, 0.75);
+	}
+
+	.heading {
+		text-align: center;
+		margin-bottom: 1.7rem;
+	}
+
+	.eyebrow {
+		margin: 0;
+		font-size: 0.75rem;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #9bc0ff;
+	}
+
+	.heading h2 {
+		margin: 0.42rem 0 0;
+		font-size: clamp(2rem, 4vw, 3.25rem);
+		line-height: 1.05;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		color: #f8fcff;
+	}
+
+	.heading h2 span {
+		background: linear-gradient(90deg, #7ec2ff 0%, #b7d8ff 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.subtitle {
+		margin: 0.72rem auto 0;
+		max-width: 42rem;
+		font-size: 1.01rem;
+		line-height: 1.6;
+		font-weight: 500;
+		color: #d3e2ff;
+	}
+
 	.marquee-wrapper {
 		width: 100%;
 		overflow: hidden;
-		padding: 40px 0;
+		padding: 20px 0 26px;
 		mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 		-webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+		border-radius: 1rem;
+	}
+
+	.fade-edge {
+		position: absolute;
+		inset-block: 0;
+		width: 6.2rem;
+		z-index: 5;
+		pointer-events: none;
+	}
+
+	.fade-edge.left {
+		left: 0;
+		background: linear-gradient(to right, rgba(10, 29, 68, 1), rgba(10, 29, 68, 0));
+	}
+
+	.fade-edge.right {
+		right: 0;
+		background: linear-gradient(to left, rgba(10, 29, 68, 1), rgba(10, 29, 68, 0));
 	}
 
 	.marquee-content {
@@ -167,9 +153,9 @@
 
 	.marquee-track {
 		display: flex;
-		gap: 2rem;
-		animation: scroll 40s linear infinite;
-		padding: 10px;
+		gap: 1.2rem;
+		animation: scroll 36s linear infinite;
+		padding: 12px;
 	}
 
 	.marquee-track:hover {
@@ -178,29 +164,29 @@
 
 	.logo-card {
 		position: relative;
-		width: 170px;
-		height: 90px;
-		background: white;
-		border: 1px solid rgba(0, 0, 0, 0.04);
-		border-radius: 1.25rem;
+		width: 190px;
+		height: 98px;
+		background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(244, 250, 255, 0.92));
+		border: 1px solid rgba(179, 204, 244, 0.62);
+		border-radius: 1.1rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 1.25rem;
+		padding: 1.1rem;
 		box-shadow:
-			0 4px 6px -1px rgba(0, 0, 0, 0.05),
-			0 2px 4px -1px rgba(0, 0, 0, 0.03);
-		transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			0 16px 34px -22px rgba(14, 40, 91, 0.42),
+			0 8px 16px -16px rgba(0, 0, 0, 0.28);
+		transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 		cursor: pointer;
 		flex-shrink: 0;
 	}
 
 	.logo-card:hover {
-		transform: translateY(-8px) scale(1.05);
+		transform: translateY(-6px) scale(1.03);
 		box-shadow:
-			0 20px 25px -5px rgba(0, 0, 0, 0.08),
-			0 10px 10px -5px rgba(0, 0, 0, 0.04);
-		border-color: rgba(37, 99, 235, 0.2);
+			0 24px 36px -22px rgba(16, 58, 128, 0.45),
+			0 14px 20px -14px rgba(0, 0, 0, 0.22);
+		border-color: rgba(54, 123, 233, 0.75);
 	}
 
 	.logo-inner {
@@ -216,8 +202,25 @@
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: contain;
-		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.02));
-		transition: transform 0.4s ease;
+		filter: drop-shadow(0 2px 4px rgba(2, 18, 47, 0.15));
+		transition: transform 0.35s ease;
+	}
+
+	.logo-card:hover .company-logo {
+		transform: scale(1.03);
+	}
+
+	.logo-glow {
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		background: radial-gradient(circle at 50% 120%, rgba(104, 167, 255, 0.34), transparent 55%);
+		opacity: 0;
+		transition: opacity 0.35s ease;
+	}
+
+	.logo-card:hover .logo-glow {
+		opacity: 1;
 	}
 
 	@keyframes scroll {
@@ -230,20 +233,34 @@
 	}
 
 	@media (max-width: 768px) {
+		.recruiters-premium {
+			padding: 3.6rem 0;
+		}
+
+		.inner-shell {
+			padding: 1.4rem 0.95rem;
+		}
+
 		.logo-card {
-			width: 140px;
-			height: 80px;
+			width: 150px;
+			height: 82px;
 			padding: 1rem;
 		}
+
 		.marquee-track {
-			gap: 1.25rem;
+			gap: 0.85rem;
 		}
+
+		.fade-edge {
+			width: 3.2rem;
+		}
+
 		@keyframes scroll {
 			0% {
 				transform: translateX(0);
 			}
 			100% {
-				transform: translateX(calc(-50% - 0.625rem));
+				transform: translateX(calc(-50% - 0.425rem));
 			}
 		}
 	}

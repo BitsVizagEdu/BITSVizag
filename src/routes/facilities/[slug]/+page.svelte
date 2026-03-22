@@ -24,6 +24,7 @@
 		toggleIsActiveTab(false);
 	}
 
+	/** @param {string} slug */
 	const getFacilityMetadata = (slug) => {
 		let title = 'Campus Facilities | BITS Vizag';
 		let description =
@@ -98,20 +99,20 @@
 />
 
 {#if !$showNavBar}
-	<div class="min-h-screen bg-slate-50/30 flex flex-col lg:flex-row">
+	<div class="premium-facilities-shell min-h-screen flex flex-col lg:flex-row">
 		<!-- Main Content Sidebar -->
 		<aside
 			class="w-full lg:w-[320px] p-4 lg:p-6 lg:sticky lg:top-0 h-fit z-10"
 			aria-label="Sidebar"
 		>
 			<div
-				class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden"
+				class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-[0_20px_50px_-20px_rgba(3,28,71,0.35)] border border-slate-100 overflow-hidden"
 			>
 				<div
-					class="px-5 py-4 bg-slate-50/50 border-b border-slate-100 flex items-center justify-between"
+					class="px-5 py-4 bg-gradient-to-r from-slate-50 via-white to-slate-50 border-b border-slate-100 flex items-center justify-between"
 				>
-					<span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest"
-						>Campus Amenities</span
+					<span class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.22em]"
+						>Campus Amenities - Signature Edition</span
 					>
 					<i class="fa-solid fa-building-circle-check text-[#2672d5] lg:hidden"></i>
 				</div>
@@ -123,10 +124,10 @@
 							<a
 								href={`/facilities/${encodeURIComponent(item)}`}
 								on:click={() => setActiveTabValue(item)}
-								class="flex-shrink-0 flex items-center px-4 py-2.5 text-[13px] font-bold rounded-xl transition-all whitespace-nowrap
+								class="flex-shrink-0 flex items-center px-4 py-2.5 text-[13px] font-bold rounded-xl transition-all duration-300 whitespace-nowrap
 								{$activeTab === item
-									? 'bg-[#2672d5] text-white shadow-md'
-									: 'bg-slate-50 text-slate-600 border border-slate-100'} "
+									? 'bg-[#0f4da8] text-white shadow-[0_8px_20px_-8px_rgba(15,77,168,0.8)]'
+									: 'bg-slate-50 text-slate-600 border border-slate-100 hover:border-slate-300'} "
 							>
 								{replaceHyphenWithSpace(item)}
 							</a>
@@ -143,8 +144,8 @@
 								on:click={() => setActiveTabValue(item)}
 								class="flex items-center px-4 py-3.5 text-[14px] font-semibold rounded-xl transition-all duration-300
 								{$activeTab === item
-									? 'bg-[#2672d5] text-white shadow-lg shadow-blue-100 translate-x-1'
-									: 'text-slate-600 hover:bg-slate-50 hover:text-[#2672d5]'} "
+									? 'bg-[#0f4da8] text-white shadow-[0_16px_26px_-18px_rgba(15,77,168,1)] translate-x-1'
+									: 'text-slate-600 hover:bg-slate-50 hover:text-[#0f4da8] hover:translate-x-[2px]'} "
 							>
 								<i class="fa-solid fa-circle-info mr-3 text-[12px] opacity-70"></i>
 								<span>{replaceHyphenWithSpace(item)}</span>
@@ -157,7 +158,9 @@
 
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
-			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
+			<div
+				class="premium-main-panel bg-white/90 backdrop-blur-sm rounded-3xl border border-slate-100 p-6 lg:p-10 min-h-[600px]"
+			>
 				{#if currentSlug === 'Knowledge-Resource-Center'}
 					<Library />
 				{/if}
@@ -182,4 +185,30 @@
 {/if}
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+	.premium-facilities-shell {
+		font-family: 'Roboto', 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont,
+			'Segoe UI', sans-serif;
+		background:
+			radial-gradient(circle at 0% 0%, rgba(15, 77, 168, 0.1), transparent 35%),
+			radial-gradient(circle at 100% 0%, rgba(12, 132, 201, 0.08), transparent 35%),
+			linear-gradient(180deg, #f8fbff 0%, #eef4fa 100%);
+	}
+
+	.premium-main-panel {
+		animation: premiumRise 0.7s ease;
+		box-shadow: 0 20px 48px -24px rgba(3, 28, 71, 0.35);
+	}
+
+	@keyframes premiumRise {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 </style>

@@ -154,43 +154,40 @@
 
 	<Placement />
 	<Committies />
-	<section
-		class="relative overflow-hidden bg-white px-4 pb-16 pt-8 md:pb-24 font-roboto"
-		style="font-family: 'Roboto', sans-serif;"
-	>
+	<section class="top-2026-section relative overflow-hidden px-4 pb-16 pt-8 md:pb-24">
 		<div class="pointer-events-none absolute inset-0">
 			<div
-				class="top-2026-orb absolute -left-12 top-12 h-44 w-44 rounded-full bg-blue-100/80 blur-3xl"
+				class="top-2026-orb top-2026-orb--left absolute -left-12 top-12 h-44 w-44 rounded-full blur-3xl"
 			></div>
 			<div
-				class="top-2026-orb top-2026-orb--delay absolute -right-10 bottom-10 h-56 w-56 rounded-full bg-sky-100/80 blur-3xl"
+				class="top-2026-orb top-2026-orb--right top-2026-orb--delay absolute -right-10 bottom-10 h-56 w-56 rounded-full blur-3xl"
 			></div>
 		</div>
 
 		<div class="relative mx-auto max-w-6xl" data-aos="fade-up" data-aos-delay="60">
-			<div class="top-2026-shell rounded-[30px] border border-[#1b376d] p-1.5 shadow-[0_24px_60px_rgba(12,22,55,0.22)]">
-				<div class="rounded-[26px] bg-[#0f1f4a] px-6 py-7 text-white sm:px-8 sm:py-8 lg:px-10 lg:py-10">
+			<div class="top-2026-shell rounded-[30px] border p-1.5">
+				<div class="top-2026-inner rounded-[26px] px-6 py-7 text-white sm:px-8 sm:py-8 lg:px-10 lg:py-10">
 					<div class="grid gap-7 lg:grid-cols-[1.28fr_0.72fr]">
 						<div>
 							<div
-								class="top-2026-badge inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-100"
+								class="top-2026-badge inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em]"
 							>
 								<span class="h-2 w-2 rounded-full bg-[#d42027]"></span>
 								Admissions 2026
 							</div>
 
-							<h2 class="mt-5 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-[42px]">
+							<h2 class="top-2026-title mt-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-[42px]">
 								Top Engineering Colleges in Vizag
-								<span class="block text-[#9fd3ff]">2026 Admissions Open</span>
+								<span class="top-2026-title-highlight block">2026 Admissions Open</span>
 							</h2>
 
-							<p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-blue-100">
+							<p class="top-2026-copy mt-4 max-w-2xl text-[15px] leading-relaxed">
 								BITS Vizag empowers future engineers with academic excellence, practical innovation,
 								and value-based mentoring. Study in a campus where ambition, discipline, and career
 								outcomes move together.
 							</p>
 
-							<div class="mt-5 flex flex-wrap gap-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-100">
+							<div class="mt-5 flex flex-wrap gap-2.5 text-[11px] font-semibold uppercase tracking-[0.12em]">
 								<span class="top-2026-chip">Industry Aligned Curriculum</span>
 								<span class="top-2026-chip">Placement Driven Training</span>
 								<span class="top-2026-chip">Leadership and Values</span>
@@ -199,14 +196,14 @@
 							<div class="mt-7 grid gap-4 sm:grid-cols-2">
 								<article class="top-2026-card rounded-2xl p-5">
 									<h3 class="text-base font-bold text-white">Mission</h3>
-									<p class="mt-2 text-sm leading-relaxed text-blue-100">
+									<p class="top-2026-copy mt-2 text-sm leading-relaxed">
 										To deliver world-class technical education through innovation, research mindset,
 										and industry exposure that transforms students into competent professionals.
 									</p>
 								</article>
 								<article class="top-2026-card rounded-2xl p-5">
 									<h3 class="text-base font-bold text-white">Goal</h3>
-									<p class="mt-2 text-sm leading-relaxed text-blue-100">
+									<p class="top-2026-copy mt-2 text-sm leading-relaxed">
 										To shape every learner into a confident engineer with strong employability,
 										ethical values, and the ability to create meaningful impact in society.
 									</p>
@@ -216,7 +213,7 @@
 
 						<aside class="top-2026-side rounded-2xl p-5 sm:p-6">
 							<h3 class="text-lg font-extrabold tracking-wide text-white">Why BITS Vizag in 2026</h3>
-							<ul class="mt-4 space-y-3.5 text-sm leading-relaxed text-blue-100">
+							<ul class="top-2026-copy mt-4 space-y-3.5 text-sm leading-relaxed">
 								<li class="flex items-start gap-3">
 									<span class="top-2026-dot mt-1.5"></span>
 									Modern labs, experienced faculty, and consistent academic mentoring.
@@ -233,7 +230,7 @@
 
 							<a
 								href="/contactus"
-								class="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#0c1637] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+								class="top-2026-cta mt-7 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
 							>
 								Start Your Journey
 								<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -261,14 +258,38 @@
 {/if}
 
 <style>
+	.top-2026-section {
+		font-family: 'Roboto', 'Segoe UI', sans-serif;
+		background:
+			radial-gradient(1180px 460px at -4% -22%, rgba(255, 165, 108, 0.2), transparent 58%),
+			radial-gradient(900px 420px at 98% 108%, rgba(92, 155, 255, 0.18), transparent 58%),
+			linear-gradient(130deg, #f4f7fc 0%, #edf2fb 50%, #f6f9ff 100%);
+	}
+
 	.top-2026-shell {
-		background: linear-gradient(120deg, #0a1942 0%, #1f4f9e 50%, #0a1942 100%);
+		border-color: #243f77;
+		background: linear-gradient(122deg, #0d234f 0%, #153773 46%, #223e75 100%);
 		background-size: 200% 200%;
+		box-shadow: 0 26px 64px rgba(12, 24, 55, 0.34);
 		animation: top2026-pan 16s ease-in-out infinite;
+	}
+
+	.top-2026-inner {
+		background:
+			radial-gradient(740px 360px at 0% -18%, rgba(255, 209, 143, 0.12), transparent 58%),
+			linear-gradient(120deg, #0d2249 0%, #122d5f 52%, #1c396e 100%);
 	}
 
 	.top-2026-orb {
 		animation: top2026-float 9s ease-in-out infinite;
+	}
+
+	.top-2026-orb--left {
+		background: rgba(255, 193, 130, 0.78);
+	}
+
+	.top-2026-orb--right {
+		background: rgba(126, 174, 255, 0.8);
 	}
 
 	.top-2026-orb--delay {
@@ -276,19 +297,38 @@
 	}
 
 	.top-2026-badge {
+		border-color: rgba(255, 255, 255, 0.26);
+		background: rgba(255, 255, 255, 0.12);
+		color: #d9e7ff;
 		animation: top2026-pulse 4s ease-in-out infinite;
+	}
+
+	.top-2026-title {
+		color: #ffffff;
+	}
+
+	.top-2026-title-highlight {
+		background: linear-gradient(90deg, #8ac8ff 0%, #bed9ff 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.top-2026-copy {
+		color: #d7e5ff;
 	}
 
 	.top-2026-chip {
 		padding: 0.42rem 0.75rem;
 		border-radius: 9999px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.28);
+		background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+		color: #dbe8ff;
 	}
 
 	.top-2026-card {
-		border: 1px solid rgba(255, 255, 255, 0.24);
-		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.26);
+		background: linear-gradient(165deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
 		backdrop-filter: blur(4px);
 		transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 	}
@@ -300,8 +340,8 @@
 	}
 
 	.top-2026-side {
-		border: 1px solid rgba(255, 255, 255, 0.26);
-		background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.07));
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		background: linear-gradient(160deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
 		backdrop-filter: blur(4px);
 	}
 
@@ -312,6 +352,12 @@
 		border-radius: 9999px;
 		background: #64ccff;
 		box-shadow: 0 0 0 3px rgba(100, 204, 255, 0.2);
+	}
+
+	.top-2026-cta {
+		background: linear-gradient(100deg, #ffffff, #e9f2ff);
+		color: #10264f;
+		border: 1px solid rgba(255, 255, 255, 0.62);
 	}
 
 	@keyframes top2026-pan {

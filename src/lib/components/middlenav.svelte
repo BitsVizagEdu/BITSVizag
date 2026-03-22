@@ -212,60 +212,14 @@
 				</div>
 			</li>
 
-			<!-- Governance -->
-			<li>
-				<a href="/governance/board-of-trustees" class="desktop-item">Governance</a>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<button
-					type="button"
-					class="mobile-item {activeMobileDropdown === 'governance' ? 'active-dropdown' : ''}"
-					on:click={() => toggleMobileDropdown('governance')}>Governance</button
-				>
-				<div class="mega-box {activeMobileDropdown === 'governance' ? 'mobile-show' : ''}">
-					<div
-						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
-					>
-						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
-							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
-								<i class="fa-solid fa-balance-scale text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] font-extrabold text-slate-950 tracking-tight">
-									Administration
-								</header>
-							</div>
-							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-								<a
-									href="/governance/board-of-trustees"
-									on:click={closeMenus}
-									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
-								>
-									<i
-										class="fa-solid fa-users-rectangle text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
-									/>
-									<span class="text-[16px] font-bold text-slate-800">Board of Trustees</span>
-								</a>
-								<a
-									href="/governance/governing-body"
-									on:click={closeMenus}
-									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
-								>
-									<i
-										class="fa-solid fa-sitemap text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
-									/>
-									<span class="text-[16px] font-bold text-slate-800">Governing Body</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-
+			
 			<!-- Courses -->
 			<li>
 				<a href="/courses/Under-Graduation" class="desktop-item">
 					Courses
 				</a>
 			</li>
+			
 
 			<!-- Faculty -->
 			<li class="mobile-priority-item">
@@ -347,79 +301,129 @@
 						: ''}"
 				>
 					<div
-						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] overflow-hidden text-left"
+						class="content flex flex-col md:flex-row bg-gradient-to-br from-zinc-50 via-white to-zinc-100 xl:rounded-3xl xl:shadow-[0_26px_58px_-24px_rgba(24,24,27,0.28)] overflow-hidden text-left"
 					>
-						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center">
-							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
-								<i class="fa-solid fa-building-circle-check text-xl text-[#2672d5]" />
-								<header class="text-[1.15rem] font-bold text-slate-900">Campus Amenities</header>
+						<div class="flex-1 py-10 px-10 justify-center flex flex-col items-center font-['Roboto','SF_Pro_Text','SF_Pro_Display',-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif]">
+							<div class="flex items-center gap-3 mb-8 border-b border-zinc-200 pb-4 w-full">
+								<i class="fa-solid fa-building-circle-check text-xl text-zinc-800" />
+								<header class="text-[1.08rem] font-bold tracking-normal leading-tight text-zinc-900">
+									Campus Amenities
+								</header>
 							</div>
 							<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
 								<a
 									href="/facilities/Knowledge-Resource-Center"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex items-center gap-4 p-4 rounded-xl border border-zinc-200 bg-white/80 hover:bg-white hover:border-zinc-400 transition-all duration-300 hover:-translate-y-0.5"
 								>
 									<i
-										class="fa-solid fa-book-atlas text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+										class="fa-solid fa-book-atlas text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Knowledge Center</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Knowledge Center</span>
 								</a>
 								<a
 									href="/facilities/Accomidation"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex items-center gap-4 p-4 rounded-xl border border-zinc-200 bg-white/80 hover:bg-white hover:border-zinc-400 transition-all duration-300 hover:-translate-y-0.5"
 								>
 									<i
-										class="fa-solid fa-bed text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+										class="fa-solid fa-bed text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Accomidation</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Accomidation</span>
 								</a>
 								<a
 									href="/facilities/Cafeteria"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex items-center gap-4 p-4 rounded-xl border border-zinc-200 bg-white/80 hover:bg-white hover:border-zinc-400 transition-all duration-300 hover:-translate-y-0.5"
 								>
 									<i
-										class="fa-solid fa-utensils text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+										class="fa-solid fa-utensils text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Cafeteria</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Cafeteria</span>
 								</a>
 								<a
 									href="/facilities/Sports"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex items-center gap-4 p-4 rounded-xl border border-zinc-200 bg-white/80 hover:bg-white hover:border-zinc-400 transition-all duration-300 hover:-translate-y-0.5"
 								>
 									<i
-										class="fa-solid fa-basketball text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+										class="fa-solid fa-basketball text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Sports</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Sports</span>
 								</a>
 								<a
 									href="/facilities/Laboratories"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex items-center gap-4 p-4 rounded-xl border border-zinc-200 bg-white/80 hover:bg-white hover:border-zinc-400 transition-all duration-300 hover:-translate-y-0.5"
 								>
 									<i
-										class="fa-solid fa-flask-vial text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+										class="fa-solid fa-flask-vial text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Laboratories</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Laboratories</span>
 								</a>
 								<a
 									href="/facilities/Transport"
 									on:click={closeMenus}
-									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all"
+									class="group flex items-center gap-4 p-4 rounded-xl border border-zinc-200 bg-white/80 hover:bg-white hover:border-zinc-400 transition-all duration-300 hover:-translate-y-0.5"
 								>
 									<i
-										class="fa-solid fa-bus text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+										class="fa-solid fa-bus text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-700">Transport</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Transport</span>
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</li>
+			<!-- Governance -->
+			<li>
+				<a href="/governance/board-of-trustees" class="desktop-item">Governance</a>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'governance' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('governance')}>Governance</button
+				>
+				<div class="mega-box {activeMobileDropdown === 'governance' ? 'mobile-show' : ''}">
+					<div
+						class="content flex flex-col md:flex-row bg-white xl:rounded-3xl xl:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] xl:border border-slate-100 overflow-hidden text-left"
+					>
+						<div class="flex-1 py-10 justify-center flex flex-col items-center px-10">
+							<div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
+								<i class="fa-solid fa-balance-scale text-xl text-[#2672d5]" />
+								<header class="text-[1.15rem] font-extrabold text-slate-950 tracking-tight">
+									Administration
+								</header>
+							</div>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<a
+									href="/governance/board-of-trustees"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-users-rectangle text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-800">Board of Trustees</span>
+								</a>
+								<a
+									href="/governance/governing-body"
+									on:click={closeMenus}
+									class="group flex items-center gap-4 p-5 rounded-xl hover:bg-slate-50 transition-all border border-slate-50 hover:border-slate-100"
+								>
+									<i
+										class="fa-solid fa-sitemap text-[#2672d5] text-xl group-hover:scale-110 transition-transform"
+									/>
+									<span class="text-[16px] font-bold text-slate-800">Governing Body</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+
 
 			<!-- Research -->
 			<li>
