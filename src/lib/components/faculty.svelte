@@ -47,6 +47,8 @@
 		'B.santoshi kumari': 8,
 		'NARESHKUMAR KUPPILI': 11,
 		'Sairama': 3,
+		'Jyothi Vanapalli': 2,
+		'A PYDIRAJU': 15,
 		'G.JYOTHI': 15,
 		'P. V.Murali': 25,
 		'Dr Paromita Mukherjee': 19,
@@ -810,6 +812,28 @@
 			mobile: '9951934411',
 			email: 'suryakumari.p85@gmail.com',
 			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Jyothi Vanapalli',
+			qualification: 'MA(English)',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '8977615102',
+			email: 'jyothivanapalli10@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/jyothi-vanapalli-83a9a3237',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'A PYDIRAJU',
+			qualification: 'MA, MLISC, M.ED',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '7893429433',
+			email: 'rajkoti10@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/raju-koti-21bb5a3b8',
 			photo: ''
 		},
 		{

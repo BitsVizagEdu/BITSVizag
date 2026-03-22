@@ -1,18 +1,4 @@
 <script>
-	import { animate } from 'motion';
-
-	/** @param {string} selector */
-	function scaleUp(selector) {
-		const el = document.querySelector(selector);
-		if (el) animate(el, { scale: 1.05, y: -5 }, { duration: 0.4, easing: 'ease-out' });
-	}
-
-	/** @param {string} selector */
-	function scaleDown(selector) {
-		const el = document.querySelector(selector);
-		if (el) animate(el, { scale: 1, y: 0 }, { duration: 0.4, easing: 'ease-out' });
-	}
-
 	const stats = [
 		{
 			val: '1500+',
@@ -59,90 +45,70 @@
 
 <section
 	data-aos="fade-in"
-	class="relative py-20 bg-[#0f172a] font-sans text-white overflow-hidden"
+	class="strength-shell"
 >
-	<!-- Subtle Background Accents -->
-	<div class="absolute inset-0 opacity-5 pointer-events-none">
-		<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-			<pattern id="grid-pattern" width="80" height="80" patternUnits="userSpaceOnUse">
-				<path d="M 80 0 L 0 0 0 80" fill="none" stroke="white" stroke-width="0.3" />
-			</pattern>
-			<rect width="100%" height="100%" fill="url(#grid-pattern)" />
+	<div class="bg-layer" aria-hidden="true">
+		<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<defs>
+				<pattern id="strength-grid" width="72" height="72" patternUnits="userSpaceOnUse">
+					<path d="M72 0H0V72" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="0.5" />
+				</pattern>
+			</defs>
+			<rect width="100%" height="100%" fill="url(#strength-grid)" />
 		</svg>
 	</div>
+	<div class="ambient one" aria-hidden="true"></div>
+	<div class="ambient two" aria-hidden="true"></div>
 
-	<div class="max-w-8xl mx-auto px-6 lg:px-12 relative z-10">
-		<div class="flex flex-col lg:flex-row gap-12 items-center">
-			<!-- Header Content -->
-			<div class="lg:w-2/5 space-y-6" data-aos="fade-right">
-				<div class="space-y-3">
-					<h2 class="text-3xl md:text-5xl font-black leading-tight tracking-tight">
-						Why <span class="text-blue-400">BITS Vizag</span>?
-					</h2>
-					<p class="text-base text-slate-300 font-medium leading-relaxed max-w-lg">
-						Grooming leaders who are not only thorough professionals but also good human beings with
-						values.
+	<div class="strength-container">
+		<div class="strength-layout">
+			<div class="content-pane" data-aos="fade-right">
+				<div>
+					<p class="eyebrow">Institutional Excellence</p>
+					<h2 class="headline">Why <span>BITS Vizag</span>?</h2>
+					<p class="subhead">
+						Grooming leaders who are not only thorough professionals but also good human
+						beings with values.
 					</p>
 				</div>
 
-				<div class="p-6 bg-slate-800/40 border border-slate-700/50 rounded-2xl shadow-xl space-y-4">
-					<div class="flex items-center gap-4">
-						<div class="h-10 w-1 bg-blue-500 rounded-full"></div>
+				<div class="quality-card" data-aos="fade-up" data-aos-delay="80">
+					<div class="quality-top">
+						<div class="quality-accent"></div>
 						<div>
-							<p class="text-slate-400 text-[10px] font-bold uppercase tracking-[.15em] mb-0.5">
-								Accredited By
-							</p>
-							<p class="text-3xl font-black text-white italic tracking-tighter">NAAC A</p>
+							<p class="quality-label">Accredited By</p>
+							<p class="quality-value">NAAC A</p>
 						</div>
 					</div>
-					<p class="text-slate-400 text-sm font-normal leading-snug">
-						Consistently upholding exceptional academic standards and institutional quality across
-						all departments.
+					<p class="quality-copy">
+						Consistently upholding exceptional academic standards and institutional quality
+						across all departments.
 					</p>
 				</div>
 
-				<div class="pt-2">
-					<a href="/aboutus/About-BITS" class="inline-block cursor-pointer justify-center">
-						<button
-							on:mouseenter={() => scaleUp('.button-strength')}
-							on:mouseleave={() => scaleDown('.button-strength')}
-							class="button-strength px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-lg flex items-center gap-3 border border-blue-500/30"
-						>
-							More About BITS
-							<i class="fa-solid fa-arrow-right text-xs"></i>
-						</button>
-					</a>
-				</div>
+				<a href="/aboutus/About-BITS" class="cta-link" aria-label="Learn more about BITS Vizag">
+					<span>More About BITS</span>
+					<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+				</a>
 			</div>
 
-			<!-- Stats Grid -->
-			<div class="lg:w-3/5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-4">
+			<div class="stats-pane">
 				{#each stats as item, i}
-					<div
-						class="group p-6 bg-slate-800/30 border border-slate-700/40 hover:border-blue-500/30 hover:bg-slate-800/50 rounded-xl transition-all duration-300 flex flex-col items-center text-center space-y-4 shadow-sm"
-						data-aos="fade-up"
-						data-aos-delay={i * 50}
-					>
-						<div
-							class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center transition-colors group-hover:bg-blue-500/20"
-						>
+					<div class="stat-card" data-aos="fade-up" data-aos-delay={i * 55}>
+						<div class="icon-wrap">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="w-5 h-5 text-blue-400"
+								class="stat-icon"
 							>
 								<path stroke-linecap="round" stroke-linejoin="round" d={item.path} />
 							</svg>
 						</div>
-						<div class="space-y-1">
-							<p class="text-2xl font-black leading-none text-white">{item.val}</p>
-							<p class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">
-								{item.label}
-							</p>
-						</div>
+						<p class="stat-value">{item.val}</p>
+						<p class="stat-label">{item.label}</p>
 					</div>
 				{/each}
 			</div>
@@ -151,7 +117,271 @@
 </section>
 
 <style>
-	:global(.button-strength) {
-		will-change: transform;
+	.strength-shell {
+		position: relative;
+		overflow: hidden;
+		padding: 5.3rem 0;
+		font-family: 'Roboto', 'Segoe UI', sans-serif;
+		background:
+			radial-gradient(1300px 520px at -8% -22%, rgba(44, 111, 252, 0.28), transparent 60%),
+			radial-gradient(1000px 500px at 102% 110%, rgba(0, 224, 255, 0.16), transparent 58%),
+			linear-gradient(92deg, #07132f 0%, #071736 42%, #071f48 100%);
+	}
+
+	.bg-layer {
+		position: absolute;
+		inset: 0;
+		opacity: 0.24;
+		pointer-events: none;
+	}
+
+	.ambient {
+		position: absolute;
+		width: 340px;
+		height: 340px;
+		border-radius: 50%;
+		filter: blur(48px);
+		opacity: 0.4;
+		pointer-events: none;
+	}
+
+	.ambient.one {
+		top: -150px;
+		left: -80px;
+		background: rgba(44, 111, 252, 0.5);
+	}
+
+	.ambient.two {
+		right: -110px;
+		bottom: -170px;
+		background: rgba(60, 207, 255, 0.34);
+	}
+
+	.strength-container {
+		position: relative;
+		z-index: 2;
+		width: min(1680px, 95vw);
+		margin: 0 auto;
+		padding: 0 1.25rem;
+	}
+
+	.strength-layout {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.15rem;
+		align-items: start;
+	}
+
+	.content-pane {
+		display: flex;
+		flex-direction: column;
+		gap: 1.45rem;
+	}
+
+	.eyebrow {
+		margin: 0 0 0.5rem;
+		font-size: 0.76rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: rgba(161, 196, 255, 0.9);
+	}
+
+	.headline {
+		margin: 0;
+		font-size: clamp(2rem, 4.3vw, 3.85rem);
+		line-height: 1.04;
+		letter-spacing: -0.02em;
+		font-weight: 800;
+		color: #f8fbff;
+	}
+
+	.headline span {
+		color: #7cb4ff;
+	}
+
+	.subhead {
+		margin: 0.95rem 0 0;
+		max-width: 35rem;
+		font-size: clamp(1rem, 1.4vw, 1.12rem);
+		line-height: 1.55;
+		font-weight: 500;
+		color: #d2ddf6;
+	}
+
+	.quality-card {
+		padding: 1.45rem;
+		border-radius: 1.15rem;
+		border: 1px solid rgba(128, 169, 243, 0.24);
+		background: linear-gradient(102deg, rgba(13, 28, 62, 0.9), rgba(16, 33, 71, 0.76));
+		box-shadow: 0 14px 36px -22px rgba(29, 90, 208, 0.64);
+	}
+
+	.quality-top {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+	}
+
+	.quality-accent {
+		width: 6px;
+		height: 3rem;
+		border-radius: 999px;
+		background: linear-gradient(180deg, #4f98ff, #2f73df);
+	}
+
+	.quality-label {
+		margin: 0;
+		font-size: 0.71rem;
+		text-transform: uppercase;
+		letter-spacing: 0.17em;
+		font-weight: 700;
+		color: #9eb8e8;
+	}
+
+	.quality-value {
+		margin: 0.22rem 0 0;
+		font-size: clamp(2rem, 3vw, 2.45rem);
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: #ffffff;
+	}
+
+	.quality-copy {
+		margin: 1rem 0 0;
+		font-size: 1.02rem;
+		line-height: 1.55;
+		color: #d1def8;
+	}
+
+	.cta-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.62rem;
+		padding: 0.96rem 1.5rem;
+		width: fit-content;
+		border-radius: 0.78rem;
+		text-decoration: none;
+		font-size: 1.03rem;
+		font-weight: 700;
+		letter-spacing: 0.005em;
+		color: #f9fdff;
+		background: linear-gradient(100deg, #2c72f0, #3b8cff);
+		border: 1px solid rgba(130, 177, 255, 0.36);
+		box-shadow: 0 15px 30px -18px rgba(44, 114, 240, 0.95);
+		transition: transform 240ms ease, box-shadow 240ms ease;
+	}
+
+	.cta-link:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 20px 34px -20px rgba(44, 114, 240, 0.95);
+	}
+
+	.stats-pane {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.9rem;
+	}
+
+	.stat-card {
+		padding: 1.2rem 0.85rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.78rem;
+		border-radius: 1rem;
+		border: 1px solid rgba(130, 168, 235, 0.2);
+		background: linear-gradient(100deg, rgba(12, 28, 62, 0.86), rgba(16, 34, 74, 0.76));
+		box-shadow: 0 14px 30px -24px rgba(26, 82, 194, 0.78);
+		transition: transform 260ms ease, border-color 260ms ease;
+	}
+
+	.stat-card:hover {
+		transform: translateY(-4px);
+		border-color: rgba(130, 184, 255, 0.44);
+	}
+
+	.icon-wrap {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 0.75rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(47, 116, 224, 0.24);
+		color: #7eb5ff;
+	}
+
+	.stat-icon {
+		width: 1.38rem;
+		height: 1.38rem;
+	}
+
+	.stat-value {
+		margin: 0;
+		font-size: clamp(2rem, 2.7vw, 2.55rem);
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: #ffffff;
+	}
+
+	.stat-label {
+		margin: 0;
+		font-size: 0.74rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.11em;
+		color: #b6cbed;
+	}
+
+	@media (min-width: 1120px) {
+		.strength-layout {
+			grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.35fr);
+			gap: 1.5rem;
+		}
+
+		.stats-pane {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	}
+
+	@media (min-width: 760px) and (max-width: 1119px) {
+		.stats-pane {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 759px) {
+		.strength-shell {
+			padding: 4rem 0;
+		}
+
+		.strength-container {
+			padding: 0 0.95rem;
+		}
+
+		.quality-card {
+			padding: 1.15rem;
+		}
+
+		.cta-link {
+			font-size: 0.95rem;
+			padding: 0.85rem 1.2rem;
+		}
+
+		.stats-pane {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.stat-value {
+			font-size: 1.85rem;
+		}
+
+		.stat-label {
+			font-size: 0.65rem;
+		}
 	}
 </style>
