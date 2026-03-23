@@ -127,12 +127,46 @@ export function isFemale(title) {
  */
 export function formatFacultyName(name) {
 	if (!name) return '';
-	const words = name.trim().split(/\s+/);
-	if (words.length === 0) return '';
-	const capitalizedWords = words.map(word => 
-		word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-	);
-	return capitalizedWords.join(' ');
+
+	const normalized = name
+		.trim()
+		// Ensure initials written with dots have one-space separation from the next token.
+		.replace(/([A-Za-z])\.([A-Za-z])/g, '$1. $2')
+		.replace(/\s+/g, ' ');
+
+	if (!normalized) return '';
+
+	const toTitleCase = (value) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+
+	const formattedWords = normalized.split(' ').map((word) => {
+		const token = word.trim();
+		if (!token) return '';
+
+		const hasTrailingDot = token.endsWith('.');
+		const core = token.replace(/\.+$/, '');
+
+		// Single-letter initials should stay uppercase.
+		if (/^[A-Za-z]$/.test(core)) {
+			return hasTrailingDot ? `${core.toUpperCase()}.` : core.toUpperCase();
+		}
+
+		if (core.includes('-')) {
+			const hyphenParts = core
+				.split('-')
+				.map((part) => (part ? toTitleCase(part) : part))
+				.join('-');
+			return hasTrailingDot ? `${hyphenParts}.` : hyphenParts;
+		}
+
+		if (/^[A-Za-z]+$/.test(core)) {
+			const titleWord = toTitleCase(core);
+			return hasTrailingDot ? `${titleWord}.` : titleWord;
+		}
+
+		return hasTrailingDot ? `${core}.` : core;
+	});
+
+	return formattedWords.filter(Boolean).join(' ');
 }
 
 /**
@@ -141,7 +175,14 @@ export function formatFacultyName(name) {
  */
 export function formatTitleWithDot(title) {
 	if (!title) return '';
-	const formattedTitle = title.trim();
-	if (formattedTitle.endsWith('.')) return formattedTitle;
-	return `${formattedTitle}.`;
+	const normalized = title.trim().replace(/\.+$/, '').toLowerCase();
+	const mappedTitle = {
+		mr: 'Mr',
+		mrs: 'Mrs',
+		ms: 'Ms',
+		dr: 'Dr',
+		prof: 'Prof'
+	}[normalized];
+	const finalTitle = mappedTitle || (normalized ? normalized.charAt(0).toUpperCase() + normalized.slice(1) : '');
+	return finalTitle ? `${finalTitle}.` : '';
 }
