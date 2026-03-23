@@ -22,13 +22,13 @@
 				<div class="cdc-media-sheen" aria-hidden="true"></div>
 				<div class="cdc-media-inner">
 					<img
-						src="/header/Sandeep.jpg"
+						src="/gallery/g1.jpg"
 						alt="Top placement achiever at BITS Vizag"
 						loading="lazy"
 					/>
 				</div>
 			</div>
-			<p class="cdc-media-caption">Highest Package Achiever Spotlight</p>
+			<!-- <p class="cdc-media-caption">Highest Package Achiever Spotlight</p> -->
 		</div>
 	</div>
 </section>
@@ -167,6 +167,7 @@
 		z-index: 1;
 		border-radius: 0.95rem;
 		overflow: hidden;
+		aspect-ratio: 5 / 4;
 		background:
 			radial-gradient(circle at 20% 0%, rgba(147, 197, 253, 0.26), transparent 42%),
 			linear-gradient(180deg, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.24));
@@ -175,12 +176,9 @@
 	.cdc-media-card img {
 		display: block;
 		width: 100%;
-		height: clamp(270px, 32vw, 390px);
-		aspect-ratio: 5 / 4;
-		object-fit: contain;
-		object-position: center top;
-		padding: clamp(0.45rem, 1.15vw, 0.95rem);
-		filter: drop-shadow(0 12px 24px rgba(2, 6, 23, 0.3));
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 
 	.cdc-media-caption {
@@ -255,8 +253,8 @@
 			padding: 0.58rem;
 		}
 
-		.cdc-media-card img {
-			height: clamp(250px, 62vw, 340px);
+		.cdc-media-inner {
+			aspect-ratio: 4 / 3;
 		}
 	}
 </style>

@@ -1,28 +1,32 @@
 <script>
 	const items = [
 		{
-			name: 'Mr. Madhav Rao',
+			name: 'Mr. T. Mouli',
 			department: 'Computer Science & Engineering'
 		},
 		{
-			name: 'Mrs. Ch Komali',
+			name: 'Mrs. T. Pavani',
 			department: 'Electronics & Communication Engineering'
 		},
 		{
-			name: 'Mr. MVS Prem Sagar',
+			name: 'Mrs. G. Aliveni',
 			department: 'Electrical & Electronics Engineering'
 		},
 		{
-			name: 'Mr. Ali',
+			name: 'Mr. V. Preetham',
 			department: 'Mechanical Engineering'
 		},
 		{
-			name: 'Mr. K Harish',
+			name: 'Mrs. K. Lavanya',
 			department: 'Civil Engineering'
 		},
 		{
 			name: 'Mrs. K Sireesha',
-			department: 'Management Studies'
+			department: 'Basic Sciences & Humanities'
+		},
+		{
+			name: 'Mr. L. Sairama',
+			department: 'MBA'
 		}
 	];
 </script>
@@ -78,11 +82,11 @@
 		padding: 0.42rem 0.88rem;
 		border-radius: 999px;
 		margin: 0;
-		background: #dbeafe;
-		border: 1px solid #bfdbfe;
-		color: #1d4ed8;
+		background: #cfe1ff;
+		border: 1px solid #9cc0ff;
+		color: #1e3a8a;
 		font-size: 0.74rem;
-		font-weight: 800;
+		font-weight: 900;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 	}
@@ -93,15 +97,16 @@
 		line-height: 1.05;
 		font-weight: 900;
 		letter-spacing: -0.02em;
-		color: #0f172a;
+		color: #0b1220;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
 	}
 
 	.coord-subtitle {
 		margin: 0.85rem 0 0;
 		font-size: clamp(0.95rem, 1.6vw, 1.06rem);
 		line-height: 1.65;
-		font-weight: 400;
-		color: #475569;
+		font-weight: 600;
+		color: #334155;
 	}
 
 	.coord-grid {

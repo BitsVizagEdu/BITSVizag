@@ -90,7 +90,7 @@
 					<h6
 						class="text-[6.5px] 3xs:text-[7px] 2xs:text-[8.5px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[600px] mx-auto"
 					>
-						( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-Kakinada, GV )
+						( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-GV Vizianagaram )
 						<br class="hidden sm:block" />
 						<span class="block sm:inline">(An ISO 9001:2015 Certified Educational Institution)</span
 						>
