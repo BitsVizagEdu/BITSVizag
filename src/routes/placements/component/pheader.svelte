@@ -19,7 +19,14 @@
 
 		<div class="cdc-media-wrap">
 			<div class="cdc-media-card">
-				<img src="/header/Sandeep.jpg" alt="Top placement achiever at BITS Vizag" />
+				<div class="cdc-media-sheen" aria-hidden="true"></div>
+				<div class="cdc-media-inner">
+					<img
+						src="/header/Sandeep.jpg"
+						alt="Top placement achiever at BITS Vizag"
+						loading="lazy"
+					/>
+				</div>
 			</div>
 			<p class="cdc-media-caption">Highest Package Achiever Spotlight</p>
 		</div>
@@ -32,7 +39,10 @@
 		isolation: isolate;
 		overflow: hidden;
 		padding: clamp(1.75rem, 4vw, 4.25rem) 1rem;
-		background: #030a1f;
+		background:
+			radial-gradient(circle at 82% 10%, rgba(16, 185, 129, 0.18), transparent 32%),
+			radial-gradient(circle at 8% 0%, rgba(59, 130, 246, 0.22), transparent 36%),
+			#030a1f;
 	}
 
 	.cdc-hero-bg {
@@ -50,8 +60,8 @@
 		position: absolute;
 		inset: 0;
 		background:
-			radial-gradient(circle at 16% 20%, rgba(37, 99, 235, 0.34), transparent 44%),
-			linear-gradient(110deg, rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.62));
+			radial-gradient(circle at 14% 22%, rgba(37, 99, 235, 0.34), transparent 44%),
+			linear-gradient(112deg, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.56));
 	}
 
 	.cdc-hero-grid {
@@ -87,7 +97,7 @@
 
 	.cdc-copy h1 {
 		margin: 0;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Sora', 'Montserrat', 'Roboto', sans-serif;
 		font-weight: 900;
 		font-size: clamp(2.1rem, 5.8vw, 5rem);
 		line-height: 0.96;
@@ -120,9 +130,9 @@
 		font-weight: 700;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: #dbeafe;
-		background: rgba(30, 64, 175, 0.3);
-		border: 1px solid rgba(147, 197, 253, 0.32);
+		color: #d1fae5;
+		background: rgba(15, 118, 110, 0.28);
+		border: 1px solid rgba(94, 234, 212, 0.38);
 	}
 
 	.cdc-media-wrap {
@@ -132,19 +142,45 @@
 	.cdc-media-card {
 		position: relative;
 		overflow: hidden;
-		border-radius: 1.25rem;
-		border: 1px solid rgba(255, 255, 255, 0.25);
-		background: rgba(2, 6, 23, 0.45);
-		box-shadow: 0 26px 44px -22px rgba(2, 6, 23, 0.65);
-		backdrop-filter: blur(4px);
+		border-radius: 1.35rem;
+		padding: 0.72rem;
+		background:
+			linear-gradient(148deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.05) 46%, rgba(15, 23, 42, 0.24)),
+			rgba(2, 6, 23, 0.48);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		box-shadow:
+			0 30px 55px -26px rgba(2, 6, 23, 0.82),
+			inset 0 1px 0 rgba(255, 255, 255, 0.28);
+		backdrop-filter: blur(8px);
+	}
+
+	.cdc-media-sheen {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(130deg, rgba(255, 255, 255, 0.25), transparent 38%, transparent 62%, rgba(255, 255, 255, 0.16));
+		pointer-events: none;
+		z-index: 2;
+	}
+
+	.cdc-media-inner {
+		position: relative;
+		z-index: 1;
+		border-radius: 0.95rem;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 20% 0%, rgba(147, 197, 253, 0.26), transparent 42%),
+			linear-gradient(180deg, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.24));
 	}
 
 	.cdc-media-card img {
 		display: block;
 		width: 100%;
-		height: auto;
-		aspect-ratio: 4 / 3;
-		object-fit: cover;
+		height: clamp(270px, 32vw, 390px);
+		aspect-ratio: 5 / 4;
+		object-fit: contain;
+		object-position: center top;
+		padding: clamp(0.45rem, 1.15vw, 0.95rem);
+		filter: drop-shadow(0 12px 24px rgba(2, 6, 23, 0.3));
 	}
 
 	.cdc-media-caption {
@@ -154,7 +190,8 @@
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: rgba(226, 232, 240, 0.86);
+		color: rgba(230, 255, 246, 0.92);
+		text-shadow: 0 2px 16px rgba(16, 185, 129, 0.32);
 	}
 
 	@keyframes cdc-enter-up {
@@ -214,7 +251,12 @@
 		}
 
 		.cdc-media-card {
-			border-radius: 1rem;
+			border-radius: 1.05rem;
+			padding: 0.58rem;
+		}
+
+		.cdc-media-card img {
+			height: clamp(250px, 62vw, 340px);
 		}
 	}
 </style>

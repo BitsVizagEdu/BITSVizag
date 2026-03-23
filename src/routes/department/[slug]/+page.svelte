@@ -24,6 +24,7 @@
 		toggleIsActiveTab(false);
 	}
 
+	/** @param {string} slug */
 	const getDepartmentMetadata = (slug) => {
 		const defaultTitle = 'Engineering Departments | BITS Vizag';
 		const defaultDescription =
@@ -82,11 +83,103 @@
 		return { title, description };
 	};
 
+	/** @type {Record<string, string[]>} */
+	const facultyOrderByDepartment = {
+		'Department of CSE': [
+			'B.POORNASATYANARAYANA',
+			'U. Padma Mohan',
+			'P. T. S. Priya',
+			'D. KANAKESWARI',
+			'P. Joshua Raju',
+			'T. CHAITANYA',
+			'S. Samyukta',
+			'G. Kishore',
+			'P.Gayathri',
+			'M.Sai prasanna',
+			'D.Sriya Rani',
+			'G. Sushma',
+			'S. Harshini',
+			'S. MOULI',
+			'N. Vineeth',
+			'N. Raju',
+			'B. PRASAD',
+			'K. Sravani Reddy',
+			'R. Mallika',
+			'K. Jeevitha',
+			'D. Sailaxmi',
+			'S.Madhu Latha'
+		],
+		'Department of ECE': [
+			'Dr. B. Kiranmai',
+			'K. Pradeep',
+			'Dr. Y. V. Bhaskara Lakshmi',
+			'H. Ravi Kishore',
+			'G. Arjun Kumar',
+			'T. Vishnu Murthy',
+			'CH. M. M. KOMALI',
+			'Ch. SANTOSHI KUMARI',
+			'T. Pavani'
+		],
+		'Department of EEE': [
+			'U. KAMARAJU',
+			'G. Anil Kumar',
+			'P. Arun Tez',
+			'B. U. S. PREM SAGAR',
+			'D. Sudharnitha',
+			'G. Alirani',
+			'V. Madhava Rao'
+		],
+		'Department of MECH': [
+			'P. UMA CHAITHANYA',
+			'Dr. A. S. Bhanu Prasanna',
+			'FATHIMUNNISA BEGUM',
+			'H. SATYANARAYANA',
+			'Vikas Ranjan',
+			'Reddy Ramesh',
+			'V. Preetham Kumar',
+			'Parameswar Rao'
+		],
+		'Department of CIVIL': [
+			'Pavani',
+			'Dr. Shahazadi Begum',
+			'P. LAVANYA',
+			'P. Saranya',
+			'K. Lavanya'
+		],
+		'Department of MBA': [
+			'K. SIVEESHA',
+			'H. Vasudeva Rao',
+			'B. G. S. Prasad',
+			'K. NARESH KUMAR',
+			'B. Santoshi Kumari',
+			'L. Srinivasa'
+		],
+		'Department of BS&H': [
+			'Dr. P. JAYARANGARAO',
+			'Dr. Paromita Mukherjee',
+			'Dr.T.Suneetha Rani',
+			'P. V. Murali',
+			'Dr. Piyali Varma',
+			'P. MAHESH',
+			'P.Surya Kumari',
+			'G. JYOTHI',
+			'K .Serisha',
+			'B. V. KAVITHA',
+			'L. Priyanka',
+			'Dr. M. Mounika',
+			'V. Jyothi',
+			'A. PYDIRAJU'
+		]
+	};
+
 	let meta;
-	let currentSlug;
+	/** @type {string} */
+	let currentSlug = '';
 	let structuredData;
+	let orderedFaculty;
 	$: currentSlug = data?.route || $page.params.slug;
 	$: meta = getDepartmentMetadata(currentSlug);
+	$: orderedFaculty = facultyOrderByDepartment[currentSlug] || [];
 	$: structuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'EducationalOrganization',
@@ -154,6 +247,20 @@
 				{/if}
 				{#if currentSlug === 'Department of MBA'}
 					<DepartmentofMba />
+				{/if}
+
+				{#if orderedFaculty.length > 0}
+					<section class="mt-10 border-t border-slate-200 pt-8">
+						<h3 class="text-xl md:text-2xl font-semibold text-slate-900 mb-4">Faculty Order</h3>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+							{#each orderedFaculty as facultyName, index}
+								<div class="px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-800">
+									<span class="font-semibold text-slate-600 mr-2">{index + 1}.</span>
+									{facultyName}
+								</div>
+							{/each}
+						</div>
+					</section>
 				{/if}
 			</div>
 		</main>
