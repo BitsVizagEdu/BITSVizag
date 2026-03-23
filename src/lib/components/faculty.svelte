@@ -47,7 +47,7 @@
 		'T. Pavani': 2.8,
 		'CH. M. M. KOMALI': 9,
 		'K. Pradeep': 20,
-		'G. Arjun Kumar': 12,
+		'G. Ashwan Kumar': 12,
 		'Dr. Y. V. Bhaskara Lakshmi': 15,
 		'Dr. B. Kiranmai': 25,
 		'H. Ravi Kishore': 15,
@@ -67,6 +67,10 @@
 		'Dr. A. S. Bhanu Prasanna': 19,
 		'V. Preetham Kumar': 0.7,
 		'Parameswar Rao': 41,
+		'N. S Appala Naidu': 42,
+		'K. Jayababu': 45,
+		'N. Ramesh': 18,
+		'N. Donbru': 38,
 		'Vikas Ranjan': 11,
 		'H. Vasudeva Rao': 16,
 		'K. SIVEESHA': 18,
@@ -82,7 +86,7 @@
 		'P. Saranya': 5,
 		'P. LAVANYA': 5,
 		'K. Lavanya': 0.9,
-		'Pavani': 0,
+		'S. Pavani': 0,
 		'Dr. Shahazadi Begum': 6,
 		'G. JYOTHI': 15,
 		'P. V. Murali': 25,
@@ -111,7 +115,7 @@
 		{
 			title: 'Mrs',
 			name: 'U. Padma Mohan',
-			qualification: 'M.Tech, M.C.A',
+			qualification: 'M.Tech., M.C.A',
 			designation: 'Associate Professor',
 			department: 'CSE',
 			mobile: '9849635322',
@@ -167,7 +171,7 @@
 			title: 'Mr',
 			name: 'G. Kishore',
 			qualification: 'M.Tech',
-			designation: 'Associate Professor',
+			designation: 'Assistant Professor',
 			department: 'CSE',
 			mobile: '9177262145',
 			email: 'kichunandha@gmail.com',
@@ -233,7 +237,7 @@
 		{
 			title: 'Mrs',
 			name: 'M.Sai prasanna',
-			qualification: 'M.Tech, M.C.A, B.Ed, B.Sc',
+			qualification: 'M.Tech., M.C.A',
 			designation: 'Assistant Professor',
 			department: 'CSE',
 			mobile: '7382070704',
@@ -300,7 +304,7 @@
 		{
 			title: 'Mrs',
 			name: 'D. KANAKESWARI',
-			qualification: 'M.Tech, Ph.D',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Sr. Assistant Professor',
 			department: 'CSE',
 			mobile: '9908132695',
@@ -311,7 +315,7 @@
 		{
 			title: 'Mrs',
 			name: 'P. T. S. Priya',
-			qualification: 'M.Tech, M.C.A, B.Sc (MECs)',
+			qualification: 'M.Tech., M.C.A',
 			designation: 'Associate Professor',
 			department: 'CSE',
 			mobile: '7093275580',
@@ -344,8 +348,8 @@
 		{
 			title: 'Mr',
 			name: 'P. Joshua Raju',
-			qualification: 'M.Tech, Ph.D',
-			designation: 'Senior Assistant Professor',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Sr. Assistant Professor',
 			department: 'CSE',
 			mobile: '8297293834',
 			email: 'josh.educato@gmail.com',
@@ -377,7 +381,7 @@
 		{
 			title: 'Mr',
 			name: 'K. Pradeep',
-			qualification: 'M.Tech, Ph.D',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Professor',
 			department: 'ECE',
 			mobile: '9966270111',
@@ -387,8 +391,8 @@
 		},
 		{
 			title: 'Mr',
-			name: 'G. Arjun Kumar',
-			qualification: 'M.Tech, Ph.D',
+			name: 'G. Ashwan Kumar',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Sr. Assistant Professor',
 			department: 'ECE',
 			mobile: '8886065888',
@@ -399,7 +403,7 @@
 		{
 			title: 'Mr',
 			name: 'G. Anil Kumar',
-			qualification: 'Ph.D, M.Tech, B.Tech',
+			qualification: 'M.Tech., Ph.D.',
 			designation: 'Associate Professor',
 			department: 'EEE',
 			mobile: '8096173988',
@@ -409,8 +413,8 @@
 		},
 		{
 			title: 'Mrs',
-			name: 'D. Sudharnitha',
-			qualification: 'M.Tech, B.Tech',
+			name: 'D. Sudhamsha',
+			qualification: 'M.Tech',
 			designation: 'Assistant Professor',
 			department: 'EEE',
 			mobile: '9177228301',
@@ -454,7 +458,7 @@
 		{
 			title: 'Mr',
 			name: 'Reddy Ramesh',
-			qualification: 'M.Tech, B.Tech',
+			qualification: 'M.Tech',
 			designation: 'Assistant Professor',
 			department: 'Mechanical',
 			mobile: '8500652035',
@@ -465,7 +469,7 @@
 		{
 			title: 'Mr',
 			name: 'H. Vasudeva Rao',
-			qualification: 'M.B.A, M.Com, Ph.D',
+			qualification: 'M.B.A., M.Com., Ph.D',
 			designation: 'Associate Professor',
 			department: 'MBA',
 			mobile: '9885993163',
@@ -477,7 +481,7 @@
 			title: 'Mrs',
 			name: 'K. SIVEESHA',
 			qualification: 'MBA',
-			designation: 'Senior Assistant Professor',
+			designation: 'Sr. Assistant Professor',
 			department: 'MBA',
 			mobile: '9703193788',
 			email: 'sirihr22@gmail.com',
@@ -498,7 +502,7 @@
 		{
 			title: 'Mrs',
 			name: 'K .Serisha',
-			qualification: 'M.Sc, M.Tech',
+			qualification: 'M.Sc., M.Tech',
 			designation: 'Sr. Assistant Professor',
 			department: 'BS&H',
 			mobile: '9440938025',
@@ -520,7 +524,7 @@
 		{
 			title: 'Mr',
 			name: 'P. MAHESH',
-			qualification: '(Ph.D), M.Phil, M.Sc',
+			qualification: 'Ph.D., M.Phil., M.Sc.',
 			designation: 'Sr. Assistant Professor',
 			department: 'BS&H',
 			mobile: '9866358722',
@@ -541,12 +545,12 @@
 		},
 		{
 			title: 'Mrs',
-			name: 'Pavani',
-			qualification: 'M.Tech',
+			name: 'S. Pavani',
+			qualification: 'M.E., Ph.D',
 			designation: 'Sr. Assistant Professor',
 			department: 'Civil',
-			mobile: '',
-			email: '',
+			mobile: '9573755176',
+			email: 'bhanupavanidevi9@gmail.com',
 			linkedin: '',
 			photo: ''
 		},
@@ -575,7 +579,7 @@
 		{
 			title: 'Mrs',
 			name: 'Dr. Shahazadi Begum',
-			qualification: 'Ph.D, M.Tech, B.Tech',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'Civil',
 			mobile: '9032972944',
@@ -586,7 +590,7 @@
 		{
 			title: 'Mrs',
 			name: 'Dr. Y. V. Bhaskara Lakshmi',
-			qualification: 'Ph.D, M.Tech, B.Tech',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'ECE',
 			mobile: '7893676891',
@@ -598,7 +602,7 @@
 		{
 			title: 'Mrs',
 			name: 'Dr. B. Kiranmai',
-			qualification: 'Ph.D',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Professor',
 			department: 'ECE',
 			mobile: '8500267193',
@@ -609,7 +613,7 @@
 		{
 			title: 'Mr',
 			name: 'H. Ravi Kishore',
-			qualification: 'Ph.D',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'ECE',
 			mobile: '7989527137',
@@ -654,7 +658,7 @@
 		{
 			title: 'Mr',
 			name: 'B. U. S. PREM SAGAR',
-			qualification: 'M.Tech, M.B.A',
+			qualification: 'M.Tech., M.B.A',
 			designation: 'Sr. Assistant Professor',
 			department: 'EEE',
 			mobile: '9985742615',
@@ -731,6 +735,50 @@
 		},
 		{
 			title: 'Mr',
+			name: 'N. S Appala Naidu',
+			qualification: 'ITI',
+			designation: 'Lab Technician',
+			department: 'Mechanical',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'K. Jayababu',
+			qualification: 'ITI',
+			designation: 'Lab Technician',
+			department: 'Mechanical',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'N. Ramesh',
+			qualification: 'ITI',
+			designation: 'Lab Technician',
+			department: 'Mechanical',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'N. Donbru',
+			qualification: 'ITI',
+			designation: 'Lab Technician',
+			department: 'Mechanical',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
 			name: 'Vikas Ranjan',
 			qualification: 'Ph.D',
 			designation: 'Sr. Assistant Professor',
@@ -799,7 +847,7 @@
 			title: 'Mrs',
 			name: 'G. JYOTHI',
 			qualification:
-				'M.Phil, M.Sc, B.Sc',
+				'M.Phil., M.Sc',
 			designation: 'Sr. Assistant Professor',
 			department: 'BS&H',
 			mobile: '9989609399',
@@ -810,7 +858,7 @@
 		{
 			title: 'Mr',
 			name: 'P. V. Murali',
-			qualification: 'M.A, B.Ed, Ph.D',
+			qualification: 'M.A., B.Ed., Ph.D',
 			designation: 'Sr. Assistant Professor',
 			department: 'BS&H',
 			mobile: '9492535197',
@@ -845,7 +893,7 @@
 		{
 			title: 'Ms',
 			name: 'Dr. M. Mounika',
-			qualification: 'M.Sc, B.Ed',
+			qualification: 'M.Sc., B.Ed',
 			designation: 'Assistant Professor',
 			department: 'BS&H',
 			mobile: '9515099654',
@@ -889,7 +937,7 @@
 		{
 			title: 'Mr',
 			name: 'A. PYDIRAJU',
-			qualification: 'M.A, M.L.I.Sc, M.Ed',
+			qualification: 'M.A., M.L.I.Sc., M.Ed',
 			designation: 'Assistant Professor',
 			department: 'BS&H',
 			mobile: '7893429433',
@@ -900,7 +948,7 @@
 		{
 			title: 'Mrs',
 			name: 'B. V. KAVITHA',
-			qualification: 'M.Sc, B.Ed, Ph.D',
+			qualification: 'M.Sc., B.Ed., Ph.D',
 			designation: 'Sr. Assistant Professor',
 			department: 'BS&H',
 			mobile: '9985388148',
@@ -936,6 +984,7 @@
 		'G. Sushma',
 		'S. Harshini',
 		'S. MOULI',
+		'K. SRINIJA',
 		'N. Vineeth',
 		'N. Raju',
 		'B. PRASAD',
@@ -959,6 +1008,7 @@
 		'K. Pradeep',
 		'Dr. Y. V. Bhaskara Lakshmi',
 		'H. Ravi Kishore',
+		'G. Ashwan Kumar',
 		'G. Arjun Kumar',
 		'T. Vishnu Murthy',
 		'CH. M. M. KOMALI',
@@ -1000,7 +1050,11 @@
 		'Vikas Ranjan',
 		'Reddy Ramesh',
 		'V. Preetham Kumar',
-		'Parameswar Rao'
+		'Parameswar Rao',
+		'N. S Appala Naidu',
+		'K. Jayababu',
+		'N. Ramesh',
+		'N. Donbru'
 	];
 
 	const mechanicalPriorityIndex = mechanicalPriorityOrder.reduce(
@@ -1326,61 +1380,25 @@
 	/** @param {{ department?: string }} person */
 	const isBshDepartment = (person) => normalize(person.department) === 'bs&h';
 
-	/**
-	 * @param {{ department?: string; name?: string; qualification?: string }} a
-	 * @param {{ department?: string; name?: string; qualification?: string }} b
-	 */
-	const sortFacultyMembers = (a, b) => {
-		const aIsCse = isCseDepartment(a);
-		const bIsCse = isCseDepartment(b);
-		const aIsEce = isEceDepartment(a);
-		const bIsEce = isEceDepartment(b);
-		const aIsEee = isEeeDepartment(a);
-		const bIsEee = isEeeDepartment(b);
-		const aIsMechanical = isMechanicalDepartment(a);
-		const bIsMechanical = isMechanicalDepartment(b);
-		const aIsCivil = isCivilDepartment(a);
-		const bIsCivil = isCivilDepartment(b);
-		const aIsMba = isMbaDepartment(a);
-		const bIsMba = isMbaDepartment(b);
-		const aIsBsh = isBshDepartment(a);
-		const bIsBsh = isBshDepartment(b);
+	/** @param {string} department */
+	const getDepartmentSorter = (department) => {
+		const normalizedDepartment = normalize(department);
 
-		if (aIsCse && bIsCse) {
-			return sortCseByPriority(a, b);
-		}
+		if (normalizedDepartment === 'cse') return sortCseByPriority;
+		if (normalizedDepartment === 'ece') return sortEceByPriority;
+		if (normalizedDepartment === 'eee') return sortEeeByPriority;
+		if (normalizedDepartment === 'mechanical') return sortMechanicalByPriority;
+		if (normalizedDepartment === 'civil') return sortCivilByPriority;
+		if (normalizedDepartment === 'mba') return sortMbaByPriority;
+		if (normalizedDepartment === 'bs&h') return sortBshByPriority;
 
-		if (aIsEce && bIsEce) {
-			return sortEceByPriority(a, b);
-		}
-
-		if (aIsEee && bIsEee) {
-			return sortEeeByPriority(a, b);
-		}
-
-		if (aIsMechanical && bIsMechanical) {
-			return sortMechanicalByPriority(a, b);
-		}
-
-		if (aIsCivil && bIsCivil) {
-			return sortCivilByPriority(a, b);
-		}
-
-		if (aIsMba && bIsMba) {
-			return sortMbaByPriority(a, b);
-		}
-
-		if (aIsBsh && bIsBsh) {
-			return sortBshByPriority(a, b);
-		}
-
-		return sortByQualification(a, b);
+		return sortByQualification;
 	};
 
-	// Keep CSE/ECE lists in requested order in every view and keep CSE lab programmers inside CSE cards.
-	$: facultyMembers = filteredFaculty
-		.filter((person) => !(isLabProgrammer(person.designation) && !isCseDepartment(person)))
-		.sort(sortFacultyMembers);
+	// Keep CSE lab programmers inside CSE cards and sort inside each department group.
+	$: facultyMembers = filteredFaculty.filter(
+		(person) => !(isLabProgrammer(person.designation) && !isCseDepartment(person))
+	);
 
 	const departmentDisplayOrder = [
 		'CSE',
@@ -1405,24 +1423,33 @@
 		/** @type {Record<string, Array<(typeof facultyMembers)[number]>>} */ ({})
 	);
 
-	$: orderedDepartmentGroups = Object.entries(groupedFacultyMembers).sort(([a], [b]) => {
-		const indexA = departmentDisplayOrder.indexOf(a);
-		const indexB = departmentDisplayOrder.indexOf(b);
+	$: orderedDepartmentGroups = /** @type {Array<[string, Array<(typeof facultyMembers)[number]>]>} */ (
+		Object.entries(groupedFacultyMembers)
+			.sort(([a], [b]) => {
+				const indexA = departmentDisplayOrder.indexOf(a);
+				const indexB = departmentDisplayOrder.indexOf(b);
 
-		if (indexA === -1 && indexB === -1) {
-			return a.localeCompare(b);
-		}
+				if (indexA === -1 && indexB === -1) {
+					return a.localeCompare(b);
+				}
 
-		if (indexA === -1) {
-			return 1;
-		}
+				if (indexA === -1) {
+					return 1;
+				}
 
-		if (indexB === -1) {
-			return -1;
-		}
+				if (indexB === -1) {
+					return -1;
+				}
 
-		return indexA - indexB;
-	});
+				return indexA - indexB;
+			})
+			.map(([department, people]) =>
+				/** @type {[string, Array<(typeof facultyMembers)[number]>]} */ ([
+					department,
+					[...people].sort(getDepartmentSorter(department))
+				])
+			)
+	);
 
 	$: labProgrammers = filteredFaculty
 		.filter((person) => isLabProgrammer(person.designation) && !isCseDepartment(person))

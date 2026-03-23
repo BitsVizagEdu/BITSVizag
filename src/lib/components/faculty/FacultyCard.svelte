@@ -9,10 +9,19 @@
 	const hasPhoto = Boolean(faculty.photo);
 	const female = isFemale(faculty.title);
 	const departmentColor = getDepartmentColor(faculty.department);
-	const formattedName = formatFacultyName(faculty.name);
+
+	/** @param {string} value */
+	function removeDoctorPrefix(value = '') {
+		return value.replace(/^\s*dr\.?\s+/i, '');
+	}
+
+	const cleanedName = removeDoctorPrefix(faculty.name || '');
+	const formattedName = formatFacultyName(cleanedName);
 	const formattedDesignation = formatFacultyName(faculty.designation);
 	const formattedTitle = formatTitleWithDot(faculty.title);
+	const showTitle = !/^dr\.?$/i.test((faculty.title || '').trim());
 
+	/** @param {number | string | null | undefined} value */
 	function formatExperience(value) {
 		if (value === null || value === undefined || value === '') {
 			return '';
@@ -61,12 +70,12 @@
 
 	<div class="avatar-wrap {female ? 'female-avatar' : ''}" aria-hidden="true">
 		<div class="avatar-inner">
-			<img src={displayImage} alt={faculty.name} loading="lazy" class:placeholder-avatar={!hasPhoto} class:female-img={female} />
+			<img src={displayImage} alt={formattedName} loading="lazy" class:placeholder-avatar={!hasPhoto} class:female-img={female} />
 		</div>
 	</div>
 
 	<div class="content">
-		<h3 class="faculty-name-styled">{formattedTitle} {formattedName}</h3>
+		<h3 class="faculty-name-styled">{showTitle ? `${formattedTitle} ` : ''}{formattedName}</h3>
 		<p class="qualification-styled">{faculty.qualification}</p>
 		<div class="designation-row">
 			<p class="designation {isLab ? 'lab' : ''}">{formattedDesignation}</p>
@@ -252,15 +261,15 @@
 	}
 
 	.avatar-wrap img {
-		width: 75%;
-		height: 75%;
+		width: 85%;
+		height: 85%;
 		object-fit: contain;
 		display: block;
 		transition: all 0.3s ease;
 	}
 
 	.avatar-wrap img.placeholder-avatar {
-		opacity: 0.8;
+		opacity: 1;
 	}
 
 	.avatar-wrap img.female-img {
