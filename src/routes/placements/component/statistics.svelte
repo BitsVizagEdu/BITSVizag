@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	// import {onMount} from "svelte";
 	//
 	// onMount(async () => {
@@ -38,8 +38,8 @@
 		Statistics
 	</h1>
 	<div class="flex flex-col items-center">
-		<!-- Stats Grid -->
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full">
+		Stats Grid -->
+		<!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full">
 			{#each items as item, i}
 				<div
 					role="region"
@@ -93,4 +93,4 @@
 			/>
 		</div>
 	</div>
-</div>
+</div> -->

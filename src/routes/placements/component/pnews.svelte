@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import gsap from 'gsap/dist/gsap';
 	import { onMount } from 'svelte';
@@ -282,4 +282,4 @@
 		color: rgba(0, 0, 0, 0.753);
 		color: rgb(66, 66, 66);
 	}
-</style>
+</style> -->

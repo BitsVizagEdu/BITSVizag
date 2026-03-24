@@ -73,7 +73,7 @@
 
 <Seo
 	title="BITS Vizag - Top Engineering College in Visakhapatnam"
-	description="Bhogawati Institute of Technology and Science (BITS Vizag), a premier engineering college in Visakhapatnam, offering a world-class education in various disciplines."
+	description="Baba Institute of Technology and Sciences (BITS Vizag),BITS Vizag is a best engineering college in Visakhapatnam, offering a world-class education in various disciplines."
 	url="https://bitsvizag.com"
 	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
 	siteName="BITS Vizag"

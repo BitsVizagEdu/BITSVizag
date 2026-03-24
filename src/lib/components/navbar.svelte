@@ -90,21 +90,22 @@
 					<h6
 						class="text-[6.5px] 3xs:text-[7px] 2xs:text-[8.5px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[600px] mx-auto"
 					>
-						( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-GV Vizianagaram )
+						( Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-GV Vizianagaram)
 						<br class="hidden sm:block" />
 						<span class="block sm:inline">(An ISO 9001:2015 Certified Educational Institution)</span
 						>
+						<span class="block sm:inline">(18 Years of Educational Excellence Foundation)</span>
 					</h6>
 					<div
 						class="mt-1 xs:mt-2 inline-flex items-center gap-1 xs:gap-1.5 px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
 					>
 						<span
-							class="text-[9px] 2xs:text-[10px] md:text-xs font-bold text-amber-500 uppercase tracking-wider"
+							class="text-[10px] 2xs:text-[11px] md:text-sm font-bold text-amber-500 uppercase tracking-wider"
 						>
 							College Code :
 						</span>
 						<span
-							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-[10px] xs:text-sm md:text-base leading-none"
+							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-xs xs:text-base md:text-lg leading-none"
 						>
 							BABA
 						</span>

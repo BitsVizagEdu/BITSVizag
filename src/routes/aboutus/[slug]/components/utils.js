@@ -1,5 +1,5 @@
 export let items = [
-    'About-ABWS',
+    'About-ABWEC',
     'About-BITS',
     'Message-from-Secretary-&-Correspondent',
     'Message-from-Principal'

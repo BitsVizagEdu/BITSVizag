@@ -85,7 +85,7 @@
 			click: 'Click to view more >>>'
 		},
 		{
-			name: 'International Women’s Day 2025',
+			name: "International Women's Day 2025",
 			description:
 				' Women leaders shared impactful stories and guided students toward building a more inclusive and progressive environment.',
 			date: 'March 8, 2025',
@@ -176,7 +176,7 @@
 			click: 'Click to view more >>>'
 		},
 		{
-			name: 'An Interactive & Collaborative State of the Art Workshop exploring IOT & Robotics at BITS Vizag',
+			name: 'AI & Robotics Workshop',
 			description:
 				'Tech Nexus at BITS Vizag: A collaborative workshop uniting students and startups to explore IoT & Robotics, led by Dr. BKC Ganesh, showcasing innovation amidst institutional initiatives.',
 			date: 'March 28, 2024',
@@ -194,12 +194,12 @@
 			click: 'Click to view more >>>'
 		},
 		{
-			name: 'Conversation Unveiled by Prof. Sajjan Shiva ,University of Memphis, USA',
+			name: 'Prof. Sajjan Shiva | University of Memphis, USA',
 			description:
 				'Thrilled to witness Digitaries  Prof. Sajjan Shiva sharing valuable insights on higher studies and foreign educational opportunities.',
 			date: 'January 9, 2024',
 			image: '/events/memphis.jpg',
-			href: 'https://www.instagram.com/p/CrAr6bOO5ug/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
+			href: 'https://www.instagram.com/bits_vizag_official/',
 			click: 'Click to view more >>>'
 		},
 		{
@@ -256,12 +256,12 @@
 			click: 'Click to view more >>>'
 		},
 		{
-			name: 'Mr. Joshua Raju, CSE Students, and KONKORDE Team Gain Invaluable Insights at BNI Kings Meet 2023.',
+			name: 'BNI Kings Meetup 2023',
 			description:
 				'Mr. Joshua Raju, CSE students, and KONKORDE Team gained insights at the BNI Kings Meet 2023, Hotel Ocean Vista Bay, August 10th.',
 			date: 'August 10, 2023',
 			image: '/events/bni.jpg',
-			href: 'https://www.instagram.com/p/Cv_mxy6rXUW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
+			href: 'https://www.instagram.com/bits_vizag_official/',
 			click: 'Click to view more >>>'
 		},
 		{

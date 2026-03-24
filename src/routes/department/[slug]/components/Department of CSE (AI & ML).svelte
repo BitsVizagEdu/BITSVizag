@@ -25,14 +25,10 @@
 		{ name: 'Big Data Analytics Lab',               icon: '🗄️' },
 		{ name: 'Cognitive Computing Lab',              icon: '⚡' },
 		{ name: 'AI & IoT Integration Lab',             icon: '🌐' },
-		{ name: 'Cloud Computing for AI Lab',           icon: '☁️' },
-		{ name: 'Advanced Robotics Lab',                icon: '🦾' },
-		{ name: 'R Programming Laboratory',             icon: '📈' },
-		{ name: 'High-Performance GPU Computing',       icon: '🖥️' },
 	];
 
 	const stats = [
-		{ num: '14+',  label: 'AI/ML Labs',    sub: 'Cutting-edge'      },
+		{ num: '10+',  label: 'AI/ML Labs',    sub: 'Cutting-edge'      },
 		{ num: '400+', label: 'Students',       sub: 'Enrolled annually' },
 		{ num: '25+',  label: 'Faculty',        sub: 'AI specialists'    },
 		{ num: '92%',  label: 'Placements',     sub: 'Year on year'      },
@@ -102,7 +98,7 @@
 
 			<div class="hero-badge">
 				<div class="badge-dot" />
-				Est. 2008
+				Est. 2024
 			</div>
 		</div>
 	</section>
@@ -199,7 +195,7 @@
 			<!-- labs -->
 			<div class="s-header" use:reveal={0} style="margin-top:4rem">
 				<span class="eyebrow-pill">Laboratories</span>
-				<h3 class="s-subheading">14 Specialised AI &amp; ML Labs</h3>
+				<h3 class="s-subheading">10 Specialised AI &amp; ML Labs</h3>
 			</div>
 
 			<div class="labs-grid">

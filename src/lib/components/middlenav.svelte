@@ -154,14 +154,14 @@
 							</div>
 							<div class="flex flex-col gap-2">
 								<a
-									href="/aboutus/About-ABWS"
+									href="/aboutus/About-ABWEC"
 									on:click={closeMenus}
 									class="group flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
 								>
 									<i
 										class="fa-solid fa-shield-heart text-[#2672d5] text-lg group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-slate-800">About ABWS</span>
+									<span class="text-[15px] font-bold text-slate-800">About ABWEC</span>
 								</a>
 								<a
 									href="/aboutus/About-BITS"

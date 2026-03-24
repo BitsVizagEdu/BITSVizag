@@ -1,7 +1,7 @@
 <script>
 	const departments = [
 		{
-			name: 'Computer Science Engineering',
+			name: 'Computer Science & Engineering',
 			intake: 180,
 			href: '/department/Department%20of%20CSE'
 		},
@@ -49,6 +49,7 @@
 		<div class="intro-layout">
 			<div class="intro-copy">
 				<h2>Bachelor of Technology</h2>
+				<p><strong>Bachelor Degree (Duration: 4 Years)</strong></p>
 				<p>
 					Bachelor of Technology (B.Tech): Build a strong technical foundation through specialized
 					programs in Computer Science, AI and Machine Learning, Cyber Security, ECE, EEE,
