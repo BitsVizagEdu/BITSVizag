@@ -88,8 +88,8 @@
 		'Department of CSE': [
 			'B.POORNASATYANARAYANA',
 			'U. Padma Mohan',
+			'D. Kanakeswara',
 			'P. T. S. Priya',
-			'D. KANAKESWARI',
 			'P. Joshua Raju',
 			'T. CHAITANYA',
 			'S. Samyukta',

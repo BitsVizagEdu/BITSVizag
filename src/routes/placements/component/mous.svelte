@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	const authorityMessages = [
 		{
 			role: 'Secretary & Correspondent',
@@ -283,4 +283,4 @@
 			transform: none;
 		}
 	}
-</style>
+</style> -->

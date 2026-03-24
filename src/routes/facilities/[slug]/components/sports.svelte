@@ -20,11 +20,13 @@
 	];
 
 	const galleryImages = [
-		'/Facilities/s2.png',
-		'/Facilities/s7.png',
-		'/Facilities/s1.jpg',
-		'/Facilities/s5.png',
-		'/Facilities/s6.png'
+		
+		'/gallery/DSC05556.JPG',
+		'/gallery/g-05.jpg',
+		'/events/T-10.jpg',
+		'/events/Champions-T10.jpg',
+		'/Facilities/womens-day-sports-event.jpg'
+		
 	];
 </script>
 

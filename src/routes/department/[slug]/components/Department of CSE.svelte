@@ -27,10 +27,12 @@
 		{ name: 'UML & Design Patterns Lab',       icon: '📐' },
 		{ name: 'Mobile App Development Lab',      icon: '📱' },
 		{ name: 'Information Technology Workshop', icon: '🛠️' },
+		{ name: 'Cloud Computing Lab',             icon: '☁️' },
+		{ name: 'AI & Data Analytics Lab',         icon: '🧠' },
 	];
 
 	const stats = [
-		{ num: '12+',  label: 'Laboratories',  sub: 'State-of-the-art'  },
+		{ num: '14+',  label: 'Laboratories',  sub: 'State-of-the-art'  },
 		{ num: '500+', label: 'Students',       sub: 'Enrolled annually' },
 		{ num: '30+',  label: 'Faculty',        sub: 'Expert educators'  },
 		{ num: '95%',  label: 'Placements',     sub: 'Year on year'      },
@@ -186,7 +188,7 @@
 			<!-- labs -->
 			<div class="s-header" use:reveal={0} style="margin-top:4rem">
 				<span class="eyebrow-pill">Laboratories</span>
-				<h3 class="s-subheading">12 Specialised Labs</h3>
+				<h3 class="s-subheading">14 Specialised Labs</h3>
 			</div>
 
 			<div class="labs-grid">

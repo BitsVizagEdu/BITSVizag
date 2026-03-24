@@ -1,4 +1,4 @@
-<section class="cdc-hero">
+<!-- <section class="cdc-hero">
 	<div class="cdc-hero-bg" aria-hidden="true"></div>
 	<div class="cdc-hero-shade" aria-hidden="true"></div>
 
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<!-- <p class="cdc-media-caption">Highest Package Achiever Spotlight</p> -->
-		</div>
+		<!-- </div>
 	</div>
 </section>
 
@@ -257,4 +257,4 @@
 			aspect-ratio: 4 / 3;
 		}
 	}
-</style>
+</style> --> -->

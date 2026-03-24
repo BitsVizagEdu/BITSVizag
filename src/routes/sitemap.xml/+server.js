@@ -15,7 +15,7 @@ export async function GET() {
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/aboutus/About-ABWS</loc>
+		<loc>https://bitsvizag.com/aboutus/About-ABWEC</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>

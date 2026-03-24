@@ -33,8 +33,8 @@
 				description =
 					'Discover the mission, vision, and values of BITS Vizag, a leading institution for technical education.';
 				break;
-			case 'About-ABWS':
-				title = 'About ABWS | BITS Vizag';
+			case 'About-ABWEC':
+				title = 'About ABWEC | BITS Vizag';
 				description = 'Learn about the trust behind BITS Vizag.';
 				break;
 			case 'Message-from-Secretary-&-Correspondent':
@@ -89,7 +89,7 @@
 		<!-- Main Content Area -->
 		<main class="flex-1 p-4 lg:p-6">
 			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if currentSlug === 'About-ABWS'}
+				{#if currentSlug === 'About-ABWEC'}
 					<Trust />
 				{/if}
 				{#if currentSlug === 'About-BITS'}

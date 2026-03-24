@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	const items = [
 		{
 			name: 'Mr. T. Mouli',
@@ -9,7 +9,7 @@
 			department: 'Electronics & Communication Engineering'
 		},
 		{
-			name: 'Mrs. G. Aliveni',
+			name: 'Ms. G. Aliveni',
 			department: 'Electrical & Electronics Engineering'
 		},
 		{
@@ -230,4 +230,4 @@
 			transform: none;
 		}
 	}
-</style>
+</style> -->

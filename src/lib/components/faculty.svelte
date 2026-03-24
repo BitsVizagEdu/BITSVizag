@@ -39,7 +39,7 @@
 		'P.Gayathri': 3.2,
 		'N. Vineeth': 1,
 		'S.Madhu Latha': 0,
-		'D. KANAKESWARI': 16,
+		'D. KANAKESWARIi': 16,
 		'P. T. S. Priya': 12,
 		'D. Sailaxmi': 1,
 		'S. Samyukta': 5,
