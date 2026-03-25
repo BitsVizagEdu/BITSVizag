@@ -3,10 +3,10 @@
 
 	// ── Data ──────────────────────────────────────────────────────────────────
 	const stats = [
-		{ value: '312+',    label: 'Recruiters', sub: 'hired BITS Vizag students' },
-		{ value: '1000+',   label: 'Companies',  sub: 'offering CTC 5 LPA or above' },
-		{ value: '350+',    label: 'Premier',    sub: 'IIT/IIM/NIT recruiters also hire here' },
-		{ value: '₹1.6L',  label: 'Highest',    sub: 'Internship stipend per month' }
+		{ value: '30.6',    label: 'LPA', sub: 'Highest Package till date' },
+		{ value: '40+',   label: 'Companies',    sub: ' visited this Year (2025-2026)' },
+		{ value: '80%',  label: 'Eligible',    sub: 'Students already placed' },
+		{ value: '₹20k',  label: 'Stipend',    sub: 'during Final year Internships' }
 	];
 
 	const authorities = [
@@ -47,6 +47,7 @@
 	];
 
 	const events = [
+		{date: '14/03/2025', name: 'Mega Job Fair 2026 – A Remarkable Success !!! ', image: '/pevents/megafair.jpg', description:'BITS Vizag (A), in association with Magic Bus Foundation, successfully organized a Mega Job Fair at the college premises on 10th March 2026, creating a powerful platform connecting talented youth with leading employers.'},
 		{ date: '10/08/2023', name: 'BITS Vizag and G-TEC DST GITAM Join Hands Through Meaningful MOU Signing Ceremony.', image: '/pevents/gitam.jpg', description: 'BITS Vizag and G-TEC | DST GITAM join in impactful MOU for enhanced collaboration.' },
 		{ date: '22/07/2023', name: 'MOU Signing Ceremony — BITS Vizag and London School of Digital Business, UK', image: '/pevents/lsdb.jpg', description: 'BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities.' },
 		{ date: '15/06/2023', name: 'MOU with i3 IT Solutionz and Rubicon Skill Development Pvt Ltd', image: '/g4.jpg', description: 'i3 IT Solutionz and Rubicon Skill Development Pvt Ltd have signed an MOU for IT skill development collaboration.' },
@@ -57,12 +58,20 @@
 		{ date: '04/03/2023', name: 'Motivational Speech by YouTube sensation Sudeer Sandra', image: '/pevents/4.jpg', description: 'YouTube sensation Sudeer Sandra delivers captivating motivational speeches that empower individuals to pursue their dreams.' }
 	];
 
-	const logos = Array.from({ length: 10 }, (_, i) => `/logo-150-2/${i + 1}.png`);
+	const logos = [
+		...Array.from({ length: 40 }, (_, i) => `/company/image (${i + 1}).png`),
+		'/company/image(41).jpg',
+		'/company/image(42).jpg',
+		'/company/[CITYPNG.COM]Google High Resolution Logo Icon G Suite - 4545x2054.png'
+	];
+	const additionalCompanyLogos = logos;
 
 	// ── Scroll interactions ───────────────────────────────────────────────────
 	let scrollY = 0;
+	/** @type {HTMLDivElement | undefined} */
 	let newsTrack;
 
+	/** @param {number} dir */
 	function scrollNews(dir) {
 		if (newsTrack) newsTrack.scrollLeft += dir * 380;
 	}
@@ -83,37 +92,74 @@
 <!-- HERO                                                                    -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="hero">
-	<div class="hero-bg" style="transform: translateY({scrollY * 0.28}px)" aria-hidden="true"></div>
-	<div class="hero-overlay" aria-hidden="true"></div>
+	<!-- <div class="hero-bg" style="transform: translateY({scrollY * 0.24}px)" aria-hidden="true"></div>
+	<div class="hero-overlay" aria-hidden="true"></div> -->
+	<!-- <div class="hero-gridline" aria-hidden="true"></div> -->
 
 	<div class="hero-inner">
 		<div class="hero-copy">
 			<span class="hero-kicker">Career Development Cell</span>
-			<h1 class="hero-title">Training &amp;<br/>Placement<br/><em>Cell</em></h1>
+			<h1 class="hero-title">
+				Build a Career with
+				<span class="hero-bits" aria-label="BITS">
+					<span class="bits-letter bits-b">B</span>
+					<span class="bits-letter bits-i">I</span>
+					<span class="bits-letter bits-t">T</span>
+					<span class="bits-letter bits-s">S</span>
+				</span>
+				<em class="hero-gradient-text">Training & Placement</em>
+			</h1>
 			<p class="hero-desc">
-				We prepare students for high-impact careers through focused training,
-				industry-aligned programs, and strong recruiter engagement.
+				A clean, focused pathway for ambitious students: structured mentoring,
+				recruiter-grade skill tracks, and outcomes backed by real placement momentum.
 			</p>
 			<div class="hero-pills">
 				<span>Campus Placements</span>
 				<span>Industry Linkages</span>
 				<span>Skill Development</span>
 			</div>
+			<div class="hero-proof">
+				<div class="hero-proof-item">
+					<strong>312+</strong>
+					<span>Active Recruiters</span>
+				</div>
+				<div class="hero-proof-item">
+					<strong>1000+</strong>
+					<span>Hiring Partners</span>
+				</div>
+				<div class="hero-proof-item">
+					<strong>20k+</strong>
+					
+					<span>Top Internship Stipend</span>
+				</div>
+			</div>
 		</div>
 
 		<div class="hero-visual">
 			<div class="hero-card">
 				<div class="hero-card-shine" aria-hidden="true"></div>
+				<h3 class="hero-card-title">2026 Opportunity Window Is Live</h3>
 				<div class="hero-card-img">
 					<img src="/gallery/g1.jpg" alt="Top placement achiever" loading="lazy" />
 				</div>
+				<div class="hero-card-stats">
+					<div>
+						<span>Interview Readiness</span>
+						<strong>Weekly Bootcamps</strong>
+					</div>
+					<div>
+						<span>Industry Connect</span>
+						<strong>Recruiter Networks</strong>
+					</div>
+				</div>
 				<div class="hero-card-badge">
 					<span class="badge-dot"></span>
-					Placements Open 2026
+					Admissions + Placements Open 2026
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div class="hero-scroll-cue" aria-hidden="true">
 		<span></span>
@@ -125,7 +171,7 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="stats-section">
 	<div class="section-shell">
-		<div class="section-label reveal">By the numbers</div>
+
 		<h2 class="section-title reveal">Placement Excellence</h2>
 		<div class="stats-grid">
 			{#each stats as s, i}
@@ -144,8 +190,8 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="graphs-section">
 	<div class="section-shell">
-		<div class="section-label reveal">Trend Analysis</div>
-		<h2 class="section-title reveal">Placement Insights</h2>
+		
+		<h2 class="section-title reveal">Placement Insights 2026</h2>
 		<div class="graphs-grid reveal">
 			{#each ['/graph1.png', '/graph2.png', '/graph3.png', '/graph4.jpg'] as src, i}
 				<div class="graph-card" style="animation-delay:{i * 60}ms">
@@ -164,7 +210,7 @@
 	<div class="section-shell">
 		<div class="companies-header">
 			<div>
-				<div class="section-label reveal">Building Strong Roots</div>
+				
 				<h2 class="section-title reveal">Trusted by Top Organizations</h2>
 				<p class="companies-desc reveal">Connect with 300+ leading companies that value our graduates' skills, adaptability, and professional excellence.</p>
 			</div>
@@ -184,6 +230,20 @@
 		<div class="carousel-fade carousel-fade-left" aria-hidden="true"></div>
 		<div class="carousel-fade carousel-fade-right" aria-hidden="true"></div>
 	</div>
+
+	<div class="companies-carousel secondary reveal">
+		<div class="carousel-track reverse">
+			{#each [...additionalCompanyLogos, ...additionalCompanyLogos, ...additionalCompanyLogos] as src, i}
+				<div class="company-item" style="animation-delay: {(i % additionalCompanyLogos.length) * 45}ms">
+					<div class="company-badge">
+						<img src={src} alt="Recruiter partner logo" loading="lazy" />
+					</div>
+				</div>
+			{/each}
+		</div>
+		<div class="carousel-fade carousel-fade-left" aria-hidden="true"></div>
+		<div class="carousel-fade carousel-fade-right" aria-hidden="true"></div>
+	</div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
@@ -194,19 +254,21 @@
 		<div class="section-label reveal">Leadership</div>
 		<h2 class="section-title reveal">Address from Academic Authorities</h2>
 		<p class="section-sub reveal">
-			Guidance from leadership that helps students build confidence, discipline, and a career-ready mindset.
+			Leadership messages that shape career readiness, professional values, and long-term student success.
 		</p>
 		<div class="auth-grid">
 			{#each authorities as a, i}
 				<article class="auth-card reveal" style="--accent:{a.accent}; --glow:{a.glow}; animation-delay:{i * 100}ms">
-					<div class="auth-avatar-wrap">
-						<img src={a.image} alt={a.role} loading="lazy" class="auth-avatar" />
-						<div class="auth-avatar-ring" style="box-shadow: 0 0 0 2px {a.accent}40"></div>
+					<div class="auth-head">
+						<div class="auth-avatar-wrap">
+							<img src={a.image} alt={a.role} loading="lazy" class="auth-avatar" />
+							<div class="auth-avatar-ring" style="box-shadow: 0 0 0 2px {a.accent}40"></div>
+						</div>
+						<span class="auth-role" style="color:{a.accent}">{a.role}</span>
 					</div>
 					<div class="auth-body">
-						<span class="auth-role" style="color:{a.accent}">{a.role}</span>
 						<h3 class="auth-headline">{a.headline}</h3>
-						<p class="auth-quote">"{a.quote}"</p>
+						<p class="auth-quote">{a.quote}</p>
 					</div>
 				</article>
 			{/each}
@@ -221,7 +283,7 @@
 	<div class="section-shell">
 		<div class="news-header">
 			<div>
-				<div class="section-label reveal">Latest Updates</div>
+				<div class="section-label reveal font-bold">Latest Updates</div>
 				<h2 class="section-title reveal">Placement News</h2>
 			</div>
 			<div class="news-nav reveal">
@@ -259,8 +321,8 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="coord-section">
 	<div class="section-shell">
-		<div class="section-label reveal">Our Team</div>
-		<h2 class="section-title reveal">Department Coordinators</h2>
+		
+		<h2 class="section-title reveal">Placement Coordinators</h2>
 		<p class="section-sub reveal">
 			Department coordinators guide students with focused support for training, placements, and career readiness.
 		</p>
@@ -303,10 +365,14 @@
 	--muted:     #64748b;
 	--accent:    #2563eb;
 	--accent-2:  #0ea5e9;
+	--bits-b:    #e91e8f;
+	--bits-i:    #8bc34a;
+	--bits-t:    #f2c230;
+	--bits-s:    #2aa8e0;
 	--border:    rgba(15,23,42,0.09);
 	--radius-lg: 1.25rem;
 	--radius-xl: 1.75rem;
-	--font-disp: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-disp: 'Roboto Flex', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	--font-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	--ease-out:  cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -374,27 +440,39 @@
 	position: relative;
 	isolation: isolate;
 	overflow: hidden;
-	min-height: 100svh;
+	min-height: 78vh;
+	background: var(--svh);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: clamp(5rem, 10vw, 8rem) clamp(1rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+	padding: clamp(1rem, 2.8vw, 2rem) clamp(1rem, 5vw, 4rem) clamp(2.2rem, 4.5vw, 3.4rem);
 	background: var(--ink);
 }
 .hero-bg {
 	position: absolute;
-	inset: -10%;
-	background: url('/header/tnp.png') center/cover no-repeat;
-	filter: brightness(0.28) saturate(1.2);
+	inset: 0;
+	background: url('/header/tnp.png') center center/contain no-repeat;
+	filter: brightness(0.25) saturate(1.18);
+	background-color: #020617;
 	will-change: transform;
 }
 .hero-overlay {
 	position: absolute;
 	inset: 0;
 	background:
-		radial-gradient(ellipse 60% 55% at 10% 30%, rgba(37,99,235,0.42), transparent),
-		radial-gradient(ellipse 50% 60% at 85% 70%, rgba(14,165,233,0.22), transparent),
-		linear-gradient(160deg, rgba(2,6,23,0.72) 0%, rgba(2,6,23,0.38) 100%);
+		radial-gradient(ellipse 60% 55% at 15% 20%, rgba(37,99,235,0.45), transparent),
+		radial-gradient(ellipse 50% 60% at 84% 72%, rgba(14,165,233,0.24), transparent),
+		linear-gradient(160deg, rgba(2,6,23,0.8) 0%, rgba(2,6,23,0.45) 100%);
+}
+.hero-gridline {
+	position: absolute;
+	inset: 0;
+	background-image:
+		linear-gradient(rgba(148,163,184,0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(148,163,184,0.08) 1px, transparent 1px);
+	background-size: 48px 48px;
+	mask-image: radial-gradient(circle at center, black 20%, transparent 78%);
+	pointer-events: none;
 }
 .hero-inner {
 	position: relative;
@@ -403,7 +481,7 @@
 	margin: 0 auto;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1.1fr 0.85fr;
+	grid-template-columns: 1.08fr 0.92fr;
 	gap: clamp(2rem, 5vw, 5rem);
 	align-items: center;
 }
@@ -411,109 +489,241 @@
 
 .hero-kicker {
 	display: inline-flex;
-	padding: 0.42rem 0.9rem;
+	padding: 0.45rem 0.95rem;
 	border-radius: 999px;
-	border: 1px solid rgba(255,255,255,0.22);
-	background: rgba(255,255,255,0.08);
+	border: 1px solid rgba(255,255,255,0.28);
+	background: rgba(255,255,255,0.1);
 	backdrop-filter: blur(8px);
 	font-family: var(--font-body);
-	font-size: 0.72rem;
-	font-weight: 600;
-	letter-spacing: 0.12em;
+	font-size: 0.74rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 	color: rgba(248,250,252,0.9);
-	margin-bottom: 1.2rem;
+	margin-bottom: 1.3rem;
 }
 .hero-title {
 	font-family: var(--font-disp);
-	font-size: clamp(3rem, 7vw, 6.5rem);
+	font-size: clamp(2.6rem, 5.4vw, 4.8rem);
 	font-weight: 700;
-	line-height: 0.94;
+	line-height: 1.02;
 	letter-spacing: -0.02em;
 	color: #f8fafc;
-	text-transform: uppercase;
 	text-shadow: 0 12px 40px rgba(2,6,23,0.5);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
 	margin: 0 0 1.4rem;
 }
+.hero-bits {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.28rem;
+	margin-right: 0.12rem;
+	position: relative;
+	top: -0.02em;
+}
+.bits-letter {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: clamp(2rem, 3.2vw, 2.6rem);
+	height: clamp(2rem, 3.2vw, 2.6rem);
+	border-radius: 0.46rem;
+	font-size: clamp(1.1rem, 1.95vw, 1.42rem);
+	font-weight: 800;
+	line-height: 1;
+	color: #ffffff;
+	box-shadow: 0 12px 24px -14px rgba(2,6,23,0.9), inset 0 1px 0 rgba(255,255,255,0.35);
+	border: 1px solid rgba(255,255,255,0.25);
+}
+.bits-b { background: linear-gradient(145deg, #ff3ba6, var(--bits-b)); }
+.bits-i { background: linear-gradient(145deg, #a2d94f, var(--bits-i)); }
+.bits-t { background: linear-gradient(145deg, #ffd651, var(--bits-t)); color: #14213d; }
+.bits-s { background: linear-gradient(145deg, #4ebcf0, var(--bits-s)); }
 .hero-title em {
 	font-style: normal;
-	background: linear-gradient(135deg, #60a5fa, #38bdf8);
+}
+.hero-gradient-text {
+	font-style: normal;
+	display: inline-block;
+	white-space: nowrap;
+	flex-shrink: 0;
+	font-size: clamp(1.9rem, 6.8vw, 4.2rem);
+	line-height: 1.08;
+	background: linear-gradient(
+		90deg,
+		var(--bits-b) 0%,
+		var(--bits-b) 23%,
+		var(--bits-i) 23%,
+		var(--bits-i) 48%,
+		var(--bits-t) 48%,
+		var(--bits-t) 72%,
+		var(--bits-s) 72%,
+		#1f6df0 100%
+	);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	color: transparent;
 }
 .hero-desc {
 	font-family: var(--font-body);
-	font-size: clamp(1rem, 1.4vw, 1.14rem);
-	line-height: 1.68;
+	font-size: clamp(1rem, 1.3vw, 1.1rem);
+	line-height: 1.72;
 	color: rgba(226,232,240,0.9);
-	max-width: 50ch;
-	margin: 0 0 1.5rem;
+	max-width: 54ch;
+	margin: 0 0 1.3rem;
 }
 .hero-pills {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.6rem;
+	margin-bottom: 1.4rem;
 }
 .hero-pills span {
-	padding: 0.44rem 0.9rem;
+	padding: 0.46rem 0.9rem;
 	border-radius: 999px;
 	font-family: var(--font-body);
 	font-size: 0.72rem;
 	font-weight: 600;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	color: #bae6fd;
-	background: rgba(14,165,233,0.15);
-	border: 1px solid rgba(56,189,248,0.32);
+	color: #dbeafe;
+	background: rgba(15,23,42,0.44);
+	border: 1px solid rgba(148,163,184,0.3);
+}
+.hero-proof {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(120px, 1fr));
+	gap: 0.85rem;
+	max-width: 640px;
+}
+.hero-proof-item {
+	padding: 0.9rem 0.95rem;
+	border-radius: 0.85rem;
+	border: 1px solid rgba(148,163,184,0.26);
+	background: rgba(2,6,23,0.44);
+	backdrop-filter: blur(6px);
+	display: flex;
+	flex-direction: column;
+	gap: 0.22rem;
+}
+.hero-proof-item strong {
+	font-family: var(--font-disp);
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: #e2e8f0;
+}
+.hero-proof-item span {
+	font-family: var(--font-body);
+	font-size: 0.76rem;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #93c5fd;
 }
 .hero-visual { animation: hero-up 1s 0.18s var(--ease-out) both; }
 .hero-card {
 	position: relative;
 	border-radius: var(--radius-xl);
-	padding: 0.75rem;
-	background: rgba(255,255,255,0.07);
-	border: 1px solid rgba(255,255,255,0.22);
+	padding: 1rem;
+	background: rgba(15,23,42,0.6);
+	border: 1px solid rgba(148,163,184,0.28);
 	backdrop-filter: blur(12px);
-	box-shadow: 0 40px 80px -30px rgba(2,6,23,0.8), inset 0 1px 0 rgba(255,255,255,0.22);
+	box-shadow: 0 40px 90px -34px rgba(2,6,23,0.82), inset 0 1px 0 rgba(255,255,255,0.15);
 	overflow: hidden;
 }
 .hero-card-shine {
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 40%, transparent 60%, rgba(255,255,255,0.12));
+	background: linear-gradient(135deg, rgba(255,255,255,0.18), transparent 40%, transparent 60%, rgba(59,130,246,0.1));
 	pointer-events: none;
 	z-index: 2;
+}
+.hero-card-label {
+	margin: 0 0 0.45rem;
+	font-family: var(--font-body);
+	font-size: 0.74rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #93c5fd;
+}
+.hero-card-title {
+	margin: 0 0 0.95rem;
+	font-family: var(--font-disp);
+	font-size: clamp(1.1rem, 2vw, 1.45rem);
+	font-weight: 650;
+	line-height: 1.3;
+	color: #f8fafc;
 }
 .hero-card-img {
 	border-radius: calc(var(--radius-xl) - 6px);
 	overflow: hidden;
-	aspect-ratio: 5/4;
+	aspect-ratio: 5/3.5;
 	position: relative;
 	z-index: 1;
+	border: 1px solid rgba(255,255,255,0.14);
 }
 .hero-card-img img {
 	width: 100%; height: 100%;
 	object-fit: cover; object-position: center;
 	display: block;
 }
+.hero-card-stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.8rem;
+	margin-top: 0.9rem;
+	margin-bottom: 1.8rem;
+	position: relative;
+	z-index: 3;
+}
+.hero-card-stats div {
+	padding: 0.75rem;
+	border-radius: 0.75rem;
+	background: rgba(2,6,23,0.54);
+	border: 1px solid rgba(148,163,184,0.2);
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+.hero-card-stats span {
+	font-family: var(--font-body);
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #94a3b8;
+}
+.hero-card-stats strong {
+	font-family: var(--font-disp);
+	font-size: 0.92rem;
+	font-weight: 650;
+	color: #e2e8f0;
+}
 .hero-card-badge {
 	position: absolute;
-	bottom: 1.4rem; left: 50%;
-	transform: translateX(-50%);
+	bottom: 1rem; left: 1rem;
+	transform: none;
 	z-index: 3;
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 0.44rem 0.9rem;
+	padding: 0.48rem 0.9rem;
 	border-radius: 999px;
-	background: rgba(2,6,23,0.72);
+	background: rgba(2,6,23,0.8);
 	backdrop-filter: blur(8px);
-	border: 1px solid rgba(255,255,255,0.18);
+	border: 1px solid rgba(148,163,184,0.3);
 	font-family: var(--font-body);
-	font-size: 0.78rem;
+	font-size: 0.74rem;
 	font-weight: 700;
-	color: #e0f2fe;
+	color: #dbeafe;
 	white-space: nowrap;
 }
 .badge-dot {
@@ -541,8 +751,7 @@
 	padding: clamp(4rem, 8vw, 7rem) 0;
 	background: var(--surface);
 }
-.stats-section .section-title,
-.stats-section .section-label { text-align: left; }
+.stats-section .section-title { text-align: left; }
 .stats-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -592,8 +801,7 @@
 	padding: clamp(3rem, 6vw, 6rem) 0;
 	background: var(--surf-alt);
 }
-.graphs-section .section-title,
-.graphs-section .section-label { text-align: left; }
+.graphs-section .section-title { text-align: left; }
 .graphs-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -637,8 +845,7 @@
 	z-index: 1;
 	margin-bottom: 3.5rem;
 }
-.companies-header .section-title,
-.companies-header .section-label { text-align: left; }
+.companies-header .section-title { text-align: left; }
 .companies-desc {
 	font-family: var(--font-body);
 	font-size: clamp(0.95rem, 1.3vw, 1.05rem);
@@ -653,6 +860,9 @@
 	perspective: 1000px;
 	z-index: 1;
 }
+.companies-carousel.secondary {
+	margin-top: 1rem;
+}
 .carousel-track {
 	display: flex;
 	gap: 2rem;
@@ -664,6 +874,10 @@
 }
 .carousel-track:hover {
 	animation-play-state: paused;
+}
+.carousel-track.reverse {
+	animation-name: carousel-scroll-reverse;
+	animation-duration: 38s;
 }
 .company-item {
 	flex-shrink: 0;
@@ -738,6 +952,10 @@
 	from { transform: translateX(0); }
 	to { transform: translateX(calc(-100% / 3)); }
 }
+@keyframes carousel-scroll-reverse {
+	from { transform: translateX(calc(-100% / 3)); }
+	to { transform: translateX(0); }
+}
 @keyframes fade-in {
 	from { opacity: 0; transform: scale(0.92); }
 	to { opacity: 1; transform: scale(1); }
@@ -766,11 +984,16 @@
 	color: #93c5fd;
 }
 .auth-section .section-title { color: #f8fafc; text-align: left; }
-.auth-section .section-sub { color: rgba(148,163,184,0.9); text-align: left; margin-left: 0; }
+.auth-section .section-sub {
+	color: rgba(148,163,184,0.9);
+	text-align: left;
+	margin-left: 0;
+	max-width: 62ch;
+}
 .auth-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 1.5rem;
+	gap: 1.35rem;
 	margin-top: 3rem;
 	position: relative;
 	z-index: 1;
@@ -778,13 +1001,13 @@
 .auth-card {
 	position: relative;
 	border-radius: var(--radius-xl);
-	padding: 6rem 1.5rem 1.75rem;
-	background: rgba(255,255,255,0.04);
-	border: 1px solid rgba(255,255,255,0.1);
-	backdrop-filter: blur(8px);
+	padding: 1.3rem 1.3rem 1.4rem;
+	background: linear-gradient(170deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+	border: 1px solid rgba(255,255,255,0.14);
+	backdrop-filter: blur(10px);
 	overflow: visible;
-	transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
-	text-align: center;
+	transition: transform 0.3s var(--ease-out), box-shadow 0.3s, border-color 0.3s;
+	text-align: left;
 }
 .auth-card::after {
 	content: '';
@@ -796,49 +1019,70 @@
 	transition: opacity 0.3s;
 	pointer-events: none;
 }
-.auth-card:hover { transform: translateY(-6px); }
+.auth-card:hover {
+	transform: translateY(-7px);
+	border-color: rgba(255,255,255,0.24);
+	box-shadow: 0 26px 52px -30px rgba(2, 6, 23, 0.92);
+}
 .auth-card:hover::after { opacity: 1; }
+.auth-head {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
 .auth-avatar-wrap {
-	position: absolute;
-	top: -2.5rem; left: 50%;
-	transform: translateX(-50%);
-	width: 7.5rem; height: 7.5rem;
+	position: relative;
+	flex-shrink: 0;
+	width: 9rem;
+	height: 9rem;
 }
 .auth-avatar {
 	width: 100%; height: 100%;
-	object-fit: cover; object-position: top;
-	border-radius: 1.1rem;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 1rem;
 	display: block;
-	border: 2px solid rgba(255,255,255,0.18);
+	border: 2px solid rgba(255,255,255,0.22);
 }
 .auth-avatar-ring {
 	position: absolute;
-	inset: -4px;
-	border-radius: 1.3rem;
+	inset: -5px;
+	border-radius: 1.15rem;
 	pointer-events: none;
 }
-.auth-body { display: flex; flex-direction: column; gap: 0.75rem; }
+.auth-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.72rem;
+}
 .auth-role {
+	display: inline-flex;
+	align-self: flex-start;
+	padding: 0.3rem 0.65rem;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.55);
+	border: 1px solid rgba(148,163,184,0.28);
 	font-family: var(--font-body);
-	font-size: 0.7rem;
+	font-size: 0.68rem;
 	font-weight: 600;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
 }
 .auth-headline {
 	font-family: var(--font-disp);
-	font-size: clamp(0.98rem, 1.8vw, 1.2rem);
+	font-size: clamp(1rem, 1.45vw, 1.2rem);
 	font-weight: 600;
 	line-height: 1.3;
-	color: #f1f5f9;
+	color: #f8fafc;
 	margin: 0;
 }
 .auth-quote {
 	font-family: var(--font-body);
-	font-size: 0.9rem;
-	line-height: 1.65;
+	font-size: 0.91rem;
+	line-height: 1.68;
 	color: rgba(148,163,184,0.9);
-	font-style: italic;
+	font-style: normal;
 	margin: 0;
 }
 
@@ -943,9 +1187,10 @@
 	padding: clamp(4rem, 8vw, 7rem) 0;
 	background: var(--surface);
 }
-.coord-section .section-title,
-.coord-section .section-label,
-.coord-section .section-sub { text-align: center; }
+.coord-section .section-sub {
+	text-align: start;
+	margin: 0 0 3rem;
+}
 .coord-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -1060,11 +1305,17 @@
 	.carousel-track { gap: 1.5rem; padding: 1.2rem clamp(1rem, 3vw, 2rem); }
 }
 @media (max-width: 768px) {
+	.hero { padding-top: clamp(0.7rem, 2.2vw, 1.2rem); min-height: 72vh; }
 	.hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-	.hero-title { font-size: clamp(2.6rem, 10vw, 4.5rem); }
-	.hero-visual { order: -1; }
-	.auth-grid   { grid-template-columns: 1fr; gap: 3.5rem; }
+	.hero-title { font-size: clamp(2.1rem, 9vw, 3rem); }
+	.hero-bits { gap: 0.2rem; }
+	.hero-proof { grid-template-columns: 1fr; max-width: 100%; }
+	.hero-card-stats { grid-template-columns: 1fr; margin-bottom: 3.4rem; }
+	.hero-card-badge { bottom: 0.8rem; left: 0.8rem; }
+	.auth-grid   { grid-template-columns: 1fr; gap: 1.2rem; }
 	.auth-card:last-child { max-width: 100%; }
+	.auth-head { gap: 0.85rem; }
+	.auth-avatar-wrap { width: 7.8rem; height: 7.8rem; }
 	.graphs-grid { grid-template-columns: 1fr; }
 	.coord-grid  { grid-template-columns: repeat(2, 1fr); }
 	.companies-header { margin-bottom: 2.5rem; }
@@ -1073,11 +1324,14 @@
 	.carousel-fade { width: clamp(40px, 6vw, 80px); }
 }
 @media (max-width: 560px) {
+	.hero-bg { background-size: 100% auto; }
 	.stats-grid { grid-template-columns: 1fr 1fr; }
 	.coord-grid { grid-template-columns: 1fr; }
 	.news-header { flex-direction: column; align-items: flex-start; }
 	.company-badge { width: 80px; height: 80px; padding: 1rem; }
 	.carousel-track { gap: 1rem; padding: 1rem; }
+	.hero-pills span,
+	.hero-card-badge { font-size: 0.68rem; }
 	.section-title { font-size: clamp(1.5rem, 5vw, 2.5rem); }
 }
 @media (prefers-reduced-motion: reduce) {

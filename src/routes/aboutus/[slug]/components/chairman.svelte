@@ -8,7 +8,7 @@
 			<div id="text" class="text-justify">
 				<div class="space-y-4">
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						Founded in 2008, BITS was built on a simple but powerful belief — knowledge is the only
 						asset that never diminishes. What began as a vision shared with my husband has grown
@@ -16,7 +16,7 @@
 						parents. That trust remains my greatest blessing.
 					</p>
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						My entrepreneurial foundation is guided by discipline, responsibility, and people-first
 						leadership. Timely salaries ensure staff security, while a strong focus on health,
@@ -25,7 +25,7 @@
 						them.
 					</p>
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						My success mantra is simple — walk the talk, embrace challenges, and practice
 						transparency with relentless hard work. I don't avoid problems; I face them head-on and

@@ -89,7 +89,7 @@
 			description:
 				' Women leaders shared impactful stories and guided students toward building a more inclusive and progressive environment.',
 			date: 'March 8, 2025',
-			image: '/events/womensday2025.jpg',
+			image: '/events/womansday1.jpg',
 			href: 'https://www.instagram.com/p/DG-wBKtzN4Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
@@ -106,7 +106,7 @@
 			name: 'Sankranthi Sambaralu 8.0',
 			description:
 				'BITS Vizag celebrated Sankranti Sambaraalu 8.0 with vibrant festive spirit and warm togetherness.',
-			date: 'January 14, 2024',
+			date: 'January 14, 2025',
 			image: '/events/Sambaralu8.jpg',
 			href: 'https://www.instagram.com/p/DEptB5rtBrV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
@@ -180,7 +180,7 @@
 			description:
 				'Tech Nexus at BITS Vizag: A collaborative workshop uniting students and startups to explore IoT & Robotics, led by Dr. BKC Ganesh, showcasing innovation amidst institutional initiatives.',
 			date: 'March 28, 2024',
-			image: '/events/technexus.jpg',
+			image: '/events/AIworkshop.jpg',
 			href: 'https://www.instagram.com/p/C5EG0ZsvdNK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
@@ -199,7 +199,7 @@
 				'Thrilled to witness Digitaries  Prof. Sajjan Shiva sharing valuable insights on higher studies and foreign educational opportunities.',
 			date: 'January 9, 2024',
 			image: '/events/memphis.jpg',
-			href: 'https://www.instagram.com/bits_vizag_official/',
+			href: 'https://www.instagram.com/p/C16PJtmLuFO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
 		{
@@ -261,7 +261,7 @@
 				'Mr. Joshua Raju, CSE students, and KONKORDE Team gained insights at the BNI Kings Meet 2023, Hotel Ocean Vista Bay, August 10th.',
 			date: 'August 10, 2023',
 			image: '/events/bni.jpg',
-			href: 'https://www.instagram.com/bits_vizag_official/',
+			href: 'https://www.instagram.com/p/Cvw0ub-L5SV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
 		{
@@ -274,9 +274,9 @@
 			click: 'Click to view more >>>'
 		},
 		{
-			name: 'MOU Signing Ceremony - BITS Vizag and London School of Digital Business, UK',
+			name: 'MoU Signing Ceremony - BITS Vizag and London School of Digital Business, UK',
 			description:
-				'BITS Vizag and London School of Digital Business signed an MOU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held.',
+				'BITS Vizag and London School of Digital Business signed an MoU, enhancing digital education and opportunities. An International Interactive Workshop on the same was held.',
 			date: 'July 22, 2023',
 			image: '/events/lsdb.jpg',
 			href: 'https://www.instagram.com/p/CvBteqCLtbR/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
