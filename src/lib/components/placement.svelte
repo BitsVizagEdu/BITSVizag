@@ -1,3 +1,15 @@
+<script>
+	const recruiterLogos = [
+		...Array.from({ length: 40 }, (_, i) => `/company/image (${i + 1}).png`),
+		'/company/image(41).jpg',
+		'/company/image(42).jpg'
+	];
+
+	const splitPoint = Math.ceil(recruiterLogos.length / 2);
+	const firstRowLogos = recruiterLogos.slice(0, splitPoint);
+	const secondRowLogos = recruiterLogos.slice(splitPoint);
+</script>
+
 <section class="recruiters-premium">
 	<div class="ambient one" aria-hidden="true"></div>
 	<div class="ambient two" aria-hidden="true"></div>
@@ -6,7 +18,7 @@
 		<div class="heading" data-aos="fade-up">
 			<p class="eyebrow">Industry Network</p>
 			<h2>
-				Top <span>Recruiters</span>
+				Our <span>Recruiters</span> <span>	Till Date</span>
 			</h2>
 			<p class="subtitle">
 				Trusted hiring partners that create strong career outcomes and real student impact.
@@ -17,17 +29,31 @@
 			<div class="fade-edge left" aria-hidden="true"></div>
 			<div class="fade-edge right" aria-hidden="true"></div>
 
-			<div class="marquee-content">
-				<div class="marquee-track">
-					{#each [...Array(10), ...Array(10)] as _, i}
-						{@const logoNum = (i % 10) + 1}
-						<div class="logo-card group" data-aos="zoom-in" data-aos-delay={Math.min(i * 20, 200)}>
-							<div class="logo-inner">
-								<img src="/logo-150/{logoNum}.png" alt="Recruiter {logoNum}" class="company-logo" />
+			<div class="marquee-grid">
+				<div class="marquee-content">
+					<div class="marquee-track marquee-track-ltr">
+						{#each [...firstRowLogos, ...firstRowLogos] as logo, i}
+							<div class="logo-card" data-aos="zoom-in" data-aos-delay={Math.min(i * 20, 220)}>
+								<div class="logo-inner">
+									<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" />
+								</div>
+								<div class="logo-glow" aria-hidden="true"></div>
 							</div>
-							<div class="logo-glow" aria-hidden="true"></div>
-						</div>
-					{/each}
+						{/each}
+					</div>
+				</div>
+
+				<div class="marquee-content">
+					<div class="marquee-track marquee-track-rtl">
+						{#each [...secondRowLogos, ...secondRowLogos] as logo, i}
+							<div class="logo-card" data-aos="zoom-in" data-aos-delay={Math.min(i * 20, 220)}>
+								<div class="logo-inner">
+									<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" />
+								</div>
+								<div class="logo-glow" aria-hidden="true"></div>
+							</div>
+						{/each}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -41,9 +67,9 @@
 		padding: 5rem 0;
 		font-family: 'Roboto', 'Segoe UI', sans-serif;
 		background:
-			radial-gradient(1150px 500px at -8% -28%, rgba(255, 193, 126, 0.22), transparent 58%),
-			radial-gradient(900px 450px at 102% 112%, rgba(116, 177, 255, 0.2), transparent 58%),
-			linear-gradient(128deg, #061430 0%, #091f47 46%, #0b2858 100%);
+			radial-gradient(980px 420px at -10% -24%, rgba(94, 176, 255, 0.2), transparent 56%),
+			radial-gradient(920px 420px at 108% 115%, rgba(122, 208, 255, 0.19), transparent 57%),
+			linear-gradient(125deg, #ffffff 0%, #f8fcff 46%, #eef7ff 100%);
 	}
 
 	.ambient {
@@ -59,13 +85,13 @@
 	.ambient.one {
 		top: -180px;
 		left: -90px;
-		background: rgba(255, 174, 84, 0.52);
+		background: rgba(111, 196, 255, 0.34);
 	}
 
 	.ambient.two {
 		right: -120px;
 		bottom: -190px;
-		background: rgba(121, 169, 255, 0.48);
+		background: rgba(153, 214, 255, 0.32);
 	}
 
 	.inner-shell {
@@ -75,9 +101,11 @@
 		margin: 0 auto;
 		padding: 2rem clamp(1rem, 2vw, 2rem);
 		border-radius: 1.7rem;
-		border: 1px solid rgba(180, 209, 255, 0.22);
-		background: linear-gradient(120deg, rgba(8, 24, 59, 0.85), rgba(15, 38, 81, 0.74));
-		box-shadow: 0 26px 70px -36px rgba(0, 0, 0, 0.75);
+		border: 1px solid rgba(122, 183, 255, 0.3);
+		background: linear-gradient(132deg, rgba(255, 255, 255, 0.96), rgba(242, 250, 255, 0.9));
+		box-shadow:
+			0 28px 70px -38px rgba(48, 137, 233, 0.28),
+			inset 0 1px 0 rgba(255, 255, 255, 0.9);
 	}
 
 	.heading {
@@ -91,7 +119,7 @@
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		font-weight: 700;
-		color: #9bc0ff;
+		color: #3dc82b;
 	}
 
 	.heading h2 {
@@ -100,11 +128,11 @@
 		line-height: 1.05;
 		font-weight: 800;
 		letter-spacing: -0.02em;
-		color: #f8fcff;
+		color: #03172a;
 	}
 
 	.heading h2 span {
-		background: linear-gradient(90deg, #7ec2ff 0%, #b7d8ff 100%);
+		background: linear-gradient(90deg, #000000 0%, #000000 100%);
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
@@ -116,10 +144,11 @@
 		font-size: 1.01rem;
 		line-height: 1.6;
 		font-weight: 500;
-		color: #d3e2ff;
+		color: #356ca2;
 	}
 
 	.marquee-wrapper {
+		position: relative;
 		width: 100%;
 		overflow: hidden;
 		padding: 20px 0 26px;
@@ -138,12 +167,17 @@
 
 	.fade-edge.left {
 		left: 0;
-		background: linear-gradient(to right, rgba(10, 29, 68, 1), rgba(10, 29, 68, 0));
+		background: linear-gradient(to right, rgba(245, 251, 255, 1), rgba(245, 251, 255, 0));
 	}
 
 	.fade-edge.right {
 		right: 0;
-		background: linear-gradient(to left, rgba(10, 29, 68, 1), rgba(10, 29, 68, 0));
+		background: linear-gradient(to left, rgba(245, 251, 255, 1), rgba(245, 251, 255, 0));
+	}
+
+	.marquee-grid {
+		display: grid;
+		gap: 0.95rem;
 	}
 
 	.marquee-content {
@@ -154,8 +188,15 @@
 	.marquee-track {
 		display: flex;
 		gap: 1.2rem;
-		animation: scroll 36s linear infinite;
 		padding: 12px;
+	}
+
+	.marquee-track-ltr {
+		animation: scroll-ltr 34s linear infinite;
+	}
+
+	.marquee-track-rtl {
+		animation: scroll-rtl 34s linear infinite;
 	}
 
 	.marquee-track:hover {
@@ -166,16 +207,16 @@
 		position: relative;
 		width: 190px;
 		height: 98px;
-		background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(244, 250, 255, 0.92));
-		border: 1px solid rgba(179, 204, 244, 0.62);
+		background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(241, 249, 255, 0.95));
+		border: 1px solid rgba(137, 192, 255, 0.42);
 		border-radius: 1.1rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 1.1rem;
 		box-shadow:
-			0 16px 34px -22px rgba(14, 40, 91, 0.42),
-			0 8px 16px -16px rgba(0, 0, 0, 0.28);
+			0 18px 32px -24px rgba(63, 152, 240, 0.26),
+			0 8px 16px -16px rgba(77, 155, 229, 0.2);
 		transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 		cursor: pointer;
 		flex-shrink: 0;
@@ -184,9 +225,9 @@
 	.logo-card:hover {
 		transform: translateY(-6px) scale(1.03);
 		box-shadow:
-			0 24px 36px -22px rgba(16, 58, 128, 0.45),
-			0 14px 20px -14px rgba(0, 0, 0, 0.22);
-		border-color: rgba(54, 123, 233, 0.75);
+			0 24px 36px -22px rgba(40, 140, 236, 0.34),
+			0 14px 20px -14px rgba(54, 150, 241, 0.22);
+		border-color: rgba(61, 145, 228, 0.85);
 	}
 
 	.logo-inner {
@@ -202,7 +243,7 @@
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: contain;
-		filter: drop-shadow(0 2px 4px rgba(2, 18, 47, 0.15));
+		filter: drop-shadow(0 2px 4px rgba(39, 126, 211, 0.2));
 		transition: transform 0.35s ease;
 	}
 
@@ -214,7 +255,7 @@
 		position: absolute;
 		inset: 0;
 		border-radius: inherit;
-		background: radial-gradient(circle at 50% 120%, rgba(104, 167, 255, 0.34), transparent 55%);
+		background: radial-gradient(circle at 50% 120%, rgba(90, 179, 255, 0.28), transparent 55%);
 		opacity: 0;
 		transition: opacity 0.35s ease;
 	}
@@ -223,12 +264,21 @@
 		opacity: 1;
 	}
 
-	@keyframes scroll {
+	@keyframes scroll-ltr {
+		0% {
+			transform: translateX(calc(-50% - 0.6rem));
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes scroll-rtl {
 		0% {
 			transform: translateX(0);
 		}
 		100% {
-			transform: translateX(calc(-50% - 1rem)); /* Accounting for half the track + gap adjustment */
+			transform: translateX(calc(-50% - 0.6rem));
 		}
 	}
 
@@ -251,11 +301,24 @@
 			gap: 0.85rem;
 		}
 
+		.marquee-grid {
+			gap: 0.65rem;
+		}
+
 		.fade-edge {
 			width: 3.2rem;
 		}
 
-		@keyframes scroll {
+		@keyframes scroll-ltr {
+			0% {
+				transform: translateX(calc(-50% - 0.425rem));
+			}
+			100% {
+				transform: translateX(0);
+			}
+		}
+
+		@keyframes scroll-rtl {
 			0% {
 				transform: translateX(0);
 			}

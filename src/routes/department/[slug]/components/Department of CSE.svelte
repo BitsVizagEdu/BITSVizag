@@ -33,9 +33,9 @@
 
 	const stats = [
 		{ num: '14+',  label: 'Laboratories',  sub: 'State-of-the-art'  },
-		{ num: '500+', label: 'Students',       sub: 'Enrolled annually' },
+		{ num: '200+', label: 'Students',       sub: 'Enrolled annually' },
 		{ num: '30+',  label: 'Faculty',        sub: 'Expert educators'  },
-		{ num: '95%',  label: 'Placements',     sub: 'Year on year'      },
+		{ num: '85%',  label: 'Placements',     sub: 'Year on year'      },
 	];
 
 	// Svelte action — scoped scroll reveal (bypasses CSS hash scoping)

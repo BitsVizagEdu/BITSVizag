@@ -6,7 +6,6 @@ export let items = [
     'Department of EEE',
     'Department of MECH',
     'Department of CIVIL',
-    'Department of MBA',
     'Department of BS&H'
 ]
 

@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { items } from './components/utils.js';
 
 const legacySlugMap = {
-    Accommodation: 'Accomidation'
+    Accommodation: 'Accommdation'
 };
 
 function normalizeSlug(item) {

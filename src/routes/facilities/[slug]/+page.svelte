@@ -173,7 +173,7 @@
 				{#if currentSlug === 'Cafeteria'}
 					<Cafeteria />
 				{/if}
-				{#if currentSlug === 'Accomidation'}
+				{#if currentSlug === 'Accommdation'}
 					<Hostel />
 				{/if}
 				{#if currentSlug === 'Transport'}

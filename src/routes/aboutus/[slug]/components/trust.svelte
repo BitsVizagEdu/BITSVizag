@@ -8,7 +8,7 @@
 			<div id="text" class="text-justify">
 				<div class="space-y-4">
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						Dr. B.R. Ambedkar Welfare Educational Society (ABWES) is a non-profit organization
 						dedicated to promoting social justice through education. Guided by the ideals and vision
@@ -18,7 +18,7 @@
 						higher education for students from diverse and underprivileged backgrounds.
 					</p>
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						Through this collaboration, ABWES has extended significant support to BITS Vizag in the
 						areas of infrastructure development, student scholarships, and academic enhancement
@@ -27,7 +27,7 @@
 						deserving students to pursue professional and technical education.
 					</p>
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						The partnership reflects a shared commitment towards academic excellence, social
 						responsibility, and nation-building. By aligning institutional growth with ethical

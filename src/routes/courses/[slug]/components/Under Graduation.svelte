@@ -30,11 +30,7 @@
 			intake: 60,
 			href: '/department/Department%20of%20MECH'
 		},
-		{
-			name: 'Civil Engineering',
-			intake: 60,
-			href: '/department/Department%20of%20CIVIL'
-		}
+		
 	];
 </script>
 

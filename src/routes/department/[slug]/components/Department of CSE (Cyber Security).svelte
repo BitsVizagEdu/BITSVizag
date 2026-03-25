@@ -19,21 +19,17 @@
 		{ name: 'Ethical Hacking Lab',               icon: '💀' },
 		{ name: 'Digital Forensics Lab',             icon: '🔍' },
 		{ name: 'Cryptography Lab',                  icon: '🔐' },
-		{ name: 'Cyber Security Lab',                icon: '🔒' },
-		{ name: 'Malware Analysis Lab',              icon: '🦠' },
 		{ name: 'Penetration Testing Lab',           icon: '⚔️' },
-		{ name: 'Security Operations Center (SOC)',  icon: '📡' },
 		{ name: 'Cloud Security Lab',                icon: '☁️' },
 		{ name: 'IoT Security Lab',                  icon: '📶' },
 		{ name: 'Web Application Security Lab',      icon: '🌐' },
 		{ name: 'Mobile Security Lab',               icon: '📱' },
-		{ name: 'Cyber Threat Intelligence Lab',     icon: '🕵️' },
 		{ name: 'Information Security Lab',          icon: '🗄️' },
 	];
 
 	const stats = [
 		{ num: '14+',  label: 'Security Labs',  sub: 'State-of-the-art'  },
-		{ num: '350+', label: 'Students',        sub: 'Enrolled annually' },
+		{ num: '100+', label: 'Students',        sub: 'Enrolled annually' },
 		{ num: '20+',  label: 'Faculty',         sub: 'Security experts'  },
 		{ num: '90%',  label: 'Placements',      sub: 'Year on year'      },
 	];
@@ -102,7 +98,7 @@
 
 			<div class="hero-badge">
 				<div class="badge-dot" />
-				Est. 2008
+				Est. 2024
 			</div>
 		</div>
 	</section>
@@ -193,7 +189,7 @@
 			<!-- labs -->
 			<div class="s-header" use:reveal={0} style="margin-top:4rem">
 				<span class="eyebrow-pill">Laboratories</span>
-				<h3 class="s-subheading">14 Specialised Security Labs</h3>
+				<h3 class="s-subheading">10 Specialised Security Labs</h3>
 			</div>
 
 			<div class="labs-grid">

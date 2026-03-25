@@ -1,6 +1,6 @@
 export let items = [
     'Knowledge-Resource-Center',
-    'Accomidation',
+    'Accommdation',
     'Cafeteria',
     'Sports',
     'Laboratories',

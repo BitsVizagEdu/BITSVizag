@@ -12,7 +12,7 @@
 
 	const programs = [
 		{
-			name: 'Master of Technology (M.Tech)',
+			name: 'Master of Technology (M.Tech Duration - 2 Years)',
 			id: 'm-tech',
 			code: 'M.Tech',
 			image: '/pg1.jpg',
@@ -23,7 +23,7 @@
 				'Admissions are through GATE or equivalent B.E/B.Tech qualifications, AMIE/AMIETE, and APPGECET as per AP State Government norms.'
 		},
 		{
-			name: 'Master of Business Administration (MBA)',
+			name: 'Master of Business Administration (MBA Duration - 2 Years)',
 			id: 'mba',
 			code: 'MBA',
 			image: '/pg.jpg',

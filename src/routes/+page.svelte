@@ -27,16 +27,20 @@
 	}
 
 	let lastScrollY = 0;
+	/** @type {number | null} */
 	let animationFrameId = null;
 	let y = 0;
 
+	/** @param {number} newY */
 	function onScroll(newY) {
 		scaleLogo(newY);
 	}
 
 	onMount(() => {
 		const handleScroll = () => {
-			cancelAnimationFrame(animationFrameId);
+			if (animationFrameId !== null) {
+				cancelAnimationFrame(animationFrameId);
+			}
 			animationFrameId = requestAnimationFrame(() => {
 				onScroll(window.scrollY);
 			});
@@ -154,7 +158,7 @@
 
 	<Placement />
 	<Committies />
-	<section class="top-2026-section relative overflow-hidden px-4 pb-16 pt-8 md:pb-24">
+	<section class="top-2026-section relative overflow-hidden px-4 pb-10 pt-6 md:pb-14 md:pt-8">
 		<div class="pointer-events-none absolute inset-0">
 			<div
 				class="top-2026-orb top-2026-orb--left absolute -left-12 top-12 h-44 w-44 rounded-full blur-3xl"
@@ -164,9 +168,9 @@
 			></div>
 		</div>
 
-		<div class="relative mx-auto max-w-6xl" data-aos="fade-up" data-aos-delay="60">
+		<div class="relative mx-auto max-w-5xl" data-aos="fade-up" data-aos-delay="60">
 			<div class="top-2026-shell rounded-[30px] border p-1.5">
-				<div class="top-2026-inner rounded-[26px] px-6 py-7 text-white sm:px-8 sm:py-8 lg:px-10 lg:py-10">
+				<div class="top-2026-inner rounded-[26px] px-5 py-6 sm:px-7 sm:py-7 lg:px-8 lg:py-8">
 					<div class="grid gap-7 lg:grid-cols-[1.28fr_0.72fr]">
 						<div>
 							<div
@@ -176,55 +180,56 @@
 								Admissions 2026
 							</div>
 
-							<h2 class="top-2026-title mt-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-[42px]">
+							<h2
+								class="top-2026-title mt-4 text-[28px] font-black leading-tight tracking-tight sm:text-4xl lg:text-[38px]"
+							>
 								Top Engineering Colleges in Vizag
 								<span class="top-2026-title-highlight block">2026 Admissions Open</span>
 							</h2>
 
 							<p class="top-2026-copy mt-4 max-w-2xl text-[15px] leading-relaxed">
-								BITS Vizag empowers future engineers with academic excellence, practical innovation,
-								and value-based mentoring. Study in a campus where ambition, discipline, and career
-								outcomes move together.
+								A student-first campus with practical labs, mentor-led learning, and placement-ready
+								training designed for real career outcomes.
 							</p>
 
 							<div class="mt-5 flex flex-wrap gap-2.5 text-[11px] font-semibold uppercase tracking-[0.12em]">
 								<span class="top-2026-chip">Industry Aligned Curriculum</span>
 								<span class="top-2026-chip">Placement Driven Training</span>
-								<span class="top-2026-chip">Leadership and Values</span>
+								<span class="top-2026-chip">Global Career Readiness</span>
 							</div>
 
-							<div class="mt-7 grid gap-4 sm:grid-cols-2">
-								<article class="top-2026-card rounded-2xl p-5">
-									<h3 class="text-base font-bold text-white">Mission</h3>
+							<div class="mt-6 grid gap-3 sm:grid-cols-2">
+								<article class="top-2026-card rounded-2xl p-4 sm:p-5">
+									<h3 class="top-2026-subtitle text-base font-bold">Mission</h3>
 									<p class="top-2026-copy mt-2 text-sm leading-relaxed">
-										To deliver world-class technical education through innovation, research mindset,
-										and industry exposure that transforms students into competent professionals.
+										Create confident engineers through outcome-based learning, discipline, and
+										industry immersion.
 									</p>
 								</article>
-								<article class="top-2026-card rounded-2xl p-5">
-									<h3 class="text-base font-bold text-white">Goal</h3>
+								<article class="top-2026-card rounded-2xl p-4 sm:p-5">
+									<h3 class="top-2026-subtitle text-base font-bold">Goal</h3>
 									<p class="top-2026-copy mt-2 text-sm leading-relaxed">
-										To shape every learner into a confident engineer with strong employability,
-										ethical values, and the ability to create meaningful impact in society.
+										Build employable graduates with technical depth, ethical values, and real-world
+										problem solving skills.
 									</p>
 								</article>
 							</div>
 						</div>
 
 						<aside class="top-2026-side rounded-2xl p-5 sm:p-6">
-							<h3 class="text-lg font-extrabold tracking-wide text-white">Why BITS Vizag in 2026</h3>
+							<h3 class="top-2026-subtitle text-lg font-extrabold tracking-wide">Why BITS Vizag in 2026</h3>
 							<ul class="top-2026-copy mt-4 space-y-3.5 text-sm leading-relaxed">
 								<li class="flex items-start gap-3">
 									<span class="top-2026-dot mt-1.5"></span>
-									Modern labs, experienced faculty, and consistent academic mentoring.
+									Modern labs and experienced faculty focused on concept clarity.
 								</li>
 								<li class="flex items-start gap-3">
 									<span class="top-2026-dot mt-1.5"></span>
-									Career-focused ecosystem with internships, placement training, and guidance.
+									Career pathway support with internships and placement mentoring.
 								</li>
 								<li class="flex items-start gap-3">
 									<span class="top-2026-dot mt-1.5"></span>
-									Student life that nurtures leadership, confidence, and real-world readiness.
+									Student clubs and projects that build leadership and confidence.
 								</li>
 							</ul>
 
@@ -261,35 +266,35 @@
 	.top-2026-section {
 		font-family: 'Roboto', 'Segoe UI', sans-serif;
 		background:
-			radial-gradient(1180px 460px at -4% -22%, rgba(255, 165, 108, 0.2), transparent 58%),
-			radial-gradient(900px 420px at 98% 108%, rgba(92, 155, 255, 0.18), transparent 58%),
-			linear-gradient(130deg, #f4f7fc 0%, #edf2fb 50%, #f6f9ff 100%);
+			radial-gradient(980px 420px at -8% -20%, rgba(255, 171, 92, 0.28), transparent 57%),
+			radial-gradient(900px 420px at 104% 112%, rgba(125, 226, 173, 0.22), transparent 58%),
+			linear-gradient(135deg, #fffaf4 0%, #f8fffb 42%, #f5f9ff 100%);
 	}
 
 	.top-2026-shell {
-		border-color: #243f77;
-		background: linear-gradient(122deg, #0d234f 0%, #153773 46%, #223e75 100%);
+		border-color: rgba(236, 168, 89, 0.45);
+		background: linear-gradient(120deg, #ffc58a 0%, #78dba8 50%, #89b8ff 100%);
 		background-size: 200% 200%;
-		box-shadow: 0 26px 64px rgba(12, 24, 55, 0.34);
-		animation: top2026-pan 16s ease-in-out infinite;
+		box-shadow: 0 24px 50px rgba(243, 163, 84, 0.22);
+		animation: top2026-pan 18s ease-in-out infinite;
 	}
 
 	.top-2026-inner {
 		background:
-			radial-gradient(740px 360px at 0% -18%, rgba(255, 209, 143, 0.12), transparent 58%),
-			linear-gradient(120deg, #0d2249 0%, #122d5f 52%, #1c396e 100%);
+			radial-gradient(700px 300px at -4% -20%, rgba(255, 197, 129, 0.24), transparent 58%),
+			linear-gradient(125deg, rgba(255, 255, 255, 0.96), rgba(249, 254, 255, 0.92));
 	}
 
 	.top-2026-orb {
-		animation: top2026-float 9s ease-in-out infinite;
+		animation: top2026-float 8s ease-in-out infinite;
 	}
 
 	.top-2026-orb--left {
-		background: rgba(255, 193, 130, 0.78);
+		background: rgba(255, 177, 110, 0.74);
 	}
 
 	.top-2026-orb--right {
-		background: rgba(126, 174, 255, 0.8);
+		background: rgba(116, 222, 170, 0.72);
 	}
 
 	.top-2026-orb--delay {
@@ -297,51 +302,67 @@
 	}
 
 	.top-2026-badge {
-		border-color: rgba(255, 255, 255, 0.26);
-		background: rgba(255, 255, 255, 0.12);
-		color: #d9e7ff;
+		border-color: rgba(255, 159, 57, 0.42);
+		background: rgba(255, 214, 166, 0.3);
+		color: #954900;
 		animation: top2026-pulse 4s ease-in-out infinite;
 	}
 
 	.top-2026-title {
-		color: #ffffff;
+		color: #17304e;
 	}
 
 	.top-2026-title-highlight {
-		background: linear-gradient(90deg, #8ac8ff 0%, #bed9ff 100%);
+		background: linear-gradient(90deg, #f68500 0%, #2ea76d 55%, #2c84df 100%);
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
 	}
 
 	.top-2026-copy {
-		color: #d7e5ff;
+		color: #3e5874;
+	}
+
+	.top-2026-subtitle {
+		color: #1d3c60;
 	}
 
 	.top-2026-chip {
 		padding: 0.42rem 0.75rem;
 		border-radius: 9999px;
-		border: 1px solid rgba(255, 255, 255, 0.28);
-		background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
-		color: #dbe8ff;
+		border: 1px solid rgba(240, 160, 86, 0.35);
+		background: linear-gradient(145deg, rgba(255, 234, 207, 0.85), rgba(255, 255, 255, 0.95));
+		color: #894400;
+	}
+
+	.top-2026-chip:nth-child(2) {
+		border-color: rgba(76, 183, 132, 0.34);
+		background: linear-gradient(145deg, rgba(220, 252, 235, 0.9), rgba(248, 255, 250, 0.95));
+		color: #176a44;
+	}
+
+	.top-2026-chip:nth-child(3) {
+		border-color: rgba(83, 155, 235, 0.35);
+		background: linear-gradient(145deg, rgba(225, 240, 255, 0.9), rgba(247, 251, 255, 0.95));
+		color: #1c518c;
 	}
 
 	.top-2026-card {
-		border: 1px solid rgba(255, 255, 255, 0.26);
-		background: linear-gradient(165deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+		border: 1px solid rgba(83, 155, 235, 0.22);
+		background: linear-gradient(160deg, rgba(255, 255, 255, 0.86), rgba(244, 251, 255, 0.82));
 		backdrop-filter: blur(4px);
 		transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 	}
 
 	.top-2026-card:hover {
 		transform: translateY(-4px);
-		border-color: rgba(255, 255, 255, 0.35);
-		box-shadow: 0 16px 26px rgba(4, 12, 34, 0.25);
+		border-color: rgba(81, 157, 235, 0.4);
+		box-shadow: 0 16px 26px rgba(86, 160, 234, 0.2);
 	}
 
 	.top-2026-side {
-		border: 1px solid rgba(255, 255, 255, 0.3);
-		background: linear-gradient(160deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+		border: 1px solid rgba(77, 178, 129, 0.25);
+		background: linear-gradient(160deg, rgba(234, 255, 243, 0.78), rgba(239, 248, 255, 0.82));
 		backdrop-filter: blur(4px);
 	}
 
@@ -350,14 +371,14 @@
 		width: 0.46rem;
 		flex-shrink: 0;
 		border-radius: 9999px;
-		background: #64ccff;
-		box-shadow: 0 0 0 3px rgba(100, 204, 255, 0.2);
+		background: #f79526;
+		box-shadow: 0 0 0 3px rgba(247, 149, 38, 0.2);
 	}
 
 	.top-2026-cta {
-		background: linear-gradient(100deg, #ffffff, #e9f2ff);
-		color: #10264f;
-		border: 1px solid rgba(255, 255, 255, 0.62);
+		background: linear-gradient(100deg, #ff9d36, #31b978 58%, #3692ec);
+		color: #ffffff;
+		border: 1px solid rgba(255, 255, 255, 0.45);
 	}
 
 	@keyframes top2026-pan {
@@ -386,13 +407,31 @@
 
 	@keyframes top2026-pulse {
 		0% {
-			box-shadow: 0 0 0 0 rgba(212, 32, 39, 0.14);
+			box-shadow: 0 0 0 0 rgba(255, 157, 54, 0.22);
 		}
 		70% {
-			box-shadow: 0 0 0 8px rgba(212, 32, 39, 0);
+			box-shadow: 0 0 0 8px rgba(255, 157, 54, 0);
 		}
 		100% {
-			box-shadow: 0 0 0 0 rgba(212, 32, 39, 0);
+			box-shadow: 0 0 0 0 rgba(255, 157, 54, 0);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.top-2026-shell {
+			border-radius: 22px;
+		}
+
+		.top-2026-inner {
+			border-radius: 18px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.top-2026-shell,
+		.top-2026-orb,
+		.top-2026-badge {
+			animation: none !important;
 		}
 	}
 </style>

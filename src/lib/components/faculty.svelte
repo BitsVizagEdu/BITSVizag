@@ -39,7 +39,7 @@
 		'P.Gayathri': 3.2,
 		'N. Vineeth': 1,
 		'S.Madhu Latha': 0,
-		'D. KANAKESWARIi': 16,
+		'D. KANAKESWARI': 16,
 		'P. T. S. Priya': 12,
 		'D. Sailaxmi': 1,
 		'S. Samyukta': 5,
@@ -972,8 +972,8 @@
 	const csePriorityOrder = [
 		'B.POORNASATYANARAYANA',
 		'U. Padma Mohan',
-		'P. T. S. Priya',
 		'D. KANAKESWARI',
+		'P. T. S. Priya',
 		'P. Joshua Raju',
 		'T. CHAITANYA',
 		'S. Samyukta',

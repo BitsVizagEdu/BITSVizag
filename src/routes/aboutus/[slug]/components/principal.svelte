@@ -8,7 +8,7 @@
 			<div id="text" class="text-justify">
 				<div class="space-y-4">
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						It is my pleasure to welcome you to BITS Vizag, an institution driven by a clear vision
 						— to evolve into a premier technical institute offering value-based education that
@@ -17,7 +17,7 @@
 						state-of-the-art infrastructure and dedicated human resources.
 					</p>
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						We are committed to delivering professional education with a focus on creativity,
 						innovation, and ethical values. This dynamic academic environment encourages knowledge
@@ -27,7 +27,7 @@
 						skills required to apply knowledge effectively in real-world scenarios.
 					</p>
 					<p
-						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-bold xs:text-sm py-0"
+						class="font-['Arial'] md:text-[15px] tracking-wider lg:leading-6 my-1 text-slate-700 font-normal xs:text-sm py-0"
 					>
 						At BITS Vizag, we strive to shape students not only into skilled and competent engineers
 						but also into responsible citizens who contribute meaningfully to the progress of the

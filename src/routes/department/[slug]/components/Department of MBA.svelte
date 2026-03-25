@@ -29,9 +29,9 @@
 
 	const stats = [
 		{ num: '10+',  label: 'Facilities',    sub: 'State-of-the-art'  },
-		{ num: '300+', label: 'Students',       sub: 'Enrolled annually' },
+		{ num: '100+', label: 'Students',       sub: 'Enrolled annually' },
 		{ num: '18+',  label: 'Faculty',        sub: 'Expert educators'  },
-		{ num: '96%',  label: 'Placements',     sub: 'Year on year'      },
+		{ num: '90%',  label: 'Placements',     sub: 'Year on year'      },
 	];
 
 	function reveal(node, delay = 0) {
