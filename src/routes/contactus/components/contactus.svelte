@@ -34,11 +34,25 @@
                                   d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
                         </svg>
                     </div>
+                    
+                        <div class="p-[10px] capitalize font-bold">Dean - Academics</div>
+                        <div class="capitalize font-semibold">Dr. B. Poorna Satyanarayana</div>
+                        <div class="overflow-hidden text-center pt-2"><a href="dean_academics@bitsvizag.com">deanacademics@bitsvizag.com</a></div>
+                    </div>
+                <div class="card h-[200px] w-[250px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="black" class="w-10 h-10 mt-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                        </svg>
+                    </div>
                     <div class="p-[10px] capitalize font-bold">Administrative Officer</div>
                     <div class="capitalize font-semibold">Mr. T. Kiran Kumar</div>
                     <div class="overflow-hidden text-center pt-2"><a href="mailto:ao@bitsvizag.com">ao@bitsvizag.com</a></div>
                 </div>
-                <div class="card h-[200px] w-[250px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
+                
+                    <div class="card h-[200px] w-[250px] bg-sortwhite flex flex-col items-center m-2 rounded-[5px]">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="black" class="w-10 h-10 mt-4">
