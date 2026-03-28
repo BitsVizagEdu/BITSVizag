@@ -120,11 +120,11 @@
 			</div>
 			<div class="hero-proof">
 				<div class="hero-proof-item">
-					<strong>312+</strong>
+					<strong>40+</strong>
 					<span>Active Recruiters</span>
 				</div>
 				<div class="hero-proof-item">
-					<strong>1000+</strong>
+					<strong>50+</strong>
 					<span>Hiring Partners</span>
 				</div>
 				<div class="hero-proof-item">

@@ -29,11 +29,11 @@
 
 	const stats = [
 		{ num: '10+',  label: 'AI/ML Labs',    sub: 'Cutting-edge'      },
-		{ num: '400+', label: 'Students',       sub: 'Enrolled annually' },
+		{ num: '100+', label: 'Students',       sub: 'Enrolled annually' },
 		{ num: '25+',  label: 'Faculty',        sub: 'AI specialists'    },
 		{ num: '92%',  label: 'Placements',     sub: 'Year on year'      },
 	];
-
+	
 	// Svelte action — scoped scroll reveal (bypasses CSS hash scoping)
 	function reveal(node, delay = 0) {
 		node.style.cssText += `

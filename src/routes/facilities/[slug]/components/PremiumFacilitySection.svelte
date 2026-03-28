@@ -66,13 +66,20 @@
 
 	.hero-card {
 		display: grid;
-		gap: 1.1rem;
+		gap: 1rem;
 		background: linear-gradient(130deg, #0f4da8 0%, #0d7cbf 100%);
-		padding: 1.2rem;
+		padding: 1.35rem;
 		border-radius: 1.2rem;
 		color: #f8fafc;
 		animation: riseIn 0.72s ease;
 		box-shadow: 0 26px 40px -28px rgba(15, 77, 168, 0.85);
+	}
+
+	.hero-card > div {
+		display: grid;
+		gap: 0.45rem;
+		align-content: start;
+		padding-right: 0.2rem;
 	}
 
 	.facility-kicker {
@@ -81,20 +88,21 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		opacity: 0.9;
-		margin-bottom: 0.45rem;
+		margin-bottom: 0;
 	}
 
 	h2 {
 		font-size: clamp(1.35rem, 4vw, 2rem);
 		font-weight: 800;
 		line-height: 1.18;
-		margin-bottom: 0.7rem;
+		margin-bottom: 0.15rem;
 	}
 
 	.facility-intro {
 		line-height: 1.7;
 		font-size: 0.98rem;
 		max-width: 56ch;
+		opacity: 0.95;
 	}
 
 	img {
@@ -107,9 +115,15 @@
 
 	.gallery-grid {
 		display: grid;
-		gap: 0.5rem;
+		gap: 0.75rem;
 		grid-template-columns: repeat(6, 1fr);
-		grid-auto-rows: minmax(64px, 1fr);
+		align-items: stretch;
+	}
+
+	.gallery-grid img {
+		height: auto;
+		aspect-ratio: 4 / 3;
+		display: block;
 	}
 
 	.gallery-grid img {
@@ -118,15 +132,46 @@
 	}
 
 	.gallery-grid img:nth-child(1) {
-		grid-column: span 3;
+		grid-column: span 4;
 		grid-row: span 2;
+		aspect-ratio: 16 / 10;
 	}
 
 	.gallery-grid img:nth-child(2),
 	.gallery-grid img:nth-child(3),
 	.gallery-grid img:nth-child(4),
 	.gallery-grid img:nth-child(5) {
-		grid-column: span 3;
+		grid-column: span 2;
+	}
+
+	.gallery-grid img:nth-child(2) {
+		grid-row: span 1;
+	}
+
+	.gallery-grid img:nth-child(3) {
+		grid-row: span 1;
+	}
+
+	.gallery-grid img:nth-child(4) {
+		grid-row: span 1;
+		grid-column: span 2;
+		aspect-ratio: 16 / 9;
+	}
+
+	@media (max-width: 860px) {
+		.gallery-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.gallery-grid img:nth-child(1),
+		.gallery-grid img:nth-child(2),
+		.gallery-grid img:nth-child(3),
+		.gallery-grid img:nth-child(4),
+		.gallery-grid img:nth-child(5) {
+			grid-column: span 1;
+			grid-row: span 1;
+			aspect-ratio: 4 / 3;
+		}
 	}
 
 	.feature-grid,
@@ -197,23 +242,9 @@
 	@media (min-width: 860px) {
 		.hero-card {
 			grid-template-columns: 1.05fr 1fr;
-			align-items: center;
-			padding: 1.8rem;
-		}
-	}
-
-	@media (max-width: 520px) {
-		.gallery-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.gallery-grid img:nth-child(1),
-		.gallery-grid img:nth-child(2),
-		.gallery-grid img:nth-child(3),
-		.gallery-grid img:nth-child(4),
-		.gallery-grid img:nth-child(5) {
-			grid-column: span 1;
-			grid-row: span 1;
+			align-items: start;
+			padding: 1.9rem;
+			gap: 1.25rem;
 		}
 	}
 </style>

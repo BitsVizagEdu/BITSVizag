@@ -32,7 +32,7 @@
 		{ num: '200+', label: 'Students',       sub: 'Enrolled annually'  },
 		{ num: '25+',  label: 'Faculty',        sub: 'Expert educators'   },
 		{ num: '99%', label: 'Foundation',     sub: 'For all disciplines' },
-	];
+	];s
 
 	function reveal(node, delay = 0) {
 		node.style.cssText += `
