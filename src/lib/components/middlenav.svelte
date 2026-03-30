@@ -329,7 +329,7 @@
 									<i
 										class="fa-solid fa-bed text-zinc-700 text-xl group-hover:scale-110 transition-transform"
 									/>
-									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Accomidation</span>
+									<span class="text-[15px] font-bold text-zinc-800 group-hover:text-zinc-950">Accommodation</span>
 								</a>
 								<a
 									href="/facilities/Cafeteria"

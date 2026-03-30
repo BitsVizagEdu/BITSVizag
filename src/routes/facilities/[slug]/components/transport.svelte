@@ -3,26 +3,26 @@
 
 	const features = [
 		{
-			title: 'Wide-Coverage Route Network',
+			title: 'City-Wide Routes',
 			description:
-				'Campus transport serves major city corridors including Steel Plant, Gajuwaka, NAD, Pendurthy, Maddilapalem, and nearby hubs.'
+				'Our bus network covers all major areas, making it easy for students to commute from anywhere.'
 		},
 		{
-			title: 'Reliable Daily Commute System',
+			title: 'Safe Commute',
 			description:
-				'Dedicated buses support timely pickup and drop cycles for students and faculty with predictable travel experience.'
+				'Trained drivers and regularly maintained vehicles ensure a safe journey to and from campus.'
 		},
 		{
-			title: 'Managed Fleet Operations',
+			title: 'Reliable Timing',
 			description:
-				'Each vehicle runs with assigned in-charge oversight, transparent annual fee structure, and route-level accountability.'
+				'Strict adherence to schedules ensures punctuality for both morning and evening trips.'
 		}
 	];
 </script>
 
 <PremiumFacilitySection
 	title="Transport"
-	intro="A premium mobility layer for campus life, engineered to keep every day punctual, safe, and stress-free for students and faculty."
+	intro="We provide reliable and comfortable transport services to ensure students reach campus safely and on time."
 	imageSrc="/Transport.jpeg"
 	imageAlt="Transport Buses"
 	{features}

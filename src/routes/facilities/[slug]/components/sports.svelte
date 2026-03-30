@@ -3,19 +3,19 @@
 
 	const features = [
 		{
-			title: 'Elite Multi-Sport Infrastructure',
+			title: 'Outdoor Grounds',
 			description:
-				'Basketball hard courts, cricket ground, volleyball areas, indoor badminton, and table tennis support both practice and competition.'
+				'Spacious courts and fields for cricket, basketball, and volleyball practice and matches.'
 		},
 		{
-			title: 'Performance-Driven Programs',
+			title: 'Indoor Sports',
 			description:
-				'Structured mentoring and regular inter-collegiate events shape discipline, confidence, and high-level team performance.'
+				'Indoor facilities for badminton, table tennis, and other games to stay active year-round.'
 		},
 		{
-			title: 'Balanced Campus Lifestyle',
+			title: 'Fitness Culture',
 			description:
-				'Physical fitness is integrated into campus culture to sustain focus, resilience, and all-round student development.'
+				'Encouraging students to balance academics with physical health and teamwork.'
 		}
 	];
 
@@ -28,7 +28,7 @@
 
 <PremiumFacilitySection
 	title="Sports"
-	intro="Built with a premium product mindset, BITS Vizag sports infrastructure combines high-quality training environments with a vibrant competitive culture."
+	intro="We provide high-quality sports facilities to help students stay physically active, build teamwork, and maintain a balanced lifestyle."
 	{features}
 	{galleryImages}
 />

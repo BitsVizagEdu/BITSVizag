@@ -1,5 +1,5 @@
 <script>
-	import { items, replaceHyphenWithSpace } from './components/utils.js';
+	import { items, getFacilityLabel } from './components/utils.js';
 	import {
 		activeTab,
 		setActiveTabValue,
@@ -32,34 +32,35 @@
 
 		switch (slug) {
 			case 'Knowledge-Resource-Center':
-				title = 'Library & Knowledge Resource Center | BITS Vizag';
+				title = 'Knowledge Center | BITS Vizag';
 				description =
-					'State-of-the-art library and knowledge resource center at BITS Vizag with extensive book collection, digital resources, and learning commons.';
+					'Modern library with extensive books, digital resources, and quiet study spaces.';
 				break;
 			case 'Sports':
-				title = 'Sports Facilities | Athletic Center at BITS Vizag';
+				title = 'Sports Facilities | BITS Vizag';
 				description =
-					'Comprehensive sports facilities at BITS Vizag including indoor/outdoor courts, gymnasium, swimming pool, and athletic training center.';
+					'Well-equipped outdoor and indoor facilities for sports, fitness, and teamwork.';
 				break;
 			case 'Laboratories':
-				title = 'Laboratories & Technical Facilities | BITS Vizag';
+				title = 'Laboratories | BITS Vizag';
 				description =
-					'Well-equipped laboratories at BITS Vizag for engineering, science, and research work with modern instruments and software tools.';
+					'Modern labs for engineering education with hands-on technical training.';
 				break;
 			case 'Cafeteria':
-				title = 'Cafeteria & Dining Facilities | BITS Vizag';
+				title = 'Cafeteria | BITS Vizag';
 				description =
-					'Multi-cuisine cafeteria at BITS Vizag offering hygienic food options, dining halls, and recreational spaces for students and staff.';
+					'Clean and spacious cafeteria offering healthy multi-cuisine food options.';
 				break;
+			case 'Accommdation':
 			case 'Accomidation':
-				title = 'Hostels & Accommodation | Residential Facilities at BITS Vizag';
+				title = 'Accommodation | BITS Vizag';
 				description =
-					'Comfortable hostel accommodation at BITS Vizag with modern amenities, Wi-Fi, recreational facilities, and 24/7 security for resident students.';
+					'Comfortable and secure on-campus hostels for safe and convenient student living.';
 				break;
 			case 'Transport':
-				title = 'Campus Transport Services | BITS Vizag';
+				title = 'Transport | BITS Vizag';
 				description =
-					'Comprehensive transport services at BITS Vizag with buses for campus commute, pick-up/drop facilities, and convenient scheduling.';
+					'Reliable bus services covering all major city routes for safe commute.';
 				break;
 		}
 
@@ -112,7 +113,7 @@
 					class="px-5 py-4 bg-gradient-to-r from-slate-50 via-white to-slate-50 border-b border-slate-100 flex items-center justify-between"
 				>
 					<span class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.22em]"
-						>Campus Amenities - Signature Edition</span
+						>Campus Facilities</span
 					>
 					<i class="fa-solid fa-building-circle-check text-[#2672d5] lg:hidden"></i>
 				</div>
@@ -126,10 +127,10 @@
 								on:click={() => setActiveTabValue(item)}
 								class="flex-shrink-0 flex items-center px-4 py-2.5 text-[13px] font-bold rounded-xl transition-all duration-300 whitespace-nowrap
 								{$activeTab === item
-									? 'bg-[#0f4da8] text-white shadow-[0_8px_20px_-8px_rgba(15,77,168,0.8)]'
+									? 'bg-[#1e293b] text-white shadow-lg'
 									: 'bg-slate-50 text-slate-600 border border-slate-100 hover:border-slate-300'} "
 							>
-								{replaceHyphenWithSpace(item)}
+								{getFacilityLabel(item)}
 							</a>
 						{/each}
 					</div>
@@ -142,13 +143,13 @@
 							<a
 								href={`/facilities/${encodeURIComponent(item)}`}
 								on:click={() => setActiveTabValue(item)}
-								class="flex items-center px-4 py-3.5 text-[14px] font-semibold rounded-xl transition-all duration-300
+								class="flex items-center px-4 py-3.5 text-[14px] font-bold rounded-xl transition-all duration-300
 								{$activeTab === item
-									? 'bg-[#0f4da8] text-white shadow-[0_16px_26px_-18px_rgba(15,77,168,1)] translate-x-1'
-									: 'text-slate-600 hover:bg-slate-50 hover:text-[#0f4da8] hover:translate-x-[2px]'} "
+									? 'bg-[#1e293b] text-white shadow-md translate-x-1'
+									: 'text-slate-600 hover:bg-slate-50 hover:text-[#1e293b] hover:translate-x-[2px]'} "
 							>
-								<i class="fa-solid fa-circle-info mr-3 text-[12px] opacity-70"></i>
-								<span>{replaceHyphenWithSpace(item)}</span>
+								<i class="fa-solid fa-chevron-right mr-3 text-[10px] opacity-70"></i>
+								<span>{getFacilityLabel(item)}</span>
 							</a>
 						</li>
 					{/each}

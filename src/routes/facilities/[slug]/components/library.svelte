@@ -12,26 +12,26 @@
 
 	const features = [
 		{
-			title: 'Enterprise Discovery Layer',
+			title: 'Digital Resources',
 			description:
-				'Unified catalog search, digital discovery, and OPAC workflows deliver an intuitive learning experience for every learner.'
+				'Access thousands of e-books, journals, and digital databases through our unified search portal.'
 		},
 		{
-			title: 'Digital Learning Suite',
+			title: 'Study & Reading Zones',
 			description:
-				'Premium digital library zones include journal access, NPTEL media resources, and focused stations for deep academic work.'
+				'Quiet, well-lit spaces designed for focused individual study and academic research.'
 		},
 		{
-			title: 'High-Fidelity Circulation',
+			title: 'Easy Borrowing',
 			description:
-				'Barcode-enabled circulation and continuously updated bibliographic records maintain speed, reliability, and operational accuracy.'
+				'A simple barcode system makes borrowing and returning books fast and hassle-free.'
 		}
 	];
 </script>
 
 <PremiumFacilitySection
 	title="Knowledge Resource Center"
-	intro="Designed like a premium knowledge product, the center blends intelligent indexing, seamless digital access, and focused physical spaces to support serious scholarship."
+	intro="Our modern library provides a vast collection of physical and digital resources to support your academic journey and research needs."
 	imageSrc="/Library-1.webp"
 	imageAlt="Knowledge Resource Center"
 	{features}
