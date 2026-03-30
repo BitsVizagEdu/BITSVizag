@@ -3,26 +3,26 @@
 
 	const features = [
 		{
-			title: 'Hygiene-First Culinary Operations',
+			title: 'Hygienic Food',
 			description:
-				'Production kitchens and storage workflows are managed with clean, consistent service standards throughout the day.'
+				'Freshly prepared meals and snacks served in a clean and sanitized dining area.'
 		},
 		{
-			title: 'High-Capacity Dining Experience',
+			title: 'Spacious Seating',
 			description:
-				'Spacious seating for 300+ students enables quick turnover during peak hours while keeping the environment relaxed and comfortable.'
+				'Large dining hall that accommodates hundreds of students comfortably at once.'
 		},
 		{
-			title: 'All-Day Premium Convenience',
+			title: 'Wide Menu',
 			description:
-				'From hot meals to evening snacks and beverages, the cafeteria supports daily campus rhythms with dependable quality.'
+				'A variety of healthy and tasty options available throughout the day for students and staff.'
 		}
 	];
 </script>
 
 <PremiumFacilitySection
 	title="Cafeteria"
-	intro="Our cafeteria is built as a premium lifestyle zone, balancing nutrition, hygiene, speed, and comfort for a clean and modern campus dining experience."
+	intro="Our cafeteria provides nutritious and delicious meals in a welcoming space, perfect for breaks and social interaction."
 	imageSrc="/cafe.jpg"
 	imageAlt="Cafeteria"
 	{features}

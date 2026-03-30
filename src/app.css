@@ -21,6 +21,14 @@
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
+
+	.font-satoshi {
+		font-family: 'Satoshi', sans-serif;
+	}
+
+	.font-inter {
+		font-family: 'Inter', sans-serif;
+	}
 }
 
 ::-webkit-scrollbar {

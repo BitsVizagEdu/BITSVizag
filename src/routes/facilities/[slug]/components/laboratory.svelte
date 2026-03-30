@@ -3,26 +3,26 @@
 
 	const features = [
 		{
-			title: 'Advanced Computing Bays',
+			title: 'Computer Labs',
 			description:
-				'High-performance systems and updated software stacks support design, coding, simulation, and project prototyping workflows.'
+				'Updated systems with modern software for coding, design, and simulation work.'
 		},
 		{
-			title: 'Precision Lab Ecosystem',
+			title: 'Engineering Labs',
 			description:
-				'Specialized discipline labs are maintained with calibrated instruments for accurate, repeatable, and production-grade learning outcomes.'
+				'Specialized labs equipped with industry-standard tools for practical application of theory.'
 		},
 		{
-			title: 'Mentored Experimentation',
+			title: 'Practical Guidance',
 			description:
-				'Experienced faculty and lab teams guide students through structured experimentation, safety standards, and technical troubleshooting.'
+				'Experienced faculty provide hands-on training to prepare students for real-world projects.'
 		}
 	];
 </script>
 
 <PremiumFacilitySection
 	title="Laboratories"
-	intro="Our labs are designed with a premium product mindset, where infrastructure, mentorship, and modern tooling come together to create confident, industry-ready engineers."
+	intro="Our well-equipped labs provide the perfect environment for students to gain practical skills and bridge the gap between theory and practice."
 	imageSrc="/lab.jpg"
 	imageAlt="Laboratory"
 	{features}

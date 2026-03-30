@@ -3,26 +3,26 @@
 
 	const features = [
 		{
-			title: 'Comfort-Focused Residential Design',
+			title: 'Comfortable Rooms',
 			description:
-				'Hostel spaces are planned for privacy, comfort, and routine, giving students a stable environment for high-performance study.'
+				'Well-ventilated and spacious rooms designed for a peaceful living and study experience.'
 		},
 		{
-			title: 'Integrated Dining & Recreation',
+			title: 'Dining & Food',
 			description:
-				'Attached mess blocks, modern kitchen operations, and social recreation spaces make residential life smooth and balanced.'
+				'Nutritious meals served daily in a clean, hygienic environment with a focus on student health.'
 		},
 		{
-			title: 'Inclusive Accommodation Model',
+			title: 'Secure Living',
 			description:
-				'Dedicated accommodation sections ensure a safe and supportive setup for students from Andhra Pradesh and across India.'
+				'24/7 security and dedicated staff ensure a safe and supportive atmosphere for all residents.'
 		}
 	];
 </script>
 
 <PremiumFacilitySection
 	title="Hostel & Accommodation"
-	intro="A premium residential experience that blends comfort, safety, and student convenience so campus life feels organized, supportive, and future-ready."
+	intro="Our campus residences offer a home away from home, balancing comfort and safety for a smooth student life experience."
 	imageSrc="/hostel.jpg"
 	imageAlt="Hostel"
 	{features}

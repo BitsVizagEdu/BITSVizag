@@ -45,6 +45,7 @@
 		setActiveTabValue(item);
 	}
 </script>
+
 <!-- Top Bar: Quick Links & Socials -->
 
 <div
@@ -68,10 +69,10 @@
 
 			<!-- Center Content -->
 			<div
-				class="flex flex-col justify-center items-center text-center px-1 xs:px-2 flex-1 max-w-[1050px]"
+				class="flex flex-col -p-1 justify-center items-center text-center px-2 xs:px-1 flex-1 max-w-[1050px]"
 			>
 				<h1
-					class="text-[10px] 3xs:text-[12px] 2xs:text-[14px] xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.01em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg"
+					class="text-[10px] 3xs:text-[12px] 2xs:text-[14px] xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.01em] xs:tracking-[0.05em] leading-tight filter drop-shadow-lg font-satoshi"
 				>
 					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
 				</h1>
@@ -79,7 +80,7 @@
 				<div class="flex items-center gap-1 xs:gap-2 mt-0 md:mt-1">
 					<div class="h-[1px] w-2 xs:w-3 md:w-12 bg-yellow-400/50"></div>
 					<h5
-						class="text-[7.5px] 3xs:text-[8px] 2xs:text-[10px] xs:text-xs sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase"
+						class="text-[7.5px] 3xs:text-[8px] 2xs:text-[10px] xs:text-xs sm:text-lg md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter"
 					>
 						An Autonomous Institution
 					</h5>
@@ -88,13 +89,13 @@
 
 				<div class="mt-0.5 md:mt-1 text-slate-300">
 					<h6
-						class="text-[6.5px] 3xs:text-[7px] 2xs:text-[8.5px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[800px] mx-auto"
+						class="text-[6.5px] 3xs:text-[7px] 2xs:text-[8.5px] xs:text-[10px] md:text-xs lg:text-sm font-medium leading-relaxed opacity-80 max-w-[800px] mx-auto font-inter"
 					>
-						 Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-GV Vizianagaram
+						Accredited by NAAC | Approved by AICTE, New Delhi | Affiliated to JNTU-GV Vizianagaram
 						<br class="hidden sm:block" />
-						<span class="block sm:inline"> An ISO 9001:2015 Certified Educational Institution | 18 Years of Educational Excellence Foundation</span>
-						
-					
+						<span class="block sm:inline">
+							An ISO 9001:2015 Certified Educational Institution | 18 Years of Educational
+							Excellence Foundation</span>
 					</h6>
 					<div
 						class="mt-1 xs:mt-2 inline-flex items-center gap-1 xs:gap-1.5 px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
@@ -105,7 +106,7 @@
 							College Code :
 						</span>
 						<span
-							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-xs xs:text-base md:text-lg leading-none"
+							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-xs xs:text-base md:text-lg leading-none font-satoshi"
 						>
 							BABA
 						</span>
