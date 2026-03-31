@@ -1,11 +1,13 @@
 # 🚀 BITS Vizag - Image Optimization Instructions
 
 ## Current Problem
+
 Your homepage images are **155MB unoptimized**, causing slow header loading.
 
 ## Critical Images to Compress
 
 ### 1. **CS-Banners** (45MB total) - `/static/CS-Banners/`
+
 ```
 1.png  → 6.0M  → Target: 600KB (WebP)
 2.png  → 5.2M  → Target: 520KB (WebP)
@@ -14,6 +16,7 @@ Your homepage images are **155MB unoptimized**, causing slow header loading.
 ```
 
 ### 2. **Header Icons** (80MB total) - `/static/header/`
+
 ```
 T10main.png            → 19M   → Target: 2MB (WebP)    ⚠️ CRITICAL
 ViceChancellor-Ban.png → 7.9M  → Target: 800KB (WebP)  ⚠️ CRITICAL
@@ -24,6 +27,7 @@ other PNG files        → 1-2.6M → Convert to WebP
 ```
 
 ### 3. **Video Background** - `/static/baba.*`
+
 ```
 baba.mp4    → 3.0M ✓ OK (keep as primary)
 baba.webm   → 5.1M → Can remove if mp4 sufficient
@@ -32,6 +36,7 @@ baba.webm   → 5.1M → Can remove if mp4 sufficient
 ## Optimization Step-by-Step
 
 ### Option 1: Using Online Tools (Easiest)
+
 1. Go to **TinyPNG** (https://tinypng.com/)
    - Upload each large PNG
    - Download compressed WebP version
@@ -44,6 +49,7 @@ baba.webm   → 5.1M → Can remove if mp4 sufficient
    - Download optimized
 
 ### Option 2: Using Command Line (Faster for batch)
+
 ```bash
 # Install ImageMagick (one-time)
 # Windows: Download from https://imagemagick.org/
@@ -56,6 +62,7 @@ for %F in (*.png) do magick convert %F -quality 75 %~nF.webp
 ```
 
 ### Option 3: Using FFmpeg for Videos
+
 ```bash
 # Compress MP4 to 3MB
 ffmpeg -i input.mp4 -b:v 2M -b:a 128k output.mp4
@@ -67,11 +74,13 @@ ffmpeg -i input.mp4 -vf scale=1280:720 -b:v 1500k output.mp4
 ## Update Image Paths After Optimization
 
 Once you've compressed images, replace them:
+
 1. Backup original files (create `/static/backup/` folder)
 2. Replace PNG files with optimized WebP
 3. Update component references (if needed)
 
 ### Updated File Structure
+
 ```
 /static/
 ├── CS-Banners/
@@ -100,13 +109,13 @@ Once you've compressed images, replace them:
 
 ## Expected Results After Optimization
 
-| Metric | Before | After |
-|--------|--------|-------|
-| PNG Size | 45M | 8-10M |
-| Header Size | 80M | 15-20M |
-| Homepage Load | 8-10s | 2-3s |
-| Mobile Load | 15-20s | 3-5s |
-| Scroll FPS | 30-40fps | 60fps |
+| Metric        | Before   | After  |
+| ------------- | -------- | ------ |
+| PNG Size      | 45M      | 8-10M  |
+| Header Size   | 80M      | 15-20M |
+| Homepage Load | 8-10s    | 2-3s   |
+| Mobile Load   | 15-20s   | 3-5s   |
+| Scroll FPS    | 30-40fps | 60fps  |
 
 ## Quick Wins (Do These First)
 

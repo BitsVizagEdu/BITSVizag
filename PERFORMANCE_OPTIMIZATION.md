@@ -3,6 +3,7 @@
 ## Optimizations Implemented ✅
 
 ### 1. **Font Loading Optimization**
+
 - **Issue**: Fonts were being imported via @import in app.css and inline links in components, blocking render
 - **Solution**:
   - Consolidated all Google Font imports into a single request in +layout.svelte
@@ -15,6 +16,7 @@
 ---
 
 ### 2. **Image Optimization**
+
 - **Created**: `src/lib/components/OptimizedImage.svelte` - A reusable image component with:
   - **Lazy Loading**: `loading="lazy"` attribute for images below the fold
   - **Eager Loading Option**: `eager={true}` prop for above-the-fold images (hero, headers)
@@ -24,6 +26,7 @@
   - **Smooth Fade-in**: Opacity transition when image loads
 
 **Usage Example**:
+
 ```svelte
 <OptimizedImage
   src="/image.jpg"
@@ -36,6 +39,7 @@
 ---
 
 ### 3. **AOS (Animate On Scroll) Optimization**
+
 - **Issue**: AOS initialized immediately on mount, blocking render
 - **Solution**:
   - Deferred AOS initialization using `requestAnimationFrame`
@@ -47,6 +51,7 @@
 ---
 
 ### 4. **External CSS Optimization**
+
 - **Moved**: Font Awesome CDN link from navbar component to layout head
 - **Added**: Preload with async loading using media print trick
 - **Result**: Eliminates multiple network requests in components
@@ -54,6 +59,7 @@
 ---
 
 ### 5. **Footer Animation Optimization**
+
 - **Issue**: Parallax animation running continuously via infinite requestAnimationFrame
 - **Solution**:
   - Animation only runs when mouse is actively moving
@@ -66,6 +72,7 @@
 ---
 
 ### 6. **Header Animation Optimization**
+
 - **Added**: `will-change: background-position` for CSS animation
 - **Added**: `transform: translateZ(0)` to force GPU rendering
 - **Added**: Image containment `contain: layout style paint`
@@ -77,6 +84,7 @@
 ### 7. **Build & Bundling Optimizations**
 
 #### SvelteKit Config
+
 - Enabled **ISR (Incremental Static Regeneration)** caching for 1 hour
 - Configured compiler flags:
   - Disabled comments preservation
@@ -84,6 +92,7 @@
   - Optimized for production
 
 #### Vite Config
+
 - **Code Splitting**:
   - Animation libraries (GSAP, Locomotion) in separate chunk
   - AOS in separate chunk
@@ -99,6 +108,7 @@
 ## Next Steps to Implement
 
 ### 1. **Image Conversion & Optimization**
+
 ```bash
 # Convert PNG to WebP for better compression
 for file in static/*.png; do
@@ -110,13 +120,16 @@ done
 ```
 
 ### 2. **Update Image References**
+
 Replace standard `<img>` tags with `<OptimizedImage>` component throughout:
+
 - `/src/routes/+page.svelte` (homepage)
 - `/src/routes/department/[slug]/+page.svelte`
 - `/src/routes/courses/[slug]/+page.svelte`
 - Gallery and other image-heavy pages
 
 Example:
+
 ```svelte
 <!-- Before -->
 <img src="/image.png" alt="..." />
@@ -132,22 +145,27 @@ Example:
 ```
 
 ### 3. **Critical CSS Extraction**
+
 - Extract critical above-the-fold CSS
 - Inline critical CSS in `<head>`
 - Defer non-critical CSS using `media="print"` technique
 
 ### 4. **Hero Section Optimization**
+
 - Add `preload` for hero background images
 - Use responsive image sizes
 - Lazy load secondary hero elements
 
 ### 5. **Remove Unused Libraries**
+
 Check `package.json` for unused animation libraries:
+
 - `svelte-carousel`
 - `svelte-locomotive-scroll`
 - `tw-elements` (if not used)
 
 ### 6. **Enable Compression**
+
 - Add Gzip/Brotli compression in Vercel deployment
 - Minify HTML in production builds
 
@@ -155,29 +173,32 @@ Check `package.json` for unused animation libraries:
 
 ## Performance Targets
 
-| Metric | Before | After | Target |
-|--------|--------|-------|--------|
-| **First Contentful Paint (FCP)** | ~2.5s | ~1.8s | <1.5s |
-| **Largest Contentful Paint (LCP)** | ~3.5s | ~2.3s | <2.0s |
-| **Cumulative Layout Shift (CLS)** | ~0.15 | ~0.08 | <0.1 |
-| **Time to Interactive (TTI)** | ~4.2s | ~2.8s | <2.5s |
-| **Bundle Size** | ~485KB | ~410KB | <350KB |
+| Metric                             | Before | After  | Target |
+| ---------------------------------- | ------ | ------ | ------ |
+| **First Contentful Paint (FCP)**   | ~2.5s  | ~1.8s  | <1.5s  |
+| **Largest Contentful Paint (LCP)** | ~3.5s  | ~2.3s  | <2.0s  |
+| **Cumulative Layout Shift (CLS)**  | ~0.15  | ~0.08  | <0.1   |
+| **Time to Interactive (TTI)**      | ~4.2s  | ~2.8s  | <2.5s  |
+| **Bundle Size**                    | ~485KB | ~410KB | <350KB |
 
 ---
 
 ## Testing Performance
 
 ### Using Lighthouse (Chrome DevTools)
+
 1. Open DevTools → Lighthouse
 2. Run audit with "Throttling: Fast 4G"
 3. Check scores for Performance, Accessibility, SEO
 
 ### Using WebPageTest
+
 1. Go to webpagetest.org
 2. Enter your site URL
 3. Use "Dulles VA - Chrome" for consistent results
 
 ### Measuring Core Web Vitals
+
 ```javascript
 // Add to your analytics
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
@@ -194,11 +215,13 @@ getTTFB(console.log);
 ## CSS Performance Tips
 
 ### Current Optimizations
+
 - Removed duplicate font imports
 - Using Tailwind CSS (optimized for production)
 - CSS code splitting by route
 
 ### Additional Tips
+
 - Avoid `@import` statements (use `<link>` instead)
 - Minimize CSS at build time
 - Use CSS containment for intensive animations
@@ -225,13 +248,16 @@ Updated Files:
 ## Deployment Considerations
 
 ### Vercel Deployment
+
 1. ISR caching is now enabled (1 hour expiration)
 2. Automatic image optimization available via `<Image>` component
 3. Edge caching for static assets
 4. Automatic gzip/brotli compression
 
 ### Environment Variables
+
 Add to Vercel dashboard if using ISR:
+
 - `VERCEL_AUTOMATION_BYPASS_TOKEN=<your-token>`
 
 ---
@@ -239,6 +265,7 @@ Add to Vercel dashboard if using ISR:
 ## Browser Support
 
 All optimizations support:
+
 - ✅ Chrome/Edge 90+
 - ✅ Firefox 88+
 - ✅ Safari 14+
@@ -251,14 +278,16 @@ Lazy loading and `decoding="async"` are widely supported.
 ## Monitoring Performance
 
 ### Set up Vercel Analytics
+
 ```javascript
 // In +layout.svelte
 import { WebVitals } from '@vercel/analytics';
 
-<WebVitals />
+<WebVitals />;
 ```
 
 This automatically tracks:
+
 - First Contentful Paint
 - Largest Contentful Paint
 - Cumulative Layout Shift
