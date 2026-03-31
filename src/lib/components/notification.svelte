@@ -21,14 +21,21 @@
 				&nbsp;&nbsp;&nbsp;
 				<span class="text-[#E7087B]">
 					"The Shield Protocol'25 — A Three-Day Cybersecurity Workshop by BITS Vizag (A)"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+				<span class="text-green-600">
+					"Mega Job Fair 2026 – A Remarkable Success !!!"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+				<span class="text-blue-600">
+					"Samsung Innovation Campus X Dept. of CSE, BITS Vizag (A)"</span
 				>
 			</div>
 			<div class="marquee-title">
 				<span class="text-red-700">|</span>
-				<span>&nbsp;&nbsp;&nbsp;</span>
-				<span>&nbsp;&nbsp;&nbsp;</span>
-				<span>&nbsp;&nbsp;&nbsp;</span>
-				<span>&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;&nbsp;
 				<span class="text-pink-700"> BITS VIZAG -</span>&nbsp;&nbsp;&nbsp;
 				<span class="text-[#E7087B]"
 					>"From Ideas to Impact: Pitch-A-Thon 2025 at BITS Vizag (A), Powered by Payzo"</span
@@ -48,6 +55,16 @@
 				&nbsp;&nbsp;&nbsp;
 				<span class="text-[#E7087B]"
 					>"The Shield Protocol'25 — A Three-Day Cybersecurity Workshop by BITS Vizag (A)"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+				<span class="text-green-600">
+					"Mega Job Fair 2026 – A Remarkable Success !!!"</span
+				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>
+				&nbsp;&nbsp;&nbsp;
+				<span class="text-blue-600">
+					"Samsung Innovation Campus X Dept. of CSE, BITS Vizag (A)"</span
 				>&nbsp;&nbsp;&nbsp;
 			</div>
 		</div>

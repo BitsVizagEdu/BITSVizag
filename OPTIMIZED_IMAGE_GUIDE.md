@@ -1,29 +1,32 @@
 # OptimizedImage Component - Quick Reference
 
 ## Purpose
+
 High-performance image component with automatic lazy loading, responsive image support, and performance optimizations.
 
 ## Installation
+
 ```svelte
 import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `src` | string | (required) | Image source URL |
-| `alt` | string | (required) | Alt text for accessibility |
-| `width` | string | undefined | Image width attribute |
-| `height` | string | undefined | Image height attribute |
-| `eager` | boolean | false | Load eagerly for above-fold images |
-| `sizes` | string | undefined | Responsive image sizes hint |
-| `srcset` | string | undefined | Responsive image sources |
-| `className` | string | '' | Additional CSS classes |
+| Prop        | Type    | Default    | Description                        |
+| ----------- | ------- | ---------- | ---------------------------------- |
+| `src`       | string  | (required) | Image source URL                   |
+| `alt`       | string  | (required) | Alt text for accessibility         |
+| `width`     | string  | undefined  | Image width attribute              |
+| `height`    | string  | undefined  | Image height attribute             |
+| `eager`     | boolean | false      | Load eagerly for above-fold images |
+| `sizes`     | string  | undefined  | Responsive image sizes hint        |
+| `srcset`    | string  | undefined  | Responsive image sources           |
+| `className` | string  | ''         | Additional CSS classes             |
 
 ## Usage Examples
 
 ### Simple Example
+
 ```svelte
 <OptimizedImage
   src="/images/college-banner.jpg"
@@ -32,6 +35,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### Eager Loading (Hero Images)
+
 ```svelte
 <OptimizedImage
   src="/images/hero.jpg"
@@ -41,6 +45,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### With Responsive Images (WebP)
+
 ```svelte
 <OptimizedImage
   src="/images/department.webp"
@@ -61,6 +66,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### With Custom Styling
+
 ```svelte
 <OptimizedImage
   src="/images/about.jpg"
@@ -70,6 +76,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### Gallery Images
+
 ```svelte
 <div class="grid grid-cols-3 gap-4">
   {#each galleryImages as image}
@@ -94,16 +101,19 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ## When to Use Props
 
 ### `eager={true}`
+
 - Hero section images
 - Above-the-fold images
 - Critical images needed immediately
 
 ### Without `eager` (default: lazy)
+
 - Images below the fold
 - Gallery items
 - Images inside scrollable sections
 
 ### `srcset` & `sizes`
+
 - When you have pre-optimized image variants
 - High-resolution displays (2x, 3x)
 - Responsive design with multiple breakpoints
@@ -111,16 +121,19 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ## Migration Guide
 
 ### Before
+
 ```svelte
 <img src="/image.jpg" alt="..." />
 ```
 
 ### After
+
 ```svelte
 <OptimizedImage src="/image.jpg" alt="..." />
 ```
 
 ### With Optimization
+
 ```svelte
 <OptimizedImage
   src="/image.webp"
@@ -147,6 +160,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ## Styling Examples
 
 ### Full Width, Fixed Height
+
 ```svelte
 <OptimizedImage
   src="/image.jpg"
@@ -156,6 +170,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### Rounded Corners
+
 ```svelte
 <OptimizedImage
   src="/image.jpg"
@@ -165,6 +180,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### With Shadow
+
 ```svelte
 <OptimizedImage
   src="/image.jpg"
@@ -174,6 +190,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ```
 
 ### Responsive Grid
+
 ```svelte
 <OptimizedImage
   src="/image.jpg"
@@ -185,6 +202,7 @@ import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 ## Performance Metrics
 
 Expected improvements:
+
 - **Lazy Loaded Images**: 30-50% faster initial page load
 - **WebP Format**: 25-35% smaller file size
 - **Async Decoding**: 10-20ms faster rendering
@@ -192,15 +210,18 @@ Expected improvements:
 ## Troubleshooting
 
 ### Image not showing
+
 - Check `src` prop path
 - Verify file exists in `/static` directory
 - Check browser console for 404 errors
 
 ### Layout shift
+
 - Provide `width` and `height` props
 - Use aspect ratio CSS if available
 
 ### Not lazy loading
+
 - Check `eager` prop isn't set to true
 - Verify browser supports `loading="lazy"`
 - Check DevTools Network tab for load behavior

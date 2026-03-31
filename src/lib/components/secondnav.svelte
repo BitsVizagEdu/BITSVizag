@@ -78,9 +78,16 @@
 		</button>
 
 		<ul class="nav-links {isMobileMenuOpen ? 'drawer-open' : ''}">
-			<li class="mobile-featured-hidden"><a href="/gallery" on:click={closeMobileMenu}>Gallery</a></li>
-			<li class="mobile-featured-hidden"><a href="/Students" on:click={closeMobileMenu}>Students</a></li>
-			<li><a href="/Industry-Linkages" on:click={closeMobileMenu}>Industry & International Linkages</a></li>
+			<li class="mobile-featured-hidden">
+				<a href="/gallery" on:click={closeMobileMenu}>Gallery</a>
+			</li>
+			<li class="mobile-featured-hidden">
+				<a href="/Students" on:click={closeMobileMenu}>Students</a>
+			</li>
+			<li>
+				<a href="/Industry-Linkages" on:click={closeMobileMenu}>Industry & International Linkages</a
+				>
+			</li>
 			<li class="mobile-featured-hidden">
 				<a href="/infrastructure" on:click={closeMobileMenu}>Infrastructure</a>
 			</li>
@@ -93,7 +100,9 @@
 					on:click={closeMobileMenu}>Online Grievances</a
 				>
 			</li>
-			<li class="mobile-featured-hidden"><a href="/contactus" on:click={closeMobileMenu}>Contact Us</a></li>
+			<li class="mobile-featured-hidden">
+				<a href="/contactus" on:click={closeMobileMenu}>Contact Us</a>
+			</li>
 		</ul>
 	</div>
 
@@ -234,74 +243,57 @@
 			align-items: center;
 			justify-content: space-between;
 			height: var(--secondnav-mobile-height);
-			padding: 0 10px;
-			overflow: visible;
-			gap: 7px;
+			padding: 0 12px;
+			gap: 8px;
 		}
 
 		.mobile-visible-links {
-			display: grid;
-			grid-template-columns: repeat(4, minmax(0, 1fr));
+			display: flex;
 			align-items: center;
-			gap: 6px;
+			gap: clamp(4px, 1.5vw, 12px);
 			flex: 1;
-			width: 100%;
 			min-width: 0;
-			justify-items: stretch;
-			overflow: hidden;
-		}
-
-		.mobile-visible-links::-webkit-scrollbar {
-			display: none;
+			height: 100%;
 		}
 
 		.mobile-visible-link {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 100%;
+			flex: 1;
 			min-width: 0;
-			min-height: 32px;
-			padding: 6px 5px;
-			font-size: 10.5px;
+			height: 100%;
+			padding: 0 4px;
+			font-size: 11px;
 			font-weight: 700;
-			color: rgba(255, 255, 255, 0.96);
-			background: rgba(255, 255, 255, 0.12);
-			border: 1px solid rgba(255, 255, 255, 0.24);
-			border-radius: 9px;
+			color: #ffffff;
+			text-transform: capitalize;
+			letter-spacing: 0.05em;
 			white-space: nowrap;
-			line-height: 1;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			text-align: center;
-			letter-spacing: 0.01em;
+			text-decoration: none;
+			transition: opacity 0.2s ease;
 		}
 
 		.mobile-visible-link:active {
-			transform: scale(0.98);
+			opacity: 0.7;
 		}
 
 		.mobile-menu-btn {
-			display: inline-flex;
+			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 36px;
-			width: 36px;
+			height: 100%;
+			width: 44px;
 			color: #ffffff;
-			background: rgba(255, 255, 255, 0.14);
-			border: 1px solid rgba(255, 255, 255, 0.24);
-			border-radius: 10px;
+			background: transparent;
+			border: none;
 			cursor: pointer;
-			transition: background 0.25s ease, transform 0.2s ease;
+			transition: opacity 0.2s ease;
 			flex-shrink: 0;
 		}
 
 		.mobile-menu-btn:active {
-			transform: scale(0.96);
-		}
-
-		.mobile-menu-btn:hover {
-			background: rgba(255, 255, 255, 0.22);
+			opacity: 0.7;
 		}
 
 		.nav-links {
