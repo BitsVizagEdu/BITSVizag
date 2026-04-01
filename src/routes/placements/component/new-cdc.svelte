@@ -30,7 +30,7 @@
 		},
 		{
 			role: 'Training & Placement Officer',
-			image: '/joshua-sir.jpg',
+			image: '/joshua-sir.jpeg',
 			headline: 'Driving Greatness: Self-Motivation, Knowledge, and Resilience.',
 			quote:
 				'Self-motivation and a hunger for knowledge lead the way to greatness; overcome setbacks with resilience.',
@@ -519,32 +519,6 @@
 		padding: clamp(1rem, 2.8vw, 2rem) clamp(1rem, 5vw, 4rem) clamp(2.2rem, 4.5vw, 3.4rem);
 		background: var(--ink);
 	}
-	.hero-bg {
-		position: absolute;
-		inset: 0;
-		background: url('/header/tnp.png') center center/contain no-repeat;
-		filter: brightness(0.25) saturate(1.18);
-		background-color: #020617;
-		will-change: transform;
-	}
-	.hero-overlay {
-		position: absolute;
-		inset: 0;
-		background:
-			radial-gradient(ellipse 60% 55% at 15% 20%, rgba(37, 99, 235, 0.45), transparent),
-			radial-gradient(ellipse 50% 60% at 84% 72%, rgba(14, 165, 233, 0.24), transparent),
-			linear-gradient(160deg, rgba(2, 6, 23, 0.8) 0%, rgba(2, 6, 23, 0.45) 100%);
-	}
-	.hero-gridline {
-		position: absolute;
-		inset: 0;
-		background-image:
-			linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-		background-size: 48px 48px;
-		mask-image: radial-gradient(circle at center, black 20%, transparent 78%);
-		pointer-events: none;
-	}
 	.hero-inner {
 		position: relative;
 		z-index: 1;
@@ -738,15 +712,6 @@
 		);
 		pointer-events: none;
 		z-index: 2;
-	}
-	.hero-card-label {
-		margin: 0 0 0.45rem;
-		font-family: var(--font-body);
-		font-size: 0.74rem;
-		font-weight: 700;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		color: #93c5fd;
 	}
 	.hero-card-title {
 		margin: 0 0 0.95rem;
