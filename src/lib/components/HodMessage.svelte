@@ -2,14 +2,24 @@
 	export let hodName = 'Dr. Department Head';
 	export let hodMessage = 'Welcome to our department...';
 	export let hodImage = '/default-hod.jpg';
+	export let designation = 'Head of Department';
+	export let department = '';
 </script>
 
 <div class="w-full bg-slate-100 py-12 md:py-16 px-4 md:px-8">
 	<div class="max-w-6xl mx-auto">
 		<!-- Section Header -->
 		<div class="text-center mb-8">
-			<p class="text-sm md:text-base font-semibold text-slate-500 tracking-widest uppercase mb-4">HOD MESSAGE</p>
-			<h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-0">- {hodName}</h2>
+			<p class="text-sm md:text-base font-semibold text-slate-500 tracking-widest uppercase mb-1">
+				HOD MESSAGE
+			</p>
+			<h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-1">{hodName}</h2>
+			{#if designation}
+				<p class="text-sm font-bold text-slate-700 uppercase tracking-wide">{designation}</p>
+			{/if}
+			{#if department}
+				<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">{department}</p>
+			{/if}
 		</div>
 
 		<!-- HOD Content Container -->
