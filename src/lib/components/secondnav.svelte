@@ -44,7 +44,7 @@
 				aria-label="Infrastructure"
 				on:click={closeMobileMenu}>Infrastructure</a
 			>
-			<a href="/contactus" class="mobile-visible-link" on:click={closeMobileMenu}>Contact</a>
+			<a href="/Mandatory" class="mobile-visible-link" on:click={closeMobileMenu}>Disclosures</a>
 		</div>
 
 		<button
@@ -120,10 +120,10 @@
 	/* Fonts are loaded in app.html */
 
 	nav {
-		--middlenav-mobile-height: 56px;
-		--secondnav-mobile-height: 50px;
+		--middlenav-mobile-height: 36px;
+		--secondnav-mobile-height: 32px;
 		position: sticky;
-		top: 56px; /* Below Middlenav */
+		top: 46px; /* Below Middlenav Master Height (User manual edit: 46px) */
 		z-index: 997;
 		width: 100%;
 		background: #d22626;
@@ -134,7 +134,7 @@
 	nav .wrapper {
 		max-width: 1600px;
 		padding: 0 24px;
-		height: 40px;
+		height: 38px;
 		margin: auto;
 		display: flex;
 		align-items: center;
@@ -175,17 +175,15 @@
 		color: rgba(255, 255, 255, 0.95);
 		text-decoration: none;
 		font-size: 14px;
-		padding: 8px 16px;
+		padding: 7px 16px;
 		transition: all 0.25s ease;
 		text-transform: capitalize;
 		letter-spacing: 0.02em;
-		border-radius: 8px;
+		border-radius: 6px;
 		display: flex;
 		align-items: center;
-		font-weight: 500;
+		font-weight: 700;
 		font-family: 'Roboto', sans-serif;
-
-		font-weight: 600;
 	}
 
 	.nav-links li a:hover {
@@ -241,16 +239,17 @@
 		nav .wrapper {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
 			height: var(--secondnav-mobile-height);
 			padding: 0 12px;
-			gap: 8px;
+			gap: 12px;
 		}
 
 		.mobile-visible-links {
 			display: flex;
 			align-items: center;
-			gap: clamp(4px, 1.5vw, 12px);
+			justify-content: space-around;
+			padding: 0 4px;
 			flex: 1;
 			min-width: 0;
 			height: 100%;
@@ -260,15 +259,14 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex: 1;
 			min-width: 0;
 			height: 100%;
-			padding: 0 4px;
-			font-size: 11px;
+			padding: 0 6px;
+			font-size: 13px;
 			font-weight: 700;
 			color: #ffffff;
 			text-transform: capitalize;
-			letter-spacing: 0.05em;
+			letter-spacing: 0.02em;
 			white-space: nowrap;
 			text-decoration: none;
 			transition: opacity 0.2s ease;
@@ -283,12 +281,12 @@
 			align-items: center;
 			justify-content: center;
 			height: 100%;
-			width: 44px;
+			width: 40px;
 			color: #ffffff;
-			background: transparent;
+			background: rgba(255, 255, 255, 0.1);
 			border: none;
 			cursor: pointer;
-			transition: opacity 0.2s ease;
+			transition: background 0.2s ease;
 			flex-shrink: 0;
 		}
 
@@ -378,8 +376,8 @@
 
 			.mobile-visible-link {
 				min-height: 30px;
-				font-size: 9.5px;
-				padding: 5px 4px;
+				font-size: 12px;
+				padding: 5px 2px;
 			}
 		}
 	}
