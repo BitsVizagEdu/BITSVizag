@@ -52,12 +52,12 @@
 	id="header"
 	class="bg-slate-900 border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl overflow-hidden"
 >
-	<div class="2xl:mx-auto py-1 xs:py-1.5 md:py-3 lg:px-12 w-full">
+	<div class="2xl:mx-auto py-2 xs:py-3 md:py-3.5 lg:px-12 w-full">
 		<div class="flex flex-row justify-between items-center w-full px-1 xs:px-2.5 sm:px-4">
 			<!-- Left Logo: NAAC -->
 			<div class="flex flex-col justify-center items-start shrink-0">
 				<div
-					class="flex items-center justify-center h-[30px] w-[30px] 3xs:h-[34px] 3xs:w-[34px] 2xs:h-[40px] 2xs:w-[40px] xs:h-[50px] xs:w-[50px] md:h-[105px] md:w-[105px] lg:h-[135px] lg:w-[135px] drop-shadow-2xl"
+					class="flex items-center justify-center h-[36px] w-[36px] 3xs:h-[40px] 3xs:w-[40px] 2xs:h-[48px] 2xs:w-[48px] xs:h-[58px] xs:w-[58px] md:h-[100px] md:w-[100px] lg:h-[125px] lg:w-[125px] drop-shadow-2xl"
 				>
 					<img
 						class="bg-transparent p-0.5 h-full w-full object-contain filter"
@@ -72,7 +72,7 @@
 				class="flex flex-col justify-center items-center text-center px-0.5 xs:px-2 flex-1 min-w-0 max-w-[1050px]"
 			>
 				<h1
-					class="text-[7.2px] 3xs:text-[8.5px] 2xs:text-[10.5px] xs:text-[13px] sm:text-base md:text-2xl lg:text-3xl font-extrabold text-white tracking-tighter 2xs:tracking-tight xs:tracking-normal leading-none filter drop-shadow-lg font-satoshi whitespace-nowrap"
+					class="text-[10px] 3xs:text-[12px] 2xs:text-[14px] xs:text-[15.5px] sm:text-xl md:text-[22.5px] lg:text-[29px] font-extrabold text-white tracking-normal leading-snug filter drop-shadow-lg font-satoshi whitespace-nowrap"
 				>
 					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
 				</h1>
@@ -80,7 +80,7 @@
 				<div class="flex items-center gap-1 mt-0.5 md:mt-1">
 					<div class="h-[1px] w-1 xs:w-3 md:w-12 bg-yellow-400/50"></div>
 					<h5
-						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[8.5px] xs:text-[10.5px] sm:text-base md:text-xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter whitespace-nowrap"
+						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[9.5px] xs:text-[10.5px] sm:text-lg md:text-[20px] font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter whitespace-nowrap"
 					>
 						An Autonomous Institution
 					</h5>
@@ -89,11 +89,11 @@
 
 				<div class="mt-0.5 md:mt-1 text-slate-300">
 					<h6
-						class="text-[5px] 3xs:text-[6px] 2xs:text-[7.5px] xs:text-[9.5px] md:text-[11px] lg:text-sm font-medium leading-none opacity-80 max-w-[800px] mx-auto font-inter"
+						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[9.5px] xs:text-[11.5px] md:text-[13.5px] lg:text-[15px] font-medium leading-relaxed opacity-95 max-w-[800px] mx-auto font-inter"
 					>
 						Accredited by NAAC | Approved by AICTE | Affiliated to JNTU-GV Vizianagaram
 						<br class="hidden sm:block" />
-						<span class="block sm:inline">
+						<span class="block">
 							ISO 9001:2015 Certified | 18 Years of Educational Excellence Foundation</span
 						>
 					</h6>
@@ -118,7 +118,7 @@
 			<div class="flex flex-col justify-center items-end shrink-0">
 				<div
 					id="bits"
-					class="flex items-center justify-center h-[28px] w-[28px] 3xs:h-[32px] 3xs:w-[32px] 2xs:h-[38px] 2xs:w-[38px] xs:h-[48px] xs:w-[48px] md:h-[85px] md:w-[85px] lg:h-[105px] lg:w-[105px] relative group"
+					class="flex items-center justify-center h-[28px] w-[28px] 3xs:h-[32px] 3xs:w-[32px] 2xs:h-[38px] 2xs:w-[38px] xs:h-[48px] xs:w-[48px] md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px] relative group"
 				>
 					<div
 						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"

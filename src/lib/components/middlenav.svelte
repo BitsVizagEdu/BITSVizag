@@ -57,35 +57,32 @@
 <nav
 	class="{isMobileMenuOpen ? 'mobile-menu-active-state' : ''} {activeMobileDropdown
 		? 'mobile-menu-active-state'
-		: ''}"
+		: ''} h-[40px] xl:h-auto"
 >
 	<div class="wrapper">
 		<div class="logo flex items-center">
 			<a href="/"
 				><img
-					class="w-[80px] md:w-[140px] xl:w-[160px] transition-all"
+					class="w-[35px] md:w-[90px] xl:w-[110px] transition-all"
 					src="/1.png"
 					alt="BITS Vizag Logo"
 				/></a
 			>
 		</div>
 
-		<div class="mobile-quick-nav xl:hidden">
-			<div class="mobile-quick-links-track">
-				<a href="/aboutus/About-BITS" class="mobile-quick-link" on:click={closeMenus}>About Us</a>
-				<a href="/faculty" class="mobile-quick-link" on:click={closeMenus}>Faculty</a>
+		<!-- Perfected Mobile Quick Nav: Scrolling High-Value Links Strip -->
+		<div class="mobile-quick-nav xl:hidden flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar">
+			<div class="flex items-center gap-4 py-1">
+				<a href="/" class="mini-link" on:click={closeMenus}>Home</a>
 				<button
 					type="button"
-					class="mobile-quick-link mobile-courses-trigger {activeMobileDropdown === 'courses'
-						? 'open'
-						: ''}"
+					class="mini-link {activeMobileDropdown === 'courses' ? 'active' : ''}"
 					on:click={() => toggleMobileDropdown('courses')}
 				>
-					<span>Courses</span>
-					<i class="fa-solid fa-chevron-down"></i>
+					Courses
 				</button>
-				<a href="/facilities" class="mobile-quick-link" on:click={closeMenus}>Facilities</a>
-				<a href="/placements" class="mobile-quick-link" on:click={closeMenus}>CDC</a>
+				<a href="/faculty" class="mini-link" on:click={closeMenus}>Faculty</a>
+				<a href="/placements" class="mini-link" on:click={closeMenus}>CDC</a>
 			</div>
 		</div>
 
@@ -104,7 +101,7 @@
 			<div
 				class="xl:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100/60 w-full pt-2"
 			>
-				<img src="/1.png" alt="BITS Vizag Logo" class="h-12 w-auto object-contain" />
+				<img src="/1.png" alt="BITS Vizag Logo" class="h-8 w-auto object-contain" />
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 				<button type="button" class="btn close-btn" on:click={toggleMobileMenu}>
@@ -112,7 +109,7 @@
 				</button>
 			</div>
 
-			<li><a href="/" on:click={closeMenus}>Home</a></li>
+			<li class="hidden xl:flex sidebar-hidden"><a href="/" on:click={closeMenus}>Home</a></li>
 
 			<!-- About Us -->
 			<li class="mobile-priority-item">
@@ -121,12 +118,12 @@
 			</li>
 
 			<!-- Courses -->
-			<li>
+			<li class="hidden xl:flex sidebar-hidden">
 				<a href="/courses/Under-Graduation" class="desktop-item"> Courses </a>
 			</li>
 
 			<!-- Faculty -->
-			<li class="mobile-priority-item">
+			<li class="hidden xl:flex sidebar-hidden">
 				<a href="/faculty" class="desktop-item" on:click={closeMenus}>Faculty</a>
 				<a href="/faculty" class="mobile-item" on:click={closeMenus}>Faculty</a>
 			</li>
@@ -166,40 +163,15 @@
 
 							<!-- Items Grid -->
 							<div class="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
-								<MegaMenuItem
-									href="/examcell/BTECH"
-									label="B.Tech"
-									icon="fa-solid fa-user-graduate"
-									onClick={closeMenus}
-								/>
-								<MegaMenuItem
-									href="/examcell/MBA"
-									label="MBA"
-									icon="fa-solid fa-briefcase"
-									onClick={closeMenus}
-								/>
-								<MegaMenuItem
-									href="/examcell/MTECH"
-									label="M.Tech"
-									icon="fa-solid fa-laptop-code"
-									onClick={closeMenus}
-								/>
 								{#each documentLinks.examcell as link}
 									<MegaMenuItem
 										href={link.href}
 										label={link.label}
 										icon={link.icon}
-										external={true}
+										external={link.href.startsWith('/pdfs/')}
 										onClick={closeMenus}
 									/>
 								{/each}
-								<MegaMenuItem
-									href="/pdfs/timetables.pdf"
-									label="Time Tables"
-									icon="fa-solid fa-table-list"
-									external={true}
-									onClick={closeMenus}
-								/>
 							</div>
 						</div>
 					</div>
@@ -307,52 +279,72 @@
 				<!-- DESKTOP MEGA BOX -->
 				<div class="mega-box hidden xl:block">
 					<div
-						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl xl:max-w-3xl xl:mx-auto"
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl xl:max-w-4xl xl:mx-auto"
 					>
-						<div class="flex flex-col items-start w-full">
-							<!-- Header Section -->
-							<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
-								<div
-									class="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 border border-orange-100"
-								>
-									<i class="fa-solid fa-balance-scale text-xl text-orange-600" aria-hidden="true" />
+						<div class="flex flex-row items-start w-full gap-8">
+							<!-- Administration Section -->
+							<div class="flex flex-col w-1/2">
+								<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
+									<div
+										class="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 border border-orange-100"
+									>
+										<i
+											class="fa-solid fa-building-columns text-xl text-orange-600"
+											aria-hidden="true"
+										/>
+									</div>
+									<div class="flex flex-col text-left">
+										<header
+											class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight"
+										>
+											Administration
+										</header>
+									</div>
 								</div>
-								<div class="flex flex-col text-left">
-									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">
-										Administration
-									</header>
+								<div class="grid w-full grid-cols-1 gap-2">
+									{#each documentLinks.governance as link}
+										<MegaMenuItem
+											href={link.href}
+											label={link.label}
+											icon={link.icon}
+											iconColorClass="text-orange-600"
+											iconBgClass="bg-orange-50"
+											external={link.href.endsWith('.pdf') || link.href.endsWith('.xlsx')}
+											onClick={closeMenus}
+										/>
+									{/each}
 								</div>
 							</div>
 
-							<!-- Items Grid -->
-							<div class="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
-								<MegaMenuItem
-									href="/governance/board-of-trustees"
-									label="Board of Trustees"
-									icon="fa-solid fa-users-rectangle"
-									iconColorClass="text-orange-600"
-									iconBgClass="bg-orange-50"
-									onClick={closeMenus}
-								/>
-								<MegaMenuItem
-									href="/governance/governing-body"
-									label="Governing Body"
-									icon="fa-solid fa-sitemap"
-									iconColorClass="text-orange-600"
-									iconBgClass="bg-orange-50"
-									onClick={closeMenus}
-								/>
-								{#each documentLinks.governance as link}
-									<MegaMenuItem
-										href={link.href}
-										label={link.label}
-										icon={link.icon}
-										iconColorClass="text-orange-600"
-										iconBgClass="bg-orange-50"
-										external={true}
-										onClick={closeMenus}
-									/>
-								{/each}
+							<!-- Strategic & Disclosure Section -->
+							<div class="flex flex-col w-1/2">
+								<div class="mb-5 flex w-full items-center gap-4 border-b border-orange-100 pb-4">
+									<div
+										class="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 border border-orange-100"
+									>
+										<i class="fa-solid fa-file-shield text-xl text-orange-600" aria-hidden="true" />
+									</div>
+									<div class="flex flex-col text-left">
+										<header
+											class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight"
+										>
+											Strategic & Disclosure
+										</header>
+									</div>
+								</div>
+								<div class="grid w-full grid-cols-1 gap-2">
+									{#each documentLinks.institutional as link}
+										<MegaMenuItem
+											href={link.href}
+											label={link.label}
+											icon={link.icon}
+											iconColorClass="text-orange-600"
+											iconBgClass="bg-orange-50"
+											external={true}
+											onClick={closeMenus}
+										/>
+									{/each}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -425,7 +417,7 @@
 			</li>
 
 			<!-- CDC (Career Development Cell) -->
-			<li class="mobile-priority-item">
+			<li class="hidden xl:flex sidebar-hidden">
 				<a href="/placements" class="desktop-item" on:click={closeMenus}>CDC</a>
 				<a href="/placements" class="mobile-item" on:click={closeMenus}>CDC</a>
 			</li>
@@ -438,40 +430,15 @@
 			onBack={handleMobileBack}
 			onClose={closeMenus}
 		>
-			<SubMenuItem
-				label="B.Tech"
-				href="/examcell/BTECH"
-				icon="fa-solid fa-user-graduate"
-				onClick={closeMenus}
-			/>
-			<SubMenuItem
-				label="MBA"
-				href="/examcell/MBA"
-				icon="fa-solid fa-briefcase"
-				onClick={closeMenus}
-			/>
-			<SubMenuItem
-				label="M.Tech"
-				href="/examcell/MTECH"
-				icon="fa-solid fa-laptop-code"
-				onClick={closeMenus}
-			/>
 			{#each documentLinks.examcell as link}
 				<SubMenuItem
 					label={link.label}
 					href={link.href}
 					icon={link.icon}
-					external={true}
+					external={link.href.startsWith('/pdfs/')}
 					onClick={closeMenus}
 				/>
 			{/each}
-			<SubMenuItem
-				label="Time Tables"
-				href="/pdfs/timetables.pdf"
-				icon="fa-solid fa-table-list"
-				external={true}
-				onClick={closeMenus}
-			/>
 		</SubMenuPanel>
 
 		<SubMenuPanel
@@ -524,19 +491,26 @@
 			onBack={handleMobileBack}
 			onClose={closeMenus}
 		>
-			<SubMenuItem
-				label="Board of Trustees"
-				href="/governance/board-of-trustees"
-				icon="fa-solid fa-users-rectangle"
-				onClick={closeMenus}
-			/>
-			<SubMenuItem
-				label="Governing Body"
-				href="/governance/governing-body"
-				icon="fa-solid fa-sitemap"
-				onClick={closeMenus}
-			/>
+			<div class="px-6 py-3 border-b border-slate-100 bg-slate-50">
+				<span class="text-xs font-bold uppercase tracking-widest text-orange-600"
+					>Administration & Quality</span
+				>
+			</div>
 			{#each documentLinks.governance as link}
+				<SubMenuItem
+					label={link.label}
+					href={link.href}
+					icon={link.icon}
+					external={link.href.endsWith('.pdf') || link.href.endsWith('.xlsx')}
+					onClick={closeMenus}
+				/>
+			{/each}
+			<div class="px-6 py-3 border-b border-slate-100 bg-slate-50 mt-4">
+				<span class="text-xs font-bold uppercase tracking-widest text-orange-600"
+					>Strategic & Disclosure</span
+				>
+			</div>
+			{#each documentLinks.institutional as link}
 				<SubMenuItem
 					label={link.label}
 					href={link.href}
@@ -599,9 +573,10 @@
 
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-		<button type="button" class="btn menu-btn" on:click={toggleMobileMenu}
-			><i class="fas fa-bars text-slate-800" /></button
-		>
+		<!-- Mobile Menu Button (Hamburger) on the Right -->
+		<button type="button" class="btn menu-btn xl:hidden" on:click={toggleMobileMenu}>
+			<i class="fas fa-bars text-slate-800" />
+		</button>
 	</div>
 </nav>
 
@@ -620,10 +595,6 @@
 		z-index: 99999 !important;
 	}
 
-	nav.mobile-courses-open-state {
-		z-index: 1006;
-	}
-
 	nav {
 		position: sticky;
 		top: 0;
@@ -638,7 +609,7 @@
 		position: relative;
 		max-width: 1600px;
 		padding: 0 16px;
-		height: 56px;
+		height: 46px;
 		line-height: normal;
 		margin: auto;
 		display: flex;
@@ -648,11 +619,7 @@
 	}
 
 	.wrapper .logo img {
-		width: 100px;
-	}
-
-	.mobile-quick-nav {
-		display: none;
+		width: 82px;
 	}
 
 	.wrapper .nav-links {
@@ -683,8 +650,8 @@
 		justify-content: center;
 		color: #1e293b;
 		text-decoration: none;
-		font-size: clamp(14px, 0.72vw, 14px);
-		padding: 8px 6px;
+		font-size: clamp(14px, 0.65vw, 14.5px);
+		padding: 6px 4px;
 		border-radius: 6px;
 		transition:
 			color 0.2s ease,
@@ -696,7 +663,7 @@
 		line-height: normal;
 		text-transform: capitalize;
 		letter-spacing: 0.02em;
-		font-weight: 900;
+		font-weight: 800;
 		font-family: 'Roboto', 'Outfit', sans-serif;
 	}
 
@@ -718,37 +685,6 @@
 		font-weight: 700;
 	}
 
-	.desktop-courses-trigger {
-		border: none;
-		background: transparent;
-		cursor: pointer;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		color: #1e293b !important;
-		text-decoration: none;
-		font-size: clamp(14px, 0.72vw, 14px);
-		padding: 8px 6px;
-		border-radius: 6px;
-		transition:
-			color 0.2s ease,
-			background-color 0.2s ease,
-			box-shadow 0.2s ease;
-		white-space: nowrap;
-		width: 100%;
-		max-width: none;
-		line-height: normal;
-		text-transform: capitalize;
-		letter-spacing: 0.02em;
-		font-weight: 900;
-		font-family: 'Roboto', 'Outfit', sans-serif;
-	}
-
-	.desktop-courses-trigger:hover {
-		color: #2672d5;
-		background: rgba(38, 114, 213, 0.08);
-	}
-
 	.mega-box {
 		position: absolute;
 		left: 50%;
@@ -767,53 +703,6 @@
 		pointer-events: none;
 		background: transparent;
 		padding-top: 10px;
-	}
-
-	.courses-sidebar-overlay {
-		position: fixed;
-		inset: 56px 0 0 0;
-		background: rgba(15, 23, 42, 0.28);
-		border: none;
-		padding: 0;
-		margin: 0;
-		z-index: 999;
-	}
-
-	.mega-box.courses-mega {
-		position: fixed;
-		top: 56px;
-		right: 0;
-		left: auto;
-		width: min(430px, 92vw);
-		max-width: 430px;
-		height: calc(100vh - 56px);
-		transform: translateX(104%);
-		opacity: 1;
-		visibility: hidden;
-		pointer-events: none;
-		transition:
-			transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
-			visibility 0.28s ease;
-		z-index: 1000;
-		display: none;
-	}
-
-	.mega-box.courses-mega.mobile-show {
-		transform: translateX(0);
-		visibility: visible;
-		pointer-events: auto;
-	}
-
-	.courses-mega .content {
-		height: 100%;
-		min-height: 100%;
-		border-radius: 0;
-		border-left: 1px solid #e5e7eb;
-		border-top: none;
-		border-right: none;
-		border-bottom: none;
-		box-shadow: -8px 0 24px rgba(15, 23, 42, 0.08);
-		overflow-y: auto;
 	}
 
 	.mega-box::before {
@@ -910,115 +799,83 @@
 		}
 
 		nav .wrapper {
-			display: grid;
-			grid-template-columns: 56px minmax(0, 1fr) 56px;
+			display: flex;
 			align-items: center;
-			padding: 0 12px;
-			height: 56px;
-			column-gap: 8px;
+			justify-content: space-between;
+			padding: 0 16px;
+			height: 36px;
 		}
 
 		.logo {
-			grid-column: 1;
-			flex-shrink: 0;
+			flex: 0 0 auto;
 		}
 
 		.logo img {
 			display: block;
-			width: 50px;
+			width: 28px !important;
+			height: auto !important;
 		}
 
 		.mobile-quick-nav {
-			grid-column: 2;
 			display: block !important;
-			width: 100%;
-			min-width: 0;
-			position: relative;
-		}
-
-		.mobile-quick-links-track {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 7px;
 			overflow-x: auto;
-			overflow-y: hidden;
-			padding: 0 2px;
-			scroll-padding-inline: 6px;
-			scrollbar-width: none;
-			-ms-overflow-style: none;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
 		}
 
-		.mobile-quick-links-track::-webkit-scrollbar {
+		.no-scrollbar::-webkit-scrollbar {
 			display: none;
 		}
+		.no-scrollbar {
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+		}
 
-		.mobile-quick-link {
-			flex: 0 0 auto;
-			min-height: 30px;
-			padding: 5px 9px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 6px;
-			border-radius: 999px;
-			border: 1px solid #d9e3f1;
-			background: #f8fbff;
-			color: #1e293b;
-			font-size: 10.5px;
-			font-weight: 700;
-			letter-spacing: 0.01em;
-			text-decoration: none;
-			text-align: center;
-			line-height: 1;
-			white-space: nowrap;
+		.mini-link {
 			font-family: 'Roboto', sans-serif;
-			transition:
-				background 0.22s ease,
-				border-color 0.22s ease,
-				color 0.22s ease;
-		}
-
-		.mobile-quick-link:hover {
-			background: #eef5ff;
-			border-color: #bfd7f7;
-			color: #1d4ed8;
-		}
-
-		.mobile-courses-trigger {
+			font-size: 12px;
+			font-weight: 700;
+			color: #334155;
+			text-decoration: none;
+			padding: 0 4px;
+			white-space: nowrap;
+			transition: all 0.2s ease;
+			background: transparent;
+			border: none;
 			cursor: pointer;
-			width: auto;
+			letter-spacing: -0.012em;
 		}
 
-		.mobile-courses-trigger i {
-			font-size: 10px;
-			color: #64748b;
-			transition:
-				transform 0.25s ease,
-				color 0.2s ease;
-		}
-
-		.mobile-courses-trigger.open {
-			background: #eaf3ff;
-			border-color: #2672d5;
-			color: #1d4ed8;
-		}
-
-		.mobile-courses-trigger.open i {
-			transform: rotate(180deg);
-			color: #1d4ed8;
-		}
-
-		/* ── Show hamburger ── */
-		.wrapper .btn {
-			display: block;
+		.mini-link:hover,
+		.mini-link.active {
+			color: #2672d5;
+			transform: translateY(-1px);
 		}
 
 		.wrapper .btn.menu-btn {
-			grid-column: 3;
-			justify-self: end;
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			width: 32px;
+			height: 32px;
+			flex: 0 0 auto;
+			padding: 0;
+			margin-right: -4px;
 			margin-left: 0;
-			flex-shrink: 0;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+		}
+
+		.wrapper .btn.menu-btn i {
+			font-size: 20px;
+			color: #1e293b;
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+			margin-right: 4px;
 		}
 
 		/* ════════════════════════════════
@@ -1075,6 +932,10 @@
 			height: auto !important;
 			width: 100% !important;
 			margin: 0 !important;
+		}
+		
+		.nav-links li.sidebar-hidden {
+			display: none !important;
 		}
 
 		/* Direct links (e.g. Home) */
