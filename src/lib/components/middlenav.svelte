@@ -57,13 +57,13 @@
 <nav
 	class="{isMobileMenuOpen ? 'mobile-menu-active-state' : ''} {activeMobileDropdown
 		? 'mobile-menu-active-state'
-		: ''} h-[40px] xl:h-auto"
+		: ''} h-[40px] lg:h-auto"
 >
 	<div class="wrapper">
 		<div class="logo flex items-center">
 			<a href="/"
 				><img
-					class="w-[35px] md:w-[90px] xl:w-[110px] transition-all"
+					class="w-[35px] md:w-[90px] lg:w-[110px] transition-all"
 					src="/1.png"
 					alt="BITS Vizag Logo"
 				/></a
@@ -71,9 +71,10 @@
 		</div>
 
 		<!-- Perfected Mobile Quick Nav: Scrolling High-Value Links Strip -->
-		<div class="mobile-quick-nav xl:hidden flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar">
+		<div class="mobile-quick-nav lg:hidden flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar">
 			<div class="flex items-center gap-4 py-1">
 				<a href="/" class="mini-link" on:click={closeMenus}>Home</a>
+				<a href="/aboutus/About-BITS" class="mini-link" on:click={closeMenus}>About Us</a>
 				<button
 					type="button"
 					class="mini-link {activeMobileDropdown === 'courses' ? 'active' : ''}"
@@ -82,6 +83,34 @@
 					Courses
 				</button>
 				<a href="/faculty" class="mini-link" on:click={closeMenus}>Faculty</a>
+				<button
+					type="button"
+					class="mini-link {activeMobileDropdown === 'examcell' ? 'active' : ''}"
+					on:click={() => toggleMobileDropdown('examcell')}
+				>
+					Exam Cell
+				</button>
+				<button
+					type="button"
+					class="mini-link {activeMobileDropdown === 'facilities' ? 'active' : ''}"
+					on:click={() => toggleMobileDropdown('facilities')}
+				>
+					Facilities
+				</button>
+				<button
+					type="button"
+					class="mini-link {activeMobileDropdown === 'governance' ? 'active' : ''}"
+					on:click={() => toggleMobileDropdown('governance')}
+				>
+					Governance
+				</button>
+				<button
+					type="button"
+					class="mini-link {activeMobileDropdown === 'research' ? 'active' : ''}"
+					on:click={() => toggleMobileDropdown('research')}
+				>
+					Research
+				</button>
 				<a href="/placements" class="mini-link" on:click={closeMenus}>CDC</a>
 			</div>
 		</div>
@@ -91,7 +120,7 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
-				class="mobile-backdrop xl:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[998]"
+				class="mobile-backdrop lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[998]"
 				on:click={closeMenus}
 			></div>
 		{/if}
@@ -99,7 +128,7 @@
 		<ul class="nav-links h-full {isMobileMenuOpen ? 'mobile-open' : ''}">
 			<!-- Mobile Menu Header -->
 			<div
-				class="xl:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100/60 w-full pt-2"
+				class="lg:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100/60 w-full pt-2"
 			>
 				<img src="/1.png" alt="BITS Vizag Logo" class="h-8 w-auto object-contain" />
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -109,7 +138,10 @@
 				</button>
 			</div>
 
-			<li class="hidden xl:flex sidebar-hidden"><a href="/" on:click={closeMenus}>Home</a></li>
+			<li>
+				<a href="/" class="desktop-item" on:click={closeMenus}>Home</a>
+				<a href="/" class="mobile-item" on:click={closeMenus}>Home</a>
+			</li>
 
 			<!-- About Us -->
 			<li class="mobile-priority-item">
@@ -118,12 +150,17 @@
 			</li>
 
 			<!-- Courses -->
-			<li class="hidden xl:flex sidebar-hidden">
+			<li>
 				<a href="/courses/Under-Graduation" class="desktop-item"> Courses </a>
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'courses' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('courses')}>Courses</button
+				>
 			</li>
 
 			<!-- Faculty -->
-			<li class="hidden xl:flex sidebar-hidden">
+			<li>
 				<a href="/faculty" class="desktop-item" on:click={closeMenus}>Faculty</a>
 				<a href="/faculty" class="mobile-item" on:click={closeMenus}>Faculty</a>
 			</li>
@@ -139,9 +176,9 @@
 					on:click={() => toggleMobileDropdown('examcell')}>Exam Cell</button
 				>
 				<!-- DESKTOP MEGA BOX -->
-				<div class="mega-box hidden xl:block">
+				<div class="mega-box hidden lg:block">
 					<div
-						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl xl:max-w-3xl xl:mx-auto"
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
 					>
 						<div class="flex flex-col items-start w-full">
 							<!-- Header Section -->
@@ -189,9 +226,9 @@
 					on:click={() => toggleMobileDropdown('facilities')}>Facilities</button
 				>
 				<!-- DESKTOP MEGA BOX -->
-				<div class="mega-box hidden xl:block">
+				<div class="mega-box hidden lg:block">
 					<div
-						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl xl:max-w-3xl xl:mx-auto"
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
 					>
 						<div class="flex flex-col items-start w-full">
 							<!-- Header Section -->
@@ -277,9 +314,9 @@
 					on:click={() => toggleMobileDropdown('governance')}>Governance</button
 				>
 				<!-- DESKTOP MEGA BOX -->
-				<div class="mega-box hidden xl:block">
+				<div class="mega-box hidden lg:block">
 					<div
-						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl xl:max-w-4xl xl:mx-auto"
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-4xl lg:mx-auto"
 					>
 						<div class="flex flex-row items-start w-full gap-8">
 							<!-- Administration Section -->
@@ -362,9 +399,9 @@
 					on:click={() => toggleMobileDropdown('research')}>Research</button
 				>
 				<!-- DESKTOP MEGA BOX -->
-				<div class="mega-box hidden xl:block">
+				<div class="mega-box hidden lg:block">
 					<div
-						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl xl:max-w-3xl xl:mx-auto"
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
 					>
 						<div class="flex flex-col items-start w-full">
 							<!-- Header Section -->
@@ -417,7 +454,7 @@
 			</li>
 
 			<!-- CDC (Career Development Cell) -->
-			<li class="hidden xl:flex sidebar-hidden">
+			<li>
 				<a href="/placements" class="desktop-item" on:click={closeMenus}>CDC</a>
 				<a href="/placements" class="mobile-item" on:click={closeMenus}>CDC</a>
 			</li>
@@ -574,7 +611,7 @@
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<!-- Mobile Menu Button (Hamburger) on the Right -->
-		<button type="button" class="btn menu-btn xl:hidden" on:click={toggleMobileMenu}>
+		<button type="button" class="btn menu-btn lg:hidden" on:click={toggleMobileMenu}>
 			<i class="fas fa-bars text-slate-800" />
 		</button>
 	</div>
@@ -583,12 +620,12 @@
 <style>
 	/* ═══════════════════════════════════════════════════════════════
 	   MIDDLENAV — Navbar + Mobile Sidebar
-	   Desktop (>1280px): UNTOUCHED — only layout/font/spacing preserved
-	   Mobile  (≤1280px): Full rewrite — slide-in sidebar
+	   Desktop (>1024px): UNTOUCHED — only layout/font/spacing preserved
+	   Mobile  (≤1024px): Full rewrite — slide-in sidebar
 	═══════════════════════════════════════════════════════════════ */
 
 	/* ─────────────────────────────────────────────────────────────
-	   DESKTOP BASE STYLES  (above 1280px — do not change)
+	   DESKTOP BASE STYLES  (above 1024px — do not change)
 	───────────────────────────────────────────────────────────── */
 
 	nav.mobile-menu-active-state {
@@ -773,16 +810,12 @@
 	}
 
 	/* ─────────────────────────────────────────────────────────────
-	   MOBILE SIDEBAR  (≤1280px)
+	   MOBILE SIDEBAR  (≤1024px)
 	   NOTE: We use !important where Tailwind utility classes on the
 	   HTML would otherwise win (py-10, px-10, flex, md:flex-row …)
 	───────────────────────────────────────────────────────────── */
 
-	@media screen and (max-width: 1280px) {
-		.courses-sidebar-overlay {
-			display: none !important;
-		}
-
+	@media screen and (max-width: 1023px) {
 		* {
 			box-sizing: border-box;
 		}
@@ -932,10 +965,6 @@
 			height: auto !important;
 			width: 100% !important;
 			margin: 0 !important;
-		}
-		
-		.nav-links li.sidebar-hidden {
-			display: none !important;
 		}
 
 		/* Direct links (e.g. Home) */
