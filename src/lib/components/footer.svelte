@@ -394,7 +394,6 @@
 				<span
 					class="konkorde-gradient font-black tracking-widest transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]"
 					>BITS STUDENTS</span
-				
 				>
 			</a>
 		</p>
