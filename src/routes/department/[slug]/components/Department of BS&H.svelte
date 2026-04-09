@@ -221,7 +221,7 @@
 			</div>
 			<div use:reveal={80}>
 				<HodMessage
-					hodName="Dr. Jaya Ranga Rao"
+					hodName="Dr.P Jaya Ranga Rao"
 					designation="Head of Department"
 					department="Basic Sciences & Humanities"
 					hodMessage="Welcome to the Department of Basic Sciences and Humanities at BITS Vizag. As the cornerstone of your engineering journey, our department is dedicated to building a robust foundation in essential subjects. By integrating theoretical concepts with analytical thinking, we ensure students grasp the fundamental principles of mathematics, physics, chemistry, and communication — empowering them to excel in their chosen engineering discipline and adapt to future innovations."
