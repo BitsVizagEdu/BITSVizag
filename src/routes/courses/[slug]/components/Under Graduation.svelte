@@ -29,8 +29,7 @@
 			name: 'Mechanical Engineering',
 			intake: 60,
 			href: '/department/Department%20of%20MECH'
-		},
-		
+		}
 	];
 </script>
 
@@ -208,11 +207,13 @@
 		padding: 1.05rem;
 		border-radius: 1rem;
 		text-decoration: none;
-		background:
-			linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.95));
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.95));
 		border: 1px solid rgba(24, 66, 136, 0.14);
 		box-shadow: 0 12px 26px -18px rgba(25, 68, 140, 0.55);
-		transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+		transition:
+			transform 280ms ease,
+			box-shadow 280ms ease,
+			border-color 280ms ease;
 		animation: card-in 620ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 		animation-delay: var(--delay);
 	}
