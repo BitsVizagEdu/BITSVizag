@@ -1,85 +1,45 @@
+
 <div class="marquee">
 	<h3>
 		<div class="marquee-wrapper">
 			<div class="marquee-title">
-				<span class="text-red-700">BITS VIZAG -</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B]"
-					>"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-[#FEC629]"
-					>"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-
-				<span class="text-[#1BA7E5]"
-					>"BITS VIZAG's Cricket Team flagged off for T10 National Championship"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B]">
-					"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-green-600">
-					"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-blue-600">
-					"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>
+				<span class="text-red-700 brand-pop">BITS VIZAG -</span>
+				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#FEC629] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#1BA7E5] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-green-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-blue-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-blue-700">|</span>
 			</div>
 			<div class="marquee-title">
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-pink-700"> BITS VIZAG -</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B]"
-					>"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-[#FEC629]"
-					>"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-
-				<span class="text-[#1BA7E5]"
-					>"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B]"
-					>"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-green-600">
-					"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>
-				&nbsp;&nbsp;&nbsp;
-				<span class="text-blue-600">
-					"ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE |"</span
-				>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700 brand-pop">BITS VIZAG -</span>
+				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#FEC629] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#1BA7E5] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-green-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-blue-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
+				<span class="text-blue-700">|</span>
 			</div>
 		</div>
 	</h3>
 </div>
 
 <style>
-	/* Marquee Css */
-
-	.marquee {
-		width: 100%;
-		padding: 5px 0;
-		border-top: 1px solid #000000;
-		border-bottom: 1px solid #000000;
+		.marquee {
 		text-align: center;
+		background: #ffffff;
 		overflow: hidden;
 		background: #ffffff;
 	}
@@ -90,13 +50,13 @@
 		text-transform: uppercase;
 		margin: 0;
 		padding: 0;
-		line-height: 1.5;
+		line-height: 1.8;
 	}
 
 	.marquee .marquee-wrapper {
 		display: flex;
 		width: max-content;
-		animation: marqueeAnimation 35s linear infinite;
+		animation: marqueeAnimation 40s linear infinite;
 	}
 
 	.marquee h3 .marquee-title {
