@@ -11,6 +11,7 @@
 
 	import PostGraduation from './components/Post Graduation.svelte';
 	import UnderGraduation from './components/Under Graduation.svelte';
+	import PremiumSideNav from '$lib/components/PremiumSideNav.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -73,38 +74,17 @@
 
 {#if !$showNavBar}
 	<div class="min-h-screen bg-slate-50/30">
-		<!-- Course Navigation Tabs -->
-		<div class="w-full bg-white border-b border-slate-200">
-			<div class="max-w-6xl mx-auto px-4 lg:px-6 py-6">
-				<h1 class="text-3xl font-bold text-slate-900 mb-6">Engineering Courses</h1>
-				<div class="flex gap-3 flex-wrap">
-					<a
-						href="/courses/Under-Graduation"
-						class="px-6 py-3 rounded-lg font-bold transition-all duration-200
-						{currentSlug === 'Under-Graduation'
-							? 'bg-[#2672d5] text-white shadow-lg'
-							: 'bg-slate-100 text-slate-700 hover:bg-slate-200'}"
-					>
-						<i class="fa-solid fa-scroll mr-2"></i>
-						Under Graduation
-					</a>
-					<a
-						href="/courses/Post-Graduation"
-						class="px-6 py-3 rounded-lg font-bold transition-all duration-200
-						{currentSlug === 'Post-Graduation'
-							? 'bg-[#2672d5] text-white shadow-lg'
-							: 'bg-slate-100 text-slate-700 hover:bg-slate-200'}"
-					>
-						<i class="fa-solid fa-award mr-2"></i>
-						Post Graduation
-					</a>
-				</div>
-			</div>
-		</div>
+		<!-- Premium Navigation -->
+		<PremiumSideNav
+			items={['Under-Graduation', 'Post-Graduation']}
+			activeTab={currentSlug}
+			title="Engineering Courses"
+			basePath="/courses"
+		/>
 
 		<!-- Main Content Area - Full Width Centered -->
 		<main class="w-full max-w-6xl mx-auto p-4 lg:p-6">
-			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
+			<div class="content-container">
 				{#if currentSlug === 'Under-Graduation'}
 					<UnderGraduation />
 				{/if}
@@ -118,4 +98,19 @@
 {/if}
 
 <style>
+	.content-container {
+		background: #ffffff;
+		border-radius: 2.5rem;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+		border: 1px solid #f1f5f9;
+		padding: 1.5rem;
+		min-height: 600px;
+	}
+
+	@media (min-width: 1024px) {
+		.content-container {
+			padding: 2.5rem;
+		}
+	}
 </style>
+
