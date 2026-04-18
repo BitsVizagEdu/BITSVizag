@@ -1,4 +1,6 @@
 <script>
+	import AllInOneAssistance from '$lib/components/allinoneassistance.svelte';
+
 	const recruiterLogos = [
 		...Array.from({ length: 40 }, (_, i) => `/company/image (${i + 1}).png`),
 		'/company/image(41).jpg',
@@ -59,6 +61,8 @@
 		</div>
 	</div>
 </section>
+
+<AllInOneAssistance />
 
 <style>
 	.recruiters-premium {
