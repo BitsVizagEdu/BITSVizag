@@ -1,1 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000"><defs><style>.cls-1{fill:none;}.cls-2{fill:#262222;}</style></defs><g id="Layer_1" data-name="Layer 1"><rect class="cls-1" width="3000" height="3000"/></g><g id="Layer_2" data-name="Layer 2"><path class="cls-2" d="M1162.61,1590.61c-25.79,6-51.89,12.58-77.67,19.5a1617.94,1617.94,0,0,0-490.53,239.11,262.78,262.78,0,0,0-100.62,201.36V2554h778.87l-110.05-963.35Z"/><path class="cls-2" d="M2003.1,949.42c0,278-225.24,503.39-503.1,503.39S996.9,1227.43,996.9,949.42,1222.14,446,1500,446s503.1,225.37,503.1,503.38Z"/><path class="cls-2" d="M2405.59,1849.22c-138.36-113.26-314.44-188.77-490.53-239.11-25.15-7.54-51.25-14.47-77.67-21.08L1727.34,2554h778.87V2050.58a262.78,262.78,0,0,0-100.62-201.36ZM2286.1,2207.88H1971.66V2145H2286.1v62.92Z"/><polygon class="cls-2" points="1596.22 1735.96 1657.22 1547.19 1342.78 1547.19 1403.78 1735.96 1596.22 1735.96 1596.22 1735.96 1596.22 1735.96"/><polygon class="cls-2" points="1408.5 1798.88 1365.73 2419.62 1500 2553.96 1634.27 2419.62 1591.5 1798.88 1408.5 1798.88 1408.5 1798.88 1408.5 1798.88"/></g></svg>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Male business profile">
+  <!-- Outer circle border -->
+  <circle cx="128" cy="128" r="122" fill="#ffffff" stroke="#1a1a1a" stroke-width="6"/>
+  
+  <!-- Head - black silhouette -->
+  <ellipse cx="128" cy="70" rx="48" ry="55" fill="#000000"/>
+  
+  <!-- Hair spikes/texture top -->
+  <path d="M 90 35 L 95 20 L 100 30 L 105 15 L 110 28 L 115 18 L 120 32 L 125 22 L 128 15 L 131 22 L 136 32 L 141 18 L 146 28 L 151 15 L 156 30 L 161 20 L 166 35" fill="#000000"/>
+  
+  <!-- Ears -->
+  <ellipse cx="82" cy="70" rx="8" ry="20" fill="#000000"/>
+  <ellipse cx="174" cy="70" rx="8" ry="20" fill="#000000"/>
+  
+  <!-- Neck -->
+  <rect x="118" y="118" width="20" height="16" fill="#000000"/>
+  
+  <!-- Suit Jacket Shoulders - broad -->
+  <path d="M 55 140 L 85 132 L 128 128 L 171 132 L 201 140 L 205 250 L 51 250 Z" fill="#000000"/>
+  
+  <!-- White Shirt/Collar -->
+  <path d="M 105 140 L 105 180 L 128 195 L 151 180 L 151 140 Z" fill="#ffffff"/>
+  
+  <!-- Left Lapel -->
+  <polygon points="85,140 105,140 95,195" fill="#000000"/>
+  
+  <!-- Right Lapel -->
+  <polygon points="171,140 151,140 161,195" fill="#000000"/>
+  
+  <!-- Tie -->
+  <polygon points="120,150 128,160 136,150 136,190 128,205 120,190" fill="#000000"/>
+</svg>

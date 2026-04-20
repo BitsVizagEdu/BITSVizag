@@ -3,11 +3,16 @@
 	import gsap from 'gsap/dist/gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	/** @type {HTMLElement} */
 	let joinSection;
 	/** @type {HTMLElement[]} */
 	let bgElements = [];
+	let isDockedAtCta = false;
+	$: isHomePage = $page.url.pathname === '/';
+	$: isPlacementPage = $page.url.pathname.includes('/placements');
+	$: shouldShowCta = isHomePage || isPlacementPage;
 
 	onMount(() => {
 		/** @type {any} */
@@ -20,6 +25,7 @@
 		let mouseX = 0;
 		let mouseY = 0;
 		let isMoving = false;
+		/** @type {number | null} */
 		let animationId = null;
 
 		/** @param {MouseEvent} e */
@@ -77,6 +83,22 @@
 				start: 'top 80%'
 			}
 		});
+
+		/** @type {IntersectionObserver | null} */
+		let ctaObserver = null;
+		if (joinSection && shouldShowCta) {
+			ctaObserver = new IntersectionObserver(
+				(entries) => {
+					const [entry] = entries;
+					isDockedAtCta = entry.isIntersecting;
+				},
+				{
+					threshold: 0.28,
+					rootMargin: '0px 0px -16% 0px'
+				}
+			);
+			ctaObserver.observe(joinSection);
+		}
 
 		// Split text animation for JOIN NOW!
 		const joinText = document.querySelector('#joinnow-text');
@@ -137,6 +159,9 @@
 			window.removeEventListener('mousemove', handleMouseMove);
 			if (animationId) {
 				cancelAnimationFrame(animationId);
+			}
+			if (ctaObserver) {
+				ctaObserver.disconnect();
 			}
 		};
 	});
@@ -215,21 +240,26 @@
 						</p>
 					</div>
 
-					<div id="joinnowbtn">
-						<a href="/contactus" class="inline-block group relative">
+					<div id="joinnowbtn" class="enquiry-sticky-wrap" class:is-docked-home={shouldShowCta && isDockedAtCta}>
+						<a href="/contactus" class="enquiry-sticky-cta inline-block group relative">
 							<!-- Glow Effect behind button -->
 							<div
-								class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+								class="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur opacity-20 group-hover:opacity-55 transition duration-700"
 							></div>
 
 							<button
-								class="relative flex items-center gap-3 bg-white text-[#0c1637] px-6 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg font-bold shadow-[0_15px_40px_rgba(0,0,0,0.2)] transition-all duration-500 group-hover:-translate-y-1 group-active:translate-y-0"
+								class="enquiry-sticky-btn relative flex items-center gap-2 bg-white text-[#0c1637] px-4 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold shadow-[0_10px_24px_rgba(0,0,0,0.2)] transition-all duration-300 group-hover:-translate-y-0.5 group-active:translate-y-0"
 							>
-								Admissions Enquiry
+								<span class="inline-flex items-center gap-1.5">
+									<span class="join-pulse"></span>
+									Admissions Open 2026
+								</span>
+								<span class="enquiry-divider">|</span>
+								<span class="whitespace-nowrap">Join Now</span>
 								<div
-									class="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-[#0c1637] rounded-full transition-all duration-500 group-hover:rotate-45"
+									class="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 bg-[#0c1637] rounded-full transition-all duration-300 group-hover:translate-x-0.5"
 								>
-									<svg class="fill-white w-3 h-3 sm:w-4 sm:h-4" viewBox="0 0 24 25">
+									<svg class="fill-white w-2.5 h-2.5 sm:w-3 sm:h-3" viewBox="0 0 24 25">
 										<path
 											d="M16.961 18.085a.459.459 0 0 0 .023.68.545.545 0 0 0 .732-.02l5.648-5.592.333-.33-.333-.33-5.572-5.516a.545.545 0 0 0-.732-.02.459.459 0 0 0-.023.68l4.76 4.712H.713c-.276 0-.5.224-.498.5 0 .276.226.5.502.5h21.028l-4.784 4.736Z"
 										></path>
@@ -441,12 +471,6 @@
 		will-change: transform;
 	}
 
-	#joinnow-text span {
-		display: inline-block;
-		transform-origin: bottom;
-		will-change: transform, opacity;
-	}
-
 	@media (max-width: 640px) {
 		h2 {
 			font-size: 15vw !important;
@@ -460,6 +484,86 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		animation: shine 3s linear infinite;
+	}
+
+	.enquiry-sticky-wrap {
+		position: fixed;
+		left: 50%;
+		bottom: max(8px, env(safe-area-inset-bottom));
+		transform: translateX(-50%);
+		z-index: 1200;
+		width: calc(100% - 0.8rem);
+		display: flex;
+		justify-content: center;
+		pointer-events: none;
+	}
+
+	.enquiry-sticky-wrap.is-docked-home {
+		position: relative;
+		left: auto;
+		bottom: auto;
+		transform: none;
+		width: 100%;
+		margin-top: 0.8rem;
+		display: grid;
+		place-items: center;
+		z-index: 20;
+	}
+
+	.enquiry-sticky-wrap.is-docked-home .enquiry-sticky-cta,
+	.enquiry-sticky-wrap.is-docked-home .enquiry-sticky-btn {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.enquiry-sticky-cta {
+		width: 100%;
+		max-width: 390px;
+		pointer-events: auto;
+	}
+
+	.enquiry-sticky-btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	@media (min-width: 640px) {
+		.enquiry-sticky-wrap {
+			bottom: 12px;
+			width: auto;
+		}
+
+		.enquiry-sticky-cta,
+		.enquiry-sticky-btn {
+			width: auto;
+		}
+	}
+
+	.join-pulse {
+		width: 0.42rem;
+		height: 0.42rem;
+		border-radius: 999px;
+		background: #22c55e;
+		box-shadow: 0 0 0 rgba(34, 197, 94, 0.55);
+		animation: pulse-dot 1.6s infinite;
+	}
+
+	.enquiry-divider {
+		opacity: 0.45;
+		font-weight: 600;
+	}
+
+	@keyframes pulse-dot {
+		0% {
+			box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55);
+		}
+		70% {
+			box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+		}
 	}
 
 	@keyframes shine {

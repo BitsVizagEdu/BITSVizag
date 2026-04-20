@@ -1472,7 +1472,7 @@
 	<div class="inner">
 		<SectionTitle
 			title="Meet Our Faculty"
-			subtitle="Explore our experienced faculty members across departments."
+			subtitle="Experienced mentors shaping academic excellence across every department."
 		/>
 
 		<DepartmentFilter
@@ -1539,7 +1539,7 @@
 
 	.faculty-section {
 		position: relative;
-		padding: clamp(3rem, 6vw, 5.5rem) 0;
+		padding: clamp(2.6rem, 5vw, 4.4rem) 0;
 		overflow: hidden;
 		background:
 			radial-gradient(circle at 8% 10%, rgba(255, 255, 255, 0.7), transparent 30%),
@@ -1583,7 +1583,7 @@
 
 	.results-wrap {
 		display: grid;
-		gap: 1.45rem;
+		gap: 1.3rem;
 		margin-top: 1rem;
 	}
 
@@ -1602,33 +1602,34 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 0.75rem;
-		padding: 0.5rem 0.2rem 0.15rem;
+		padding: 0.35rem 0.1rem 0.1rem;
 		border-bottom: 1px solid rgba(15, 23, 42, 0.1);
 	}
 
 	.department-header h3 {
 		margin: 0;
-		font-size: clamp(1rem, 1.5vw, 1.2rem);
-		font-weight: 800;
-		letter-spacing: 0.03em;
+		font-size: clamp(0.98rem, 1.3vw, 1.13rem);
+		font-weight: 700;
+		letter-spacing: 0.01em;
 		color: #0f172a;
 	}
 
 	.department-header p {
 		margin: 0;
-		font-size: 0.85rem;
-		font-weight: 700;
-		color: #334155;
-		background: rgba(226, 232, 240, 0.8);
-		padding: 0.22rem 0.6rem;
+		font-size: 0.76rem;
+		font-weight: 600;
+		color: #475569;
+		background: rgba(226, 232, 240, 0.55);
+		padding: 0.2rem 0.52rem;
 		border-radius: 999px;
 	}
 
 	.faculty-grid {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 20px;
+		gap: 2rem;
 		justify-items: stretch;
+		align-items: stretch;
 	}
 
 	.empty-state {
@@ -1687,8 +1688,8 @@
 		}
 
 		.faculty-grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 12px;
+			grid-template-columns: 1fr;
+			gap: 1rem;
 		}
 	}
 </style>

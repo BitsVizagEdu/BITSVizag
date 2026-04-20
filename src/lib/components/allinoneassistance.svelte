@@ -3,6 +3,10 @@
 
 	/** @type {HTMLElement | null} */
 	let sectionEl = null;
+	let animatedStudentCount = 0;
+	let countStarted = false;
+	/** @type {number | null} */
+	let countAnimationFrame = null;
 
 	const highlights = [
 		{
@@ -33,8 +37,38 @@
 		}
 
 		const target = sectionEl;
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 		let ticking = false;
+
+		const animateCount = () => {
+			const duration = prefersReducedMotion ? 0 : 1400;
+			const startValue = 0;
+			const endValue = 150;
+
+			if (duration === 0) {
+				animatedStudentCount = endValue;
+				return;
+			}
+
+			const startTime = performance.now();
+
+			/** @param {number} now */
+			const tick = (now) => {
+				const progress = Math.min(1, (now - startTime) / duration);
+				const eased = 1 - Math.pow(1 - progress, 3);
+				animatedStudentCount = Math.round(startValue + (endValue - startValue) * eased);
+
+				if (progress < 1) {
+					countAnimationFrame = requestAnimationFrame(tick);
+				} else {
+					animatedStudentCount = endValue;
+					countAnimationFrame = null;
+				}
+			};
+
+			countAnimationFrame = requestAnimationFrame(tick);
+		};
 
 		const updateImageMotion = () => {
 			const rect = target.getBoundingClientRect();
@@ -43,6 +77,11 @@
 
 			const translateY = (progress - 0.5) * 26;
 			const scale = 1.03 + progress * 0.035;
+
+			if (!countStarted && progress > 0.23) {
+				countStarted = true;
+				animateCount();
+			}
 
 			target.style.setProperty('--bits-assist-scroll-y', `${translateY.toFixed(2)}px`);
 			target.style.setProperty('--bits-assist-scroll-scale', scale.toFixed(3));
@@ -63,6 +102,9 @@
 		return () => {
 			window.removeEventListener('scroll', onScroll);
 			window.removeEventListener('resize', onScroll);
+			if (countAnimationFrame) {
+				cancelAnimationFrame(countAnimationFrame);
+			}
 		};
 	});
 </script>
@@ -96,7 +138,7 @@
 			<div class="bits-assist__image-wrap">
 				<img src="/maingall/e1.jpg" alt="BITS Vizag students in an interactive excellence session" loading="lazy" />
 				<div class="bits-assist__badge">
-					<strong>150+</strong>
+					<strong>{animatedStudentCount}+</strong>
 					<span>Students trained every year for competitions and innovation programs</span>
 				</div>
 			</div>

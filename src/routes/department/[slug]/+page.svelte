@@ -12,7 +12,6 @@
 	import DepartmentofCseCyber from './components/Department of CSE (Cyber Security).svelte';
 	import DepartmentofEce from './components/Department of ECE.svelte';
 	import DepartmentofEee from './components/Department of EEE.svelte';
-	import DepartmentofCivil from './components/Department of CIVIL.svelte';
 	import DepartmentofMech from './components/Department of MECH.svelte';
 	// import DepartmentofMba from './components/Department of MBA.svelte';
 
@@ -28,7 +27,7 @@
 	const getDepartmentMetadata = (slug) => {
 		const defaultTitle = 'Engineering Departments | BITS Vizag';
 		const defaultDescription =
-			'Explore engineering and management departments at BITS Vizag including CSE, ECE, EEE, Civil, Mechanical, MBA and specialized programs in AI & ML and Cyber Security.';
+			'Explore engineering and management departments at BITS Vizag including CSE, ECE, EEE, Mechanical, MBA and specialized programs in AI & ML and Cyber Security.';
 		let title = defaultTitle;
 		let description = defaultDescription;
 
@@ -57,11 +56,6 @@
 				title = 'EEE Department | Electrical & Electronics Engineering at BITS Vizag';
 				description =
 					'Electrical & Electronics Engineering department with programs in power systems, electrical machines, and modern power generation technologies.';
-				break;
-			case 'Department of CIVIL':
-				title = 'Civil Engineering Department | Infrastructure at BITS Vizag';
-				description =
-					'Civil Engineering department focusing on construction, structural design, environmental engineering, and sustainable infrastructure development.';
 				break;
 			case 'Department of MECH':
 				title = 'Mechanical Engineering Department | BITS Vizag';
