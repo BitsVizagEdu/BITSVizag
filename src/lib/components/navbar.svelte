@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import {
 		setActiveTabValue,
 		showNavBar,
@@ -44,25 +45,136 @@
 		toggleIsActiveTab(true);
 		setActiveTabValue(item);
 	}
+
+	$: isHomePage = $page.url.pathname === '/';
 </script>
+
+<!-- Production-Level Top Header Bar - BITS Vizag -->
+
+{#if isHomePage}
+	<div class="welcome-bottom-bar fixed left-0 right-0 bottom-0 z-[1200] w-full backdrop-blur-sm border-t border-yellow-300/20 overflow-hidden">
+	<div class="px-3 md:px-8 lg:px-12 py-1 h-9 md:h-10">
+		<div class="flex items-center justify-between h-full gap-2 md:gap-6">
+			<!-- Left: Welcome Message -->
+			<div class="flex items-center h-full shrink-0">
+				<span class="welcome-copy text-white text-[12px] md:text-[13px] font-inter tracking-[-0.2px] whitespace-nowrap">
+					<span>Welcome to</span>
+					<span class="bits-pill-row" aria-label="BITS">
+						<span class="bits-pill bits-b">B</span>
+						<span class="bits-pill bits-i">I</span>
+						<span class="bits-pill bits-t">T</span>
+						<span class="bits-pill bits-s">S</span>
+					</span>
+					<span class="text-slate-300 font-semibold tracking-[0.06em]">VIZAG</span>
+				</span>
+			</div>
+
+			<!-- Right: Contact Items with Proper Spacing -->
+			<div class="flex items-center justify-end h-full gap-2 md:gap-4 flex-nowrap shrink-0">
+				<!-- Email -->
+				<a
+					href="mailto:principal@bitsvizag.com"
+					class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group min-w-fit"
+				>
+					<!-- Email Icon -->
+					<svg
+						class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#facc15] transition-colors flex-shrink-0"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<rect x="2" y="4" width="20" height="16" rx="2"></rect>
+						<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+					</svg>
+					<!-- Hidden on mobile, visible on md+ -->
+					<span class="hidden md:inline text-gray-300 text-xs font-inter tracking-[-0.2px]">Email :</span>
+					<span class="hidden md:inline text-white text-xs font-inter tracking-[-0.2px]">principal@bitsvizag.com</span>
+					<!-- Show only icon on mobile -->
+					<span class="md:hidden text-gray-300 text-xs font-inter">Email</span>
+				</a>
+
+				<!-- Phone -->
+				<a
+					href="tel:+919121214313"
+					class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group min-w-fit"
+				>
+					<!-- Phone Icon -->
+					<svg
+						class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#facc15] transition-colors flex-shrink-0"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+					</svg>
+					<!-- Hidden on mobile, visible on md+ -->
+					<span class="hidden md:inline text-gray-300 text-xs font-inter tracking-[-0.2px]">Call :</span>
+					<span class="hidden md:inline text-white text-xs font-inter tracking-[-0.2px]">+91 9121214313</span>
+					<!-- Show only icon on mobile -->
+					<span class="md:hidden text-gray-300 text-xs font-inter">Call</span>
+				</a>
+
+				<!-- Global Alumni Network with Dropdown -->
+				<a
+					href="/alumni-data"
+					class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group min-w-fit"
+				>
+					<!-- Globe Icon -->
+					<svg
+						class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#facc15] transition-colors flex-shrink-0"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<circle cx="12" cy="12" r="10"></circle>
+						<path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+					</svg>
+					<!-- Hidden on mobile, visible on md+ -->
+					<span class="hidden md:inline text-gray-300 text-xs font-inter tracking-[-0.2px]">Global Alumni Network</span>
+					<!-- Show only icon on mobile -->
+					<span class="md:hidden text-gray-300 text-xs font-inter">Alumni</span>
+					<!-- Dropdown Arrow -->
+					<svg
+						class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#facc15] transition-all group-hover:translate-y-0.5 flex-shrink-0 hidden md:block"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+					>
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+	</div>
+{/if}
 
 <!-- Top Bar: Quick Links & Socials -->
 
 <div
 	id="header"
-	class="bg-slate-900 border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl overflow-hidden"
+	class="border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl overflow-hidden"
 >
-	<div class="2xl:mx-auto py-2 xs:py-3 md:py-3.5 lg:px-12 w-full">
+	<div class="2xl:mx-auto py-1.5 xs:py-2 md:py-2.5 lg:px-12 w-full">
 		<div class="flex flex-row justify-between items-center w-full px-1 xs:px-2.5 sm:px-4">
-			<!-- Left Logo: NAAC -->
+			<!-- Left Logo: BITS Wordmark -->
 			<div class="flex flex-col justify-center items-start shrink-0">
 				<div
-					class="flex items-center justify-center h-[36px] w-[36px] 3xs:h-[40px] 3xs:w-[40px] 2xs:h-[48px] 2xs:w-[48px] xs:h-[58px] xs:w-[58px] md:h-[100px] md:w-[100px] lg:h-[125px] lg:w-[125px] drop-shadow-2xl"
+					class="flex items-center justify-center h-[32px] w-[80px] 3xs:h-[38px] 3xs:w-[92px] 2xs:h-[44px] 2xs:w-[108px] xs:h-[56px] xs:w-[132px] md:h-[80px] md:w-[180px] lg:h-[98px] lg:w-[224px] drop-shadow-2xl"
 				>
 					<img
-						class="bg-transparent p-0.5 h-full w-full object-contain filter"
-						src="/naac.png"
-						alt="NAAC Accredited"
+						class="h-full w-full object-contain bg-transparent"
+						src="/1.png"
+						alt="BITS Vizag"
+						style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
 					/>
 				</div>
 			</div>
@@ -77,7 +189,7 @@
 					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
 				</h1>
 
-				<div class="flex items-center gap-1 mt-0.5 md:mt-1">
+				<div class="flex items-center gap-1 mt-0 md:mt-0.5">
 					<div class="h-[1px] w-1 xs:w-3 md:w-12 bg-yellow-400/50"></div>
 					<h5
 						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[9.5px] xs:text-[10.5px] sm:text-lg md:text-[20px] font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter whitespace-nowrap"
@@ -87,7 +199,7 @@
 					<div class="h-[1px] w-1 xs:w-3 md:w-12 bg-yellow-400/50"></div>
 				</div>
 
-				<div class="mt-0.5 md:mt-1 text-slate-300">
+				<div class="mt-0 md:mt-0.5 text-slate-300">
 					<h6
 						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[9.5px] xs:text-[11.5px] md:text-[13.5px] lg:text-[15px] font-medium leading-relaxed opacity-95 max-w-[800px] mx-auto font-inter"
 					>
@@ -106,7 +218,7 @@
 							College Code :
 						</span>
 						<span
-							class="inline-block animate-gradient-x bg-gradient-to-r from-[#ed1b60] via-[#95c11f] via-[#fbb034] to-[#00aeef] bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-normal text-[9px] 2xs:text-[11px] xs:text-base md:text-lg leading-none font-satoshi"
+							class="inline-block animate-gradient-x college-code-gradient bg-clip-text text-transparent font-black tracking-normal text-[9px] 2xs:text-[11px] xs:text-base md:text-lg leading-none font-satoshi"
 						>
 							BABA
 						</span>
@@ -114,19 +226,29 @@
 				</div>
 			</div>
 
-			<!-- Right Logo: College Logo -->
-			<div class="flex flex-col justify-center items-end shrink-0">
+			<!-- Right Logos: BITS + NAAC -->
+			<div class="flex items-center justify-end gap-1.5 xs:gap-2.5 md:gap-3 shrink-0">
 				<div
 					id="bits"
-					class="flex items-center justify-center h-[28px] w-[28px] 3xs:h-[32px] 3xs:w-[32px] 2xs:h-[38px] 2xs:w-[38px] xs:h-[48px] xs:w-[48px] md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px] relative group"
+					class="flex items-center justify-center h-[20px] w-[20px] 3xs:h-[24px] 3xs:w-[28px] 2xs:h-[30px] 2xs:w-[30px] xs:h-[38px] xs:w-[38px] md:h-[64px] md:w-[64px] lg:h-[80px] lg:w-[80px] relative group rounded-full overflow-hidden"
 				>
 					<div
 						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"
 					></div>
 					<img
-						class="relative bg-white rounded-full p-0.5 xs:p-1 h-full w-full object-contain shadow-2xl border border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-500"
+						class="relative h-full w-full object-cover shadow-2xl transition-all duration-500 scale-[1.03]"
 						src="/bits.jpg"
 						alt="BITS Vizag Logo"
+					/>
+				</div>
+
+				<div
+					class="flex items-center justify-center h-[28px] w-[28px] 3xs:h-[32px] 3xs:w-[32px] 2xs:h-[38px] 2xs:w-[38px] xs:h-[50px] xs:w-[50px] md:h-[84px] md:w-[84px] lg:h-[102px] lg:w-[102px]"
+				>
+					<img
+						class="h-full w-full object-contain"
+						src="/naac.png"
+						alt="NAAC Accredited"
 					/>
 				</div>
 			</div>
@@ -149,9 +271,98 @@
 		will-change: background-position;
 		transform: translateZ(0);
 	}
+
+	.college-code-gradient {
+		background-image: linear-gradient(90deg, #22d3ee 0%, #38bdf8 26%, #34d399 52%, #facc15 76%, #f97316 100%);
+		background-size: 240% auto;
+		filter: drop-shadow(0 1px 6px rgba(34, 211, 238, 0.28));
+	}
+
+	#header {
+		background: linear-gradient(120deg, #0b1a2f, #071426);
+		box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4);
+	}
+
 	/* Optimize images for faster rendering */
 	img {
 		contain: layout style paint;
+	}
+
+	.welcome-bottom-bar {
+		background: linear-gradient(90deg, #071426, #0b1a2f);
+		box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.35), 0 -1px 0 rgba(250, 204, 21, 0.18);
+		padding-bottom: env(safe-area-inset-bottom);
+		will-change: transform;
+		transform: translateZ(0);
+	}
+
+	.welcome-copy {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.42rem;
+	}
+
+	.bits-pill-row {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.2rem;
+	}
+
+	.bits-pill {
+		width: 1.05rem;
+		height: 1.05rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.25rem;
+		color: #fff;
+		font-weight: 800;
+		font-size: 0.7rem;
+		line-height: 1;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.bits-b {
+		background: #ed1b60;
+	}
+
+	.bits-i {
+		background: #95c11f;
+	}
+
+	.bits-t {
+		background: #fbb034;
+	}
+
+	.bits-s {
+		background: #00aeef;
+	}
+
+	@media screen and (max-width: 1024px) {
+		.welcome-bottom-bar .h-9 {
+			height: auto;
+			min-height: 30px;
+		}
+
+		.welcome-bottom-bar .gap-2 {
+			gap: 0.5rem;
+		}
+
+		.welcome-bottom-bar .px-3 {
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
+		}
+
+		.welcome-bottom-bar .py-1 {
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+		}
+
+		.bits-pill {
+			width: 0.95rem;
+			height: 0.95rem;
+			font-size: 0.62rem;
+		}
 	}
 	@media screen and (max-width: 1080px) {
 		/* Removed display:none for #bits to ensure visibility on mobile */

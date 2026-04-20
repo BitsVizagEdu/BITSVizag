@@ -113,7 +113,7 @@
 	.undergrad-shell {
 		position: relative;
 		overflow: hidden;
-		font-family: 'Roboto', 'Segoe UI', sans-serif;
+		font-family: 'Manrope', sans-serif;
 		padding: 2rem;
 		border-radius: 2rem;
 		background: #ffffff;

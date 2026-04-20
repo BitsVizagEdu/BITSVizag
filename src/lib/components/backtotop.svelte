@@ -44,16 +44,16 @@
 			visibility 0.5s;
 		position: fixed;
 		z-index: 99;
-		right: 30px;
+		right: 22px;
 		user-select: none;
-		bottom: 20px;
+		bottom: 74px;
 		color: white;
-		background-color: #2a2a72;
-		background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+		background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
 		padding: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
 		border-radius: 20px;
+		box-shadow: 0 10px 24px rgba(2, 132, 199, 0.35);
 		cursor: pointer;
 	}
 	.back-to-top.hidden {
@@ -63,5 +63,14 @@
 	.back-to-top i {
 		justify-content: center;
 		padding-bottom: 5px;
+	}
+
+	@media (max-width: 640px) {
+		.back-to-top {
+			right: 12px;
+			bottom: 78px;
+			padding: 12px 16px;
+			border-radius: 16px;
+		}
 	}
 </style>

@@ -22,6 +22,11 @@
 		searchTerm = event.currentTarget.value;
 		dispatch('searchchange', searchTerm);
 	}
+
+	function clearSearch() {
+		searchTerm = '';
+		dispatch('searchchange', searchTerm);
+	}
 </script>
 
 <div class="toolbar-wrap">
@@ -39,6 +44,13 @@
 			on:input={handleSearch}
 			aria-label="Search faculty"
 		/>
+		{#if searchTerm.trim().length > 0}
+			<button type="button" class="clear-btn" on:click={clearSearch} aria-label="Clear search">
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+					<path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+		{/if}
 	</div>
 
 	<div class="dropdown" class:open={isOpen}>
@@ -77,28 +89,33 @@
 	.toolbar-wrap {
 		display: grid;
 		grid-template-columns: 1fr auto;
-		gap: 14px;
+		gap: 12px;
 		align-items: center;
-		margin: 2rem auto 1rem;
+		margin: 1.35rem auto 0.95rem;
 	}
 
 	.search-wrap {
 		position: relative;
-		border-radius: 14px;
-		background: rgba(255, 255, 255, 0.82);
-		border: 1px solid rgba(24, 24, 27, 0.12);
-		backdrop-filter: blur(8px);
-		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+		border-radius: 999px;
+		background: #ffffff;
+		border: 1px solid #dbe5ef;
+		box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+		transition: border-color 0.22s ease, box-shadow 0.22s ease;
+	}
+
+	.search-wrap:focus-within {
+		border-color: rgba(37, 99, 235, 0.55);
+		box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 	}
 
 	.search-icon {
 		position: absolute;
-		left: 14px;
+		left: 16px;
 		top: 50%;
 		transform: translateY(-50%);
-		color: #52525b;
-		width: 18px;
-		height: 18px;
+		color: #64748b;
+		width: 17px;
+		height: 17px;
 	}
 
 	.search-icon svg {
@@ -109,19 +126,48 @@
 
 	input {
 		width: 100%;
-		height: 48px;
+		height: 46px;
 		border: none;
 		outline: none;
-		padding: 0 16px 0 42px;
+		padding: 0 44px 0 44px;
 		font-family: 'Roboto', 'SF Pro Text', 'Segoe UI', sans-serif;
-		font-size: 0.98rem;
-		border-radius: 14px;
+		font-size: 0.92rem;
+		border-radius: 999px;
 		background: transparent;
 		color: #111827;
 	}
 
 	input::placeholder {
-		color: #71717a;
+		color: #8a94a3;
+	}
+
+	.clear-btn {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 26px;
+		height: 26px;
+		border: 1px solid #dbe5ef;
+		border-radius: 999px;
+		background: #ffffff;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #64748b;
+		cursor: pointer;
+		transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+	}
+
+	.clear-btn:hover {
+		color: #0f172a;
+		border-color: #94a3b8;
+		background: #f8fafc;
+	}
+
+	.clear-btn svg {
+		width: 12px;
+		height: 12px;
 	}
 
 	.dropdown {
@@ -134,15 +180,14 @@
 		justify-content: space-between;
 		gap: 12px;
 		min-width: 220px;
-		height: 48px;
+		height: 46px;
 		padding: 0 14px;
-		border-radius: 14px;
-		border: 1px solid rgba(24, 24, 27, 0.16);
-		background: rgba(255, 255, 255, 0.88);
-		backdrop-filter: blur(8px);
-		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+		border-radius: 999px;
+		border: 1px solid #dbe5ef;
+		background: #ffffff;
+		box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 		font-family: 'Roboto', 'SF Pro Text', 'Segoe UI', sans-serif;
-		font-size: 0.94rem;
+		font-size: 0.88rem;
 		font-weight: 600;
 		color: #18181b;
 		cursor: pointer;
@@ -151,9 +196,9 @@
 	}
 
 	.dropdown-trigger:hover {
-		transform: translateY(-2px);
-		border-color: rgba(24, 24, 27, 0.34);
-		box-shadow: 0 14px 26px rgba(0, 0, 0, 0.14);
+		transform: translateY(-1px);
+		border-color: #94a3b8;
+		box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
 	}
 
 	.dropdown-trigger svg {
@@ -176,10 +221,10 @@
 		max-height: 320px;
 		overflow-y: auto;
 		border-radius: 14px;
-		border: 1px solid rgba(24, 24, 27, 0.16);
-		background: rgba(255, 255, 255, 0.95);
+		border: 1px solid #dbe5ef;
+		background: #ffffff;
 		backdrop-filter: blur(10px);
-		box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+		box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
 		z-index: 12;
 		animation: drop-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
 	}

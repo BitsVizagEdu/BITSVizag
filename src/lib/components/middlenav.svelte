@@ -57,19 +57,9 @@
 <nav
 	class="{isMobileMenuOpen ? 'mobile-menu-active-state' : ''} {activeMobileDropdown
 		? 'mobile-menu-active-state'
-		: ''} h-[40px] lg:h-auto"
+		: ''} h-[36px] lg:h-auto"
 >
 	<div class="wrapper">
-		<div class="logo flex items-center">
-			<a href="/"
-				><img
-					class="w-[35px] md:w-[90px] lg:w-[110px] transition-all"
-					src="/1.png"
-					alt="BITS Vizag Logo"
-				/></a
-			>
-		</div>
-
 		<!-- Perfected Mobile Quick Nav: Scrolling High-Value Links Strip -->
 		<div class="mobile-quick-nav lg:hidden flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar">
 			<div class="flex items-center gap-4 py-1">
@@ -646,17 +636,13 @@
 		position: relative;
 		max-width: 1600px;
 		padding: 0 16px;
-		height: 46px;
+		height: 42px;
 		line-height: normal;
 		margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
-	}
-
-	.wrapper .logo img {
-		width: 82px;
 	}
 
 	.wrapper .nav-links {
@@ -688,7 +674,7 @@
 		color: #1e293b;
 		text-decoration: none;
 		font-size: clamp(14px, 0.65vw, 14.5px);
-		padding: 6px 4px;
+		padding: 4px 3px;
 		border-radius: 6px;
 		transition:
 			color 0.2s ease,
@@ -736,10 +722,10 @@
 			transform 0.25s ease;
 		text-align: center;
 		z-index: 9999;
-		top: 56px;
+		top: 50px;
 		pointer-events: none;
 		background: transparent;
-		padding-top: 10px;
+		padding-top: 8px;
 	}
 
 	.mega-box::before {
@@ -839,16 +825,6 @@
 			height: 36px;
 		}
 
-		.logo {
-			flex: 0 0 auto;
-		}
-
-		.logo img {
-			display: block;
-			width: 28px !important;
-			height: auto !important;
-		}
-
 		.mobile-quick-nav {
 			display: block !important;
 			overflow-x: auto;
@@ -903,12 +879,6 @@
 		.wrapper .btn.menu-btn i {
 			font-size: 20px;
 			color: #1e293b;
-		}
-
-		.logo {
-			display: flex;
-			align-items: center;
-			margin-right: 4px;
 		}
 
 		/* ════════════════════════════════

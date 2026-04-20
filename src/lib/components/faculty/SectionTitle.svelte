@@ -5,6 +5,7 @@
 
 <header class="section-title" aria-live="polite">
 	<div class="title-wrapper">
+		<p class="eyebrow">Academic Directory</p>
 		<h2 class="title-gradient">{title}</h2>
 		<p class="subtitle">{subtitle}</p>
 	</div>
@@ -16,60 +17,57 @@
 <style>
 	.section-title {
 		text-align: center;
-		max-width: 100%;
-		margin: 0;
+		max-width: 740px;
+		margin: 0 auto;
 		position: relative;
-		padding: 1.2rem 1.5rem;
-		background: linear-gradient(
-			90deg,
-			#0a0a0a 0%,
-			#1a1a1a 25%,
-			#0f0f0f 50%,
-			#1a1a1a 75%,
-			#0a0a0a 100%
-		);
-		background-size: 400% 400%;
-		border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-		backdrop-filter: blur(15px);
-		animation: bg-animate 10s ease infinite;
+		padding: 0.2rem 0 0.65rem;
 	}
 
 	.title-wrapper {
 		animation: fade-in 0.6s ease-out both;
 	}
 
+	.eyebrow {
+		margin: 0;
+		font-size: 0.74rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: #0f766e;
+	}
+
 	h2 {
 		margin: 0;
 		font-family: 'Roboto', 'SF Pro Display', 'Segoe UI', sans-serif;
-		font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-		line-height: 1.2;
+		font-size: clamp(1.72rem, 2.5vw, 2.25rem);
+		line-height: 1.1;
 		font-weight: 900;
 		letter-spacing: -0.02em;
 		animation: slide-up 0.6s ease-out 0.1s both;
 	}
 
 	.title-gradient {
-		background: linear-gradient(135deg, #ffffff 0%, #e8e8e8 100%);
+		background: linear-gradient(130deg, #0f172a 0%, #1e293b 60%, #334155 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 	}
 
 	.subtitle {
-		margin: 0.3rem 0 0;
+		margin: 0.44rem 0 0;
 		font-family: 'Roboto', 'SF Pro Text', 'Segoe UI', sans-serif;
-		font-size: clamp(0.85rem, 1.1vw, 0.95rem);
-		line-height: 1.5;
-		color: #c0c0c0;
+		font-size: clamp(0.88rem, 1vw, 1rem);
+		line-height: 1.6;
+		color: #64748b;
 		animation: slide-up 0.6s ease-out 0.15s both;
 		font-weight: 500;
 	}
 
 	.underline-wrapper {
 		position: relative;
-		height: 3px;
-		margin: 0.8rem auto 0;
-		width: min(200px, 50vw);
+		height: 2px;
+		margin: 0.75rem auto 0;
+		width: min(132px, 42vw);
 		display: flex;
 		gap: 0;
 		justify-content: center;
@@ -82,34 +80,12 @@
 
 	.primary-line {
 		flex: 1;
-		background: linear-gradient(90deg, #ffffff, #e8e8e8, #ffffff);
+		background: linear-gradient(90deg, rgba(15, 118, 110, 0.2), rgba(15, 118, 110, 0.9));
 		background-size: 200% 200%;
-		box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-		animation: line-in 0.6s ease-out 0.25s both, glow-pulse 4s ease-in-out infinite 0.6s;
+		animation: line-in 0.6s ease-out 0.25s both;
 	}
 
 	/* Animations */
-	@keyframes bg-animate {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
-
-	@keyframes glow-pulse {
-		0%, 100% {
-			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-		}
-		50% {
-			box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
-		}
-	}
-
 	@keyframes fade-in {
 		from {
 			opacity: 0;
@@ -143,19 +119,19 @@
 
 	@media (max-width: 768px) {
 		.section-title {
-			padding: 1rem 1.2rem;
+			padding: 0 0 0.45rem;
 		}
 
 		h2 {
-			font-size: clamp(1.4rem, 2vw, 1.8rem);
+			font-size: clamp(1.38rem, 6vw, 1.74rem);
 		}
 
 		.subtitle {
-			font-size: clamp(0.8rem, 1vw, 0.9rem);
+			font-size: clamp(0.82rem, 1vw, 0.9rem);
 		}
 
 		.underline-wrapper {
-			width: min(150px, 60vw);
+			width: min(115px, 54vw);
 		}
 	}
 </style>

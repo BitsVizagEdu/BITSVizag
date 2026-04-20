@@ -8,6 +8,8 @@
 	import AOS from 'aos';
 	import Middlenav from '$lib/components/middlenav.svelte';
 	import Secondnav from '$lib/components/secondnav.svelte';
+	import ScrollProgressBar from '$lib/components/ScrollProgressBar.svelte';
+	import LenisScroll from '$lib/components/LenisScroll.svelte';
 	import 'aos/dist/aos.css';
 	import { showNavBar } from '$lib/stores/store.js';
 	import Footer from '$lib/components/footer.svelte';
@@ -57,16 +59,21 @@
 	<slot name="head" />
 </svelte:head>
 
-<main>
-	{#if $showNavBar}
-		<Nav />
-	{:else}
-		<Hero />
-		<Middlenav />
-		<Secondnav />
+<LenisScroll>
+	<main>
+		<!-- Scroll Progress Bar - Always on Top -->
+		<ScrollProgressBar />
 
-		<BackToTop />
-		<slot />
-		<Footer />
-	{/if}
-</main>
+		{#if $showNavBar}
+			<Nav />
+		{:else}
+			<Hero />
+			<Middlenav />
+			<Secondnav />
+
+			<BackToTop />
+			<slot />
+			<Footer />
+		{/if}
+	</main>
+</LenisScroll>
