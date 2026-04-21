@@ -10,45 +10,16 @@
 	import Video from '$lib/components/video.svelte';
 
 	import { onMount } from 'svelte';
-	import Placementheader from '$lib/components/placementheader.svelte';
 	import Notification from '$lib/components/notification.svelte';
 	import Autonomous from '$lib/components/autonomous.svelte';
-	import CSBanner from '$lib/components/csbanner.svelte';
+	import CSHeader from '$lib/components/csheader.svelte';
 
-	/** @param {number} y */
-	function scaleLogo(y) {
-		if (typeof y !== 'undefined' && typeof document !== 'undefined') {
-			const logoElement = document.getElementById('scale-logo');
-			if (logoElement) {
-				logoElement.style.transform = `scale(${1 + y / 700})`;
-				logoElement.style.opacity = `${1 - y / 900}`;
-			}
-		}
-	}
-
-	let lastScrollY = 0;
-	/** @type {number | null} */
-	let animationFrameId = null;
 	let y = 0;
 
-	/** @param {number} newY */
-	function onScroll(newY) {
-		scaleLogo(newY);
-	}
+	// Optimized reactive scaling for better performance
+	$: logoScale = 1 + y / 700;
+	$: logoOpacity = Math.max(0, 1 - y / 900);
 
-	onMount(() => {
-		const handleScroll = () => {
-			if (animationFrameId !== null) {
-				cancelAnimationFrame(animationFrameId);
-			}
-			animationFrameId = requestAnimationFrame(() => {
-				onScroll(window.scrollY);
-			});
-		};
-
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		return () => window.removeEventListener('scroll', handleScroll);
-	});
 
 	const structuredData = {
 		'@context': 'https://schema.org',
@@ -86,9 +57,10 @@
 
 <svelte:head>
 	<title>Home</title>
-	<link rel="preload" as="image" href="/CS-Banners/1.webp" type="image/webp" />
-	<link rel="preload" as="image" href="/header/T10main.webp" type="image/webp" />
+	<link rel="preload" as="image" href="/CS-Banners/CS-images/1.png" />
+	<link rel="preload" as="image" href="/header/T10main.png" />
 </svelte:head>
+
 
 <svelte:window bind:scrollY={y} />
 {#if !$showNavBar}
@@ -109,55 +81,50 @@
 		</video>
 		<div
 			id="scale-logo"
-			class="vidlogo absolute flex flex-col sm:flex-row justify-center items-center h-full w-full z-[1] gap-4 sm:gap-0 px-4"
+			class="vidlogo absolute flex flex-col sm:flex-row justify-center items-center h-full w-full z-[1] gap-4 sm:gap-0 px-4 will-change-transform-opacity"
+			style="transform: scale({logoScale}); opacity: {logoOpacity};"
 		>
 			<img
 				src="/logow.svg"
 				alt="BITS Vizag Logo"
-				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-52 sm:mr-[-20px] md:mr-[-35px] sm:pb-6 md:pb-10 mb-4 sm:mb-24 drop-shadow-2xl"
+				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-52 sm:mr-[-20px] md:mr-[-35px] sm:pb-6 md:pb-10 mb-4 sm:mb-24 shadow-2xl transition-none"
+				decoding="async"
 			/>
 			<img
 				src="/sq-1.svg"
 				alt=""
-				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-60 mb-8 sm:mb-24 drop-shadow-2xl"
+				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-60 mb-8 sm:mb-24 shadow-2xl transition-none"
+				decoding="async"
 			/>
 		</div>
 	</div>
-	<!-- <div class="h-4 md:h-12 bg-white"></div>
-	<div class="bg-black">
-		<video
-			playsinline
-			autoplay
-			muted
-			loop
-			preload="auto"
-			class="w-full h-auto block pointer-events-none select-none"
-		>
-			<source
-				src="/gallery/Black%20White%20Welcome%20To%20My%20Chanel%20YouTube%20Intro%20(online-video-cutter.com).mp4"
-				type="video/mp4"
-			/>
-			Your browser does not support the video tag.
-		</video>
-	</div> -->
 
-	<div class="h-4 md:h-12 bg-white"></div>
-	<CSBanner />
-	<div class="h-4 md:h-12 bg-white"></div>
+	<div class="h-[28px] bg-white"></div>
+	<CSHeader />
+	<div class="h-[28px] bg-white"></div>
 	<Autonomous />
-	<Placementheader />
-	
+	<div class="h-[28px] bg-white"></div>
 
 	<h1 class="3xs:text-lg xs:text-xl md:text-4xl font-bold text-center p-4 md:p-10 bg-white">
 		CELEBRATE LIFE AT BITS VIZAG
 	</h1>
 
-	<Gallery />
-	<Events />
-	<Strength />
+	<div class="content-visibility-auto">
+		<Gallery />
+	</div>
+	<div class="content-visibility-auto">
+		<Events />
+	</div>
+	<div class="content-visibility-auto">
+		<Strength />
+	</div>
 
-	<Placement />
-	<Committies />
+	<div class="content-visibility-auto">
+		<Placement />
+	</div>
+	<div class="content-visibility-auto">
+		<Committies />
+	</div>
 	<!-- <a
 	href="/application-form" 
 	class="cbg fixed  font-bold top-[60%] right-8 transform -translate-y-1/2 translate-x-1/2 -rotate-90 bg-yellow-300 hover:bg-[#02ADEE] hover:text-white text-black px-10 py-4 md:py-8 md:rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer"
@@ -167,4 +134,13 @@
 {/if}
 
 <style>
+	.will-change-transform-opacity {
+		will-change: transform, opacity;
+		backface-visibility: hidden;
+		transform: translateZ(0); /* Force GPU acceleration */
+	}
+	.content-visibility-auto {
+		content-visibility: auto;
+		contain-intrinsic-size: 1000px; /* Placeholder height to prevent scrollbar jumping */
+	}
 </style>

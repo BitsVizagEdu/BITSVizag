@@ -19,8 +19,17 @@
 		}
 	}
 
-	$: if (browser) {
-		document.body.classList.toggle('secondnav-drawer-open', isMobileMenuOpen);
+	let isHidden = false;
+	let lastScrollY = 0;
+
+	function handleScroll() {
+		const currentScrollY = window.scrollY;
+		if (currentScrollY > lastScrollY && currentScrollY > 200) {
+			isHidden = true;
+		} else {
+			isHidden = false;
+		}
+		lastScrollY = currentScrollY;
 	}
 
 	onDestroy(() => {
@@ -30,9 +39,9 @@
 	});
 </script>
 
-<svelte:window on:keydown={handleEscape} />
+<svelte:window on:keydown={handleEscape} on:scroll={handleScroll} />
 
-<nav>
+<nav class:isHidden>
 	<div class="wrapper">
 		<div class="mobile-visible-links">
 			<a href="/gallery" class="mobile-visible-link" on:click={closeMobileMenu}>Gallery</a>
@@ -129,16 +138,29 @@
 		background: #d22626;
 		font-family: 'Roboto', sans-serif;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+		will-change: transform;
+	}
+
+	nav.isHidden {
+		transform: translateY(-100%);
+		opacity: 0;
+		pointer-events: none;
 	}
 
 	nav .wrapper {
-		max-width: 1600px;
-		padding: 0 24px;
+		max-width: 100%;
+		padding: 0 1.5rem;
 		height: 38px;
-		margin: auto;
+		margin: 0;
 		display: flex;
 		align-items: center;
-		justify-content: stretch;
+		justify-content: center;
+	}
+	@media (min-width: 1024px) {
+		nav .wrapper {
+			padding: 0 3rem;
+		}
 	}
 
 	.mobile-visible-links,

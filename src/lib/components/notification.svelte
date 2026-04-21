@@ -1,79 +1,145 @@
+<div class="marquee-container">
+	<div class="marquee-track">
+		<!-- First set of items -->
+		<div class="marquee-content">
+			{#each Array(6) as _}
+				<span class="marquee-item">
+					<!-- Highlighted Admissions Section -->
+					<span class="icon-wrapper">🎓</span>
+					<span class="marquee-admissions">ADMISSIONS OPEN 2026-27</span>
 
-<div class="marquee">
-	<h3>
-		<div class="marquee-wrapper">
-			<div class="marquee-title">
-				<span class="text-red-700 brand-pop">BITS VIZAG -</span>
-				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#FEC629] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#1BA7E5] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-green-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-blue-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-blue-700">|</span>
-			</div>
-			<div class="marquee-title">
-				<span class="text-red-700 brand-pop">BITS VIZAG -</span>
-				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#FEC629] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#1BA7E5] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-[#E7087B] marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-green-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-red-700">|</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-blue-600 marquee-fade">ADMISSIONS OPEN 2026 - 27 | COURSES OFFERED - CSE - AI & ML - CYBER SECURITY - ECE - MECHANICAL - EEE</span>&nbsp;&nbsp;&nbsp;
-				<span class="text-blue-700">|</span>
-			</div>
+					<!-- Separator -->
+					<span class="separator">|</span>
+
+					<!-- Courses Section -->
+					<span class="marquee-courses">
+						<span class="courses-label">COURSES:</span>
+						CSE <span class="dot">•</span>
+						AI & ML <span class="dot">•</span>
+						CYBER SECURITY <span class="dot">•</span>
+						ECE <span class="dot">•</span>
+						MECH <span class="dot">•</span>
+						EEE
+					</span>
+				</span>
+			{/each}
 		</div>
-	</h3>
+		<!-- Duplicate set for seamless scrolling -->
+		<div class="marquee-content">
+			{#each Array(6) as _}
+				<span class="marquee-item">
+					<!-- Highlighted Admissions Section -->
+					<span class="icon-wrapper">🎓</span>
+					<span class="marquee-admissions">ADMISSIONS OPEN 2026-27</span>
+
+					<!-- Separator -->
+					<span class="separator">|</span>
+
+					<!-- Courses Section -->
+					<span class="marquee-courses">
+						<span class="courses-label">COURSES:</span>
+						CSE <span class="dot">•</span>
+						AI & ML <span class="dot">•</span>
+						CYBER SECURITY <span class="dot">•</span>
+						ECE <span class="dot">•</span>
+						MECH <span class="dot">•</span>
+						EEE
+					</span>
+				</span>
+			{/each}
+		</div>
+	</div>
 </div>
 
 <style>
-		.marquee {
-		text-align: center;
-		background: #ffffff;
+	.marquee-container {
+		width: 100%;
 		overflow: hidden;
-		background: #ffffff;
+		background: #000000; /* Clean, deep navy background */
+		border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+		padding: 8px 0; /* Reduced height for a sleeker look */
+		position: relative;
+		z-index: 100;
 	}
 
-	.marquee h3 {
-		font-size: 20px;
-		font-weight: 700;
-		text-transform: uppercase;
-		margin: 0;
-		padding: 0;
-		line-height: 1.8;
-	}
-
-	.marquee .marquee-wrapper {
+	.marquee-track {
 		display: flex;
-		width: max-content;
-		animation: marqueeAnimation 40s linear infinite;
+		width: fit-content;
+		animation: scroll 60s linear infinite; /* Slightly slower for continuous flow */
+		will-change: transform;
+		transform: translateZ(0);
+		backface-visibility: hidden;
 	}
 
-	.marquee h3 .marquee-title {
+	.marquee-track:hover {
+		animation-play-state: paused;
+	}
+
+	/* Accessibility */
+	@media (prefers-reduced-motion: reduce) {
+		.marquee-track {
+			animation-play-state: paused;
+		}
+	}
+
+	.marquee-content {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+	}
+
+	.marquee-item {
 		display: flex;
 		align-items: center;
 		white-space: nowrap;
-		margin-right: 0;
-		padding-right: 50px;
+		padding-right: 2rem; /* Tightened gap for a high-density flow */
+		font-family: 'Inter', sans-serif;
 	}
 
-	.text-stroke-black {
-		color: transparent;
-		-webkit-text-stroke: 1px;
-		-webkit-text-stroke-color: #000000;
+	.icon-wrapper {
+		font-size: 16px;
+		margin-right: 0.5rem;
+		display: flex;
+		align-items: center;
+		filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.4));
 	}
 
-	@keyframes marqueeAnimation {
+	.marquee-admissions {
+		color: #f59e0b; /* Solid premium gold */
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+	}
+
+	.separator {
+		color: rgba(255, 255, 255, 0.2);
+		margin: 0 1.5rem; /* Slightly tighter separator spacing */
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.marquee-courses {
+		color: #7dd3fc; /* Soft, muted sky blue instead of neon cyan */
+		font-size: 13.5px;
+		font-weight: 400; /* Normal weight for courses */
+		letter-spacing: 0.04em;
+	}
+
+	.courses-label {
+		color: #ffffff; /* Crisp white */
+		font-weight: 600; /* Semi-bold to create hierarchy from the courses */
+		margin-right: 0.5rem;
+	}
+
+	.dot {
+		color: rgba(255, 255, 255, 0.25);
+		margin: 0 0.6rem; /* Tighter dot spacing */
+		font-size: 10px;
+		position: relative;
+		top: -1px;
+	}
+
+	@keyframes scroll {
 		0% {
 			transform: translateX(0);
 		}
@@ -82,15 +148,21 @@
 		}
 	}
 
-	@media (max-width: 992px) {
-		.marquee h3 {
-			font-size: 16px;
+	@media (max-width: 768px) {
+		.marquee-item {
+			padding-right: 1.5rem;
 		}
-	}
-
-	@media (max-width: 549px) {
-		.marquee h3 {
-			font-size: 14px;
+		.marquee-admissions {
+			font-size: 12px;
+		}
+		.marquee-courses {
+			font-size: 11px;
+		}
+		.separator {
+			margin: 0 1rem;
+		}
+		.dot {
+			margin: 0 0.4rem;
 		}
 	}
 </style>

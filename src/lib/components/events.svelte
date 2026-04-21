@@ -346,6 +346,8 @@
 									class={`img${i} image w-full h-full object-cover rounded-2xl`}
 									src={event.image}
 									alt=""
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -415,6 +417,8 @@
 									class={`img${i} image w-full h-full object-cover rounded-2xl`}
 									src={event.image}
 									alt=""
+									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						</div>
@@ -468,6 +472,8 @@
 							class="xs:h-[300px] xs:w-[300px] object-contain rounded-lg"
 							src={event.image}
 							alt=""
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 					<div class="flex pb-2">

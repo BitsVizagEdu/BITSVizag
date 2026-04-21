@@ -500,21 +500,21 @@
 
 	.enquiry-sticky-wrap.is-docked-home {
 		position: relative;
-		left: auto;
+		left: 0;
 		bottom: auto;
 		transform: none;
 		width: 100%;
 		margin-top: 0.8rem;
-		display: grid;
-		place-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		z-index: 20;
 	}
 
 	.enquiry-sticky-wrap.is-docked-home .enquiry-sticky-cta,
 	.enquiry-sticky-wrap.is-docked-home .enquiry-sticky-btn {
-		width: auto;
-		margin-left: auto;
-		margin-right: auto;
+		width: max-content;
+		margin: 0 auto;
 	}
 
 	.enquiry-sticky-cta {
