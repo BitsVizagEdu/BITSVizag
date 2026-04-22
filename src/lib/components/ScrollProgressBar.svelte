@@ -37,7 +37,6 @@
 				0 0 24px rgba(16, 185, 129, 0.4),
 				inset 0 0 8px rgba(255, 255, 255, 0.1);
 			filter: blur(0.5px);
-			transition: transform 0.05s cubic-bezier(0.34, 1.56, 0.64, 1);
 			will-change: transform;
 			backface-visibility: hidden;
 			-webkit-font-smoothing: antialiased;

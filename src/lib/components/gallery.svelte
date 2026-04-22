@@ -1,14 +1,14 @@
 <script>
 	let pics = [
 		{
-			pic: '/gallery/RAJ_4078.JPG.jpeg',
+			pic: '/gallery/RAJ_4078.JPG21.webp',
 			name: 'Mega Job Fair 2026 A Remarkable Success !!!',
 			date: '10/03/2026',
 			href: '#',
 			id: 'box-1'
 		},
 		{
-			pic: '/gallery/g-05.jpg',
+			pic: '/gallery/g-05.webp',
 			name: 'State Level T10 Championship',
 			date: '06/11/2025',
 			href: '#',
@@ -22,7 +22,7 @@
 			id: 'box-3'
 		},
 		{
-			pic: '/gallery/g2.jpg',
+			pic: '/gallery/g2.webp',
 			name: 'The Cloud Summit',
 			date: '01/10/2024',
 			href: '#',
@@ -36,7 +36,6 @@
 			id: 'box-5'
 		},
 		{
-
 			pic: '/gallery/sankranthi.jpeg',
 			name: 'Sankranthi Celebrations',
 			date: '14/01/2026',
@@ -57,27 +56,21 @@
 			href: '#',
 			id: 'box-7'
 		},
-	
+
 		{
 			pic: '/gallery/Christmas.jpeg',
 			name: 'Christmas Celebrations',
 			date: '25/12/2025',
 			href: '#',
 			id: 'box-9'
-		},
-		
-		
-			
-		
-
-
+		}
 	];
 </script>
 
 <div class="image-grid relative">
 	{#each pics as img}
 		<div class="{img.id} relative image-grid-col-2 image-grid-row-2">
-			<img class="" src={img.pic} alt="architecture" />
+			<img class="" src={img.pic} alt="architecture" loading="lazy" decoding="async" />
 			<div
 				id="overlayimg"
 				class="flex flex-col opacity-0 top-0 absolute h-[100%] p-5 transition-[opacity] duration-500 bg-gradient-to-t from-black to-transparent hover:opacity-70 justify-center first:justify-end w-full"

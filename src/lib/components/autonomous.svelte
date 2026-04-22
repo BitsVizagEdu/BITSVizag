@@ -3,20 +3,17 @@
 
 	const slides = [
 		{
-			webp: '/header/T10main.webp',
-			fallback: '/header/T10main.png',
+			src: '/header/T10main.webp',
 			href: 'https://www.instagram.com/p/DQuOMxUE_qx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			alt: 'T10 Cricket Championship'
 		},
 		{
-			webp: '/header/pitchathon.webp',
-			fallback: '/header/pitchathon.png',
+			src: '/header/pitchathon.png',
 			href: '/placements',
 			alt: 'Pitchathon'
 		},
 		{
-			webp: '/header/ViceChancellor-Banner.webp',
-			fallback: '/header/ViceChancellor-Banner.png',
+			src: '/header/ViceChancellor-Banner.png',
 			href: 'https://www.instagram.com/p/DQvtjDijfWw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			alt: 'Vice Chancellor'
 		}
@@ -24,53 +21,97 @@
 
 	let current = 0;
 	let isAnimating = false;
-	let autoTimer;
+	let paused = false;
 
 	/** @type {HTMLElement[]} */
 	let slideEls = [];
+	/** @type {any} */
 	let gsap;
+	/** @type {any} */
+	let timer;
 
+	/** @param {number} index */
 	function goTo(index) {
 		if (isAnimating || index === current || !gsap) return;
+		const gsapInstance = gsap;
 
 		const outEl = slideEls[current];
-		const inEl  = slideEls[index];
+		const inEl = slideEls[index];
+
+		// Direction: 1 for right-to-left, -1 for left-to-right
+		const direction = index > current ? 1 : index === 0 && current === slides.length - 1 ? 1 : -1;
 
 		isAnimating = true;
-		gsap.set(inEl, { autoAlpha: 0, zIndex: 2 });
-		gsap.set(outEl, { zIndex: 1 });
 
-		gsap.timeline({
-			defaults: { duration: 0.65, ease: 'power1.inOut' },
+		// Setup incoming slide
+		gsapInstance.set(inEl, {
+			autoAlpha: 1,
+			zIndex: 2,
+			x: direction * 100 + '%'
+		});
+		gsapInstance.set(outEl, { zIndex: 1 });
+
+		// Elastic Spring Animation
+		gsapInstance.to(inEl, {
+			x: '0%',
+			duration: 1.0,
+			ease: 'elastic.out(1, 0.85)',
 			onComplete() {
-				gsap.set(outEl, { autoAlpha: 0, zIndex: 1 });
+				gsapInstance.set(outEl, { autoAlpha: 0, x: '0%' });
 				current = index;
 				isAnimating = false;
-				scheduleAuto();
-			}
-		})
-			.to(inEl,  { autoAlpha: 1 }, 0)
-			.to(outEl, { autoAlpha: 0 }, 0);
+				if (!paused) scheduleNext();
+			},
+			force3D: true
+		});
+
+		// Slide Out current slide slightly
+		gsapInstance.to(outEl, {
+			x: -direction * 30 + '%',
+			autoAlpha: 0.5,
+			duration: 0.8,
+			ease: 'power2.inOut'
+		});
 	}
 
-	function next() { goTo((current + 1) % slides.length); }
-	function prev() { goTo((current - 1 + slides.length) % slides.length); }
-
-	function scheduleAuto() {
-		clearTimeout(autoTimer);
-		autoTimer = setTimeout(next, 4000);
+	function next() {
+		if (isAnimating) return;
+		pause();
+		goTo((current + 1) % slides.length);
 	}
 
+	function prev() {
+		if (isAnimating) return;
+		pause();
+		goTo((current - 1 + slides.length) % slides.length);
+	}
+
+	function scheduleNext() {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			if (!paused) goTo((current + 1) % slides.length);
+		}, 2000);
+	}
+
+	function pause() {
+		paused = true;
+		clearTimeout(timer);
+	}
+	function resume() {
+		paused = false;
+		scheduleNext();
+	}
+
+	// Touch Support
 	let touchX = 0;
-	function onTouchStart(e) { touchX = e.touches[0].clientX; }
+	function onTouchStart(e) {
+		touchX = e.touches[0].clientX;
+		pause();
+	}
 	function onTouchEnd(e) {
 		const dx = e.changedTouches[0].clientX - touchX;
-		if (Math.abs(dx) > 40) dx < 0 ? next() : prev();
-	}
-
-	function onKey(e) {
-		if (e.key === 'ArrowRight') next();
-		if (e.key === 'ArrowLeft')  prev();
+		if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
+		resume();
 	}
 
 	onMount(async () => {
@@ -79,25 +120,29 @@
 		gsap = mod.gsap;
 
 		slideEls.forEach((el, i) => {
-			gsap.set(el, { autoAlpha: i === 0 ? 1 : 0, zIndex: i === 0 ? 2 : 1 });
+			gsap.set(el, {
+				autoAlpha: i === 0 ? 1 : 0,
+				zIndex: i === 0 ? 2 : 1,
+				x: '0%'
+			});
 		});
 
-		scheduleAuto();
-		window.addEventListener('keydown', onKey);
+		scheduleNext();
 	});
 
 	onDestroy(() => {
-		clearTimeout(autoTimer);
-		if (typeof window !== 'undefined') window.removeEventListener('keydown', onKey);
+		if (typeof clearTimeout !== 'undefined') clearTimeout(timer);
 	});
 </script>
 
 <div
-	class="sl-wrap"
+	class="autonomous-slider"
+	on:mouseenter={pause}
+	on:mouseleave={resume}
 	on:touchstart={onTouchStart}
 	on:touchend={onTouchEnd}
 	role="region"
-	aria-label="Image banner slider"
+	aria-label="Autonomous Banner Slider"
 >
 	{#each slides as slide, i}
 		<div class="sl-slide" bind:this={slideEls[i]} aria-hidden={i !== current}>
@@ -107,136 +152,162 @@
 				rel="noopener noreferrer"
 				tabindex={i === current ? 0 : -1}
 			>
-				<picture>
-					<source srcset={slide.webp} type="image/webp" />
-					<img
-						class="sl-img"
-						src={slide.fallback}
-						alt={slide.alt}
-						draggable="false"
-						loading={i === 0 ? 'eager' : 'lazy'}
-						fetchpriority={i === 0 ? 'high' : 'auto'}
-						sizes="100vw"
-						decoding="async"
-					/>
-				</picture>
+				<img
+					class="sl-img"
+					src={slide.src}
+					alt={slide.alt}
+					draggable="false"
+					loading={i === 0 ? 'eager' : 'lazy'}
+					decoding="async"
+				/>
 			</a>
 		</div>
 	{/each}
 
-	<button class="sl-arrow sl-arrow--left" on:click={prev} aria-label="Previous slide">
-		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-			stroke-linecap="round" stroke-linejoin="round">
+	<!-- Navigation Arrows -->
+	<button class="arrow-btn arrow-btn--left" on:click={prev} aria-label="Previous">
+		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
 			<polyline points="15 18 9 12 15 6" />
 		</svg>
 	</button>
 
-	<button class="sl-arrow sl-arrow--right" on:click={next} aria-label="Next slide">
-		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-			stroke-linecap="round" stroke-linejoin="round">
+	<button class="arrow-btn arrow-btn--right" on:click={next} aria-label="Next">
+		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
 			<polyline points="9 18 15 12 9 6" />
 		</svg>
 	</button>
 
-	<nav class="sl-dots" aria-label="Slide navigation">
+	<!-- Indicators -->
+	<div class="dots-wrap">
 		{#each slides as _, i}
 			<button
-				class="sl-dot"
-				class:sl-dot--active={current === i}
+				class="dot-btn"
+				class:active={current === i}
 				on:click={() => goTo(i)}
 				aria-label={`Go to slide ${i + 1}`}
 			></button>
 		{/each}
-	</nav>
+	</div>
 </div>
 
 <style>
-	/* Grid stacking — container height equals the image's natural height exactly */
-	.sl-wrap {
+	.autonomous-slider {
 		position: relative;
 		width: 100%;
 		display: grid;
+		overflow: hidden;
+		background: #000;
+		aspect-ratio: 1920 / 600;
+	}
+
+	@media (max-width: 768px) {
+		.autonomous-slider {
+			aspect-ratio: 16 / 9;
+		}
 	}
 
 	.sl-slide {
 		grid-area: 1 / 1;
 		width: 100%;
-		will-change: opacity;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.sl-slide a {
 		display: block;
 		width: 100%;
+		height: 100%;
 	}
 
 	.sl-img {
 		width: 100%;
-		height: auto;
+		height: 100%;
+		object-fit: cover;
 		display: block;
-		user-select: none;
-		pointer-events: none;
+		color: transparent;
+		text-indent: -9999px;
 	}
 
-	/* Arrows */
-	.sl-arrow {
+	.arrow-btn {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 10;
-		width: 40px;
-		height: 40px;
+		width: 46px;
+		height: 46px;
+		background: rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(8px);
+		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 50%;
-		border: none;
-		background: rgba(0, 0, 0, 0.38);
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
-		color: #fff;
+		color: white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		transition: background 0.2s ease, transform 0.2s ease;
+		transition: all 0.3s ease;
+		opacity: 0;
 	}
 
-	.sl-arrow svg    { width: 17px; height: 17px; }
-	.sl-arrow--left  { left:  clamp(0.6rem, 2vw, 1.4rem); }
-	.sl-arrow--right { right: clamp(0.6rem, 2vw, 1.4rem); }
+	.autonomous-slider:hover .arrow-btn {
+		opacity: 1;
+	}
 
-	.sl-arrow:hover  { background: rgba(0, 0, 0, 0.62); transform: translateY(-50%) scale(1.08); }
-	.sl-arrow:active { transform: translateY(-50%) scale(0.94); }
+	.arrow-btn:hover {
+		background: rgba(0, 0, 0, 0.5);
+		transform: translateY(-50%) scale(1.1);
+	}
 
-	/* Dots */
-	.sl-dots {
+	.arrow-btn svg {
+		width: 18px;
+		height: 18px;
+	}
+	.arrow-btn--left {
+		left: 20px;
+	}
+	.arrow-btn--right {
+		right: 20px;
+	}
+
+	.dots-wrap {
 		position: absolute;
-		bottom: 0.85rem;
+		bottom: 20px;
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;
-		align-items: center;
-		gap: 0.55rem;
+		gap: 8px;
 		z-index: 10;
 	}
 
-	.sl-dot {
+	.dot-btn {
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		border: 1.5px solid rgba(255, 255, 255, 0.7);
-		background: rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.4);
+		border: none;
 		cursor: pointer;
 		padding: 0;
-		transition: transform 0.3s ease, background 0.3s ease;
+		transition: all 0.3s ease;
 	}
 
-	.sl-dot--active {
-		transform: scale(1.75);
+	.dot-btn.active {
 		background: #fff;
-		border-color: #fff;
+		transform: scale(1.6);
+		box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 	}
 
 	@media (max-width: 640px) {
-		.sl-arrow { width: 32px; height: 32px; }
-		.sl-arrow svg { width: 14px; height: 14px; }
-		.sl-dots { bottom: 0.5rem; }
+		.arrow-btn {
+			width: 36px;
+			height: 36px;
+		}
+		.arrow-btn--left {
+			left: 10px;
+		}
+		.arrow-btn--right {
+			right: 10px;
+		}
+		.dots-wrap {
+			bottom: 12px;
+		}
 	}
 </style>

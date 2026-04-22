@@ -634,15 +634,20 @@
 
 	nav .wrapper {
 		position: relative;
-		max-width: 1600px;
-		padding: 0 16px;
+		max-width: 100%;
+		padding: 0 1.5rem;
 		height: 42px;
 		line-height: normal;
-		margin: auto;
+		margin: 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
+	}
+	@media (min-width: 1024px) {
+		nav .wrapper {
+			padding: 0 3rem;
+		}
 	}
 
 	.wrapper .nav-links {

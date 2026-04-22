@@ -2,10 +2,10 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	const images = [
-		{ webp: '/CS-Banners/1.webp', fallback: '/CS-Banners/1.png', alt: 'CS Banner 1' },
-		{ webp: '/CS-Banners/2.webp', fallback: '/CS-Banners/2.png', alt: 'CS Banner 2' },
-		{ webp: '/CS-Banners/3.webp', fallback: '/CS-Banners/3.png', alt: 'CS Banner 3' },
-		{ webp: '/CS-Banners/4.webp', fallback: '/CS-Banners/4.png', alt: 'CS Banner 4' }
+		{ src: '/CS-Banners/1.png', alt: 'CS Banner 1' },
+		{ src: '/CS-Banners/2.png', alt: 'CS Banner 2' },
+		{ src: '/CS-Banners/3.png', alt: 'CS Banner 3' },
+		{ src: '/CS-Banners/4.png', alt: 'CS Banner 4' }
 	];
 
 	const sequence = [0, 1, 0, 2, 0, 3];
@@ -19,28 +19,33 @@
 	let slideEls = [];
 	/** @type {HTMLElement[]} */
 	let imgEls   = [];
+	/** @type {typeof import('gsap').gsap | undefined} */
 	let gsap;
+	/** @type {ReturnType<typeof setTimeout> | undefined} */
 	let timer;
+	/** @type {HTMLElement | undefined} */
 	let shineEl;
 
+	/** @param {number} index */
 	function goTo(index) {
-		if (isAnimating || index === current || !gsap) return;
+		if (isAnimating || index === current || !gsap || !shineEl) return;
+		const gsapInstance = gsap;
 
 		const outEl  = slideEls[current];
 		const inEl   = slideEls[index];
 		const inImg  = imgEls[index];
 
 		isAnimating = true;
-		gsap.set(inEl,  { autoAlpha: 0, zIndex: 2 });
-		gsap.set(outEl, { zIndex: 1 });
+		gsapInstance.set(inEl,  { autoAlpha: 0, zIndex: 2 });
+		gsapInstance.set(outEl, { zIndex: 1 });
 
 		// Zoom in: incoming image starts slightly zoomed, eases to normal
-		gsap.set(inImg, { scale: 1.08, transformOrigin: 'center center' });
+		gsapInstance.set(inImg, { scale: 1.08, transformOrigin: 'center center' });
 
-		gsap.timeline({
+		gsapInstance.timeline({
 			defaults: { duration: 0.7, ease: 'power1.inOut' },
 			onComplete() {
-				gsap.set(outEl, { autoAlpha: 0, zIndex: 1 });
+				gsapInstance.set(outEl, { autoAlpha: 0, zIndex: 1 });
 				current = index;
 				isAnimating = false;
 				triggerShine();
@@ -54,15 +59,19 @@
 
 	function triggerShine() {
 		if (!gsap || !shineEl) return;
-		gsap.fromTo(
-			shineEl,
+		const gsapInstance = gsap;
+		const shine = shineEl;
+		gsapInstance.fromTo(
+			shine,
 			{ x: '-100%', autoAlpha: 0 },
 			{
 				x: '110%',
 				autoAlpha: 1,
 				duration: 1.1,
 				ease: 'power2.inOut',
-				onComplete: () => gsap.set(shineEl, { autoAlpha: 0 })
+				onComplete() {
+					gsapInstance.set(shine, { autoAlpha: 0 });
+				}
 			}
 		);
 	}
@@ -98,7 +107,9 @@
 
 	// Touch swipe
 	let touchX = 0;
+	/** @param {TouchEvent} e */
 	function onTouchStart(e) { touchX = e.touches[0].clientX; pause(); }
+	/** @param {TouchEvent} e */
 	function onTouchEnd(e) {
 		const dx = e.changedTouches[0].clientX - touchX;
 		if (Math.abs(dx) > 40) dx < 0 ? next() : prev();
@@ -109,12 +120,13 @@
 		if (typeof window === 'undefined') return;
 		const mod = await import('gsap');
 		gsap = mod.gsap;
+		const gsapInstance = gsap;
 
 		slideEls.forEach((el, i) => {
-			gsap.set(el, { autoAlpha: i === 0 ? 1 : 0, zIndex: i === 0 ? 2 : 1 });
+			gsapInstance.set(el, { autoAlpha: i === 0 ? 1 : 0, zIndex: i === 0 ? 2 : 1 });
 		});
 		// Kick off zoom on the first visible image
-		if (imgEls[0]) gsap.fromTo(imgEls[0],
+		if (imgEls[0]) gsapInstance.fromTo(imgEls[0],
 			{ scale: 1.08 },
 			{ scale: 1, duration: 2.2, ease: 'power1.out' }
 		);
@@ -137,20 +149,17 @@
 >
 	{#each images as slide, i}
 		<div class="cb-slide" bind:this={slideEls[i]} aria-hidden={i !== current}>
-			<picture>
-				<source srcset={slide.webp} type="image/webp" />
-				<img
-					class="cb-img"
-					src={slide.fallback}
-					alt={slide.alt}
-					draggable="false"
-					loading={i === 0 ? 'eager' : 'lazy'}
-					fetchpriority={i === 0 ? 'high' : 'auto'}
-					sizes="100vw"
-					bind:this={imgEls[i]}
-					decoding="async"
-				/>
-			</picture>
+			<img
+				class="cb-img"
+				src={slide.src}
+				alt={slide.alt}
+				draggable="false"
+				loading={i === 0 ? 'eager' : 'lazy'}
+				fetchpriority={i === 0 ? 'high' : 'auto'}
+				sizes="100vw"
+				bind:this={imgEls[i]}
+				decoding="async"
+			/>
 		</div>
 	{/each}
 
