@@ -243,9 +243,12 @@
 						</p>
 					</div>
 
-					<div id="joinnowbtn" class="enquiry-sticky-wrap" 
+					<div
+						id="joinnowbtn"
+						class="enquiry-sticky-wrap"
 						class:is-docked-home={isDockedAtCta}
-						class:is-hidden={!isDockedAtCta && !isScrolledPastHero}>
+						class:is-hidden={!isDockedAtCta && !isScrolledPastHero}
+					>
 						<a href="/contactus" class="enquiry-sticky-cta inline-block group relative">
 							<!-- Glow Effect behind button -->
 							<div
@@ -422,16 +425,34 @@
 			</div>
 		</div>
 	</div>
-	<div class="text-center text-[12px] bg-[#070e24] border-t border-white/5 py-4">
-		<p class="text-white/20 font-medium tracking-widest uppercase">
-			Made with <span class="text-red-500 animate-pulse">❤️</span> by
-			<a href="https://www.konkorde.org" class="group transition-all duration-300">
-				<span
-					class="konkorde-gradient font-black tracking-widest transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]"
-					>BITS STUDENTS</span
+	<div class="bg-[#070e24] border-t border-white/5 py-12">
+		<div
+			class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-24 text-[10.5px] md:text-[13px] text-white/40 font-medium tracking-wide"
+		>
+			<p class="text-center">
+				Copyrights &copy; {new Date().getFullYear()} All Rights Reserved by
+				<span class="text-[#00aeef] font-bold">BITS VIZAG</span>
+			</p>
+
+			<span class="hidden md:inline text-white/10">|</span>
+
+			<p class="text-center">
+				Developed by
+				<a
+					href="https://www.konkorde.org"
+					class="text-white/60 hover:text-[#00aeef] transition-colors font-semibold"
+					>BITS STUDENTS 2026</a
 				>
-			</a>
-		</p>
+			</p>
+
+			<span class="hidden md:inline text-white/10">|</span>
+
+			<p class="text-center">
+				<a href="mailto:tpo@bitsvizag.com" class="hover:text-[#00aeef] transition-colors lowercase"
+					>tpo@bitsvizag.com</a
+				>
+			</p>
+		</div>
 	</div>
 </section>
 
@@ -482,15 +503,6 @@
 		}
 	}
 
-	.konkorde-gradient {
-		background: linear-gradient(90deg, #3b82f6, #06b6d4, #3b82f6);
-		background-size: 200% auto;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: shine 3s linear infinite;
-	}
-
 	.enquiry-sticky-wrap {
 		position: fixed;
 		left: 50%;
@@ -501,7 +513,10 @@
 		display: flex;
 		justify-content: center;
 		pointer-events: none;
-		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, visibility 0.4s;
+		transition:
+			transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			opacity 0.4s ease,
+			visibility 0.4s;
 		opacity: 1;
 		visibility: visible;
 	}

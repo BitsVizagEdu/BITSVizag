@@ -93,7 +93,7 @@
 
 			<div class="hero-badge">
 				<div class="badge-dot" />
-				 Est. 2008
+				Est. 2008
 			</div>
 		</div>
 	</section>

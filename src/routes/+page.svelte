@@ -20,7 +20,6 @@
 	$: logoScale = 1 + y / 700;
 	$: logoOpacity = Math.max(0, 1 - y / 900);
 
-
 	const structuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'CollegeOrUniversity',
@@ -61,7 +60,6 @@
 	<link rel="preload" as="image" href="/header/T10main.png" />
 </svelte:head>
 
-
 <svelte:window bind:scrollY={y} />
 {#if !$showNavBar}
 	<Notification />
@@ -87,13 +85,13 @@
 			<img
 				src="/logow.svg"
 				alt="BITS Vizag Logo"
-				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-52 sm:mr-[-20px] md:mr-[-35px] sm:pb-6 md:pb-10 mb-4 sm:mb-24 shadow-2xl transition-none"
+				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-52 sm:mr-[-20px] md:mr-[-35px] sm:pb-6 md:pb-10 mb-4 sm:mb-24 transition-none"
 				decoding="async"
 			/>
 			<img
 				src="/sq-1.svg"
 				alt=""
-				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-60 mb-8 sm:mb-24 shadow-2xl transition-none"
+				class="w-auto h-20 2xs:h-24 xs:h-32 sm:h-36 md:h-44 lg:h-60 mb-8 sm:mb-24 transition-none"
 				decoding="async"
 			/>
 		</div>
