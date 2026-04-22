@@ -116,7 +116,7 @@
 		},
 		'About-ABWEC': {
 			eyebrow: 'About Institution',
-			title: 'About Our Trust',
+			title: 'About Dr. B.R. Ambedkar Welfare Educational Society',
 			intro: [
 				'Dr. B.R. Ambedkar Welfare Educational Society (ABWES) is a non-profit organization dedicated to promoting social justice through education. Guided by the ideals of Dr. B.R. Ambedkar, the trust views education as the most powerful tool for empowerment and inclusive development.',
 				'In alignment with this vision, ABWES collaborates with BITS Vizag to strengthen access to quality higher education for students from diverse and underrepresented backgrounds.'
@@ -132,14 +132,9 @@
 				}
 			],
 			imageSrc: '/header/trust1.png',
-			imageAlt: 'Dr. B.R. Ambedkar Welfare Educational Society',
-			personName: 'Dr. B.R. Ambedkar Welfare Educational Society',
-			personMeta: 'ABWES',
-			personRole: 'Trust',
-			mediaFirst: true,
-			imageFit: 'contain',
-			disableImageMotion: true,
-			stickyMedia: false
+			imageAlt: 'Dr. B.R. Ambedkar Welfare Educational Society Logo',
+			personName: 'ABWES Trust',
+			personRole: 'Estd. 2008'
 		},
 		'Message-from-Secretary-&-Correspondent': {
 			eyebrow: 'Leadership Message',

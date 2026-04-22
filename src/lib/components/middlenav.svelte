@@ -636,7 +636,7 @@
 		position: relative;
 		max-width: 100%;
 		padding: 0 1.5rem;
-		height: 42px;
+		height: 40px;
 		line-height: normal;
 		margin: 0;
 		display: flex;

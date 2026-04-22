@@ -80,11 +80,11 @@
 					<!-- Email -->
 					<a
 						href="mailto:principal@bitsvizag.com"
-						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group min-w-fit"
+						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group min-w-fit"
 					>
 						<!-- Email Icon -->
 						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#facc15] transition-colors flex-shrink-0"
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -113,7 +113,7 @@
 					>
 						<!-- Phone Icon -->
 						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#facc15] transition-colors flex-shrink-0"
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -139,11 +139,11 @@
 					<!-- Global Alumni Network with Dropdown -->
 					<a
 						href="/alumni-data"
-						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group min-w-fit"
+						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group min-w-fit"
 					>
 						<!-- Globe Icon -->
 						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#facc15] transition-colors flex-shrink-0"
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"

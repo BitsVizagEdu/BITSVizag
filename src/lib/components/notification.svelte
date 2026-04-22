@@ -14,12 +14,12 @@
 					<!-- Courses Section -->
 					<span class="marquee-courses">
 						<span class="courses-label">COURSES:</span>
-						CSE <span class="dot">•</span>
-						AI & ML <span class="dot">•</span>
-						CYBER SECURITY <span class="dot">•</span>
-						ECE <span class="dot">•</span>
-						MECH <span class="dot">•</span>
-						EEE
+						<span class="course-cse">CSE</span> <span class="dot">•</span>
+						<span class="course-aiml">AI & ML</span> <span class="dot">•</span>
+						<span class="course-cyber">CYBER SECURITY</span> <span class="dot">•</span>
+						<span class="course-ece">ECE</span> <span class="dot">•</span>
+						<span class="course-mech">MECH</span> <span class="dot">•</span>
+						<span class="course-eee">EEE</span>
 					</span>
 				</span>
 			{/each}
@@ -38,12 +38,12 @@
 					<!-- Courses Section -->
 					<span class="marquee-courses">
 						<span class="courses-label">COURSES:</span>
-						CSE <span class="dot">•</span>
-						AI & ML <span class="dot">•</span>
-						CYBER SECURITY <span class="dot">•</span>
-						ECE <span class="dot">•</span>
-						MECH <span class="dot">•</span>
-						EEE
+						<span class="course-cse">CSE</span> <span class="dot">•</span>
+						<span class="course-aiml">AI & ML</span> <span class="dot">•</span>
+						<span class="course-cyber">CYBER SECURITY</span> <span class="dot">•</span>
+						<span class="course-ece">ECE</span> <span class="dot">•</span>
+						<span class="course-mech">MECH</span> <span class="dot">•</span>
+						<span class="course-eee">EEE</span>
 					</span>
 				</span>
 			{/each}
@@ -119,24 +119,56 @@
 	}
 
 	.marquee-courses {
-		color: #7dd3fc; /* Soft, muted sky blue instead of neon cyan */
 		font-size: 13.5px;
-		font-weight: 400; /* Normal weight for courses */
+		font-weight: 400;
 		letter-spacing: 0.04em;
 	}
 
 	.courses-label {
-		color: #ffffff; /* Crisp white */
-		font-weight: 600; /* Semi-bold to create hierarchy from the courses */
+		color: #fcfcfc; /* Crisp white */
+		font-weight: 600;
 		margin-right: 0.5rem;
+		opacity: 0.9;
 	}
 
 	.dot {
-		color: rgba(255, 255, 255, 0.25);
+		color: rgba(255, 255, 255, 0.444);
 		margin: 0 0.6rem; /* Tighter dot spacing */
 		font-size: 10px;
 		position: relative;
 		top: -1px;
+	}
+
+	/* Course Specific Colors with subtle glow */
+	.course-cse {
+		color: #cb22c0;
+		font-weight: 600;
+		text-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+	}
+	.course-aiml {
+		color: #45e4ec;
+		font-weight: 600;
+		text-shadow: 0 0 8px rgba(192, 132, 252, 0.3);
+	}
+	.course-cyber {
+		color: #4ade80;
+		font-weight: 600;
+		text-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+	}
+	.course-ece {
+		color: #fbbf24;
+		font-weight: 600;
+		text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+	}
+	.course-mech {
+		color: #df7344;
+		font-weight: 600;
+		text-shadow: 0 0 8px rgba(251, 146, 60, 0.3);
+	}
+	.course-eee {
+		color: #dce051;
+		font-weight: 600;
+		text-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
 	}
 
 	@keyframes scroll {
