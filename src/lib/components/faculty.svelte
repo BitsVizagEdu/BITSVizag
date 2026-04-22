@@ -15,8 +15,7 @@
 		'EEE',
 		'MECHANICAL',
 		'CIVIL',
-		'MBA',
-		'Lab Programmers'
+		'MBA'
 	];
 
 	/** @type {Record<string, number>} */
@@ -102,13 +101,24 @@
 
 	const facultyData = [
 		{
-			title: 'Mr',
-			name: 'B.POORNA SATYANARAYANA',
+			title: 'Dr',
+			name: 'Dr. B.POORNA SATYANARAYANA',
 			qualification: 'Ph.D',
 			designation: 'Professor',
 			department: 'CSE',
 			mobile: '9121214313',
 			email: 'poornasatyanarayana@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'S.Durga Prasad',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '',
+			email: '@gmail.com',
 			linkedin: '',
 			photo: ''
 		},
@@ -233,7 +243,7 @@
 			linkedin: 'https://www.linkedin.com/in/somu-harshini-2715a11a7',
 			photo: ''
 		},
-		
+
 		{
 			title: 'Mrs',
 			name: 'M.Sai prasanna',
@@ -289,7 +299,7 @@
 			linkedin: 'https://www.linkedin.com/in/vineeth-neela-50b3b3170',
 			photo: ''
 		},
-		
+
 		{
 			title: 'Ms',
 			name: 'S.Madhu Latha',
@@ -379,7 +389,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mr',
+			title: 'Dr',
 			name: 'K. Pradeep',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Professor',
@@ -391,7 +401,7 @@
 		},
 		{
 			title: 'Mr',
-			name: 'G. Ashwan Kumar',
+			name: 'G. Aswan Kumar',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Sr. Assistant Professor',
 			department: 'ECE',
@@ -401,7 +411,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mr',
+			title: 'Dr',
 			name: 'G. Anil Kumar',
 			qualification: 'M.Tech., Ph.D.',
 			designation: 'Associate Professor',
@@ -424,7 +434,7 @@
 		},
 		{
 			title: 'Ms',
-			name: 'G. Alirani',
+			name: 'G. Aliveni',
 			qualification: 'M.Tech',
 			designation: 'Assistant Professor',
 			department: 'EEE',
@@ -489,7 +499,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mr',
+			title: 'Dr',
 			name: 'Dr. P. JAYARANGARAO',
 			qualification: 'Ph.D',
 			designation: 'Associate Professor',
@@ -588,8 +598,8 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
-			name: 'Dr. Y. V. Bhaskara Lakshmi',
+			title: 'Dr',
+			name: 'Y. V. Bhaskara Lakshmi',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'ECE',
@@ -600,8 +610,8 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
-			name: 'Dr. B. Kiranmai',
+			title: 'Dr',
+			name: 'B. Kiranmai',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Professor',
 			department: 'ECE',
@@ -611,7 +621,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mr',
+			title: 'Dr',
 			name: 'H. Ravi Kishore',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
@@ -678,9 +688,9 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
+			title: 'Dr',
 			name: 'P. UMA CHAITHANYA',
-			qualification: 'Ph.D',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'Mechanical',
 			mobile: '9817049898',
@@ -700,9 +710,9 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
-			name: 'Dr. A. S. Bhanu Prasanna',
-			qualification: 'Ph.D',
+			title: 'Dr',
+			name: 'A. S. Bhanu Prasanna',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'Mechanical',
 			mobile: '8008633321',
@@ -846,8 +856,7 @@
 		{
 			title: 'Mrs',
 			name: 'G. JYOTHI',
-			qualification:
-				'M.Phil., M.Sc',
+			qualification: 'M.Phil., M.Sc',
 			designation: 'Sr. Assistant Professor',
 			department: 'BS&H',
 			mobile: '9989609399',
@@ -856,7 +865,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mr',
+			title: 'Dr',
 			name: 'P. V. Murali',
 			qualification: 'M.A., B.Ed., Ph.D',
 			designation: 'Sr. Assistant Professor',
@@ -867,8 +876,8 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
-			name: 'Dr. Paromita Mukherjee',
+			title: 'Dr',
+			name: 'Paromita Mukherjee',
 			qualification: 'Ph.D',
 			designation: 'Associate Professor',
 			department: 'BS&H',
@@ -902,8 +911,8 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
-			name: 'Dr.T.Suneetha Rani',
+			title: 'Dr',
+			name: 'T.Suneetha Rani',
 			qualification: 'Ph.D',
 			designation: 'Assistant Professor',
 			department: 'BS&H',
@@ -971,6 +980,7 @@
 
 	const csePriorityOrder = [
 		'B.POORNASATYANARAYANA',
+		'S.Durga Prasad',
 		'U. Padma Mohan',
 		'D. KANAKESWARI',
 		'P. T. S. Priya',
@@ -995,16 +1005,14 @@
 		'S.Madhu Latha'
 	];
 
-	const csePriorityIndex = csePriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const csePriorityIndex = csePriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	const ecePriorityOrder = [
 		'Dr. B. Kiranmai',
+
 		'K. Pradeep',
 		'Dr. Y. V. Bhaskara Lakshmi',
 		'H. Ravi Kishore',
@@ -1016,13 +1024,10 @@
 		'T. Pavani'
 	];
 
-	const ecePriorityIndex = ecePriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const ecePriorityIndex = ecePriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	const eeePriorityOrder = [
 		'U. KAMARAJU',
@@ -1034,13 +1039,10 @@
 		'V. Madhava Rao'
 	];
 
-	const eeePriorityIndex = eeePriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const eeePriorityIndex = eeePriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	const mechanicalPriorityOrder = [
 		'P. UMA CHAITHANYA',
@@ -1057,13 +1059,10 @@
 		'N. Donbru'
 	];
 
-	const mechanicalPriorityIndex = mechanicalPriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const mechanicalPriorityIndex = mechanicalPriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	const civilPriorityOrder = [
 		'Pavani',
@@ -1073,13 +1072,10 @@
 		'K. Lavanya'
 	];
 
-	const civilPriorityIndex = civilPriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const civilPriorityIndex = civilPriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	const mbaPriorityOrder = [
 		'K. SIVEESHA',
@@ -1090,13 +1086,10 @@
 		'L. Srinivasa'
 	];
 
-	const mbaPriorityIndex = mbaPriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const mbaPriorityIndex = mbaPriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	const bshPriorityOrder = [
 		'Dr. P. JAYARANGARAO',
@@ -1115,13 +1108,10 @@
 		'A. PYDIRAJU'
 	];
 
-	const bshPriorityIndex = bshPriorityOrder.reduce(
-		(map, name, index) => {
-			map[normalizeNameKey(name)] = index;
-			return map;
-		},
-		/** @type {Record<string, number>} */ ({})
-	);
+	const bshPriorityIndex = bshPriorityOrder.reduce((map, name, index) => {
+		map[normalizeNameKey(name)] = index;
+		return map;
+	}, /** @type {Record<string, number>} */ ({}));
 
 	// Qualification ranking system: Higher scores = Higher qualifications
 	const getQualificationRank = (qualification = '') => {
@@ -1149,10 +1139,7 @@
 			qual.includes('mca')
 		) {
 			// M.Tech (Pursuing) - rank 6.5
-			if (
-				(qual.includes('m.tech') || qual.includes('mtech')) &&
-				qual.includes('pursuing')
-			) {
+			if ((qual.includes('m.tech') || qual.includes('mtech')) && qual.includes('pursuing')) {
 				return 6.5;
 			}
 			return 6;
@@ -1412,44 +1399,43 @@
 		'M.Tech'
 	];
 
-	$: groupedFacultyMembers = facultyMembers.reduce(
-		(groups, person) => {
-			if (!groups[person.department]) {
-				groups[person.department] = [];
-			}
-			groups[person.department].push(person);
-			return groups;
-		},
-		/** @type {Record<string, Array<(typeof facultyMembers)[number]>>} */ ({})
-	);
+	$: groupedFacultyMembers = facultyMembers.reduce((groups, person) => {
+		if (!groups[person.department]) {
+			groups[person.department] = [];
+		}
+		groups[person.department].push(person);
+		return groups;
+	}, /** @type {Record<string, Array<(typeof facultyMembers)[number]>>} */ ({}));
 
-	$: orderedDepartmentGroups = /** @type {Array<[string, Array<(typeof facultyMembers)[number]>]>} */ (
-		Object.entries(groupedFacultyMembers)
-			.sort(([a], [b]) => {
-				const indexA = departmentDisplayOrder.indexOf(a);
-				const indexB = departmentDisplayOrder.indexOf(b);
+	$: orderedDepartmentGroups =
+		/** @type {Array<[string, Array<(typeof facultyMembers)[number]>]>} */ (
+			Object.entries(groupedFacultyMembers)
+				.sort(([a], [b]) => {
+					const indexA = departmentDisplayOrder.indexOf(a);
+					const indexB = departmentDisplayOrder.indexOf(b);
 
-				if (indexA === -1 && indexB === -1) {
-					return a.localeCompare(b);
-				}
+					if (indexA === -1 && indexB === -1) {
+						return a.localeCompare(b);
+					}
 
-				if (indexA === -1) {
-					return 1;
-				}
+					if (indexA === -1) {
+						return 1;
+					}
 
-				if (indexB === -1) {
-					return -1;
-				}
+					if (indexB === -1) {
+						return -1;
+					}
 
-				return indexA - indexB;
-			})
-			.map(([department, people]) =>
-				/** @type {[string, Array<(typeof facultyMembers)[number]>]} */ ([
-					department,
-					[...people].sort(getDepartmentSorter(department))
-				])
-			)
-	);
+					return indexA - indexB;
+				})
+				.map(
+					([department, people]) =>
+						/** @type {[string, Array<(typeof facultyMembers)[number]>]} */ ([
+							department,
+							[...people].sort(getDepartmentSorter(department))
+						])
+				)
+		);
 
 	$: labProgrammers = filteredFaculty
 		.filter((person) => isLabProgrammer(person.designation) && !isCseDepartment(person))

@@ -62,7 +62,7 @@
 				description =
 					'Mechanical Engineering department offering programs in thermal systems, design engineering, manufacturing, and mechanical innovations.';
 				break;
-			
+
 			case 'Department of BS&H':
 				title = 'Humanities Department | Basic Sciences at BITS Vizag';
 				description =
@@ -144,11 +144,10 @@
 				{#if currentSlug === 'Department of MECH'}
 					<DepartmentofMech />
 				{/if}
-				
-			
 			</div>
 		</main>
 	</div>
 {/if}
+
 <style>
 </style>

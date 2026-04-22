@@ -1,4 +1,6 @@
 <script>
+	import Counter from './Counter.svelte';
+
 	const excellenceStats = [
 		{
 			value: '10000+',
@@ -57,8 +59,16 @@
 	<div class="strength-container">
 		<div class="excellence-panel" data-aos="fade-up" data-aos-delay="40">
 			<h2 class="excellence-title">
-				<svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-					<path d="M12 3L1.5 8.25 12 13.5l8.58-4.29v5.58H22.5V8.25L12 3zm-7.5 9.3V15c0 2.49 3.36 4.5 7.5 4.5s7.5-2.01 7.5-4.5v-2.7L12 16.5 4.5 12.3z" />
+				<svg
+					class="title-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					aria-hidden="true"
+				>
+					<path
+						d="M12 3L1.5 8.25 12 13.5l8.58-4.29v5.58H22.5V8.25L12 3zm-7.5 9.3V15c0 2.49 3.36 4.5 7.5 4.5s7.5-2.01 7.5-4.5v-2.7L12 16.5 4.5 12.3z"
+					/>
 				</svg>
 				ACADEMIC EXCELLENCE
 			</h2>
@@ -68,12 +78,18 @@
 				{#each excellenceStats as stat, idx}
 					<article class="excellence-item" data-aos="fade-up" data-aos-delay={80 + idx * 60}>
 						<div class="item-icon-wrap">
-							<svg class="item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+							<svg
+								class="item-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								aria-hidden="true"
+							>
 								<path d={stat.icon} />
 							</svg>
 						</div>
 						<div class="item-copy">
-							<p class="item-value">{stat.value}</p>
+							<p class="item-value"><Counter value={stat.value} /></p>
 							<p class="item-label">{stat.label}</p>
 						</div>
 					</article>
@@ -83,11 +99,15 @@
 
 		<div class="info-cards" data-aos="fade-up" data-aos-delay="120">
 			{#each infoCards as card, idx}
-				<article class={`info-card ${card.colorClass}`} data-aos="zoom-in" data-aos-delay={140 + idx * 70}>
+				<article
+					class={`info-card ${card.colorClass}`}
+					data-aos="zoom-in"
+					data-aos-delay={140 + idx * 70}
+				>
 					<h3 class="card-title">{card.title}</h3>
 					<div class="card-lines">
 						{#each card.items as line}
-							<p class="card-line"><strong>{line.value}</strong> {line.text}</p>
+							<p class="card-line"><strong><Counter value={line.value} /></strong> {line.text}</p>
 						{/each}
 					</div>
 				</article>
@@ -137,7 +157,12 @@
 		height: 1px;
 		margin: 2rem auto 1.8rem;
 		max-width: 86%;
-		background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0));
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0.24),
+			rgba(255, 255, 255, 0)
+		);
 	}
 
 	.excellence-grid {
