@@ -98,7 +98,9 @@
 
 		<aside class="about-media-wrap" class:static-media={!stickyMedia} aria-label="About page image section">
 			<figure class="about-media">
-				<img src={imageSrc} alt={imageAlt} loading="lazy" class:contain-fit={imageFit === 'contain'} />
+				<div class="parallax-viewport">
+					<img src={imageSrc} alt={imageAlt} loading="lazy" class:contain-fit={imageFit === 'contain'} />
+				</div>
 				{#if personName || personRole || personMeta}
 					<figcaption class:align-center={mediaFirst}>
 						{#if personName}
@@ -157,7 +159,7 @@
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: #0b4fb0;
-		text-align: center;
+		text-align: left;
 	}
 
 	.about-title {
@@ -167,7 +169,7 @@
 		font-weight: 800;
 		letter-spacing: -0.02em;
 		color: #0f172a;
-		text-align: center;
+		text-align: left;
 	}
 
 	.about-paragraph {
@@ -176,6 +178,7 @@
 		line-height: 1.72;
 		color: #4b5563;
 		text-wrap: pretty;
+		text-align: justify;
 	}
 
 	.about-section {
@@ -188,7 +191,7 @@
 		line-height: 1.2;
 		font-weight: 700;
 		color: #be123c;
-		text-align: center;
+		text-align: left;
 	}
 
 	.about-section p {
@@ -231,13 +234,23 @@
 		box-shadow: 0 18px 36px -24px rgba(15, 23, 42, 0.32);
 	}
 
-	.about-media img {
-		display: block;
+	.parallax-viewport {
+		position: relative;
 		width: 100%;
-		aspect-ratio: 4 / 4.6;
+		aspect-ratio: 4 / 5.2; /* Taller aspect ratio for institutional look */
+		overflow: hidden;
+	}
+
+	.about-media img {
+		position: absolute;
+		top: -12.5%; /* Significant vertical bleed */
+		left: 0;
+		width: 100%;
+		height: 125%; /* Large buffer to ensure NO CUTTING ever occurs */
 		object-fit: cover;
+		object-position: center;
 		transform: translate3d(0, var(--about-image-y), 0) scale(var(--about-image-scale));
-		transition: transform 180ms linear;
+		transition: transform 300ms cubic-bezier(0.1, 0, 0.2, 1);
 		will-change: transform;
 	}
 

@@ -10,16 +10,22 @@
 	/** @type {HTMLElement[]} */
 	let bgElements = [];
 	let isDockedAtCta = false;
-	$: isHomePage = $page.url.pathname === '/';
-	$: isPlacementPage = $page.url.pathname.includes('/placements');
-	$: shouldShowCta = isHomePage || isPlacementPage;
+	let isScrolledPastHero = false;
 
 	onMount(() => {
 		/** @type {any} */
 		const g = gsap;
 		g.registerPlugin(ScrollTrigger);
 
-		// Optimized Mouse move parallax with smoother interp
+		// Visibility controller: Only show floating CTA after scrolling down a bit
+		ScrollTrigger.create({
+			start: 'top -10%',
+			onUpdate: (self) => {
+				isScrolledPastHero = self.scroll() > 300;
+			}
+		});
+
+		// Optimized Mouse move parallax
 		let xPos = 0;
 		let yPos = 0;
 		let mouseX = 0;
@@ -35,14 +41,12 @@
 			mouseX = (clientX / innerWidth - 0.5) * 30;
 			mouseY = (clientY / innerHeight - 0.5) * 30;
 
-			// Only start animation if not already running
 			if (!isMoving && !animationId) {
 				isMoving = true;
 				ticker();
 			}
 		};
 
-		// Ticker for smooth non-laggy movement - only runs when mouse moves
 		const ticker = () => {
 			xPos += (mouseX - xPos) * 0.08;
 			yPos += (mouseY - yPos) * 0.08;
@@ -64,7 +68,6 @@
 				willChange: 'transform'
 			});
 
-			// Continue animation only if movement is happening
 			if (Math.abs(mouseX - xPos) > 0.1 || Math.abs(mouseY - yPos) > 0.1) {
 				animationId = requestAnimationFrame(ticker);
 			} else {
@@ -86,15 +89,15 @@
 
 		/** @type {IntersectionObserver | null} */
 		let ctaObserver = null;
-		if (joinSection && shouldShowCta) {
+		if (joinSection) {
 			ctaObserver = new IntersectionObserver(
 				(entries) => {
 					const [entry] = entries;
 					isDockedAtCta = entry.isIntersecting;
 				},
 				{
-					threshold: 0.28,
-					rootMargin: '0px 0px -16% 0px'
+					threshold: 0,
+					rootMargin: '100px 0px 100px 0px'
 				}
 			);
 			ctaObserver.observe(joinSection);
@@ -240,7 +243,9 @@
 						</p>
 					</div>
 
-					<div id="joinnowbtn" class="enquiry-sticky-wrap" class:is-docked-home={shouldShowCta && isDockedAtCta}>
+					<div id="joinnowbtn" class="enquiry-sticky-wrap" 
+						class:is-docked-home={isDockedAtCta}
+						class:is-hidden={!isDockedAtCta && !isScrolledPastHero}>
 						<a href="/contactus" class="enquiry-sticky-cta inline-block group relative">
 							<!-- Glow Effect behind button -->
 							<div
@@ -492,17 +497,28 @@
 		bottom: max(8px, env(safe-area-inset-bottom));
 		transform: translateX(-50%);
 		z-index: 1200;
-		width: calc(100% - 0.8rem);
+		width: calc(100% - 1.5rem);
 		display: flex;
 		justify-content: center;
 		pointer-events: none;
+		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, visibility 0.4s;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.enquiry-sticky-wrap.is-hidden {
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(-50%, 20px);
 	}
 
 	.enquiry-sticky-wrap.is-docked-home {
 		position: relative;
 		left: 0;
 		bottom: auto;
-		transform: none;
+		transform: none !important;
+		opacity: 1 !important;
+		visibility: visible !important;
 		width: 100%;
 		margin-top: 0.8rem;
 		display: flex;
