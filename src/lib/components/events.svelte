@@ -455,70 +455,79 @@
 </section>
 
 <!--<1024px Smaller screens-->
-<section class="lg:hidden flex flex-col w-[100vw] bg-gray-800">
-	<div class="flex md:p-10 sm:p-10 xs:py-5 xs:px-12 px-6 py-4 items-center justify-center">
-		<p class="md:text-4xl sm:text-2xl text-2xl font-bold text-gray-300">Events</p>
+<!--<1024px Smaller screens-->
+<section class="lg:hidden flex flex-col w-full bg-[#f8fafc] py-8">
+	<div class="flex items-center justify-center mb-8 px-6">
+		<div class="flex flex-col items-center">
+			<p class="text-3xl font-black text-slate-900 uppercase tracking-tight">Events</p>
+			<div class="h-1.5 w-16 bg-red-600 mt-2 rounded-full"></div>
+		</div>
 	</div>
-	<div class="flex flex-wrap xs:p-10">
+	
+	<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
 		{#each events.slice(0, limit) as event, i}
-			<div class="flex w-[300px] grow shrink-0 pb-6 justify-center">
-				<div class="flex flex-col bg-white xs:ml-5 mx-2 rounded-2xl items-center p-4">
-					<p class="md:text-sm sm:text-sm text-lg text-center py-2 font-bold">{event.name}</p>
-					<p class="md:text-sm sm:text-sm text-lg text-center py-2 text-gray-900 font-[400]">
+			<div class="flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 transition-all duration-300 hover:shadow-xl">
+				<div class="relative aspect-video overflow-hidden">
+					<img
+						class="w-full h-full object-cover"
+						src={event.image}
+						alt={event.name}
+						loading="lazy"
+						decoding="async"
+					/>
+					<div class="absolute bottom-3 left-3">
+						<div class="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-wider">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2.5"
+								stroke="currentColor"
+								class="w-3 h-3"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+								/>
+							</svg>
+							{event.date}
+						</div>
+					</div>
+				</div>
+				
+				<div class="p-5 flex flex-col flex-grow">
+					<h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">{event.name}</h3>
+					<p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
 						{event.description}
 					</p>
-					<div class="py-4">
-						<img
-							class="xs:h-[300px] xs:w-[300px] object-contain rounded-lg"
-							src={event.image}
-							alt=""
-							loading="lazy"
-							decoding="async"
-						/>
-					</div>
-					<div class="flex pb-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="w-6 h-6 text-gray-900"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-							/>
-						</svg>
-						<p class="text-sm font-light text-gray-900 text-center pl-2">{event.date}</p>
+					
+					<div class="mt-auto pt-4 border-t border-slate-50">
+						<a href={event.href} class="text-xs font-black text-red-600 uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
+							View Highlights
+							<i class="fa-solid fa-arrow-right"></i>
+						</a>
 					</div>
 				</div>
 			</div>
 		{/each}
-		{#if limit < events.length}
-			<div class="flex flex-col items-center w-full py-10 mt-2">
-				<div
-					class="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6 opacity-50"
-				></div>
-				<button
-					on:click={showMore}
-					class="group flex items-center gap-4 bg-transparent border-none cursor-pointer outline-none p-0 appearance-none text-left"
-				>
-					<span
-						class="text-2xl font-black text-gray-300 lowercase tracking-tight group-hover:text-white transition-all"
-					>
-						explore for more .....
-					</span>
-					<div
-						class="h-10 w-10 rounded-full border border-gray-600 flex items-center justify-center group-hover:border-white group-hover:bg-white group-hover:text-gray-900 transition-all duration-500"
-					>
-						<i class="fa-solid fa-chevron-down text-sm"></i>
-					</div>
-				</button>
-			</div>
-		{/if}
 	</div>
+
+	{#if limit < events.length}
+		<div class="flex flex-col items-center w-full py-12 px-4">
+			<button
+				on:click={showMore}
+				class="group flex items-center gap-4 bg-white border border-slate-200 rounded-full py-3 px-8 shadow-sm hover:shadow-md transition-all active:scale-95"
+			>
+				<span class="text-sm font-bold text-slate-900 uppercase tracking-widest">
+					Explore More Events
+				</span>
+				<div class="h-8 w-8 rounded-full bg-slate-900 text-white flex items-center justify-center group-hover:translate-y-0.5 transition-transform">
+					<i class="fa-solid fa-chevron-down text-[10px]"></i>
+				</div>
+			</button>
+		</div>
+	{/if}
 </section>
 
 <style>

@@ -235,16 +235,16 @@
 <section class="py-20 bg-[#fcfdfe] font-roboto overflow-hidden">
 	<div class="w-full px-6 md:px-12 lg:px-16">
 		<!-- Section Header -->
-		<div class="committees-header text-center mb-16">
-			<h3 class="text-2xl md:text-4xl font-black text-slate-900 tracking-none uppercase">
+		<div class="committees-header text-center mb-10 md:mb-16">
+			<h3 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight uppercase">
 				Operational <span class="text-red-600">Committees</span>
 			</h3>
-			<div class="h-1.5 w-32 bg-red-600 mx-auto mt-4 rounded-full"></div>
+			<div class="h-1.5 w-16 md:w-32 bg-red-600 mx-auto mt-2 md:mt-4 rounded-full"></div>
 		</div>
 
 		<!-- Cards Grid - Spread End-to-End -->
 		<div
-			class="committees-grid grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 md:gap-5"
+			class="committees-grid grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6"
 		>
 			{#each items as item, i}
 				{@const style = themes[item.theme]}

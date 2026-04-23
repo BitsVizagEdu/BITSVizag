@@ -69,16 +69,15 @@
 
 <div class="image-grid relative">
 	{#each pics as img}
-		<div class="{img.id} relative image-grid-col-2 image-grid-row-2">
-			<img class="" src={img.pic} alt="architecture" loading="lazy" decoding="async" />
+		<div class="{img.id} relative group overflow-hidden">
+			<img class="transition-transform duration-700 group-hover:scale-110" src={img.pic} alt={img.name} loading="lazy" decoding="async" />
 			<div
 				id="overlayimg"
-				class="flex flex-col opacity-0 top-0 absolute h-[100%] p-5 transition-[opacity] duration-500 bg-gradient-to-t from-black to-transparent hover:opacity-70 justify-center first:justify-end w-full"
+				class="flex flex-col absolute inset-0 p-4 md:p-8 transition-opacity duration-500 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 justify-end w-full"
 			>
-				<div class="3xs:p-4 lg:p-10">
-					<a href={img.href} class="font-black text-white 3xs:text-2xl lg:text-4xl">{img.name}</a
-					><br />
-					<a class="font-bold text-sortwhite 3xs:text-xl lg:text-3xl">{img.date}</a>
+				<div class="transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-500">
+					<a href={img.href} class="font-black text-white text-lg sm:text-xl lg:text-4xl block leading-tight mb-1">{img.name}</a>
+					<span class="font-bold text-white/70 text-xs sm:text-sm lg:text-2xl">{img.date}</span>
 				</div>
 			</div>
 		</div>
