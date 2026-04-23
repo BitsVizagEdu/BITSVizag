@@ -129,16 +129,18 @@
 	/* Fonts are loaded in app.html */
 
 	nav {
-		--middlenav-mobile-height: 36px;
-		--secondnav-mobile-height: 32px;
+		--middlenav-mobile-height: 32px;
+		--secondnav-mobile-height: 28px;
 		position: sticky;
-		top: 46px; /* Below Middlenav Master Height (User manual edit: 46px) */
+		top: 41px; /* Middlenav Master Height + Gap */
 		z-index: 997;
 		width: 100%;
 		background: #d22626;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Satoshi', 'Inter', sans-serif;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+		transition:
+			transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			opacity 0.3s ease;
 		will-change: transform;
 	}
 
@@ -151,7 +153,7 @@
 	nav .wrapper {
 		max-width: 100%;
 		padding: 0 1.5rem;
-		height: 38px;
+		height: 34px;
 		margin: 0;
 		display: flex;
 		align-items: center;
@@ -283,12 +285,12 @@
 			justify-content: center;
 			min-width: 0;
 			height: 100%;
-			padding: 0 6px;
-			font-size: 13px;
+			padding: 0 4px;
+			font-size: 11.5px;
 			font-weight: 700;
 			color: #ffffff;
 			text-transform: capitalize;
-			letter-spacing: 0.02em;
+			letter-spacing: 0.01em;
 			white-space: nowrap;
 			text-decoration: none;
 			transition: opacity 0.2s ease;

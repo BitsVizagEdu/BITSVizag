@@ -9,8 +9,8 @@
 
 	const departmentOptions = [
 		'ALL DEPARTMENTS',
-		'BS&H',
 		'CSE',
+		'BS&H',
 		'ECE',
 		'EEE',
 		'MECHANICAL',
@@ -103,7 +103,7 @@
 		{
 			title: 'Dr',
 			name: 'Dr. B.POORNA SATYANARAYANA',
-			qualification: 'Ph.D',
+			qualification: 'M.Tech., Ph.D',
 			designation: 'Professor',
 			department: 'CSE',
 			mobile: '9121214313',
@@ -970,7 +970,7 @@
 		experience: experienceByName[faculty.name] ?? null
 	}));
 
-	let selectedDepartment = 'ALL DEPARTMENTS';
+	let selectedDepartment = 'CSE';
 	let searchTerm = '';
 	let isLoading = true;
 
@@ -979,7 +979,7 @@
 	const normalizeNameKey = (value = '') => normalize(value).replace(/[^a-z]/g, '');
 
 	const csePriorityOrder = [
-		'B.POORNASATYANARAYANA',
+		'Dr. B.POORNA SATYANARAYANA',
 		'S.Durga Prasad',
 		'U. Padma Mohan',
 		'D. KANAKESWARI',

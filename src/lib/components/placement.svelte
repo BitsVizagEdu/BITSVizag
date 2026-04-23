@@ -264,22 +264,24 @@
 
 	@media (max-width: 768px) {
 		.recruiters-premium {
-			padding: 3.3rem 0;
+			padding: 2.5rem 0;
 		}
 
 		.heading {
-			margin-bottom: 0.95rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.heading h2 {
-			gap: 0.35rem;
-			font-size: clamp(1.7rem, 8vw, 2.2rem);
+			flex-direction: column;
+			gap: 0.1rem;
+			font-size: clamp(1.8rem, 8vw, 2.4rem);
 		}
 
 		.subtitle {
-			font-size: 0.93rem;
-			line-height: 1.55;
-			max-width: 92%;
+			font-size: 0.95rem;
+			line-height: 1.5;
+			max-width: 90%;
+			margin-top: 0.6rem;
 		}
 
 		.marquee-track {

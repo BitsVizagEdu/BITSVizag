@@ -57,13 +57,13 @@
 <nav
 	class="{isMobileMenuOpen ? 'mobile-menu-active-state' : ''} {activeMobileDropdown
 		? 'mobile-menu-active-state'
-		: ''} h-[36px] lg:h-auto"
+		: ''} h-[32px] lg:h-auto"
 >
-	<div class="wrapper">
+	<div class="wrapper !h-[32px]">
 		<!-- Perfected Mobile Quick Nav: Scrolling High-Value Links Strip -->
 		<div class="mobile-quick-nav lg:hidden flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar">
-			<div class="flex items-center gap-4 py-1">
-				<a href="/" class="mini-link" on:click={closeMenus}>Home</a>
+			<div class="flex items-center gap-3 py-0.5">
+				<a href="/" class="mini-link !text-[11.5px]" on:click={closeMenus}>Home</a>
 				<a href="/aboutus/About-BITS" class="mini-link" on:click={closeMenus}>About Us</a>
 				<button
 					type="button"
@@ -628,7 +628,7 @@
 		z-index: 998;
 		width: 100%;
 		background: #ffffff;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Satoshi', 'Inter', sans-serif;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 	}
 
@@ -636,7 +636,7 @@
 		position: relative;
 		max-width: 100%;
 		padding: 0 1.5rem;
-		height: 40px;
+		height: 45px;
 		line-height: normal;
 		margin: 0;
 		display: flex;

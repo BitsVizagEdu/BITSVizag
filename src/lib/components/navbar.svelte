@@ -187,27 +187,75 @@
 	id="header"
 	class="border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl overflow-hidden"
 >
-	<div class="w-full py-1.5 xs:py-2 md:py-2.5">
-		<div
-			class="w-full px-4 xs:px-6 sm:px-8 lg:px-12 grid grid-cols-[1fr_auto_1fr] items-center gap-4 sm:gap-8"
-		>
-			<!-- 1 & 2. Left & Right Sections: Aligned and edge-equal -->
-			<!-- Left Logos: 2026 + BITS Wordmark -->
-			<div class="flex items-center justify-start gap-0 shrink-0 h-full">
-				<div
-					class="flex items-center justify-center h-[30px] w-auto 2xs:h-[38px] xs:h-[50px] md:h-[72px] lg:h-[90px]"
+	<div class="w-full py-2 md:py-3">
+		<!-- Mobile Layout (Visible only on < md) -->
+		<div class="flex md:hidden flex-col items-center px-2 gap-2">
+			<!-- Centered Logos Row -->
+			<div class="flex items-center justify-center gap-4 w-full border-b border-white/5 pb-2">
+				<div class="flex items-center gap-1.5">
+					<div class="h-[34px] w-auto">
+						<img class="h-full w-auto object-contain" src="/2026.png" alt="2026 BITS" />
+					</div>
+					<div class="h-[30px] w-[75px]">
+						<img class="h-full w-full object-contain" src="/1.png" alt="BITS Vizag" />
+					</div>
+				</div>
+				<div class="h-6 w-[1px] bg-white/10 mx-1"></div>
+				<div class="flex items-center gap-2">
+					<div class="h-[32px] w-[32px] rounded-full overflow-hidden border border-white/20">
+						<img class="h-full w-full object-cover" src="/bits.png" alt="BITS Logo" />
+					</div>
+					<div class="h-[30px] w-[30px]">
+						<img class="h-full w-full object-contain" src="/naac.png" alt="NAAC" />
+					</div>
+				</div>
+			</div>
+
+			<!-- Center Content -->
+			<div class="flex flex-col items-center text-center -mt-1">
+				<h1
+					class="text-[14.5px] xs:text-[16px] font-black text-white tracking-tight leading-tight uppercase font-satoshi"
 				>
+					Baba Institute of Technology and Sciences (A)
+				</h1>
+				<p
+					class="text-[10px] font-bold text-yellow-400 tracking-[0.1em] uppercase mt-0.5 font-inter"
+				>
+					An Autonomous Institution
+				</p>
+				<p class="text-[9px] text-slate-300 font-medium mt-1 leading-tight font-inter">
+					Accredited by <span class="text-white font-bold">NAAC</span> | Approved by
+					<span class="text-white font-bold">AICTE</span>
+					| Affiliated to <span class="text-white font-bold">JNTU-GV</span>
+					<br />
+					ISO 9001:2015 Certified | 18 Years of Excellence
+				</p>
+				<!-- Tight College Code Badge -->
+				<div
+					class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800"
+				>
+					<span class="text-[9px] font-bold text-amber-500 uppercase tracking-widest font-inter"
+						>Code :</span
+					>
+					<span class="baba-text font-black text-xs leading-none font-satoshi">BABA</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Desktop Layout (Visible only on md and above) -->
+		<div class="hidden md:grid w-full px-8 lg:px-12 grid-cols-[1fr_auto_1fr] items-center gap-8">
+			<!-- Left Logos -->
+			<div class="flex items-center justify-start gap-0 shrink-0 h-full">
+				<div class="h-[72px] lg:h-[90px]">
 					<img
-						class="h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
+						class="h-full w-auto object-contain hover:scale-105 transition-transform"
 						src="/2026.png"
 						alt="2026 BITS"
 					/>
 				</div>
-				<div
-					class="flex items-center pr-2 justify-center h-[26px] w-[65px] 3xs:h-[32px] 3xs:w-[80px] 2xs:h-[38px] 2xs:w-[95px] xs:h-[48px] xs:w-[115px] md:h-[68px] md:w-[160px] lg:h-[94px] lg:w-[212px] drop-shadow-2xl"
-				>
+				<div class="h-[68px] w-[160px] lg:h-[94px] lg:w-[212px]">
 					<img
-						class="h-full w-full object-contain bg-transparent"
+						class="h-full w-full object-contain"
 						src="/1.png"
 						alt="BITS Vizag"
 						style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
@@ -215,74 +263,57 @@
 				</div>
 			</div>
 
-			<!-- 3 & 4. Center Alignment & Width Control -->
-			<!-- Center Content: perfectly centred header text -->
-			<div class="flex flex-col justify-center items-center text-center px-2 flex-shrink min-w-0">
+			<!-- Center Content -->
+			<div class="flex flex-col justify-center items-center text-center px-2">
 				<h1
-					class="text-[9px] 3xs:text-[11px] 2xs:text-[13px] xs:text-[15.5px] sm:text-xl md:text-[22.5px] lg:text-[29px] font-extrabold text-white tracking-normal leading-snug filter drop-shadow-lg font-satoshi whitespace-nowrap"
+					class="text-[22.5px] lg:text-[29px] font-extrabold text-white tracking-normal leading-snug filter drop-shadow-lg font-satoshi whitespace-nowrap"
 				>
 					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
 				</h1>
-
-				<div class="flex items-center gap-1 mt-0 md:mt-0.5">
-					<div class="h-[1px] w-1 xs:w-3 md:w-12 bg-yellow-400/50"></div>
+				<div class="flex items-center gap-1 mt-0.5">
+					<div class="h-[1px] w-12 bg-yellow-400/50"></div>
 					<h5
-						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[9.5px] xs:text-[10.5px] sm:text-lg md:text-[20px] font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter whitespace-nowrap"
+						class="text-[20px] font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter whitespace-nowrap"
 					>
 						An Autonomous Institution
 					</h5>
-					<div class="h-[1px] w-1 xs:w-3 md:w-12 bg-yellow-400/50"></div>
+					<div class="h-[1px] w-12 bg-yellow-400/50"></div>
 				</div>
-
-				<div class="mt-0 md:mt-0.5 text-slate-300">
+				<div class="mt-0.5 text-slate-300">
 					<h6
-						class="text-[6px] 3xs:text-[7.5px] 2xs:text-[9px] xs:text-[11.5px] md:text-[13.5px] lg:text-[15px] font-medium leading-relaxed opacity-95 mx-auto font-inter"
+						class="text-[13.5px] lg:text-[15px] font-medium leading-relaxed opacity-95 font-inter"
 					>
 						Accredited by NAAC | Approved by AICTE | Affiliated to JNTU-GV Vizianagaram
-						<br class="hidden sm:block" />
-						<span class="block">
-							ISO 9001:2015 Certified | 18 Years of Educational Excellence Foundation</span
-						>
+						<br />
+						<span>ISO 9001:2015 Certified | 18 Years of Educational Excellence Foundation</span>
 					</h6>
 					<div
-						class="mt-0.5 xs:mt-1.5 inline-flex items-center gap-1 xs:gap-1.5 px-1.5 xs:px-3 py-0.5 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
+						class="mt-1.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
 					>
-						<span
-							class="text-[7.5px] 2xs:text-[9px] md:text-sm font-bold text-amber-500 uppercase tracking-wider"
+						<span class="text-sm font-bold text-amber-500 uppercase tracking-wider"
+							>College Code :</span
 						>
-							College Code :
-						</span>
-						<span
-							class="inline-block baba-text font-black tracking-normal text-[9px] 2xs:text-[11px] xs:text-base md:text-[17px] leading-none font-satoshi"
-						>
-							BABA
-						</span>
+						<span class="baba-text font-black text-[17px] leading-none font-satoshi">BABA</span>
 					</div>
 				</div>
 			</div>
 
-			<!-- Right Logos: BITS + NAAC -->
-			<div
-				class="flex items-center justify-end gap-1.5 xs:gap-3 md:gap-3 shrink-0 h-full pr-4 sm:pr-8 lg:pr-10"
-			>
+			<!-- Right Logos -->
+			<div class="flex items-center justify-end gap-3 shrink-0 h-full">
 				<div
-					id="bits"
-					class="flex items-center justify-center h-[20px] w-[20px] 3xs:h-[24px] 3xs:w-[28px] 2xs:h-[30px] 2xs:w-[30px] xs:h-[38px] xs:w-[38px] md:h-[64px] md:w-[64px] lg:h-[80px] lg:w-[80px] relative group rounded-full overflow-hidden"
+					class="h-[68px] w-[68px] lg:h-[90px] lg:w-[90px] relative group rounded-full overflow-hidden"
 				>
 					<div
 						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"
 					></div>
 					<img
-						class="relative h-full w-full object-cover shadow-2xl transition-all duration-500 scale-[1.03]"
-						src="/bits.jpg"
-						alt="BITS Vizag Logo"
+						class="relative h-full w-full object-cover scale-[1.03]"
+						src="/bits.png"
+						alt="BITS Logo"
 					/>
 				</div>
-
-				<div
-					class="flex items-center justify-center h-[28px] w-[28px] 3xs:h-[32px] 3xs:w-[32px] 2xs:h-[38px] 2xs:w-[38px] xs:h-[50px] xs:w-[50px] md:h-[84px] md:w-[84px] lg:h-[102px] lg:w-[102px]"
-				>
-					<img class="h-full w-full object-contain" src="/naac.png" alt="NAAC Accredited" />
+				<div class="h-[84px] w-[84px] lg:h-[102px] lg:w-[102px]">
+					<img class="h-full w-full object-contain" src="/naac.png" alt="NAAC" />
 				</div>
 			</div>
 		</div>

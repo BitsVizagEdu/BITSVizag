@@ -278,66 +278,75 @@
 
 	@media (max-width: 640px) {
 		.strength-shell {
-			padding: 1rem 0 2rem;
+			padding: 1.5rem 0 2.5rem;
 		}
 
 		.excellence-panel {
-			padding: 1.4rem 0.9rem 1.2rem;
-			border-radius: 10px;
+			padding: 1.6rem 1rem 1.4rem;
+			border-radius: 12px;
 		}
 
 		.excellence-title {
-			font-size: clamp(1.35rem, 7.2vw, 2rem);
+			font-size: clamp(1.2rem, 6vw, 1.8rem);
+			gap: 0.5rem;
 		}
 
 		.title-divider {
-			margin: 1.2rem auto 1rem;
-			max-width: 92%;
+			margin: 1.1rem auto 0.9rem;
+			max-width: 90%;
 		}
 
 		.excellence-grid {
 			grid-template-columns: 1fr;
-			gap: 0.45rem;
+			gap: 0.5rem;
 		}
 
 		.excellence-item {
 			justify-content: flex-start;
-			padding: 0.5rem 0.3rem;
+			padding: 0.6rem 0.5rem;
+			background: rgba(255, 255, 255, 0.03);
+			border-radius: 8px;
 		}
 
 		.item-icon-wrap {
-			width: 42px;
-			height: 42px;
+			width: 40px;
+			height: 40px;
 		}
 
 		.item-icon {
-			width: 22px;
-			height: 22px;
+			width: 20px;
+			height: 20px;
 		}
 
 		.item-value {
-			font-size: 1.95rem;
+			font-size: 1.75rem;
 		}
 
 		.item-label {
-			font-size: 0.95rem;
+			font-size: 0.88rem;
+			margin-top: 0.2rem;
 		}
 
 		.info-cards {
-			margin-top: 0.75rem;
-			gap: 0.75rem;
+			margin-top: 1rem;
+			gap: 0.8rem;
 		}
 
 		.info-card {
-			padding: 1.2rem 1.15rem 1.3rem;
+			padding: 1.25rem 1.2rem 1.4rem;
 		}
 
 		.card-title {
-			font-size: 2.6rem;
+			font-size: 1.85rem;
+		}
+
+		.card-lines {
+			margin-top: 0.9rem;
+			gap: 0.5rem;
 		}
 
 		.card-line {
-			font-size: 1.95rem;
+			font-size: 1.35rem;
 		}
 	}
 </style>

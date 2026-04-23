@@ -359,27 +359,30 @@
 
 	@media (max-width: 720px) {
 		.bits-assist {
-			padding: 1.5rem 0;
+			padding: 2.5rem 0;
 		}
 
 		.bits-assist__grid {
 			grid-template-columns: 1fr;
-			gap: 1rem;
+			gap: 1.25rem;
 		}
 
 		.bits-assist__right {
-			min-height: 250px;
+			min-height: 220px;
+			margin-top: 0.5rem;
 		}
 
 		.bits-assist__image-wrap {
 			width: 100%;
-			height: 245px;
+			height: 260px;
 		}
 
 		.bits-assist__badge {
-			left: 0.7rem;
-			right: 0.7rem;
+			left: 5%;
+			right: 5%;
+			bottom: 0.75rem;
 			max-width: none;
+			padding: 0.7rem 1rem;
 		}
 	}
 </style>
