@@ -25,23 +25,19 @@
 	});
 </script>
 
-<!-- Ultra-Smooth Gradient Progress Bar (Synced with Lenis) -->
+<!-- Perfect Minimalist Side Scroll Indicator -->
 {#if mounted}
-	<div
-		class="fixed top-0 left-0 right-0 h-1 origin-left z-50 pointer-events-none"
-		style="
-			transform: scaleX({scrollProgress});
-			background: linear-gradient(to right, #22c55e 0%, #10b981 25%, #059669 50%, #10b981 75%, #22c55e 100%);
-			box-shadow: 
-				0 0 12px rgba(34, 197, 94, 0.7),
-				0 0 24px rgba(16, 185, 129, 0.4),
-				inset 0 0 8px rgba(255, 255, 255, 0.1);
-			filter: blur(0.5px);
-			will-change: transform;
-			backface-visibility: hidden;
-			-webkit-font-smoothing: antialiased;
-		"
-	></div>
+	<div class="fixed top-0 right-0 w-[4px] h-full z-[9999] pointer-events-none">
+		<div
+			class="w-full origin-top"
+			style="
+				height: {scrollProgress * 100}%;
+				background-color: #2563eb; 
+				transition: height 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+				will-change: height;
+			"
+		></div>
+	</div>
 {/if}
 
 <style>

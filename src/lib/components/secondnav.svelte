@@ -132,16 +132,13 @@
 		--middlenav-mobile-height: 32px;
 		--secondnav-mobile-height: 28px;
 		position: sticky;
-		top: 41px; /* Middlenav Master Height + Gap */
+		top: 32px; /* Middlenav Height (Mobile) */
 		z-index: 997;
 		width: 100%;
 		background: #d22626;
 		font-family: 'Satoshi', 'Inter', sans-serif;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-		transition:
-			transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-			opacity 0.3s ease;
-		will-change: transform;
+		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 	}
 
 	nav.isHidden {
@@ -265,8 +262,8 @@
 			align-items: center;
 			justify-content: center;
 			height: var(--secondnav-mobile-height);
-			padding: 0 12px;
-			gap: 12px;
+			padding: 0 4px;
+			gap: 4px;
 		}
 
 		.mobile-visible-links {
@@ -336,13 +333,17 @@
 			border-bottom-left-radius: 16px;
 			box-shadow: -16px 0 34px rgba(8, 10, 20, 0.32);
 			overflow-y: auto;
-			transform: translateX(105%);
-			transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+			transform: translateX(100%);
+			visibility: hidden;
+			pointer-events: none;
+			transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.4s;
 			z-index: 1003;
 		}
 
 		.nav-links.drawer-open {
 			transform: translateX(0);
+			visibility: visible;
+			pointer-events: auto;
 		}
 
 		.nav-links li {

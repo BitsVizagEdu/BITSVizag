@@ -23,6 +23,7 @@
 		'B.POORNA SATYANARAYANA': 26,
 		'U. Padma Mohan': 30,
 		'N. Raju': 17,
+		'S.Durga Prasad': 22,
 		'D.Sriya Rani': 1.7,
 		'K. SRINIJA': 1,
 		'G. Sushma': 1,
@@ -31,6 +32,14 @@
 		'S. MOULI': 1,
 		'K. Jeevitha': 1.5,
 		'T. CHAITANYA': 7,
+		'P. JAYARANGARAO': 32,
+		'Paromita Mukherjee': 11,
+		'P. V. Murali': 15,
+		'T.Suneetha Rani': 13,
+		'P. UMA CHAITHANYA': 16,
+		'A. S. Bhanu Prasanna': 12,
+		'Shahazadi Begum': 12,
+		'S. Pavani': 12,
 		'S. Harshini': 1,
 		'M.Sai prasanna': 2,
 		'K. Sravani Reddy': 1.5,
@@ -46,16 +55,17 @@
 		'T. Pavani': 2.8,
 		'CH. M. M. KOMALI': 9,
 		'K. Pradeep': 20,
-		'G. Ashwan Kumar': 12,
-		'Dr. Y. V. Bhaskara Lakshmi': 15,
-		'Dr. B. Kiranmai': 25,
+		'G. Aswan Kumar': 12,
+		'Y. V. Bhaskararao': 15,
+		'B. Kiranmai': 25,
 		'H. Ravi Kishore': 15,
 		'Ch. SANTOSHI KUMARI': 3,
 		'T. Vishnu Murthy': 20,
-		'G. Anil Kumar': 15,
-		'D. Sudharnitha': 7,
-		'G. Alirani': 2,
-		'V. Madhava Rao': 12,
+		'E. Anil Kumar': 15,
+		'D. Sudharshan': 7,
+		'G. Aliveni': 2,
+		'Rudra Prathap Das': 30,
+		'S. Durga Prasad': 22,
 		'P. Arun Tez': 16,
 		'B. U. S. PREM SAGAR': 15,
 		'U. KAMARAJU': 14,
@@ -102,7 +112,7 @@
 	const facultyData = [
 		{
 			title: 'Dr',
-			name: 'Dr. B.POORNA SATYANARAYANA',
+			name: 'B.POORNA SATYANARAYANA',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Professor',
 			department: 'CSE',
@@ -412,7 +422,18 @@
 		},
 		{
 			title: 'Dr',
-			name: 'G. Anil Kumar',
+			name: 'Rudra Prathap Das',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Professor',
+			department: 'ECE',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'E. Anil Kumar',
 			qualification: 'M.Tech., Ph.D.',
 			designation: 'Associate Professor',
 			department: 'EEE',
@@ -422,7 +443,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
+			title: 'Ms',
 			name: 'D. Sudhamsha',
 			qualification: 'M.Tech',
 			designation: 'Assistant Professor',
@@ -455,9 +476,9 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
+			title: 'Dr',
 			name: 'FATHIMUNNISA BEGUM',
-			qualification: 'Ph.D',
+			qualification: 'M.Tech.,Ph.D',
 			designation: 'Associate Professor',
 			department: 'Mechanical',
 			mobile: '6301685115',
@@ -500,7 +521,7 @@
 		},
 		{
 			title: 'Dr',
-			name: 'Dr. P. JAYARANGARAO',
+			name: 'P. JAYARANGARAO',
 			qualification: 'Ph.D',
 			designation: 'Associate Professor',
 			department: 'BS&H',
@@ -554,7 +575,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
+			title: 'Mr',
 			name: 'S. Pavani',
 			qualification: 'M.E., Ph.D',
 			designation: 'Sr. Assistant Professor',
@@ -587,19 +608,8 @@
 			photo: ''
 		},
 		{
-			title: 'Mrs',
-			name: 'Dr. Shahazadi Begum',
-			qualification: 'M.Tech., Ph.D',
-			designation: 'Associate Professor',
-			department: 'Civil',
-			mobile: '9032972944',
-			email: 'drshahazadibegum@gmail.com',
-			linkedin: 'https://www.linkedin.com/in/dr-shahazadi-begum-788638335',
-			photo: ''
-		},
-		{
 			title: 'Dr',
-			name: 'Y. V. Bhaskara Lakshmi',
+			name: 'Y. V. Bhaskararao',
 			qualification: 'M.Tech., Ph.D',
 			designation: 'Associate Professor',
 			department: 'ECE',
@@ -667,7 +677,7 @@
 		},
 		{
 			title: 'Mr',
-			name: 'B. U. S. PREM SAGAR',
+			name: 'B. V. S. PREM SAGAR',
 			qualification: 'M.Tech., M.B.A',
 			designation: 'Sr. Assistant Professor',
 			department: 'EEE',
@@ -677,7 +687,7 @@
 			photo: ''
 		},
 		{
-			title: 'Mr',
+			title: 'Dr',
 			name: 'U. KAMARAJU',
 			qualification: 'Ph.D',
 			designation: 'Associate Professor',
@@ -685,6 +695,17 @@
 			mobile: '9963268636',
 			email: 'raju.vechalapu@gmail.com',
 			linkedin: 'https://www.linkedin.com/in/dr-kamaraju-vechalapu-826b5b335?utm_source',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Shahazadi Begum',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Associate Professor',
+			department: 'Civil',
+			mobile: '9032972944',
+			email: 'drshahazadibegum@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/dr-shahazadi-begum-788638335',
 			photo: ''
 		},
 		{
@@ -901,7 +922,7 @@
 		},
 		{
 			title: 'Ms',
-			name: 'Dr. M. Mounika',
+			name: 'M. Mounika',
 			qualification: 'M.Sc., B.Ed',
 			designation: 'Assistant Professor',
 			department: 'BS&H',
@@ -965,10 +986,14 @@
 			linkedin: '',
 			photo: ''
 		}
-	].map((faculty) => ({
-		...faculty,
-		experience: experienceByName[faculty.name] ?? null
-	}));
+	].map((faculty) => {
+		// Normalize name for experience lookup (remove Dr. prefix and extra spaces)
+		const lookupName = (faculty.name || '').replace(/^\s*dr\.?\s+/i, '').trim();
+		return {
+			...faculty,
+			experience: experienceByName[lookupName] ?? experienceByName[faculty.name] ?? null
+		};
+	});
 
 	let selectedDepartment = 'CSE';
 	let searchTerm = '';
@@ -976,7 +1001,10 @@
 
 	const normalize = (value = '') => value.toLowerCase().replace(/\s+/g, ' ').trim();
 	const isLabProgrammer = (designation = '') => normalize(designation).includes('lab programmer');
-	const normalizeNameKey = (value = '') => normalize(value).replace(/[^a-z]/g, '');
+	const normalizeNameKey = (value = '') =>
+		normalize(value)
+			.replace(/^dr\.?\s+/i, '')
+			.replace(/[^a-z]/g, '');
 
 	const csePriorityOrder = [
 		'Dr. B.POORNA SATYANARAYANA',
@@ -1012,11 +1040,11 @@
 
 	const ecePriorityOrder = [
 		'Dr. B. Kiranmai',
-
+		'Rudra Prathap Das',
 		'K. Pradeep',
-		'Dr. Y. V. Bhaskara Lakshmi',
+		'Y. V. Bhaskararao',
 		'H. Ravi Kishore',
-		'G. Ashwan Kumar',
+		'G. Aswan Kumar',
 		'G. Arjun Kumar',
 		'T. Vishnu Murthy',
 		'CH. M. M. KOMALI',
@@ -1031,12 +1059,12 @@
 
 	const eeePriorityOrder = [
 		'U. KAMARAJU',
-		'G. Anil Kumar',
+		'E. Anil Kumar',
 		'P. Arun Tez',
-		'B. U. S. PREM SAGAR',
-		'D. Sudharnitha',
+		'B. V. S. PREM SAGAR',
+		'D. Sudharshan',
 		'G. Alirani',
-		'V. Madhava Rao'
+		'Mr. D. Sudharshan'
 	];
 
 	const eeePriorityIndex = eeePriorityOrder.reduce((map, name, index) => {
@@ -1065,7 +1093,7 @@
 	}, /** @type {Record<string, number>} */ ({}));
 
 	const civilPriorityOrder = [
-		'Pavani',
+		'S. Pavani',
 		'Dr. Shahazadi Begum',
 		'P. LAVANYA',
 		'P. Saranya',
@@ -1092,10 +1120,10 @@
 	}, /** @type {Record<string, number>} */ ({}));
 
 	const bshPriorityOrder = [
-		'Dr. P. JAYARANGARAO',
-		'Dr. Paromita Mukherjee',
-		'Dr.T.Suneetha Rani',
+		'P. JAYARANGARAO',
+		'Paromita Mukherjee',
 		'P. V. Murali',
+		'T.Suneetha Rani',
 		'Dr. Piyali Varma',
 		'P. MAHESH',
 		'P.Surya Kumari',
@@ -1598,6 +1626,16 @@
 		font-weight: 700;
 		letter-spacing: 0.01em;
 		color: #0f172a;
+	}
+
+	.faculty-name {
+		margin: 0;
+		font-size: 0.95rem;
+		line-height: 1.2;
+		font-weight: 700;
+		color: #0f172a;
+		white-space: nowrap;
+		letter-spacing: -0.01em;
 	}
 
 	.department-header p {

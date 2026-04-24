@@ -9,6 +9,9 @@
 	body {
 		font-family: 'Outfit', sans-serif;
 		background-color: #f8fafc;
+		overflow-x: hidden;
+		width: 100%;
+		position: relative;
 	}
 }
 
@@ -31,18 +34,23 @@
 	}
 }
 
+/* Aggressively Hide Standard Scrollbars for Custom Side Indicator */
 ::-webkit-scrollbar {
-	width: 10px;
+	display: none;
+	width: 0;
+}
+
+* {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar-track {
-	background: #ffffff;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #2672d5;
-	border-radius: 10px;
-	border: 3px solid white;
+	background: transparent;
 }
 
 #nav1 {

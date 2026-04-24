@@ -55,12 +55,12 @@
 	<div
 		class="welcome-bottom-bar fixed left-0 right-0 bottom-0 z-[1200] w-full backdrop-blur-sm border-t border-yellow-300/20 overflow-hidden"
 	>
-		<div class="px-3 md:px-8 lg:px-12 py-1 h-9 md:h-10">
+		<div class="max-w-8xl mx-auto px-3 md:px-8 py-1.5 h-11 md:h-10">
 			<div class="flex items-center justify-between h-full gap-2 md:gap-6">
-				<!-- Left: Welcome Message -->
-				<div class="flex items-center h-full shrink-0">
+				<!-- Left: Welcome Message (Hidden on mobile) -->
+				<div class="hidden md:flex items-center h-full shrink-0">
 					<span
-						class="welcome-copy text-white text-[12px] md:text-[13px] font-inter tracking-[-0.2px] whitespace-nowrap"
+						class="welcome-copy text-white text-[13px] font-inter tracking-[-0.2px] whitespace-nowrap"
 					>
 						<span>Welcome to</span>
 						<span class="inline-flex items-center border-b-[1.5px] border-yellow-400/60 pb-0.5">
@@ -75,16 +75,17 @@
 					</span>
 				</div>
 
-				<!-- Right: Contact Items with Proper Spacing -->
-				<div class="flex items-center justify-end h-full gap-2 md:gap-4 flex-nowrap shrink-0">
+				<!-- Right: Contact Items (Scrolling on mobile) -->
+				<div
+					class="flex items-center overflow-x-auto no-scrollbar h-full gap-5 md:gap-10 flex-nowrap py-1 md:justify-end md:flex-1"
+				>
 					<!-- Email -->
 					<a
 						href="mailto:principal@bitsvizag.com"
-						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group min-w-fit"
+						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group whitespace-nowrap"
 					>
-						<!-- Email Icon -->
 						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -95,25 +96,23 @@
 							<rect x="2" y="4" width="20" height="16" rx="2"></rect>
 							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
 						</svg>
-						<!-- Hidden on mobile, visible on md+ -->
-						<span class="hidden md:inline text-gray-300 text-xs font-inter tracking-[-0.2px]"
+						<span
+							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.2px] font-semibold"
 							>Email :</span
 						>
-						<span class="hidden md:inline text-white text-xs font-inter tracking-[-0.2px]"
+						<span
+							class="text-white text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-bold"
 							>principal@bitsvizag.com</span
 						>
-						<!-- Show only icon on mobile -->
-						<span class="md:hidden text-gray-300 text-xs font-inter">Email</span>
 					</a>
 
 					<!-- Phone -->
 					<a
 						href="tel:+919121214313"
-						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group min-w-fit"
+						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group whitespace-nowrap"
 					>
-						<!-- Phone Icon -->
 						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -125,25 +124,47 @@
 								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
 							></path>
 						</svg>
-						<!-- Hidden on mobile, visible on md+ -->
-						<span class="hidden md:inline text-gray-300 text-xs font-inter tracking-[-0.2px]"
+						<span
+							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.2px] font-semibold"
 							>Call :</span
 						>
-						<span class="hidden md:inline text-white text-xs font-inter tracking-[-0.2px]"
+						<span
+							class="text-white text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-bold"
 							>+91 9121214313</span
 						>
-						<!-- Show only icon on mobile -->
-						<span class="md:hidden text-gray-300 text-xs font-inter">Call</span>
 					</a>
 
-					<!-- Global Alumni Network with Dropdown -->
+					<!-- More Details -->
 					<a
-						href="/alumni-data"
-						class="flex items-center h-full gap-1.5 md:gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group min-w-fit"
+						href="/contactus"
+						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group whitespace-nowrap"
 					>
-						<!-- Globe Icon -->
 						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<circle cx="12" cy="12" r="10"></circle>
+							<line x1="12" y1="16" x2="12" y2="12"></line>
+							<line x1="12" y1="8" x2="12.01" y2="8"></line>
+						</svg>
+						<span
+							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-semibold"
+							>More Details</span
+						>
+					</a>
+
+					<!-- Global Alumni Network -->
+					<a
+						href="/alumni"
+						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group whitespace-nowrap"
+					>
+						<svg
+							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -156,23 +177,20 @@
 								d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
 							></path>
 						</svg>
-						<!-- Hidden on mobile, visible on md+ -->
-						<span class="hidden md:inline text-gray-300 text-xs font-inter tracking-[-0.2px]"
+						<span
+							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-semibold"
 							>Global Alumni Network</span
 						>
-						<!-- Show only icon on mobile -->
-						<span class="md:hidden text-gray-300 text-xs font-inter">Alumni</span>
-						<!-- Dropdown Arrow -->
 						<svg
-							class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#facc15] transition-all group-hover:translate-y-0.5 flex-shrink-0 hidden md:block"
-							fill="currentColor"
-							viewBox="0 0 20 20"
+							class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#00FF00] ml-0.5 transition-transform group-hover:translate-y-0.5"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
 						>
-							<path
-								fill-rule="evenodd"
-								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-								clip-rule="evenodd"
-							></path>
+							<path d="M6 9l6 6 6-6"></path>
 						</svg>
 					</a>
 				</div>
@@ -191,22 +209,24 @@
 		<!-- Mobile Layout (Visible only on < md) -->
 		<div class="flex md:hidden flex-col items-center px-2 gap-2">
 			<!-- Centered Logos Row -->
-			<div class="flex items-center justify-center gap-4 w-full border-b border-white/5 pb-2">
-				<div class="flex items-center gap-1.5">
-					<div class="h-[34px] w-auto">
+			<div class="flex items-center justify-around w-full border-b border-white/5 pb-2 px-1">
+				<div class="flex items-center gap-1">
+					<div class="h-[28px] xs:h-[34px] w-auto">
 						<img class="h-full w-auto object-contain" src="/2026.png" alt="2026 BITS" />
 					</div>
-					<div class="h-[30px] w-[75px]">
-						<img class="h-full w-full object-contain" src="/1.png" alt="BITS Vizag" />
+					<div class="h-[24px] xs:h-[30px] w-auto">
+						<img class="h-full w-auto object-contain" src="/1.png" alt="BITS Vizag" />
 					</div>
 				</div>
-				<div class="h-6 w-[1px] bg-white/10 mx-1"></div>
-				<div class="flex items-center gap-2">
-					<div class="h-[32px] w-[32px] rounded-full overflow-hidden border border-white/20">
+				<div class="h-5 w-[1px] bg-white/10 mx-0.5"></div>
+				<div class="flex items-center gap-1.5">
+					<div
+						class="h-[28px] xs:h-[32px] w-[28px] xs:w-[32px] rounded-full overflow-hidden border border-white/20"
+					>
 						<img class="h-full w-full object-cover" src="/bits.png" alt="BITS Logo" />
 					</div>
-					<div class="h-[30px] w-[30px]">
-						<img class="h-full w-full object-contain" src="/naac.png" alt="NAAC" />
+					<div class="h-[26px] xs:h-[30px] w-auto">
+						<img class="h-full w-auto object-contain" src="/naac.png" alt="NAAC" />
 					</div>
 				</div>
 			</div>

@@ -97,11 +97,8 @@
 		</div>
 	</div>
 
-	<div class="h-1.5 md:h-7 bg-white"></div>
 	<CSHeader />
-	<div class="h-1.5 md:h-7 bg-white"></div>
 	<Autonomous />
-	<div class="h-1.5 md:h-7 bg-white"></div>
 
 	<h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black text-center py-6 md:py-12 bg-white text-slate-900 tracking-tight">
 		CELEBRATE LIFE AT BITS VIZAG

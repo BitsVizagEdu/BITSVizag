@@ -118,7 +118,9 @@ export function getDepartmentColor(department) {
  * @param {string} title
  */
 export function isFemale(title) {
-	return title && (title.toLowerCase() === 'ms' || title.toLowerCase() === 'mrs');
+	if (!title) return false;
+	const lowerTitle = title.toLowerCase();
+	return lowerTitle.includes('ms') || lowerTitle.includes('mrs');
 }
 
 /**
