@@ -19,7 +19,7 @@
 	const formattedName = formatFacultyName(cleanedName);
 	const formattedDesignation = formatFacultyName(faculty.designation);
 	const formattedTitle = formatTitleWithDot(faculty.title);
-	const showTitle = !/^dr\.?$/i.test((faculty.title || '').trim());
+	const showTitle = Boolean(faculty.title);
 
 	/** @param {number | string | null | undefined} value */
 	function formatExperience(value) {
@@ -190,11 +190,12 @@
 
 	.faculty-name {
 		margin: 0;
-		font-size: 1rem;
+		font-size: 0.95rem;
 		line-height: 1.2;
 		font-weight: 700;
 		color: #0f172a;
-		text-wrap: balance;
+		white-space: nowrap;
+		letter-spacing: -0.015em;
 	}
 
 	.faculty-role {

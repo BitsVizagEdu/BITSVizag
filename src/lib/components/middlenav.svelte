@@ -826,8 +826,10 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 0 16px;
-			height: 36px;
+			padding: 0 8px; /* Reduced from 16px */
+			height: 32px;
+			width: 100%;
+			overflow: hidden;
 		}
 
 		.mobile-quick-nav {
