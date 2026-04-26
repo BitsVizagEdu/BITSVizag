@@ -24,8 +24,8 @@
 				<span class="headline-muted">Till Date</span>
 			</h2>
 			<p class="subtitle">
-				A trusted network of companies driving placements, innovation, and real-world impact for
-				our students.
+				A trusted network of companies driving placements, innovation, and real-world impact for our
+				students.
 			</p>
 		</div>
 

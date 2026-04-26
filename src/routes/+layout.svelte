@@ -7,7 +7,6 @@
 	import Hero from '$lib/components/navbar.svelte';
 	import AOS from 'aos';
 	import Middlenav from '$lib/components/middlenav.svelte';
-	import Secondnav from '$lib/components/secondnav.svelte';
 	import ScrollProgressBar from '$lib/components/ScrollProgressBar.svelte';
 	import LenisScroll from '$lib/components/LenisScroll.svelte';
 	import 'aos/dist/aos.css';
@@ -29,8 +28,8 @@
 
 <svelte:head>
 	<!-- Font Preloading for Performance -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
 		rel="preload"
 		as="style"
@@ -39,8 +38,6 @@
 	<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&family=Roboto:wght@500&display=swap"
-		media="print"
-		onload="this.media='all'"
 	/>
 
 	<!-- Font Awesome CDN - Async Load -->
@@ -52,8 +49,6 @@
 	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-		media="print"
-		onload="this.media='all'"
 	/>
 
 	<slot name="head" />
@@ -69,7 +64,6 @@
 		{:else}
 			<Hero />
 			<Middlenav />
-			<Secondnav />
 
 			<BackToTop />
 			<slot />

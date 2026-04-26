@@ -97,7 +97,7 @@
 
 	.cdc-copy h1 {
 		margin: 0;
-		font-family: 'Sora', 'Montserrat', 'Roboto', sans-serif;
+		font-family: 'Inter', 'Montserrat', 'Roboto', sans-serif;
 		font-weight: 900;
 		font-size: clamp(2.1rem, 5.8vw, 5rem);
 		line-height: 0.96;
