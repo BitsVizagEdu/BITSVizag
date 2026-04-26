@@ -10,15 +10,15 @@
 
 	const sequence = [0, 1, 0, 2, 0, 3];
 
-	let seqIdx    = 0;
-	let current   = 0;
+	let seqIdx = 0;
+	let current = 0;
 	let isAnimating = false;
-	let paused    = false;
+	let paused = false;
 
 	/** @type {HTMLElement[]} */
 	let slideEls = [];
 	/** @type {HTMLElement[]} */
-	let imgEls   = [];
+	let imgEls = [];
 	/** @type {typeof import('gsap').gsap | undefined} */
 	let gsap;
 	/** @type {ReturnType<typeof setTimeout> | undefined} */
@@ -31,28 +31,29 @@
 		if (isAnimating || index === current || !gsap || !shineEl) return;
 		const gsapInstance = gsap;
 
-		const outEl  = slideEls[current];
-		const inEl   = slideEls[index];
-		const inImg  = imgEls[index];
+		const outEl = slideEls[current];
+		const inEl = slideEls[index];
+		const inImg = imgEls[index];
 
 		isAnimating = true;
-		gsapInstance.set(inEl,  { autoAlpha: 0, zIndex: 2 });
+		gsapInstance.set(inEl, { autoAlpha: 0, zIndex: 2 });
 		gsapInstance.set(outEl, { zIndex: 1 });
 
 		// Zoom in: incoming image starts slightly zoomed, eases to normal
 		gsapInstance.set(inImg, { scale: 1.08, transformOrigin: 'center center' });
 
-		gsapInstance.timeline({
-			defaults: { duration: 0.7, ease: 'power1.inOut' },
-			onComplete() {
-				gsapInstance.set(outEl, { autoAlpha: 0, zIndex: 1 });
-				current = index;
-				isAnimating = false;
-				triggerShine();
-				if (!paused) scheduleNext();
-			}
-		})
-			.to(inEl,  { autoAlpha: 1 }, 0)
+		gsapInstance
+			.timeline({
+				defaults: { duration: 0.7, ease: 'power1.inOut' },
+				onComplete() {
+					gsapInstance.set(outEl, { autoAlpha: 0, zIndex: 1 });
+					current = index;
+					isAnimating = false;
+					triggerShine();
+					if (!paused) scheduleNext();
+				}
+			})
+			.to(inEl, { autoAlpha: 1 }, 0)
 			.to(inImg, { scale: 1, duration: 1.8, ease: 'power1.out' }, 0)
 			.to(outEl, { autoAlpha: 0 }, 0);
 	}
@@ -102,13 +103,22 @@
 		timer = setTimeout(advanceAuto, 5000);
 	}
 
-	function pause()  { paused = true;  clearTimeout(timer); }
-	function resume() { paused = false; scheduleNext(); }
+	function pause() {
+		paused = true;
+		clearTimeout(timer);
+	}
+	function resume() {
+		paused = false;
+		scheduleNext();
+	}
 
 	// Touch swipe
 	let touchX = 0;
 	/** @param {TouchEvent} e */
-	function onTouchStart(e) { touchX = e.touches[0].clientX; pause(); }
+	function onTouchStart(e) {
+		touchX = e.touches[0].clientX;
+		pause();
+	}
 	/** @param {TouchEvent} e */
 	function onTouchEnd(e) {
 		const dx = e.changedTouches[0].clientX - touchX;
@@ -126,10 +136,12 @@
 			gsapInstance.set(el, { autoAlpha: i === 0 ? 1 : 0, zIndex: i === 0 ? 2 : 1 });
 		});
 		// Kick off zoom on the first visible image
-		if (imgEls[0]) gsapInstance.fromTo(imgEls[0],
-			{ scale: 1.08 },
-			{ scale: 1, duration: 2.2, ease: 'power1.out' }
-		);
+		if (imgEls[0])
+			gsapInstance.fromTo(
+				imgEls[0],
+				{ scale: 1.08 },
+				{ scale: 1, duration: 2.2, ease: 'power1.out' }
+			);
 
 		scheduleNext();
 	});
@@ -167,26 +179,35 @@
 	<div class="cb-shine" bind:this={shineEl} aria-hidden="true"></div>
 
 	<!-- Left / Right glass arrows -->
-	<button class="cb-arrow cb-arrow--left"  on:click={prev} aria-label="Previous slide">
-		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-			stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+	<button class="cb-arrow cb-arrow--left" on:click={prev} aria-label="Previous slide">
+		<svg
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
 			<polyline points="15 18 9 12 15 6" />
 		</svg>
 	</button>
 
 	<button class="cb-arrow cb-arrow--right" on:click={next} aria-label="Next slide">
-		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-			stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+		<svg
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
 			<polyline points="9 18 15 12 9 6" />
 		</svg>
 	</button>
 
 	<nav class="cb-dots" aria-label="Banner indicator">
 		{#each images as _, i}
-			<span
-				class="cb-dot"
-				class:cb-dot--active={current === i}
-				aria-label={`Slide ${i + 1}`}
+			<span class="cb-dot" class:cb-dot--active={current === i} aria-label={`Slide ${i + 1}`}
 			></span>
 		{/each}
 	</nav>
@@ -249,13 +270,18 @@
 		background: rgba(255, 255, 255, 0.15);
 		backdrop-filter: blur(12px);
 		-webkit-backdrop-filter: blur(12px);
-		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+		box-shadow:
+			0 4px 18px rgba(0, 0, 0, 0.22),
+			inset 0 1px 0 rgba(255, 255, 255, 0.4);
 		color: #fff;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+		transition:
+			background 0.22s ease,
+			box-shadow 0.22s ease,
+			transform 0.22s ease;
 	}
 
 	.cb-arrow svg {
@@ -264,16 +290,24 @@
 		filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45));
 	}
 
-	.cb-arrow--left  { left:  clamp(0.6rem, 2vw, 1.25rem); }
-	.cb-arrow--right { right: clamp(0.6rem, 2vw, 1.25rem); }
+	.cb-arrow--left {
+		left: clamp(0.6rem, 2vw, 1.25rem);
+	}
+	.cb-arrow--right {
+		right: clamp(0.6rem, 2vw, 1.25rem);
+	}
 
 	.cb-arrow:hover {
 		background: rgba(255, 255, 255, 0.3);
-		box-shadow: 0 6px 26px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+		box-shadow:
+			0 6px 26px rgba(0, 0, 0, 0.3),
+			inset 0 1px 0 rgba(255, 255, 255, 0.5);
 		transform: translateY(-50%) scale(1.08);
 	}
 
-	.cb-arrow:active { transform: translateY(-50%) scale(0.94); }
+	.cb-arrow:active {
+		transform: translateY(-50%) scale(0.94);
+	}
 
 	/* Dots */
 	.cb-dots {
@@ -294,7 +328,9 @@
 		border-radius: 50%;
 		background: rgba(255, 255, 255, 0.4);
 		border: 1.5px solid rgba(255, 255, 255, 0.6);
-		transition: transform 0.3s ease, background 0.3s ease;
+		transition:
+			transform 0.3s ease,
+			background 0.3s ease;
 	}
 
 	.cb-dot--active {
@@ -304,8 +340,16 @@
 	}
 
 	@media (max-width: 640px) {
-		.cb-arrow { width: 34px; height: 34px; }
-		.cb-arrow svg { width: 14px; height: 14px; }
-		.cb-dots { bottom: 0.5rem; }
+		.cb-arrow {
+			width: 34px;
+			height: 34px;
+		}
+		.cb-arrow svg {
+			width: 14px;
+			height: 14px;
+		}
+		.cb-dots {
+			bottom: 0.5rem;
+		}
 	}
 </style>

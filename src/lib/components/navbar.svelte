@@ -1,451 +1,535 @@
-<script>
-	import { page } from '$app/stores';
-	import {
-		setActiveTabValue,
-		showNavBar,
-		showNavBar2,
-		toggleIsActiveTab,
-		toggleNavBar,
-		toggleNavBar2
-	} from '../stores/store.js';
-	import Nav from '$lib/components/navmenu.svelte';
-	import { NavItems } from './navItem.js';
-	import { replaceHyphenWithSpace } from '../../routes/aboutus/[slug]/components/utils.js';
-
-	let nav3 = [
-		{
-			name: 'Staff',
-			link: '/staff'
-		},
-		{
-			name: 'AICTE',
-			link: '/aicte'
-		},
-		{
-			name: 'Alumni',
-			link: '/alumni'
-		},
-		{
-			name: 'Downloads',
-			link: '/downloads'
-		},
-		{
-			name: 'Placements',
-			link: '/placements'
-		},
-		{
-			name: 'Instagram',
-			link: 'https://www.instagram.com/bits_vizag_official/'
-		}
-	];
-
-	let nav2 = ['Staff', 'AICTE', 'Admission', 'Alumni', 'Downloads', 'Placements', 'Instagram'];
-	/** @param {string} item */
-	function onClick(item) {
-		toggleIsActiveTab(true);
-		setActiveTabValue(item);
-	}
-
-	$: isHomePage = $page.url.pathname === '/';
-</script>
-
-<!-- Production-Level Top Header Bar - BITS Vizag -->
-
-{#if isHomePage}
-	<div
-		class="welcome-bottom-bar fixed left-0 right-0 bottom-0 z-[1200] w-full backdrop-blur-sm border-t border-yellow-300/20 overflow-hidden"
-	>
-		<div class="max-w-8xl mx-auto px-3 md:px-8 py-1.5 h-11 md:h-10">
-			<div class="flex items-center justify-between h-full gap-2 md:gap-6">
-				<!-- Left: Welcome Message (Hidden on mobile) -->
-				<div class="hidden md:flex items-center h-full shrink-0">
-					<span
-						class="welcome-copy text-white text-[13px] font-inter tracking-[-0.2px] whitespace-nowrap"
-					>
-						<span>Welcome to</span>
-						<span class="inline-flex items-center border-b-[1.5px] border-yellow-400/60 pb-0.5">
-							<span class="bits-pill-row mr-1" aria-label="BITS">
-								<span class="bits-pill bits-b">B</span>
-								<span class="bits-pill bits-i">I</span>
-								<span class="bits-pill bits-t">T</span>
-								<span class="bits-pill bits-s">S</span>
-							</span>
-							<span class="text-slate-300 font-semibold tracking-[0.06em]">VIZAG</span>
-						</span>
-					</span>
-				</div>
-
-				<!-- Right: Contact Items (Scrolling on mobile) -->
-				<div
-					class="flex items-center overflow-x-auto no-scrollbar h-full gap-5 md:gap-10 flex-nowrap py-1 md:justify-end md:flex-1"
-				>
-					<!-- Email -->
-					<a
-						href="mailto:principal@bitsvizag.com"
-						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group whitespace-nowrap"
-					>
-						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<rect x="2" y="4" width="20" height="16" rx="2"></rect>
-							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-						</svg>
-						<span
-							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.2px] font-semibold"
-							>Email :</span
-						>
-						<span
-							class="text-white text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-bold"
-							>principal@bitsvizag.com</span
-						>
-					</a>
-
-					<!-- Phone -->
-					<a
-						href="tel:+919121214313"
-						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#facc15] transition-colors duration-300 group whitespace-nowrap"
-					>
-						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<path
-								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-							></path>
-						</svg>
-						<span
-							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.2px] font-semibold"
-							>Call :</span
-						>
-						<span
-							class="text-white text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-bold"
-							>+91 9121214313</span
-						>
-					</a>
-
-					<!-- More Details -->
-					<a
-						href="/contactus"
-						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group whitespace-nowrap"
-					>
-						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<circle cx="12" cy="12" r="10"></circle>
-							<line x1="12" y1="16" x2="12" y2="12"></line>
-							<line x1="12" y1="8" x2="12.01" y2="8"></line>
-						</svg>
-						<span
-							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-semibold"
-							>More Details</span
-						>
-					</a>
-
-					<!-- Global Alumni Network -->
-					<a
-						href="/alumni"
-						class="flex items-center h-full gap-2 text-gray-400 hover:text-[#00FF00] transition-colors duration-300 group whitespace-nowrap"
-					>
-						<svg
-							class="w-4 h-4 md:w-5 md:h-5 text-gray-300 group-hover:text-[#00FF00] transition-colors flex-shrink-0"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<circle cx="12" cy="12" r="10"></circle>
-							<path
-								d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-							></path>
-						</svg>
-						<span
-							class="text-gray-300 text-[12px] md:text-[13px] font-inter tracking-[-0.1px] font-semibold"
-							>Global Alumni Network</span
-						>
-						<svg
-							class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#00FF00] ml-0.5 transition-transform group-hover:translate-y-0.5"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<path d="M6 9l6 6 6-6"></path>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-{/if}
-
-<!-- Top Bar: Quick Links & Socials -->
-
-<div
-	id="header"
-	class="border-b border-slate-800 flex flex-col items-center w-full relative z-[1001] shadow-2xl overflow-hidden"
->
-	<div class="w-full py-2 md:py-3">
-		<!-- Mobile Layout (Visible only on < md) -->
-		<div class="flex md:hidden flex-col items-center px-2 gap-2">
-			<!-- Centered Logos Row -->
-			<div class="flex items-center justify-around w-full border-b border-white/5 pb-2 px-1">
-				<div class="flex items-center gap-1">
-					<div class="h-[28px] xs:h-[34px] w-auto">
-						<img class="h-full w-auto object-contain" src="/2026.png" alt="2026 BITS" />
-					</div>
-					<div class="h-[24px] xs:h-[30px] w-auto">
-						<img class="h-full w-auto object-contain" src="/1.png" alt="BITS Vizag" />
-					</div>
-				</div>
-				<div class="h-5 w-[1px] bg-white/10 mx-0.5"></div>
-				<div class="flex items-center gap-1.5">
-					<div
-						class="h-[28px] xs:h-[32px] w-[28px] xs:w-[32px] rounded-full overflow-hidden border border-white/20"
-					>
-						<img class="h-full w-full object-cover" src="/bits.png" alt="BITS Logo" />
-					</div>
-					<div class="h-[26px] xs:h-[30px] w-auto">
-						<img class="h-full w-auto object-contain" src="/naac.png" alt="NAAC" />
-					</div>
-				</div>
-			</div>
-
-			<!-- Center Content -->
-			<div class="flex flex-col items-center text-center -mt-1">
-				<h1
-					class="text-[14.5px] xs:text-[16px] font-black text-white tracking-tight leading-tight uppercase font-satoshi"
-				>
-					Baba Institute of Technology and Sciences (A)
-				</h1>
-				<p
-					class="text-[10px] font-bold text-yellow-400 tracking-[0.1em] uppercase mt-0.5 font-inter"
-				>
-					An Autonomous Institution
-				</p>
-				<p class="text-[9px] text-slate-300 font-medium mt-1 leading-tight font-inter">
-					Accredited by <span class="text-white font-bold">NAAC</span> | Approved by
-					<span class="text-white font-bold">AICTE</span>
-					| Affiliated to <span class="text-white font-bold">JNTU-GV</span>
-					<br />
-					ISO 9001:2015 Certified | 18 Years of Excellence
-				</p>
-				<!-- Tight College Code Badge -->
-				<div
-					class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800"
-				>
-					<span class="text-[9px] font-bold text-amber-500 uppercase tracking-widest font-inter"
-						>Code :</span
-					>
-					<span class="baba-text font-black text-xs leading-none font-satoshi">BABA</span>
-				</div>
-			</div>
+<div class="top-bar">
+	<div class="top-bar-container">
+		<div class="welcome-section">
+			<span class="welcome-text">
+				Welcome to <span class="bits-accent">
+					<span class="b">B</span>
+					<span class="i">I</span>
+					<span class="t">T</span>
+					<span class="s">S</span>
+				</span> VIZAG
+			</span>
 		</div>
 
-		<!-- Desktop Layout (Visible only on md and above) -->
-		<div class="hidden md:grid w-full px-8 lg:px-12 grid-cols-[1fr_auto_1fr] items-center gap-8">
-			<!-- Left Logos -->
-			<div class="flex items-center justify-start gap-0 shrink-0 h-full">
-				<div class="h-[72px] lg:h-[90px]">
-					<img
-						class="h-full w-auto object-contain hover:scale-105 transition-transform"
-						src="/2026.png"
-						alt="2026 BITS"
-					/>
-				</div>
-				<div class="h-[68px] w-[160px] lg:h-[94px] lg:w-[212px]">
-					<img
-						class="h-full w-full object-contain"
-						src="/1.png"
-						alt="BITS Vizag"
-						style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
-					/>
-				</div>
-			</div>
+		<div class="contact-links">
+			<a
+				href="https://mail.google.com/mail/?view=cm&fs=1&to=principal@bitsvizag.com"
+				target="_blank"
+				class="contact-item"
+			>
+				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+					<polyline points="22,6 12,13 2,6" />
+				</svg>
+				<span>Email : principal@bitsvizag.com</span>
+			</a>
 
-			<!-- Center Content -->
-			<div class="flex flex-col justify-center items-center text-center px-2">
-				<h1
-					class="text-[22.5px] lg:text-[29px] font-extrabold text-white tracking-normal leading-snug filter drop-shadow-lg font-satoshi whitespace-nowrap"
-				>
-					BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (A)
-				</h1>
-				<div class="flex items-center gap-1 mt-0.5">
-					<div class="h-[1px] w-12 bg-yellow-400/50"></div>
-					<h5
-						class="text-[20px] font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-widest uppercase font-inter whitespace-nowrap"
-					>
-						An Autonomous Institution
-					</h5>
-					<div class="h-[1px] w-12 bg-yellow-400/50"></div>
-				</div>
-				<div class="mt-0.5 text-slate-300">
-					<h6
-						class="text-[13.5px] lg:text-[15px] font-medium leading-relaxed opacity-95 font-inter"
-					>
-						Accredited by NAAC | Approved by AICTE | Affiliated to JNTU-GV Vizianagaram
-						<br />
-						<span>ISO 9001:2015 Certified | 18 Years of Educational Excellence Foundation</span>
-					</h6>
-					<div
-						class="mt-1.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/90 border border-slate-800 shadow-2xl"
-					>
-						<span class="text-sm font-bold text-amber-500 uppercase tracking-wider"
-							>College Code :</span
-						>
-						<span class="baba-text font-black text-[17px] leading-none font-satoshi">BABA</span>
-					</div>
-				</div>
-			</div>
-
-			<!-- Right Logos -->
-			<div class="flex items-center justify-end gap-3 shrink-0 h-full">
-				<div
-					class="h-[68px] w-[68px] lg:h-[90px] lg:w-[90px] relative group rounded-full overflow-hidden"
-				>
-					<div
-						class="absolute inset-0 bg-white/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-all duration-500"
-					></div>
-					<img
-						class="relative h-full w-full object-cover scale-[1.03]"
-						src="/bits.png"
-						alt="BITS Logo"
+			<a href="tel:+919121214313" class="contact-item">
+				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path
+						d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
 					/>
-				</div>
-				<div class="h-[84px] w-[84px] lg:h-[102px] lg:w-[102px]">
-					<img class="h-full w-full object-contain" src="/naac.png" alt="NAAC" />
-				</div>
+				</svg>
+				<span>Call : +91 9121214313</span>
+			</a>
+
+			<a href="/contactus" class="contact-item">
+				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<circle cx="12" cy="12" r="10" />
+					<line x1="12" y1="16" x2="12" y2="12" />
+					<line x1="12" y1="8" x2="12.01" y2="8" />
+				</svg>
+				<span>More Details</span>
+			</a>
+
+			<div class="contact-item dropdown">
+				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<circle cx="12" cy="12" r="10" />
+					<line x1="2" y1="12" x2="22" y2="12" />
+					<path
+						d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+					/>
+				</svg>
+				<span>Global Alumni Network</span>
+				<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+					<polyline points="6 9 12 15 18 9" />
+				</svg>
 			</div>
 		</div>
 	</div>
 </div>
 
+<div id="header" class="header-shell">
+	<div class="brand-row">
+		<div class="brand-left">
+			<img src="/1.png" alt="BITS Vizag mark" class="brand-logo animated-logo" />
+			<div class="title-copy hidden sm:block">
+				<h1>BABA INSTITUTE OF TECHNOLOGY AND SCIENCES</h1>
+				<p class="lower-text">
+					Affiliated to JNTU-GV • AICTE Approved • Excellence in Engineering Education
+				</p>
+			</div>
+		</div>
+
+		<div class="brand-right flex items-center gap-4">
+			<div class="accreditation-strip hidden lg:flex" aria-label="Accreditation logos">
+				<div class="accreditation-logo round">
+					<img class="logo-mark logo-multiply" src="/bits.png" alt="BITS emblem" />
+				</div>
+				<div class="accreditation-logo year">
+					<img class="logo-mark logo-screen" src="/2026.png" alt="2026 campaign mark" />
+				</div>
+			</div>
+			<div class="ugc-badge hidden lg:flex">
+				<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+					/>
+				</svg>
+				<span>UGC Autonomous</span>
+			</div>
+			<span class="status-pill dark hidden sm:inline-flex">NAAC 'A'</span>
+			<a class="apply-cta mobile-apply-btn" href="/application-form">Start Your Journey</a>
+		</div>
+	</div>
+</div>
+
 <style>
-	@keyframes gradient-x {
-		0%,
-		100% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-	}
-	.animate-gradient-x {
-		animation: gradient-x 3s ease infinite;
-		will-change: background-position;
-		transform: translateZ(0);
+	.top-bar {
+		background: #080e1f;
+		border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+		padding: 0.2rem 0; /* Reduced from 0.35rem */
+		color: #ffffff;
+		font-family: 'Inter', sans-serif;
+		font-size: 11.5px;
+		font-weight: 500;
 	}
 
-	.baba-text {
-		background: linear-gradient(90deg, #fbbf24, #22c1c3);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+	.top-bar-container {
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.welcome-text {
+		letter-spacing: 0.02em;
+	}
+
+	.bits-accent {
+		font-weight: 900;
+		letter-spacing: 0.15em;
+		margin: 0 0.15rem;
+		display: inline-flex;
+		gap: 0.1rem;
+		border-bottom: 1px solid #fbbf24;
+		padding-bottom: 1px;
+	}
+
+	.bits-accent .b {
+		color: #ef4444;
+	}
+	.bits-accent .i {
+		color: #fbbf24;
+	}
+	.bits-accent .t {
+		color: #f59e0b;
+	}
+	.bits-accent .s {
+		color: #3b82f6;
+	}
+
+	.contact-links {
+		display: flex;
+		gap: 1.8rem;
+		align-items: center;
+	}
+
+	.contact-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: #ffffff;
+		text-decoration: none;
+		transition: all 0.2s ease;
+		cursor: pointer;
+		opacity: 0.9;
 		font-weight: 600;
-		letter-spacing: 0.5px;
 	}
 
-	#header {
-		background: linear-gradient(120deg, #0b1a2f, #071426);
-		box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4);
+	.contact-item:hover {
+		color: #fbbf24;
+		opacity: 1;
 	}
 
-	/* Optimize images for faster rendering */
-	img {
-		contain: layout style paint;
+	.contact-item .icon {
+		width: 14px;
+		height: 14px;
+		stroke-width: 2.5;
 	}
 
-	.welcome-bottom-bar {
-		background: linear-gradient(90deg, #071426, #0b1a2f);
-		box-shadow:
-			inset 0 0 80px rgba(0, 0, 0, 0.35),
-			0 -1px 0 rgba(250, 204, 21, 0.18);
-		padding-bottom: env(safe-area-inset-bottom);
-		will-change: transform;
-		transform: translateZ(0);
+	.contact-item.dropdown {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
 	}
 
-	.welcome-copy {
+	.contact-item .chevron {
+		width: 10px;
+		height: 10px;
+		margin-left: 0.1rem;
+	}
+
+	@media (max-width: 768px) {
+		.top-bar {
+			display: none !important;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.top-bar {
+			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.top-bar,
+		.header-shell {
+			display: none !important;
+		}
+	}
+
+	.brand-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		padding: 0.55rem 2rem;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.brand-left {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		min-width: 0;
+	}
+
+	.brand-logo {
+		height: clamp(46px, 4.5vw, 58px);
+		width: auto;
+		object-fit: contain;
+		flex-shrink: 0;
+		transform: translateY(-1.5px); /* Moved slightly up as requested */
+	}
+
+	.animated-logo {
+		/* Animation removed */
+	}
+
+	.title-copy {
+		min-width: 0;
+	}
+
+	.title-copy h1 {
+		margin: 0;
+		font-size: clamp(1rem, 1.35vw, 1.6rem);
+		font-weight: 900;
+		line-height: 1.1;
+		letter-spacing: -0.01em;
+		color: #193149;
+		text-transform: uppercase;
+	}
+
+	.title-copy p.lower-text {
+		margin: 0.05rem 0 0;
+		font-size: clamp(0.64rem, 0.72vw, 0.68rem);
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: rgb(28, 65, 80);
+		text-transform: none;
+		opacity: 0.92;
+	}
+
+	.brand-right {
+		display: flex;
+		align-items: center;
+		gap: 1.6rem; /* Increased from 1.25rem for more breathing room */
+		flex-shrink: 0;
+		margin-left: auto; /* Push group firmly to the right */
+	}
+
+	.accreditation-strip {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.42rem;
+		gap: 0.65rem;
+		isolation: isolate;
+		padding: 0;
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
 	}
 
-	.bits-pill-row {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.2rem;
-	}
-
-	.bits-pill {
+	.accreditation-logo {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		overflow: hidden;
+		background: transparent;
+		border: 0;
+	}
+
+	.accreditation-logo img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.logo-mark {
+		background: transparent;
+	}
+
+	/* White matte areas are visually dropped on light headers */
+	.logo-multiply {
+		mix-blend-mode: multiply;
+	}
+
+	/* Black matte areas are visually dropped on light headers */
+	.logo-screen {
+		mix-blend-mode: screen;
+		filter: contrast(1.2) brightness(1.2);
+	}
+
+	.accreditation-logo.round {
+		width: 58px;
+		height: 58px;
+		border-radius: 999px;
+		filter: drop-shadow(0 2px 4px rgba(8, 14, 31, 0.15));
+		transition: transform 0.3s ease;
+	}
+
+	.accreditation-logo.round:hover {
+		transform: scale(1.1) rotate(5deg);
+	}
+
+	.accreditation-logo.year {
+		width: 100px;
+		height: 52px;
+		border-radius: 0.5rem;
+		padding: 0;
+		/* Removed shadow to prevent black box effect on screened image */
+	}
+
+	.ugc-badge {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.45rem 1.15rem;
+		background: linear-gradient(135deg, #fffbeb 0%, #fff9db 50%, #fffbeb 100%);
+		background-size: 200% auto;
+		border: 1.5px solid #f59e0b;
+		border-radius: 0.65rem;
+		color: #92400e;
+		font-size: 0.7rem;
 		font-weight: 800;
-		font-size: 1rem;
-		line-height: 1;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		box-shadow: 0 2px 15px rgba(245, 158, 11, 0.15);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: default;
+		overflow: hidden;
+		animation: goldShimmer 4s linear infinite;
 	}
 
-	.bits-b {
-		color: #ed1b60;
+	.ugc-badge::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -150%;
+		width: 100%;
+		height: 200%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+		transform: rotate(35deg);
+		animation: sparkSweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+		pointer-events: none;
 	}
 
-	.bits-i {
-		color: #95c11f;
-	}
-
-	.bits-t {
-		color: #fbb034;
-	}
-
-	.bits-s {
-		color: #00aeef;
-	}
-
-	@media screen and (max-width: 1024px) {
-		.welcome-bottom-bar .h-9 {
-			height: auto;
-			min-height: 30px;
+	@keyframes sparkSweep {
+		0% {
+			left: -150%;
+			opacity: 0;
 		}
+		20% {
+			opacity: 1;
+		}
+		40% {
+			left: 150%;
+			opacity: 0;
+		}
+		100% {
+			left: 150%;
+			opacity: 0;
+		}
+	}
 
-		.welcome-bottom-bar .gap-2 {
+	@keyframes goldShimmer {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
+
+	@keyframes starSparkle {
+		0%,
+		100% {
+			transform: scale(1) rotate(0);
+			filter: brightness(1);
+		}
+		50% {
+			transform: scale(1.2) rotate(15deg);
+			filter: brightness(1.3);
+		}
+	}
+
+	.ugc-badge:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba(251, 188, 36, 0.2);
+		border-color: #b87307;
+	}
+
+	.star-icon {
+		width: 15px;
+		height: 15px;
+		color: #a05805;
+		filter: drop-shadow(0 0 3px rgba(217, 119, 6, 0.4));
+		animation: starSparkle 2s ease-in-out infinite;
+	}
+
+	.status-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.45rem 1.15rem;
+		border-radius: 0.65rem;
+		font-size: 0.7rem;
+		font-weight: 800;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #14204a;
+		background: rgba(251, 191, 36, 0.15);
+		border: 1px solid rgba(251, 191, 36, 0.5);
+	}
+
+	.status-pill.dark {
+		position: relative;
+		overflow: hidden;
+		background: #0f172a;
+		border-color: #fbbf24;
+		color: #fbbf24;
+		font-weight: 900;
+		box-shadow: 0 0 15px rgba(251, 191, 36, 0.2);
+	}
+
+	.status-pill.dark::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -150%;
+		width: 100%;
+		height: 200%;
+		background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.4), transparent);
+		transform: rotate(35deg);
+		animation: sparkSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 1s;
+		pointer-events: none;
+	}
+
+	.apply-cta {
+		text-decoration: none;
+		color: #080e1f;
+		background: #fbbf24;
+		border: 1px solid #fbbf24;
+		padding: 0.5rem 1.65rem;
+		border-radius: 999px;
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.04em;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		text-transform: uppercase;
+		box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+	}
+
+	.apply-cta:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
+		background: #f59e0b;
+	}
+
+	@media (max-width: 1150px) {
+		.brand-right .status-pill,
+		.brand-right .ugc-badge {
+			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.brand-row {
+			padding: 0.6rem 0.6rem;
 			gap: 0.5rem;
 		}
 
-		.welcome-bottom-bar .px-3 {
-			padding-left: 0.75rem;
-			padding-right: 0.75rem;
+		.brand-right {
+			gap: 0.4rem;
 		}
 
-		.welcome-bottom-bar .py-1 {
-			padding-top: 0.2rem;
-			padding-bottom: 0.2rem;
+		.accreditation-strip {
+			gap: 0.3rem;
+			padding: 0;
 		}
 
-		.bits-pill {
-			font-size: 0.85rem;
+		.accreditation-logo.round {
+			width: 38px;
+			height: 38px;
 		}
-	}
-	@media screen and (max-width: 1080px) {
-		/* Removed display:none for #bits to ensure visibility on mobile */
+
+		.accreditation-logo.year {
+			width: 58px;
+			height: 28px;
+			display: inline-flex;
+		}
+
+		.brand-logo {
+			height: 38px;
+		}
+
+		.title-copy h1 {
+			font-size: 0.76rem;
+			letter-spacing: 0;
+		}
+
+		.title-copy p {
+			font-size: 0.46rem;
+			letter-spacing: 0.02em;
+		}
+
+		.apply-cta {
+			font-size: 0.6rem;
+			padding: 0.3rem 0.6rem;
+		}
+
+		.status-pill {
+			display: none;
+		}
+
+		.ugc-badge {
+			display: none;
+		}
 	}
 </style>

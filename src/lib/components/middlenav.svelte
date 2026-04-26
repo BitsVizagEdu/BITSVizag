@@ -28,6 +28,21 @@
 		{ label: 'M.Tech', href: '/courses/Post-Graduation', level: 'PG' }
 	];
 
+	const moreLinks = [
+		{ label: 'Gallery', href: '/gallery', icon: 'fa-solid fa-images' },
+		{ label: 'Students', href: '/Students', icon: 'fa-solid fa-user-graduate' },
+		{
+			label: 'Industry Linkages',
+			href: '/Industry-Linkages',
+			icon: 'fa-solid fa-handshake-angle'
+		},
+		{ label: 'Infrastructure', href: '/infrastructure', icon: 'fa-solid fa-building-columns' },
+		{ label: 'Finance & Quality', href: '/finance-quality', icon: 'fa-solid fa-chart-line' },
+		{ label: 'Disclosures', href: '/Mandatory', icon: 'fa-solid fa-file-circle-check' },
+		{ label: 'Online Grievances', href: '/Online-Grievances', icon: 'fa-solid fa-circle-info' },
+		{ label: 'Contact', href: '/contactus', icon: 'fa-solid fa-address-book' }
+	];
+
 	function toggleMobileMenu() {
 		isMobileMenuOpen = !isMobileMenuOpen;
 		if (!isMobileMenuOpen) {
@@ -60,48 +75,54 @@
 		: ''} h-[32px] lg:h-auto"
 >
 	<div class="wrapper !h-[32px]">
-		<!-- Perfected Mobile Quick Nav: Scrolling High-Value Links Strip -->
-		<div class="mobile-quick-nav lg:hidden flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar">
-			<div class="flex items-center gap-3 py-0.5">
-				<a href="/" class="mini-link !text-[11.5px]" on:click={closeMenus}>Home</a>
-				<a href="/aboutus/About-BITS" class="mini-link" on:click={closeMenus}>About Us</a>
-				<button
-					type="button"
-					class="mini-link {activeMobileDropdown === 'courses' ? 'active' : ''}"
-					on:click={() => toggleMobileDropdown('courses')}
-				>
-					Courses
+		<!-- NEW 2-ROW MOBILE HEADER STRUCTURE -->
+		<div class="mobile-header-container lg:hidden w-full flex flex-col">
+			<!-- Row 1: Logo + Hamburger -->
+			<div class="flex items-center justify-between w-full h-[50px] px-4">
+				<a href="/" class="flex items-center">
+					<img src="/1.png" alt="BITS Vizag Logo" class="h-8 w-auto object-contain" />
+				</a>
+				<button type="button" class="menu-btn p-2" on:click={toggleMobileMenu}>
+					<i class="fas fa-bars text-white text-xl" />
 				</button>
-				<a href="/faculty" class="mini-link" on:click={closeMenus}>Faculty</a>
-				<button
-					type="button"
-					class="mini-link {activeMobileDropdown === 'examcell' ? 'active' : ''}"
-					on:click={() => toggleMobileDropdown('examcell')}
-				>
-					Exam Cell
-				</button>
-				<button
-					type="button"
-					class="mini-link {activeMobileDropdown === 'facilities' ? 'active' : ''}"
-					on:click={() => toggleMobileDropdown('facilities')}
-				>
-					Facilities
-				</button>
-				<button
-					type="button"
-					class="mini-link {activeMobileDropdown === 'governance' ? 'active' : ''}"
-					on:click={() => toggleMobileDropdown('governance')}
-				>
-					Governance
-				</button>
-				<button
-					type="button"
-					class="mini-link {activeMobileDropdown === 'research' ? 'active' : ''}"
-					on:click={() => toggleMobileDropdown('research')}
-				>
-					Research
-				</button>
-				<a href="/placements" class="mini-link" on:click={closeMenus}>CDC</a>
+			</div>
+			
+			<!-- Row 2: Full-width CTA -->
+			<div class="px-4 pb-3">
+				<a href="/application-form" class="w-full bg-[#fbbf24] text-[#080e1f] font-extrabold text-[12px] uppercase py-2 rounded-lg flex items-center justify-center tracking-wider shadow-lg">
+					Start Your Journey
+				</a>
+			</div>
+
+			<!-- Quick Nav Strip (Moved below CTA) -->
+			<div class="mobile-quick-nav flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar border-t border-white/10 pt-1">
+				<div class="flex items-center gap-3 py-1">
+					<a href="/" class="mini-link" on:click={closeMenus}>Home</a>
+					<a href="/aboutus/About-BITS" class="mini-link" on:click={closeMenus}>About Us</a>
+					<button
+						type="button"
+						class="mini-link {activeMobileDropdown === 'courses' ? 'active' : ''}"
+						on:click={() => toggleMobileDropdown('courses')}
+					>
+						Courses
+					</button>
+					<a href="/faculty" class="mini-link" on:click={closeMenus}>Faculty</a>
+					<button
+						type="button"
+						class="mini-link {activeMobileDropdown === 'examcell' ? 'active' : ''}"
+						on:click={() => toggleMobileDropdown('examcell')}
+					>
+						Exam Cell
+					</button>
+					<button
+						type="button"
+						class="mini-link {activeMobileDropdown === 'facilities' ? 'active' : ''}"
+						on:click={() => toggleMobileDropdown('facilities')}
+					>
+						Facilities
+					</button>
+					<a href="/placements" class="mini-link" on:click={closeMenus}>CDC</a>
+				</div>
 			</div>
 		</div>
 
@@ -448,6 +469,47 @@
 				<a href="/placements" class="desktop-item" on:click={closeMenus}>CDC</a>
 				<a href="/placements" class="mobile-item" on:click={closeMenus}>CDC</a>
 			</li>
+
+			<li>
+				<button type="button" class="desktop-item">More</button>
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'more' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('more')}>More</button
+				>
+				<div class="mega-box hidden lg:block">
+					<div
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
+					>
+						<div class="flex flex-col items-start w-full">
+							<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 border border-indigo-100"
+								>
+									<i class="fa-solid fa-grid-2 text-xl text-indigo-600" aria-hidden="true" />
+								</div>
+								<div class="flex flex-col text-left">
+									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">
+										Quick Access
+									</header>
+								</div>
+							</div>
+							<div class="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
+								{#each moreLinks as link}
+									<MegaMenuItem
+										href={link.href}
+										label={link.label}
+										icon={link.icon}
+										iconColorClass="text-indigo-600"
+										iconBgClass="bg-indigo-50"
+										onClick={closeMenus}
+									/>
+								{/each}
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
 		</ul>
 
 		<!-- MOBILE SUB-MENU PANELS -->
@@ -598,12 +660,18 @@
 			{/each}
 		</SubMenuPanel>
 
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-		<!-- Mobile Menu Button (Hamburger) on the Right -->
-		<button type="button" class="btn menu-btn lg:hidden" on:click={toggleMobileMenu}>
-			<i class="fas fa-bars text-slate-800" />
-		</button>
+		<SubMenuPanel
+			isOpen={activeMobileDropdown === 'more'}
+			title="More"
+			onBack={handleMobileBack}
+			onClose={closeMenus}
+		>
+			{#each moreLinks as link}
+				<SubMenuItem label={link.label} href={link.href} icon={link.icon} onClick={closeMenus} />
+			{/each}
+		</SubMenuPanel>
+
+		<!-- Removed legacy mobile menu button as it's now in mobile-header-container -->
 	</div>
 </nav>
 
@@ -627,9 +695,9 @@
 		top: 0;
 		z-index: 998;
 		width: 100%;
-		background: #ffffff;
-		font-family: 'Satoshi', 'Inter', sans-serif;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+		background: linear-gradient(90deg, #14204a 0%, #101a3d 60%, #080e1f 100%);
+		font-family: 'Inter', sans-serif;
+		box-shadow: 0 6px 18px rgba(8, 14, 31, 0.28);
 	}
 
 	nav .wrapper {
@@ -644,6 +712,15 @@
 		justify-content: space-between;
 		gap: 10px;
 	}
+	@media (max-width: 1024px) {
+		nav .wrapper {
+			height: auto !important;
+			padding: 0 !important;
+		}
+		nav {
+			height: auto !important;
+		}
+	}
 	@media (min-width: 1024px) {
 		nav .wrapper {
 			padding: 0 3rem;
@@ -652,7 +729,7 @@
 
 	.wrapper .nav-links {
 		display: grid;
-		grid-template-columns: repeat(9, minmax(0, 1fr));
+		grid-template-columns: repeat(10, minmax(0, 1fr));
 		flex: 1;
 		align-items: center;
 		justify-content: stretch;
@@ -673,39 +750,54 @@
 
 	.nav-links li a,
 	.nav-links li .desktop-item {
+		position: relative;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		color: #1e293b;
+		color: #ffffff;
 		text-decoration: none;
-		font-size: clamp(14px, 0.65vw, 14.5px);
-		padding: 4px 3px;
-		border-radius: 6px;
-		transition:
-			color 0.2s ease,
-			background-color 0.2s ease,
-			box-shadow 0.2s ease;
+		font-size: clamp(12px, 0.75vw, 14px);
+		padding: 10px 4px;
+		transition: color 0.3s ease;
 		white-space: nowrap;
-		width: 100%;
-		max-width: none;
 		line-height: normal;
-		text-transform: capitalize;
-		letter-spacing: 0.02em;
-		font-weight: 800;
-		font-family: 'Roboto', 'Outfit', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		font-weight: 700;
+		font-family: 'Inter', sans-serif;
+	}
+
+	.nav-links li a::after,
+	.nav-links li .desktop-item::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: #fbbf24;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		transform: scaleX(0);
+		transform-origin: center;
+		opacity: 0;
 	}
 
 	.nav-links li a:hover,
 	.nav-links li .desktop-item:hover {
-		color: #2672d5;
-		background: rgba(38, 114, 213, 0.08);
+		color: #fbbf24;
+	}
+
+	.nav-links li a:hover::after,
+	.nav-links li .desktop-item:hover::after {
+		transform: scaleX(1);
+		opacity: 1;
 	}
 
 	.nav-links li a:focus-visible,
 	.nav-links li .desktop-item:focus-visible {
-		outline: none;
-		color: #1d4ed8;
-		box-shadow: none;
+		outline: 2px solid #fbbf24;
+		outline-offset: -2px;
+		color: #fbbf24;
 	}
 
 	.nav-links .mobile-item {
@@ -759,10 +851,6 @@
 	.mega-box .content header {
 		font-family: 'Roboto', sans-serif !important;
 		font-weight: 600;
-	}
-
-	.mega-box .content span {
-		font-family: 'Roboto', sans-serif !important;
 	}
 
 	.wrapper .btn {

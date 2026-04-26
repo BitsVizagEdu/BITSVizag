@@ -14,6 +14,9 @@ const config = {
 		})
 	],
 	kit: {
+		serviceWorker: {
+			register: false
+		},
 		prerender: {
 			handleMissingId: 'warn',
 			handleHttpError: 'warn'
