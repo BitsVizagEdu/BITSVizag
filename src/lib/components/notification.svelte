@@ -71,12 +71,13 @@
 	.marquee-container {
 		width: 100%;
 		overflow: hidden;
-		background: #000000;
-		border-bottom: 1px solid #fbbf24; /* Thin golden line */
-		box-shadow: 0 2px 10px rgba(251, 191, 36, 0.3); /* Subtle golden glow */
-		padding: 5px 0;
+		background: rgba(0, 0, 0, 0.9);
+		backdrop-filter: blur(8px);
+		border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		padding: 8px 0;
 		position: relative;
-		z-index: 100;
+		z-index: 40;
 	}
 
 	.marquee-track {
@@ -114,15 +115,16 @@
 	}
 
 	.scholarship-badge {
-		background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+		background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
 		color: #ffffff;
-		padding: 2px 8px;
-		border-radius: 4px;
-		font-size: 12px;
-		font-weight: 600;
-		margin-right: 8px;
-		letter-spacing: 0.05em;
-		box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+		padding: 2px 10px;
+		border-radius: 6px;
+		font-size: 11px;
+		font-weight: 800;
+		margin-right: 12px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
 		flex-shrink: 0;
 	}
 
@@ -221,9 +223,10 @@
 
 	.marquee-admissions {
 		color: #ffffff;
-		font-size: 13.5px;
-		font-weight: 600;
-		letter-spacing: 0.02em;
+		font-size: 13px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		font-family: 'Outfit', sans-serif;
 	}
 
 	.apply-link {
@@ -241,11 +244,12 @@
 	}
 
 	.excellence-text {
-		color: rgba(255, 255, 255, 0.9);
-		font-size: 13px;
-		font-weight: 500;
-		letter-spacing: 0.03em;
+		color: rgba(255, 255, 255, 0.85);
+		font-size: 12.5px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
 		font-style: italic;
+		font-family: 'Inter', sans-serif;
 	}
 
 	.separator {

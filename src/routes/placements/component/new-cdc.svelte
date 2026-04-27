@@ -12,7 +12,7 @@
 	const authorities = [
 		{
 			role: 'Secretary & Correspondent',
-			image: '/t2.jpg',
+			image: '/secmam copy.jpeg',
 			headline: 'Path to Success: Learn, Adapt, and Work with Passion and Integrity.',
 			quote:
 				'Embrace continuous learning, cultivate resilience, and work with passion and integrity on your path to success.',
@@ -30,7 +30,7 @@
 		},
 		{
 			role: 'Training & Placement Officer',
-			image: '/joshua-sir.jpeg',
+			image: '/joshsir.png',
 			headline: 'Driving Greatness: Self-Motivation, Knowledge, and Resilience.',
 			quote:
 				'Self-motivation and a hunger for knowledge lead the way to greatness; overcome setbacks with resilience.',

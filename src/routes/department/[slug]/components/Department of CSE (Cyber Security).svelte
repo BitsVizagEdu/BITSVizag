@@ -239,7 +239,7 @@
 					designation="Head of Department"
 					department="CSE — Cyber Security"
 					hodMessage="Welcome to the Department of Computer Science & Engineering (Cyber Security) at BITS Vizag. As the digital boundary becomes our primary frontier, cyber threats have become more sophisticated than ever. By blending theoretical foundations with intensive laboratory work, we ensure our students understand the architecture of the digital world and the ways it can be compromised — empowering them to stay ahead of malicious actors and secure sensitive data across diverse platforms."
-					hodImage="/joshua-sir.jpeg"
+					hodImage="/joshsir.png"
 				/>
 			</div>
 		</div>

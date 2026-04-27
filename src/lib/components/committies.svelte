@@ -1,306 +1,102 @@
 <script>
 	import { onMount } from 'svelte';
-	import gsap from 'gsap/dist/gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { fade, fly } from 'svelte/transition';
 
-	onMount(() => {
-		/** @type {any} */
-		const g = gsap;
-		g.registerPlugin(ScrollTrigger);
-
-		// Header entrance
-		g.from('.committees-header', {
-			scrollTrigger: {
-				trigger: '.committees-header',
-				start: 'top 85%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 0,
-			y: 30,
-			duration: 1,
-			ease: 'power3.out'
-		});
-
-		// Cards entrance staggered
-		g.from('.committee-card', {
-			scrollTrigger: {
-				trigger: '.committees-grid',
-				start: 'top 85%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 0,
-			y: 50,
-			stagger: 0.1,
-			duration: 0.8,
-			ease: 'back.out(1.2)'
-		});
-	});
-
-	// Defined with a clean 'theme' property for human-readable code
-	const items = [
+	// Structured data grouped by meaningful clusters for better scanability
+	const groups = [
 		{
-			title: 'Anti Ragging Committee',
-			icon: 'fa-shield-halved',
-			link: '/professional_commities/Anti ragging.pdf',
-			category: 'Security',
-			theme: 'rose'
+			id: 'governance',
+			label: 'Governance & Ethics',
+			items: [
+				{ name: 'Anti Ragging Committee', icon: 'fa-shield-halved', link: '/professional_commities/Anti ragging.pdf' },
+				{ name: 'Disciplinary Committee', icon: 'fa-gavel', link: '/professional_commities/Discipline committee 2023-24.pdf' }
+			]
 		},
 		{
-			title: 'Research & Development',
-			icon: 'fa-microscope',
-			category: 'Academic',
-			theme: 'indigo'
+			id: 'academic',
+			label: 'Academic & Innovation',
+			items: [
+				{ name: 'Research & Development', icon: 'fa-microscope' },
+				{ name: 'EDC & IPR Committee', icon: 'fa-lightbulb', link: '/professional_commities/EDC_IPR.pdf' },
+				{ name: 'Library Committee', icon: 'fa-book-open-reader' }
+			]
 		},
 		{
-			title: 'EDC & IPR Committee',
-			icon: 'fa-lightbulb',
-			link: '/professional_commities/EDC_IPR.pdf',
-			category: 'Innovation',
-			theme: 'amber'
+			id: 'support',
+			label: 'Student Support',
+			items: [
+				{ name: "Women's Grievance Cell", icon: 'fa-person-dress-burst' },
+				{ name: 'SC / ST Cell', icon: 'fa-users-viewfinder' },
+				{ name: 'Student Welfare', icon: 'fa-hand-holding-heart' },
+				{ name: 'NSS Unit', icon: 'fa-hands-helping', link: '/professional_commities/2023_2024 NSS COMMITTEE.pdf' },
+				{ name: 'Sports Committee', icon: 'fa-trophy' }
+			]
 		},
 		{
-			title: "Women's Grievance Cell",
-			icon: 'fa-person-dress-burst',
-			category: 'Support',
-			theme: 'purple'
-		},
-		{
-			title: 'SC / ST Cell',
-			icon: 'fa-users-viewfinder',
-			category: 'Support',
-			theme: 'blue'
-		},
-		{
-			title: 'Training & Placement',
-			icon: 'fa-briefcase',
-			category: 'Career',
-			theme: 'emerald'
-		},
-		{
-			title: 'Student Welfare',
-			icon: 'fa-hand-holding-heart',
-			category: 'Life',
-			theme: 'cyan'
-		},
-		{
-			title: 'Disciplinary Committee',
-			icon: 'fa-gavel',
-			link: '/professional_commities/Discipline committee 2023-24.pdf',
-			category: 'Governance',
-			theme: 'slate'
-		},
-		{
-			title: 'Cultural Committee',
-			icon: 'fa-masks-theater',
-			link: '/professional_commities/cultural.pdf',
-			category: 'Life',
-			theme: 'pink'
-		},
-		{
-			title: 'Admissions Unit',
-			icon: 'fa-user-plus',
-			category: 'Administrative',
-			theme: 'sky'
-		},
-		{
-			title: 'NSS Unit',
-			icon: 'fa-hands-helping',
-			link: '/professional_commities/2023_2024 NSS COMMITTEE.pdf',
-			category: 'Service',
-			theme: 'orange'
-		},
-		{
-			title: 'Sports Committee',
-			icon: 'fa-trophy',
-			category: 'Life',
-			theme: 'yellow'
-		},
-		{
-			title: 'Hostel Committee',
-			icon: 'fa-building-user',
-			category: 'Residential',
-			theme: 'teal'
-		},
-		{
-			title: 'Canteen Committee',
-			icon: 'fa-utensils',
-			link: '/professional_commities/canteen committie.pdf',
-			category: 'Residential',
-			theme: 'lime'
-		},
-		{
-			title: 'Library Committee',
-			icon: 'fa-book-open-reader',
-			category: 'Academic',
-			theme: 'violet'
+			id: 'admin',
+			label: 'Administrative & Campus',
+			items: [
+				{ name: 'Admissions Unit', icon: 'fa-user-plus' },
+				{ name: 'Training & Placement', icon: 'fa-briefcase' },
+				{ name: 'Hostel Committee', icon: 'fa-building-user' },
+				{ name: 'Canteen Committee', icon: 'fa-utensils', link: '/professional_commities/canteen committie.pdf' }
+			]
 		}
 	];
-
-	// Neat, human-readable color map for visibility and maintainability
-	/** @type {Record<string, {text: string, bg: string, badge: string, cardBg: string}>} */
-	const themes = {
-		rose: {
-			text: 'text-rose-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#f43f5e] to-[#be123c]'
-		},
-		indigo: {
-			text: 'text-indigo-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#6366f1] to-[#4338ca]'
-		},
-		amber: {
-			text: 'text-amber-50',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#f59e0b] to-[#d97706]'
-		},
-		purple: {
-			text: 'text-purple-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#a855f7] to-[#7e22ce]'
-		},
-		blue: {
-			text: 'text-blue-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8]'
-		},
-		emerald: {
-			text: 'text-emerald-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#10b981] to-[#047857]'
-		},
-		cyan: {
-			text: 'text-cyan-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#06b6d4] to-[#0e7490]'
-		},
-		slate: {
-			text: 'text-slate-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#64748b] to-[#334155]'
-		},
-		pink: {
-			text: 'text-pink-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#ec4899] to-[#be185d]'
-		},
-		sky: {
-			text: 'text-sky-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#0ea5e9] to-[#0369a1]'
-		},
-		orange: {
-			text: 'text-orange-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#f97316] to-[#c2410c]'
-		},
-		yellow: {
-			text: 'text-yellow-50',
-			bg: 'bg-white/10 text-white',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#eab308] to-[#a16207]'
-		},
-		teal: {
-			text: 'text-teal-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#14b8a6] to-[#0f766e]'
-		},
-		lime: {
-			text: 'text-lime-50',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#84cc16] to-[#4d7c0f]'
-		},
-		violet: {
-			text: 'text-violet-100',
-			bg: 'bg-white/20',
-			badge: 'bg-white/20 text-white shadow-sm backdrop-blur-sm',
-			cardBg: 'bg-gradient-to-br from-[#8b5cf6] to-[#5b21b6]'
-		}
-	};
 </script>
 
-<section class="py-20 bg-[#fcfdfe] font-roboto overflow-hidden">
-	<div class="w-full px-6 md:px-12 lg:px-16">
+<section class="py-24 bg-[#fcfdfe] overflow-hidden">
+	<div class="max-w-[1200px] mx-auto px-6">
 		<!-- Section Header -->
-		<div class="committees-header text-center mb-10 md:mb-16">
-			<h3 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight uppercase">
-				Operational <span class="text-red-600">Committees</span>
-			</h3>
-			<div class="h-1.5 w-16 md:w-32 bg-red-600 mx-auto mt-2 md:mt-4 rounded-full"></div>
+		<div class="text-center mb-16">
+			<h2 class="text-3xl font-semibold text-[#111827] tracking-tight mb-3">
+				Operational Committees
+			</h2>
+			<div class="w-10 h-0.5 bg-[#1d4ed8] mx-auto rounded-full"></div>
 		</div>
 
-		<!-- Cards Grid - Spread End-to-End -->
-		<div
-			class="committees-grid grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6"
-		>
-			{#each items as item, i}
-				{@const style = themes[item.theme]}
-				<div class="committee-card h-full">
-					<a
-						href={item.link || '#'}
-						target={item.link ? '_blank' : '_self'}
-						class="group relative h-full {style.cardBg} border border-white/10 hover:border-white/30 transition-all duration-500 rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 md:hover:-translate-y-2 flex flex-col"
-					>
-						<div class="p-4 md:p-6 flex flex-col h-full text-white">
-							<!-- Header: Icon and Category -->
-							<div class="flex items-start justify-between mb-4 md:mb-8">
-								<div
-									class="w-8 h-8 md:w-10 md:h-10 bg-white/20 {style.text} rounded-[10px] md:rounded-2xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-white/30 duration-500 shadow-sm border border-white/10"
-								>
-									<i class={`fa-solid ${item.icon} text-base md:text-xl`}></i>
-								</div>
-								<span
-									class="px-2 py-0.5 md:px-3 md:py-1 {style.badge} rounded-full text-[8.5px] md:text-[10px] font-black uppercase tracking-widest border border-white/10"
-								>
-									{item.category}
-								</span>
-							</div>
+		<!-- Grouped Sections -->
+		<div class="space-y-16">
+			{#each groups as group}
+				<div class="group-section">
+					<!-- Group Header -->
+					<div class="flex items-center gap-4 mb-8">
+						<h3 class="text-[11px] font-bold uppercase tracking-[0.15em] text-[#6b7280] whitespace-nowrap">
+							{group.label}
+						</h3>
+						<div class="h-px w-full bg-[#f1f5f9]"></div>
+					</div>
 
-							<!-- Title -->
-							<div class="mb-4 md:mb-6">
-								<h3
-									class="text-[15px] md:text-lg font-bold text-white leading-tight transition-colors tracking-tight min-h-[2.5rem] md:min-h-[3rem]"
-								>
-									{item.title}
-								</h3>
-							</div>
-
-							<!-- Footer: Action Indicator -->
-							<div
-								class="mt-auto pt-3 md:pt-4 flex items-center justify-between border-t border-white/10"
+					<!-- Grid -->
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+						{#each group.items as item}
+							<a
+								href={item.link || '#'}
+								target={item.link ? '_blank' : '_self'}
+								class="group flex items-center gap-4 p-4 bg-white border border-[#e5e7eb] rounded-xl transition-all duration-300 hover:-translate-y-[3px] hover:shadow-lg hover:shadow-slate-200/50 hover:border-slate-300"
 							>
-								{#if item.link}
-									<div class="flex items-center gap-2 md:gap-3">
-										<i class="fa-solid fa-file-pdf text-white/80 text-[10px] md:text-sm"></i>
-										<span
-											class="text-[9px] md:text-[11px] font-bold text-white/90 uppercase tracking-widest"
-											>Guidelines</span
-										>
-									</div>
-									<div
-										class="w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-white text-slate-800 flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-md"
-									>
-										<i class="fa-solid fa-arrow-right text-[7px] md:text-[10px]"></i>
-									</div>
-								{:else}
-									<div class="min-h-[14px] md:min-h-[16px]"></div>
-								{/if}
-							</div>
-						</div>
-					</a>
+								<!-- Minimal Icon -->
+								<div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-slate-50 text-slate-500 group-hover:bg-[#1d4ed8]/5 group-hover:text-[#1d4ed8] transition-colors border border-slate-100">
+									<i class="fa-solid {item.icon} text-sm"></i>
+								</div>
+
+								<!-- Content -->
+								<div class="flex flex-col min-w-0">
+									<h4 class="text-[14px] font-medium text-[#111827] leading-tight truncate group-hover:text-[#1d4ed8] transition-colors">
+										{item.name}
+									</h4>
+									{#if item.link}
+										<div class="flex items-center gap-1.5 mt-1">
+											<div class="w-1 h-1 rounded-full bg-emerald-500"></div>
+											<span class="text-[10px] text-[#6b7280] font-medium">Guidelines Available</span>
+										</div>
+									{:else}
+										<span class="text-[10px] text-slate-400 font-medium mt-1">Active Council</span>
+									{/if}
+								</div>
+							</a>
+						{/each}
+					</div>
 				</div>
 			{/each}
 		</div>
@@ -308,10 +104,8 @@
 </section>
 
 <style>
-	:global(.font-roboto) {
-		font-family: 'Roboto', sans-serif !important;
-	}
-	.committee-card {
-		will-change: transform, opacity;
+	/* Use Satoshi/Inter feel with system defaults */
+	:global(section) {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 	}
 </style>

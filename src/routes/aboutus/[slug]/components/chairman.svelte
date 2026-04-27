@@ -23,7 +23,7 @@
 	title="Message From The Secretary & Correspondent"
 	{intro}
 	{sections}
-	imageSrc="/secmam.png"
+	imageSrc="/secmam copy.jpeg"
 	imageAlt="Portrait of Dr. K. Srilakshmi"
 	personName="Dr. K. Srilakshmi"
 	personRole="Secretary & Correspondent"

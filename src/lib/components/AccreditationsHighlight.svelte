@@ -6,7 +6,7 @@
 			name: 'UGC',
 			subtitle: 'Autonomous',
 			color: 'from-blue-500 to-indigo-600',
-			logo: '/bits.png'
+			logo: '/Accredation-logos/UGC.png'
 		},
 		{
 			name: 'NAAC',
@@ -14,21 +14,66 @@
 			color: 'from-amber-400 to-amber-600',
 			logo: '/naac.png'
 		},
-		{ name: 'AICTE', subtitle: 'Approved', color: 'from-orange-400 to-red-500', icon: '⚙️' },
-		{ name: 'JNTU-GV', subtitle: 'Affiliated', color: 'from-emerald-400 to-teal-600', icon: '🎓' },
-		{ name: 'NIRF', subtitle: 'Innovation', color: 'from-indigo-500 to-violet-600', icon: '💡' },
-		{ name: 'IIC', subtitle: 'Recognized', color: 'from-rose-400 to-pink-600', icon: '🌐' },
-		{ name: 'SIRO', subtitle: 'Recognized', color: 'from-red-500 to-rose-600', icon: '🔬' },
-		{ name: 'Careers360', subtitle: 'Rated', color: 'from-sky-400 to-blue-500', icon: '📊' },
+		{
+			name: 'AICTE',
+			subtitle: 'Approved',
+			color: 'from-orange-400 to-red-500',
+			logo: '/Accredation-logos/AICTE.png'
+		},
+		{
+			name: 'JNTU-GV',
+			subtitle: 'Affiliated',
+			color: 'from-emerald-400 to-teal-600',
+			logo: '/Accredation-logos/JNTUGV.jpg'
+		},
+		{
+			name: 'NIRF',
+			subtitle: 'Innovation',
+			color: 'from-indigo-500 to-violet-600',
+			logo: '/Accredation-logos/NIRF.png'
+		},
+		{
+			name: 'IIC',
+			subtitle: 'Recognized',
+			color: 'from-rose-400 to-pink-600',
+			logo: '/Accredation-logos/IIC.png'
+		},
+		{
+			name: 'SIRO',
+			subtitle: 'Recognized',
+			color: 'from-red-500 to-rose-600',
+			logo: '/Accredation-logos/SIRO.png'
+		},
+		{
+			name: 'Careers360',
+			subtitle: 'Rated',
+			color: 'from-sky-400 to-blue-500',
+			logo: '/Accredation-logos/Career360.png'
+		},
 		{
 			name: "MOE's",
 			subtitle: 'Innovation Cell',
 			color: 'from-blue-600 to-indigo-800',
-			icon: '🏗️'
+			logo: "/Accredation-logos/MOE'S.png"
 		},
-		{ name: 'UGC', subtitle: '2(f) & 12(B)', color: 'from-blue-500 to-sky-600', icon: '📜' },
-		{ name: 'APSSDC', subtitle: 'Partner', color: 'from-orange-400 to-amber-500', icon: '🤝' },
-		{ name: 'MSME', subtitle: 'Recognized', color: 'from-slate-500 to-slate-700', icon: '🏭' }
+		{
+			name: 'UGC',
+			subtitle: '2(f) & 12(B)',
+			color: 'from-blue-500 to-sky-600',
+			logo: '/Accredation-logos/UGC1.png'
+		},
+		{
+			name: 'APSSDC',
+			subtitle: 'Partner',
+			color: 'from-orange-400 to-amber-500',
+			logo: '/Accredation-logos/APSSDC.png'
+		},
+		{
+			name: 'MSME',
+			subtitle: 'Recognized',
+			color: 'from-slate-500 to-slate-700',
+			logo: '/Accredation-logos/MSME.png'
+		}
 	];
 </script>
 
@@ -63,7 +108,7 @@
 						Mark of Distinction
 					</p>
 				</div>
-				<h2 class="text-4xl md:text-6xl font-semibold tracking-tight text-slate-900 leading-tight">
+				<h2 class="font-sans text-5xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
 					Recognitions & <span class="relative inline-block">
 						<span
 							class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-600 to-amber-800 gold-shimmer"
@@ -104,13 +149,13 @@
 
 						<!-- Logo/Icon Container - REMOVED GRAYSCALE -->
 						<div
-							class="relative w-14 h-14 rounded-full bg-slate-50/80 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-200/50"
+							class="relative w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-200/50"
 						>
 							{#if item.logo}
 								<img
 									src={item.logo}
 									alt={item.name}
-									class="w-9 h-9 object-contain opacity-90 group-hover:opacity-100 transition-all duration-500"
+									class="w-11 h-11 object-contain opacity-90 group-hover:opacity-100 transition-all duration-500 mix-blend-multiply"
 								/>
 							{:else}
 								<span

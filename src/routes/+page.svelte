@@ -11,6 +11,8 @@
 
 	import Notification from '$lib/components/notification.svelte';
 	import SectionTransition from '$lib/components/SectionTransition.svelte';
+	import CourseHighlight from '$lib/components/CourseHighlight.svelte';
+	import StudentStories from '$lib/components/StudentStories.svelte';
 	import { onMount } from 'svelte';
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
@@ -142,30 +144,42 @@
 				</div>
 
 				<div class="mt-8 w-full lg:mt-0 lg:flex lg:justify-end">
-					<div class="hero-card relative w-full max-w-lg rounded-[2.5rem] overflow-hidden border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] group cursor-pointer">
+					<div
+						class="hero-card relative w-full max-w-lg rounded-[2.5rem] overflow-hidden border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] group cursor-pointer"
+					>
 						<!-- Deep Vignette Overlay -->
-						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-70"></div>
-						
-						<img 
-							src="/baba.png" 
-							alt="BITS Vizag Campus" 
-							class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110" 
-							loading="eager" 
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-70"
+						></div>
+
+						<img
+							src="/baba.png"
+							alt="BITS Vizag Campus"
+							class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+							loading="eager"
 						/>
-						
+
 						<!-- Admissions Chip - Premium Shine -->
 						<div class="absolute top-6 right-6 z-20">
-							<div class="relative px-5 py-2 rounded-full bg-slate-950/90 backdrop-blur-xl border border-emerald-500/30 text-[10px] font-black uppercase tracking-[0.15em] text-emerald-400 flex items-center gap-2 shadow-xl">
-								<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+							<div
+								class="relative px-5 py-2 rounded-full bg-slate-950/90 backdrop-blur-xl border border-emerald-500/30 text-[10px] font-black uppercase tracking-[0.15em] text-emerald-400 flex items-center gap-2 shadow-xl"
+							>
+								<span
+									class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+								></span>
 								Admissions Open 2026
 								<!-- Shimmer Animation -->
-								<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+								<div
+									class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+								></div>
 							</div>
 						</div>
 
 						<!-- NAAC Distinction Badge - 'Text Only' -->
 						<div class="absolute bottom-6 left-6 z-20 w-fit">
-							<div class="p-2 px-4 rounded-xl bg-slate-950/70 backdrop-blur-md border border-white/10 shadow-xl">
+							<div
+								class="p-2 px-4 rounded-xl bg-slate-950/70 backdrop-blur-md border border-white/10 shadow-xl"
+							>
 								<div class="flex flex-col">
 									<h3 class="text-[15px] font-black text-white leading-none mb-1">
 										NAAC 'A' Grade
@@ -277,17 +291,58 @@
 
 	<HighlightsSlider />
 
-	<h1
-		class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black text-center py-6 md:py-12 bg-white text-slate-900 tracking-tight"
-	>
-		CELEBRATE LIFE AT BITS VIZAG
-	</h1>
+	<div class="celebrate-header-container py-10 md:py-16 bg-white overflow-hidden relative">
+		<!-- Subtle decorative background element -->
+		<div
+			class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-amber-50/50 blur-[100px] rounded-full -z-0"
+		></div>
 
-	<div class="content-visibility-auto">
-		<Gallery />
+		<div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+			<div class="inline-flex items-center gap-3 mb-4" data-aos="fade-down">
+				<span class="h-[1px] w-6 bg-blue-400"></span>
+				<span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] md:text-[11px]"
+					>Lifestyle & Culture</span
+				>
+				<span class="h-[1px] w-6 bg-blue-400"></span>
+			</div>
+
+			<h2
+				class="text-3xl md:text-4xl lg:text-4xl font-bold text-slate-900/90 tracking-normal mb-6"
+				data-aos="fade-up"
+			>
+				CELEBRATE LIFE AT
+				<span class="text-blue-700">BITS VIZAG</span>
+			</h2>
+
+			<p
+				class="max-w-xl mx-auto text-slate-500 font-medium text-xs md:text-base leading-relaxed mb-8"
+				data-aos="fade-up"
+				data-aos-delay="100"
+			>
+				Beyond academics, explore a vibrant ecosystem of events, clubs, and moments that define the
+				unforgettable BITS experience.
+			</p>
+
+			<div class="flex items-center justify-center gap-2" data-aos="zoom-in" data-aos-delay="200">
+				<div class="h-1 w-1 rounded-full bg-blue-400"></div>
+				<div class="h-1 w-10 rounded-full bg-gradient-to-r from-blue-400 to-blue-500"></div>
+				<div class="h-1 w-1 rounded-full bg-blue-500"></div>
+			</div>
+		</div>
 	</div>
-	<div class="content-visibility-auto">
-		<Events />
+
+	<div class="bg-white pb-20">
+		<div class="content-visibility-auto">
+			<Gallery />
+		</div>
+
+		<div class="content-visibility-auto mt-12">
+			<Events />
+		</div>
+
+		<div class="content-visibility-auto mt-20">
+			<CourseHighlight />
+		</div>
 	</div>
 	<div class="content-visibility-auto">
 		<Strength />
@@ -296,9 +351,15 @@
 	<div class="content-visibility-auto">
 		<Placement />
 	</div>
+
 	<div class="content-visibility-auto">
 		<Committies />
 	</div>
+
+	<div class="content-visibility-auto">
+		<StudentStories />
+	</div>
+
 	<!-- <a
 	href="/application-form" 
 	class="cbg fixed  font-bold top-[60%] right-8 transform -translate-y-1/2 translate-x-1/2 -rotate-90 bg-yellow-300 hover:bg-[#02ADEE] hover:text-white text-black px-10 py-4 md:py-8 md:rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer"

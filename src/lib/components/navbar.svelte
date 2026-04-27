@@ -30,7 +30,7 @@
 						d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
 					/>
 				</svg>
-				<span>Call : +91 9121214313</span>
+				<span>Call : +91-80088 44699</span>
 			</a>
 
 			<a href="/contactus" class="contact-item">
@@ -110,12 +110,14 @@
 		margin: 0 auto;
 		padding: 0 2rem;
 		display: flex;
+		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-items: center;
 	}
 
 	.welcome-text {
 		letter-spacing: 0.02em;
+		white-space: nowrap;
 	}
 
 	.bits-accent {
@@ -143,6 +145,7 @@
 
 	.contact-links {
 		display: flex;
+		flex-wrap: nowrap;
 		gap: 1.8rem;
 		align-items: center;
 	}
@@ -157,6 +160,7 @@
 		cursor: pointer;
 		opacity: 0.9;
 		font-weight: 600;
+		white-space: nowrap;
 	}
 
 	.contact-item:hover {
@@ -203,6 +207,7 @@
 
 	.brand-row {
 		display: flex;
+		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: space-between;
 		gap: 2rem;
@@ -213,6 +218,7 @@
 
 	.brand-left {
 		display: flex;
+		flex-wrap: nowrap;
 		align-items: center;
 		gap: 1.5rem;
 		min-width: 0;
@@ -240,8 +246,9 @@
 		font-weight: 900;
 		line-height: 1.1;
 		letter-spacing: -0.01em;
-		color: #193149;
+		color: #101f2f;
 		text-transform: uppercase;
+		white-space: nowrap;
 	}
 
 	.title-copy p.lower-text {
@@ -252,10 +259,12 @@
 		color: rgb(28, 65, 80);
 		text-transform: none;
 		opacity: 0.92;
+		white-space: nowrap;
 	}
 
 	.brand-right {
 		display: flex;
+		flex-wrap: nowrap;
 		align-items: center;
 		gap: 1.6rem; /* Increased from 1.25rem for more breathing room */
 		flex-shrink: 0;
@@ -345,6 +354,7 @@
 		cursor: default;
 		overflow: hidden;
 		animation: goldShimmer 4s linear infinite;
+		white-space: nowrap;
 	}
 
 	.ugc-badge::before {
@@ -426,6 +436,7 @@
 		color: #14204a;
 		background: rgba(251, 191, 36, 0.15);
 		border: 1px solid rgba(251, 191, 36, 0.5);
+		white-space: nowrap;
 	}
 
 	.status-pill.dark {
@@ -464,6 +475,7 @@
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		text-transform: uppercase;
 		box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+		white-space: nowrap;
 	}
 
 	.apply-cta:hover {
