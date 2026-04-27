@@ -56,7 +56,6 @@
 			href: '#',
 			id: 'box-7'
 		},
-
 		{
 			pic: '/gallery/Christmas.jpeg',
 			name: 'Christmas Celebrations',
@@ -67,109 +66,40 @@
 	];
 </script>
 
-<div class="image-grid relative">
-	{#each pics as img}
-		<div class="{img.id} relative group overflow-hidden">
-			<img class="transition-transform duration-700 group-hover:scale-110" src={img.pic} alt={img.name} loading="lazy" decoding="async" />
-			<div
-				id="overlayimg"
-				class="flex flex-col absolute inset-0 p-4 md:p-8 transition-opacity duration-500 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 justify-end w-full"
+<section class="max-w-7xl mx-auto px-6 py-12">
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		{#each pics as img, i}
+			<div 
+				class="rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ease-out group bg-white border border-slate-100 cursor-pointer hover:-translate-y-2"
+				data-aos="fade-up"
+				data-aos-delay={i * 80}
 			>
-				<div class="transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-500">
-					<a href={img.href} class="font-black text-white text-lg sm:text-xl lg:text-4xl block leading-tight mb-1">{img.name}</a>
-					<span class="font-bold text-white/70 text-xs sm:text-sm lg:text-2xl">{img.date}</span>
+				<!-- Aspect Ratio Container -->
+				<div class="relative aspect-[4/3] w-full overflow-hidden">
+					<img 
+						src={img.pic} 
+						alt={img.name}
+						class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+						loading="lazy"
+					/>
+					
+					<!-- Dark Overlay on Hover -->
+					<div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex flex-col justify-end p-6">
+						<div class="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+							<span class="text-amber-400 font-bold text-[10px] tracking-[0.2em] uppercase mb-2 block">{img.date}</span>
+							<h3 class="text-white font-bold text-lg leading-tight mb-2">{img.name}</h3>
+							<div class="h-0.5 w-8 bg-amber-400 rounded-full"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	{/each}
-</div>
+		{/each}
+	</div>
+</section>
 
 <style>
-	/* ... (comments preserved or removed, doesn't matter much, focusing on structure) */
-
-	.image-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		box-sizing: border-box;
-		grid-template-areas:
-			'item-1 item-1'
-			'item-2 item-3'
-			'item-4 item-5'
-			'item-6 item-7'
-			'item-8 item-9';
-	}
-
-	.box-1 {
-		grid-area: item-1;
-	}
-	.box-2 {
-		grid-area: item-2;
-	}
-
-	.box-3 {
-		grid-area: item-3;
-		overflow: hidden;
-	}
-	/* Fix for image 3: remove right person (zoom and align left) */
-	.box-3 img {
-		object-position: left;
-		transform: scale(1.2);
-		transform-origin: left center;
-	}
-
-	.box-4 {
-		grid-area: item-4;
-		overflow: hidden;
-	}
-	/* Fix for image 4: hair visible (align top) */
-	.box-4 img {
-		object-position: top;
-	}
-
-	.box-5 {
-		grid-area: item-5;
-	}
-
-	.box-6 {
-		grid-area: item-6;
-	}
-
-	.box-7 {
-		grid-area: item-7;
-	}
-
-	.box-8 {
-		grid-area: item-8;
-	}
-
-	.box-9 {
-		grid-area: item-9;
-	}
-
-	.image-grid div {
-		object-fit: cover;
-		overflow: hidden;
-	}
-
-	img {
-		width: 100%;
-		-o-object-fit: cover;
-		object-fit: cover;
-		-o-object-position: center;
-		object-position: center;
-		z-index: -1;
-		height: 100%;
-	}
-	@media screen and (min-width: 768px) {
-		.image-grid {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-template-rows: 19vw 24vw 24vw;
-			box-sizing: border-box;
-			grid-template-areas:
-				'item-1 item-1 item-2 item-3'
-				'item-1 item-1 item-4 item-5'
-				'item-6 item-7 item-8 item-9';
-		}
+	/* Strict adherence to the clean layout prompt */
+	section {
+		background-color: transparent;
 	}
 </style>

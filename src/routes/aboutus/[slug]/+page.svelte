@@ -153,7 +153,7 @@
 					text: 'Our guiding principles are simple: walk the talk, embrace challenges, maintain transparency, and complete every responsibility with relentless effort. This commitment continues to shape young minds into capable and responsible citizens.'
 				}
 			],
-			imageSrc: '/secmam.png',
+			imageSrc: '/secmam copy.jpeg',
 			imageAlt: 'Portrait of Dr. K. Srilakshmi',
 			personName: 'Dr. K. Srilakshmi',
 			personRole: 'Secretary & Correspondent'

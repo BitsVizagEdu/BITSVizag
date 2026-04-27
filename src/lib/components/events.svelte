@@ -315,222 +315,171 @@
 	}
 </script>
 
-<!--Bigger Screens-->
-<section class="lg:flex lg:flex-col lg:items-center hidden lg:py-2">
-	<div class="flex divide-x-4 divide-purpleS1 justify-start">
-		<div class="w-[400px] flex items-center justify-center py-8">
-			<div class="w-[800px] flex flex-col bg-white">
-				<div class="w-full">
-					<p class="text-4xl font-bold">Events</p>
-				</div>
-			</div>
-		</div>
-		<div class="w-[400px] flex py-16 justify-end">
-			<div class="text-right w-full -mr-24">
-				<a href="/gallery" class="text-2xl font-bold underline whitespace-nowrap"
-					>Explore More on our Instagram Handle
-				</a>
-			</div>
-		</div>
-	</div>
-	{#each events.slice(0, limit) as event, i}
-		{#if i % 2 === 0}
-			<div class="flex divide-x-4 divide-purpleS1 justify-start">
-				<div class="w-[400px] flex items-center justify-center py-10">
-					<div class="flex flex-col items-center">
-						<div class="w-[270px] h-[260px]">
-							<a href={event.href}>
-								<img
-									on:mouseenter={() => scaleUp('.img' + i.toString())}
-									on:mouseleave={() => scaleDown('.img' + i.toString())}
-									class={`img${i} image w-full h-full object-cover rounded-2xl`}
-									src={event.image}
-									alt=""
-									loading="lazy"
-									decoding="async"
-								/>
-							</a>
-						</div>
-						<div class="text-center pt-3 text-gray-500 font-light">
-							{event.click}
-						</div>
-					</div>
-					<div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r" />
-				</div>
-				<div class="w-[400px] flex py-10">
-					<div class="flex flex-col justify-center items-center px-4">
-						<p class="text-xl font-bold pb-4 text-center">{event.name}</p>
-						<p class="text-md font-normal pb-4 text-gray-800 text-center">{event.description}</p>
-						<div class="flex">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								class="w-6 h-6 text-gray-500"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
-							<p class="text-sm font-light text-gray-500 text-center pl-2">{event.date}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		{:else}
-			<div class="flex divide-x-4 divide-purpleS1 justify-end">
-				<div class="w-[400px] py-10">
-					<div class="flex flex-col justify-center items-center pt-4 px-4">
-						<p class="text-xl font-bold pb-4 text-center">{event.name}</p>
-						<p class="text-md font-normal pb-4 text-gray-800 text-center">{event.description}</p>
-						<div class="flex">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								class="w-6 h-6 text-gray-500"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
-							<p class="text-sm font-light text-gray-500 text-center pl-2">{event.date}</p>
-						</div>
-					</div>
-				</div>
-				<div class="w-[400px] flex items-center justify-center py-10">
-					<div class="w-[400px] h-[4px] from-blue-600 to-purple-500 bg-gradient-to-r" />
-					<div class="flex flex-col items-center">
-						<div class="w-[270px] h-[260px]">
-							<a href={event.href}>
-								<img
-									on:mouseenter={() => scaleUp('.img' + i.toString())}
-									on:mouseleave={() => scaleDown('.img' + i.toString())}
-									class={`img${i} image w-full h-full object-cover rounded-2xl`}
-									src={event.image}
-									alt=""
-									loading="lazy"
-									decoding="async"
-								/>
-							</a>
-						</div>
-						<div class="text-center pt-3 text-gray-500 font-light">
-							{event.click}
-						</div>
-					</div>
-				</div>
-			</div>
-		{/if}
-	{/each}
+<section class="max-w-7xl mx-auto px-6 py-24 bg-white">
+	<!-- ✅ REFINED CLEAN HEADER -->
+	<div class="max-w-2xl mb-12" data-aos="fade-up">
+		<h2 class="text-2xl md:text-4xl font-medium tracking-tight text-slate-900/90">
+			Life at <span class="text-amber-600 font-semibold">BITS Vizag</span>
+		</h2>
 
-	{#if limit < events.length}
-		<div class="w-full flex flex-col items-center py-12 mt-4">
-			<div class="w-24 h-1 bg-blue-900 rounded-full mb-8"></div>
-			<button
-				on:click={showMore}
-				class="group flex items-center gap-6 bg-transparent border-none cursor-pointer outline-none p-0 appearance-none"
-			>
-				<span
-					class="text-3xl lg:text-4xl text-black lowercase tracking-leading group-hover:text-[#2672d5] transition-all duration-300"
-				>
-					explore for more .....
-				</span>
+		<p class="text-sm md:text-base text-slate-700 mt-2 leading-relaxed">
+			Events, achievements, and moments that reflect campus life.
+		</p>
+
+		<div
+			class="h-[2px] bg-amber-500 mt-4 rounded-full"
+			data-aos="fade-right"
+			data-aos-delay="200"
+			style="width: 40px;"
+		></div>
+	</div>
+
+	<!-- 🔧 2. CLEAN PREMIUM GRID (Weighted for Right-side impact) -->
+	<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+		<!-- 🎯 3. EVENT LIST (5 Columns) -->
+		<div class="lg:col-span-5 flex flex-col gap-8">
+			{#each events.slice(0, 5) as event, i}
 				<div
-					class="h-12 w-12 rounded-full border-2 border-slate-200 flex items-center justify-center group-hover:border-[#2672d5] group-hover:bg-[#2672d5] group-hover:text-white transition-all duration-500 shadow-sm"
+					class="flex gap-5 items-start group cursor-pointer"
+					data-aos="fade-up"
+					data-aos-delay={i * 80}
 				>
-					<i class="fa-solid fa-chevron-down text-xl group-hover:translate-y-1 transition-transform"
-					></i>
-				</div>
-			</button>
-		</div>
-	{/if}
-</section>
+					<!-- Fixed Image: STRICT 32x32 (w-32 h-32) -->
+					<a
+						href={event.href}
+						target="_blank"
+						class="w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden flex-shrink-0 shadow-md bg-slate-50 border border-slate-100 block"
+					>
+						<img
+							src={event.image}
+							alt={event.name}
+							class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+							loading="lazy"
+						/>
+					</a>
 
-<!--<1024px Smaller screens-->
-<!--<1024px Smaller screens-->
-<section class="lg:hidden flex flex-col w-full bg-[#f8fafc] py-8">
-	<div class="flex items-center justify-center mb-8 px-6">
-		<div class="flex flex-col items-center">
-			<p class="text-3xl font-black text-slate-900 uppercase tracking-tight">Events</p>
-			<div class="h-1.5 w-16 bg-red-600 mt-2 rounded-full"></div>
-		</div>
-	</div>
-	
-	<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
-		{#each events.slice(0, limit) as event, i}
-			<div class="flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 transition-all duration-300 hover:shadow-xl">
-				<div class="relative aspect-video overflow-hidden">
-					<img
-						class="w-full h-full object-cover"
-						src={event.image}
-						alt={event.name}
-						loading="lazy"
-						decoding="async"
-					/>
-					<div class="absolute bottom-3 left-3">
-						<div class="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-wider">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="2.5"
-								stroke="currentColor"
-								class="w-3 h-3"
+					<!-- Content Area -->
+					<div class="flex-1 pt-0.5">
+						<a href={event.href} target="_blank" class="block group/title">
+							<h3
+								class="text-lg font-semibold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight mb-2"
 							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
+								{event.name}
+							</h3>
+						</a>
+
+						<p
+							class="text-sm text-slate-600 mt-1 leading-relaxed line-clamp-2 md:line-clamp-3 mb-3"
+						>
+							{event.description}
+						</p>
+
+						<div
+							class="text-[11px] text-slate-500 font-bold uppercase tracking-wide flex items-center gap-2"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
 							{event.date}
 						</div>
 					</div>
 				</div>
-				
-				<div class="p-5 flex flex-col flex-grow">
-					<h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">{event.name}</h3>
-					<p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
-						{event.description}
+			{/each}
+		</div>
+
+		<!-- 💎 4. FEATURED / CTA COLUMN (6 Columns, Offset to Right) -->
+		<div class="lg:col-span-7 lg:col-start-7 sticky top-24 hidden lg:block">
+			<div
+				class="bg-slate-950 rounded-2xl p-10 text-white relative overflow-hidden shadow-2xl min-h-[720px] flex flex-col justify-between group"
+				data-aos="fade-left"
+			>
+				<!-- Subtle Background Mesh -->
+				<div class="absolute inset-0 opacity-20 pointer-events-none">
+					<div
+						class="absolute -top-24 -right-24 w-64 h-64 bg-amber-500 rounded-full blur-[100px]"
+					></div>
+					<div
+						class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500 rounded-full blur-[100px]"
+					></div>
+				</div>
+
+				<div class="relative z-10">
+					<div
+						class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-[10px] font-bold uppercase tracking-widest mb-8"
+					>
+						<span class="w-1 h-1 bg-amber-400 rounded-full animate-ping"></span>
+						Social Highlights
+					</div>
+
+					<h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+						Experience the <br />
+						<span class="text-amber-500 italic font-serif">Vibrancy</span> on <br />
+						Instagram
+					</h2>
+
+					<p class="text-slate-400 text-sm md:text-base leading-relaxed mb-8 max-w-sm">
+						Get daily updates, student stories, and behind-the-scenes looks at life at BITS Vizag.
 					</p>
-					
-					<div class="mt-auto pt-4 border-t border-slate-50">
-						<a href={event.href} class="text-xs font-black text-red-600 uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-							View Highlights
-							<i class="fa-solid fa-arrow-right"></i>
-						</a>
+				</div>
+
+				<div class="relative z-10">
+					<a
+						href="https://www.instagram.com/bits_vizag_official/"
+						target="_blank"
+						class="inline-flex items-center gap-4 bg-white text-slate-950 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-rose-500 transition-colors shadow-lg group/ig"
+					>
+						Follow @bitsvizag
+						<i
+							class="fa-brands fa-instagram text-base group-hover/ig:scale-110 transition-transform"
+						></i>
+					</a>
+				</div>
+
+				<!-- Decorative Glimpse Grid -->
+				<div
+					class="absolute bottom-0 right-0 w-1/2 h-1/2 translate-x-1/4 translate-y-1/4 opacity-20 group-hover:opacity-40 transition-opacity duration-1000 rotate-12"
+				>
+					<div class="grid grid-cols-2 gap-4">
+						{#each events.slice(6, 10) as ev}
+							<div
+								class="aspect-square bg-slate-800 rounded-lg overflow-hidden border border-white/5"
+							>
+								<img src={ev.image} alt="" class="w-full h-full object-cover" />
+							</div>
+						{/each}
 					</div>
 				</div>
 			</div>
-		{/each}
+		</div>
 	</div>
 
+	<!-- 🧠 5. EXPLORE MORE -->
 	{#if limit < events.length}
-		<div class="flex flex-col items-center w-full py-12 px-4">
+		<div class="mt-20 flex justify-center pt-12 border-t border-slate-50">
 			<button
 				on:click={showMore}
-				class="group flex items-center gap-4 bg-white border border-slate-200 rounded-full py-3 px-8 shadow-sm hover:shadow-md transition-all active:scale-95"
+				class="group flex items-center gap-4 bg-slate-950 text-white rounded-xl px-10 py-5 font-bold text-xs uppercase tracking-[0.2em] hover:bg-amber-600/80 shadow-xl active:scale-95"
 			>
-				<span class="text-sm font-bold text-slate-900 uppercase tracking-widest">
-					Explore More Events
-				</span>
-				<div class="h-8 w-8 rounded-full bg-slate-900 text-white flex items-center justify-center group-hover:translate-y-0.5 transition-transform">
-					<i class="fa-solid fa-chevron-down text-[10px]"></i>
-				</div>
+				Explore More Highlights
+				<i class="fa-solid fa-chevron-down group-hover:translate-y-0.5 transition-transform"></i>
 			</button>
 		</div>
 	{/if}
 </section>
 
 <style>
+	/* Clean Motion & Hierarchy Logic */
+	:global(.line-clamp-2) {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	:global(.line-clamp-3) {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
 	/* Enhanced styling for all event images */
 	.image {
 		box-shadow:

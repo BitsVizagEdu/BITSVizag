@@ -48,12 +48,12 @@
 		user-select: none;
 		bottom: 74px;
 		color: white;
-		background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+		background: #1d2f63;
 		padding: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
 		border-radius: 20px;
-		box-shadow: 0 10px 24px rgba(2, 132, 199, 0.35);
+		box-shadow: 0 10px 24px rgba(8, 14, 31, 0.35);
 		cursor: pointer;
 	}
 	.back-to-top.hidden {
