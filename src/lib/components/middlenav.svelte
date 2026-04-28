@@ -29,6 +29,7 @@
 	];
 
 	const moreLinks = [
+		{ label: 'Committees', href: '/committees', icon: 'fa-solid fa-list-check' },
 		{ label: 'Gallery', href: '/gallery', icon: 'fa-solid fa-images' },
 		{ label: 'Students', href: '/Students', icon: 'fa-solid fa-user-graduate' },
 		{

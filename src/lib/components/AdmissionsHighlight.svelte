@@ -29,7 +29,7 @@
 	];
 </script>
 
-<section class="relative min-h-[75vh] flex items-center w-full overflow-hidden py-16 lg:py-24">
+<section class="relative h-[82vh] flex items-center w-full overflow-hidden">
 	<!-- Premium Background Layer -->
 	<div class="absolute inset-0 z-0">
 		<img
@@ -42,13 +42,13 @@
 		></div>
 	</div>
 
-	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full">
-		<div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full h-full py-6">
+		<div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center h-full items-center">
 			<!-- LEFT SIDE: CONTENT -->
 			<div
 				class="flex flex-col space-y-6 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 					? 'opacity-100 translate-y-0'
-					: 'opacity-0 translate-y-12 pointer-events-none'}"
+					: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 			>
 				<!-- Heading Group -->
 				<div class="space-y-3">
@@ -153,7 +153,7 @@
 			<div
 				class="grid grid-cols-2 gap-4 sm:gap-6 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
 					? 'opacity-100 translate-x-0'
-					: 'opacity-0 translate-x-12 pointer-events-none'}"
+					: 'opacity-0 translate-x-12 pointer-events-none'} h-full items-center"
 			>
 				{#each stats as stat, i}
 					<div

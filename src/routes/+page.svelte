@@ -1,7 +1,6 @@
 <script>
 	import Events from '$lib/components/events.svelte';
 	import Strength from '$lib/components/strength.svelte';
-	import Committies from '$lib/components/committies.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import HighlightsSlider from '$lib/components/HighlightsSlider.svelte';
 
@@ -353,10 +352,6 @@
 	</div>
 
 	<div class="content-visibility-auto">
-		<Committies />
-	</div>
-
-	<div class="content-visibility-auto">
 		<StudentStories />
 	</div>
 
@@ -384,30 +379,6 @@
 		animation: fade-up 0.7s ease-out both;
 	}
 
-	.hero-title {
-		font-size: 3.5rem;
-		font-weight: 800;
-		line-height: 1.1;
-		letter-spacing: -0.02em;
-		margin-bottom: 1.5rem;
-		font-family: 'Outfit', sans-serif;
-	}
-
-	@media (min-width: 768px) {
-		.hero-title {
-			font-size: 72px;
-			line-height: 1;
-			letter-spacing: -0.04em;
-		}
-	}
-
-	.hero-title span.typewriter-container {
-		display: block;
-		color: #fbbf24;
-		min-height: 1.2em;
-		font-weight: 800; /* Increased font weight for contrast */
-	}
-
 	.cursor {
 		display: inline-block;
 		color: #fbbf24;
@@ -424,71 +395,6 @@
 		50% {
 			opacity: 0;
 		}
-	}
-
-	.hero-description {
-		max-width: 360px;
-		margin-top: 1.25rem;
-		font-family: 'Inter', sans-serif;
-		font-size: 16.5px;
-		line-height: 26px;
-		letter-spacing: -0.02em;
-		color: rgba(255, 255, 255, 0.85);
-		font-weight: 400;
-		antialiased: true;
-	}
-
-	@media (min-width: 640px) {
-		.hero-description {
-			max-width: 580px;
-			font-size: 19px;
-			line-height: 28px;
-			letter-spacing: -0.03em;
-		}
-	}
-
-	.hero-actions {
-		display: flex;
-		align-items: center;
-		gap: 0.85rem;
-		margin-top: 1.7rem;
-		flex-wrap: wrap;
-	}
-
-	.hero-actions a {
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 0.93rem;
-		padding: 0.78rem 1.35rem;
-		border-radius: 999px;
-		transition:
-			transform 0.24s ease,
-			box-shadow 0.24s ease,
-			background-color 0.24s ease;
-	}
-
-	.btn-primary {
-		background: #fbbf24;
-		color: #080e1f;
-		border: 1px solid #fbbf24;
-		padding: 0.78rem 1.75rem; /* Increased horizontal padding */
-	}
-
-	.btn-secondary {
-		border: 1px solid rgba(255, 255, 255, 0.72);
-		color: #ffffff;
-		background: rgba(20, 32, 74, 0.4);
-	}
-
-	.hero-actions a:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
-	}
-
-	.hero-visual {
-		display: grid;
-		justify-items: end;
-		animation: fade-up 0.7s ease-out 0.1s both;
 	}
 
 	.hero-badges {
@@ -531,20 +437,11 @@
 		color: #ffffff;
 	}
 
-	.badge-pill.code .value {
-		color: #fbbf24;
-		margin-left: 6px;
-	}
-
 	.badge-pill.est {
 		background: rgba(251, 191, 36, 0.12);
 		border: 1px solid #fbbf24;
 		color: #fbbf24;
 		backdrop-filter: blur(8px);
-	}
-
-	.hero-tagline {
-		display: none;
 	}
 
 	.hero-card {
@@ -578,43 +475,6 @@
 
 	.hero-card:hover img {
 		transform: scale(1.1);
-	}
-
-	.hero-card-chip {
-		position: absolute;
-		top: 0.95rem;
-		right: 0.95rem;
-		padding: 0.4rem 0.72rem;
-		border-radius: 999px;
-		font-size: 0.72rem;
-		font-weight: 600;
-		background: rgba(5, 24, 46, 0.82);
-		color: #9bfec7;
-		border: 1px solid rgba(155, 254, 199, 0.26);
-	}
-
-	.hero-card-footer {
-		position: absolute;
-		left: 0.95rem;
-		bottom: 0.95rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.16rem;
-		padding: 0.64rem 0.74rem;
-		border-radius: 0.8rem;
-		background: rgba(8, 14, 31, 0.82);
-		border: 1px solid rgba(251, 191, 36, 0.52);
-		color: #ffffff;
-	}
-
-	.hero-card-footer strong {
-		font-size: 0.9rem;
-		line-height: 1.2;
-	}
-
-	.hero-card-footer span {
-		font-size: 0.76rem;
-		color: #c6d1de;
 	}
 
 	.social-rail {
@@ -773,12 +633,6 @@
 		100% {
 			opacity: 1;
 			transform: translateY(0);
-		}
-	}
-
-	@media (max-width: 1024px) {
-		.hero-visual {
-			justify-items: start;
 		}
 	}
 

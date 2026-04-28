@@ -37,6 +37,15 @@
 			href: 'https://www.instagram.com/p/DSNLQBXE84Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
+		{
+			name: 'The Shield Protocol 25',
+			description:
+				'3-day Cybersecurity Essentials workshop with Supraja Technologies, where 200+ participants gained hands-on training in key security tools and emerging cyber trends.',
+			date: 'September 8, 2025',
+			image: '/events/S-Protocol.jpg',
+			href: 'https://www.instagram.com/p/DOq-sPxE1C1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
 
 		{
 			name: 'BITS Vizag (A) × Kaumodaki Nexus Grid',
@@ -75,15 +84,7 @@
 			href: 'https://www.instagram.com/p/DQuOMxUE_qx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		},
-		{
-			name: 'The Shield Protocol 25',
-			description:
-				'3-day Cybersecurity Essentials workshop with Supraja Technologies, where 200+ participants gained hands-on training in key security tools and emerging cyber trends.',
-			date: 'September 8, 2025',
-			image: '/events/S-Protocol.jpg',
-			href: 'https://www.instagram.com/p/DOq-sPxE1C1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-			click: 'Click to view more >>>'
-		},
+
 		{
 			name: "International Women's Day 2025",
 			description:
@@ -318,8 +319,8 @@
 <section class="max-w-7xl mx-auto px-6 py-24 bg-white">
 	<!-- ✅ REFINED CLEAN HEADER -->
 	<div class="max-w-2xl mb-12" data-aos="fade-up">
-		<h2 class="text-2xl md:text-4xl font-medium tracking-tight text-slate-900/90">
-			Life at <span class="text-amber-600 font-semibold">BITS Vizag</span>
+		<h2 class="text-2xl md:text-4xl font-semibold tracking-tight text-slate-900/90">
+			Campus <span class="text-amber-600 font-semibold">Highlights</span>
 		</h2>
 
 		<p class="text-sm md:text-base text-slate-700 mt-2 leading-relaxed">

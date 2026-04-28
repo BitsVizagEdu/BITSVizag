@@ -80,8 +80,8 @@
 	}
 </script>
 
-<section id="academics-highlight" class="py-12 px-4 md:px-8">
-	<div class="max-w-5xl mx-auto">
+<section id="academics-highlight" class="relative h-[82vh] flex items-center w-full overflow-hidden px-4 md:px-8">
+	<div class="max-w-5xl mx-auto h-full flex flex-col justify-center py-6">
 		<!-- Header -->
 		<div class="text-center mb-12">
 			<span class="text-emerald-600 font-semibold text-sm uppercase tracking-wide">Our Programs</span>
@@ -127,11 +127,11 @@
 		</div>
 
 		<!-- Programs List with Animation -->
-		<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-			<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+		<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm h-auto md:h-[320px]">
+			<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200 h-full">
 				{#each programLists[selectedTab] as program, i (program)}
 					<div
-						class="p-6 hover:bg-slate-50 transition-colors duration-300 animate-fadeIn"
+						class="p-6 hover:bg-slate-50 transition-colors duration-300 animate-fadeIn flex items-start"
 						style="--delay: {i * 50}ms"
 					>
 						<div class="flex items-start gap-4">

@@ -78,7 +78,7 @@
 </script>
 
 <section
-	class="relative min-h-[75vh] flex items-center justify-center w-full overflow-hidden py-12 lg:py-16 bg-[#FFFDF5]"
+	class="relative h-[82vh] flex items-center justify-center w-full overflow-hidden bg-[#FFFDF5]"
 >
 	<!-- Premium Golden Background Glow -->
 	<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -93,8 +93,7 @@
 		></div>
 	</div>
 
-	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full">
-		<div class="flex flex-col space-y-12">
+	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full h-full flex flex-col justify-center gap-8 py-6">
 			<!-- Premium Gold Lighting Header -->
 			<div
 				class="flex flex-col items-center text-center space-y-3 transition-all duration-1000 cubic-bezier(0.23, 1, 0.32, 1) {isActive
@@ -132,7 +131,7 @@
 					<div
 						class="group relative flex flex-col items-center justify-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl border border-amber-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl {isActive
 							? 'opacity-100 translate-y-0'
-							: 'opacity-0 translate-y-10'}"
+							: 'opacity-0 translate-y-10'} min-h-[180px]"
 						style="transition-delay: {100 + i * 50}ms;"
 					>
 						<!-- Hover Bold Color Touch (Gradient Border) -->
@@ -161,7 +160,7 @@
 								<span
 									class="text-2xl opacity-90 group-hover:opacity-100 transition-all duration-500"
 								>
-									{item.icon}
+									{item.name.charAt(0)}
 								</span>
 							{/if}
 						</div>
@@ -182,7 +181,6 @@
 				{/each}
 			</div>
 		</div>
-	</div>
 </section>
 
 <style>
