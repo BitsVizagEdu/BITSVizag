@@ -86,9 +86,15 @@
 				class="text-4xl md:text-5xl lg:text-5xl font-semibold tracking-normal text-[#1a233e] mb-6"
 			>
 				Real Stories, <span
-					class="bg-gradient-to-r from-amber-500 to-amber-300 bg-clip-text text-transparent"
-					>Real Success</span
+					class="relative inline-block"
 				>
+					<span
+						class="absolute inset-0 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-300 bg-clip-text text-transparent blur-lg opacity-60 animate-shimmer-glow"
+					>Real Success</span>
+					<span
+						class="relative bg-gradient-to-z from-amber-400 via-amber-500 to-amber-300 bg-clip-text text-transparent animate-shimmer-text"
+					>Real Success</span>
+				</span>
 			</h2>
 
 			<p class="max-w-3xl mx-auto text-slate-500 font-medium text-sm md:text-lg leading-relaxed">
@@ -176,9 +182,73 @@
 		animation-play-state: paused;
 	}
 
+	/* Premium Animated Gradient Text */
+	@keyframes shimmer-text {
+		0% {
+			background-position: 0% center;
+		}
+		50% {
+			background-position: 100% center;
+		}
+		100% {
+			background-position: 0% center;
+		}
+	}
+
+	@keyframes shimmer-glow {
+		0% {
+			background-position: 0% center;
+			filter: blur(12px) brightness(0.8);
+		}
+		50% {
+			background-position: 100% center;
+			filter: blur(8px) brightness(1.2);
+		}
+		100% {
+			background-position: 0% center;
+			filter: blur(12px) brightness(0.8);
+		}
+	}
+
+	.animate-shimmer-text {
+		background-size: 200% auto;
+		animation: shimmer-text 3s ease-in-out infinite;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		background-image: linear-gradient(
+			90deg,
+			#fbbf24 0%,
+			#f59e0b 25%,
+			#d97706 50%,
+			#f59e0b 75%,
+			#fbbf24 100%
+		);
+	}
+
+	.animate-shimmer-glow {
+		background-size: 200% auto;
+		animation: shimmer-glow 3s ease-in-out infinite;
+		background-image: linear-gradient(
+			90deg,
+			#fbbf24 0%,
+			#f59e0b 25%,
+			#d97706 50%,
+			#f59e0b 75%,
+			#fbbf24 100%
+		);
+	}
+
 	@media (max-width: 768px) {
 		.animate-marquee-reverse {
 			animation-duration: 40s;
+		}
+
+		.animate-shimmer-text {
+			animation: shimmer-text 2.5s ease-in-out infinite;
+		}
+
+		.animate-shimmer-glow {
+			animation: shimmer-glow 2.5s ease-in-out infinite;
 		}
 	}
 </style>

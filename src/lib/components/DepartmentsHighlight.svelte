@@ -18,7 +18,7 @@
 </script>
 
 <section
-	class="relative min-h-[75vh] flex items-start justify-center w-full overflow-hidden pt-8 lg:pt-10 pb-10 bg-white"
+	class="relative h-[82vh] flex items-center justify-center w-full overflow-hidden bg-white"
 >
 	<!-- Premium Background Layer -->
 	<div class="absolute inset-0 z-0 pointer-events-none">
@@ -40,14 +40,14 @@
 		<div class="absolute inset-0 bg-gradient-to-tr from-rose-50/60 via-white/40 to-white"></div>
 	</div>
 
-	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-10 w-full py-8">
+	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-10 w-full h-full py-6">
 		<div
-			class="flex flex-col space-y-10 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
+			class="flex flex-col gap-8 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 				? 'opacity-100 translate-y-0'
-				: 'opacity-0 translate-y-12 pointer-events-none'}"
+				: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 		>
 			<!-- Top Header -->
-			<div class="flex flex-col items-center text-center space-y-2">
+			<div class="flex flex-col items-center text-center space-y-2 pt-2">
 				<div class="inline-block rounded-full bg-rose-600/10 px-6 py-1.5 border border-rose-200">
 					<p class="text-xs font-bold text-rose-800 tracking-widest uppercase">
 						Courses Offered at BITS Vizag
@@ -59,9 +59,9 @@
 			</div>
 
 			<!-- Main Content Grid -->
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10 items-start">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6 items-center h-full">
 				<!-- LEFT: UG PROGRAMS -->
-				<div class="space-y-6">
+					<div class="space-y-6">
 					<div class="flex items-center gap-3 mb-2 border-b border-rose-100 pb-3">
 						<span class="text-rose-600 text-2xl">🎓</span>
 						<h3 class="text-sm font-black tracking-[0.2em] text-rose-900 uppercase">
@@ -96,7 +96,7 @@
 				</div>
 
 				<!-- RIGHT: PG PROGRAMS -->
-				<div class="space-y-6">
+					<div class="space-y-6">
 					<div class="flex items-center gap-3 mb-2 border-b border-rose-100 pb-3">
 						<span class="text-rose-600 text-2xl">🏛️</span>
 						<h3 class="text-sm font-black tracking-[0.2em] text-rose-900 uppercase">

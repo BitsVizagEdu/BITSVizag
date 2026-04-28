@@ -50,7 +50,7 @@
 		},
 		{
 			title: 'Mechanical',
-			image: '/mech.jpg',
+			image: '/mechnew.png',
 			desc: 'Mechanical Engineering & Innovation',
 			duration: '4 Years',
 			seats: '1,260 Seats',
@@ -129,15 +129,15 @@
 <section class="max-w-7xl mx-auto px-6 py-12 bg-white overflow-hidden">
 	<!-- ✅ CENTERED PREMIUM HEADER -->
 	<div class="mb-16 max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
-		<h2 class="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-[#1a233e] mb-4">
+		<h2 class="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#1a233e] mb-4">
 			Programmes & <span
 				class="bg-gradient-to-r from-[#e67e22] to-[#f1c40f] bg-clip-text text-transparent"
 				>Courses</span
 			>
 		</h2>
-		<p class="text-sm md:text-lg text-slate-500 font-medium leading-relaxed max-w-3xl mx-auto">
-			AICTE-approved, UGC-recognised pathways & world-class departments - all designed to launch
-			exceptional careers.
+		<p class="text-sm md:text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
+			Discover our AICTE-approved, UGC-recognised programmes. From core engineering to emerging
+			specialisations, each course is crafted to build exceptional careers.
 		</p>
 	</div>
 
@@ -216,7 +216,9 @@
 
 				<!-- Collapsed State Vertical Title -->
 				{#if active !== i}
-					<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
+					<div
+						class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10"
+					>
 						<span
 							class="whitespace-nowrap uppercase tracking-[0.4em] font-black text-[11px] transform -rotate-90 origin-center text-slate-300 group-hover:text-white transition-colors"
 						>
