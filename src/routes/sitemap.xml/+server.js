@@ -62,9 +62,7 @@ export async function GET() {
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of CIVIL</loc>
-		<priority>0.8</priority>
-		<changefreq>monthly</changefreq>
+		<!-- Department of CIVIL removed from sitemap per request -->
 	</url>
 	<url>
 		<loc>https://bitsvizag.com/department/Department of MECH</loc>

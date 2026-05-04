@@ -31,6 +31,9 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'Satoshi', 'sans-serif']
+      },
       colors: {
         'menu':'#234885',        
         'nav': '#2d2d2d',

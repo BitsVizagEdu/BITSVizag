@@ -187,7 +187,7 @@
 		<div class="mt-12 pt-8 border-t border-white/5 flex flex-col lg:flex-row items-center justify-between gap-6 text-[12px] font-bold text-slate-600 tracking-normal">
 			<!-- Copyright -->
 			<div class="lg:w-1/3 text-center lg:text-left">
-				<p>© {new Date().getFullYear()} <span class="text-white">BITS VIZAG</span>. All Rights Reserved.</p>
+				<p>© {new Date().getFullYear()} <span class="text-white text-[15px]">bitsvizag.edu.in</span>. All Rights Reserved.</p>
 			</div>
 
 			<!-- Center Credit -->

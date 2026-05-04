@@ -2,5 +2,5 @@ import { redirect } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageLoad} */
 export function load() {
-	throw redirect(302, '/courses/Under-Graduation');
+	throw redirect(302, '/courses/Offered-Courses');
 }

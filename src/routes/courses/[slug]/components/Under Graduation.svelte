@@ -62,10 +62,7 @@
 			</div>
 		</div>
 
-		<div class="section-head">
-			<h2>Courses Offered</h2>
-			<p>Core Under Graduation B.Tech departments</p>
-		</div>
+		<!-- section-head removed per request to avoid duplicate heading -->
 
 		<div class="dept-grid">
 			{#each departments as dept, index}

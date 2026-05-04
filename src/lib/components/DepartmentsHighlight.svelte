@@ -156,11 +156,11 @@
 			<!-- Explore Button -->
 			<div class="flex justify-center pt-8">
 				<a
-					href="/courses/Under-Graduation"
+					href="/department/Department%20of%20CSE"
 					class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-rose-600 px-10 py-4 text-sm font-bold text-white transition-all hover:bg-rose-700 hover:shadow-xl hover:shadow-rose-900/30"
 				>
 					<span class="relative z-10 flex items-center gap-2">
-						Explore Our Courses
+						Explore Our Departments
 						<svg
 							class="w-5 h-5 group-hover:translate-x-1 transition-transform"
 							fill="none"

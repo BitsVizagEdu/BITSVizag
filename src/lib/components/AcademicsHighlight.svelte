@@ -154,8 +154,8 @@
 
 		<!-- Explore Link -->
 		<div class="mt-10 text-center">
-			<a href={selectedTab === 'ug' ? '/courses/Under-Graduation' : '/courses/Post-Graduation'} class="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-semibold {selectedTab === 'ug' ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-blue-600 hover:bg-blue-700'} text-white transition-colors duration-300">
-				Explore All {selectedTab === 'ug' ? 'UG' : 'PG'} Programs
+			<a href="/department/Department%20of%20CSE" class="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-semibold {selectedTab === 'ug' ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-blue-600 hover:bg-blue-700'} text-white transition-colors duration-300">
+				Explore Programs
 				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 				</svg>

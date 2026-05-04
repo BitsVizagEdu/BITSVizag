@@ -1,4 +1,4 @@
-export let items = ['Under-Graduation', 'Post-Graduation']
+export let items = []
 
 /**
  * @param {string} text

@@ -1,6 +1,8 @@
 import { error } from '@sveltejs/kit';
 import {items} from "./components/utils.js";
 
+export const prerender = false;
+
 function normalizeSlug(item){
     try {
         return decodeURIComponent(item);
