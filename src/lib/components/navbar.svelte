@@ -12,17 +12,7 @@
 		</div>
 
 		<div class="contact-links">
-			<a
-				href="https://mail.google.com/mail/?view=cm&fs=1&to=principal@bitsvizag.com"
-				target="_blank"
-				class="contact-item"
-			>
-				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-					<polyline points="22,6 12,13 2,6" />
-				</svg>
-				<span>Email : principal@bitsvizag.com</span>
-			</a>
+			<!-- Email removed as requested -->
 
 			<a href="tel:+919121214313" class="contact-item">
 				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -31,6 +21,14 @@
 					/>
 				</svg>
 				<span>Call : +91-80088 44699</span>
+			</a>
+
+			<a href="/courses/Offered-Courses" class="contact-item">
+				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20" />
+					<path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+				</svg>
+				<span>Courses Offered</span>
 			</a>
 
 			<a href="/contactus" class="contact-item">
@@ -42,7 +40,7 @@
 				<span>More Details</span>
 			</a>
 
-			<div class="contact-item dropdown">
+			<a href="/alumini-data" class="contact-item dropdown" aria-label="Global Alumni Network">
 				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 					<circle cx="12" cy="12" r="10" />
 					<line x1="2" y1="12" x2="22" y2="12" />
@@ -54,7 +52,7 @@
 				<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
 					<polyline points="6 9 12 15 18 9" />
 				</svg>
-			</div>
+			</a>
 		</div>
 	</div>
 </div>
@@ -230,10 +228,6 @@
 		object-fit: contain;
 		flex-shrink: 0;
 		transform: translateY(-1.5px); /* Moved slightly up as requested */
-	}
-
-	.animated-logo {
-		/* Animation removed */
 	}
 
 	.title-copy {

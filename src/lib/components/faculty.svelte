@@ -14,7 +14,6 @@
 		'ECE',
 		'EEE',
 		'MECHANICAL',
-		'CIVIL',
 		'MBA'
 	];
 

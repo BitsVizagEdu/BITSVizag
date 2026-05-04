@@ -107,46 +107,45 @@
 />
 
 {#if !$showNavBar}
-	<!-- Premium Centered Navigation -->
-	<PremiumSideNav
-		{items}
-		activeTab={currentSlug}
-		title="Our Departments"
-		basePath="/department"
-		onSelect={(item) => setActiveTabValue(item)}
-	/>
+	{#if currentSlug === 'Department of CSE'}
+		<DepartmentofCse />
+	{:else}
+		<!-- Premium Centered Navigation -->
+		<PremiumSideNav
+			{items}
+			activeTab={currentSlug}
+			title="Our Departments"
+			basePath="/department"
+			onSelect={(item) => setActiveTabValue(item)}
+		/>
 
-	<div class="min-h-screen bg-slate-50/30">
-		<!-- Main Content Area -->
-		<main class="w-full max-w-6xl mx-auto p-4 lg:p-6">
-			<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-				{#if currentSlug === 'Department of BS&H'}
-					<DepartmentofBsh />
-				{/if}
-				{#if currentSlug === 'Department of CSE'}
-					<DepartmentofCse />
-				{/if}
-				{#if currentSlug === 'Department of CSE (AI & ML)'}
-					<DepartmentofCseAiMl />
-				{/if}
-				{#if currentSlug === 'Department of CSE (Cyber Security)'}
-					<DepartmentofCseCyber />
-				{/if}
-				{#if currentSlug === 'Department of ECE'}
-					<DepartmentofEce />
-				{/if}
-				{#if currentSlug === 'Department of EEE'}
-					<DepartmentofEee />
-				{/if}
-				{#if currentSlug === 'Department of CIVIL'}
-					<DepartmentofCivil />
-				{/if}
-				{#if currentSlug === 'Department of MECH'}
-					<DepartmentofMech />
-				{/if}
-			</div>
-		</main>
-	</div>
+		<div class="min-h-screen bg-slate-50/30">
+			<!-- Main Content Area -->
+			<main class="w-full max-w-6xl mx-auto p-4 lg:p-6">
+				<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
+					{#if currentSlug === 'Department of BS&H'}
+						<DepartmentofBsh />
+					{/if}
+					{#if currentSlug === 'Department of CSE (AI & ML)'}
+						<DepartmentofCseAiMl />
+					{/if}
+					{#if currentSlug === 'Department of CSE (Cyber Security)'}
+						<DepartmentofCseCyber />
+					{/if}
+					{#if currentSlug === 'Department of ECE'}
+						<DepartmentofEce />
+					{/if}
+					{#if currentSlug === 'Department of EEE'}
+						<DepartmentofEee />
+					{/if}
+					<!-- Removed Civil department rendering per requested cleanup -->
+					{#if currentSlug === 'Department of MECH'}
+						<DepartmentofMech />
+					{/if}
+				</div>
+			</main>
+		</div>
+	{/if}
 {/if}
 
 <style>

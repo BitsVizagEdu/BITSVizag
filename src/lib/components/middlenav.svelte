@@ -24,8 +24,7 @@
 			href: '/department/Department%20of%20CSE%20(Cyber%20Security)',
 			level: 'UG'
 		},
-		{ label: 'MBA', href: '/department/Department%20of%20MBA', level: 'PG' },
-		{ label: 'M.Tech', href: '/courses/Post-Graduation', level: 'PG' }
+		{ label: 'MBA', href: '/department/Department%20of%20MBA', level: 'PG' }
 	];
 
 	const moreLinks = [
@@ -163,12 +162,38 @@
 
 			<!-- Courses -->
 			<li>
-				<a href="/courses/Under-Graduation" class="desktop-item"> Courses </a>
+				<button type="button" class="desktop-item">Courses</button>
 				<button
 					type="button"
 					class="mobile-item {activeMobileDropdown === 'courses' ? 'active-dropdown' : ''}"
 					on:click={() => toggleMobileDropdown('courses')}>Courses</button
 				>
+				<!-- DESKTOP MEGA BOX: Departments -->
+				<div class="mega-box hidden lg:block">
+					<div class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto">
+						<div class="flex flex-col items-start w-full">
+							<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
+								<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 border border-emerald-100">
+									<i class="fa-solid fa-graduation-cap text-xl text-emerald-600" aria-hidden="true"></i>
+								</div>
+								<div class="flex flex-col text-left">
+									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">Departments</header>
+								</div>
+							</div>
+
+							<div class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3">
+								<MegaMenuItem href="/department/Department%20of%20CSE" label="CSE - Computer Science and Engineering" icon="fa-solid fa-laptop-code" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20CSE%20(AI%20%26%20ML)" label="CSE - AI & ML" icon="fa-solid fa-brain" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20CSE%20(Cyber%20Security)" label="CSE - Cyber Security" icon="fa-solid fa-shield-halved" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20ECE" label="ECE - Electronics & Communication" icon="fa-solid fa-microchip" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20EEE" label="EEE - Electrical & Electronics" icon="fa-solid fa-bolt" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20MECH" label="Mechanical" icon="fa-solid fa-cogs" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20BS%26H" label="H&S - Humanities & Sciences" icon="fa-solid fa-book" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20MBA" label="MBA - Master of Business Administration" icon="fa-solid fa-briefcase" onClick={closeMenus} />
+							</div>
+						</div>
+					</div>
+				</div>
 			</li>
 
 			<!-- Faculty -->

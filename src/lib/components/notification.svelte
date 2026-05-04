@@ -14,7 +14,7 @@
 				<span class="marquee-item">
 					<span class="new-badge">NEW</span>
 					<span class="marquee-admissions">Admissions Open for B.Tech, M.Tech (2026)</span>
-					<a href="/courses/Under-Graduation" class="apply-link">Click here</a>
+					<a href="/department/Department%20of%20CSE" class="apply-link">Click here</a>
 
 					<span class="separator">|</span>
 					<span class="scholarship-badge"> Explore </span>

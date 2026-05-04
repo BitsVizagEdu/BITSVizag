@@ -30,15 +30,10 @@
 	<!-- Font Preloading for Performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link
-		rel="preload"
-		as="style"
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&family=Roboto:wght@500&display=swap"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&family=Roboto:wght@500&display=swap"
-	/>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&display=swap" />
 
 	<!-- Font Awesome CDN - Async Load -->
 	<link

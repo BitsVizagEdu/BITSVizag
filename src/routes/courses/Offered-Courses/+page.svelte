@@ -1,32 +1,42 @@
 <script>
 	import Seo from '$lib/components/Seo.svelte';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
-	const ugPrograms = [
-		{ name: 'B.Tech in Computer Science & Engg. (CSE)', intake: 360, icon: 'fa-solid fa-laptop-code' },
-		{ name: 'B.Tech in CSE (Data Science)', intake: 180, icon: 'fa-solid fa-chart-pie' },
-		{ name: 'B.Tech in CSE (AI & Machine Learning)', intake: 120, icon: 'fa-solid fa-robot' },
-		{ name: 'B.Tech in Electronics & Comm. (ECE)', intake: 60, icon: 'fa-solid fa-microchip' },
-		{ name: 'B.Tech in VLSI Design & Technology', intake: 60, icon: 'fa-solid fa-circuit-board' },
-		{ name: 'Bachelor of Computer Applications (BCA)', intake: 180, icon: 'fa-solid fa-desktop' }
+	const bTechPrograms = [
+		{ sno: 1, estd: 2008, name: 'Computer Science & Engineering', intake: 180, slug: 'Department of CSE' },
+		{ sno: 2, estd: 2020, name: 'CSE - AI & Machine Learning', intake: 60, slug: 'Department of CSE (AI & ML)' },
+		{ sno: 3, estd: 2020, name: 'CSE - Cyber Security', intake: 60, slug: 'Department of CSE (Cyber Security)' },
+		{ sno: 4, estd: 2008, name: 'Electronics & Communication Engineering', intake: 120, slug: 'Department of ECE' },
+		{ sno: 5, estd: 2008, name: 'Electrical & Electronic Engineering', intake: 60, slug: 'Department of EEE' },
+		{ sno: 6, estd: 2008, name: 'Mechanical Engineering', intake: 60, slug: 'Department of MECH' }
 	];
 
 	const pgPrograms = [
-		{ name: 'Master of Business Administration (MBA)', intake: 300, icon: 'fa-solid fa-briefcase' },
-		{ name: 'M.Tech in Computer Science & Engg.', intake: 18, icon: 'fa-solid fa-code' },
-		{ name: 'M.Tech in VLSI & Embedded Systems', intake: 18, icon: 'fa-solid fa-microchip' },
-		{ name: 'M.Tech in Power Systems (EEE)', intake: 18, icon: 'fa-solid fa-bolt' }
+		{ sno: 1, duration: '2 Years', name: 'Master of Technology (M.Tech)', slug: null },
+		{ sno: 2, duration: '2 Years', name: 'Master of Business Administration (MBA)', slug: 'Department of MBA' }
 	];
 
+	let activeTab = 'btech';
 	let visible = false;
+
 	onMount(() => {
 		visible = true;
 	});
+
+	/** @param {string | null} slug */
+	async function navigateToCourse(slug) {
+		if (!slug) return;
+		await goto('/department/' + encodeURIComponent(slug));
+	}
 </script>
 
 <Seo 
 	title="Courses Offered - BITS Vizag"
-	description="Explore the wide range of undergraduate and postgraduate programs offered at BITS Vizag. Join us to shape your future."
+	description="Explore the comprehensive range of academic programs offered at BITS Vizag. Join us to shape your future."
+	url="https://bitsvizag.com/courses/Offered-Courses"
+	imageUrl="https://bitsvizag.com/bits.jpg"
+	siteName="BITS Vizag"
 />
 
 <div class="page-container">
@@ -38,67 +48,111 @@
 
 	<div class="content-wrapper {visible ? 'fade-in' : ''}">
 		<header class="page-header">
-			<h2 class="tagline">What starts <span>here</span>, holds the <span>future.</span></h2>
-			<div class="badge-container">
-				<span class="course-badge">COURSES OFFERED AT BABA</span>
-			</div>
+			<h1>Courses Offered</h1>
+			<p class="subtitle">Comprehensive Academic Offerings at RVIT</p>
 		</header>
 
-		<div class="programs-grid">
-			<!-- Undergraduate Programs -->
-			<section class="program-section">
-				<div class="section-header">
-					<i class="fa-solid fa-user-graduate"></i>
-					<h3>UNDERGRADUATE PROGRAMS</h3>
+		<div class="admission-section">
+			<div class="admission-box">
+				<div class="admission-icon">ⓘ</div>
+				<div class="admission-text">
+					<strong>Admission Allocation</strong>
+					<p>70% seats allotted via EAPCET / ECET / PGECET / ICET. 30% seats earmarked for Management / NRI Quota.</p>
 				</div>
-				<div class="course-list">
-					{#each ugPrograms as course}
-						<div class="course-card">
-							<div class="course-info">
-								<div class="icon-box">
-									<i class={course.icon}></i>
-								</div>
-								<span class="course-name">{course.name}</span>
-							</div>
-							<div class="intake-info">
-								<span class="intake-label">INTAKE</span>
-								<span class="intake-value">{course.intake}</span>
-							</div>
-						</div>
-					{/each}
-				</div>
-			</section>
+			</div>
+		</div>
 
-			<!-- Postgraduate Programs -->
-			<section class="program-section">
-				<div class="section-header">
-					<i class="fa-solid fa-graduation-cap"></i>
-					<h3>POSTGRADUATE PROGRAMS</h3>
-				</div>
-				<div class="course-list">
-					{#each pgPrograms as course}
-						<div class="course-card">
-							<div class="course-info">
-								<div class="icon-box">
-									<i class={course.icon}></i>
-								</div>
-								<span class="course-name">{course.name}</span>
-							</div>
-							<div class="intake-info">
-								<span class="intake-label">INTAKE</span>
-								<span class="intake-value">{course.intake}</span>
-							</div>
-						</div>
-					{/each}
-				</div>
+		<div class="tabs-container">
+			<div class="tabs-nav">
+				<button 
+					class="tab-btn {activeTab === 'btech' ? 'active' : ''}"
+					on:click={() => activeTab = 'btech'}
+				>
+					<span class="icon">🎓</span> B.Tech
+				</button>
+				<button 
+					class="tab-btn {activeTab === 'pg' ? 'active' : ''}"
+					on:click={() => activeTab = 'pg'}
+				>
+					<span class="icon">📚</span> PG Courses
+				</button>
+			</div>
 
-				<div class="counselling-code">
-					<div class="code-box">
-						<i class="fa-solid fa-graduation-cap"></i>
-						<span>Counselling Code: <strong>BABA</strong></span>
+			<div class="tab-content">
+				{#if activeTab === 'btech'}
+					<div class="course-section">
+						<h2 class="section-title">
+							<span class="icon">🎓</span>
+							UNDERGRADUATE
+							<span class="sub-title">Bachelor of Technology (B.Tech)</span>
+						</h2>
+						<div class="table-wrapper">
+							<table class="courses-table">
+								<thead>
+									<tr>
+										<th>S. NO</th>
+										<th>ESTD.</th>
+										<th>COURSE SPECIALIZATION</th>
+										<th>INTAKE</th>
+									</tr>
+								</thead>
+								<tbody>
+									{#each bTechPrograms as course}
+										<tr class="course-row" on:click={() => navigateToCourse(course.slug)}>
+											<td>{course.sno}</td>
+											<td>{course.estd}</td>
+											<td class="course-name-cell">{course.name}</td>
+											<td class="intake-cell"><span class="intake-badge">{course.intake}</span></td>
+										</tr>
+									{/each}
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-			</section>
+				{:else if activeTab === 'pg'}
+					<div class="course-section">
+						<h2 class="section-title">
+							<span class="icon">📚</span>
+							POSTGRADUATE
+							<span class="sub-title">Master of Technology (M.Tech) and Master of Business Administration (MBA)</span>
+						</h2>
+						<div class="table-wrapper">
+							<table class="courses-table">
+								<thead>
+									<tr>
+										<th>S. NO</th>
+										<th>DURATION</th>
+										<th>COURSE SPECIALIZATION</th>
+										<th>ACTION</th>
+									</tr>
+								</thead>
+								<tbody>
+									{#each pgPrograms as course}
+										<tr class="course-row {course.slug ? 'is-clickable' : 'is-static'}" on:click={() => navigateToCourse(course.slug)}>
+											<td>{course.sno}</td>
+											<td>{course.duration}</td>
+											<td class="course-name-cell">{course.name}</td>
+											<td class="intake-cell">
+												{#if course.slug}
+													<span class="action-chip">Explore Department</span>
+												{:else}
+													<span class="action-chip static">Info Only</span>
+												{/if}
+											</td>
+										</tr>
+									{/each}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				{/if}
+			</div>
+		</div>
+
+		<div class="counselling-code-section">
+			<div class="code-box">
+				<span class="code-label">Counselling Code:</span> <strong class="code-value">BABA</strong>
+			</div>
 		</div>
 
 		<footer class="accreditation-footer">
@@ -122,16 +176,15 @@
 	.page-container {
 		position: relative;
 		min-height: 100vh;
-		background: #f8fafc;
+		background: linear-gradient(135deg, #1a1f3a 0%, #16213e 100%);
 		overflow: hidden;
-		font-family: 'Outfit', 'Inter', sans-serif;
-		padding: 4rem 2rem;
+		font-family: 'Inter', 'Satoshi', sans-serif;
+		padding: 3rem 2rem;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 	}
 
-	/* Beautiful Background Blobs */
 	.background-blobs {
 		position: absolute;
 		top: 0;
@@ -146,7 +199,7 @@
 		position: absolute;
 		border-radius: 50%;
 		filter: blur(80px);
-		opacity: 0.15;
+		opacity: 0.08;
 		animation: blob-float 20s infinite alternate;
 	}
 
@@ -201,163 +254,281 @@
 
 	.page-header {
 		text-align: center;
-		margin-bottom: 3.5rem;
-	}
-
-	.tagline {
-		font-size: 2.25rem;
-		font-weight: 400;
-		color: #1e293b;
-		margin-bottom: 1.5rem;
-	}
-
-	.tagline span {
-		font-weight: 800;
-		color: #4f46e5;
-	}
-
-	.course-badge {
-		background: #6366f1;
-		color: white;
-		padding: 0.6rem 1.5rem;
-		border-radius: 999px;
-		font-weight: 700;
-		font-size: 0.9rem;
-		letter-spacing: 0.05em;
-		box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-	}
-
-	.programs-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		align-items: start;
-	}
-
-	.program-section {
-		background: rgba(255, 255, 255, 0.7);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		border-radius: 2rem;
-		padding: 2.5rem;
-		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
-	}
-
-	.section-header {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
 		margin-bottom: 2rem;
-		color: #4f46e5;
+		padding: 3rem 0;
+		background: linear-gradient(180deg, #1e3c72 0%, rgba(30, 60, 114, 0) 100%);
+		border-radius: 0.5rem;
 	}
 
-	.section-header i {
-		font-size: 1.25rem;
-	}
-
-	.section-header h3 {
-		font-size: 1rem;
-		font-weight: 800;
-		letter-spacing: 0.1em;
+	.page-header h1 {
+		font-size: 3rem;
+		font-weight: 900;
+		color: #fbbf24;
 		margin: 0;
+		letter-spacing: -0.02em;
+		font-family: 'Inter', 'Satoshi', sans-serif;
 	}
 
-	.course-list {
+	.subtitle {
+		font-size: 1.1rem;
+		color: #cbd5e1;
+		margin: 0.5rem 0 0 0;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+	}
+
+	.admission-section {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		background: #fffbeb;
+		border-left: 4px solid #fbbf24;
+		border-radius: 0.5rem;
+	}
+
+	.admission-box {
 		display: flex;
-		flex-direction: column;
 		gap: 1rem;
+		align-items: flex-start;
 	}
 
-	.course-card {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background: white;
-		padding: 1.2rem 1.5rem;
-		border-radius: 1.25rem;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-		transition: all 0.3s ease;
-		border: 1px solid transparent;
-	}
-
-	.course-card:hover {
-		transform: translateY(-3px) scale(1.02);
-		box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
-		border-color: #6366f133;
-	}
-
-	.course-info {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
-
-	.icon-box {
-		width: 36px;
-		height: 36px;
+	.admission-icon {
+		width: 40px;
+		height: 40px;
+		background: #fbbf24;
+		color: #92400e;
+		border-radius: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: #f1f5f9;
-		color: #6366f1;
-		border-radius: 0.75rem;
+		font-weight: 900;
+		font-size: 1.2rem;
+		flex-shrink: 0;
+	}
+
+	.admission-text {
+		color: #92400e;
+	}
+
+	.admission-text strong {
+		display: block;
 		font-size: 1rem;
-	}
-
-	.course-name {
-		font-size: 0.95rem;
-		font-weight: 600;
-		color: #334155;
-	}
-
-	.intake-info {
-		display: flex;
-		align-items: baseline;
-		gap: 0.75rem;
-		padding-left: 1rem;
-	}
-
-	.intake-label {
-		font-size: 0.65rem;
 		font-weight: 700;
-		color: #94a3b8;
-		letter-spacing: 0.05em;
+		margin-bottom: 0.5rem;
 	}
 
-	.intake-value {
-		font-size: 1.25rem;
-		font-weight: 800;
-		color: #6366f1;
-		min-width: 2.5rem;
+	.admission-text p {
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	.tabs-container {
+		background: white;
+		border-radius: 0.75rem;
+		overflow: hidden;
+		margin: 2rem 0;
+	}
+
+	.tabs-nav {
+		display: flex;
+		flex-wrap: wrap;
+		background: #f8fafc;
+		border-bottom: 2px solid #e2e8f0;
+		padding: 0.5rem;
+		gap: 0.5rem;
+	}
+
+	.tab-btn {
+		padding: 0.75rem 1.25rem;
+		border: none;
+		background: white;
+		color: #64748b;
+		font-weight: 600;
+		font-size: 0.95rem;
+		cursor: pointer;
+		border-radius: 0.5rem;
+		transition: all 0.3s ease;
+		font-family: 'Inter', 'Satoshi', sans-serif;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		white-space: nowrap;
+	}
+
+	.tab-btn:hover {
+		background: #eff6ff;
+		color: #1e40af;
+	}
+
+	.tab-btn.active {
+		background: #1e40af;
+		color: white;
+		box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+	}
+
+	.tab-btn .icon {
+		font-size: 1.1rem;
+	}
+
+	.tab-content {
+		padding: 2rem;
+	}
+
+	.course-section {
+		animation: fadeIn 0.3s ease;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.section-title {
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: #1e40af;
+		margin: 0 0 1.5rem 0;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-family: 'Inter', 'Satoshi', sans-serif;
+	}
+
+	.section-title .icon {
+		font-size: 1.5rem;
+	}
+
+	.section-title .sub-title {
+		display: block;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: #64748b;
+		margin-left: auto;
+	}
+
+	.table-wrapper {
+		overflow-x: auto;
+	}
+
+	.courses-table {
+		width: 100%;
+		border-collapse: collapse;
+		background: white;
+	}
+
+	.courses-table thead tr {
+		background: #1e293b;
+		color: white;
+	}
+
+	.courses-table th {
+		padding: 1rem;
+		text-align: left;
+		font-weight: 700;
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		border: none;
+		font-family: 'Inter', 'Satoshi', sans-serif;
+	}
+
+	.courses-table tbody tr {
+		border-bottom: 1px solid #e2e8f0;
+		transition: all 0.3s ease;
+	}
+
+	.courses-table tbody tr:hover {
+		background: #f0f9ff;
+		transform: scale(1.01);
+	}
+
+	.course-row.is-clickable {
+		cursor: pointer;
+	}
+
+	.course-row.is-static {
+		cursor: default;
+	}
+
+	.courses-table td {
+		padding: 1rem;
+		font-size: 0.95rem;
+		color: #334155;
+		font-family: 'Inter', 'Satoshi', sans-serif;
+	}
+
+	.course-name-cell {
+		font-weight: 600;
+		color: #1e40af;
+	}
+
+	.intake-cell {
 		text-align: right;
 	}
 
-	.counselling-code {
-		margin-top: 2.5rem;
-		display: flex;
+	.action-chip {
+		display: inline-flex;
+		align-items: center;
 		justify-content: center;
+		padding: 0.35rem 0.75rem;
+		border-radius: 999px;
+		background: #dbeafe;
+		color: #1d4ed8;
+		font-size: 0.8rem;
+		font-weight: 700;
+		border: 1px solid #93c5fd;
+	}
+
+	.action-chip.static {
+		background: #f1f5f9;
+		border-color: #cbd5e1;
+		color: #64748b;
+	}
+
+	.intake-badge {
+		background: #fef3c7;
+		color: #92400e;
+		padding: 0.4rem 0.9rem;
+		border-radius: 999px;
+		font-weight: 700;
+		font-size: 0.95rem;
+		display: inline-block;
+		border: 1px solid #fcd34d;
+	}
+
+	.counselling-code-section {
+		text-align: center;
+		margin: 2rem 0;
 	}
 
 	.code-box {
 		background: #fffbeb;
-		border: 1px solid #fde68a;
-		padding: 0.8rem 1.5rem;
-		border-radius: 1rem;
+		border: 2px solid #fbbf24;
+		padding: 1rem 2rem;
+		border-radius: 0.75rem;
 		color: #92400e;
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
+		display: inline-block;
 		font-size: 1rem;
+		font-weight: 600;
 	}
 
-	.code-box strong {
+	.code-label {
+		font-weight: 600;
+	}
+
+	.code-value {
+		font-size: 1.3rem;
 		color: #d97706;
-		font-size: 1.2rem;
-		font-weight: 900;
+		margin-left: 0.5rem;
 	}
 
 	.accreditation-footer {
-		margin-top: 4rem;
+		margin-top: 3rem;
 		text-align: center;
 	}
 
@@ -365,60 +536,79 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 1rem;
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(255, 255, 255, 0.1);
 		padding: 0.8rem 2rem;
 		border-radius: 999px;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 		font-size: 0.85rem;
 		font-weight: 600;
-		color: #64748b;
-	}
-
-	.separator {
 		color: #cbd5e1;
 	}
 
-	@media (max-width: 1024px) {
-		.programs-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-		}
-
-		.tagline {
-			font-size: 1.75rem;
-		}
+	.separator {
+		color: #475569;
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 768px) {
 		.page-container {
-			padding: 2rem 1rem;
+			padding: 1.5rem 1rem;
 		}
 
-		.program-section {
-			padding: 1.5rem;
+		.page-header h1 {
+			font-size: 2rem;
 		}
 
-		.course-card {
-			padding: 1rem;
+		.tabs-nav {
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
 		}
 
-		.course-name {
+		.tab-btn {
+			padding: 0.6rem 1rem;
 			font-size: 0.85rem;
 		}
 
-		.intake-value {
-			font-size: 1.1rem;
+		.tab-content {
+			padding: 1.5rem 1rem;
 		}
-		
-		.footer-pills {
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 0.5rem;
-			border-radius: 1.5rem;
+
+		.section-title {
+			font-size: 1.2rem;
 		}
-		
-		.separator {
+
+		.courses-table th,
+		.courses-table td {
+			padding: 0.75rem;
+			font-size: 0.85rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.page-header h1 {
+			font-size: 1.75rem;
+		}
+
+		.tab-btn .icon {
 			display: none;
+		}
+
+		.tab-btn {
+			padding: 0.6rem 0.8rem;
+			font-size: 0.8rem;
+		}
+
+		.courses-table {
+			font-size: 0.8rem;
+		}
+
+		.courses-table th,
+		.courses-table td {
+			padding: 0.5rem;
+		}
+
+		.intake-badge {
+			font-size: 0.85rem;
+			padding: 0.3rem 0.7rem;
 		}
 	}
 </style>
