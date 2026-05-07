@@ -107,8 +107,12 @@
 />
 
 {#if !$showNavBar}
-	{#if currentSlug === 'Department of CSE'}
-		<DepartmentofCse />
+	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)'}
+		{#if currentSlug === 'Department of CSE'}
+			<DepartmentofCse />
+		{:else if currentSlug === 'Department of CSE (AI & ML)'}
+			<DepartmentofCseAiMl />
+		{/if}
 	{:else}
 		<!-- Premium Centered Navigation -->
 		<PremiumSideNav

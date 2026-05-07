@@ -28,4 +28,5 @@
 	personName="Dr. M. Rajan Babu"
 	personMeta="M.Tech, Ph.D."
 	personRole="Principal"
+	imageFit="object-contain"
 />
