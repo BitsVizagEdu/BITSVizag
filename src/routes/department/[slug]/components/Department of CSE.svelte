@@ -24,6 +24,12 @@
 			color: '#7c3aed'
 		},
 		{
+			id: 'jobs',
+			label: 'Job Opportunities',
+			icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#f97316'
+		},
+		{
 			id: 'faculty',
 			label: 'Faculty Profile',
 			icon: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2 M9 7a4 4 0 110-8 4 4 0 010 8z M23 21v-2a4 4 0 00-3-3.87 M16 3.13a4 4 0 010 7.75',
@@ -49,6 +55,86 @@
 		}
 	];
 
+	const jobRoles = [
+		{
+			role: 'Software Engineer / SDE',
+			description: 'The core path focusing on DSA, System Design, and Full-stack development.',
+			skills: ['DSA', 'OOP', 'DBMS', 'OS', 'System Design'],
+			icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+			color: '#2563eb'
+		},
+		{
+			role: 'AI / ML Engineer',
+			description:
+				'Building real models with Math, Statistics, and Deep Learning (PyTorch/TensorFlow).',
+			skills: ['Python', 'Linear Algebra', 'ML/DL', 'LLMs'],
+			icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#7c3aed'
+		},
+		{
+			role: 'Cybersecurity',
+			description: 'Protecting digital assets through Networking, Linux, and Ethical Hacking.',
+			skills: ['Linux', 'Web Security', 'Ethical Hacking', 'Cryptography'],
+			icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
+			color: '#ef4444'
+		},
+		{
+			role: 'Cloud / DevOps',
+			description: 'Automation and deployment using AWS, Docker, Kubernetes, and CI/CD.',
+			skills: ['AWS/Azure', 'Docker', 'Kubernetes', 'Terraform'],
+			icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
+			color: '#06b6d4'
+		},
+		{
+			role: 'Data Science',
+			description: 'Extracting insights using Python, SQL, and advanced Data Visualization.',
+			skills: ['Python', 'SQL', 'Pandas', 'Statistics'],
+			icon: 'M16 8v8m-4-5v5m-4-2v2M4 18h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#f59e0b'
+		},
+		{
+			role: 'Embedded / IoT',
+			description: 'Where hardware meets software. Focus on C/C++, RTOS, and Microcontrollers.',
+			skills: ['C/C++', 'Microcontrollers', 'RTOS', 'Linux'],
+			icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#10b981'
+		}
+	];
+
+	const careerResources = {
+		jobs: [
+			{ name: 'LinkedIn', url: 'https://www.linkedin.com' },
+			{ name: 'Wellfound', url: 'https://wellfound.com' },
+			{ name: 'Indeed', url: 'https://www.indeed.com' },
+			{ name: 'Naukri', url: 'https://www.naukri.com' },
+			{ name: 'Internshala', url: 'https://internshala.com' }
+		],
+		coding: [
+			{ name: 'LeetCode', url: 'https://leetcode.com' },
+			{ name: 'Codeforces', url: 'https://codeforces.com' },
+			{ name: 'GeeksforGeeks', url: 'https://www.geeksforgeeks.org' }
+		],
+		learning: [
+			{ name: 'freeCodeCamp', url: 'https://www.freecodecamp.org' },
+			{ name: 'Coursera', url: 'https://www.coursera.org' },
+			{ name: 'CS50', url: 'https://cs50.harvard.edu' }
+		],
+		resume: [
+			{ name: 'Overleaf', url: 'https://www.overleaf.com' },
+			{ name: 'Canva', url: 'https://www.canva.com' }
+		]
+	};
+
+	const focusRoadmap = [
+		{ year: '1st Year', goals: ['C/Python', 'Logic Building', 'Linux Basics'] },
+		{ year: '2nd Year', goals: ['DSA', 'Web Development', 'Git/GitHub', 'SQL'] },
+		{
+			year: '3rd Year',
+			goals: ['Specialization', 'Internships', 'Real Projects', 'System Design']
+		},
+		{ year: 'Final Year', goals: ['Interview Prep', 'Resume', 'Networking', 'Placement Strategy'] }
+	];
+
 	const intake = [
 		{ key: 'B.Tech', value: '180', color: '#2563eb' },
 		{ key: 'M.Tech', value: '18', color: '#0284c7' }
@@ -64,34 +150,184 @@
 
 	const labCategories = [
 		{
+			id: 'prog',
 			name: 'Programming Labs',
 			color: '#2563eb',
-			labs: ['C Programming Laboratory', 'OOPs Through Java Lab', 'Advanced Java & Web Dev Lab']
+			icon: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z',
+			labs: [
+				'Java Programming Lab',
+				'Python Programming Lab',
+				'OOPs Through Java Lab',
+				'Advanced Java & Web Dev Lab',
+				'C Programming Laboratory'
+			],
+			description:
+				'Modernized coding ecosystems for mastering Java, Python, and foundational C programming with industry-grade development tools.'
 		},
 		{
+			id: 'systems',
 			name: 'Systems & Infra',
 			color: '#7c3aed',
-			labs: ['OS & Compiler Design Lab', 'Computer Networks Lab', 'FOSS Lab']
+			icon: 'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01',
+			labs: ['OS & Compiler Design Lab', 'Computer Networks Lab', 'FOSS Lab'],
+			description:
+				'Deep dive into operating systems, network protocols, and open-source infrastructure management.'
 		},
 		{
+			id: 'data',
 			name: 'Data & Structures',
 			color: '#059669',
-			labs: ['Advanced Data Structures Lab', 'Database Management Systems Lab']
+			icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4',
+			labs: ['Advanced Data Structures Lab', 'Database Management Systems Lab'],
+			description:
+				'Architecting efficient data models and mastering large-scale database management systems.'
 		},
 		{
+			id: 'emerging',
 			name: 'Emerging Tech',
 			color: '#d97706',
-			labs: ['AI & Data Analytics Lab', 'Cloud Computing Lab', 'Mobile App Development Lab']
+			icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
+			labs: ['AI & Data Analytics Lab', 'Cloud Computing Lab', 'Mobile App Development Lab'],
+			description:
+				'Cutting-edge research in Artificial Intelligence, Cloud infrastructure, and Mobile ecosystems.'
 		}
 	];
 
+	let activeLabCat = 'prog';
+
 	const facultyRows = [
-		{ name: 'Dr. J Narendra Babu', role: 'Professor', exp: '20 Years', qual: 'PhD' },
-		{ name: 'Dr. B Bhavani', role: 'Professor', exp: '13 Years', qual: 'PhD' },
-		{ name: 'Dr. V Dinesh Babu', role: 'Associate Prof & HOD', exp: '10 Years', qual: 'PhD' },
-		{ name: 'Dr. G Bharathi', role: 'Associate Professor', exp: '14 Years', qual: 'PhD' },
-		{ name: 'Mr. P. Sandeep', role: 'Assistant Professor', exp: '8 Years', qual: 'M.Tech' }
+		{
+			name: 'Dr. B. Poorna Satyanarayana',
+			role: 'Professor',
+			exp: '26 Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '9121214313'
+		},
+		{
+			name: 'Mr. S. Durga Prasad',
+			role: 'Assistant Professor',
+			exp: '22 Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '99999 88888'
+		},
+		{
+			name: 'Mrs. U. Padma Mohan',
+			role: 'Associate Professor',
+			exp: '30 Years',
+			qual: 'M.Tech., M.C.A',
+			mobile: '9849635322'
+		},
+		{
+			name: 'Mrs. D. Kanakeswari',
+			role: 'Sr. Assistant Professor',
+			exp: '16 Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '9908132695'
+		},
+		{
+			name: 'Mrs. P. T. S. Priya',
+			role: 'Associate Professor',
+			exp: '12 Years',
+			qual: 'M.Tech., M.C.A',
+			mobile: '7093275580'
+		},
+		{
+			name: 'Mr. P. Joshua Raju',
+			role: 'Sr. Assistant Professor',
+			exp: '10 Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '8297293834'
+		},
+		{
+			name: 'Mrs. T. Chaitanya',
+			role: 'Assistant Professor',
+			exp: '7 Years',
+			qual: 'M.Tech',
+			mobile: '9063497372'
+		},
+		{
+			name: 'Ms. S. Samyukta',
+			role: 'Assistant Professor',
+			exp: '5 Years',
+			qual: 'M.Tech',
+			mobile: '7981782250'
+		},
+		{
+			name: 'Mr. G. Kishore',
+			role: 'Assistant Professor',
+			exp: '4 Years',
+			qual: 'M.Tech',
+			mobile: '9177262145'
+		},
+		{
+			name: 'Mrs. P. Gayathri',
+			role: 'Assistant Professor',
+			exp: '3.2 Years',
+			qual: 'M.Tech',
+			mobile: '9866247778'
+		},
+		{
+			name: 'Mrs. M. Sai Prasanna',
+			role: 'Assistant Professor',
+			exp: '2 Years',
+			qual: 'M.Tech., M.C.A',
+			mobile: '7382070704'
+		},
+		{
+			name: 'Ms. D. Sriya Rani',
+			role: 'Assistant Professor',
+			exp: '1.7 Years',
+			qual: 'M.Tech',
+			mobile: '9381458890'
+		},
+		{
+			name: 'Ms. G. Sushma',
+			role: 'Assistant Professor',
+			exp: '1 Year',
+			qual: 'M.Tech',
+			mobile: '8328181573'
+		},
+		{
+			name: 'Ms. S. Harshini',
+			role: 'Assistant Professor',
+			exp: '1 Year',
+			qual: 'M.Tech',
+			mobile: '7893492709'
+		},
+		{
+			name: 'Mr. S. Mouli',
+			role: 'Assistant Professor',
+			exp: '1 Year',
+			qual: 'M.Tech',
+			mobile: '9885079970'
+		},
+		{
+			name: 'Ms. K. Srinija',
+			role: 'Assistant Professor',
+			exp: '1 Year',
+			qual: 'M.Tech',
+			mobile: '8309666292'
+		},
+		{
+			name: 'Mr. N. Vineeth',
+			role: 'Assistant Professor',
+			exp: '1 Year',
+			qual: 'M.Tech',
+			mobile: '9491090696'
+		}
 	];
+
+	let facultySearch = '';
+	$: filteredFacultyRows = facultyRows.filter(
+		(f) =>
+			f.name.toLowerCase().includes(facultySearch.toLowerCase()) ||
+			f.role.toLowerCase().includes(facultySearch.toLowerCase()) ||
+			f.qual.toLowerCase().includes(facultySearch.toLowerCase())
+	);
+
+	function downloadFacultyPDF() {
+		window.print();
+	}
 
 	const visionMissionTabs = [
 		{
@@ -269,7 +505,7 @@
 				{/each}
 			</div>
 
-			<h1 class="satoshi">Computer Science and Engineering</h1>
+			<h1 class="satoshi leading-[0.6rem]">Computer Science and Engineering</h1>
 		</div>
 	</header>
 
@@ -540,123 +776,503 @@
 			</div>
 		</section>
 
-		<main class="content-body-grid">
-			<!-- Labs & Infrastructure -->
-			<section id="labs" class="dept-section-card" style="--section-accent: #7c3aed">
-				<div class="section-top">
-					<div class="section-title-wrap">
-						<h2 class="satoshi">Labs & Infrastructure</h2>
-						<div class="section-underline"></div>
-					</div>
-				</div>
-				<div class="labs-detailed-grid">
-					{#each labCategories as cat}
-						<div class="lab-category-card" style="--cat-accent: {cat.color}">
-							<div class="cat-header">
-								<h4 class="satoshi">{cat.name}</h4>
-							</div>
-							<ul class="inter lab-list">
-								{#each cat.labs as lab}
-									<li>
-										<svg
-											viewBox="0 0 24 24"
-											width="14"
-											height="14"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2.5"
-										>
-											<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-											<path d="M22 4L12 14.01l-3-3"></path>
-										</svg>
-										<span>{lab}</span>
-									</li>
-								{/each}
-							</ul>
+		<!-- Labs & Infrastructure - Now Full Width & Interactive -->
+		<section
+			id="labs"
+			class="dept-section-card labs-premium-section"
+			style="--section-accent: #7c3aed"
+		>
+			<div class="section-top">
+				<div class="section-title-wrap">
+					<div class="labs-title-row">
+						<div class="labs-icon-badge">
+							<svg
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+								></path>
+							</svg>
 						</div>
+						<h2 class="satoshi">Labs & Infrastructure</h2>
+					</div>
+					<div class="section-underline"></div>
+				</div>
+			</div>
+
+			<div class="labs-interactive-grid">
+				<!-- Category Navigation -->
+				<div class="labs-nav-sidebar scrollbar-hide">
+					{#each labCategories as cat}
+						<button
+							class="lab-nav-item inter"
+							class:active={activeLabCat === cat.id}
+							on:click={() => (activeLabCat = cat.id)}
+							style="--nav-color: {cat.color}"
+						>
+							<div class="nav-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="20"
+									height="20"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d={cat.icon}></path>
+								</svg>
+							</div>
+							<div class="nav-text">
+								<span class="cat-name">{cat.name}</span>
+								<span class="cat-count">{cat.labs.length} Facilities</span>
+							</div>
+							<div class="active-indicator"></div>
+						</button>
 					{/each}
 				</div>
-			</section>
 
-			<!-- Faculty Profile -->
-			<section id="faculty" class="dept-section-card" style="--section-accent: #059669">
-				<div class="section-top">
-					<div class="section-title-wrap">
-						<h2 class="satoshi">Faculty Excellence</h2>
-						<div class="section-underline"></div>
-					</div>
+				<!-- Content Display Area -->
+				<div class="labs-display-pane">
+					{#each labCategories as cat}
+						{#if activeLabCat === cat.id}
+							<div class="labs-content-wrap" in:fly={{ x: 20, duration: 400 }}>
+								<div class="display-header">
+									<h3 class="satoshi" style="color: {cat.color}">{cat.name}</h3>
+									<p class="inter">{cat.description}</p>
+								</div>
+
+								<div class="lab-items-grid">
+									{#each cat.labs as lab, i}
+										<div class="lab-item-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
+											<div class="lab-status-dot" style="background: {cat.color}"></div>
+											<span class="inter lab-name">{lab}</span>
+											<div class="lab-action-btn">
+												<svg
+													viewBox="0 0 24 24"
+													width="14"
+													height="14"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="3"
+												>
+													<path d="M5 12h14m-7-7l7 7-7 7"></path>
+												</svg>
+											</div>
+										</div>
+									{/each}
+								</div>
+							</div>
+						{/if}
+					{/each}
 				</div>
-				<div class="table-viewport scrollbar-hide">
-					<table>
-						<thead>
-							<tr class="inter">
-								<th>NAME</th>
-								<th>QUALIFICATION</th>
-								<th>DESIGNATION</th>
-								<th>EXPERIENCE</th>
-							</tr>
-						</thead>
-						<tbody>
-							{#each facultyRows as faculty}
-								<tr class="inter">
-									<td class="bold-name">{faculty.name}</td>
-									<td class="muted-text">{faculty.qual}</td>
-									<td>{faculty.role}</td>
-									<td class="muted-text">{faculty.exp}</td>
-								</tr>
+			</div>
+
+			<main class="content-body-grid">
+				<!-- Job Opportunities - Career Guidance Hub -->
+				<section
+					id="jobs"
+					class="dept-section-card jobs-premium-section"
+					style="--section-accent: #f97316"
+				>
+					<div class="section-top">
+						<div class="section-title-wrap">
+							<h2 class="satoshi">Career Pathways</h2>
+							<p class="inter dept-label">Strategic Industry Guidance for 2026</p>
+							<div class="section-underline"></div>
+						</div>
+						<div class="jobs-stats inter">
+							<span class="pulse-dot"></span>
+							<span class="stat-text">100% Placement Target</span>
+						</div>
+					</div>
+
+					<!-- Primary Roles -->
+					<div class="jobs-grid">
+						{#each jobRoles as job, i}
+							<div class="job-card" in:fly={{ y: 20, duration: 600, delay: i * 100 }}>
+								<div class="job-icon-wrap" style="--icon-bg: {job.color}">
+									<svg
+										viewBox="0 0 24 24"
+										width="24"
+										height="24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d={job.icon}></path>
+									</svg>
+								</div>
+								<div class="job-details">
+									<h4 class="satoshi">{job.role}</h4>
+									<p class="inter">{job.description}</p>
+									<div class="job-skills">
+										{#each job.skills as skill}
+											<span class="skill-tag">{skill}</span>
+										{/each}
+									</div>
+								</div>
+								<div class="job-hover-accent" style="background: {job.color}"></div>
+							</div>
+						{/each}
+					</div>
+
+					<!-- Roadmap & Reality Check -->
+					<div class="career-insights-grid">
+						<div class="insight-block roadmap">
+							<h3 class="satoshi">Year-wise Focus</h3>
+							<div class="roadmap-timeline">
+								{#each focusRoadmap as step}
+									<div class="roadmap-item">
+										<div class="year-label satoshi">{step.year}</div>
+										<div class="goals-list inter">
+											{#each step.goals as goal}
+												<span>{goal}</span>
+											{/each}
+										</div>
+									</div>
+								{/each}
+							</div>
+						</div>
+
+						<div class="insight-block reality">
+							<h3 class="satoshi">Placements Reality Check</h3>
+							<div class="reality-content inter">
+								<p class="warning-text">
+									Theory alone won't get you hired. Most students fail because of:
+								</p>
+								<ul class="fail-list">
+									<li>Tutorial-copy portfolios</li>
+									<li>No GitHub activity</li>
+									<li>Weak communication skills</li>
+									<li>Zero internships</li>
+								</ul>
+								<div class="success-formula">
+									<span class="formula-title">Success Formula</span>
+									<p>8.0+ CGPA + Strong Projects + Active GitHub + Internships = SUCCESS</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Resources Hub -->
+					<div class="resources-hub">
+						<header class="hub-header">
+							<h3 class="satoshi">Digital Resource Hub</h3>
+							<p class="inter">Curated tools for learning, coding, and hiring</p>
+						</header>
+						<div class="hub-grid">
+							{#each Object.entries(careerResources) as [category, links]}
+								<div class="hub-cat">
+									<h4 class="satoshi capitalize">{category}</h4>
+									<div class="link-list">
+										{#each links as link}
+											<a
+												href={link.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="inter resource-link"
+											>
+												{link.name}
+												<svg
+													viewBox="0 0 24 24"
+													width="14"
+													height="14"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="3"><path d="M7 17L17 7M7 7h10v10"></path></svg
+												>
+											</a>
+										{/each}
+									</div>
+								</div>
 							{/each}
-						</tbody>
-					</table>
-				</div>
-			</section>
+						</div>
+					</div>
+				</section>
 
-			<!-- HOD Message -->
-			<section id="hod" class="dept-section-card hod-card" style="--section-accent: #db2777">
-				<div class="hod-grid">
-					<div class="hod-img-wrap">
-						<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" />
+				<!-- Faculty Profile - Screenshot-Matched Professional Table -->
+				<section id="faculty" class="dept-section-card faculty-table-section">
+					<div class="section-header-row">
+						<div class="section-title-wrap">
+							<h2 class="satoshi">CSE Faculty</h2>
+							<p class="inter dept-label">Department of CSE</p>
+							<div class="section-underline"></div>
+						</div>
 					</div>
-					<div class="hod-content-wrap">
-						<span class="hod-eyebrow satoshi">MESSAGE FROM THE HOD</span>
-						<h2 class="satoshi">Prof. S. Durga Prasad</h2>
-						<p class="hod-role inter">HEAD OF DEPARTMENT | CSE</p>
-						<p class="hod-text inter">
-							"Welcome to the Department of Computer Science and Engineering. Our mission is to
-							build strong technologists with analytical depth, engineering discipline, and a
-							commitment to innovation and societal progress."
-						</p>
-					</div>
-				</div>
-			</section>
 
-			<!-- Contact -->
-			<section
-				id="contact"
-				class="dept-section-card contact-section"
-				style="--section-accent: #0284c7"
-			>
-				<div class="section-top">
-					<div class="section-title-wrap">
-						<h2 class="satoshi">Contact CSE</h2>
-						<div class="section-underline"></div>
+					<div class="table-controls-row">
+						<div class="control-actions">
+							<button
+								class="round-action-btn download"
+								on:click={downloadFacultyPDF}
+								title="Download PDF"
+							>
+								<svg
+									viewBox="0 0 24 24"
+									width="20"
+									height="20"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+									></path></svg
+								>
+							</button>
+							<button class="round-action-btn cloud" title="Export Cloud">
+								<svg
+									viewBox="0 0 24 24"
+									width="20"
+									height="20"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									><path
+										d="M17.5 19c3.037 0 5.5-2.463 5.5-5.5 0-2.77-2.05-5.06-4.73-5.44C17.74 4.54 14.39 2 10.5 2 6.36 2 3 5.36 3 9.5c0 .34.03.68.08 1.01C1.26 11.41 0 13.56 0 16c0 3.31 2.69 6 6 6h11.5"
+									></path></svg
+								>
+							</button>
+						</div>
+						<div class="search-wrap">
+							<div class="search-box">
+								<svg
+									viewBox="0 0 24 24"
+									width="16"
+									height="16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg
+								>
+								<input
+									type="text"
+									placeholder="Search records..."
+									bind:value={facultySearch}
+									class="inter"
+								/>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="contact-data-grid inter">
-					<div class="contact-item">
-						<span class="clabel">Official Email</span>
-						<span class="cval">cse@bitsvizag.com</span>
+
+					<div class="premium-table-viewport scrollbar-hide">
+						<table class="faculty-main-table">
+							<thead>
+								<tr class="inter">
+									<th class="col-sno"
+										>S.NO. <svg
+											class="sort-icon"
+											viewBox="0 0 24 24"
+											width="10"
+											height="10"
+											fill="currentColor"
+											><path d="M12 5l-5 5h10l-5-5zM12 19l5-5H7l5 5z"></path></svg
+										></th
+									>
+									<th class="col-name"
+										>NAME <svg
+											class="sort-icon"
+											viewBox="0 0 24 24"
+											width="10"
+											height="10"
+											fill="currentColor"
+											><path d="M12 5l-5 5h10l-5-5zM12 19l5-5H7l5 5z"></path></svg
+										></th
+									>
+									<th class="col-qual"
+										>HIGHEST QUALIFICATION <svg
+											class="sort-icon"
+											viewBox="0 0 24 24"
+											width="10"
+											height="10"
+											fill="currentColor"
+											><path d="M12 5l-5 5h10l-5-5zM12 19l5-5H7l5 5z"></path></svg
+										></th
+									>
+									<th class="col-role"
+										>DESIGNATION <svg
+											class="sort-icon"
+											viewBox="0 0 24 24"
+											width="10"
+											height="10"
+											fill="currentColor"
+											><path d="M12 5l-5 5h10l-5-5zM12 19l5-5H7l5 5z"></path></svg
+										></th
+									>
+									<th class="col-exp"
+										>EXPERIENCE <svg
+											class="sort-icon"
+											viewBox="0 0 24 24"
+											width="10"
+											height="10"
+											fill="currentColor"
+											><path d="M12 5l-5 5h10l-5-5zM12 19l5-5H7l5 5z"></path></svg
+										></th
+									>
+									<th class="col-mobile"
+										>MOBILE <svg
+											class="sort-icon"
+											viewBox="0 0 24 24"
+											width="10"
+											height="10"
+											fill="currentColor"
+											><path d="M12 5l-5 5h10l-5-5zM12 19l5-5H7l5 5z"></path></svg
+										></th
+									>
+								</tr>
+							</thead>
+							<tbody class="inter">
+								{#each filteredFacultyRows as faculty, i}
+									<tr in:fly={{ y: 10, duration: 400, delay: i * 30 }}>
+										<td class="td-sno">{i + 1}</td>
+										<td class="td-name">
+											<span class="name-val">{faculty.name}</span>
+										</td>
+										<td class="td-qual">{faculty.qual}</td>
+										<td class="td-role">{faculty.role}</td>
+										<td class="td-exp">{faculty.exp}</td>
+										<td class="td-mobile">
+											<a href="tel:{faculty.mobile}" class="mobile-link">
+												{faculty.mobile}
+											</a>
+										</td>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+
+						{#if filteredFacultyRows.length === 0}
+							<div class="empty-results inter" in:fade>
+								<p>No faculty records match your search.</p>
+							</div>
+						{/if}
 					</div>
-					<div class="contact-item">
-						<span class="clabel">Phone / Helpdesk</span>
-						<span class="cval">+91 99999 88888</span>
+				</section>
+
+				<!-- HOD Message - Upgraded with Impactful Motion -->
+				<section
+					id="hod"
+					class="dept-section-card hod-premium-card"
+					style="--section-accent: #db2777"
+				>
+					<div class="hod-container">
+						<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
+							<div class="hod-image-glow"></div>
+							<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" />
+							<div class="hod-badge satoshi">22+ Years Exp</div>
+						</div>
+						<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
+							<div class="quote-icon">
+								<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
+									<path
+										d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
+									></path>
+								</svg>
+							</div>
+							<span class="hod-eyebrow satoshi">MESSAGE FROM THE HOD</span>
+							O
+							<h2 class="satoshi">Prof. S. Durga Prasad</h2>
+							<p class="hod-designation inter">
+								Head of Department | Computer Science & Engineering
+							</p>
+							<div class="hod-message-body">
+								<p class="inter">
+									"Welcome to the Department of Computer Science and Engineering. Our mission is to
+									build strong technologists with analytical depth, engineering discipline, and a
+									commitment to innovation and societal progress."
+								</p>
+								<p class="inter signature">Prof. S. Durga Prasad</p>
+							</div>
+						</div>
 					</div>
-					<div class="contact-item">
-						<span class="clabel">Location</span>
-						<span class="cval">Block A, 2nd Floor, BITS Campus</span>
+				</section>
+
+				<!-- Contact - Upgraded with Action Tiles -->
+				<section
+					id="contact"
+					class="dept-section-card contact-premium-section"
+					style="--section-accent: #0284c7"
+				>
+					<div class="section-top">
+						<div class="section-title-wrap">
+							<h2 class="satoshi">Get in Touch</h2>
+							<div class="section-underline"></div>
+						</div>
 					</div>
-				</div>
-			</section>
-		</main>
+					<div class="contact-action-grid">
+						<div class="contact-tile email" in:fly={{ y: 20, duration: 500, delay: 100 }}>
+							<div class="tile-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									><path
+										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+									></path><polyline points="22,6 12,13 2,6"></polyline></svg
+								>
+							</div>
+							<div class="tile-content">
+								<span class="inter label">Official Email</span>
+								<span class="inter value">cse@bitsvizag.com</span>
+							</div>
+							<a href="mailto:cse@bitsvizag.com" class="tile-link">Send Mail</a>
+						</div>
+
+						<div class="contact-tile phone" in:fly={{ y: 20, duration: 500, delay: 200 }}>
+							<div class="tile-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									><path
+										d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+									></path></svg
+								>
+							</div>
+							<div class="tile-content">
+								<span class="inter label">Phone Support</span>
+								<span class="inter value">+91 91212 14313</span>
+							</div>
+							<a href="tel:+919999988888" class="tile-link">Call Now</a>
+						</div>
+
+						<div class="contact-tile location" in:fly={{ y: 20, duration: 500, delay: 300 }}>
+							<div class="tile-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle
+										cx="12"
+										cy="10"
+										r="3"
+									></circle></svg
+								>
+							</div>
+							<div class="tile-content">
+								<span class="inter label">Office Location</span>
+								<span class="inter value"
+									>BITS Vizag campus, near bakkannapalem, Madhurawada, Visakhapatnam, AP - 530048</span
+								>
+							</div>
+							<a href="#" class="tile-link">View Maps</a>
+						</div>
+					</div>
+				</section>
+			</main>
+		</section>
 	</div>
 </div>
 
@@ -1037,138 +1653,953 @@
 		gap: 10px;
 	}
 
-	/* Table */
-	.table-viewport {
-		border-radius: 20px;
-		border: 1px solid #f1f5f9;
-		overflow-x: auto;
+	/* Faculty Screenshot-Matched Table Section */
+	.faculty-table-section {
+		background: #ffffff !important;
+		padding: 48px !important;
 	}
-	table {
+
+	.section-header-row {
+		margin-bottom: 32px;
+	}
+
+	.dept-label {
+		font-size: 0.9rem;
+		color: #64748b;
+		font-weight: 600;
+		margin: 4px 0 0;
+	}
+
+	.table-controls-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+		gap: 20px;
+	}
+
+	.control-actions {
+		display: flex;
+		gap: 12px;
+	}
+
+	.round-action-btn {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+		color: white;
+	}
+
+	.round-action-btn.download {
+		background: #10b981;
+		box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+	}
+	.round-action-btn.cloud {
+		background: #3b82f6;
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+	}
+
+	.round-action-btn:hover {
+		transform: scale(1.1);
+		filter: brightness(1.1);
+	}
+
+	.search-box {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		background: #f8fafc;
+		border: 1px solid #e2e8f0;
+		padding: 10px 18px;
+		border-radius: 100px;
+		width: 300px;
+		transition: all 0.3s;
+	}
+
+	.search-box:focus-within {
+		border-color: #3b82f6;
+		background: white;
+		box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+	}
+
+	.search-box input {
+		border: none;
+		background: transparent;
+		outline: none;
+		font-size: 0.9rem;
+		width: 100%;
+		color: #1e293b;
+	}
+
+	.premium-table-viewport {
+		border-radius: 16px;
+		border: 1px solid #e2e8f0;
+		overflow: hidden;
+	}
+
+	.faculty-main-table {
 		width: 100%;
 		border-collapse: collapse;
 		text-align: left;
 	}
-	th {
-		background: #f8fafc;
-		padding: 20px;
-		font-size: 0.75rem;
-		font-weight: 800;
-		color: #64748b;
-		border-bottom: 1px solid #f1f5f9;
+
+	.faculty-main-table thead tr {
+		background: #0f172a;
+		color: #ffffff;
 	}
-	td {
-		padding: 20px;
-		border-bottom: 1px solid #f8fafc;
-		font-size: 0.95rem;
-		color: #334155;
-	}
-	.bold-name {
-		font-weight: 700;
-		color: #2563eb;
-	}
-	.muted-text {
-		color: #94a3b8;
+	/* Job Opportunities Section */
+	.jobs-premium-section {
+		background: #ffffff !important;
 	}
 
-	/* Labs Grid */
-	.labs-detailed-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 24px;
-	}
-	.lab-category-card {
-		background: #fbfcfd;
-		padding: 32px;
-		border-radius: 24px;
-		border: 1px solid #f1f5f9;
-		border-top: 4px solid var(--cat-accent);
-	}
-	.lab-category-card h4 {
-		font-size: 1.1rem;
-		font-weight: 800;
-		color: #0f172a;
-		margin-bottom: 20px;
-	}
-	.lab-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 12px;
-	}
-	.lab-list li {
-		font-size: 0.9rem;
-		color: #64748b;
-		font-weight: 600;
+	.jobs-stats {
 		display: flex;
 		align-items: center;
 		gap: 10px;
-	}
-	.lab-list svg {
-		color: var(--cat-accent);
+		background: #fff7ed;
+		padding: 8px 16px;
+		border-radius: 100px;
+		border: 1px solid #ffedd5;
 	}
 
-	/* HOD Card */
-	.hod-grid {
-		display: grid;
-		grid-template-columns: 240px 1fr;
-		gap: 40px;
-		align-items: center;
+	.pulse-dot {
+		width: 8px;
+		height: 8px;
+		background: #f97316;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+		animation: pulse 2s infinite;
 	}
-	.hod-img-wrap img {
-		width: 100%;
-		aspect-ratio: 1;
-		object-fit: cover;
-		border-radius: 24px;
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+	@keyframes pulse {
+		0% {
+			box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+		}
+		70% {
+			box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+		}
 	}
-	.hod-eyebrow {
-		font-size: 0.75rem;
-		font-weight: 800;
-		color: #94a3b8;
-		letter-spacing: 0.2em;
-		display: block;
-		margin-bottom: 12px;
-	}
-	.hod-content-wrap h2 {
-		font-size: 2.5rem;
-		font-weight: 950;
-		color: #db2777;
-		margin: 0;
-		letter-spacing: -0.04em;
-	}
-	.hod-role {
-		font-size: 0.95rem;
+
+	.stat-text {
+		font-size: 0.8rem;
 		font-weight: 700;
-		color: #1e293b;
-		margin: 4px 0 20px;
-	}
-	.hod-text {
-		font-size: 1.2rem;
-		line-height: 1.6;
-		color: #475569;
-		font-weight: 500;
+		color: #9a3412;
 	}
 
-	/* Contact Info */
-	.contact-data-grid {
+	.jobs-grid {
 		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 20px;
+		margin-top: 10px;
+	}
+
+	.job-card {
+		background: #f8fafc;
+		border: 1px solid #f1f5f9;
+		border-radius: 24px;
+		padding: 24px;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.job-card:hover {
+		background: white;
+		transform: translateY(-8px);
+		box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+		border-color: #e2e8f0;
+	}
+
+	.job-icon-wrap {
+		width: 52px;
+		height: 52px;
+		background: var(--icon-bg);
+		color: white;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 8px 16px -4px var(--icon-bg);
+		opacity: 0.9;
+	}
+
+	.job-details h4 {
+		font-size: 1.15rem;
+		font-weight: 800;
+		color: #0f172a;
+		margin: 0 0 8px;
+	}
+
+	.job-details p {
+		font-size: 0.85rem;
+		color: #64748b;
+		line-height: 1.5;
+		margin: 0 0 16px;
+	}
+
+	.job-skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	.skill-tag {
+		padding: 4px 10px;
+		background: #ffffff;
+		border: 1px solid #e2e8f0;
+		border-radius: 6px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: #475569;
+		transition: all 0.3s;
+	}
+
+	.job-card:hover .skill-tag {
+		border-color: #cbd5e1;
+		background: #f8fafc;
+	}
+
+	/* Career Insights Grid */
+	.career-insights-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+		margin-top: 48px;
+	}
+
+	.insight-block {
+		background: #f8fafc;
+		border-radius: 28px;
+		padding: 32px;
+		border: 1px solid #f1f5f9;
+	}
+
+	.insight-block h3 {
+		font-size: 1.4rem;
+		font-weight: 800;
+		color: #0f172a;
+		margin-bottom: 24px;
+	}
+
+	.roadmap-timeline {
+		display: flex;
+		flex-direction: column;
 		gap: 20px;
 	}
-	.contact-item {
-		display: flex;
-		justify-content: space-between;
-		padding-bottom: 16px;
-		border-bottom: 1px solid #f1f5f9;
-		font-size: 1.1rem;
+
+	.roadmap-item {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		gap: 20px;
+		position: relative;
 	}
-	.clabel {
+
+	.roadmap-item::before {
+		content: '';
+		position: absolute;
+		left: 110px;
+		top: 30px;
+		bottom: -20px;
+		width: 2px;
+		background: #e2e8f0;
+	}
+
+	.roadmap-item:last-child::before {
+		display: none;
+	}
+
+	.year-label {
+		font-size: 0.75rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: #f97316;
+		padding-top: 4px;
+	}
+
+	.goals-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.goals-list span {
+		background: white;
+		padding: 6px 12px;
+		border-radius: 10px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #334155;
+		border: 1px solid #e2e8f0;
+	}
+
+	.warning-text {
+		color: #ef4444;
+		font-weight: 700;
+		font-size: 0.9rem;
+		margin-bottom: 20px;
+	}
+
+	.fail-list {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.fail-list li {
+		padding-left: 28px;
+		position: relative;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: #475569;
+	}
+
+	.fail-list li::before {
+		content: '✕';
+		position: absolute;
+		left: 0;
+		color: #ef4444;
+		font-weight: 900;
+	}
+
+	.success-formula {
+		background: #ecfdf5;
+		padding: 24px;
+		border-radius: 20px;
+		border: 1px solid #d1fae5;
+	}
+
+	.formula-title {
+		display: block;
+		font-size: 0.75rem;
+		font-weight: 900;
+		color: #059669;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+
+	.success-formula p {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: #065f46;
+		margin: 0;
+	}
+
+	/* Resources Hub */
+	.resources-hub {
+		margin-top: 48px;
+		background: #0f172a;
+		border-radius: 32px;
+		padding: 40px;
+		color: white;
+	}
+
+	.hub-header {
+		margin-bottom: 32px;
+	}
+
+	.hub-header h3 {
+		font-size: 1.6rem;
+		font-weight: 800;
+		margin-bottom: 8px;
+	}
+
+	.hub-header p {
+		font-size: 0.9rem;
+		color: #94a3b8;
+	}
+
+	.hub-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 40px;
+	}
+
+	.hub-cat h4 {
+		font-size: 0.8rem;
+		font-weight: 900;
+		color: #f97316;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 20px;
+	}
+
+	.link-list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.resource-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-decoration: none;
+		color: #cbd5e1;
+		font-size: 0.9rem;
+		font-weight: 600;
+		transition: all 0.3s;
+		padding: 4px 0;
+	}
+
+	.resource-link:hover {
+		color: white;
+		transform: translateX(5px);
+	}
+
+	@media (max-width: 1000px) {
+		.career-insights-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.faculty-main-table th {
+		padding: 18px 24px;
+		font-size: 0.7rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+
+	.sort-icon {
+		margin-left: 6px;
+		opacity: 0.5;
+	}
+
+	.faculty-main-table td {
+		padding: 16px 24px;
+		border-bottom: 1px solid #f1f5f9;
+		font-size: 0.9rem;
+		color: #334155;
+	}
+
+	.faculty-main-table tr:last-child td {
+		border-bottom: none;
+	}
+
+	.name-val {
+		color: #0284c7;
+		font-weight: 700;
+	}
+
+	.td-sno {
+		font-weight: 700;
+		color: #64748b;
+	}
+
+	.mobile-link {
+		color: #059669;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 0.85rem;
+	}
+
+	.mobile-link:hover {
+		text-decoration: underline;
+	}
+
+	.empty-results {
+		padding: 40px;
+		text-align: center;
+		color: #94a3b8;
+	}
+
+	@media print {
+		/* Hide everything by default */
+		:global(body) * {
+			display: none !important;
+		}
+
+		/* Show only the faculty section and its parents/children */
+		:global(.dept-premium-root),
+		:global(.dept-premium-root) .main-content-layout,
+		:global(.dept-premium-root) .content-body-grid,
+		#faculty,
+		#faculty * {
+			display: block !important;
+		}
+
+		/* Reset table display */
+		.faculty-main-table {
+			display: table !important;
+		}
+		.faculty-main-table tr {
+			display: table-row !important;
+		}
+		.faculty-main-table th,
+		.faculty-main-table td {
+			display: table-cell !important;
+		}
+
+		#faculty {
+			position: static !important;
+			padding: 0 !important;
+			margin: 0 !important;
+			border: none !important;
+			box-shadow: none !important;
+		}
+
+		/* Hide UI elements from print */
+		.section-header-row,
+		.table-controls-row,
+		.section-underline::after,
+		.sort-icon {
+			display: none !important;
+		}
+
+		.faculty-main-table thead tr {
+			background: #0f172a !important;
+			color: white !important;
+			-webkit-print-color-adjust: exact;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.table-controls-row {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.search-box {
+			width: 100%;
+		}
+		.premium-table-viewport {
+			overflow-x: auto;
+		}
+	}
+
+	/* Labs Premium Section */
+	.labs-premium-section {
+		grid-column: 1 / -1;
+		width: 100%;
+		margin-top: 20px;
+		background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+	}
+
+	.labs-title-row {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.labs-icon-badge {
+		background: #7c3aed;
+		color: white;
+		padding: 10px;
+		border-radius: 14px;
+		box-shadow: 0 8px 16px -4px rgba(124, 58, 237, 0.3);
+	}
+
+	.labs-intro {
+		max-width: 600px;
+		color: #64748b;
+		font-size: 1rem;
+		margin: 12px 0 0;
+		line-height: 1.6;
+	}
+
+	.labs-interactive-grid {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		gap: 40px;
+		margin-top: 40px;
+		min-height: 450px;
+	}
+
+	.labs-nav-sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.lab-nav-item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 16px;
+		background: white;
+		border: 1px solid #e2e8f0;
+		border-radius: 20px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.lab-nav-item:hover {
+		border-color: var(--nav-color);
+		transform: translateX(8px);
+		background: #fdfdfd;
+	}
+
+	.lab-nav-item.active {
+		background: white;
+		border-color: var(--nav-color);
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+	}
+
+	.lab-nav-item .nav-icon {
+		padding: 10px;
+		background: #f8fafc;
+		border-radius: 12px;
+		color: #94a3b8;
+		transition: all 0.3s;
+	}
+
+	.lab-nav-item.active .nav-icon {
+		background: var(--nav-color);
+		color: white;
+	}
+
+	.nav-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.cat-name {
+		font-weight: 800;
+		font-size: 0.95rem;
+		color: #1e293b;
+	}
+
+	.cat-count {
+		font-size: 0.75rem;
+		color: #94a3b8;
+		font-weight: 600;
+	}
+
+	.active-indicator {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 4px;
+		height: 0;
+		background: var(--nav-color);
+		transition: height 0.3s;
+		border-radius: 0 4px 4px 0;
+	}
+
+	.lab-nav-item.active .active-indicator {
+		height: 60%;
+	}
+
+	.labs-display-pane {
+		background: white;
+		border-radius: 32px;
+		border: 1px solid #f1f5f9;
+		padding: 40px;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+		position: relative;
+	}
+
+	.display-header {
+		margin-bottom: 32px;
+	}
+
+	.display-header h3 {
+		font-size: 1.8rem;
+		font-weight: 900;
+		margin-bottom: 8px;
+	}
+
+	.display-header p {
+		color: #64748b;
+		line-height: 1.6;
+		max-width: 800px;
+	}
+
+	.lab-items-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 16px;
+	}
+
+	.lab-item-card {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 20px;
+		background: #f8fafc;
+		border-radius: 20px;
+		border: 1px solid #e2e8f0;
+		transition: all 0.3s;
+	}
+
+	.lab-item-card:hover {
+		background: white;
+		border-color: #cbd5e1;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+	}
+
+	.lab-status-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	.lab-name {
+		font-weight: 700;
+		color: #334155;
+		font-size: 0.95rem;
+		flex-grow: 1;
+	}
+
+	.lab-action-btn {
+		width: 28px;
+		height: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: white;
+		border-radius: 8px;
+		border: 1px solid #e2e8f0;
+		color: #94a3b8;
+		transition: all 0.3s;
+	}
+
+	.lab-item-card:hover .lab-action-btn {
+		background: #0f172a;
+		color: white;
+		border-color: #0f172a;
+	}
+
+	.lab-features-footer {
+		margin-top: 40px;
+		display: flex;
+		gap: 24px;
+		padding-top: 24px;
+		border-top: 1px solid #f1f5f9;
+	}
+
+	.feature-tag {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: #94a3b8;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.feature-tag .dot {
+		width: 6px;
+		height: 6px;
+		background: #e2e8f0;
+		border-radius: 50%;
+	}
+
+	/* HOD Premium Card */
+	.hod-premium-card {
+		padding: 0 !important;
+		overflow: hidden;
+		background: #0f172a !important;
+		border: none !important;
+	}
+
+	.hod-container {
+		display: grid;
+		grid-template-columns: 400px 1fr;
+		min-height: 500px;
+	}
+
+	.hod-visual {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hod-visual img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.hod-visual:hover img {
+		transform: scale(1.05);
+	}
+
+	.hod-image-glow {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
+		z-index: 1;
+	}
+
+	.hod-badge {
+		position: absolute;
+		bottom: 32px;
+		left: 32px;
+		background: var(--section-accent);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 12px;
+		font-weight: 800;
+		font-size: 0.9rem;
+		z-index: 2;
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+	}
+
+	.hod-content {
+		padding: 64px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		color: white;
+	}
+
+	.quote-icon {
+		margin-bottom: 24px;
+		color: var(--section-accent);
+	}
+
+	.hod-eyebrow {
+		font-size: 0.8rem;
+		font-weight: 800;
+		letter-spacing: 0.2em;
+		color: var(--section-accent);
+		margin-bottom: 8px;
+	}
+
+	.hod-content h2 {
+		font-size: 3rem;
+		font-weight: 900;
+		margin: 0;
+		color: #ffffff;
+		letter-spacing: -0.04em;
+	}
+
+	.hod-designation {
+		font-size: 1.1rem;
+		color: #94a3b8;
+		font-weight: 600;
+		margin: 8px 0 32px;
+	}
+
+	.hod-message-body p {
+		font-size: 1.4rem;
+		line-height: 1.6;
+		color: #e2e8f0;
+		font-weight: 500;
+		font-style: italic;
+	}
+
+	.signature {
+		margin-top: 32px !important;
+		font-size: 1.1rem !important;
+		font-style: normal !important;
+		font-weight: 800 !important;
+		color: var(--section-accent) !important;
+		letter-spacing: 0.02em;
+	}
+
+	/* Contact Premium Action Grid */
+	.contact-premium-section {
+		background: #ffffff !important;
+	}
+
+	.contact-action-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		margin-top: 10px;
+	}
+
+	.contact-tile {
+		padding: 32px;
+		background: #f8fafc;
+		border-radius: 32px;
+		border: 1px solid #f1f5f9;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		position: relative;
+	}
+
+	.contact-tile:hover {
+		background: #ffffff;
+		transform: translateY(-12px);
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+		border-color: var(--section-accent);
+	}
+
+	.tile-icon {
+		width: 52px;
+		height: 52px;
+		background: #ffffff;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--section-accent);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		transition: all 0.3s;
+	}
+
+	.contact-tile:hover .tile-icon {
+		background: var(--section-accent);
+		color: white;
+		transform: rotate(-10deg);
+	}
+
+	.tile-content {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.tile-content .label {
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: #64748b;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.tile-content .value {
+		font-size: 1.1rem;
 		font-weight: 800;
 		color: #0f172a;
 	}
-	.cval {
-		font-weight: 600;
-		color: #0284c7;
+
+	.tile-link {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		font-size: 0.9rem;
+		font-weight: 700;
+		color: var(--section-accent);
+		text-decoration: none;
+		gap: 8px;
+		transition: gap 0.3s;
+	}
+
+	.tile-link:hover {
+		gap: 12px;
+	}
+
+	.tile-link::after {
+		content: '→';
 	}
 
 	/* Vision & Mission Premium Tabs */
@@ -1593,8 +3024,34 @@
 		.header-hero {
 			height: 300px;
 		}
-		.hod-content-wrap h2 {
-			font-size: 2rem;
+
+		/* New Premium Section Mobile Adjustments */
+		.hod-container {
+			grid-template-columns: 1fr;
 		}
+		.hod-content {
+			padding: 40px 24px;
+		}
+		.hod-visual {
+			height: 320px;
+		}
+		.hod-content h2 {
+			font-size: 2.2rem;
+		}
+		.contact-action-grid {
+			grid-template-columns: 1fr;
+		}
+		.faculty-interactive-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* Scrollbar Utilities */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
 	}
 </style>
