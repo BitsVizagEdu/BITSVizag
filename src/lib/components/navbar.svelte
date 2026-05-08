@@ -89,7 +89,7 @@
 			<span class="status-pill dark hidden sm:inline-flex">NAAC 'A'</span>
 			<a
 				class="apply-cta mobile-apply-btn"
-				href="https://bitsvizageamcetexamportal1.vercel.app/login"
+				href="https://bitsvizageamcetexamportal1.vercel.app/student/register"
 				target="_blank">Eamcet Portal</a
 			>
 		</div>

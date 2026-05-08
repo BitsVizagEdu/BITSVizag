@@ -135,7 +135,7 @@
 							>Start Your Journey</a
 						>
 						<a
-							href="https://bitsvizageamcetexamportal1.vercel.app/login"
+							href="https://bitsvizageamcetexamportal1.vercel.app/student/register"
 							target="_blank"
 							class="btn-secondary-new w-full md:w-auto px-10 py-4 border-2 border-white/40 text-white font-semibold rounded-full text-center hover:bg-white/10 hover:border-white transition-all duration-300"
 							>Eamcet Mock</a
