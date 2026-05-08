@@ -1,4 +1,3 @@
-
 <div class="top-bar">
 	<div class="top-bar-container">
 		<div class="welcome-section">
@@ -88,7 +87,11 @@
 				<span>UGC Autonomous</span>
 			</div>
 			<span class="status-pill dark hidden sm:inline-flex">NAAC 'A'</span>
-			<a class="apply-cta mobile-apply-btn" href="https://bitsvizageamcetexamportal1.vercel.app/" target="_blank">Eamcet Portal</a>
+			<a
+				class="apply-cta mobile-apply-btn"
+				href="https://bitsvizageamcetexamportal1.vercel.app/login"
+				target="_blank">Eamcet Portal</a
+			>
 		</div>
 	</div>
 </div>
