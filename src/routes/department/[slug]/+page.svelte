@@ -107,11 +107,13 @@
 />
 
 {#if !$showNavBar}
-	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)'}
+	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)' || currentSlug === 'Department of CSE (Cyber Security)'}
 		{#if currentSlug === 'Department of CSE'}
 			<DepartmentofCse />
 		{:else if currentSlug === 'Department of CSE (AI & ML)'}
 			<DepartmentofCseAiMl />
+		{:else if currentSlug === 'Department of CSE (Cyber Security)'}
+			<DepartmentofCseCyber />
 		{/if}
 	{:else}
 		<!-- Premium Centered Navigation -->
