@@ -213,7 +213,10 @@
 				text: 'Foster industry-relevant skills in deep learning, NLP, and computer vision.'
 			},
 			{ id: 'M3', text: 'Encourage ethical AI practices and research-driven innovation.' },
-			{ id: 'M4', text: 'Drive societal impact through intelligent solutions for local and global problems.' }
+			{
+				id: 'M4',
+				text: 'Drive societal impact through intelligent solutions for local and global problems.'
+			}
 		],
 		peos: [
 			{ id: 'PEO1', text: 'Build expertise in AI & ML for high-tier industry roles and research.' },
@@ -227,15 +230,30 @@
 			{ id: 'PSO3', text: 'Develop secure and reliable machine learning pipelines.' }
 		],
 		pos: [
-			{ id: 'PO1', title: 'Knowledge', text: 'Apply computing and AI fundamentals to solve problems.' },
-			{ id: 'PO2', title: 'Analysis', text: 'Identify and analyze complex data-driven challenges.' },
+			{
+				id: 'PO1',
+				title: 'Knowledge',
+				text: 'Apply computing and AI fundamentals to solve problems.'
+			},
+			{
+				id: 'PO2',
+				title: 'Analysis',
+				text: 'Identify and analyze complex data-driven challenges.'
+			},
 			{ id: 'PO3', title: 'Design', text: 'Architect intelligent systems for various domains.' },
-			{ id: 'PO4', title: 'Research', text: 'Use modern AI methods to develop innovative solutions.' },
+			{
+				id: 'PO4',
+				title: 'Research',
+				text: 'Use modern AI methods to develop innovative solutions.'
+			},
 			{ id: 'PO5', title: 'Ethics', text: 'Practice professional and responsible AI development.' }
 		],
 		sdgs: [
 			{ goal: 'Quality Education', desc: 'Promoting skill-oriented technical training in AI/ML.' },
-			{ goal: 'Industry Innovation', desc: 'Driving technological and research growth through AI.' },
+			{
+				goal: 'Industry Innovation',
+				desc: 'Driving technological and research growth through AI.'
+			},
 			{ goal: 'Decent Work', desc: 'Preparing students for high-demand AI career paths.' },
 			{ goal: 'Sustainable Cities', desc: 'Building smart solutions for modern urban challenges.' }
 		]
@@ -1010,11 +1028,7 @@
 		</section>
 
 		<!-- HOD Message -->
-		<section
-			id="hod"
-			class="dept-section-card hod-premium-card"
-			style="--section-accent: #db2777"
-		>
+		<section id="hod" class="dept-section-card hod-premium-card" style="--section-accent: #db2777">
 			<div class="hod-container">
 				<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
 					<div class="hod-image-glow"></div>
@@ -1069,8 +1083,7 @@
 							fill="none"
 							stroke="currentColor"
 							stroke-width="2"
-							><path
-								d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+							><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
 							></path><polyline points="22,6 12,13 2,6"></polyline></svg
 						>
 					</div>
@@ -1665,7 +1678,8 @@
 		gap: 24px;
 	}
 
-	.m-card, .pso-card {
+	.m-card,
+	.pso-card {
 		background: #f8fafc;
 		padding: 24px;
 		border-radius: 20px;
@@ -1673,14 +1687,16 @@
 		transition: all 0.3s ease;
 	}
 
-	.m-card:hover, .pso-card:hover {
+	.m-card:hover,
+	.pso-card:hover {
 		background: white;
 		transform: translateY(-5px);
 		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 		border-color: #cbd5e1;
 	}
 
-	.m-id, .pso-id {
+	.m-id,
+	.pso-id {
 		font-size: 0.75rem;
 		font-weight: 900;
 		color: var(--tab-color);
@@ -2177,14 +2193,30 @@
 		border-radius: 50%;
 	}
 
-	.focus-chip.math { border-left: 4px solid #0d9488; }
-	.focus-chip.math .dot { background: #0d9488; }
-	.focus-chip.kaggle { border-left: 4px solid #7c3aed; }
-	.focus-chip.kaggle .dot { background: #7c3aed; }
-	.focus-chip.open-source { border-left: 4px solid #0284c7; }
-	.focus-chip.open-source .dot { background: #0284c7; }
-	.focus-chip.dl { border-left: 4px solid #db2777; }
-	.focus-chip.dl .dot { background: #db2777; }
+	.focus-chip.math {
+		border-left: 4px solid #0d9488;
+	}
+	.focus-chip.math .dot {
+		background: #0d9488;
+	}
+	.focus-chip.kaggle {
+		border-left: 4px solid #7c3aed;
+	}
+	.focus-chip.kaggle .dot {
+		background: #7c3aed;
+	}
+	.focus-chip.open-source {
+		border-left: 4px solid #0284c7;
+	}
+	.focus-chip.open-source .dot {
+		background: #0284c7;
+	}
+	.focus-chip.dl {
+		border-left: 4px solid #db2777;
+	}
+	.focus-chip.dl .dot {
+		background: #db2777;
+	}
 
 	.focus-chip:hover {
 		transform: translateY(-3px);
@@ -2209,7 +2241,7 @@
 		left: -50%;
 		width: 200%;
 		height: 200%;
-		background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+		background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
 		pointer-events: none;
 	}
 
@@ -2235,7 +2267,8 @@
 		color: white;
 	}
 
-	.formula-equation .plus, .formula-equation .equals {
+	.formula-equation .plus,
+	.formula-equation .equals {
 		color: #5eead4;
 		opacity: 0.8;
 	}
