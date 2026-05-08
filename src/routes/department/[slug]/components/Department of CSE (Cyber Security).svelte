@@ -1052,7 +1052,9 @@
 							stroke="currentColor"
 							stroke-width="2"
 						>
-							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+							<path
+								d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+							/>
 							<polyline points="22,6 12,13 2,6" />
 						</svg>
 					</div>
@@ -2213,9 +2215,15 @@
 		transition: all 0.3s;
 	}
 
-	.contact-tile.email .tile-icon { color: #4f46e5; }
-	.contact-tile.phone .tile-icon { color: #059669; }
-	.contact-tile.location .tile-icon { color: #db2777; }
+	.contact-tile.email .tile-icon {
+		color: #4f46e5;
+	}
+	.contact-tile.phone .tile-icon {
+		color: #059669;
+	}
+	.contact-tile.location .tile-icon {
+		color: #db2777;
+	}
 
 	.contact-tile:hover .tile-icon {
 		transform: scale(1.1) rotate(5deg);
