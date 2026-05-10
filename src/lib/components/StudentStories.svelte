@@ -69,21 +69,21 @@
 	const marqueeStories = [...stories, ...stories];
 </script>
 
-<section class="py-24 bg-[#f8faff] overflow-hidden border-t border-slate-100">
+<section class="py-12 md:py-24 bg-[#f8faff] overflow-hidden border-t border-slate-100">
 	<div class="w-full">
 		<!-- Header -->
-		<div class="text-center mb-16 px-6" data-aos="fade-up">
+		<div class="text-center mb-10 md:mb-16 px-6" data-aos="fade-up">
 			<div
-				class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6"
+				class="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 mb-4 md:mb-6"
 			>
-				<i class="fa-solid fa-bullhorn text-amber-600 text-xs"></i>
-				<span class="text-[10px] font-black uppercase tracking-[0.1em] text-amber-600"
-					>Student Voices</span
+				<i class="fa-solid fa-star text-amber-600 text-[10px]"></i>
+				<span class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.1em] text-amber-600"
+					>Success Stories</span
 				>
 			</div>
 
 			<h2
-				class="text-4xl md:text-5xl lg:text-5xl font-semibold tracking-normal text-[#1a233e] mb-6"
+				class="text-3xl md:text-5xl font-semibold tracking-normal text-[#1a233e] mb-4 md:mb-6"
 			>
 				Real Stories, <span
 					class="relative inline-block"
@@ -97,18 +97,17 @@
 				</span>
 			</h2>
 
-			<p class="max-w-3xl mx-auto text-slate-500 font-medium text-sm md:text-lg leading-relaxed">
-				Hear directly from our brilliant students and alumni about how BITS has drastically
-				transformed their technical careers.
+			<p class="max-w-3xl mx-auto text-slate-500 font-medium text-xs md:text-lg leading-relaxed">
+				Discover how BITS students are transforming their potential into professional excellence.
 			</p>
 		</div>
 
 		<!-- 🏎️ SLOWLY MOVING MARQUEE (Moves Right) -->
 		<div class="relative flex overflow-hidden group">
-			<div class="flex animate-marquee-reverse hover:pause gap-8 py-4">
+			<div class="flex animate-marquee-reverse hover:pause gap-5 md:gap-8 py-4">
 				{#each marqueeStories as story, i}
 					<div
-						class="flex-shrink-0 w-[350px] md:w-[450px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl shadow-slate-200/40 border border-slate-100 relative transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+						class="flex-shrink-0 w-[280px] md:w-[450px] bg-white rounded-[1.75rem] md:rounded-[2.5rem] p-6 md:p-10 shadow-xl shadow-slate-200/40 border border-slate-100 relative transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
 					>
 						<!-- Quote Icon -->
 						<div
@@ -126,15 +125,15 @@
 
 						<!-- Quote -->
 						<blockquote
-							class="text-slate-600 italic leading-relaxed mb-8 text-sm md:text-[15px] relative z-10 line-clamp-4"
+							class="text-slate-600 italic leading-relaxed mb-6 md:mb-8 text-[13px] md:text-[15px] relative z-10 line-clamp-3 md:line-clamp-4"
 						>
 							"{story.quote}"
 						</blockquote>
 
 						<!-- Student Info -->
-						<div class="flex items-center gap-4 border-t border-slate-50 pt-8">
+						<div class="flex items-center gap-3 md:gap-4 border-t border-slate-50 pt-6 md:pt-8">
 							<div
-								class="w-12 h-12 rounded-2xl flex items-center justify-center font-black text-lg flex-shrink-0 {story.color}"
+								class="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-base md:text-lg flex-shrink-0 {story.color}"
 							>
 								{story.initial}
 							</div>

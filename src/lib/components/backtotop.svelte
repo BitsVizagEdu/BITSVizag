@@ -67,10 +67,17 @@
 
 	@media (max-width: 640px) {
 		.back-to-top {
-			right: 12px;
-			bottom: 78px;
-			padding: 12px 16px;
-			border-radius: 16px;
+			right: 10px;
+			bottom: 80px;
+			padding: 8px 14px;
+			border-radius: 12px;
+		}
+		.back-to-top p {
+			font-size: 11px;
+		}
+		.back-to-top i {
+			font-size: 10px;
+			padding-right: 4px;
 		}
 	}
 </style>

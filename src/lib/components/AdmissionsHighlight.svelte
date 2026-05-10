@@ -51,32 +51,32 @@
 					: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 			>
 				<!-- Heading Group -->
-				<div class="space-y-3">
-					<h2 class="font-sans text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+				<div class="space-y-2">
+					<h2 class="font-sans text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
 						Admissions <br />
 						<span class="text-emerald-600">Open!</span>
 					</h2>
 					<div class="inline-block rounded-lg bg-emerald-600/10 px-4 py-1.5">
-						<p class="text-base font-bold text-emerald-900 sm:text-xl">Academic Year 2026–27</p>
+						<p class="text-sm font-bold text-emerald-900 sm:text-lg md:text-xl">Academic Year 2026–27</p>
 					</div>
 				</div>
 
 				<!-- Info Bar -->
 				<div
-					class="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-600 sm:text-base"
+					class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-600 sm:text-base"
 				>
 					<div
-						class="flex items-center gap-2 rounded-md bg-white/50 px-3 py-1.5 backdrop-blur-sm border border-white/40 shadow-sm"
+						class="flex items-center gap-2 rounded-md bg-white/50 px-2 py-1 backdrop-blur-sm border border-white/40 shadow-sm"
 					>
-						<span class="text-emerald-600">Counselling Code:</span>
+						<span class="text-emerald-600">Code:</span>
 						<span class="premium-gold-text font-black tracking-widest">BABA</span>
 					</div>
 					<span class="hidden text-slate-300 sm:block">|</span>
 					<div class="flex items-center gap-2">
-						<span class="rounded bg-slate-800 px-2 py-0.5 text-[10px] text-white"
+						<span class="rounded bg-slate-800 px-2 py-0.5 text-[9px] text-white"
 							>NAAC 'A' Grade</span
 						>
-						<span class="text-slate-800">Autonomous</span>
+						<span class="text-slate-800 text-[10px] sm:text-sm">Autonomous</span>
 					</div>
 				</div>
 
@@ -132,16 +132,16 @@
 				<!-- Bottom Message & CTA -->
 				<div class="space-y-4">
 					<div class="flex items-center gap-3 text-emerald-800">
-						<p class="text-xs font-semibold tracking-tight">
+						<p class="text-[10px] sm:text-xs font-semibold tracking-tight">
 							Start your professional journey with BITS Vizag today.
 						</p>
 					</div>
 
 					<a
 						href="/application-form"
-						class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-emerald-700 hover:shadow-2xl hover:shadow-emerald-900/30"
+						class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-emerald-600 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:bg-emerald-700 hover:shadow-2xl hover:shadow-emerald-900/30"
 					>
-						<span class="relative z-10">Explore your journey with BITS</span>
+						<span class="relative z-10 text-center">Start Application</span>
 						<div
 							class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"
 						></div>
@@ -157,12 +157,12 @@
 			>
 				{#each stats as stat, i}
 					<div
-						class="group relative flex flex-col items-center justify-center rounded-2xl border-t-[3px] bg-white p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl {stat.borderColor}"
+						class="group relative flex flex-col items-center justify-center rounded-2xl border-t-[3px] bg-white p-4 sm:p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl {stat.borderColor}"
 					>
-						<p class="text-4xl font-bold tracking-normal {stat.color}">
+						<p class="text-2xl sm:text-4xl font-bold tracking-normal {stat.color}">
 							{stat.value}
 						</p>
-						<p class="mt-3 text-[14px] font-bold tracking-normal text-slate-700">
+						<p class="mt-2 text-[10px] sm:text-[14px] font-bold tracking-normal text-slate-700">
 							{stat.label}
 						</p>
 					</div>

@@ -201,15 +201,15 @@
 
 	.item-value {
 		margin: 0;
-		font-size: clamp(1.8rem, 2.3vw, 2.75rem);
+		font-size: clamp(1.5rem, 2.3vw, 2.75rem);
 		font-weight: 800;
 		line-height: 1;
 		color: #ffffff;
 	}
 
 	.item-label {
-		margin: 0.38rem 0 0;
-		font-size: clamp(0.92rem, 1.05vw, 1.45rem);
+		margin: 0.25rem 0 0;
+		font-size: clamp(0.75rem, 1.05vw, 1.45rem);
 		line-height: 1.35;
 		color: rgba(255, 255, 255, 0.9);
 	}
@@ -282,49 +282,52 @@
 		}
 
 		.excellence-panel {
-			padding: 1.6rem 1rem 1.4rem;
+			padding: 1.2rem 0.8rem 1.2rem;
 			border-radius: 12px;
 		}
 
 		.excellence-title {
-			font-size: clamp(1.2rem, 6vw, 1.8rem);
-			gap: 0.5rem;
+			font-size: clamp(1.1rem, 5vw, 1.8rem);
+			gap: 0.4rem;
 		}
 
 		.title-divider {
-			margin: 1.1rem auto 0.9rem;
+			margin: 0.8rem auto 0.8rem;
 			max-width: 90%;
 		}
 
 		.excellence-grid {
-			grid-template-columns: 1fr;
+			grid-template-columns: repeat(2, 1fr);
 			gap: 0.5rem;
 		}
 
 		.excellence-item {
-			justify-content: flex-start;
-			padding: 0.6rem 0.5rem;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 0.8rem 0.4rem;
 			background: rgba(255, 255, 255, 0.03);
-			border-radius: 8px;
+			border-radius: 12px;
 		}
 
 		.item-icon-wrap {
-			width: 40px;
-			height: 40px;
+			width: 36px;
+			height: 36px;
+			margin-bottom: 0.5rem;
 		}
 
 		.item-icon {
-			width: 20px;
-			height: 20px;
+			width: 18px;
+			height: 18px;
 		}
 
 		.item-value {
-			font-size: 1.75rem;
+			font-size: 1.4rem;
 		}
 
 		.item-label {
-			font-size: 0.88rem;
-			margin-top: 0.2rem;
+			font-size: 0.7rem;
+			margin-top: 0.15rem;
 		}
 
 		.info-cards {
@@ -333,20 +336,42 @@
 		}
 
 		.info-card {
-			padding: 1.25rem 1.2rem 1.4rem;
+			padding: 1rem 0.9rem 1.1rem;
 		}
 
 		.card-title {
-			font-size: 1.85rem;
+			font-size: 1.5rem;
 		}
 
 		.card-lines {
-			margin-top: 0.9rem;
-			gap: 0.5rem;
+			margin-top: 0.7rem;
+			gap: 0.4rem;
 		}
 
 		.card-line {
+			font-size: 1.15rem;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.excellence-grid {
+			gap: 0.4rem;
+		}
+		
+		.excellence-item {
+			padding: 0.6rem 0.3rem;
+		}
+		
+		.item-value {
+			font-size: 1.25rem;
+		}
+		
+		.card-title {
 			font-size: 1.35rem;
+		}
+		
+		.card-line {
+			font-size: 1.05rem;
 		}
 	}
 </style>

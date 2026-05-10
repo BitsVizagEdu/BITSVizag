@@ -8,7 +8,7 @@
 			image: '/gallery/g2.jpg',
 			desc: 'Computer Science & Engineering',
 			duration: '4 Years',
-			seats: '1,260 Seats',
+			seats: '180 Seats',
 			href: `/department/${encodeURIComponent('Department of CSE')}`,
 			color: 'amber-500'
 		},
@@ -17,7 +17,7 @@
 			image: '/Course-highlight/newAI.jpg',
 			desc: 'Artificial Intelligence & Machine Learning',
 			duration: '4 Years',
-			seats: '1,260 Seats',
+			seats: '120 Seats',
 			href: `/department/${encodeURIComponent('Department of CSE (AI & ML)')}`,
 			color: 'blue-500'
 		},
@@ -26,7 +26,7 @@
 			image: '/CS-Banners/CS-images/get4.jpg',
 			desc: 'Protecting the Digital Frontier',
 			duration: '4 Years',
-			seats: '1,260 Seats',
+			seats: '120 Seats',
 			href: `/department/${encodeURIComponent('Department of CSE (Cyber Security)')}`,
 			color: 'emerald-500'
 		},
@@ -35,7 +35,7 @@
 			image: '/Course-highlight/newece.jpg',
 			desc: 'Electronics & Communication Engineering',
 			duration: '4 Years',
-			seats: '1,260 Seats',
+			seats: '120 Seats',
 			href: `/department/${encodeURIComponent('Department of ECE')}`,
 			color: 'rose-500'
 		},
@@ -44,7 +44,7 @@
 			image: './Course-highlight/eeenew.png',
 			desc: 'Electrical & Electronics Engineering',
 			duration: '4 Years',
-			seats: '1,260 Seats',
+			seats: '80 Seats',
 			href: `/department/${encodeURIComponent('Department of EEE')}`,
 			color: 'indigo-500'
 		},
@@ -53,7 +53,7 @@
 			image: '/mechnew.png',
 			desc: 'Mechanical Engineering & Innovation',
 			duration: '4 Years',
-			seats: '1,260 Seats',
+			seats: '80 Seats',
 			href: `/department/${encodeURIComponent('Department of MECH')}`,
 			color: 'orange-500'
 		}
@@ -230,15 +230,13 @@
 		{/each}
 	</div>
 
-	<!-- Mobile Snap Slider -->
-	<div
-		class="md:hidden flex overflow-x-auto gap-5 pb-8 snap-x snap-mandatory scroll-smooth no-scrollbar"
-	>
+	<!-- Mobile Snap Slider (Showing All Departments) -->
+	<div class="md:hidden flex flex-col gap-8 pb-8 px-4">
 		{#each courses as course, i}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
-				class="min-w-[95%] snap-center relative rounded-3xl overflow-hidden aspect-[5/4] shadow-lg"
+				class="w-full relative rounded-3xl overflow-hidden aspect-[5/4] shadow-lg"
 				on:click={() => (active = i)}
 			>
 				<img

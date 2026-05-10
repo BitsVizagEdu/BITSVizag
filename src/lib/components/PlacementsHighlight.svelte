@@ -79,13 +79,13 @@
 				</div>
 
 				<!-- Heading Group -->
-				<div class="space-y-3">
-					<h2 class="font-sans text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl">
+				<div class="space-y-2">
+					<h2 class="font-sans text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
 						Elite <br />
 						<span class="text-blue-600">Placements</span>
 					</h2>
-					<div class="inline-block rounded-lg bg-blue-600/10 px-4 py-1.5">
-						<p class="text-base font-semibold text-blue-900 sm:text-xl">
+					<div class="inline-block rounded-lg bg-blue-600/10 px-3 py-1">
+						<p class="text-sm font-semibold text-blue-900 sm:text-lg md:text-xl">
 							Empowering Professional Journeys
 						</p>
 					</div>
@@ -103,13 +103,13 @@
 						Our Elite Hiring Partners
 					</p>
 					<div
-						class="flex flex-wrap items-center gap-x-8 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500"
+						class="flex flex-wrap items-center gap-x-6 gap-y-4 opacity-60 grayscale hover:grayscale-0 transition-all duration-500"
 					>
 						{#each recruiters as company}
 							<img
 								src={company.logo}
 								alt={company.name}
-								class="h-8 w-auto min-w-[60px] max-w-[100px] object-contain"
+								class="h-6 w-auto min-w-[50px] max-w-[80px] object-contain"
 							/>
 						{/each}
 					</div>
@@ -144,12 +144,12 @@
 				<div class="grid grid-cols-2 gap-3 sm:gap-4">
 					{#each stats as stat, i}
 						<div
-							class="group relative flex flex-col items-center justify-center rounded-xl border-t-[2px] bg-white/90 p-4 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl {stat.borderColor}"
+							class="group relative flex flex-col items-center justify-center rounded-xl border-t-[2px] bg-white/90 p-3 sm:p-4 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl {stat.borderColor}"
 						>
-							<p class="text-2xl font-bold tracking-tight {stat.color}">
+							<p class="text-xl sm:text-2xl font-bold tracking-tight {stat.color}">
 								{stat.value}
 							</p>
-							<p class="mt-1 text-[11px] font-bold tracking-normal text-slate-600">
+							<p class="mt-1 text-[9px] sm:text-[11px] font-bold tracking-normal text-slate-600">
 								{stat.label}
 							</p>
 						</div>

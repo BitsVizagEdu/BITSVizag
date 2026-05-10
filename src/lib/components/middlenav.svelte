@@ -70,84 +70,13 @@
 </script>
 
 <nav
-	class="{isMobileMenuOpen ? 'mobile-menu-active-state' : ''} {activeMobileDropdown
+	class="hidden lg:block {isMobileMenuOpen ? 'mobile-menu-active-state' : ''} {activeMobileDropdown
 		? 'mobile-menu-active-state'
 		: ''} h-[32px] lg:h-auto"
 >
-	<div class="wrapper !h-[32px]">
-		<!-- NEW 2-ROW MOBILE HEADER STRUCTURE -->
-		<div class="mobile-header-container lg:hidden w-full flex flex-col">
-			<!-- Row 1: Logo + Hamburger -->
-			<div class="flex items-center justify-between w-full h-[50px] px-4">
-				<a href="/" class="flex items-center">
-					<img src="/1.png" alt="BITS Vizag Logo" class="h-8 w-auto object-contain" />
-				</a>
-				<button type="button" class="menu-btn p-2" on:click={toggleMobileMenu}>
-					<i class="fas fa-bars text-white text-xl" />
-				</button>
-			</div>
-			
-			<!-- Row 2: Full-width CTA -->
-			<div class="px-4 pb-3">
-				<a href="/application-form" class="w-full bg-[#fbbf24] text-[#080e1f] font-extrabold text-[12px] uppercase py-2 rounded-lg flex items-center justify-center tracking-wider shadow-lg">
-					Start Your Journey
-				</a>
-			</div>
+	<div class="wrapper !h-[32px] hidden lg:flex">
 
-			<!-- Quick Nav Strip (Moved below CTA) -->
-			<div class="mobile-quick-nav flex-1 min-width-0 px-2 overflow-x-auto no-scrollbar border-t border-white/10 pt-1">
-				<div class="flex items-center gap-3 py-1">
-					<a href="/" class="mini-link" on:click={closeMenus}>Home</a>
-					<a href="/aboutus/About-BITS" class="mini-link" on:click={closeMenus}>About Us</a>
-					<button
-						type="button"
-						class="mini-link {activeMobileDropdown === 'courses' ? 'active' : ''}"
-						on:click={() => toggleMobileDropdown('courses')}
-					>
-						Courses
-					</button>
-					<a href="/faculty" class="mini-link" on:click={closeMenus}>Faculty</a>
-					<button
-						type="button"
-						class="mini-link {activeMobileDropdown === 'examcell' ? 'active' : ''}"
-						on:click={() => toggleMobileDropdown('examcell')}
-					>
-						Exam Cell
-					</button>
-					<button
-						type="button"
-						class="mini-link {activeMobileDropdown === 'facilities' ? 'active' : ''}"
-						on:click={() => toggleMobileDropdown('facilities')}
-					>
-						Facilities
-					</button>
-					<a href="/placements" class="mini-link" on:click={closeMenus}>CDC</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Mobile Overlay Backdrop -->
-		{#if isMobileMenuOpen}
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-static-element-interactions -->
-			<div
-				class="mobile-backdrop lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[998]"
-				on:click={closeMenus}
-			></div>
-		{/if}
-
-		<ul class="nav-links h-full {isMobileMenuOpen ? 'mobile-open' : ''}">
-			<!-- Mobile Menu Header -->
-			<div
-				class="lg:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100/60 w-full pt-2"
-			>
-				<img src="/1.png" alt="BITS Vizag Logo" class="h-8 w-auto object-contain" />
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<button type="button" class="btn close-btn" on:click={toggleMobileMenu}>
-					<i class="fas fa-times text-slate-800" />
-				</button>
-			</div>
+		<ul class="nav-links h-full hidden lg:grid">
 
 			<li>
 				<a href="/" class="desktop-item" on:click={closeMenus}>Home</a>

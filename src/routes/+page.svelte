@@ -3,7 +3,6 @@
 	import Strength from '$lib/components/strength.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import HighlightsSlider from '$lib/components/HighlightsSlider.svelte';
-
 	import Gallery from '$lib/components/gallery.svelte';
 	import Placement from '$lib/components/placement.svelte';
 	import { showNavBar } from '$lib/stores/store.js';
@@ -12,6 +11,7 @@
 	import SectionTransition from '$lib/components/SectionTransition.svelte';
 	import CourseHighlight from '$lib/components/CourseHighlight.svelte';
 	import StudentStories from '$lib/components/StudentStories.svelte';
+	import MobileHeader from '$lib/components/MobileHeader.svelte';
 	import { onMount } from 'svelte';
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
@@ -87,6 +87,7 @@
 	<link rel="preload" as="image" href="/header/T10main.webp" />
 </svelte:head>
 {#if !$showNavBar}
+	<MobileHeader />
 	<Notification />
 	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#14204a]">
 		<video playsinline autoplay muted loop class="absolute inset-0 h-full w-full object-cover z-0">
@@ -102,8 +103,31 @@
 			<div
 				class="flex flex-col gap-5 w-full lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-12"
 			>
-				<div class="hero-copy text-white text-left items-start flex flex-col">
-					<div class="hero-badges hidden md:flex items-center gap-4 mb-8">
+				<div
+					class="hero-copy text-white text-center items-center flex flex-col w-full md:text-left md:items-start"
+				>
+					<div class="hero-badges-mobile md:hidden mb-8 w-full flex flex-col items-center gap-4">
+						<!-- Combined Badge Row -->
+						<div class="inline-flex items-stretch rounded-lg border border-[#fbbf24] overflow-hidden shadow-lg shadow-amber-500/10">
+							<!-- UGC Autonomous -->
+							<div class="px-3 py-2 bg-[#fbbf24]/10 flex items-center gap-2 border-r border-[#fbbf24]/30">
+								<i class="fa-solid fa-sun text-[#fbbf24] text-[11px]"></i>
+								<span class="text-[#fbbf24] text-[10px] font-black uppercase tracking-wider">UGC Autonomous</span>
+							</div>
+							<!-- College Code -->
+							<div class="px-3 py-2 bg-white/5 flex items-center gap-2">
+								<i class="fa-solid fa-building-columns text-white/70 text-[11px]"></i>
+								<span class="text-white/90 text-[10px] font-black uppercase tracking-wider">Code: <span class="text-[#fbbf24]">BABA</span></span>
+							</div>
+						</div>
+
+						<div class="text-[11px] font-black tracking-[0.2em] text-white/60 uppercase">
+							EST. 2008 • VIZAG, AP
+						</div>
+					</div>
+
+					<!-- Desktop-only Badges (STRICTLY HIDDEN ON MOBILE) -->
+					<!-- <div class="hero-badges hidden lg:flex items-center gap-4 mb-8">
 						<div
 							class="badge-pill est uppercase tracking-widest text-[10px] font-black border border-[#fbbf24] px-4 py-1 rounded-full text-[#fbbf24] bg-[#fbbf24]/5"
 						>
@@ -114,32 +138,33 @@
 						>
 							College Code: <span class="text-[#fbbf24]">BABA</span>
 						</div>
-					</div>
+					</div> -->
 
-					<h1 class="text-6xl md:hero-title mb-6 font-semibold leading-tight">
+					<h1
+						class="text-4xl sm:text-5xl md:text-7xl mb-4 font-black leading-[1.1] text-center md:text-left"
+					>
 						Shaping Future
-						<span class="typewriter-container block text-[#fbbf24] font-black">
+						<span class="typewriter-container block text-[#fbbf24]">
 							{displayText}<span class="cursor">|</span>
 						</span>
 					</h1>
 
-					<p class="text-sm md:text-lg text-slate-300 leading-relaxed max-w-xl mb-10 font-medium">
-						A premier destination for engineering excellence, empowering innovation, research, and
-						real-world impact.
+					<p
+						class="text-[13px] md:text-lg text-slate-300 leading-relaxed max-w-xl mb-8 font-medium text-center md:text-left px-4 md:px-0"
+					>
+						Baba Institute of Technology and Sciences is a premier destination for engineering
+						excellence. NAAC 'A' accredited — empowering tomorrow's innovators today.
 					</p>
 
 					<div class="flex flex-col gap-4 w-full md:flex-row md:items-center">
 						<a
-							href="/application-form"
-							class="btn-primary-new w-full md:w-auto px-10 py-4 bg-[#fbbf24] text-[#080e1f] font-semibold rounded-full text-center hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300"
-							>Start Your Journey</a
-						>
-						<a
-							href="https://bitsvizageamcetexamportal1.vercel.app/student/register"
+							href="https://bitsvizageamcetexamportal1.vercel.app/"
 							target="_blank"
-							class="btn-secondary-new w-full md:w-auto px-10 py-4 border-2 border-white/40 text-white font-semibold rounded-full text-center hover:bg-white/10 hover:border-white transition-all duration-300"
-							>Eamcet Mock</a
+							class="btn-primary-new w-full md:w-auto px-8 py-4 bg-[#fbbf24] text-[#080e1f] font-black rounded-xl md:rounded-full text-center hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300 flex items-center justify-center gap-3 group"
 						>
+							EAMCET Portal
+							<i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+						</a>
 					</div>
 				</div>
 
@@ -194,128 +219,37 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="social-rail hidden md:flex" aria-label="Social links">
-			<a
-				class="social-btn maps"
-				href="https://www.google.com/maps/search/?api=1&query=Baba+college+Lake+near+Pothinamallayyapalem+Pothinamallayya+Palem+Bakkanapalem+Andhra+Pradesh+530048"
-				target="_blank"
-				rel="noreferrer"
-				aria-label="Google Maps"
-			>
-				<svg viewBox="0 0 24 24" aria-hidden="true">
-					<path
-						fill="#EA4335"
-						d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-					/>
-					<path
-						fill="#FBBC04"
-						d="M12 2C8.13 2 5 5.13 5 9c0 1.5.6 2.8 1.5 3.9l5.5 5.5 5.5-5.5c.9-1.1 1.5-2.4 1.5-3.9 0-3.87-3.13-7-7-7z"
-					/>
-					<path
-						fill="#34A853"
-						d="M12 22s-7-7.75-7-13c0-1.1.2-2.2.7-3.2l6.3 6.3 6.3-6.3c.5 1 .7 2.1.7 3.2 0 5.25-7 13-7 13z"
-					/>
-					<path fill="#4285F4" d="M12 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-				</svg>
-			</a>
-			<a
-				class="social-btn instagram"
-				href="https://www.instagram.com/bits_vizag_official/"
-				target="_blank"
-				rel="noreferrer"
-				aria-label="Instagram"
-			>
-				<svg viewBox="0 0 24 24" aria-hidden="true">
-					<path
-						d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441c.795 0 1.439-.645 1.439-1.441s-.644-1.44-1.439-1.44z"
-					/>
-				</svg>
-			</a>
-			<a
-				class="social-btn whatsapp"
-				href="https://whatsapp.com/channel/0029VaU1VjEJkK7Gz9iBjP1B"
-				target="_blank"
-				rel="noreferrer"
-				aria-label="WhatsApp"
-			>
-				<svg viewBox="0 0 24 24" aria-hidden="true">
-					<path
-						d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.89 4.44-9.892 9.886-.001 2.225.614 3.391 1.743 5.352l-1.014 3.704 3.763-.986zm11.387-5.477c-.301-.15-1.785-.881-2.06-.982-.276-.1-.476-.15-.676.15-.2.3-.775 1.002-.95 1.202-.175.2-.35.225-.65.075-.301-.15-1.27-.468-2.42-1.493-.894-.798-1.497-1.783-1.672-2.083-.175-.3-.018-.462.13-.611.134-.133.301-.351.451-.526.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.628-.926-2.228-.244-.585-.491-.507-.676-.516-.175-.008-.375-.01-.575-.01s-.525.075-.8.375c-.275.3-1.051 1.027-1.051 2.503s1.076 2.903 1.226 3.103c.15.2 2.117 3.232 5.128 4.534.715.311 1.273.497 1.708.635.719.227 1.373.195 1.89.117.577-.088 1.785-.73 2.035-1.434.25-.703.25-1.305.175-1.433-.075-.126-.275-.201-.576-.351z"
-					/>
-				</svg>
-			</a>
-			<a
-				class="social-btn linkedin"
-				href="https://www.linkedin.com/company/bits-vizag/"
-				target="_blank"
-				rel="noreferrer"
-				aria-label="LinkedIn"
-			>
-				<svg viewBox="0 0 24 24" aria-hidden="true">
-					<path
-						d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
-					/>
-				</svg>
-			</a>
-			<a
-				class="social-btn youtube"
-				href="https://youtube.com/@bitsmediacenter8449?si=JN_U0Jpt5ju3sLhL"
-				target="_blank"
-				rel="noreferrer"
-				aria-label="YouTube"
-			>
-				<svg viewBox="0 0 24 24" aria-hidden="true">
-					<path
-						d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-					/>
-				</svg>
-			</a>
-			<a
-				class="social-btn x-twitter"
-				href="https://x.com/bits_vizag"
-				target="_blank"
-				rel="noreferrer"
-				aria-label="X (Twitter)"
-			>
-				<svg viewBox="0 0 24 24" aria-hidden="true">
-					<path
-						d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"
-					/>
-				</svg>
-			</a>
-		</div>
 	</section>
 
 	<SectionTransition />
 
 	<HighlightsSlider />
 
-	<div class="celebrate-header-container py-10 md:py-16 bg-white overflow-hidden relative">
+	<div class="celebrate-header-container py-12 md:py-20 bg-white overflow-hidden relative">
 		<!-- Subtle decorative background element -->
 		<div
-			class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-amber-50/50 blur-[100px] rounded-full -z-0"
+			class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-blue-50/50 blur-[100px] rounded-full -z-0"
 		></div>
 
-		<div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-			<div class="inline-flex items-center gap-3 mb-4" data-aos="fade-down">
-				<span class="h-[1px] w-6 bg-blue-400"></span>
-				<span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] md:text-[11px]"
+		<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+			<div class="inline-flex items-center gap-3 mb-6" data-aos="fade-down">
+				<span class="h-[1px] w-8 bg-blue-400"></span>
+				<span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] md:text-[12px]"
 					>Lifestyle & Culture</span
 				>
-				<span class="h-[1px] w-6 bg-blue-400"></span>
+				<span class="h-[1px] w-8 bg-blue-400"></span>
 			</div>
 
 			<h2
-				class="text-3xl md:text-4xl lg:text-4xl font-bold text-slate-900/90 tracking-normal mb-6"
+				class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-6 uppercase"
 				data-aos="fade-up"
 			>
-				CELEBRATE LIFE AT
-				<span class="text-blue-700">BITS VIZAG</span>
+				Celebrate Life at
+				<span class="text-blue-700 block md:inline mt-2 md:mt-0">BITS Vizag</span>
 			</h2>
 
 			<p
-				class="max-w-xl mx-auto text-slate-500 font-medium text-xs md:text-base leading-relaxed mb-8"
+				class="max-w-2xl mx-auto text-slate-500 font-medium text-sm md:text-lg leading-relaxed mb-10 px-4"
 				data-aos="fade-up"
 				data-aos-delay="100"
 			>
@@ -323,10 +257,10 @@
 				unforgettable BITS experience.
 			</p>
 
-			<div class="flex items-center justify-center gap-2" data-aos="zoom-in" data-aos-delay="200">
-				<div class="h-1 w-1 rounded-full bg-blue-400"></div>
-				<div class="h-1 w-10 rounded-full bg-gradient-to-r from-blue-400 to-blue-500"></div>
-				<div class="h-1 w-1 rounded-full bg-blue-500"></div>
+			<div class="flex items-center justify-center gap-3" data-aos="zoom-in" data-aos-delay="200">
+				<div class="h-1.5 w-1.5 rounded-full bg-blue-400"></div>
+				<div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue-400 to-blue-600"></div>
+				<div class="h-1.5 w-1.5 rounded-full bg-blue-600"></div>
 			</div>
 		</div>
 	</div>
@@ -478,149 +412,6 @@
 		transform: scale(1.1);
 	}
 
-	.social-rail {
-		position: absolute;
-		right: 1.1rem;
-		top: 50%;
-		transform: translateY(-50%);
-		display: flex;
-		flex-direction: column;
-		gap: 0.62rem;
-		z-index: 4;
-		background: rgba(255, 255, 255, 0.12);
-		backdrop-filter: blur(6px);
-		padding: 0.45rem 0.35rem;
-		border-radius: 1rem;
-		border: 1px solid rgba(255, 255, 255, 0.22);
-	}
-
-	.social-btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 2.28rem;
-		height: 2.28rem;
-		color: #ffffff;
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		border-radius: 999px;
-		transition:
-			transform 0.22s ease,
-			box-shadow 0.22s ease,
-			filter 0.22s ease;
-		animation: iconFloat 4s ease-in-out infinite;
-	}
-
-	.social-btn:nth-child(2) {
-		animation-delay: 0.2s;
-	}
-	.social-btn:nth-child(3) {
-		animation-delay: 0.4s;
-	}
-	.social-btn:nth-child(4) {
-		animation-delay: 0.6s;
-	}
-	.social-btn:nth-child(5) {
-		animation-delay: 0.8s;
-	}
-	.social-btn:nth-child(6) {
-		animation-delay: 1s;
-	}
-
-	@keyframes iconFloat {
-		0%,
-		100% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(-6px);
-		}
-	}
-
-	.social-btn.maps {
-		background: #ffffff;
-		border-color: #e2e8f0;
-	}
-
-	.social-btn.maps svg {
-		width: 1.1rem;
-		height: 1.1rem;
-	}
-
-	.social-btn.instagram {
-		background: linear-gradient(
-			45deg,
-			#f09433 0%,
-			#e6683c 25%,
-			#dc2743 50%,
-			#cc2366 75%,
-			#bc1888 100%
-		);
-	}
-
-	.social-btn.whatsapp {
-		background: #25d366;
-	}
-
-	.social-btn.linkedin {
-		background: #0077b5;
-	}
-
-	.social-btn.youtube {
-		background: #ff0000;
-	}
-
-	.social-btn.x-twitter {
-		background: #000000;
-	}
-
-	.social-btn svg {
-		width: 1.1rem;
-		height: 1.1rem;
-		fill: #ffffff;
-		transition: fill 0.3s ease;
-	}
-
-	.social-btn {
-		filter: grayscale(1) opacity(0.8);
-		background: rgba(255, 255, 255, 0.1) !important;
-		border-color: rgba(255, 255, 255, 0.3) !important;
-	}
-
-	.social-btn:hover {
-		filter: grayscale(0) opacity(1);
-		transform: scale(1.1) translateY(-3px);
-	}
-
-	.social-btn.maps:hover {
-		background: #ffffff !important;
-	}
-	.social-btn.instagram:hover {
-		background: linear-gradient(
-			45deg,
-			#f09433 0%,
-			#e6683c 25%,
-			#dc2743 50%,
-			#cc2366 75%,
-			#bc1888 100%
-		) !important;
-	}
-	.social-btn.whatsapp:hover {
-		background: #25d366 !important;
-	}
-	.social-btn.linkedin:hover {
-		background: #0077b5 !important;
-	}
-	.social-btn.youtube:hover {
-		background: #ff0000 !important;
-	}
-	.social-btn.x-twitter:hover {
-		background: #000000 !important;
-	}
-
-	.social-btn.maps svg {
-		fill: none;
-	}
-
 	.content-visibility-auto {
 		content-visibility: auto;
 		contain-intrinsic-size: 1000px; /* Placeholder height to prevent scrollbar jumping */
@@ -638,20 +429,97 @@
 	}
 
 	@media (max-width: 768px) {
-		.social-rail {
-			right: 0.35rem;
-			gap: 0.4rem;
-			padding: 0.3rem 0.2rem;
+		.hero-wrap {
+			min-height: 82vh !important; /* Slightly tighter for 'best' view */
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
-		.social-btn {
-			width: 1.9rem;
-			height: 1.9rem;
+		.hero-content-anim {
+			min-height: auto !important;
+			padding-top: 1.5rem !important;
+			padding-bottom: 2.5rem !important;
+			align-items: center !important;
+			justify-content: center !important;
 		}
 
-		.social-btn svg {
-			width: 0.86rem;
-			height: 0.86rem;
+		.hero-copy {
+			text-align: center !important;
+			align-items: center !important;
+		}
+
+		.hero-copy h1 {
+			font-family: 'Satoshi', sans-serif !important;
+			font-size: 3.2rem !important;
+			font-weight: 900 !important;
+			line-height: 1.05 !important;
+			letter-spacing: -0.04em !important;
+			margin-bottom: 1.2rem !important;
+		}
+
+		.hero-copy p {
+			font-family: 'Inter', sans-serif !important;
+			font-size: 0.95rem !important;
+			font-weight: 500 !important;
+			line-height: 1.6 !important;
+			color: rgba(255, 255, 255, 0.85) !important;
+			max-width: 95% !important;
+			margin-bottom: 2rem !important;
+			text-align: center !important;
+		}
+
+		.hero-badges-mobile div {
+			font-family: 'Satoshi', sans-serif !important;
+			font-weight: 800 !important; /* Bolder for 'best weighted' */
+			letter-spacing: 0.05em !important;
+			border-radius: 4px !important; /* Even sharper 'shapred' look */
+		}
+
+		.hero-card {
+			display: block !important;
+			margin-top: 2rem !important;
+			width: 100% !important;
+			max-width: 320px !important;
+			border-radius: 12px !important;
+			transform: none !important;
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+		}
+
+		.hero-overlay {
+			background: linear-gradient(
+				to bottom,
+				rgba(8, 14, 31, 0.7) 0%,
+				rgba(8, 14, 31, 0.3) 50%,
+				rgba(8, 14, 31, 0.6) 100%
+			) !important; /* Reduced transparency for clearer video */
+		}
+
+		.btn-primary-new {
+			font-family: 'Satoshi', sans-serif !important;
+			font-weight: 900 !important;
+			font-size: 1.05rem !important;
+			padding: 1rem 2.2rem !important;
+			border-radius: 8px !important; /* Match 'shapred' style */
+			letter-spacing: 0.02em !important;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.hero-copy h1 {
+			font-size: 2.6rem !important;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.hero-copy h1 {
+			font-size: 1.9rem !important;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.hero-copy h1 {
+			font-size: 2.8rem !important;
 		}
 	}
 </style>

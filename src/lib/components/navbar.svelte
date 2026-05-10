@@ -98,6 +98,7 @@
 
 <style>
 	.top-bar {
+		display: block;
 		background: #080e1f;
 		border-bottom: 1px solid rgba(251, 191, 36, 0.2);
 		padding: 0.2rem 0; /* Reduced from 0.35rem */
@@ -105,6 +106,12 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 11.5px;
 		font-weight: 500;
+	}
+
+	@media (max-width: 1024px) {
+		.top-bar {
+			display: none !important;
+		}
 	}
 
 	.top-bar-container {
@@ -482,10 +489,9 @@
 		background: #f59e0b;
 	}
 
-	@media (max-width: 1150px) {
-		.brand-right .status-pill,
-		.brand-right .ugc-badge {
-			display: none;
+	@media (max-width: 1024px) {
+		.header-shell {
+			display: none !important;
 		}
 	}
 

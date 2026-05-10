@@ -12,17 +12,23 @@
 		<div class="marquee-content">
 			{#each Array(6) as _, i}
 				<span class="marquee-item">
-					<span class="new-badge">NEW</span>
-					<span class="marquee-admissions">Admissions Open for B.Tech, M.Tech (2026)</span>
-					<a href="/department/Department%20of%20CSE" class="apply-link">Click here</a>
+					<span class="scholarship-badge mobile-focused"> SCHOLARSHIPS </span>
+					<span class="marquee-admissions">100+ Merit Scholarships Available for Batch 2026</span>
+					<a href="/application-form" class="apply-link">Click here</a>
+					
+					<span class="separator hidden md:inline">|</span>
+					
+					<span class="new-badge hidden md:inline-flex">NEW</span>
+					<span class="marquee-admissions hidden md:inline">Admissions Open for B.Tech, M.Tech (2026)</span>
+					<a href="/department/Department%20of%20CSE" class="apply-link hidden md:inline">Click here</a>
 
 					<span class="separator">|</span>
-					<span class="scholarship-badge"> Explore </span>
+					<span class="scholarship-badge hidden md:inline-flex"> Explore </span>
 					<span class="excellence-text">"{explorePhrases[i % 3]}"</span>
 
 					<span class="separator">|</span>
 
-					<span class="marquee-courses">
+					<span class="marquee-courses hidden md:inline-flex">
 						<span class="courses-label">COURSES:</span>
 						<span class="course-cse">CSE</span> <span class="dot">•</span>
 						<span class="course-aiml">AI & ML</span> <span class="dot">•</span>
@@ -34,25 +40,28 @@
 				</span>
 			{/each}
 		</div>
+		
 		<!-- Duplicate set for seamless scrolling -->
 		<div class="marquee-content">
 			{#each Array(6) as _, i}
 				<span class="marquee-item">
-					<span class="separator">|</span>
-
-					<span class="new-badge">NEW</span>
-					<span class="marquee-admissions"
-						>Admissions Open for B.Tech, M.Tech, MCA & Diploma (2026)</span
-					>
+					<span class="scholarship-badge mobile-focused"> SCHOLARSHIPS </span>
+					<span class="marquee-admissions">100+ Merit Scholarships Available for Batch 2026</span>
 					<a href="/application-form" class="apply-link">Click here</a>
+					
+					<span class="separator hidden md:inline">|</span>
+					
+					<span class="new-badge hidden md:inline-flex">NEW</span>
+					<span class="marquee-admissions hidden md:inline">Admissions Open for B.Tech, M.Tech (2026)</span>
+					<a href="/department/Department%20of%20CSE" class="apply-link hidden md:inline">Click here</a>
 
 					<span class="separator">|</span>
-					<span class="scholarship-badge"> Explore </span>
+					<span class="scholarship-badge hidden md:inline-flex"> Explore </span>
 					<span class="excellence-text">"{explorePhrases[i % 3]}"</span>
 
 					<span class="separator">|</span>
 
-					<span class="marquee-courses">
+					<span class="marquee-courses hidden md:inline-flex">
 						<span class="courses-label">COURSES:</span>
 						<span class="course-cse">CSE</span> <span class="dot">•</span>
 						<span class="course-aiml">AI & ML</span> <span class="dot">•</span>
@@ -115,16 +124,15 @@
 	}
 
 	.scholarship-badge {
-		background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+		background: #1d4ed8;
 		color: #ffffff;
-		padding: 2px 10px;
-		border-radius: 6px;
-		font-size: 11px;
+		padding: 4px 12px;
+		border-radius: 4px;
+		font-size: 10px;
 		font-weight: 800;
 		margin-right: 12px;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
 		flex-shrink: 0;
 	}
 
@@ -224,9 +232,10 @@
 	.marquee-admissions {
 		color: #ffffff;
 		font-size: 13px;
-		font-weight: 700;
-		letter-spacing: 0.01em;
+		font-weight: 800; /* Bolder for brightness */
+		letter-spacing: 0.02em;
 		font-family: 'Outfit', sans-serif;
+		text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 	}
 
 	.apply-link {
@@ -322,20 +331,32 @@
 	}
 
 	@media (max-width: 768px) {
+		.marquee-container {
+			padding: 10px 0;
+			background: #1e293b;
+		}
 		.marquee-item {
 			padding-right: 1.5rem;
 		}
+		.scholarship-badge {
+			font-size: 9px;
+			padding: 3px 10px;
+		}
 		.marquee-admissions {
-			font-size: 12px;
+			font-size: 11px;
+			font-weight: 600;
 		}
 		.marquee-courses {
-			font-size: 11px;
+			font-size: 10px;
 		}
 		.separator {
 			margin: 0 1rem;
 		}
 		.dot {
 			margin: 0 0.4rem;
+		}
+		.new-badge {
+			display: none;
 		}
 	}
 </style>
