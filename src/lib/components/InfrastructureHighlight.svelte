@@ -79,12 +79,12 @@
 
 				<!-- Heading Group -->
 				<div class="space-y-2">
-					<h2 class="font-sans text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+					<h2 class="font-sans text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
 						Built for <br />
 						<span class="text-[#1F6F8B]">Innovation</span>
 					</h2>
 					<div class="inline-block rounded-lg bg-[#1F6F8B]/10 px-3 py-1">
-						<p class="text-sm font-semibold text-[#1F6F8B] sm:text-lg">
+						<p class="text-xs font-semibold text-[#1F6F8B] sm:text-base md:text-lg">
 							A Hub for Academic Excellence
 						</p>
 					</div>
@@ -135,16 +135,16 @@
 					: 'opacity-0 translate-x-12 pointer-events-none'} h-full justify-center"
 			>
 				<!-- Stats Grid -->
-				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+				<div class="grid grid-cols-2 gap-3 sm:gap-4">
 					{#each stats as stat}
 						<div
-							class="group relative flex flex-col items-start justify-center rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+							class="group relative flex flex-col items-start justify-center rounded-2xl bg-white p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
 						>
-							<div class="text-2xl mb-2">{stat.icon}</div>
-							<p class="text-2xl font-bold tracking-tight {stat.color} sm:text-3xl">
+							<div class="text-xl sm:text-2xl mb-1 sm:mb-2">{stat.icon}</div>
+							<p class="text-lg font-bold tracking-tight {stat.color} sm:text-2xl md:text-3xl">
 								{stat.value}
 							</p>
-							<p class="mt-1 text-[11px] capitalize font-bold tracking-normal text-slate-600">
+							<p class="mt-0.5 text-[8px] sm:text-[11px] capitalize font-bold tracking-normal text-slate-600">
 								{stat.label}
 							</p>
 						</div>
