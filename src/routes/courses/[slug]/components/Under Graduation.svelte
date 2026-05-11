@@ -400,22 +400,56 @@
 	@media (max-width: 1024px) {
 		.intro-layout {
 			grid-template-columns: 1fr;
-			gap: 2rem;
+			gap: 2.5rem;
 		}
+		
+		.intro-media {
+			order: 1;
+		}
+		
 		.intro-copy {
-			padding: 2rem;
+			order: 2;
+			padding: 2.5rem 1.5rem;
+			text-align: center;
+		}
+
+		.intro-copy h2 {
+			font-size: 1.75rem;
+		}
+
+		.intro-copy p {
+			font-size: 0.95rem;
 		}
 	}
 
 	@media (max-width: 640px) {
 		.undergrad-shell {
-			padding: 1rem;
+			padding: 1.5rem 1rem;
+			border-radius: 1.5rem;
 		}
+		
+		.hero-title {
+			font-size: 2rem;
+			text-align: center;
+		}
+
+		.hero-tag {
+			font-size: 1rem;
+			margin-bottom: 2.5rem;
+		}
+
 		.dept-grid {
 			grid-template-columns: 1fr;
+			gap: 1.5rem;
 		}
-		.hero-title {
-			font-size: 2.25rem;
+
+		.dept-card {
+			padding: 1.5rem;
+			min-height: auto;
+		}
+
+		.dept-name {
+			font-size: 1.25rem;
 		}
 	}
 </style>

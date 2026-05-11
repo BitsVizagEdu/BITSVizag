@@ -300,7 +300,7 @@
 	@media (max-width: 1023px) {
 		.about-grid {
 			grid-template-columns: 1fr;
-			gap: 1.05rem;
+			gap: 2rem;
 		}
 
 		.about-grid.media-first .about-copy,
@@ -310,44 +310,81 @@
 
 		.about-copy {
 			max-width: none;
-			text-align: left;
+			text-align: center;
+			order: 2;
+			padding: 0 0.5rem;
 		}
 
 		.about-eyebrow,
 		.about-title,
 		.about-section h2 {
-			text-align: left;
+			text-align: center;
 		}
 
 		.about-media-wrap {
 			position: static;
-			order: 2;
-			justify-content: flex-start;
+			order: 1;
+			justify-content: center;
+			width: 100%;
 		}
 
-		.about-copy {
-			order: 1;
+		.about-media {
+			margin: 0 auto;
+			width: min(400px, 90vw);
+			box-shadow: 0 12px 28px -10px rgba(15, 23, 42, 0.2);
+		}
+
+		.about-paragraph {
+			text-align: center;
+			font-size: 0.92rem;
+			margin-bottom: 1.2rem;
+		}
+
+		.about-section {
+			margin-top: 1.8rem;
+		}
+
+		.about-section p {
+			text-align: center;
+			font-size: 0.9rem;
+		}
+
+		.about-section ul {
+			text-align: left;
+			display: inline-block;
+			margin: 1rem auto 0;
+			max-width: 90%;
 		}
 	}
 
 	@media (max-width: 640px) {
 		.about-showcase {
-			padding-top: 0.5rem;
+			padding-top: 1rem;
 		}
 
 		.about-title {
-			font-size: clamp(1.4rem, 6.8vw, 1.85rem);
+			font-size: 1.75rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.about-eyebrow {
+			font-size: 0.65rem;
+			margin-bottom: 0.4rem;
 		}
 
 		.about-paragraph,
 		.about-section p,
 		.about-section li {
-			font-size: 0.92rem;
-			line-height: 1.66;
+			font-size: 0.88rem;
+			line-height: 1.6;
 		}
 
 		.about-media {
-			width: min(320px, 100%);
+			width: min(340px, 92vw);
+		}
+		
+		.parallax-viewport {
+			aspect-ratio: 1 / 1; /* More compact for mobile */
 		}
 	}
 </style>

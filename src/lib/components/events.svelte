@@ -316,7 +316,7 @@
 	}
 </script>
 
-<section class="max-w-7xl mx-auto px-6 py-24 bg-white">
+<section class="max-w-7xl mx-auto px-6 py-24 bg-white performance-layer">
 	<!-- ✅ REFINED CLEAN HEADER -->
 	<div class="max-w-2xl mb-12" data-aos="fade-up">
 		<h2 class="text-2xl md:text-4xl font-semibold tracking-tight text-slate-900/90">
@@ -336,12 +336,12 @@
 	</div>
 
 	<!-- 🔧 2. CLEAN PREMIUM GRID (Weighted for Right-side impact) -->
-	<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+	<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start grid-isolate">
 		<!-- 🎯 3. EVENT LIST (5 Columns) -->
 		<div class="lg:col-span-5 flex flex-col gap-8">
 			{#each events.slice(0, 5) as event, i}
 				<div
-					class="flex gap-5 items-start group cursor-pointer"
+					class="flex gap-5 items-start group cursor-pointer will-change-transform"
 					data-aos="fade-up"
 					data-aos-delay={i * 80}
 				>
@@ -349,7 +349,8 @@
 					<a
 						href={event.href}
 						target="_blank"
-						class="w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden flex-shrink-0 shadow-md bg-slate-50 border border-slate-100 block"
+						rel="noopener noreferrer"
+						class="w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden flex-shrink-0 shadow-md bg-slate-50 border border-slate-100 block gpu-card"
 					>
 						<img
 							src={event.image}
@@ -361,7 +362,7 @@
 
 					<!-- Content Area -->
 					<div class="flex-1 pt-0.5">
-						<a href={event.href} target="_blank" class="block group/title">
+						<a href={event.href} target="_blank" rel="noopener noreferrer" class="block group/title">
 							<h3
 								class="text-lg font-semibold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight mb-2"
 							>
@@ -425,6 +426,7 @@
 					<a
 						href="https://www.instagram.com/bits_vizag_official/"
 						target="_blank"
+						rel="noopener noreferrer"
 						class="inline-flex items-center gap-4 bg-white text-slate-950 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-rose-500 transition-colors shadow-lg group/ig"
 					>
 						Follow @bitsvizag
@@ -496,6 +498,25 @@
 			0 15px 35px rgba(0, 0, 0, 0.2),
 			0 6px 15px rgba(0, 0, 0, 0.15);
 		transform: translateY(-2px);
+	}
+
+	.performance-layer {
+		content-visibility: auto;
+		contain-intrinsic-size: 800px;
+		transform: translateZ(0);
+	}
+
+	.grid-isolate {
+		contain: content;
+	}
+
+	.gpu-card {
+		transform: translate3d(0,0,0);
+		backface-visibility: hidden;
+	}
+
+	.will-change-transform {
+		will-change: transform, opacity;
 	}
 
 	/* Mobile image styling */

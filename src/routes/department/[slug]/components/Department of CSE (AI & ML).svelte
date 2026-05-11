@@ -85,6 +85,13 @@
 			skills: ['NLTK', 'BERT', 'Text Analytics', 'Word Embeddings'],
 			icon: 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z',
 			color: '#ef4444'
+		},
+		{
+			role: 'AI Architect',
+			description: 'Designing end-to-end AI systems, infrastructure, and scalable deployment pipelines.',
+			skills: ['MLES', 'Docker/K8s', 'Cloud AI', 'System Design'],
+			icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+			color: '#0d9488'
 		}
 	];
 
@@ -531,6 +538,7 @@
 									<img
 										src={img}
 										alt="Dept View {i}"
+										loading="lazy"
 										in:fade={{ duration: 800 }}
 										out:fade={{ duration: 800 }}
 									/>
@@ -853,13 +861,21 @@
 				<div class="insight-block roadmap">
 					<h3 class="satoshi">AI Specialist Roadmap</h3>
 					<div class="roadmap-timeline">
-						{#each focusRoadmap as step}
-							<div class="roadmap-item">
-								<div class="year-label satoshi">{step.year}</div>
-								<div class="goals-list inter">
-									{#each step.goals as goal}
-										<span>{goal}</span>
-									{/each}
+						{#each focusRoadmap as step, i}
+							<div class="roadmap-item" in:fly={{ x: -20, duration: 600, delay: i * 150 }}>
+								<div class="timeline-connector">
+									<div class="glow-dot" style="background: {activeTabColor}"></div>
+									{#if i < focusRoadmap.length - 1}
+										<div class="line"></div>
+									{/if}
+								</div>
+								<div class="roadmap-card">
+									<div class="year-badge satoshi" style="color: {activeTabColor}">{step.year}</div>
+									<div class="goals-list inter">
+										{#each step.goals as goal}
+											<span class="goal-chip">{goal}</span>
+										{/each}
+									</div>
 								</div>
 							</div>
 						{/each}
@@ -1027,35 +1043,56 @@
 			</div>
 		</section>
 
-		<!-- HOD Message -->
-		<section id="hod" class="dept-section-card hod-premium-card" style="--section-accent: #db2777">
-			<div class="hod-container">
-				<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
-					<div class="hod-image-glow"></div>
-					<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" />
-					<div class="hod-badge satoshi">22+ Years Exp</div>
-				</div>
-				<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
-					<div class="quote-icon">
-						<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
-							<path
-								d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
-							></path>
-						</svg>
+		<!-- HOD Profile & Message - Redesigned Premium Layout -->
+		<section id="hod" class="dept-section-card hod-premium-section">
+			<div class="hod-profile-grid">
+				<!-- Profile Visual -->
+				<div class="hod-visual-side" in:fly={{ x: -30, duration: 800 }}>
+					<div class="visual-container">
+						<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" loading="lazy" class="hod-main-img" />
+						<div class="visual-decor">
+							<div class="experience-badge satoshi">
+								<span class="num">22+</span>
+								<span class="label">Years of<br/>Excellence</span>
+							</div>
+						</div>
 					</div>
-					<span class="hod-eyebrow satoshi">MESSAGE FROM THE HOD</span>
-					<h2 class="satoshi">Prof. S. Durga Prasad</h2>
-					<p class="hod-designation inter">
-						Head of Department | CSE — Artificial Intelligence & ML
-					</p>
-					<div class="hod-message-body">
-						<p class="inter">
-							"Welcome to the AI & ML specialisation at BITS Vizag. This program is designed to
-							equip students with advanced expertise in Artificial Intelligence and Machine
-							Learning, blending theory with intensive laboratory work to drive technological
-							innovation."
-						</p>
-						<p class="inter signature">Prof. S. Durga Prasad</p>
+				</div>
+
+				<!-- Message Side -->
+				<div class="hod-message-side" in:fly={{ x: 30, duration: 800 }}>
+					<div class="message-card">
+						<div class="quote-mark">“</div>
+						<header class="message-header">
+							<h3 class="satoshi">Prof. S. Durga Prasad</h3>
+							<p class="inter role">Head of Department | CSE (AI & ML)</p>
+						</header>
+						
+						<div class="message-content">
+							<p class="inter">
+								Welcome to the AI & ML specialisation at BITS Vizag. Our department is dedicated 
+								to nurturing technical leadership and pioneering research in intelligent systems. 
+								We blend rigorous mathematical foundations with cutting-edge engineering 
+								practices to prepare our students for the global AI landscape.
+							</p>
+						</div>
+
+						<footer class="message-footer">
+							<div class="signature-wrap">
+								<p class="signature-text satoshi">S. Durga Prasad</p>
+								<div class="signature-line"></div>
+							</div>
+							<div class="hod-stats">
+								<div class="stat-item">
+									<span class="stat-val">50+</span>
+									<span class="stat-label">Papers</span>
+								</div>
+								<div class="stat-item">
+									<span class="stat-val">15+</span>
+									<span class="stat-label">Projects</span>
+								</div>
+							</div>
+						</footer>
 					</div>
 				</div>
 			</div>
@@ -2085,54 +2122,75 @@
 		border-radius: 28px;
 		padding: 32px;
 		border: 1px solid #f1f5f9;
-		transition: all 0.4s;
+		background: white;
+		padding: 32px;
+		border-radius: 32px;
+		border: 1px solid #f1f5f9;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
 	}
 
 	.job-card:hover {
-		background: white;
 		transform: translateY(-8px);
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+		border-color: var(--icon-bg);
+		background: linear-gradient(180deg, white 0%, #f8fafc 100%);
 	}
 
 	.job-icon-wrap {
-		width: 48px;
-		height: 48px;
-		border-radius: 14px;
+		width: 52px;
+		height: 52px;
+		border-radius: 16px;
 		background: var(--icon-bg);
 		color: white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
+		box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.1);
 	}
 
 	.job-details h4 {
-		font-size: 1.15rem;
+		font-size: 1.25rem;
 		font-weight: 800;
 		color: #0f172a;
 		margin-bottom: 8px;
+		letter-spacing: -0.02em;
 	}
 
 	.job-details p {
-		font-size: 0.85rem;
+		font-size: 0.9rem;
 		color: #64748b;
-		margin-bottom: 16px;
+		margin-bottom: 20px;
+		line-height: 1.6;
 	}
 
 	.job-skills {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 6px;
+		gap: 8px;
+		margin-top: auto;
 	}
 
 	.skill-tag {
-		padding: 4px 10px;
-		background: white;
-		border: 1px solid #e2e8f0;
-		border-radius: 8px;
+		padding: 6px 12px;
+		background: #f1f5f9;
+		border-radius: 10px;
 		font-size: 0.7rem;
-		font-weight: 700;
+		font-weight: 800;
 		color: #475569;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		transition: all 0.3s;
+	}
+
+	.job-card:hover .skill-tag {
+		background: white;
+		color: var(--icon-bg);
 	}
 
 	/* Roadmap Timeline */
@@ -2279,18 +2337,71 @@
 		font-size: 1.1rem;
 	}
 
-	.roadmap-item {
-		display: grid;
-		grid-template-columns: 100px 1fr;
-		gap: 20px;
-		margin-bottom: 24px;
+	.roadmap-timeline {
+		position: relative;
+		margin-top: 32px;
 	}
 
-	.year-label {
+	.roadmap-item {
+		display: flex;
+		gap: 24px;
+		margin-bottom: 24px;
+		position: relative;
+	}
+
+	.timeline-connector {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		width: 12px;
+		flex-shrink: 0;
+	}
+
+	.glow-dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		z-index: 2;
+		box-shadow: 0 0 10px var(--section-accent);
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4); }
+		70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(13, 148, 136, 0); }
+		100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+	}
+
+	.timeline-connector .line {
+		position: absolute;
+		top: 12px;
+		bottom: -24px;
+		width: 2px;
+		background: linear-gradient(180deg, var(--section-accent), #e2e8f0);
+		z-index: 1;
+	}
+
+	.roadmap-card {
+		background: white;
+		padding: 20px;
+		border-radius: 18px;
+		border: 1px solid #f1f5f9;
+		flex: 1;
+		transition: all 0.3s ease;
+	}
+
+	.roadmap-card:hover {
+		transform: translateX(8px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+	}
+
+	.year-badge {
 		font-size: 0.75rem;
 		font-weight: 900;
-		color: #0d9488;
 		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 12px;
 	}
 
 	.goals-list {
@@ -2299,44 +2410,252 @@
 		gap: 8px;
 	}
 
-	.goals-list span {
-		background: white;
-		padding: 6px 12px;
-		border-radius: 10px;
+	.goal-chip {
+		background: #f8fafc;
+		padding: 6px 14px;
+		border-radius: 100px;
 		font-size: 0.8rem;
-		font-weight: 600;
+		font-weight: 700;
+		color: #334155;
+		border: 1px solid #f1f5f9;
+		transition: all 0.3s;
+	}
+
+	.goal-chip:hover {
+		background: #f0fdfa;
+		border-color: #5eead4;
+		color: #0d9488;
+	}
+
+	/* Resources Hub - Minimal & Neat */
+	.resources-hub {
+		margin-top: 32px;
+		background: #f8fafc;
+		border-radius: 24px;
+		padding: 24px;
 		border: 1px solid #e2e8f0;
 	}
 
-	/* Resources Hub */
-	.resources-hub {
-		margin-top: 48px;
-		background: #0f172a;
-		border-radius: 32px;
-		padding: 40px;
-		color: white;
+	.hub-header {
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	.hub-header h3 {
+		font-size: 1.1rem;
+		font-weight: 800;
+		color: #0f172a;
+	}
+
+	.hub-header p {
+		font-size: 0.8rem;
+		color: #64748b;
 	}
 
 	.hub-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 24px;
+	}
+
+	.hub-cat h4 {
+		font-size: 0.7rem;
+		font-weight: 900;
+		color: #94a3b8;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 12px;
+	}
+
+	.link-list {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
 	}
 
 	.resource-link {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		gap: 8px;
 		text-decoration: none;
-		color: #cbd5e1;
-		font-size: 0.9rem;
-		margin-bottom: 12px;
-		transition: 0.3s;
+		color: #475569;
+		font-size: 0.85rem;
+		font-weight: 600;
+		transition: 0.2s;
+		padding: 4px 0;
+	}
+
+	.resource-link svg {
+		opacity: 0.5;
 	}
 
 	.resource-link:hover {
+		color: #0d9488;
+		transform: translateX(3px);
+	}
+
+	/* HOD Premium Redesign */
+	.hod-profile-grid {
+		display: grid;
+		grid-template-columns: 380px 1fr;
+		gap: 60px;
+		align-items: center;
+		padding: 40px 0;
+	}
+
+	.hod-visual-side {
+		position: relative;
+	}
+
+	.visual-container {
+		position: relative;
+		border-radius: 40px;
+		overflow: hidden;
+		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	.hod-main-img {
+		width: 100%;
+		height: 480px;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+	}
+
+	.visual-container:hover .hod-main-img {
+		transform: scale(1.05);
+	}
+
+	.experience-badge {
+		position: absolute;
+		bottom: 30px;
+		right: -20px;
+		background: var(--section-accent);
 		color: white;
-		transform: translateX(5px);
+		padding: 20px;
+		border-radius: 24px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.experience-badge .num {
+		font-size: 2rem;
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	.experience-badge .label {
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-top: 4px;
+	}
+
+	.hod-message-side {
+		position: relative;
+	}
+
+	.message-card {
+		background: white;
+		padding: 60px;
+		border-radius: 40px;
+		border: 1px solid #f1f5f9;
+		position: relative;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
+	}
+
+	.quote-mark {
+		position: absolute;
+		top: 20px;
+		left: 40px;
+		font-size: 12rem;
+		font-family: serif;
+		color: var(--section-accent);
+		opacity: 0.05;
+		line-height: 1;
+	}
+
+	.message-header h3 {
+		font-size: 2rem;
+		font-weight: 900;
+		color: #0f172a;
+		margin-bottom: 4px;
+	}
+
+	.message-header .role {
+		font-size: 1rem;
+		color: var(--section-accent);
+		font-weight: 700;
+		margin-bottom: 32px;
+	}
+
+	.message-content p {
+		font-size: 1.15rem;
+		line-height: 1.8;
+		color: #475569;
+		font-style: italic;
+		margin-bottom: 40px;
+	}
+
+	.message-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		border-top: 1px solid #f1f5f9;
+		padding-top: 32px;
+	}
+
+	.signature-text {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #0f172a;
+		margin-bottom: 8px;
+	}
+
+	.signature-line {
+		width: 60px;
+		height: 3px;
+		background: var(--section-accent);
+		border-radius: 2px;
+	}
+
+	.hod-stats {
+		display: flex;
+		gap: 32px;
+	}
+
+	.stat-item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.stat-val {
+		font-size: 1.5rem;
+		font-weight: 900;
+		color: #0f172a;
+	}
+
+	.stat-label {
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: #64748b;
+		text-transform: uppercase;
+	}
+
+	@media (max-width: 1200px) {
+		.hod-profile-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+		.hod-main-img {
+			height: 400px;
+		}
+		.message-card {
+			padding: 40px;
+		}
 	}
 
 	/* Faculty Table */
@@ -2418,34 +2737,915 @@
 		font-size: 0.9rem;
 	}
 
-	/* Scrollbar Hide */
+	@media (max-width: 1200px) {
+		.main-content-layout {
+			grid-template-columns: 1fr;
+			padding: 0 16px 60px;
+		}
+		.side-nav-container {
+			position: static;
+			height: auto;
+			margin-bottom: 32px;
+		}
+		.side-nav-list {
+			flex-direction: row;
+			overflow-x: auto;
+			padding-bottom: 10px;
+		}
+		.side-nav-btn {
+			white-space: nowrap;
+		}
+		.header-hero {
+			margin-bottom: -40px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.main-content-layout {
+			padding: 0 12px 40px;
+			display: block;
+			margin-top: -30px;
+		}
+
+		.side-nav-container {
+			display: none;
+		}
+
+		.dept-section-card {
+			padding: 24px 16px !important;
+			border-radius: 20px;
+			text-align: center;
+			margin-bottom: 32px;
+			overflow: hidden;
+		}
+
+		.section-top {
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+		}
+
+		.section-title-wrap h2 {
+			font-size: 1.55rem;
+			font-weight: 700;
+			letter-spacing: -0.015em;
+			line-height: 1.2;
+		}
+
+		.section-underline {
+			width: 56px;
+			height: 3px;
+			margin: 10px auto 0;
+			background: linear-gradient(90deg, var(--section-accent), #1e293b);
+		}
+
+		.intake-group {
+			justify-content: center;
+			flex-wrap: nowrap;
+			gap: 8px;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		.intake-badge {
+			padding: 6px 10px;
+			font-size: 0.75rem;
+			flex: 1;
+			justify-content: center;
+			white-space: nowrap;
+		}
+
+		/* About Section Mobile - Compact & Neat */
+		.about-grid-content {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.about-text-side {
+			order: 2;
+			text-align: center;
+		}
+
+		.main-para {
+			font-size: 0.95rem;
+			margin-bottom: 12px;
+			line-height: 1.5;
+		}
+
+		.sub-para {
+			font-size: 0.85rem;
+			text-align: center;
+			line-height: 1.6;
+		}
+
+		.about-visual-side {
+			order: 1;
+			width: 100%;
+		}
+
+		.visual-slideshow {
+			height: 180px;
+			border-radius: 16px;
+		}
+
+		/* Vision & Mission Mobile - Ultra-Minimal */
+		.vm-premium-section {
+			margin-top: 0 !important;
+			padding: 24px 12px !important;
+		}
+
+		.vm-icon-badge {
+			display: none;
+		}
+
+		.vm-title-row {
+			flex-direction: column;
+			gap: 8px;
+			text-align: center;
+			align-items: center;
+		}
+
+		.vm-tabs-nav {
+			justify-content: flex-start;
+			padding: 4px 0 12px;
+			margin: 12px 0;
+			gap: 8px;
+		}
+
+		.vm-tab-btn {
+			padding: 6px 14px;
+			font-size: 0.75rem;
+		}
+
+		.vision-quote {
+			font-size: 1.05rem;
+			padding: 24px 16px;
+			border-radius: 20px;
+			max-width: 100%;
+			line-height: 1.5;
+		}
+
+		.mission-panel .panel-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.m-card {
+			padding: 12px 14px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			border-radius: 12px;
+		}
+
+		.m-card h4 {
+			font-size: 0.85rem;
+			margin-bottom: 4px;
+		}
+
+		.m-card p {
+			font-size: 0.8rem;
+		}
+
+		.peos-panel .panel-list {
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		.peo-item {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			gap: 8px;
+		}
+
+		.peo-dot {
+			display: none;
+		}
+
+		.peo-id {
+			font-size: 0.75rem;
+			color: var(--section-accent);
+			font-weight: 800;
+			min-width: 32px;
+		}
+
+		.peo-content p {
+			font-size: 0.8rem;
+		}
+
+		.psos-panel .panel-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.pso-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			gap: 8px;
+		}
+
+		.pso-icon {
+			display: none;
+		}
+
+		.pso-id {
+			font-size: 0.75rem;
+			color: var(--section-accent);
+			font-weight: 800;
+			min-width: 36px;
+		}
+
+		.pso-text p {
+			font-size: 0.8rem;
+		}
+
+		.pos-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.po-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+		}
+
+		.po-header {
+			margin-bottom: 4px;
+			gap: 10px;
+			display: flex;
+			align-items: center;
+		}
+
+		.po-card h4 {
+			font-size: 0.85rem;
+			margin: 0;
+		}
+
+		.po-card p {
+			font-size: 0.75rem;
+			line-height: 1.4;
+			color: #64748b;
+		}
+
+		.k-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.k-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			border-top-width: 3px;
+		}
+
+		.k-card h4 {
+			font-size: 0.85rem;
+			margin-bottom: 4px;
+		}
+
+		.k-card p {
+			font-size: 0.8rem;
+		}
+
+		.sdg-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.sdg-card {
+			padding: 10px 12px;
+			gap: 12px;
+			border-radius: 12px;
+			border-left-width: 4px;
+		}
+
+		.sdg-num {
+			font-size: 1rem;
+		}
+
+		.sdg-content h4 {
+			font-size: 0.85rem;
+			margin-bottom: 2px;
+		}
+
+		.sdg-content p {
+			font-size: 0.75rem;
+		}
+
+		/* Labs Section Mobile - Clean Viewport */
+		.labs-interactive-grid {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.labs-nav-sidebar {
+			flex-direction: row;
+			overflow-x: auto;
+			padding: 4px 0 12px;
+			gap: 10px;
+			border-bottom: 1px solid #f1f5f9;
+			margin-bottom: 8px;
+		}
+
+		.lab-nav-item {
+			min-width: 130px;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 12px 8px;
+			gap: 8px;
+			border-radius: 16px;
+		}
+
+		.lab-nav-item .nav-icon {
+			padding: 8px;
+			border-radius: 10px;
+		}
+
+		.cat-name {
+			font-size: 0.8rem;
+		}
+
+		.cat-count {
+			font-size: 0.65rem;
+		}
+
+		.labs-display-pane {
+			padding: 24px 16px;
+			border-radius: 24px;
+			text-align: center;
+		}
+
+		.display-header h3 {
+			font-size: 1.3rem;
+			margin-bottom: 8px;
+		}
+
+		.display-header p {
+			font-size: 0.85rem;
+			line-height: 1.5;
+			margin: 0 auto;
+		}
+
+		.lab-item-card {
+			padding: 12px 16px;
+			border-radius: 14px;
+			gap: 12px;
+		}
+
+		.lab-name {
+			font-size: 0.85rem;
+			text-align: left;
+		}
+
+		/* Jobs & Careers Mobile - Compact Grid */
+		.jobs-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+		}
+
+		.job-card {
+			padding: 16px 12px;
+			gap: 10px;
+			border-radius: 16px;
+		}
+
+		.job-icon-wrap {
+			width: 36px;
+			height: 36px;
+			margin-bottom: 4px;
+			border-radius: 10px;
+		}
+
+		.job-icon-wrap svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.job-details h4 {
+			font-size: 0.9rem;
+			margin-bottom: 4px;
+		}
+
+		.job-details p {
+			font-size: 0.7rem;
+			margin-bottom: 10px;
+			line-height: 1.4;
+		}
+
+		.job-skills {
+			gap: 4px;
+		}
+
+		.skill-tag {
+			font-size: 0.6rem;
+			padding: 2px 6px;
+			border-radius: 6px;
+		}
+
+		.career-insights-grid {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.insight-block {
+			padding: 20px 16px;
+		}
+
+		/* HOD Section Mobile - Minimal & Compact */
+		.hod-container {
+			grid-template-columns: 1fr;
+		}
+
+		.hod-visual {
+			height: 180px;
+			order: 1;
+		}
+
+		.hod-content {
+			padding: 24px 16px;
+			order: 2;
+			text-align: center;
+			align-items: center;
+		}
+
+		.quote-icon {
+			margin-bottom: 12px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.quote-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		.hod-content h2 {
+			font-size: 1.5rem;
+			margin-top: 4px;
+		}
+
+		.hod-designation {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+		}
+
+		.hod-message-body p {
+			font-size: 0.95rem;
+			max-width: 100%;
+			line-height: 1.5;
+		}
+
+		.hod-badge {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 4px 10px;
+			font-size: 0.7rem;
+		}
+
+		/* Faculty Table Mobile - Neat Table View (Mirrors CSE Dept) */
+		.faculty-table-section {
+			padding: 24px 12px !important;
+		}
+
+		.table-controls-row {
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.search-box {
+			width: 100%;
+			max-width: 320px;
+		}
+
+		.premium-table-viewport {
+			border: 1px solid #e2e8f0;
+			border-radius: 20px;
+			overflow-x: auto; /* Allow horizontal scroll for table items on mobile */
+		}
+
+		.faculty-main-table {
+			display: table;
+			width: 100%;
+			min-width: 600px; /* Force minimum width for horizontal scroll */
+		}
+
+		.faculty-main-table thead {
+			display: table-header-group;
+		}
+
+		.faculty-main-table tr {
+			display: table-row !important;
+		}
+
+		.faculty-main-table th,
+		.faculty-main-table td {
+			display: table-cell !important;
+			padding: 12px 10px !important;
+			font-size: 0.75rem !important;
+			white-space: nowrap;
+		}
+
+		.col-sno, .td-sno {
+			display: none !important; /* Hide S.NO for more space */
+		}
+
+		.mobile-link {
+			color: #0d9488 !important;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+
+		/* Resource Hub - Minimal Height Fix */
+		.resources-hub {
+			background: #f8fafc;
+			padding: 24px 20px;
+			border-radius: 20px;
+			border: 1px solid #e2e8f0;
+			text-align: left;
+			margin-top: 24px;
+		}
+
+		.hub-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+			text-align: left;
+		}
+
+		.hub-cat h4 {
+			font-size: 0.65rem;
+			color: #94a3b8;
+			margin-bottom: 8px;
+		}
+
+		.link-list {
+			align-items: flex-start;
+			gap: 4px;
+		}
+
+		.resource-link {
+			background: transparent;
+			padding: 4px 0;
+			border: none;
+			width: auto;
+			justify-content: flex-start;
+			font-size: 0.8rem;
+			color: #475569;
+		}
+
+		.resource-link svg {
+			display: none;
+		}
+
+		/* HOD Section Fix */
+		.hod-profile-grid {
+			grid-template-columns: 1fr;
+			gap: 0;
+			padding: 0;
+		}
+		
+		.hod-visual-side {
+			width: 100%;
+		}
+
+		.hod-main-img {
+			height: 320px;
+			border-radius: 24px 24px 0 0;
+		}
+
+		.experience-badge {
+			padding: 12px;
+			bottom: 40px;
+			right: 10px;
+			border-radius: 16px;
+		}
+
+		.experience-badge .num {
+			font-size: 1.5rem;
+		}
+
+		.experience-badge .label {
+			font-size: 0.6rem;
+		}
+		
+		.hod-message-side {
+			margin-top: -32px;
+			width: 100%;
+		}
+
+		.message-card {
+			padding: 32px 20px;
+			border-radius: 24px;
+			text-align: center;
+		}
+
+		.quote-mark {
+			font-size: 8rem;
+			top: 0;
+			left: 20px;
+		}
+
+		.message-header h3 {
+			font-size: 1.5rem;
+		}
+
+		.message-header .role {
+			font-size: 0.85rem;
+			margin-bottom: 20px;
+		}
+
+		.message-content p {
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-bottom: 24px;
+		}
+
+		.message-footer {
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			padding-top: 24px;
+		}
+
+		.signature-text {
+			font-size: 1.2rem;
+		}
+
+		.hod-stats {
+			gap: 24px;
+		}
+
+		.stat-val {
+			font-size: 1.25rem;
+		}
+
+		/* Contact Us - Smaller View */
+		.contact-action-grid {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+
+		.contact-tile {
+			padding: 14px 18px;
+			gap: 12px;
+			border-radius: 16px;
+			flex-direction: row;
+			align-items: center;
+			text-align: left;
+		}
+
+		.tile-icon {
+			width: 36px;
+			height: 36px;
+			padding: 8px;
+			flex-shrink: 0;
+		}
+
+		.tile-content {
+			flex: 1;
+		}
+
+		.tile-content .label {
+			font-size: 0.7rem;
+			margin-bottom: 1px;
+		}
+
+		.tile-content .value {
+			font-size: 0.85rem;
+		}
+
+		.tile-link {
+			padding: 6px 12px;
+			font-size: 0.75rem;
+			border-radius: 8px;
+		}
+
+		/* Hero Adjustments - Minimal & Neat */
+		.header-hero {
+			height: 200px;
+			margin-bottom: 10px;
+			padding-bottom: 40px;
+		}
+
+		.header-content h1 {
+			font-size: 1.35rem;
+			line-height: 1.25;
+			white-space: normal;
+			text-align: center;
+			max-width: 280px;
+		}
+
+		.welcome-text {
+			font-size: 0.65rem;
+			gap: 1px;
+			margin-bottom: 8px;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 90vw;
+		}
+
+		.welcome-text .animated-char {
+			letter-spacing: 0.15em;
+			font-size: 0.7rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-hero {
+			height: 180px;
+		}
+		.dept-section-card {
+			padding: 20px 12px !important;
+		}
+		.vision-quote {
+			font-size: 1rem;
+		}
+	}
+
+	/* =============================================
+	   WHOLE PAGE PRINT - Premium Brochure Standard
+	   ============================================= */
+	@media print {
+		:global(body) {
+			background: #f8fafc !important;
+			margin: 0;
+			padding: 0;
+			-webkit-print-color-adjust: exact !important;
+			print-color-adjust: exact !important;
+		}
+
+		.dept-premium-root {
+			background: #f8fafc !important;
+			padding: 0 !important;
+		}
+
+		.main-content-layout {
+			margin: 0 !important;
+			padding: 0 !important;
+			display: block !important;
+			width: 100% !important;
+		}
+
+		/* Hide only global interactive UI */
+		.side-nav-container,
+		.table-controls-row,
+		.slideshow-indicators,
+		.lab-action-btn,
+		.tile-link,
+		.round-action-btn,
+		:global(nav),
+		:global(footer) {
+			display: none !important;
+		}
+
+		/* Premium Header Print View */
+		.header-hero {
+			height: 320px !important;
+			background: #0d1117 !important;
+			display: flex !important;
+			flex-direction: column !important;
+			justify-content: center !important;
+			align-items: center !important;
+			margin-bottom: 50px !important;
+			border-bottom: 8px solid #0d9488 !important;
+		}
+
+		.header-content h1 {
+			background: linear-gradient(to right, #ffffff, #2dd4bf) !important;
+			-webkit-background-clip: text !important;
+			-webkit-text-fill-color: transparent !important;
+			font-size: 3rem !important;
+			text-align: center !important;
+		}
+
+		.welcome-text span {
+			color: #5eead4 !important;
+			opacity: 1 !important;
+			transform: none !important;
+		}
+
+		/* Section Card Design */
+		.dept-section-card {
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+			border: 1px solid #e2e8f0 !important;
+			padding: 40px !important;
+			margin: 0 30px 40px 30px !important;
+			border-radius: 32px !important;
+			page-break-inside: avoid !important;
+			background: white !important;
+		}
+
+		/* Vision & Mission Print */
+		.vm-tab-btn.active {
+			background: var(--tab-color) !important;
+			color: white !important;
+		}
+
+		.vision-quote {
+			border-left: 6px solid var(--section-accent) !important;
+			background: #f0fdfa !important;
+		}
+
+		/* Roadmap & Jobs Print */
+		.roadmap-card {
+			border-left: 4px solid var(--section-accent) !important;
+			background: #f8fafc !important;
+		}
+
+		.goal-chip {
+			background: white !important;
+			border: 1px solid #e2e8f0 !important;
+			color: #0d9488 !important;
+		}
+
+		.job-card {
+			border-top: 4px solid var(--icon-bg) !important;
+			background: white !important;
+		}
+
+		.job-icon-wrap {
+			background: var(--icon-bg) !important;
+			color: white !important;
+		}
+
+		/* Faculty Table Print View */
+		.faculty-main-table {
+			width: 100% !important;
+			border-collapse: separate !important;
+			border-spacing: 0 !important;
+			border-radius: 16px !important;
+			overflow: hidden !important;
+			border: 1px solid #e2e8f0 !important;
+		}
+
+		.faculty-main-table th {
+			background: #0f172a !important;
+			color: white !important;
+			padding: 15px !important;
+			font-size: 0.8rem !important;
+			text-transform: uppercase !important;
+		}
+
+		.faculty-main-table td {
+			padding: 12px 15px !important;
+			border-bottom: 1px solid #f1f5f9 !important;
+			font-size: 0.85rem !important;
+		}
+
+		.faculty-main-table tr:nth-child(even) {
+			background: #f8fafc !important;
+		}
+
+		.name-val {
+			color: #0d9488 !important;
+			font-weight: 800 !important;
+		}
+
+		/* HOD Section Print */
+		.hod-visual-side img {
+			border-radius: 20px !important;
+		}
+
+		.experience-badge {
+			background: #0d9488 !important;
+			color: white !important;
+		}
+
+		.quote-mark {
+			opacity: 0.1 !important;
+		}
+
+		.hod-stats .stat-val {
+			color: #0d9488 !important;
+		}
+
+		/* Footer-like branding for PDF */
+		.dept-premium-root::after {
+			content: '© 2026 BABA INSTITUTE OF TECHNOLOGY AND SCIENCES (BITS VIZAG) - Department of CSE (AI & ML)';
+			display: block;
+			text-align: center;
+			font-size: 0.75rem;
+			color: #94a3b8;
+			margin-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+
+	/* Scrollbar Utilities */
 	.scrollbar-hide::-webkit-scrollbar {
 		display: none;
 	}
 	.scrollbar-hide {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
-	}
-
-	@media (max-width: 1100px) {
-		.main-content-layout {
-			grid-template-columns: 1fr;
-			margin-top: -40px;
-		}
-		.side-nav-container {
-			display: none;
-		}
-		.about-grid-content {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.dept-section-card {
-			padding: 40px 20px;
-		}
-		.career-insights-grid {
-			grid-template-columns: 1fr;
-		}
 	}
 </style>

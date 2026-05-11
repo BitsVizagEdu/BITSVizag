@@ -12,6 +12,7 @@
 	import 'aos/dist/aos.css';
 	import { showNavBar } from '$lib/stores/store.js';
 	import Footer from '$lib/components/footer.svelte';
+	import MobileHeader from '$lib/components/MobileHeader.svelte';
 
 	let aosInitialized = false;
 
@@ -178,6 +179,7 @@
 		{#if $showNavBar}
 			<Nav />
 		{:else}
+			<MobileHeader />
 			<Hero />
 			<Middlenav />
 

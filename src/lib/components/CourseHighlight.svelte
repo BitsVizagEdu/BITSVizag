@@ -126,7 +126,7 @@
 	}
 </script>
 
-<section class="max-w-7xl mx-auto px-6 py-12 bg-white overflow-hidden">
+<section class="max-w-7xl mx-auto px-6 py-12 bg-white overflow-hidden performance-layer">
 	<!-- ✅ CENTERED PREMIUM HEADER -->
 	<div class="mb-16 max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
 		<h2 class="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#1a233e] mb-4">
@@ -147,7 +147,7 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
-				class="relative rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group shadow-sm hover:shadow-xl"
+				class="relative rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group shadow-sm hover:shadow-xl will-change-flex"
 				style="flex: {active === i ? 3.5 : 1};"
 				on:mouseenter={() => handleMouseEnter(i)}
 			>
@@ -155,7 +155,7 @@
 				<img
 					src={course.image}
 					alt={course.title}
-					class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+					class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 gpu-image"
 				/>
 
 				<!-- Overlay -->
@@ -289,6 +289,23 @@
 	.no-scrollbar {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+	}
+
+	.performance-layer {
+		content-visibility: auto;
+		contain: content;
+		contain-intrinsic-size: 600px;
+		transform: translateZ(0);
+	}
+
+	.will-change-flex {
+		will-change: flex, transform;
+	}
+
+	.gpu-image {
+		transform: translate3d(0,0,0);
+		backface-visibility: hidden;
+		perspective: 1000px;
 	}
 
 	/* Smooth expansion transition handled by Svelte style binding on flex property */

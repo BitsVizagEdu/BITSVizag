@@ -408,26 +408,62 @@
 	@media (max-width: 1024px) {
 		.program-card {
 			grid-template-columns: 1fr;
-			gap: 2rem;
-			padding: 2rem;
+			gap: 2.5rem;
+			padding: 2rem 1.5rem;
+			text-align: center;
 		}
+
+		.details-header {
+			justify-content: center;
+			gap: 1.5rem;
+		}
+
 		.media-container {
-			min-height: 280px;
+			min-height: 240px;
+			max-height: 300px;
+		}
+
+		.eligibility-head {
+			justify-content: center;
 		}
 	}
 
 	@media (max-width: 640px) {
 		.postgrad-shell {
-			padding: 1rem;
+			padding: 1.5rem 1rem;
+			border-radius: 1.5rem;
 		}
+
 		.hero-title {
-			font-size: 2.25rem;
+			font-size: 2rem;
+			text-align: center;
 		}
+
+		.hero-tag {
+			font-size: 1rem;
+			margin-bottom: 2.5rem;
+		}
+
+		.section-head {
+			text-align: center;
+			margin-bottom: 2.5rem;
+		}
+
 		.program-title {
-			font-size: 1.75rem;
+			font-size: 1.5rem;
 		}
+
+		.program-desc {
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+
 		.eligibility-card {
-			padding: 1.5rem;
+			padding: 1.5rem 1.25rem;
+		}
+
+		.eligibility-card p {
+			font-size: 0.9rem;
 		}
 	}
 </style>

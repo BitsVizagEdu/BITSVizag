@@ -50,11 +50,11 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div bind:this={sectionRef} class="relative w-full overflow-hidden bg-white group">
+<div bind:this={sectionRef} class="relative w-full overflow-hidden bg-white group container-isolate">
 	<!-- Slides Container -->
 	<div 
-		class="flex transition-transform duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1)" 
-		style="transform: translateX(-{activeSlide * 100}%);"
+		class="flex transition-transform duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1) will-change-transform gpu-layer" 
+		style="transform: translate3d(-{activeSlide * 100}%, 0, 0);"
 		on:click={(e) => {
 			if (!e.target.closest('a, button')) {
 				nextSlide();
@@ -69,7 +69,7 @@
 		tabindex="0"
 	>
 		{#each slides as slide, i}
-			<div class="w-full shrink-0">
+			<div class="w-full shrink-0 slide-isolation">
 				<svelte:component this={slide.component} isActive={activeSlide === i} />
 			</div>
 		{/each}
@@ -118,5 +118,23 @@
 	/* Ensure transitions are smooth */
 	:global(.highlights-slider-active) {
 		overflow: hidden;
+	}
+
+	.container-isolate {
+		contain: content;
+	}
+
+	.will-change-transform {
+		will-change: transform;
+	}
+
+	.gpu-layer {
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000px;
+	}
+
+	.slide-isolation {
+		contain: layout paint;
 	}
 </style>

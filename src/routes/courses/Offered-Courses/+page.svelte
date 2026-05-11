@@ -553,33 +553,71 @@
 			padding: 1.5rem 1rem;
 		}
 
+		.page-header {
+			padding: 2rem 1rem;
+		}
+
 		.page-header h1 {
-			font-size: 2rem;
+			font-size: 2.25rem;
+			text-align: center;
+		}
+
+		.subtitle {
+			font-size: 1rem;
+			text-align: center;
+		}
+
+		.admission-box {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.admission-icon {
+			margin-bottom: 0.5rem;
 		}
 
 		.tabs-nav {
 			flex-wrap: nowrap;
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
+			justify-content: flex-start;
+			padding-bottom: 0.75rem;
 		}
 
 		.tab-btn {
-			padding: 0.6rem 1rem;
+			padding: 0.65rem 1.1rem;
 			font-size: 0.85rem;
 		}
 
 		.tab-content {
-			padding: 1.5rem 1rem;
+			padding: 1.5rem 0.75rem;
 		}
 
 		.section-title {
-			font-size: 1.2rem;
+			font-size: 1.25rem;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 0.5rem;
+		}
+
+		.section-title .sub-title {
+			margin-left: 0;
+			text-align: center;
 		}
 
 		.courses-table th,
 		.courses-table td {
-			padding: 0.75rem;
-			font-size: 0.85rem;
+			padding: 0.75rem 0.5rem;
+			font-size: 0.82rem;
+		}
+
+		.footer-pills {
+			padding: 0.75rem 1.25rem;
+			font-size: 0.75rem;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 
