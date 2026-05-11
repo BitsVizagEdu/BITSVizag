@@ -17,7 +17,7 @@
 	<div class="ambient two" aria-hidden="true"></div>
 
 	<div class="inner-shell">
-		<div class="heading" data-aos="fade-up">
+		<div class="heading performance-layer">
 			<p class="eyebrow">Industry Network</p>
 			<h2>
 				<span class="headline-strong">Our Recruiters</span>
@@ -91,6 +91,14 @@
 		background: rgba(153, 214, 255, 0.32);
 	}
 
+	.performance-layer {
+		content-visibility: auto;
+		contain-intrinsic-size: 500px;
+		transform: translateZ(0);
+		opacity: 1 !important;
+		visibility: visible !important;
+	}
+
 	.inner-shell {
 		position: relative;
 		z-index: 2;
@@ -123,25 +131,28 @@
 	}
 
 	.heading h2 {
-		margin: 0.75rem 0 0;
-		font-size: clamp(2rem, 4vw, 3.25rem);
-		line-height: 1.03;
+		margin: 1.2rem 0 0;
+		font-size: clamp(2.2rem, 5vw, 3.5rem);
+		line-height: 1.1;
 		font-weight: 700;
-		letter-spacing: -0.028em;
+		letter-spacing: -0.04em;
 		color: #03172a;
-		display: inline-flex;
-		gap: 0.5rem;
-		align-items: baseline;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.15rem;
 	}
 
 	.heading h2 .headline-strong {
-		font-weight: 800;
 		color: #020617;
 	}
 
 	.heading h2 .headline-muted {
-		font-weight: 500;
-		color: #4b5563;
+		font-size: 0.7em;
+		font-weight: 600;
+		color: #fff705;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 	}
 
 	.subtitle {
@@ -193,6 +204,7 @@
 		padding: 0.25rem 0;
 		will-change: transform;
 		transform: translate3d(0, 0, 0);
+		backface-visibility: hidden;
 	}
 
 	.marquee-row-left .marquee-track {
@@ -239,19 +251,19 @@
 
 	@keyframes scroll-left {
 		0% {
-			transform: translateX(0);
+			transform: translate3d(0, 0, 0);
 		}
 		100% {
-			transform: translateX(-50%);
+			transform: translate3d(-50%, 0, 0);
 		}
 	}
 
 	@keyframes scroll-right {
 		0% {
-			transform: translateX(-50%);
+			transform: translate3d(-50%, 0, 0);
 		}
 		100% {
-			transform: translateX(0);
+			transform: translate3d(0, 0, 0);
 		}
 	}
 

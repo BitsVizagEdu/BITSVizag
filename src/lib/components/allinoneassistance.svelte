@@ -120,8 +120,11 @@
 		<div class="bits-assist__left">
 			
 			<h2 id="all-in-one-title" class="bits-assist__title">ALL-IN-ONE CAREER ASSISTANCE</h2>
-			<p class="bits-assist__subtitle">FOR STUDENT EXCELLENCE</p>
+			<p class="bits-assist__subtitle">
+				FOR <span class="text-accent-gold">STUDENT EXCELLENCE</span>
+			</p>
 			<p class="bits-assist__tagline">Complete support for confident student growth.</p>
+			<div class="bits-assist__divider"></div>
 
 			<div class="bits-assist__grid">
 				{#each highlights as item}
@@ -189,24 +192,40 @@
 		margin: 0.16rem 0 0;
 		font-size: clamp(1.52rem, 2.2vw, 2.45rem);
 		line-height: 1.05;
-		font-weight: 900;
+		font-weight: 950;
 		white-space: nowrap;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
 	}
 
 	.bits-assist__subtitle {
 		margin: 0.23rem 0 0;
-		font-size: clamp(0.5rem, 1.1vw, 1.1rem);
+		font-size: clamp(0.7rem, 1.1vw, 1.25rem);
 		line-height: 1.15;
-		font-weight: 600;
-		letter-spacing: 0.01em;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.text-accent-gold {
+		color: #f1c40f;
+		font-weight: 900;
 	}
 
 	.bits-assist__tagline {
 		margin: 0.55rem 0 0;
-		font-size: clamp(0.86rem, 0.95vw, 1rem);
+		font-size: clamp(0.8rem, 0.95vw, 1rem);
 		font-weight: 600;
-		color: rgba(255, 255, 255, 0.86);
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	.bits-assist__divider {
+		width: 40px;
+		height: 3px;
+		background: linear-gradient(90deg, #f1c40f, transparent);
+		margin-top: 0.75rem;
+		border-radius: 99px;
 	}
 
 	.bits-assist__grid {
@@ -359,30 +378,67 @@
 
 	@media (max-width: 720px) {
 		.bits-assist {
-			padding: 2.5rem 0;
+			padding: 1.25rem 0;
+		}
+
+		.bits-assist__title {
+			font-size: 1.35rem;
+		}
+
+		.bits-assist__subtitle {
+			font-size: 0.8rem;
+		}
+
+		.bits-assist__tagline {
+			font-size: 0.75rem;
+			margin-top: 0.3rem;
 		}
 
 		.bits-assist__grid {
-			grid-template-columns: 1fr;
-			gap: 1.25rem;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.85rem;
+			margin-top: 1rem;
+		}
+
+		.bits-assist__item h3 {
+			font-size: 0.85rem;
+			margin-top: 0.25rem;
+		}
+
+		.bits-assist__item p {
+			font-size: 0.68rem;
+			line-height: 1.3;
+		}
+
+		.bits-assist__icon {
+			font-size: 1.1rem;
 		}
 
 		.bits-assist__right {
-			min-height: 220px;
-			margin-top: 0.5rem;
+			min-height: 180px;
+			margin-top: 1rem;
 		}
 
 		.bits-assist__image-wrap {
 			width: 100%;
-			height: 260px;
+			height: 200px;
 		}
 
 		.bits-assist__badge {
-			left: 5%;
-			right: 5%;
-			bottom: 0.75rem;
+			left: 0.5rem;
+			right: 0.5rem;
+			bottom: 0.5rem;
 			max-width: none;
-			padding: 0.7rem 1rem;
+			padding: 0.5rem 0.75rem;
+		}
+
+		.bits-assist__badge strong {
+			font-size: 1.3rem;
+		}
+
+		.bits-assist__badge span {
+			font-size: 0.65rem;
+			margin-top: 0.15rem;
 		}
 	}
 </style>

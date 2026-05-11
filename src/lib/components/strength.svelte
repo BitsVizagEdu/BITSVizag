@@ -357,19 +357,19 @@
 		.excellence-grid {
 			gap: 0.4rem;
 		}
-		
+
 		.excellence-item {
 			padding: 0.6rem 0.3rem;
 		}
-		
+
 		.item-value {
 			font-size: 1.25rem;
 		}
-		
+
 		.card-title {
 			font-size: 1.35rem;
 		}
-		
+
 		.card-line {
 			font-size: 1.05rem;
 		}

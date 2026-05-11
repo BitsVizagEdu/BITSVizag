@@ -52,10 +52,14 @@
 			<a href="/" class="brand">
 				<img src="/1.png" alt="BITS Vizag Logo" class="logo" />
 				<div class="accreditation-row">
-					<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
-					<img src="/Accredation-logos/JNTUGV.jpg" alt="JNTU-GV" class="acc-logo" />
+					<div class="acc-logo-wrap white-bg">
+						<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
+					</div>
+					<img src="/Accredation-logos/JNTUGV.jpg" alt="JNTU" class="acc-logo" />
 					<img src="/naac.png" alt="NAAC" class="acc-logo" />
-					<img src="/rcb.png" alt="RCB" class="acc-logo" />
+					<div class="acc-logo-wrap white-bg">
+						<img src="/rcb.png" alt="RCB" class="acc-logo" />
+					</div>
 					<img src="/Accredation-logos/AICTE.png" alt="AICTE" class="acc-logo" />
 				</div>
 			</a>
@@ -81,10 +85,10 @@
 	.top-info-bar {
 		background: #060b18;
 		color: #ffffff;
-		padding: 4px 12px; /* Tightened */
+		padding: 2px 10px;
 		display: flex;
 		flex-direction: column;
-		gap: 4px; /* Tightened */
+		gap: 2px;
 		border-bottom: 1px solid rgba(251, 191, 36, 0.3);
 	}
 
@@ -96,9 +100,9 @@
 	.contact-info {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 12px;
+		gap: 10px;
 		justify-content: center;
-		font-size: 11px;
+		font-size: 10px;
 		font-weight: 500;
 	}
 
@@ -112,6 +116,7 @@
 
 	.info-link i {
 		color: #fbbf24;
+		font-size: 10px;
 	}
 
 	.social-and-buttons {
@@ -119,17 +124,17 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		padding: 4px 15px; /* Added horizontal padding to move items inward */
+		padding: 2px 10px;
 	}
 
 	.social-icons {
 		display: flex;
-		gap: 12px;
+		gap: 10px;
 	}
 
 	.social-icons a {
 		color: white;
-		font-size: 13px;
+		font-size: 11px;
 		transition: color 0.2s;
 	}
 
@@ -138,10 +143,10 @@
 	}
 
 	.btn-eamcet {
-		font-size: 10px;
+		font-size: 9px;
 		font-weight: 900;
-		padding: 6px 20px;
-		border-radius: 6px;
+		padding: 4px 12px;
+		border-radius: 4px;
 		text-decoration: none;
 		text-transform: uppercase;
 		color: #080e1f;
@@ -153,7 +158,7 @@
 
 	.main-header {
 		background: white;
-		padding: 10px 12px;
+		padding: 6px 12px;
 		transition: all 0.3s ease;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	}
@@ -163,7 +168,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		padding: 8px 12px;
+		padding: 4px 12px;
 		z-index: 100;
 	}
 
@@ -185,37 +190,45 @@
 	}
 
 	.logo {
-		height: 44px; /* Increased from 44px */
+		height: 40px;
 		width: auto;
 	}
 
 	.accreditation-row {
 		display: flex;
 		align-items: center;
-		gap: 6px;
-		margin-left: 8px;
-		padding-left: 8px;
+		gap: 4px;
+		margin-left: 6px;
+		padding-left: 6px;
 		border-left: 1px solid #e5e7eb;
 	}
 
+	.acc-logo-wrap.white-bg {
+		background: rgb(255, 255, 255);
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2px;
+		box-shadow: 0 1px 3px rgb(248, 246, 246);
+	}
+
 	.acc-logo {
-		height: 28px; /* Increased by 1 point (and some) as requested */
+		height: 28px;
 		width: auto;
 		object-fit: contain;
-		filter: grayscale(0.1);
-		opacity: 0.95;
 	}
 
 	.menu-toggle {
 		background: none;
 		border: none;
-		padding: 8px;
+		padding: 6px;
 		cursor: pointer;
 	}
 
 	.hamburger {
-		width: 24px;
-		height: 18px;
+		width: 20px;
+		height: 14px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -223,9 +236,10 @@
 
 	.hamburger span {
 		display: block;
-		height: 3px;
+		height: 2px;
 		width: 100%;
 		background: #080e1f;
 		border-radius: 2px;
+		transition: all 0.3s ease;
 	}
 </style>

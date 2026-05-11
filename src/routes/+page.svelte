@@ -11,7 +11,6 @@
 	import SectionTransition from '$lib/components/SectionTransition.svelte';
 	import CourseHighlight from '$lib/components/CourseHighlight.svelte';
 	import StudentStories from '$lib/components/StudentStories.svelte';
-	import MobileHeader from '$lib/components/MobileHeader.svelte';
 	import { onMount } from 'svelte';
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
@@ -87,7 +86,6 @@
 	<link rel="preload" as="image" href="/header/T10main.webp" />
 </svelte:head>
 {#if !$showNavBar}
-	<MobileHeader />
 	<Notification />
 	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#14204a]">
 		<video playsinline autoplay muted loop class="absolute inset-0 h-full w-full object-cover z-0">
@@ -108,16 +106,24 @@
 				>
 					<div class="hero-badges-mobile md:hidden mb-8 w-full flex flex-col items-center gap-4">
 						<!-- Combined Badge Row -->
-						<div class="inline-flex items-stretch rounded-lg border border-[#fbbf24] overflow-hidden shadow-lg shadow-amber-500/10">
+						<div
+							class="inline-flex items-stretch rounded-lg border border-[#fbbf24] overflow-hidden shadow-lg shadow-amber-500/10"
+						>
 							<!-- UGC Autonomous -->
-							<div class="px-3 py-2 bg-[#fbbf24]/10 flex items-center gap-2 border-r border-[#fbbf24]/30">
+							<div
+								class="px-3 py-2 bg-[#fbbf24]/10 flex items-center gap-2 border-r border-[#fbbf24]/30"
+							>
 								<i class="fa-solid fa-sun text-[#fbbf24] text-[11px]"></i>
-								<span class="text-[#fbbf24] text-[10px] font-black uppercase tracking-wider">UGC Autonomous</span>
+								<span class="text-[#fbbf24] text-[10px] font-black uppercase tracking-wider"
+									>UGC Autonomous</span
+								>
 							</div>
 							<!-- College Code -->
 							<div class="px-3 py-2 bg-white/5 flex items-center gap-2">
 								<i class="fa-solid fa-building-columns text-white/70 text-[11px]"></i>
-								<span class="text-white/90 text-[10px] font-black uppercase tracking-wider">Code: <span class="text-[#fbbf24]">BABA</span></span>
+								<span class="text-white/90 text-[10px] font-black uppercase tracking-wider"
+									>Code: <span class="text-[#fbbf24]">BABA</span></span
+								>
 							</div>
 						</div>
 
@@ -141,7 +147,7 @@
 					</div> -->
 
 					<h1
-						class="text-4xl sm:text-5xl md:text-7xl mb-4 font-black leading-[1.1] text-center md:text-left"
+						class="text-4xl sm:text-5xl md:text-6xl mb-4 font-medium md:font-semibold leading-[1.1] text-center md:text-left"
 					>
 						Shaping Future
 						<span class="typewriter-container block text-[#fbbf24]">
@@ -153,7 +159,7 @@
 						class="text-[13px] md:text-lg text-slate-300 leading-relaxed max-w-xl mb-8 font-medium text-center md:text-left px-4 md:px-0"
 					>
 						Baba Institute of Technology and Sciences is a premier destination for engineering
-						excellence. NAAC 'A' accredited — empowering tomorrow's innovators today.
+						excellence. NAAC 'A' accredited, empowering tomorrow's innovators today.
 					</p>
 
 					<div class="flex flex-col gap-4 w-full md:flex-row md:items-center">
@@ -184,32 +190,34 @@
 							loading="eager"
 						/>
 
-						<!-- Admissions Chip - Premium Shine -->
+						<!-- Admissions Chip - New Premium Navy & Emerald Design -->
 						<div class="absolute top-6 right-6 z-20">
 							<div
-								class="relative px-5 py-2 rounded-full bg-slate-950/90 backdrop-blur-xl border border-emerald-500/30 text-[10px] font-black uppercase tracking-[0.15em] text-emerald-400 flex items-center gap-2 shadow-xl"
+								class="relative px-6 py-2.5 rounded-full bg-slate-950/70 backdrop-blur-[20px] border border-emerald-500/40 text-[11px] font-black uppercase tracking-[0.15em] text-white flex items-center gap-2.5 shadow-[0_15px_40px_rgba(0,0,0,0.4)] animate-float-glow"
 							>
 								<span
-									class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+									class="w-2.5 h-2.5 rounded-full bg-[#34D399] shadow-[0_0_15px_rgba(52,211,153,0.9)] animate-pulse"
 								></span>
 								Admissions Open 2026
-								<!-- Shimmer Animation -->
+								<!-- High-Impact Shimmer -->
 								<div
-									class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+									class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer-sweep"
 								></div>
 							</div>
 						</div>
 
-						<!-- NAAC Distinction Badge - 'Text Only' -->
-						<div class="absolute bottom-6 left-6 z-20 w-fit">
+						<!-- NAAC Distinction Badge - Premium Navy Glass -->
+						<div class="absolute bottom-6 left-6 z-20 w-fit animate-fade-up-reveal">
 							<div
-								class="p-2 px-4 rounded-xl bg-slate-950/70 backdrop-blur-md border border-white/10 shadow-xl"
+								class="p-4 px-6 rounded-2xl bg-slate-950/70 backdrop-blur-[18px] border border-white/12 shadow-[0_10px_40px_rgba(0,0,0,0.3)]"
 							>
 								<div class="flex flex-col">
-									<h3 class="text-[15px] font-black text-white leading-none mb-1">
+									<h3 class="text-[17px] font-bold text-white tracking-[0.03em] leading-tight mb-1">
 										NAAC 'A' Grade
 									</h3>
-									<p class="text-[9px] text-white/60 font-bold uppercase tracking-wider">
+									<p
+										class="text-[11px] text-[#CBD5E1] font-medium uppercase tracking-widest opacity-85"
+									>
 										UGC Autonomous • AICTE
 									</p>
 								</div>
@@ -414,7 +422,9 @@
 
 	.content-visibility-auto {
 		content-visibility: auto;
-		contain-intrinsic-size: 1000px; /* Placeholder height to prevent scrollbar jumping */
+		contain-intrinsic-size: 800px;
+		will-change: transform, opacity;
+		render-strategy: auto;
 	}
 
 	@keyframes fade-up {
@@ -426,6 +436,55 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
+
+	@keyframes float-glow {
+		0%,
+		100% {
+			transform: translateY(0);
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+		}
+		50% {
+			transform: translateY(-6px);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+		}
+	}
+
+	@keyframes fade-up-reveal {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes shimmer-sweep {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(100%);
+		}
+	}
+
+	.animate-float-glow {
+		animation: float-glow 4s ease-in-out infinite;
+	}
+
+	.animate-fade-up-reveal {
+		animation: fade-up-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	}
+
+	.animate-shimmer-sweep {
+		animation: shimmer-sweep 3s linear infinite;
+	}
+
+	.hero-wrap {
+		will-change: transform;
+		transform: translateZ(0); /* Force GPU acceleration */
 	}
 
 	@media (max-width: 768px) {
@@ -505,21 +564,57 @@
 		}
 	}
 
-	@media (max-width: 400px) {
-		.hero-copy h1 {
-			font-size: 2.6rem !important;
+	@media (max-width: 640px) {
+		/* Mobile Scaling for Hero Badges */
+		.hero-card .absolute.top-6 {
+			top: 0.65rem !important;
+			right: 0.65rem !important;
+		}
+
+		.hero-card .absolute.bottom-6 {
+			bottom: 0.65rem !important;
+			left: 0.65rem !important;
+		}
+
+		.hero-card .px-6,
+		.hero-card .px-5 {
+			padding-left: 0.75rem !important;
+			padding-right: 0.75rem !important;
+		}
+
+		.hero-card .py-2\.5 {
+			padding-top: 0.35rem !important;
+			padding-bottom: 0.35rem !important;
+		}
+
+		.hero-card .p-4 {
+			padding: 0.6rem 0.8rem !important;
+		}
+
+		.hero-card h3 {
+			font-size: 13px !important;
+			margin-bottom: 0.1rem !important;
+		}
+
+		.hero-card p {
+			font-size: 8px !important;
+			letter-spacing: 0.04em !important;
+		}
+
+		.hero-card .text-\[11px\] {
+			font-size: 8px !important;
+			letter-spacing: 0.08em !important;
+		}
+
+		.hero-card .w-2\.5 {
+			width: 6px !important;
+			height: 6px !important;
 		}
 	}
 
 	@media (max-width: 400px) {
 		.hero-copy h1 {
-			font-size: 1.9rem !important;
-		}
-	}
-
-	@media (max-width: 400px) {
-		.hero-copy h1 {
-			font-size: 2.8rem !important;
+			font-size: 2.4rem !important;
 		}
 	}
 </style>

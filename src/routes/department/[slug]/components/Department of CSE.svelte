@@ -582,6 +582,7 @@
 									<img
 										src={img}
 										alt="Dept View {i}"
+										loading="lazy"
 										in:fade={{ duration: 800 }}
 										out:fade={{ duration: 800 }}
 									/>
@@ -1161,7 +1162,7 @@
 					<div class="hod-container">
 						<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
 							<div class="hod-image-glow"></div>
-							<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" />
+							<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" loading="lazy" />
 							<div class="hod-badge satoshi">22+ Years Exp</div>
 						</div>
 						<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
@@ -1172,8 +1173,6 @@
 									></path>
 								</svg>
 							</div>
-							<span class="hod-eyebrow satoshi">MESSAGE FROM THE HOD</span>
-							O
 							<h2 class="satoshi">Prof. S. Durga Prasad</h2>
 							<p class="hod-designation inter">
 								Head of Department | Computer Science & Engineering
@@ -3012,37 +3011,691 @@
 	}
 
 	@media (max-width: 768px) {
-		.about-grid-content,
-		.split-info-grid,
-		.labs-detailed-grid,
-		.hod-grid {
-			grid-template-columns: 1fr;
-		}
-		.dept-section-card {
-			padding: 32px 24px;
-		}
-		.header-hero {
-			height: 300px;
+		.main-content-layout {
+			padding: 0 12px 40px;
+			display: block;
+			margin-top: -30px;
 		}
 
-		/* New Premium Section Mobile Adjustments */
+		.side-nav-container {
+			display: none;
+		}
+
+		.dept-section-card {
+			padding: 24px 16px !important;
+			border-radius: 20px;
+			text-align: center;
+			margin-bottom: 32px;
+			overflow: hidden;
+		}
+
+		.section-top {
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+		}
+
+		.section-title-wrap h2 {
+			font-size: 1.55rem;
+			font-weight: 700;
+			letter-spacing: -0.015em;
+			line-height: 1.2;
+		}
+
+		.section-underline {
+			width: 56px;
+			height: 3px;
+			margin: 10px auto 0;
+			background: linear-gradient(90deg, var(--section-accent), #1e293b);
+		}
+
+		.intake-group {
+			justify-content: center;
+			flex-wrap: nowrap;
+			gap: 8px;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		.intake-badge {
+			padding: 6px 10px;
+			font-size: 0.75rem;
+			flex: 1;
+			justify-content: center;
+			white-space: nowrap;
+		}
+
+		/* About Section Mobile - Compact & Neat */
+		.dept-section-card {
+			padding: 20px 14px !important;
+		}
+
+		.about-grid-content {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.about-text-side {
+			order: 2;
+			text-align: center;
+		}
+
+		.main-para {
+			font-size: 0.95rem;
+			margin-bottom: 12px;
+			line-height: 1.5;
+		}
+
+		.sub-para {
+			font-size: 0.85rem;
+			text-align: center;
+			line-height: 1.6;
+		}
+
+		.about-visual-side {
+			order: 1;
+			width: 100%;
+		}
+
+		.visual-slideshow {
+			height: 180px;
+			border-radius: 16px;
+		}
+
+		/* Vision & Mission Mobile - Refined */
+		.vm-premium-section {
+			margin-top: 0 !important;
+			padding: 24px 12px !important;
+		}
+
+		.vm-icon-badge {
+			display: none;
+		}
+
+		.vm-title-row {
+			flex-direction: column;
+			gap: 8px;
+			text-align: center;
+			align-items: center;
+		}
+
+		.vm-tabs-nav {
+			justify-content: flex-start;
+			padding: 4px 0 12px;
+			margin: 12px 0;
+			gap: 8px;
+		}
+
+		.vm-tab-btn {
+			padding: 6px 14px;
+			font-size: 0.75rem;
+		}
+
+		.vision-quote {
+			font-size: 1.05rem;
+			padding: 24px 16px;
+			border-radius: 20px;
+			max-width: 100%;
+			line-height: 1.5;
+		}
+
+		.vision-panel {
+			padding: 20px 0;
+		}
+
+		.panel-title {
+			font-size: 1.1rem;
+			margin-bottom: 12px;
+		}
+
+		.mission-panel .panel-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.m-card {
+			padding: 12px 14px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			border-radius: 12px;
+		}
+
+		.m-card h4 {
+			font-size: 0.85rem;
+			margin-bottom: 4px;
+		}
+
+		.m-card p {
+			font-size: 0.8rem;
+		}
+
+		.peos-panel .panel-list {
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		.peo-item {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			gap: 8px;
+		}
+
+		.peo-dot {
+			display: none; /* Removed for minimal look */
+		}
+
+		.peo-id {
+			font-size: 0.75rem;
+			color: var(--section-accent);
+			font-weight: 800;
+			min-width: 32px;
+		}
+
+		.peo-content p {
+			font-size: 0.8rem;
+		}
+
+		.psos-panel .panel-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.pso-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			gap: 8px;
+		}
+
+		.pso-icon {
+			display: none; /* Removed for minimal look */
+		}
+
+		.pso-id {
+			font-size: 0.75rem;
+			color: var(--section-accent);
+			font-weight: 800;
+			min-width: 36px;
+		}
+
+		.pso-text p {
+			font-size: 0.8rem;
+		}
+
+		.pos-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.po-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+		}
+
+		.po-header {
+			margin-bottom: 4px;
+			gap: 10px;
+			display: flex;
+			align-items: center;
+		}
+
+		.po-card h4 {
+			font-size: 0.85rem;
+			margin: 0;
+		}
+
+		.po-card p {
+			font-size: 0.75rem;
+			line-height: 1.4;
+			color: #64748b;
+		}
+
+		.k-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.k-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			border-top-width: 3px;
+		}
+
+		.k-card h4 {
+			font-size: 0.85rem;
+			margin-bottom: 4px;
+		}
+
+		.k-card p {
+			font-size: 0.8rem;
+		}
+
+		.sdg-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.sdg-card {
+			padding: 10px 12px;
+			gap: 12px;
+			border-radius: 12px;
+			border-left-width: 4px;
+		}
+
+		.sdg-num {
+			font-size: 1rem;
+		}
+
+		.sdg-content h4 {
+			font-size: 0.85rem;
+			margin-bottom: 2px;
+		}
+
+		.sdg-content p {
+			font-size: 0.75rem;
+		}
+
+		.labs-icon-badge {
+			display: none;
+		}
+
+		/* Labs Section Mobile - Clean Viewport */
+		.labs-interactive-grid {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.labs-nav-sidebar {
+			flex-direction: row;
+			overflow-x: auto;
+			padding: 4px 0 12px;
+			gap: 10px;
+			border-bottom: 1px solid #f1f5f9;
+			margin-bottom: 8px;
+		}
+
+		.lab-nav-item {
+			min-width: 130px;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 12px 8px;
+			gap: 8px;
+			border-radius: 16px;
+		}
+
+		.lab-nav-item .nav-icon {
+			padding: 8px;
+			border-radius: 10px;
+		}
+
+		.cat-name {
+			font-size: 0.8rem;
+		}
+
+		.cat-count {
+			font-size: 0.65rem;
+		}
+
+		.labs-display-pane {
+			padding: 24px 16px;
+			border-radius: 24px;
+			text-align: center;
+		}
+
+		.display-header h3 {
+			font-size: 1.3rem;
+			margin-bottom: 8px;
+		}
+
+		.display-header p {
+			font-size: 0.85rem;
+			line-height: 1.5;
+			margin: 0 auto;
+		}
+
+		.lab-item-card {
+			padding: 12px 16px;
+			border-radius: 14px;
+			gap: 12px;
+		}
+
+		.lab-name {
+			font-size: 0.85rem;
+			text-align: left;
+		}
+
+		.lab-items-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.lab-features-footer {
+			flex-direction: column;
+			gap: 12px;
+			align-items: center;
+		}
+
+		/* Jobs & Careers Mobile - Compact Grid */
+		.jobs-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+		}
+
+		.job-card {
+			padding: 16px 12px;
+			gap: 10px;
+			border-radius: 16px;
+		}
+
+		.job-icon-wrap {
+			width: 36px;
+			height: 36px;
+			margin-bottom: 4px;
+			border-radius: 10px;
+		}
+
+		.job-icon-wrap svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.job-details h4 {
+			font-size: 0.9rem;
+			margin-bottom: 4px;
+		}
+
+		.job-details p {
+			font-size: 0.7rem;
+			margin-bottom: 10px;
+			line-height: 1.4;
+		}
+
+		.job-skills {
+			gap: 4px;
+		}
+
+		.skill-tag {
+			font-size: 0.6rem;
+			padding: 2px 6px;
+			border-radius: 6px;
+		}
+
+		.career-insights-grid {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+
+		.roadmap-timeline {
+			padding-left: 12px;
+			border-left: 2px solid #f1f5f9;
+			margin-left: 10px;
+		}
+
+		.roadmap-item {
+			display: block;
+			text-align: left;
+			margin-bottom: 32px;
+			position: relative;
+		}
+
+		.roadmap-item::before {
+			display: none; /* Hide desktop line */
+		}
+
+		.roadmap-item::after {
+			content: '';
+			position: absolute;
+			left: -17px;
+			top: 8px;
+			width: 10px;
+			height: 10px;
+			background: #f97316;
+			border-radius: 50%;
+			box-shadow: 0 0 0 4px white, 0 0 0 5px #f97316;
+		}
+
+		.year-label {
+			font-size: 0.85rem;
+			margin-bottom: 12px;
+			display: block;
+		}
+
+		.goals-list {
+			gap: 6px;
+		}
+
+		.goals-list span {
+			font-size: 0.75rem;
+			padding: 4px 10px;
+		}
+
+		/* Faculty Table Mobile - Neat Viewport */
+		.faculty-table-section {
+			padding: 24px 12px !important;
+		}
+
+		.section-header-row {
+			text-align: center;
+			margin-bottom: 24px;
+		}
+
+		.table-controls-row {
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.control-actions {
+			justify-content: center;
+			width: 100%;
+		}
+
+		.search-box {
+			width: 100%;
+			max-width: 320px;
+		}
+
+		.faculty-main-table th,
+		.faculty-main-table td {
+			padding: 12px 14px;
+			font-size: 0.8rem;
+		}
+
+		.col-sno, .td-sno {
+			display: none; /* Hide S.NO on mobile for more space */
+		}
+
+		/* HOD Section Mobile - Minimal & Compact */
 		.hod-container {
 			grid-template-columns: 1fr;
 		}
-		.hod-content {
-			padding: 40px 24px;
-		}
+
 		.hod-visual {
-			height: 320px;
+			height: 180px;
+			order: 1;
 		}
+
+		.hod-content {
+			padding: 24px 16px;
+			order: 2;
+			text-align: center;
+			align-items: center;
+		}
+
+		.quote-icon {
+			margin-bottom: 12px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.quote-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
 		.hod-content h2 {
-			font-size: 2.2rem;
+			font-size: 1.5rem;
+			margin-top: 4px;
 		}
+
+		.hod-designation {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+		}
+
+		.hod-message-body p {
+			font-size: 0.95rem;
+			max-width: 100%;
+			line-height: 1.5;
+		}
+
+		.signature {
+			margin-top: 16px !important;
+			font-size: 0.9rem !important;
+		}
+
+		.hod-badge {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 4px 10px;
+			font-size: 0.7rem;
+		}
+
+		/* Tablet/Mobile Table Viewport */
+		.premium-table-viewport {
+			margin: 0 -8px;
+			padding: 0 8px;
+			border-radius: 12px;
+		}
+
+		/* Resources Hub Mobile - Clean & Compact */
+		.resources-hub {
+			padding: 32px 20px;
+			margin-top: 32px;
+			border-radius: 24px;
+			text-align: center;
+		}
+
+		.hub-header {
+			margin-bottom: 24px;
+		}
+
+		.hub-header h3 {
+			font-size: 1.3rem;
+		}
+
+		.hub-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px 16px;
+			text-align: left;
+		}
+
+		.hub-cat h4 {
+			font-size: 0.7rem;
+			margin-bottom: 12px;
+		}
+
+		.link-list {
+			gap: 8px;
+		}
+
+		.resource-link {
+			font-size: 0.8rem;
+		}
+
+		/* Contact Details Mobile - Neat Alignment */
 		.contact-action-grid {
 			grid-template-columns: 1fr;
+			gap: 12px;
 		}
-		.faculty-interactive-grid {
-			grid-template-columns: 1fr;
+
+		.contact-tile {
+			padding: 20px 16px;
+			flex-direction: row;
+			align-items: center;
+			text-align: left;
+			gap: 16px;
+			border-radius: 20px;
+		}
+
+		.tile-icon {
+			width: 40px;
+			height: 40px;
+			border-radius: 12px;
+			flex-shrink: 0;
+		}
+
+		.tile-icon svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.tile-content .label {
+			font-size: 0.7rem;
+		}
+
+		.tile-content .value {
+			font-size: 0.95rem;
+		}
+
+		.tile-link {
+			display: none; /* Hide the 'Send Mail' link text to keep it minimal, the whole tile can be a link if needed, but let's keep it simple */
+		}
+
+		/* Hero Adjustments - Minimal & Neat */
+		.header-hero {
+			height: 200px;
+			margin-bottom: 10px;
+			padding-bottom: 40px;
+		}
+
+		.header-content h1 {
+			font-size: 1.35rem;
+			line-height: 1.25;
+			white-space: normal;
+			text-align: center;
+			max-width: 280px;
+		}
+
+		.welcome-text {
+			font-size: 0.65rem;
+			gap: 1px;
+			margin-bottom: 8px;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 90vw;
+		}
+
+		.welcome-text .animated-char {
+			letter-spacing: 0.15em;
+			font-size: 0.7rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-hero {
+			height: 220px;
+		}
+		
+		.dept-section-card {
+			padding: 20px 12px !important;
+		}
+
+		.vision-quote {
+			font-size: 1rem;
+			padding: 24px 16px;
+		}
+
+		.lab-nav-item {
+			min-width: 140px;
 		}
 	}
 

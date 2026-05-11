@@ -258,6 +258,20 @@
 		transform: rotate(180deg);
 	}
 
+	@media (max-width: 1024px) {
+		.navigation-container {
+			padding: 2rem 0;
+		}
+
+		.title-text {
+			font-size: 1.75rem;
+		}
+
+		.mobile-dropdown-trigger {
+			padding: 1rem 1.25rem;
+		}
+	}
+
 	@keyframes dropdownFade {
 		from { opacity: 0; transform: translateY(-10px); }
 		to { opacity: 1; transform: translateY(0); }

@@ -15,12 +15,16 @@
 					<span class="scholarship-badge mobile-focused"> SCHOLARSHIPS </span>
 					<span class="marquee-admissions">100+ Merit Scholarships Available for Batch 2026</span>
 					<a href="/application-form" class="apply-link">Click here</a>
-					
+
 					<span class="separator hidden md:inline">|</span>
-					
+
 					<span class="new-badge hidden md:inline-flex">NEW</span>
-					<span class="marquee-admissions hidden md:inline">Admissions Open for B.Tech, M.Tech (2026)</span>
-					<a href="/department/Department%20of%20CSE" class="apply-link hidden md:inline">Click here</a>
+					<span class="marquee-admissions hidden md:inline"
+						>Admissions Open for B.Tech, M.Tech (2026)</span
+					>
+					<a href="/department/Department%20of%20CSE" class="apply-link hidden md:inline"
+						>Click here</a
+					>
 
 					<span class="separator">|</span>
 					<span class="scholarship-badge hidden md:inline-flex"> Explore </span>
@@ -40,7 +44,7 @@
 				</span>
 			{/each}
 		</div>
-		
+
 		<!-- Duplicate set for seamless scrolling -->
 		<div class="marquee-content">
 			{#each Array(6) as _, i}
@@ -48,12 +52,16 @@
 					<span class="scholarship-badge mobile-focused"> SCHOLARSHIPS </span>
 					<span class="marquee-admissions">100+ Merit Scholarships Available for Batch 2026</span>
 					<a href="/application-form" class="apply-link">Click here</a>
-					
+
 					<span class="separator hidden md:inline">|</span>
-					
+
 					<span class="new-badge hidden md:inline-flex">NEW</span>
-					<span class="marquee-admissions hidden md:inline">Admissions Open for B.Tech, M.Tech (2026)</span>
-					<a href="/department/Department%20of%20CSE" class="apply-link hidden md:inline">Click here</a>
+					<span class="marquee-admissions hidden md:inline"
+						>Admissions Open for B.Tech, M.Tech (2026)</span
+					>
+					<a href="/department/Department%20of%20CSE" class="apply-link hidden md:inline"
+						>Click here</a
+					>
 
 					<span class="separator">|</span>
 					<span class="scholarship-badge hidden md:inline-flex"> Explore </span>
@@ -235,7 +243,7 @@
 		font-weight: 800; /* Bolder for brightness */
 		letter-spacing: 0.02em;
 		font-family: 'Outfit', sans-serif;
-		text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 	}
 
 	.apply-link {
@@ -282,7 +290,7 @@
 	}
 
 	.dot {
-		color: rgba(255, 255, 255, 0.15); /* Subtler dots */
+		color: rgba(56, 60, 172, 0.15); /* Subtler dots */
 		margin: 0 0.6rem;
 		font-size: 8px;
 		position: relative;
@@ -333,7 +341,7 @@
 	@media (max-width: 768px) {
 		.marquee-container {
 			padding: 10px 0;
-			background: #1e293b;
+			background: rgba(9, 25, 50, 0.9);
 		}
 		.marquee-item {
 			padding-right: 1.5rem;
