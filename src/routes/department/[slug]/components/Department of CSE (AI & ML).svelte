@@ -1158,7 +1158,7 @@
 
 <style>
 	:global(body) {
-		background-color: #f8fafc;
+		background-color: #ffffff;
 		margin: 0;
 		padding: 0;
 	}
@@ -1166,7 +1166,7 @@
 	.dept-premium-root {
 		opacity: 0;
 		transition: opacity 1s ease;
-		background: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%);
+		background: #ffffff;
 	}
 
 	.dept-premium-root.mounted {
@@ -1282,8 +1282,8 @@
 		background: white;
 		border-radius: 32px;
 		padding: 32px;
-		border: 1px solid #e2e8f0;
-		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+		border: 1px solid #f8fafc;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
 	}
 
 	.side-nav-title {
@@ -1360,8 +1360,8 @@
 		border-radius: 28px;
 		padding: 32px;
 		margin-bottom: 32px;
-		border: 1px solid #e2e8f0;
-		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+		border: 1px solid #f8fafc;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
 		position: relative;
 		overflow: hidden;
 		grid-column: 1 / -1;
@@ -1401,7 +1401,7 @@
 	.intake-badge {
 		padding: 8px 16px;
 		background: white;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		border-radius: 12px;
 		font-size: 0.85rem;
 		font-weight: 700;
@@ -1608,7 +1608,7 @@
 		background: white;
 		padding: 16px;
 		border-radius: 16px;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		display: flex;
 		align-items: center;
 		gap: 12px;
@@ -1669,7 +1669,7 @@
 		padding: 10px 18px;
 		border-radius: 12px;
 		background: white;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		color: #64748b;
 		font-weight: 700;
 		font-size: 0.85rem;
@@ -1720,7 +1720,7 @@
 		background: #f8fafc;
 		padding: 24px;
 		border-radius: 20px;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		transition: all 0.3s ease;
 	}
 
@@ -2211,7 +2211,7 @@
 
 	.reality-premium {
 		background: white;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
 	}
 
@@ -2433,7 +2433,7 @@
 		background: #f8fafc;
 		border-radius: 24px;
 		padding: 24px;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 	}
 
 	.hub-header {
@@ -2663,7 +2663,7 @@
 		margin-top: 32px;
 		border-radius: 24px;
 		overflow: hidden;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 	}
 
 	.faculty-main-table {
@@ -2697,7 +2697,7 @@
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		background: white;
 		cursor: pointer;
 		display: flex;
@@ -2725,7 +2725,7 @@
 		background: #f8fafc;
 		padding: 12px 20px;
 		border-radius: 14px;
-		border: 1px solid #e2e8f0;
+		border: 1px solid #f8fafc;
 		width: 300px;
 	}
 
@@ -3228,7 +3228,7 @@
 		}
 
 		.premium-table-viewport {
-			border: 1px solid #e2e8f0;
+			border: 1px solid #f8fafc;
 			border-radius: 20px;
 			overflow-x: auto; /* Allow horizontal scroll for table items on mobile */
 		}
@@ -3270,7 +3270,7 @@
 			background: #f8fafc;
 			padding: 24px 20px;
 			border-radius: 20px;
-			border: 1px solid #e2e8f0;
+			border: 1px solid #f8fafc;
 			text-align: left;
 			margin-top: 24px;
 		}

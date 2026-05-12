@@ -107,13 +107,15 @@
 />
 
 {#if !$showNavBar}
-	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)' || currentSlug === 'Department of CSE (Cyber Security)'}
+	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)' || currentSlug === 'Department of CSE (Cyber Security)' || currentSlug === 'Department of ECE'}
 		{#if currentSlug === 'Department of CSE'}
 			<DepartmentofCse />
 		{:else if currentSlug === 'Department of CSE (AI & ML)'}
 			<DepartmentofCseAiMl />
 		{:else if currentSlug === 'Department of CSE (Cyber Security)'}
 			<DepartmentofCseCyber />
+		{:else if currentSlug === 'Department of ECE'}
+			<DepartmentofEce />
 		{/if}
 	{:else}
 		<!-- Premium Centered Navigation -->
@@ -137,9 +139,6 @@
 					{/if}
 					{#if currentSlug === 'Department of CSE (Cyber Security)'}
 						<DepartmentofCseCyber />
-					{/if}
-					{#if currentSlug === 'Department of ECE'}
-						<DepartmentofEce />
 					{/if}
 					{#if currentSlug === 'Department of EEE'}
 						<DepartmentofEee />
