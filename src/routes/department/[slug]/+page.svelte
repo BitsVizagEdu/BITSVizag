@@ -60,7 +60,7 @@
 			case 'Department of MECH':
 				title = 'Mechanical Engineering Department | BITS Vizag';
 				description =
-					'Mechanical Engineering department offering programs in thermal systems, design engineering, manufacturing, and mechanical innovations.';
+					'Mechanical Engineering department at BITS Vizag offering advanced programs in thermal systems, CAD/CAM design, manufacturing, and automotive innovations.';
 				break;
 
 			case 'Department of BS&H':
@@ -107,7 +107,7 @@
 />
 
 {#if !$showNavBar}
-	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)' || currentSlug === 'Department of CSE (Cyber Security)' || currentSlug === 'Department of ECE' || currentSlug === 'Department of EEE'}
+	{#if currentSlug === 'Department of CSE' || currentSlug === 'Department of CSE (AI & ML)' || currentSlug === 'Department of CSE (Cyber Security)' || currentSlug === 'Department of ECE' || currentSlug === 'Department of EEE' || currentSlug === 'Department of MECH' || currentSlug === 'Department of BS&H'}
 		{#if currentSlug === 'Department of CSE'}
 			<DepartmentofCse />
 		{:else if currentSlug === 'Department of CSE (AI & ML)'}
@@ -118,6 +118,10 @@
 			<DepartmentofEce />
 		{:else if currentSlug === 'Department of EEE'}
 			<DepartmentofEee />
+		{:else if currentSlug === 'Department of MECH'}
+			<DepartmentofMech />
+		{:else if currentSlug === 'Department of BS&H'}
+			<DepartmentofBsh />
 		{/if}
 	{:else}
 		<!-- Premium Centered Navigation -->
@@ -133,8 +137,8 @@
 			<!-- Main Content Area -->
 			<main class="w-full max-w-6xl mx-auto p-4 lg:p-6">
 				<div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10 min-h-[600px]">
-					{#if currentSlug === 'Department of BS&H'}
-						<DepartmentofBsh />
+					{#if currentSlug === 'Department of MBA'}
+						<DepartmentofMba />
 					{/if}
 					{#if currentSlug === 'Department of CSE (AI & ML)'}
 						<DepartmentofCseAiMl />
@@ -146,9 +150,6 @@
 						<DepartmentofEee />
 					{/if}
 					<!-- Removed Civil department rendering per requested cleanup -->
-					{#if currentSlug === 'Department of MECH'}
-						<DepartmentofMech />
-					{/if}
 				</div>
 			</main>
 		</div>

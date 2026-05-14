@@ -16,6 +16,11 @@ export const NavItems = writable([
     "items": ["About-BITS", "About-ABWEC", "Message-from-Secretary-&-Correspondent", "Message-from-Principal"]
   },
   {
+    "name": "Contact Us",
+    "folder": "/contactus",
+    "items": []
+  },
+  {
     "name": "Courses",
     "folder": "/department",
     "items": [
