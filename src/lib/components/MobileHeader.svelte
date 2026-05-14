@@ -60,7 +60,7 @@
 					<div class="acc-logo-wrap white-bg">
 						<img src="/rcb.png" alt="RCB" class="acc-logo" />
 					</div>
-					<img src="/Accredation-logos/AICTE.png" alt="AICTE" class="acc-logo" />
+					<img src="/bits.png" alt="BITS" class="acc-logo" />
 				</div>
 			</a>
 			<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle Menu">

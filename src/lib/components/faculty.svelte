@@ -1703,16 +1703,16 @@
 
 	@media (max-width: 640px) {
 		.faculty-section {
-			padding-top: 2.6rem;
+			padding-top: 2rem;
 		}
 
 		.inner {
-			width: min(1240px, calc(100% - 20px));
+			width: calc(100% - 16px);
 		}
 
 		.faculty-grid {
-			grid-template-columns: 1fr;
-			gap: 1rem;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.6rem;
 		}
 	}
 </style>

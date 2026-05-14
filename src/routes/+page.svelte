@@ -164,11 +164,11 @@
 
 					<div class="flex flex-col gap-4 w-full md:flex-row md:items-center">
 						<a
-							href="https://bitsvizageamcetexamportal1.vercel.app/"
+							href="/courses/Offered-Courses"
 							target="_blank"
 							class="btn-primary-new w-full md:w-auto px-8 py-4 bg-[#fbbf24] text-[#080e1f] font-black rounded-xl md:rounded-full text-center hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300 flex items-center justify-center gap-3 group"
 						>
-							EAMCET Portal
+							Explore Courses
 							<i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
 						</a>
 					</div>

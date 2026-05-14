@@ -73,6 +73,10 @@
 	<slot name="head" />
 </svelte:head>
 
+{#if $showNavBar}
+	<Nav />
+{/if}
+
 <LenisScroll>
 	<main>
 		<!-- Scroll Progress Bar - Always on Top -->
@@ -91,22 +95,24 @@
 				rel="noreferrer"
 				aria-label="Google Maps"
 			>
-				<svg viewBox="0 0 24 24" aria-hidden="true" class="scale-[1.6]">
-					<!-- Standard Google Maps Pin Geometry -->
+				<svg viewBox="0 0 256 394" aria-hidden="true">
+					<path
+						fill="#4285F4"
+						d="M128 0C57.308 0 0 57.308 0 128c0 22.81 12.062 50.36 30.654 81.31l97.346 184.69 97.346-184.69c18.592-30.95 30.654-58.5 30.654-81.31C256 57.308 198.692 0 128 0z"
+					/>
 					<path
 						fill="#EA4335"
-						d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.35 1.39 4.67L12 22l5.61-8.33c.89-1.32 1.39-2.93 1.39-4.67 0-3.87-3.13-7-7-7z"
-					/>
-					<path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 .52.07 1.03.21 1.51L12 2z" />
-					<path
-						fill="#34A853"
-						d="M12 22l5.61-8.33c.89-1.32 1.39-2.93 1.39-4.67 0-.52-.07-1.03-.21-1.51L12 22z"
+						d="M128 0C78.432 0 35.808 28.16 16 69.12l81.92 104.96L128 128l30.08 46.08 81.92-104.96C220.192 28.16 177.568 0 128 0z"
 					/>
 					<path
 						fill="#FBBC04"
-						d="M5.21 10.51c.53 1.83 1.87 3.33 3.58 4.13L12 22l3.21-7.36c1.71-.8 3.05-2.3 3.58-4.13L12 2z"
+						d="M16 69.12C5.888 88.064 0 107.52 0 128c0 22.81 12.062 50.36 30.654 81.31l97.346 42.69-30.08-78.08L16 69.12z"
 					/>
-					<circle fill="white" cx="12" cy="9" r="3.5" />
+					<path
+						fill="#34A853"
+						d="M240 69.12c10.112 18.944 16 38.4 16 58.88 0 22.81-12.062 50.36-30.654 81.31l-97.346 42.69 30.08-78.08L240 69.12z"
+					/>
+					<circle fill="#ffffff" cx="128" cy="128" r="48" />
 				</svg>
 			</a>
 			<a
@@ -176,9 +182,7 @@
 			</a>
 		</div>
 
-		{#if $showNavBar}
-			<Nav />
-		{:else}
+		{#if !$showNavBar}
 			<MobileHeader />
 			<Hero />
 			<Middlenav />
@@ -229,12 +233,12 @@
 	}
 
 	:global(.social-btn.maps) {
-		background: #ffffff !important;
-		border-color: #e2e8f0;
+		background: rgba(255, 255, 255, 0.1) !important;
+		border-color: rgba(255, 255, 255, 0.4);
 	}
 	:global(.social-btn.maps svg) {
-		width: 1.25rem !important;
-		height: 1.25rem !important;
+		width: 1.7rem !important;
+		height: 1.7rem !important;
 	}
 	:global(.social-btn.instagram) {
 		background: linear-gradient(
