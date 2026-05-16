@@ -125,62 +125,6 @@
 				</div>
 			</li>
 
-			<!-- Faculty -->
-			<li>
-				<a href="/faculty" class="desktop-item" on:click={closeMenus}>Faculty</a>
-				<a href="/faculty" class="mobile-item" on:click={closeMenus}>Faculty</a>
-			</li>
-
-			<!-- Exam Cell -->
-			<li>
-				<button type="button" class="desktop-item">Exam Cell</button>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<button
-					type="button"
-					class="mobile-item {activeMobileDropdown === 'examcell' ? 'active-dropdown' : ''}"
-					on:click={() => toggleMobileDropdown('examcell')}>Exam Cell</button
-				>
-				<!-- DESKTOP MEGA BOX -->
-				<div class="mega-box hidden lg:block">
-					<div
-						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
-					>
-						<div class="flex flex-col items-start w-full">
-							<!-- Header Section -->
-							<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
-								<div
-									class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 border border-blue-100"
-								>
-									<i
-										class="fa-solid fa-file-invoice-dollar text-xl text-blue-600"
-										aria-hidden="true"
-									/>
-								</div>
-								<div class="flex flex-col text-left">
-									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">
-										Examination Services
-									</header>
-								</div>
-							</div>
-
-							<!-- Items Grid -->
-							<div class="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
-								{#each documentLinks.examcell as link}
-									<MegaMenuItem
-										href={link.href}
-										label={link.label}
-										icon={link.icon}
-										external={link.href.startsWith('/pdfs/')}
-										onClick={closeMenus}
-									/>
-								{/each}
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-
 			<!-- Facilities -->
 			<li class="mobile-priority-item">
 				<a href="/facilities" class="desktop-item">Facilities</a>
@@ -264,6 +208,62 @@
 									iconBgClass="bg-slate-50"
 									onClick={closeMenus}
 								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<!-- Faculty -->
+			<li>
+				<a href="/faculty" class="desktop-item" on:click={closeMenus}>Faculty</a>
+				<a href="/faculty" class="mobile-item" on:click={closeMenus}>Faculty</a>
+			</li>
+
+			<!-- Exam Cell -->
+			<li>
+				<button type="button" class="desktop-item">Exam Cell</button>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<button
+					type="button"
+					class="mobile-item {activeMobileDropdown === 'examcell' ? 'active-dropdown' : ''}"
+					on:click={() => toggleMobileDropdown('examcell')}>Exam Cell</button
+				>
+				<!-- DESKTOP MEGA BOX -->
+				<div class="mega-box hidden lg:block">
+					<div
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
+					>
+						<div class="flex flex-col items-start w-full">
+							<!-- Header Section -->
+							<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 border border-blue-100"
+								>
+									<i
+										class="fa-solid fa-file-invoice-dollar text-xl text-blue-600"
+										aria-hidden="true"
+									/>
+								</div>
+								<div class="flex flex-col text-left">
+									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">
+										Examination Services
+									</header>
+								</div>
+							</div>
+
+							<!-- Items Grid -->
+							<div class="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
+								{#each documentLinks.examcell as link}
+									<MegaMenuItem
+										href={link.href}
+										label={link.label}
+										icon={link.icon}
+										external={link.href.startsWith('/pdfs/')}
+										onClick={closeMenus}
+									/>
+								{/each}
 							</div>
 						</div>
 					</div>

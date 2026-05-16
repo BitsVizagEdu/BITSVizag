@@ -21,9 +21,19 @@
 </script>
 
 <PremiumFacilitySection
+	kicker="Restaurants & facilities"
 	title="Cafeteria"
 	intro="Our cafeteria provides nutritious and delicious meals in a welcoming space, perfect for breaks and social interaction."
-	imageSrc="/cafe.jpg"
+	galleryImages={[
+		'/Facilities-gallery/canteen.png',
+		'/Facilities-gallery/canteen-1.png',
+		'/Facilities-gallery/canteen-2.png',
+		'/Facilities-gallery/canteen-3.png'
+	]}
 	imageAlt="Cafeteria"
+	bgColor="#e67e22"
+	actionText="Weekly Menu"
+	actionLink="#"
+	overlayText="Healthy & Fresh"
 	{features}
 />

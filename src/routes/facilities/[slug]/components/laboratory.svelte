@@ -4,8 +4,7 @@
 	const features = [
 		{
 			title: 'Computer Labs',
-			description:
-				'Updated systems with modern software for coding, design, and simulation work.'
+			description: 'Updated systems with modern software for coding, design, and simulation work.'
 		},
 		{
 			title: 'Engineering Labs',
@@ -21,9 +20,11 @@
 </script>
 
 <PremiumFacilitySection
+	kicker="Practical Excellence"
 	title="Laboratories"
 	intro="Our well-equipped labs provide the perfect environment for students to gain practical skills and bridge the gap between theory and practice."
-	imageSrc="/lab.jpg"
-	imageAlt="Laboratory"
+	galleryImages={['/cse4.jpg', '/cse5.jpg', '/eee1.jpg', '/lab4.jpg']}
+	bgColor="#0056b3"
+	overlayText="Precision & Innovation"
 	{features}
 />

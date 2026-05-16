@@ -1,7 +1,7 @@
 export const documentLinks = {
 	governance: [
-		{ label: 'IQAC (Quality Assurance)', href: '/pdfs/iqac.pdf', icon: 'fa-solid fa-users-gear' },
-		{ label: 'GRC (Grievances)', href: '/pdfs/grc.pdf', icon: 'fa-solid fa-scale-balanced' },
+		{ label: 'IQAC (Quality Assurance)', href: '/governance/IQAC', icon: 'fa-solid fa-users-gear' },
+		{ label: 'GRC (Grievances)', href: '/governance/GRC', icon: 'fa-solid fa-scale-balanced' },
 		{ label: 'ICC (Complaints)', href: '/pdfs/icc.pdf', icon: 'fa-solid fa-shield-halved' },
 		{ label: 'Code of Conduct', href: '/pdfs/code-of-conduct.pdf', icon: 'fa-solid fa-book-open' }
 	],

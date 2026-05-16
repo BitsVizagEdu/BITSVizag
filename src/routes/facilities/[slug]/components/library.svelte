@@ -2,7 +2,7 @@
 	import PremiumFacilitySection from './PremiumFacilitySection.svelte';
 
 	const metrics = [
-		{ label: 'Operating Window', value: '8:00 AM - 8:00 PM' },
+		{ label: 'Operating Window', value: '9:00 AM - 4:30 PM' },
 		{ label: 'Reading Capacity', value: '150 Seats' },
 		{ label: 'Total Volumes', value: '22,141+' },
 		{ label: 'Title Catalog', value: '3,601+' },
@@ -30,10 +30,18 @@
 </script>
 
 <PremiumFacilitySection
-	title="Knowledge Resource Center"
-	intro="Our modern library provides a vast collection of physical and digital resources to support your academic journey and research needs."
-	imageSrc="/Library-1.webp"
-	imageAlt="Knowledge Resource Center"
+	kicker="Library"
+	title="Library"
+	intro="A repository of knowledge, our library is stocked with a comprehensive collection of books, journals, and digital resources, providing the ideal environment for learning and research."
+	galleryImages={[
+		'/Facilities-gallery/library.png',
+		'/Facilities-gallery/library-1.png',
+		'/Facilities-gallery/library-2.png',
+		'/Facilities-gallery/library-3.png'
+	]}
+	imageAlt="Library"
+	bgColor="#10b981"
+	overlayText="Ocean of Knowledge"
 	{features}
 	{metrics}
 />

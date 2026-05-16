@@ -21,9 +21,12 @@
 </script>
 
 <PremiumFacilitySection
+	kicker="Home Away From Home"
 	title="Hostel & Accommodation"
 	intro="Our campus residences offer a home away from home, balancing comfort and safety for a smooth student life experience."
 	imageSrc="/hostel.jpg"
 	imageAlt="Hostel"
+	bgColor="#d35400"
+	overlayText="Home Away From Home"
 	{features}
 />

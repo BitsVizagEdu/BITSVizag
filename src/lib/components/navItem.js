@@ -35,16 +35,6 @@ export const NavItems = writable([
     ]
   },
   {
-    "name": "Faculty",
-    "folder": "/faculty",
-    "items": []
-  },
-  {
-    "name": "Exam Cell",
-    "folder": "/examcell",
-    "items": ["BTECH", "MBA", "MTECH"]
-  },
-  {
     "name": "Facilities",
     "folder": "/facilities",
     "items": [
@@ -57,9 +47,21 @@ export const NavItems = writable([
     ]
   },
   {
+    "name": "Faculty",
+    "folder": "/faculty",
+    "items": []
+  },
+  {
+    "name": "Exam Cell",
+    "folder": "/examcell",
+    "items": ["BTECH", "MBA", "MTECH"]
+  },
+  {
     "name": "Governance",
     "folder": "/governance",
     "items": [
+      "IQAC",
+      "GRC",
       "Administration",
       "Statutory-Bodies",
       "Academic-Council",

@@ -20,6 +20,8 @@
 	];
 
 	const galleryImages = [
+		'/Facilities-gallery/sport.png',
+		'/Facilities-gallery/sport-1.png',
 		'/gallery/DSC05556.JPG',
 		'/events/T-10.jpg',
 		'/Facilities/Champions-T10.jpg'
@@ -27,8 +29,13 @@
 </script>
 
 <PremiumFacilitySection
+	kicker="Build Teamwork"
 	title="Sports"
 	intro="We provide high-quality sports facilities to help students stay physically active, build teamwork, and maintain a balanced lifestyle."
+	bgColor="#ef4444"
+	actionText="Sports Schedule"
+	actionLink="#"
+	overlayText="Champions Spirit"
 	{features}
 	{galleryImages}
 />
