@@ -4,11 +4,11 @@
 
 	const stories = [
 		{
-			name: 'Manasa Reddy',
-			program: 'B.Tech Data Science',
+			name: 'Priyanka R',
+			program: 'B.Tech ECE',
 			batch: '2022-2026',
 			placement: 'Cognizant',
-			initial: 'M',
+			initial: 'P',
 			color: 'bg-blue-100 text-blue-600',
 			quote:
 				'The specialized Data Science labs equipped with high-end backend GPUs gave me pure, hands-on architectural training that instantly put my technical skills years ahead of my peers.'
@@ -25,7 +25,7 @@
 		},
 		{
 			name: 'Priya D.',
-			program: 'B.Tech AI & ML',
+			program: 'B.Tech CSE',
 			batch: '2022-2026',
 			placement: 'Tech Mahindra',
 			initial: 'P',
@@ -34,7 +34,7 @@
 				'The Artificial Intelligence hubs in our college are phenomenal. I was fully funded and mentored to publish my first major research paper thanks to the dedicated R&D wing!'
 		},
 		{
-			name: 'Rahul Verma',
+			name: 'Rahul Vinni',
 			program: 'B.Tech ECE',
 			batch: '2021-2025',
 			placement: 'Infosys',
@@ -44,7 +44,7 @@
 				'The electronics curriculum is perfectly balanced between theory and industry-grade VLSI design. The faculty encouraged me to push beyond textbooks and build real-world IoT solutions.'
 		},
 		{
-			name: 'Suresh Raina',
+			name: 'Kalyan G',
 			program: 'B.Tech MECH',
 			batch: '2020-2024',
 			placement: 'L&T',
@@ -54,11 +54,11 @@
 				'Our mechanical labs and CNC centers are at par with industrial standards. The hands-on training on modern machinery made my transition to L&T seamless and confident.'
 		},
 		{
-			name: 'Neha Sharma',
+			name: 'Chandrika C',
 			program: 'B.Tech EEE',
 			batch: '2019-2023',
 			placement: 'NTPC',
-			initial: 'N',
+			initial: 'S',
 			color: 'bg-rose-100 text-rose-600',
 			quote:
 				'The electrical engineering department provided me with strong fundamental knowledge and hands-on experience in power systems, which helped me clear the NTPC exams with flying colors.'
@@ -82,18 +82,16 @@
 				>
 			</div>
 
-			<h2
-				class="text-3xl md:text-5xl font-semibold tracking-normal text-[#1a233e] mb-4 md:mb-6"
-			>
-				Real Stories, <span
-					class="relative inline-block"
-				>
+			<h2 class="text-3xl md:text-5xl font-semibold tracking-normal text-[#1a233e] mb-4 md:mb-6">
+				Real Stories, <span class="relative inline-block">
 					<span
 						class="absolute inset-0 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-300 bg-clip-text text-transparent blur-lg opacity-60 animate-shimmer-glow"
-					>Real Success</span>
+						>Real Success</span
+					>
 					<span
 						class="relative bg-gradient-to-z from-amber-400 via-amber-500 to-amber-300 bg-clip-text text-transparent animate-shimmer-text"
-					>Real Success</span>
+						>Real Success</span
+					>
 				</span>
 			</h2>
 

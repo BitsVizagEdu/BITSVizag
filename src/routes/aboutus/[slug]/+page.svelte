@@ -65,7 +65,7 @@
 
 	/** @type {Record<string, string>} */
 	const tabLabels = {
-		'About-ABWEC': 'About ABWEC',
+		'About-AEWS': 'About AEWS',
 		'About-BITS': 'About BITS',
 		'Message-from-Secretary-&-Correspondent': 'Message from Secretary & Correspondent',
 		'Message-from-Principal': 'Message from Principal'
@@ -109,31 +109,31 @@
 					]
 				}
 			],
-			imageSrc: '/baba1.png',
+			imageSrc: '/bitsvizag.png',
 			imageAlt: 'BITS Vizag campus building',
 			personName: 'BITS Vizag',
 			personRole: 'Excellence in Technical Education'
 		},
-		'About-ABWEC': {
+		'About-AEWS': {
 			eyebrow: 'About Institution',
-			title: 'About Dr. B.R. Ambedkar Welfare Educational Society',
+			title: 'About Dr. B.R. Ambedkar Educational Welfare Society',
 			intro: [
-				'Dr. B.R. Ambedkar Welfare Educational Society (ABWES) is a non-profit organization dedicated to promoting social justice through education. Guided by the ideals of Dr. B.R. Ambedkar, the trust views education as the most powerful tool for empowerment and inclusive development.',
-				'In alignment with this vision, ABWES collaborates with BITS Vizag to strengthen access to quality higher education for students from diverse and underrepresented backgrounds.'
+				'Dr. B.R. Ambedkar Educational Welfare Society (AEWS) is a non-profit organization dedicated to promoting social justice through education. Guided by the ideals of Dr. B.R. Ambedkar, the trust views education as the most powerful tool for empowerment and inclusive development.',
+				'In alignment with this vision, AEWS collaborates with BITS Vizag to strengthen access to quality higher education for students from diverse and underrepresented backgrounds.'
 			],
 			sections: [
 				{
 					heading: 'Strategic Support',
-					text: 'Through this collaboration, ABWES has supported infrastructure development, scholarships, and academic enhancement at BITS Vizag. These efforts improve learning facilities, promote merit, and expand opportunities for deserving students.'
+					text: 'Through this collaboration, AEWS has supported infrastructure development, scholarships, and academic enhancement at BITS Vizag. These efforts improve learning facilities, promote merit, and expand opportunities for deserving students.'
 				},
 				{
 					heading: 'Shared Mission',
-					text: 'The partnership reflects a shared commitment to academic excellence, ethical growth, social responsibility, and nation-building. It continues to create skilled, confident, and socially responsible professionals while honoring Dr. B.R. Ambedkar\'s enduring legacy.'
+					text: "The partnership reflects a shared commitment to academic excellence, ethical growth, social responsibility, and nation-building. It continues to create skilled, confident, and socially responsible professionals while honoring Dr. B.R. Ambedkar's enduring legacy."
 				}
 			],
-			imageSrc: '/header/trust1.png',
-			imageAlt: 'Dr. B.R. Ambedkar Welfare Educational Society Logo',
-			personName: 'ABWES Trust',
+			imageSrc: '/trust.png',
+			imageAlt: 'Dr. B.R. Ambedkar Educational Welfare Society Logo',
+			personName: 'AEWS Trust',
 			personRole: 'Estd. 2008'
 		},
 		'Message-from-Secretary-&-Correspondent': {

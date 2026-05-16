@@ -21,15 +21,15 @@
 			borderColor: 'border-emerald-500'
 		},
 		{
-			label: 'Fortune 500 Partners',
-			value: '50+',
+			label: 'Fortune 100+ Companies',
+			value: '100+',
 			color: 'text-indigo-900',
 			borderColor: 'border-indigo-900'
 		}
 	];
 
 	const recruiters = [
-		{ name: 'Deloitte', logo: '/company/2560px-Deloitte.svg.png' },
+		{ name: 'Deloitte', logo: '/company/image (27).png' },
 		{ name: 'TCS', logo: '/logo-150/4.png' },
 		{ name: 'Infosys', logo: '/logo-150/2.png' },
 		{ name: 'Wipro', logo: '/logo-150/Wipro.png' },
@@ -80,7 +80,9 @@
 
 				<!-- Heading Group -->
 				<div class="space-y-2">
-					<h2 class="font-sans text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
+					<h2
+						class="font-sans text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl"
+					>
 						Elite <br />
 						<span class="text-blue-600">Placements</span>
 					</h2>
@@ -93,14 +95,14 @@
 
 				<!-- Message -->
 				<p class="max-w-md text-sm leading-relaxed text-slate-600">
-					Our students are consistently recruited by world-class organizations, reflecting the
-					quality and rigor of BITS Vizag's academic ecosystem.
+					Connecting our graduates with top-tier global organizations through a dedicated placement
+					cell and rigorous industry-aligned training.
 				</p>
 
 				<!-- Recruiters Minimal Marquee -->
 				<div class="space-y-4">
 					<p class="text-[10px] font-bold tracking-widest text-slate-400 uppercase">
-						Our Elite Hiring Partners
+						Our Recruiters till Date
 					</p>
 					<div
 						class="flex flex-wrap items-center gap-x-6 gap-y-4 opacity-60 grayscale hover:grayscale-0 transition-all duration-500"

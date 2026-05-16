@@ -3,7 +3,7 @@
 
 	const stats = [
 		{
-			value: '15 Acres',
+			value: '15+ Acres',
 			label: 'Sprawling green campus',
 			color: 'text-[#1F6F8B]',
 			icon: '🏫'
@@ -15,7 +15,7 @@
 			icon: '📚'
 		},
 		{
-			value: '50+',
+			value: '10+',
 			label: 'Cutting-edge labs',
 			color: 'text-[#10B981]',
 			icon: '🔬'
@@ -41,9 +41,7 @@
 	];
 </script>
 
-<section
-	class="relative h-[82vh] flex items-center w-full overflow-hidden bg-[#fdf8f4]"
->
+<section class="relative h-[82vh] flex items-center w-full overflow-hidden bg-[#fdf8f4]">
 	<!-- Premium Background Overlay -->
 	<div class="absolute inset-0 z-0">
 		<img
@@ -73,13 +71,15 @@
 							></span>
 							<span class="relative inline-flex h-2 w-2 rounded-full bg-[#1F6F8B]"></span>
 						</span>
-						World-Class Infrastructure
+						Specialized Infrastructure
 					</span>
 				</div>
 
 				<!-- Heading Group -->
 				<div class="space-y-2">
-					<h2 class="font-sans text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+					<h2
+						class="font-sans text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl md:text-5xl"
+					>
 						Built for <br />
 						<span class="text-[#1F6F8B]">Innovation</span>
 					</h2>
@@ -92,8 +92,8 @@
 
 				<!-- Message -->
 				<p class="max-w-md text-xs leading-relaxed text-slate-600">
-					BITS Vizag's 27-acre campus features cutting-edge labs, 30,000+ volume library, smart
-					classrooms, and world-class sports facilities designed to foster future leaders.
+					A sprawling 15+ acre campus equipped with cutting-edge laboratories, a massive library,
+					and modern facilities designed to foster innovation and academic excellence.
 				</p>
 
 				<!-- Scholarship Highlight Box -->
@@ -119,9 +119,9 @@
 							</svg>
 						</div>
 						<div>
-							<h4 class="text-2xl font-black tracking-tight text-slate-800">₹75 Lakh+</h4>
+							<h4 class="text-2xl font-black tracking-tight text-slate-800">Smart Learning</h4>
 							<p class="text-[9px] font-bold tracking-widest text-slate-400 uppercase">
-								Scholarships Awarded Annually
+								Building Intelligent Learning Environments
 							</p>
 						</div>
 					</div>
@@ -144,7 +144,9 @@
 							<p class="text-lg font-bold tracking-tight {stat.color} sm:text-2xl md:text-3xl">
 								{stat.value}
 							</p>
-							<p class="mt-0.5 text-[8px] sm:text-[11px] capitalize font-bold tracking-normal text-slate-600">
+							<p
+								class="mt-0.5 text-[8px] sm:text-[11px] capitalize font-bold tracking-normal text-slate-600"
+							>
 								{stat.label}
 							</p>
 						</div>

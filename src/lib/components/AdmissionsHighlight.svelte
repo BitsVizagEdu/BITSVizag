@@ -22,7 +22,7 @@
 		},
 		{
 			label: 'Top Recruiters',
-			value: '500+',
+			value: '100+',
 			color: 'text-purple-600',
 			borderColor: 'border-purple-500'
 		}
@@ -52,12 +52,16 @@
 			>
 				<!-- Heading Group -->
 				<div class="space-y-2">
-					<h2 class="font-sans text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
+					<h2
+						class="font-sans text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl"
+					>
 						Admissions <br />
 						<span class="text-emerald-600">Open!</span>
 					</h2>
 					<div class="inline-block rounded-lg bg-emerald-600/10 px-4 py-1.5">
-						<p class="text-sm font-bold text-emerald-900 sm:text-lg md:text-xl">Academic Year 2026–27</p>
+						<p class="text-sm font-bold text-emerald-900 sm:text-lg md:text-xl">
+							Academic Year 2026–27
+						</p>
 					</div>
 				</div>
 

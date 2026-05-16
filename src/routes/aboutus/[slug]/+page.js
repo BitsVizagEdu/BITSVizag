@@ -2,8 +2,8 @@ import { error } from '@sveltejs/kit';
 import { items } from "./components/utils.js";
 
 const legacySlugMap = {
-    'About-Trust': 'About-ABWEC',
-    'About-ABWS': 'About-ABWEC',
+    'About-Trust': 'About-AEWS',
+    'About-ABWS': 'About-AEWS',
     'Message-from-Chairman': 'Message-from-Secretary-&-Correspondent',
     'Message-from-Secretary': 'Message-from-Secretary-&-Correspondent'
 };
