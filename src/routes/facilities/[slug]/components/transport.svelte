@@ -21,9 +21,18 @@
 </script>
 
 <PremiumFacilitySection
+	kicker="Safe Commute"
 	title="Transport"
 	intro="We provide reliable and comfortable transport services to ensure students reach campus safely and on time."
-	imageSrc="/Transport.jpeg"
+	galleryImages={[
+		'/Facilities-gallery/buses.png',
+		'/Facilities-gallery/buses-1.png'
+	]}
 	imageAlt="Transport Buses"
+	bgColor="#34495e"
+	actionText="Bus Routes & Timing"
+	actionLink="#"
+	overlayText="Safety & Reliability"
+	customClass="transport-layout"
 	{features}
 />
