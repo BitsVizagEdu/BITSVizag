@@ -44,9 +44,13 @@
 	});
 </script>
 
-<div class="transition-bridge relative w-full h-32 md:h-48 -mt-16 md:-mt-24 z-20 overflow-hidden pointer-events-none">
-	<!-- Glassmorphism Multi-stop Gradient Bridge -->
-	<div class="absolute inset-0 bg-gradient-to-b from-[#14204a] via-[#14204a]/80 via-white/5 to-[#ECFDF5] backdrop-blur-[20px] transition-layer-parallax"></div>
+<div
+	class="transition-bridge relative w-full h-32 md:h-48 -mt-16 md:-mt-24 z-20 overflow-hidden pointer-events-none"
+>
+	<!-- Glassmorphism Multi-stop Gradient Bridge
+	<div
+		class="absolute inset-0 bg-gradient-to-b from-[#14204a] via-[#14204a]/80 via-white/5 to-[#ECFDF5] backdrop-blur-[20px] transition-layer-parallax"
+	></div> -->
 
 	<!-- Noise/Grain Texture Layer -->
 	<div class="absolute inset-0 opacity-[0.03] mix-blend-overlay noise-bg"></div>
@@ -77,7 +81,9 @@
 	</div>
 
 	<!-- Soft Radial Glow Bloom -->
-	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-tr from-amber-400/20 to-emerald-400/20 rounded-full blur-[80px] radial-glow-anim opacity-40"></div>
+	<div
+		class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-tr from-amber-400/20 to-emerald-400/20 rounded-full blur-[80px] radial-glow-anim opacity-40"
+	></div>
 </div>
 
 <style>

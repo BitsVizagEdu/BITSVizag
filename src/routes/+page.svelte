@@ -87,7 +87,7 @@
 </svelte:head>
 {#if !$showNavBar}
 	<Notification />
-	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#14204a]">
+	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#050816]">
 		<video playsinline autoplay muted loop class="absolute inset-0 h-full w-full object-cover z-0">
 			<source src="/baba.webm" type="video/webm" />
 			<source src="/baba.mp4" type="video/mp4" />
@@ -147,79 +147,121 @@
 					</div> -->
 
 					<h1
-						class="text-4xl sm:text-5xl md:text-6xl mb-4 font-medium md:font-semibold leading-[1.1] text-center md:text-left"
+						class="hero-title text-5xl md:text-7xl lg:text-7xl mb-6 font-semibold tracking-tighter leading-[0.85] text-center md:text-left"
 					>
-						Shaping Future
-						<span class="typewriter-container block text-[#fbbf24]">
-							{displayText}<span class="cursor">|</span>
+						<span class="block">Shaping Future</span>
+						<span class="relative inline-block">
+							<span class="gradient-text">Engineers</span>
+							<!-- Creative Neon Stroke - Now under Engineers -->
+							<svg
+								class="absolute -bottom-4 left-0 w-full h-8 opacity-80 -z-10"
+								viewBox="0 0 400 30"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M5 25C100 5 300 5 395 25"
+									stroke="#7C4DFF"
+									stroke-width="4"
+									stroke-linecap="round"
+									class="neon-path"
+								/>
+							</svg>
 						</span>
 					</h1>
 
 					<p
-						class="text-[13px] md:text-lg text-slate-300 leading-relaxed max-w-xl mb-8 font-medium text-center md:text-left px-4 md:px-0"
+						class="text-base md:text-lg text-[#B8C0D9]/80 leading-relaxed max-w-lg mb-10 font-medium text-center md:text-left"
 					>
 						Baba Institute of Technology and Sciences is a premier destination for engineering
-						excellence. NAAC 'A' accredited, empowering tomorrow's innovators today.
+						excellence. NAAC 'A' accredited, empowering tomorrow's innovators today with world-class
+						facilities.
 					</p>
 
-					<div class="flex flex-col gap-4 w-full md:flex-row md:items-center">
-						<a
-							href="/courses/Offered-Courses"
-							target="_blank"
-							class="btn-primary-new w-full md:w-auto px-8 py-4 bg-[#fbbf24] text-[#080e1f] font-black rounded-xl md:rounded-full text-center hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300 flex items-center justify-center gap-3 group"
-						>
+					<div class="flex flex-col gap-5 w-full md:flex-row md:items-center mb-12">
+						<a href="/courses/Offered-Courses" class="btn-yellow-glow">
 							Explore Courses
-							<i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+							<i class="fa-solid fa-arrow-right"></i>
 						</a>
+						<a
+							href="https://bitsvizageamcetexamportal1.vercel.app/"
+							target="_blank"
+							class="btn-glass-premium"
+						>
+							Admission Portal
+							<i class="fa-solid fa-graduation-cap"></i>
+						</a>
+					</div>
+
+					<!-- Premium Statistics Row -->
+					<div class="stats-row grid grid-cols-2 sm:flex items-center gap-6 md:gap-10">
+						<div class="stat-item">
+							<span class="stat-num">150+</span>
+							<span class="stat-label">Expert Faculty</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-num">50+</span>
+							<span class="stat-label">Programs</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-num">6000+</span>
+							<span class="stat-label">Alumni</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-num">18+</span>
+							<span class="stat-label">Years</span>
+						</div>
 					</div>
 				</div>
 
-				<div class="mt-8 w-full lg:mt-0 lg:flex lg:justify-end">
-					<div
-						class="hero-card relative w-full max-w-lg rounded-[2.5rem] overflow-hidden border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] group cursor-pointer"
-					>
-						<!-- Deep Vignette Overlay -->
+				<div class="mt-16 w-full lg:mt-12 lg:flex lg:justify-end lg:items-center">
+					<div class="relative group">
+						<!-- Atmospheric Bloom -->
 						<div
-							class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-70"
+							class="absolute -inset-10 bg-[#7C4DFF]/10 blur-[100px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity duration-1000"
 						></div>
 
-						<img
-							src="/baba.png"
-							alt="BITS Vizag Campus"
-							class="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-							loading="eager"
-						/>
+						<!-- Enhanced Pink/Purple Neon Edge Glow -->
+						<div
+							class="absolute -inset-1 bg-gradient-to-br from-[#7C4DFF] via-[#FF4FD8] via-[#FF4FD8] to-[#00D4FF] rounded-[2rem] md:rounded-[32px] blur-md opacity-60 group-hover:opacity-90 transition-opacity duration-700"
+						></div>
 
-						<!-- Admissions Chip - New Premium Navy & Emerald Design -->
-						<div class="absolute top-6 right-6 z-20">
+						<div
+							class="hero-card-ultra relative w-full max-w-lg rounded-[2rem] md:rounded-[32px] overflow-hidden border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.8)] cursor-pointer"
+						>
+							<!-- Glassmorphism Container Layer -->
 							<div
-								class="relative px-6 py-2.5 rounded-full bg-slate-950/70 backdrop-blur-[20px] border border-emerald-500/40 text-[11px] font-black uppercase tracking-[0.15em] text-white flex items-center gap-2.5 shadow-[0_15px_40px_rgba(0,0,0,0.4)] animate-float-glow"
-							>
-								<span
-									class="w-2.5 h-2.5 rounded-full bg-[#34D399] shadow-[0_0_15px_rgba(52,211,153,0.9)] animate-pulse"
-								></span>
-								Admissions Open 2026
-								<!-- High-Impact Shimmer -->
-								<div
-									class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer-sweep"
-								></div>
-							</div>
-						</div>
+								class="absolute inset-0 bg-gradient-to-tr from-[#050816]/10 via-transparent to-white/5 z-10 pointer-events-none"
+							></div>
 
-						<!-- NAAC Distinction Badge - Premium Navy Glass -->
-						<div class="absolute bottom-6 left-6 z-20 w-fit animate-fade-up-reveal">
+							<!-- Cinematic Grading Overlay (Lightened) -->
 							<div
-								class="p-4 px-6 rounded-2xl bg-slate-950/70 backdrop-blur-[18px] border border-white/12 shadow-[0_10px_40px_rgba(0,0,0,0.3)]"
-							>
-								<div class="flex flex-col">
-									<h3 class="text-[17px] font-bold text-white tracking-[0.03em] leading-tight mb-1">
-										NAAC 'A' Grade
-									</h3>
-									<p
-										class="text-[11px] text-[#CBD5E1] font-medium uppercase tracking-widest opacity-85"
-									>
-										UGC Autonomous • AICTE
-									</p>
+								class="absolute inset-0 bg-gradient-to-t from-[#050816]/10 via-transparent to-transparent z-10 opacity-30"
+							></div>
+							<!-- Quality & Blend Overlays -->
+							<div
+								class="absolute inset-0 bg-gradient-to-tr from-[#050816]/20 via-transparent to-amber-500/5 z-10 pointer-events-none"
+							></div>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10"
+							></div>
+
+							<!-- Main Animated Image -->
+							<img
+								src="/bitsvizag.png"
+								alt="BITS Vizag Campus"
+								class="hero-img-animated w-full h-full object-cover"
+								loading="eager"
+							/>
+
+							<!-- Moving Shine Effect -->
+							<div class="absolute inset-0 z-15 glass-shine pointer-events-none"></div>
+
+							<!-- Floating Pill Badge -->
+							<div class="absolute top-5 right-5 z-20">
+								<div class="minimal-pill">
+									<span class="pill-dot-small"></span>
+									Admissions 2026
 								</div>
 							</div>
 						</div>
@@ -309,17 +351,132 @@
 <style>
 	.hero-overlay {
 		background:
-			linear-gradient(
-				95deg,
-				rgba(8, 14, 31, 0.9) 10%,
-				rgba(20, 32, 74, 0.7) 50%,
-				rgba(20, 32, 74, 0.3) 100%
-			),
-			radial-gradient(circle at 15% 30%, rgba(251, 191, 36, 0.22), transparent 50%);
+			radial-gradient(circle at 10% 20%, rgba(26, 20, 67, 0.8) 0%, transparent 50%),
+			radial-gradient(circle at 90% 80%, rgba(124, 77, 255, 0.2) 0%, transparent 50%),
+			linear-gradient(to bottom, #050816 0%, rgba(5, 8, 22, 0.8) 50%, #050816 100%);
+		position: relative;
 	}
 
-	.hero-copy {
-		animation: fade-up 0.7s ease-out both;
+	.hero-overlay::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		opacity: 0.03;
+		pointer-events: none;
+	}
+
+	.hero-title {
+		font-family: 'Clash Display', 'Inter', sans-serif;
+	}
+
+	.gradient-text {
+		background: linear-gradient(90deg, #ffd84d 0%, #ff4fd8 50%, #7c4dff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 200% auto;
+		animation: textShine 5s linear infinite;
+	}
+
+	@keyframes textShine {
+		to {
+			background-position: 200% center;
+		}
+	}
+
+	.neon-path {
+		stroke-dasharray: 400;
+		stroke-dashoffset: 400;
+		animation: drawLine 2s ease-out forwards 1s;
+	}
+
+	@keyframes drawLine {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.btn-yellow-glow {
+		@apply flex items-center justify-center gap-3 px-8 py-4 bg-[#FFD84D] text-[#050816] font-black rounded-xl transition-all duration-300;
+		box-shadow: 0 0 30px rgba(255, 216, 77, 0.2);
+	}
+
+	.btn-yellow-glow:hover {
+		@apply -translate-y-1;
+		box-shadow: 0 10px 40px rgba(255, 216, 77, 0.4);
+	}
+
+	.btn-glass-premium {
+		@apply flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl backdrop-blur-md transition-all duration-300;
+	}
+
+	.btn-glass-premium:hover {
+		@apply bg-white/10 border-white/20 -translate-y-1;
+	}
+
+	.stat-item {
+		@apply flex flex-col items-center md:items-start;
+	}
+
+	.stat-num {
+		@apply text-2xl md:text-3xl font-bold text-white tracking-tighter;
+	}
+
+	.stat-label {
+		@apply text-[10px] md:text-xs text-[#B8C0D9] font-bold uppercase tracking-[0.1em];
+	}
+
+	.hero-card-ultra {
+		@apply relative transition-all duration-1000 ease-out;
+		animation: float-ultra 8s ease-in-out infinite;
+	}
+
+	.hero-card-ultra img {
+		@apply w-full h-full object-cover transition-all duration-1000;
+		filter: contrast(1) brightness(1) saturate(1);
+	}
+
+	.hero-card-ultra:hover img {
+		transform: scale(1.05);
+		filter: contrast(1.15) brightness(1) saturate(1.3);
+	}
+
+	.minimal-pill {
+		@apply px-4 py-1.5 bg-black/40 backdrop-blur-md border border-white/10 rounded-full text-[9px] font-bold uppercase tracking-[0.15em] text-white flex items-center gap-2;
+	}
+
+	.pill-dot-small {
+		@apply w-1.5 h-1.5 rounded-full bg-[#34D399] shadow-[0_0_8px_#34D399];
+	}
+
+	.minimal-glass-card {
+		@apply p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl;
+	}
+
+	.grade-indicator {
+		@apply w-10 h-10 flex items-center justify-center bg-[#FFD84D] text-[#050816] font-black rounded-lg text-sm shadow-lg;
+	}
+
+	@keyframes float-ultra {
+		0%,
+		100% {
+			transform: translateY(0) rotate(0deg);
+		}
+		50% {
+			transform: translateY(-30px) rotate(0.5deg);
+		}
+	}
+
+	@keyframes pulse-emerald {
+		0%,
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+		50% {
+			opacity: 0.5;
+			transform: scale(1.2);
+		}
 	}
 
 	.cursor {
@@ -390,34 +547,78 @@
 	.hero-card {
 		position: relative;
 		width: min(100%, 30rem);
-		border-radius: 1.5rem;
+		border-radius: 2.5rem;
 		overflow: hidden;
-		border: 1px solid rgba(255, 255, 255, 0.4);
-		background: rgba(255, 255, 255, 0.1);
-		backdrop-filter: blur(12px);
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-		transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-		z-index: 5;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		background: rgba(15, 23, 42, 0.4);
+		backdrop-filter: blur(8px);
+		box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+		transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+		animation: floating-card 6s ease-in-out infinite;
 	}
 
 	.hero-card:hover {
-		transform: scale(1.05) translateY(-8px);
-		z-index: 10;
-		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-		border-color: rgba(251, 191, 36, 0.8);
+		transform: scale(1.02) translateY(-10px) rotate(1deg);
+		border-color: rgba(251, 191, 36, 0.5);
+		box-shadow:
+			0 40px 80px -20px rgba(0, 0, 0, 0.8),
+			0 0 20px rgba(251, 191, 36, 0.1);
 	}
 
-	.hero-card img {
+	.hero-img-animated {
 		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		aspect-ratio: 16 / 10;
-		transition: transform 0.8s ease;
+		filter: contrast(1.1) brightness(1.05) saturate(1.15);
+		animation: ken-burns 30s ease-in-out infinite alternate;
+		transition: filter 0.5s ease;
 	}
 
-	.hero-card:hover img {
-		transform: scale(1.1);
+	.hero-card:hover .hero-img-animated {
+		filter: contrast(1.15) brightness(1.1) saturate(1.2);
+	}
+
+	.glass-shine {
+		background: linear-gradient(
+			135deg,
+			transparent 0%,
+			rgba(255, 255, 255, 0) 40%,
+			rgba(255, 255, 255, 0.15) 50%,
+			rgba(255, 255, 255, 0) 60%,
+			transparent 100%
+		);
+		background-size: 200% 200%;
+		animation: shine-sweep 8s linear infinite;
+	}
+
+	@keyframes ken-burns {
+		0% {
+			transform: scale(1) translate(0, 0);
+		}
+		100% {
+			transform: scale(1.2) translate(-2%, -2%);
+		}
+	}
+
+	@keyframes floating-card {
+		0%,
+		100% {
+			transform: translateY(0) rotate(0deg);
+		}
+		50% {
+			transform: translateY(-15px) rotate(-0.5deg);
+		}
+	}
+
+	@keyframes shine-sweep {
+		0% {
+			background-position: -200% -200%;
+		}
+		100% {
+			background-position: 200% 200%;
+		}
 	}
 
 	.content-visibility-auto {

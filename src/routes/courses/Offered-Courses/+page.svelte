@@ -4,17 +4,52 @@
 	import { goto } from '$app/navigation';
 
 	const bTechPrograms = [
-		{ sno: 1, estd: 2008, name: 'Computer Science & Engineering', intake: 180, slug: 'Department of CSE' },
-		{ sno: 2, estd: 2020, name: 'CSE - AI & Machine Learning', intake: 60, slug: 'Department of CSE (AI & ML)' },
-		{ sno: 3, estd: 2020, name: 'CSE - Cyber Security', intake: 60, slug: 'Department of CSE (Cyber Security)' },
-		{ sno: 4, estd: 2008, name: 'Electronics & Communication Engineering', intake: 120, slug: 'Department of ECE' },
-		{ sno: 5, estd: 2008, name: 'Electrical & Electronic Engineering', intake: 60, slug: 'Department of EEE' },
+		{
+			sno: 1,
+			estd: 2008,
+			name: 'Computer Science & Engineering',
+			intake: 180,
+			slug: 'Department of CSE'
+		},
+		{
+			sno: 2,
+			estd: 2020,
+			name: 'CSE - AI & Machine Learning',
+			intake: 60,
+			slug: 'Department of CSE (AI & ML)'
+		},
+		{
+			sno: 3,
+			estd: 2020,
+			name: 'CSE - Cyber Security',
+			intake: 60,
+			slug: 'Department of CSE (Cyber Security)'
+		},
+		{
+			sno: 4,
+			estd: 2008,
+			name: 'Electronics & Communication Engineering',
+			intake: 120,
+			slug: 'Department of ECE'
+		},
+		{
+			sno: 5,
+			estd: 2008,
+			name: 'Electrical & Electronic Engineering',
+			intake: 60,
+			slug: 'Department of EEE'
+		},
 		{ sno: 6, estd: 2008, name: 'Mechanical Engineering', intake: 60, slug: 'Department of MECH' }
 	];
 
 	const pgPrograms = [
 		{ sno: 1, duration: '2 Years', name: 'Master of Technology (M.Tech)', slug: null },
-		{ sno: 2, duration: '2 Years', name: 'Master of Business Administration (MBA)', slug: 'Department of MBA' }
+		{
+			sno: 2,
+			duration: '2 Years',
+			name: 'Master of Business Administration (MBA)',
+			slug: 'Department of MBA'
+		}
 	];
 
 	let activeTab = 'btech';
@@ -31,7 +66,7 @@
 	}
 </script>
 
-<Seo 
+<Seo
 	title="Courses Offered - BITS Vizag"
 	description="Explore the comprehensive range of academic programs offered at BITS Vizag. Join us to shape your future."
 	url="https://bitsvizag.com/courses/Offered-Courses"
@@ -49,7 +84,7 @@
 	<div class="content-wrapper {visible ? 'fade-in' : ''}">
 		<header class="page-header">
 			<h1>Courses Offered</h1>
-			<p class="subtitle">Comprehensive Academic Offerings at RVIT</p>
+			<p class="subtitle">Comprehensive Academic Offerings at BITS Vizag</p>
 		</header>
 
 		<div class="admission-section">
@@ -57,22 +92,25 @@
 				<div class="admission-icon">ⓘ</div>
 				<div class="admission-text">
 					<strong>Admission Allocation</strong>
-					<p>70% seats allotted via EAPCET / ECET / PGECET / ICET. 30% seats earmarked for Management / NRI Quota.</p>
+					<p>
+						70% seats allotted via EAPCET / ECET / PGECET / ICET. 30% seats earmarked for Management
+						/ NRI Quota.
+					</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="tabs-container">
 			<div class="tabs-nav">
-				<button 
+				<button
 					class="tab-btn {activeTab === 'btech' ? 'active' : ''}"
-					on:click={() => activeTab = 'btech'}
+					on:click={() => (activeTab = 'btech')}
 				>
 					<span class="icon">🎓</span> B.Tech
 				</button>
-				<button 
+				<button
 					class="tab-btn {activeTab === 'pg' ? 'active' : ''}"
-					on:click={() => activeTab = 'pg'}
+					on:click={() => (activeTab = 'pg')}
 				>
 					<span class="icon">📚</span> PG Courses
 				</button>
@@ -114,7 +152,9 @@
 						<h2 class="section-title">
 							<span class="icon">📚</span>
 							POSTGRADUATE
-							<span class="sub-title">Master of Technology (M.Tech) and Master of Business Administration (MBA)</span>
+							<span class="sub-title"
+								>Master of Technology (M.Tech) and Master of Business Administration (MBA)</span
+							>
 						</h2>
 						<div class="table-wrapper">
 							<table class="courses-table">
@@ -128,7 +168,10 @@
 								</thead>
 								<tbody>
 									{#each pgPrograms as course}
-										<tr class="course-row {course.slug ? 'is-clickable' : 'is-static'}" on:click={() => navigateToCourse(course.slug)}>
+										<tr
+											class="course-row {course.slug ? 'is-clickable' : 'is-static'}"
+											on:click={() => navigateToCourse(course.slug)}
+										>
 											<td>{course.sno}</td>
 											<td>{course.duration}</td>
 											<td class="course-name-cell">{course.name}</td>
@@ -231,10 +274,18 @@
 	}
 
 	@keyframes blob-float {
-		0% { transform: translate(0, 0) scale(1); }
-		33% { transform: translate(30px, -50px) scale(1.1); }
-		66% { transform: translate(-20px, 20px) scale(0.9); }
-		100% { transform: translate(0, 0) scale(1); }
+		0% {
+			transform: translate(0, 0) scale(1);
+		}
+		33% {
+			transform: translate(30px, -50px) scale(1.1);
+		}
+		66% {
+			transform: translate(-20px, 20px) scale(0.9);
+		}
+		100% {
+			transform: translate(0, 0) scale(1);
+		}
 	}
 
 	.content-wrapper {

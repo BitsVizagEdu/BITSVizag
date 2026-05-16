@@ -28,7 +28,7 @@
 	title="About Our College"
 	{intro}
 	{sections}
-	imageSrc="/baba1.png"
+	imageSrc="/bitsvizag.png"
 	imageAlt="BITS Vizag campus building"
 	personName="BITS Vizag"
 	personRole="Excellence in Technical Education"

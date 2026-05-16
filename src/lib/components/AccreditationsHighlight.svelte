@@ -27,12 +27,6 @@
 			logo: '/Accredation-logos/JNTUGV.jpg'
 		},
 		{
-			name: 'NIRF',
-			subtitle: 'Innovation',
-			color: 'from-indigo-500 to-violet-600',
-			logo: '/Accredation-logos/NIRF.png'
-		},
-		{
 			name: 'IIC',
 			subtitle: 'Recognized',
 			color: 'from-rose-400 to-pink-600',
@@ -55,12 +49,6 @@
 			subtitle: 'Innovation Cell',
 			color: 'from-blue-600 to-indigo-800',
 			logo: "/Accredation-logos/MOE'S.png"
-		},
-		{
-			name: 'UGC',
-			subtitle: '2(f) & 12(B)',
-			color: 'from-blue-500 to-sky-600',
-			logo: '/Accredation-logos/UGC1.png'
 		},
 		{
 			name: 'APSSDC',
@@ -118,7 +106,7 @@
 			</div>
 
 			<!-- Premium Grid -->
-			<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-6">
+			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
 				{#each accreditations as item, i}
 					<div
 						class="group relative flex flex-col items-center justify-center p-3 sm:p-8 bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-amber-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl {isActive
