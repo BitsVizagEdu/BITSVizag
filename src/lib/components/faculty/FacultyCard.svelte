@@ -90,9 +90,19 @@
 	</header>
 
 	<div class="card-body">
-		<p class="faculty-qualification">{faculty.qualification}</p>
+		{#if faculty.qualification}
+			<p class="faculty-qualification">{faculty.qualification}</p>
+		{/if}
 		{#if experienceLabel}
 			<p class="experience-pill">{experienceLabel}</p>
+		{/if}
+		{#if faculty.mobile}
+			<a href="tel:{faculty.mobile}" class="faculty-mobile" title="Call Mobile">
+				<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+					<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+				</svg>
+				{faculty.mobile}
+			</a>
 		{/if}
 	</div>
 
@@ -238,10 +248,14 @@
 	.faculty-name {
 		margin: 0;
 		font-size: 0.95rem;
-		line-height: 1.2;
+		line-height: 1.25;
 		font-weight: 700;
 		color: #0f172a;
-		white-space: nowrap;
+		white-space: normal;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 		letter-spacing: -0.015em;
 	}
 
@@ -285,6 +299,29 @@
 		color: #0f766e;
 		white-space: nowrap;
 		margin-top: 0.1rem;
+	}
+
+	.faculty-mobile {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		margin: 0;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #475569;
+		text-decoration: none;
+		margin-top: 0.1rem;
+		transition: color 0.25s ease;
+	}
+
+	.faculty-mobile:hover {
+		color: var(--primary-color, #0ea5e9);
+	}
+
+	.faculty-mobile svg {
+		width: 12px;
+		height: 12px;
+		opacity: 0.75;
 	}
 
 	.card-footer {
@@ -428,6 +465,17 @@
 		.experience-pill {
 			font-size: 0.45rem;
 			padding: 0.05rem 0.25rem;
+		}
+
+		.faculty-mobile {
+			font-size: 0.55rem;
+			gap: 0.2rem;
+			margin-top: 0.05rem;
+		}
+
+		.faculty-mobile svg {
+			width: 8px;
+			height: 8px;
 		}
 
 		.card-footer {
