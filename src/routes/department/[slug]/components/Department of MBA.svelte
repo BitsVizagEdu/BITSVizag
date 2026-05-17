@@ -25,6 +25,27 @@
 		{ num: '90%', label: 'Placements', sub: 'Year on year' }
 	];
 
+	const facultyRows = [
+		{ name: 'Dr. Gollapalli Venkata Lakshmi', role: 'Associate Professor', qual: 'Ph.D', mobile: '9848244732' },
+		{ name: 'Bobbili Devi', role: 'Assistant Professor', qual: 'M.B.A', mobile: '7396362754' },
+		{ name: 'Bugatha Naga Sai', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8121937579' },
+		{ name: 'Bugatha Santhoshi Kumari', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8500877310' },
+		{ name: 'Chukka Sathish', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9490863326' },
+		{ name: 'Gowri Siva Prasad Bipilli', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9298052173' },
+		{ name: 'Kandalam Yamuna Satya Pravallika', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9963390618' },
+		{ name: 'Kanugo Sireesha', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9703193788' },
+		{ name: 'Kiran Kumar Tripurana', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9989074888' },
+		{ name: 'Malicherla Vasudeva Rao', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9885993163' },
+		{ name: 'Naresh Kumar Kuppili', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9550448999' },
+		{ name: 'Sadagana Chaitanya', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9182128278' },
+		{ name: 'Sairama Bayana', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8074558577' },
+		{ name: 'Sidda Abhishek', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9381980051' },
+		{ name: 'Sidda Alekhya', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8179243661' },
+		{ name: 'Uddanda Pratyusha', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8367316439' },
+		{ name: 'Vanjarana V Kanaka Mahalakshmi', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9000241760' },
+		{ name: 'Yellabilli Sunitha', role: 'Assistant Professor', qual: 'M.B.A', mobile: '6303799308' }
+	];
+
 	function reveal(node, delay = 0) {
 		node.style.cssText += `
 			opacity:0;
@@ -190,6 +211,32 @@
 								stroke-linecap="round"
 							/>
 						</svg>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</section>
+
+	<!-- FACULTY -->
+	<section class="s-faculty">
+		<div class="shell">
+			<div class="s-header" use:reveal={0}>
+				<span class="eyebrow-pill">Our Team</span>
+				<h2 class="s-heading">Expert Faculty</h2>
+			</div>
+			
+			<div class="faculty-grid">
+				{#each facultyRows as faculty, i}
+					<div class="faculty-card" use:reveal={i * 30}>
+						<div class="fac-info">
+							<h4 class="fac-name">{faculty.name}</h4>
+							<div class="fac-role">{faculty.role}</div>
+							<div class="fac-qual">{faculty.qual}</div>
+							<a href="tel:{faculty.mobile}" class="fac-contact">
+								<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l2.27-2.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+								{faculty.mobile}
+							</a>
+						</div>
 					</div>
 				{/each}
 			</div>
@@ -699,6 +746,65 @@
 	.lab-card:hover .lab-arr {
 		color: var(--gold-700);
 		transform: translate(2px, -2px);
+	}
+
+	/* FACULTY */
+	.s-faculty {
+		background: var(--surface);
+		padding: 5.5rem 0;
+		border-top: 1px solid var(--border);
+	}
+	.faculty-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 15px;
+	}
+	.faculty-card {
+		background: var(--white);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		padding: 1.5rem;
+		transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+	}
+	.faculty-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+		border-color: var(--gold-500);
+	}
+	.fac-name {
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--ink);
+		margin-bottom: 0.25rem;
+	}
+	.fac-role {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--gold-700);
+		margin-bottom: 0.5rem;
+	}
+	.fac-qual {
+		font-size: 0.75rem;
+		color: var(--ink-3);
+		margin-bottom: 1rem;
+		display: inline-block;
+		background: var(--surface);
+		padding: 0.2rem 0.6rem;
+		border-radius: 4px;
+		border: 1px solid var(--border);
+	}
+	.fac-contact {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--ink-2);
+		text-decoration: none;
+		margin-top: auto;
+	}
+	.fac-contact:hover {
+		color: var(--gold-700);
 	}
 
 	/* HOD */

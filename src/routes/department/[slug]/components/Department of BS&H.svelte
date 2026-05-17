@@ -19,10 +19,22 @@
 
 	const facultyRows = [
 		{
+			name: 'Dr. Dusi Narasimha Murty',
+			role: 'Associate Professor',
+			qual: 'Ph.D',
+			mobile: '9398688852'
+		},
+		{
 			name: 'Dr. P. Jayarangarao',
 			role: 'Associate Professor & HOD',
 			qual: 'Ph.D',
-			mobile: '9885597840'
+			mobile: '9885597842'
+		},
+		{
+			name: 'Dr. Ganduri Uma Sankar',
+			role: 'Associate Professor',
+			qual: 'Ph.D',
+			mobile: '9885056352'
 		},
 		{
 			name: 'Dr. Paromita Mukherjee',
@@ -31,10 +43,10 @@
 			mobile: '9313184040'
 		},
 		{
-			name: 'Mrs. Dr. Piyali Varma',
-			role: 'Sr. Assistant Professor',
-			qual: 'M.A',
-			mobile: '9642932971'
+			name: 'Dr. Samareddy Sravan Kumar',
+			role: 'Associate Professor',
+			qual: 'Ph.D',
+			mobile: '9494369900'
 		},
 		{
 			name: 'Dr. P. V. Murali',
@@ -43,40 +55,101 @@
 			mobile: '9492535197'
 		},
 		{
+			name: 'Dr. Gandham Suneetha Rani',
+			role: 'Associate Professor',
+			qual: 'Ph.D',
+			mobile: '8008506949'
+		},
+		{
+			name: 'Kathula Serisha',
+			role: 'Assistant Professor',
+			qual: 'M.Tech',
+			mobile: '9440938025'
+		},
+		{
+			name: 'Gollamandala Noel',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '7989675577'
+		},
+		{
 			name: 'Mrs. G. Jyothi',
 			role: 'Sr. Assistant Professor',
 			qual: 'M.Phil',
 			mobile: '9989609399'
 		},
-		{ name: 'Mr. P. Mahesh', role: 'Sr. Assistant Professor', qual: 'Ph.D', mobile: '9866358722' },
 		{
-			name: 'Mrs. K. Serisha',
+			name: 'Mrs. Dr. Piyali Varma',
 			role: 'Sr. Assistant Professor',
-			qual: 'M.Tech',
-			mobile: '9440938025'
+			qual: 'M.A',
+			mobile: '9642932971'
 		},
 		{
-			name: 'Mrs. B. V. Kavitha',
-			role: 'Sr. Assistant Professor',
+			name: 'Lanka Priyanka',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '8074127417'
+		},
+		{
+			name: 'Mondi Mounika',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '9515099654'
+		},
+		{
+			name: 'Palakollu Mahesh',
+			role: 'Assistant Professor',
 			qual: 'Ph.D',
-			mobile: '9985388148'
+			mobile: '9866358722'
 		},
 		{
-			name: 'Mrs. P. Surya Kumari',
-			role: 'Sr. Assistant Professor',
+			name: 'Pulli Eswararao',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '9705059627'
+		},
+		{
+			name: 'Pydikondala Surya Kumari',
+			role: 'Assistant Professor',
 			qual: 'M.Sc',
 			mobile: '9951934411'
 		},
 		{
-			name: 'Dr. T. Suneetha Rani',
+			name: 'Sriperembudhuru Sowmya Latha',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '9848585013'
+		},
+		{
+			name: 'Sukka Venkatakavitha',
 			role: 'Assistant Professor',
 			qual: 'Ph.D',
-			mobile: '8008506949'
+			mobile: '9985388148'
 		},
-		{ name: 'Mrs. L. Priyanka', role: 'Assistant Professor', qual: 'M.Sc', mobile: '8074127417' },
-		{ name: 'Ms. M. Mounika', role: 'Assistant Professor', qual: 'M.Sc', mobile: '9515099654' },
-		{ name: 'Ms. V. Jyothi', role: 'Assistant Professor', qual: 'M.A', mobile: '8977615102' },
-		{ name: 'Mr. A. Pydiraju', role: 'Assistant Professor', qual: 'M.A', mobile: '7893429433' }
+		{
+			name: 'Yarra Appalaraju',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '8500337689'
+		},
+		{
+			name: 'Vidhyarani Mehar',
+			role: 'Assistant Professor',
+			qual: 'M.Sc',
+			mobile: '6301298509'
+		},
+		{
+			name: 'Aratikatla Pydi Raju',
+			role: 'Chief Librarian',
+			qual: 'M.A',
+			mobile: '7893429433'
+		},
+		{
+			name: 'Choppa Chandra Sekhar',
+			role: 'Physical Director',
+			qual: 'M.P.Ed',
+			mobile: '9885075455'
+		}
 	];
 
 	const labCategories = [
