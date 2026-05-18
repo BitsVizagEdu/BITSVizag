@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	import '../app.css';
 	import Nav from '$lib/components/navmenu.svelte';
@@ -15,6 +16,11 @@
 	import MobileHeader from '$lib/components/MobileHeader.svelte';
 
 	let aosInitialized = false;
+	let showWelcomeOverlay = true;
+
+	function closeWelcome() {
+		showWelcomeOverlay = false;
+	}
 
 	onMount(() => {
 		// Defer AOS initialization to next frame to avoid blocking render
@@ -81,6 +87,41 @@
 	<main>
 		<!-- Scroll Progress Bar - Always on Top -->
 		<ScrollProgressBar />
+
+		{#if showWelcomeOverlay}
+			<div
+				out:fade={{ duration: 600 }}
+				class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050816]/95 backdrop-blur-2xl p-2 sm:p-4 select-none"
+			>
+				<!-- Atmospheric Glows -->
+				<div class="absolute -top-[20%] left-[20%] w-[500px] h-[500px] bg-[#7C4DFF]/10 blur-[120px] rounded-full pointer-events-none"></div>
+				<div class="absolute -bottom-[20%] right-[20%] w-[500px] h-[500px] bg-[#FF4FD8]/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+				<div class="relative max-w-5xl md:max-w-6xl lg:max-w-[85vw] w-full flex flex-col items-center animate-fade-in px-2 sm:px-4">
+					<!-- Clickable Premium Image Container -->
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
+					<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+					<div 
+						on:click={closeWelcome}
+						class="relative group cursor-pointer rounded-2xl sm:rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.85)] hover:scale-[1.005] hover:border-amber-500/40 transition-all duration-500"
+					>
+						<!-- Neon Edge Glow -->
+						<div class="absolute -inset-0.5 bg-gradient-to-br from-[#7C4DFF] via-[#FF4FD8] to-[#00D4FF] rounded-2xl sm:rounded-[2rem] blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+						<div class="relative bg-[#080e1f] rounded-2xl sm:rounded-[2rem] overflow-hidden">
+							<picture>
+								<source media="(max-width: 768px)" srcset="/mobile-overlay.png" />
+								<img 
+									src="/welcomr-overlay.png" 
+									alt="Welcome to BITS Vizag" 
+									class="w-full h-auto object-cover max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] transition-transform duration-700"
+								/>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		{/if}
 
 		<div
 			class="social-rail flex fixed right-3 top-1/2 -translate-y-1/2 z-[100] transition-opacity duration-300 {$showNavBar
@@ -280,5 +321,20 @@
 			top: 60% !important;
 			scale: 0.85;
 		}
+	}
+
+	@keyframes fadeInWelcome {
+		from {
+			opacity: 0;
+			transform: scale(0.96);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.animate-fade-in {
+		animation: fadeInWelcome 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 	}
 </style>
