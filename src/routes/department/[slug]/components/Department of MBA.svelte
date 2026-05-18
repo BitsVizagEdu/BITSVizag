@@ -29,7 +29,6 @@
 		{ name: 'Dr. Gollapalli Venkata Lakshmi', role: 'Associate Professor', qual: 'Ph.D', mobile: '9848244732' },
 		{ name: 'Bobbili Devi', role: 'Assistant Professor', qual: 'M.B.A', mobile: '7396362754' },
 		{ name: 'Bugatha Naga Sai', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8121937579' },
-		{ name: 'Bugatha Santhoshi Kumari', role: 'Assistant Professor', qual: 'M.B.A', mobile: '8500877310' },
 		{ name: 'Chukka Sathish', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9490863326' },
 		{ name: 'Gowri Siva Prasad Bipilli', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9298052173' },
 		{ name: 'Kandalam Yamuna Satya Pravallika', role: 'Assistant Professor', qual: 'M.B.A', mobile: '9963390618' },

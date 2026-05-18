@@ -322,53 +322,95 @@
 
 	const facultyRows = [
 		{
-			name: 'Prof. K. Venkateswara Rao',
-			role: 'HOD - Professor',
-			exp: '25+ Years',
-			qual: 'M.Tech., Ph.D',
-			mobile: '99999 00000'
-		},
-		{
-			name: 'Dr. E. Anil Kumar',
-			role: 'Associate Professor',
-			exp: '12+ Years',
-			qual: 'M.Tech., Ph.D.',
-			mobile: '8096173988'
-		},
-		{
-			name: 'Dr. U. KAMARAJU',
-			role: 'Associate Professor',
-			exp: '12+ Years',
+			name: 'Dr. Kamaraju Vechalapu',
+			role: 'HOD - Associate Professor',
+			exp: '14+ Years',
 			qual: 'Ph.D',
 			mobile: '9963268636'
 		},
 		{
-			name: 'Mr. P. Arun Tez',
-			role: 'Sr. Assistant Professor',
-			exp: '11+ Years',
+			name: 'Ms. Bhuvanagiri Hindu',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
 			qual: 'M.Tech',
-			mobile: '9494518461'
+			mobile: '8977741234'
 		},
 		{
-			name: 'Mr. B. V. S. PREM SAGAR',
-			role: 'Sr. Assistant Professor',
-			exp: '10+ Years',
-			qual: 'M.Tech., M.B.A',
-			mobile: '9985742615'
+			name: 'Mr. Binnada Lohidas',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8790949565'
 		},
 		{
-			name: 'Ms. D. Sudhamsha',
+			name: 'Mr. Bobbili Lakshminarayana',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9618994579'
+		},
+		{
+			name: 'Ms. Doki Sudhamsha',
 			role: 'Assistant Professor',
 			exp: '8+ Years',
 			qual: 'M.Tech',
 			mobile: '9177228301'
 		},
 		{
-			name: 'Ms. G. Aliveni',
+			name: 'Mr. Gompa Rajesh',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8106992143'
+		},
+		{
+			name: 'Ms. Gurla Aliveni',
 			role: 'Assistant Professor',
 			exp: '7+ Years',
 			qual: 'M.Tech',
 			mobile: '6305862557'
+		},
+		{
+			name: 'Mr. Kasi Venkateswararao',
+			role: 'Professor',
+			exp: '25+ Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '8897173977'
+		},
+		{
+			name: 'Mr. Manthri Venkta Satya Prem Sagar',
+			role: 'Assistant Professor',
+			exp: '15+ Years',
+			qual: 'M.Tech., M.B.A',
+			mobile: '7799885355'
+		},
+		{
+			name: 'Ms. Terukoti Divya',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9553007531'
+		},
+		{
+			name: 'Mr. Velagala L S S Phani Reddy',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9966963328'
+		},
+		{
+			name: 'Mr. Modugu Kranthi Kumar',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9550090904'
+		},
+		{
+			name: 'Mr. Pallapothula Naga Praveen Kumar',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8978180559'
 		}
 	];
 

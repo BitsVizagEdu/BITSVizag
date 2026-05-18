@@ -18,13 +18,111 @@
 	];
 
 	const facultyRows = [
-		{ name: 'Dr. A. S. Bhanu Prasanna', role: 'HOD & Assoc. Prof', exp: '19Y', qual: 'Ph.D', mobile: '8008633321' },
-		{ name: 'Dr. Fathimunnisa Begum', role: 'Associate Professor', exp: '18Y', qual: 'Ph.D', mobile: '6301685115' },
-		{ name: 'Dr. P. Uma Chaithanya', role: 'Associate Professor', exp: '16Y', qual: 'Ph.D', mobile: '9817049898' },
-		{ name: 'Mr. Vikas Ranjan', role: 'Sr. Assistant Prof', exp: '11Y', qual: 'Ph.D', mobile: '9391339296' },
-		{ name: 'Mr. H. Satyanarayana', role: 'Sr. Assistant Prof', exp: '14Y', qual: 'M.Tech', mobile: '9491626873' },
-		{ name: 'Mr. Reddy Ramesh', role: 'Assistant Professor', exp: '5Y', qual: 'M.Tech', mobile: '8500652035' },
-		{ name: 'Mr. V. Preetham Kumar', role: 'Assistant Professor', exp: '1Y', qual: 'M.Tech', mobile: '9701161391' }
+		{
+			name: 'Dr. A S Bhanu Prasanna',
+			role: 'Associate Professor',
+			exp: '19+ Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '8008633321'
+		},
+		{
+			name: 'Dr. Pathem Uma Chaithanya',
+			role: 'Associate Professor',
+			exp: '16+ Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '9817049898'
+		},
+		{
+			name: 'Dr. Fathimunnisa Begum',
+			role: 'Associate Professor',
+			exp: '18+ Years',
+			qual: 'M.Tech., Ph.D',
+			mobile: '9966540481'
+		},
+		{
+			name: 'Ms. Andiboyina Sireesha',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '6617920112'
+		},
+		{
+			name: 'Mr. Azeez Mohammed Ali',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9676873876'
+		},
+		{
+			name: 'Mr. Bodapati Durga Prasad',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9494714351'
+		},
+		{
+			name: 'Ms. Dharmala Venkata Padmaja',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9985888669'
+		},
+		{
+			name: 'Ms. Maddula Leela Sai Suguna Mani',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8297830888'
+		},
+		{
+			name: 'Mr. Mallapu Satyanarayana',
+			role: 'Assistant Professor',
+			exp: '14+ Years',
+			qual: 'M.Tech',
+			mobile: '9491626873'
+		},
+		{
+			name: 'Mr. Pothina Surya Rao',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8374302229'
+		},
+		{
+			name: 'Mr. Reddy Ramesh',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8500652035'
+		},
+		{
+			name: 'Mr. Vadapalli Preetham Kumar',
+			role: 'Assistant Professor',
+			exp: '0.7+ Years',
+			qual: 'M.Tech',
+			mobile: '9701161391'
+		},
+		{
+			name: 'Mr. Vamsi Krishna Balaga',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9492017425'
+		},
+		{
+			name: 'Mr. Vikas Ranjan',
+			role: 'Assistant Professor',
+			exp: '11+ Years',
+			qual: 'Ph.D',
+			mobile: '7794868025'
+		},
+		{
+			name: 'Mr. Maturi Kishore',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9502034507'
+		}
 	];
 
 	const labCategories = [

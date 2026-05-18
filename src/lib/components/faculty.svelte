@@ -118,1669 +118,1687 @@
 		'Somu Harshini': 1,
 		'Surapureddy Samyukta': 5,
 		'Thalluri Chaitanya': 7
-};
+	,
+		'Kamaraju Vechalapu': 14,
+		'Bhuvanagiri Hindu': 5,
+		'Binnada Lohidas': 5,
+		'Bobbili Lakshminarayana': 5,
+		'Doki Sudhamsha': 8,
+		'Gompa Rajesh': 5,
+		'Gurla Aliveni': 7,
+		'Kasi Venkateswararao': 25,
+		'Manthri Venkta Satya Prem Sagar': 15,
+		'Terukoti Divya': 5,
+		'Velagala L S S Phani Reddy': 5,
+		'Modugu Kranthi Kumar': 5,
+		'Pallapothula Naga Praveen Kumar': 5,
+		'Pathem Uma Chaithanya': 16,
+		'A S Bhanu Prasanna': 19,
+		'Fathimunnisa Begum': 18,
+		'Andiboyina Sireesha': 5,
+		'Azeez Mohammed Ali': 5,
+		'Bodapati Durga Prasad': 5,
+		'Dharmala Venkata Padmaja': 5,
+		'Maddula Leela Sai Suguna Mani': 5,
+		'Mallapu Satyanarayana': 14,
+		'Pothina Surya Rao': 5,
+		'Reddy Ramesh': 5,
+		'Vadapalli Preetham Kumar': 0.7,
+		'Vamsi Krishna Balaga': 5,
+		'Vikas Ranjan': 11,
+		'Maturi Kishore': 5,
+		'Mallavarapu Rajan Babu': 25,
+		'Babburu Kiranamaii': 25,
+		'Rudra Pratap Das': 30,
+		'Kondapalli Pradeep': 20,
+		'Ravi Kishore Maddugaru': 15,
+		'Yaddanapudi Venkata Bhaskara Lakshmi': 15,
+		'Gera Aswani Kumar': 12,
+		'Chinta Santoshi Kumari': 3,
+		'Hari Sai Krishna Tripurana': 5,
+		'Kaki Venkata Sagara Srujana': 5,
+		'Kumar R N': 5,
+		'M M Komali Chittapragada': 9,
+		'Mariserla Sri Lakshmi': 5,
+		'Moningi Ravindra Kumar': 5,
+		'Nallanichakravartula Satya Srinivasa Santosh Phani Krishna': 5,
+		'Punyamantula Venkata Hari Krishna Babu': 5,
+		'Antharakonda Ramesh': 5,
+		'Sonti Sowjanya': 5,
+		'Talari Sai Kumari': 5,
+		'Temburu Pavani': 2.8,
+		'Vishnu Murty Tammineni': 20,
+		'Bhyri Priyanka': 5,
+		'P PREETHI': 5,
+		'Dusi Narasimha Murty': 15,
+		'Jayarangarao Prathipati': 32,
+		'Ganduri Uma Sankar': 15,
+		'Paromita Mukherjee': 11,
+		'Samareddy Sravan Kumar': 15,
+		'Palla Venkata Murali': 25,
+		'Gandham Suneetha Rani': 13,
+		'Kathula Serisha': 15,
+		'Gollamandala Noel': 5,
+		'Gottumukkala Jyothi': 15,
+		'Kamada Piyali Varma': 20,
+		'Lanka Priyanka': 10,
+		'Mondi Mounika': 9,
+		'Palakollu Mahesh': 18,
+		'Pulli Eswararao': 5,
+		'Pydikondala Surya Kumari': 16,
+		'Sriperembudhuru Sowmya Latha': 5,
+		'Sukka Venkatakavitha': 13,
+		'Yarra Appalaraju': 5,
+		'Vidhyarani Mehar': 5,
+		'Aratikatla Pydi Raju': 15,
+		'Choppa Chandra Sekhar': 15};
 
 	const facultyData = [
-		{
-				title: 'Mrs',
-				name: 'T. Pavani',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '8501068852',
-				email: 'temburupavani222@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/pavani-temburu-058072299',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'CH. M. M. KOMALI',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '8121206946',
-				email: 'komalich83@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/komali-ch-8531552a6',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'K. Pradeep',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Professor',
-				department: 'ECE',
-				mobile: '9966270111',
-				email: 'pradeepbitsvizag@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-pradeep-kondapalli-36244a1ab',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'G. Aswan Kumar',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'ECE',
-				mobile: '8886065888',
-				email: 'aswanphd@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/aswan22',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Rudra Prathap Das',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Professor',
-				department: 'ECE',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'D. Sudhamsha',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '9177228301',
-				email: 'sudhamshadoki206@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'G. Aliveni',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '6305862557',
-				email: 'g.aliveni5181@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'V. Madhava Rao',
-				qualification: 'Diploma',
-				designation: 'Sr.Lab Technician',
-				department: 'EEE',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'FATHIMUNNISA BEGUM',
-				qualification: 'M.Tech.,Ph.D',
-				designation: 'Associate Professor',
-				department: 'Mechanical',
-				mobile: '6301685115',
-				email: 'fathima.mech@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-fathimunnisa-begum-28092476',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Reddy Ramesh',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '8500652035',
-				email: 'ramesh18me.392@gmail.com',
-				linkedin: 'https://in.linkedin.com/in/reddy-ramesh-b06652146',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'H. Vasudeva Rao',
-				qualification: 'M.B.A., M.Com., Ph.D',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9885993163',
-				email: 'vasumalicherla@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'K. SIVEESHA',
-				qualification: 'MBA',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9703193788',
-				email: 'sirihr22@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/kanugo-sireesha-a1b57575',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'P. JAYARANGARAO',
-				qualification: 'Ph.D',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9885597840',
-				email: 'jayarangarao1@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-jayarangarao-prathipati-967249196/',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'K .Serisha',
-				qualification: 'M.Sc., M.Tech',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9440938025',
-				email: 'serishakathula@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/kathula-serisha-b61b5b335',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'L. Priyanka',
-				qualification: 'M.Sc',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '8074127417',
-				email: 'lanka.priyanka1993@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/priyanka-lanka-a4b79413b',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'P. MAHESH',
-				qualification: 'Ph.D., M.Phil., M.Sc.',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9866358722',
-				email: 'mahe2vec@gmail.com',
-				linkedin: 'https://in.linkedin.com/in/palakollu-mahesh-13ab21335',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'P. Saranya',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'Civil',
-				mobile: '7080907889',
-				email: 'saranya.imandi@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'S. Pavani',
-				qualification: 'M.E., Ph.D',
-				designation: 'Sr. Assistant Professor',
-				department: 'Civil',
-				mobile: '9573755176',
-				email: 'bhanupavanidevi9@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'P. LAVANYA',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'Civil',
-				mobile: '7981764784',
-				email: 'lavanyapusarla9494@gmail.com',
-				linkedin: 'www.linkedin.com/in/lavanya-pusarla-a32a7838b',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'K. Lavanya',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'Civil',
-				mobile: '9182357411',
-				email: 'kotnilavanya1013@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Y. V. Bhaskararao',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'ECE',
-				mobile: '7893676891',
-				email: 'lakshmijeevan2000@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-bhaskara-lakshmi-yaddanapudi-439b58335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'B. Kiranmai',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Professor',
-				department: 'ECE',
-				mobile: '8500267193',
-				email: 'kbabburu@gmail.com',
-				linkedin: 'www.linkedin.com/in/kiranmai-b-5b5b4a3b8',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'H. Ravi Kishore',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'ECE',
-				mobile: '7989527137',
-				email: 'mrkishore7709@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-m-ravi-kishore-6416448b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Ch. SANTOSHI KUMARI',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '7731993013',
-				email: 'chintass3796@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'T. Vishnu Murthy',
-				qualification: 'M.Tech',
-				designation: 'Sr. Assistant Professor',
-				department: 'ECE',
-				mobile: '9154628433',
-				email: 'vishnutbits@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'B. V. S. PREM SAGAR',
-				qualification: 'M.Tech., M.B.A',
-				designation: 'Sr. Assistant Professor',
-				department: 'EEE',
-				mobile: '9985742615',
-				email: 'sagarmanthri@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/sagar-manthri-726979113?trk=contact-info',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'U. KAMARAJU',
-				qualification: 'Ph.D',
-				designation: 'Associate Professor',
-				department: 'EEE',
-				mobile: '9963268636',
-				email: 'raju.vechalapu@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-kamaraju-vechalapu-826b5b335?utm_source',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Shahazadi Begum',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'Civil',
-				mobile: '9032972944',
-				email: 'drshahazadibegum@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-shahazadi-begum-788638335',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'P. UMA CHAITHANYA',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'Mechanical',
-				mobile: '9817049898',
-				email: 'uma.nitw@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-pathem-uma-chaithanya',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'H. SATYANARAYANA',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9491626873',
-				email: 'satyamallapu@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/satyanarayana-mallapu-200444242',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'A. S. Bhanu Prasanna',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'Mechanical',
-				mobile: '8008633321',
-				email: 'bhanu.3549@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'V. Preetham Kumar',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9701161391',
-				email: 'preethamraju96@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/preetham-kumar-341521125?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Parameswar Rao',
-				qualification: 'Diploma',
-				designation: 'Lab Technician',
-				department: 'Mechanical',
-				mobile: '9618413946',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'N. S Appala Naidu',
-				qualification: 'ITI',
-				designation: 'Lab Technician',
-				department: 'Mechanical',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'K. Jayababu',
-				qualification: 'ITI',
-				designation: 'Lab Technician',
-				department: 'Mechanical',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'N. Ramesh',
-				qualification: 'ITI',
-				designation: 'Lab Technician',
-				department: 'Mechanical',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'N. Donbru',
-				qualification: 'ITI',
-				designation: 'Lab Technician',
-				department: 'Mechanical',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Vikas Ranjan',
-				qualification: 'Ph.D',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9391339296',
-				email: 'vikas.ranjan7@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'B. G. S. Prasad',
-				qualification: 'MBA',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9298052173',
-				email: 'sivaprasadh14@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'B. Santoshi Kumari',
-				qualification: 'MBA',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '8688914413',
-				email: 'santoshi.bugatha@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'K. NARESH KUMAR',
-				qualification: 'MBA',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '9550448999',
-				email: 'nareshpatnaik.k@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'L. Srinivasa',
-				qualification: 'MBA',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'H. Sai rama',
-				qualification: 'MBA',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '8074558577',
-				email: 'sairamalanda96@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'G. JYOTHI',
-				qualification: 'M.Phil., M.Sc',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9989609399',
-				email: 'jyothi.satapathy@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'P. V. Murali',
-				qualification: 'M.A., B.Ed., Ph.D',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9492535197',
-				email: 'pvmurali2000@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Paromita Mukherjee',
-				qualification: 'Ph.D',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9313184040',
-				email: 'drparomitabitsvizag@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/dr-paromita-mukherjee-7b301771?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Dr. Piyali Varma',
-				qualification: 'M.A',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9642932971',
-				email: 'mukherjeepiyali28@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/piyali-varma-0794413b4?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'M. Mounika',
-				qualification: 'M.Sc., B.Ed',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9515099654',
-				email: 'mounika.mondi@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/mondi-mounika-b73562283',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'T.Suneetha Rani',
-				qualification: 'Ph.D',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '8008506949',
-				email: 'sunita.gandham@gmail.com',
-				linkedin: 'https://linkedin.com/in/dr-suneetha-rani-gandham-a2b68113',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'P.Surya Kumari',
-				qualification: 'M.Sc',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9951934411',
-				email: 'suryakumari.p85@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'V. Jyothi',
-				qualification: 'M.A',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '8977615102',
-				email: 'jyothivanapalli10@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/jyothi-vanapalli-83a9a3237',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'A. PYDIRAJU',
-				qualification: 'M.A., M.L.I.Sc., M.Ed',
-				designation: 'Chief Librarian',
-				department: 'BS&H',
-				mobile: '7893429433',
-				email: 'rajkoti10@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/raju-koti-21bb5a3b8',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'B. V. KAVITHA',
-				qualification: 'M.Sc., B.Ed., Ph.D',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9985388148',
-				email: 'sukkajatin@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Dusi Narasimha Murty',
-				qualification: '',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9398688852',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Jayarangarao Prathipati',
-				qualification: '',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9885597842',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Ganduri Uma Sankar',
-				qualification: '',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9885056352',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Samareddy Sravan Kumar',
-				qualification: '',
-				designation: 'Associate Professor',
-				department: 'BS&H',
-				mobile: '9494369900',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Gollamandala Noel',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '7989675577',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Pulli Eswararao',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9705059627',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Sriperembudhuru Sowmya Latha',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '9848585013',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Yarra Appalaraju',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '8500337689',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Vidhyarani Mehar',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'BS&H',
-				mobile: '6301298509',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Choppa Chandra Sekhar',
-				qualification: '',
-				designation: 'Physical Director',
-				department: 'BS&H',
-				mobile: '9885075455',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Gollapalli Venkata Lakshmi',
-				qualification: '',
-				designation: 'Associate Professor',
-				department: 'MBA',
-				mobile: '9848244732',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bobbili Devi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '7396362754',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bugatha Naga Sai',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '8121937579',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bugatha Santhoshi Kumari',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '8500877310',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Chukka Sathish',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9490863326',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Kandalam Yamuna Satya Pravallika',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9963390618',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Kiran Kumar Tripurana',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9989074888',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Sadagana Chaitanya',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9182128278',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Sidda Abhishek',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9381980051',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Sidda Alekhya',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '8179243661',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Uddanda Pratyusha',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '8367316439',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Vanjarana V Kanaka Mahalakshmi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '9000241760',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Yellabilli Sunitha',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'MBA',
-				mobile: '6303799308',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Mallavarapu Rajan Babu',
-				qualification: '',
-				designation: 'Principal',
-				department: 'ECE',
-				mobile: '9492618186',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Rudra Pratap Das',
-				qualification: '',
-				designation: 'Professor',
-				department: 'ECE',
-				mobile: '9640552861',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Kondapalli Pradeep',
-				qualification: '',
-				designation: 'Associate Professor',
-				department: 'ECE',
-				mobile: '9160350380',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Hari Sai Krishna Tripurana',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '8247069915',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Kaki Venkata Sagara Srujana',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '9110378493',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Kumar R N',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '9676397891',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Mariserla Sri Lakshmi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '8121979622',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Moningi Ravindra Kumar',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '8919641346',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Nallanichakravartula Satya Srinivasa Santosh Phani Krishna',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '9441092231',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Punyamantula Venkata Hari Krishna Babu',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '8142349157',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Antharakonda Ramesh',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '9247856668',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Sonti Sowjanya',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '6303483862',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Vishnu Murty Tammineni',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '7893312721',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bhyri Priyanka',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '7382126203',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'P Preethi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'ECE',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Andiboyina Sireesha',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '6617920112',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Azeez Mohammed Ali',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9676873876',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bodapati Durga Prasad',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9494714351',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Dharmala Venkata Padmaja',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9985888669',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Maddula Leela Sai Suguna Mani',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '8297830888',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Pothina Surya Rao',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '8374302229',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Vamsi Krishna Balaga',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9492017425',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Maturi Kishore',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'Mechanical',
-				mobile: '9502034507',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bhuvanagiri Hindu',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '8977741234',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Binnada Lohidas',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '8790949565',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Bobbili Lakshminarayana',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '9618994579',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Gompa Rajesh',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '8106992143',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Kasi Venkateswararao',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '8897173977',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Manthri Venkta Satya Prem Sagar',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '7799885355',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Terukoti Divya',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '9553007531',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Velagala L S S Phani Reddy',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '9966963328',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Modugu Kranthi Kumar',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '9550090904',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: '',
-				name: 'Pallapothula Naga Praveen Kumar',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'EEE',
-				mobile: '8978180559',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Boyidi Poorna Satyanarayana',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Professor',
-				department: 'CSE',
-				mobile: '9121214313',
-				email: 'poornasatyanarayana@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Srirangam Durga Prasad',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Associate Professor',
-				department: 'CSE',
-				mobile: '8712297422',
-				email: '@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Uppada Padma Mohan',
-				qualification: 'M.Tech., M.C.A',
-				designation: 'Associate Professor',
-				department: 'CSE',
-				mobile: '9346335322',
-				email: 'padmauppada23@gmail.com',
-				linkedin: 'https://www.linkedin.com/padma',
-				photo: ''
-		},
-		{
-				title: 'Dr',
-				name: 'Elipilli Anil Kumar',
-				qualification: 'M.Tech., Ph.D.',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '8096173988',
-				email: 'auphdanil@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/anil-kumar-358a87369',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Boyidi Vani',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9121709043',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Bugatha S Sailaja',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9392788062',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Dakineni Durgaprasad',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9441313059',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Dulam Devee Sivaprasad',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9573333345',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'Gudivada Sushma',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '8328181573',
-				email: 'gudivadasushma30@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/sushma-gudivada-58563b335',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'Kona Janshi Venkata Modha Sai Srinija',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '8309666292',
-				email: 'saisrinija226@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/kona-janshi-venkata-modha-sai-srinija-439b5718b',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Myrala Kanthi Kiran',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9848082371',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Neela Vineeth',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9660729816',
-				email: 'vineethneela967@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/vineeth-neela-50b3b3170',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Panchareddy Gayathri',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9862477778',
-				email: 'gayathriraghuram2016@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/gayathri-p-42231239b',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Pulapalli Joshua Raju',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '8297293834',
-				email: 'josh.educato@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/joshua-raju-p-a11335163/',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Siribariki Mouli',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9885079970',
-				email: 'moulicse06@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/siribariki-mouli-55a94b38b',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'Somu Harshini',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '7893492079',
-				email: 'somuharshini0617@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/somu-harshini-2715a11a7',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'Surapureddy Samyukta',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '7980782250',
-				email: 'samyukta537@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/surapureddy-samyukta-69b3ba144',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Thalluri Chaitanya',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9490263303',
-				email: 'Thallurichaitanya85@gmail.com',
-				linkedin: 'https://www.linkedin.com/posts/bits-vizag_bitsvizag',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Vurukuti Kanakeswari',
-				qualification: 'M.Tech., Ph.D',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9908132695',
-				email: 'kanakeswaridevara@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/kanakeswari-vurukuti-01263a335',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Polamarasetty Arun Tez',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9494518461',
-				email: 'bitsaruntez@gmail.com',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Penmetsa Trinadh Santosh Priya',
-				qualification: 'M.Tech., M.C.A',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '7093275580',
-				email: 'ptspriya.bits@gmail.com',
-				linkedin: 'http://www.linkedin.com/in/pinnamraju-t-s-priya-503686326',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'Devadi Sriya Rani',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9381458890',
-				email: 'dsriya1011@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/sriya-rani-17961621b',
-				photo: ''
-		},
-		{
-				title: 'Ms',
-				name: 'Killi Jeevita',
-				qualification: 'M.Tech',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '7075440692',
-				email: 'jeevithakilli24@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/jeevitha-killi-831207254',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Mangipudi Sai Prasanna',
-				qualification: 'M.Tech., M.C.A',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '7382070704',
-				email: 'prasannababa2024@gmail.com',
-				linkedin: 'https://www.linkedin.com/home?originalSubdomain=in',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Sunnapu Naveena Priya',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9963778476',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Gunji Sravani',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '8074008507',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
-				name: 'Purushotham Teja Sai Mani Bhargav',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9989837230',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Koviri Prapurna',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '8919450150',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Mummidi Durga Bhavani',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9391218799',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Manikeswaram Krishna Kumari',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9100500370',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mrs',
-				name: 'Adapaka Uma Devi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9492262857',
-				email: '',
-				linkedin: '',
-				photo: ''
-		},
-		{
-				title: 'Mr',
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+			title: 'Mr',
+			name: 'H. Vasudeva Rao',
+			qualification: 'M.B.A., M.Com., Ph.D',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9885993163',
+			email: 'vasumalicherla@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'K. SIVEESHA',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9703193788',
+			email: 'sirihr22@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/kanugo-sireesha-a1b57575',
+			photo: ''
+		},
+		
+		
+		
+		
+		{
+			title: 'Mrs',
+			name: 'P. Saranya',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Civil',
+			mobile: '7080907889',
+			email: 'saranya.imandi@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'S. Pavani',
+			qualification: 'M.E., Ph.D',
+			designation: 'Sr. Assistant Professor',
+			department: 'Civil',
+			mobile: '9573755176',
+			email: 'bhanupavanidevi9@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'P. LAVANYA',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Civil',
+			mobile: '7981764784',
+			email: 'lavanyapusarla9494@gmail.com',
+			linkedin: 'www.linkedin.com/in/lavanya-pusarla-a32a7838b',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'K. Lavanya',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Civil',
+			mobile: '9182357411',
+			email: 'kotnilavanya1013@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		
+		
+		
+		
+		
+		
+		
+		{
+			title: 'Dr',
+			name: 'Shahazadi Begum',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Associate Professor',
+			department: 'Civil',
+			mobile: '9032972944',
+			email: 'drshahazadibegum@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/dr-shahazadi-begum-788638335',
+			photo: ''
+		},
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+			title: 'Mr',
+			name: 'B. G. S. Prasad',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9298052173',
+			email: 'sivaprasadh14@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'B. Santoshi Kumari',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8688914413',
+			email: 'santoshi.bugatha@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		
+		{
+			title: 'Mr',
+			name: 'L. Srinivasa',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'H. Sai rama',
+			qualification: 'MBA',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8074558577',
+			email: 'sairamalanda96@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+			title: 'Dr',
+			name: 'Gollapalli Venkata Lakshmi',
+			qualification: '',
+			designation: 'Associate Professor',
+			department: 'MBA',
+			mobile: '9848244732',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Bobbili Devi',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '7396362754',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Bugatha Naga Sai',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8121937579',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Chukka Sathish',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9490863326',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Kandalam Yamuna Satya Pravallika',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9963390618',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Kiran Kumar Tripurana',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9989074888',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Sadagana Chaitanya',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9182128278',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Sidda Abhishek',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9381980051',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Sidda Alekhya',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8179243661',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Uddanda Pratyusha',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '8367316439',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Vanjarana V Kanaka Mahalakshmi',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '9000241760',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: '',
+			name: 'Yellabilli Sunitha',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'MBA',
+			mobile: '6303799308',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+			title: 'Dr',
+			name: 'Boyidi Poorna Satyanarayana',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Professor',
+			department: 'CSE',
+			mobile: '9121214313',
+			email: 'poornasatyanarayana@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Srirangam Durga Prasad',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Associate Professor',
+			department: 'CSE',
+			mobile: '8712297422',
+			email: '@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Uppada Padma Mohan',
+			qualification: 'M.Tech., M.C.A',
+			designation: 'Associate Professor',
+			department: 'CSE',
+			mobile: '9346335322',
+			email: 'padmauppada23@gmail.com',
+			linkedin: 'https://www.linkedin.com/padma',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Elipilli Anil Kumar',
+			qualification: 'M.Tech., Ph.D.',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8096173988',
+			email: 'auphdanil@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/anil-kumar-358a87369',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Boyidi Vani',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9121709043',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Bugatha S Sailaja',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9392788062',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Dakineni Durgaprasad',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9441313059',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Dulam Devee Sivaprasad',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9573333345',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Gudivada Sushma',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8328181573',
+			email: 'gudivadasushma30@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/sushma-gudivada-58563b335',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Kona Janshi Venkata Modha Sai Srinija',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8309666292',
+			email: 'saisrinija226@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/kona-janshi-venkata-modha-sai-srinija-439b5718b',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Myrala Kanthi Kiran',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9848082371',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Neela Vineeth',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9660729816',
+			email: 'vineethneela967@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/vineeth-neela-50b3b3170',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Panchareddy Gayathri',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9862477778',
+			email: 'gayathriraghuram2016@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/gayathri-p-42231239b',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Pulapalli Joshua Raju',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8297293834',
+			email: 'josh.educato@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/joshua-raju-p-a11335163/',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Siribariki Mouli',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9885079970',
+			email: 'moulicse06@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/siribariki-mouli-55a94b38b',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Somu Harshini',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '7893492079',
+			email: 'somuharshini0617@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/somu-harshini-2715a11a7',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Surapureddy Samyukta',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '7980782250',
+			email: 'samyukta537@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/surapureddy-samyukta-69b3ba144',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Thalluri Chaitanya',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9490263303',
+			email: 'Thallurichaitanya85@gmail.com',
+			linkedin: 'https://www.linkedin.com/posts/bits-vizag_bitsvizag',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Vurukuti Kanakeswari',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9908132695',
+			email: 'kanakeswaridevara@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/kanakeswari-vurukuti-01263a335',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Polamarasetty Arun Tez',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9494518461',
+			email: 'bitsaruntez@gmail.com',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Penmetsa Trinadh Santosh Priya',
+			qualification: 'M.Tech., M.C.A',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '7093275580',
+			email: 'ptspriya.bits@gmail.com',
+			linkedin: 'http://www.linkedin.com/in/pinnamraju-t-s-priya-503686326',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Devadi Sriya Rani',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9381458890',
+			email: 'dsriya1011@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/sriya-rani-17961621b',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Killi Jeevita',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '7075440692',
+			email: 'jeevithakilli24@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/jeevitha-killi-831207254',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Mangipudi Sai Prasanna',
+			qualification: 'M.Tech., M.C.A',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '7382070704',
+			email: 'prasannababa2024@gmail.com',
+			linkedin: 'https://www.linkedin.com/home?originalSubdomain=in',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Sunnapu Naveena Priya',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9963778476',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Gunji Sravani',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8074008507',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Purushotham Teja Sai Mani Bhargav',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9989837230',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Koviri Prapurna',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '8919450150',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Mummidi Durga Bhavani',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9391218799',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Manikeswaram Krishna Kumari',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9100500370',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mrs',
+			name: 'Adapaka Uma Devi',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9492262857',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
 			name: 'Sudheerkamal Batta',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9603439439',
-				email: '',
-				linkedin: '',
-				photo: ''
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9603439439',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mrs',
-				name: 'Bathula Bhagyalakshmi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9014595116',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mrs',
+			name: 'Bathula Bhagyalakshmi',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9014595116',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mrs',
-				name: 'Medisetti Snehadivya',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9059850579',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mrs',
+			name: 'Medisetti Snehadivya',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9059850579',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mr',
-				name: 'Boddu Rammurthy Naidu',
-				qualification: '',
-				designation: 'Assistant Professor of Practice',
-				department: 'CSE',
-				mobile: '9885666241',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mr',
+			name: 'Boddu Rammurthy Naidu',
+			qualification: '',
+			designation: 'Assistant Professor of Practice',
+			department: 'CSE',
+			mobile: '9885666241',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mr',
-				name: 'Batchu Ganesh Chandra',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9052438366',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mr',
+			name: 'Batchu Ganesh Chandra',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9052438366',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mrs',
-				name: 'Rayana Mallika',
-				qualification: 'B.Tech',
-				designation: 'Teaching Assistant',
-				department: 'CSE',
-				mobile: '9515812798',
-				email: 'mallika282611@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/mallika-rayana-a7711a271',
-				photo: ''
+			title: 'Mrs',
+			name: 'Rayana Mallika',
+			qualification: 'B.Tech',
+			designation: 'Teaching Assistant',
+			department: 'CSE',
+			mobile: '9515812798',
+			email: 'mallika282611@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/mallika-rayana-a7711a271',
+			photo: ''
 		},
 		{
-				title: 'Ms',
-				name: 'Sravani Reddy Karri',
-				qualification: 'M.Tech',
-				designation: 'Teaching Assistant',
-				department: 'CSE',
-				mobile: '7337061551',
-				email: 'sravanireddymay25@gmail.com',
-				linkedin: 'https://www.linkedin.com/in/karri-sravani-reddy',
-				photo: ''
+			title: 'Ms',
+			name: 'Sravani Reddy Karri',
+			qualification: 'M.Tech',
+			designation: 'Teaching Assistant',
+			department: 'CSE',
+			mobile: '7337061551',
+			email: 'sravanireddymay25@gmail.com',
+			linkedin: 'https://www.linkedin.com/in/karri-sravani-reddy',
+			photo: ''
 		},
 		{
-				title: 'Mrs',
-				name: 'M Sai Jyothi',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mrs',
+			name: 'M Sai Jyothi',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mr',
-				name: 'Anudeep',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mr',
+			name: 'Anudeep',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mrs',
-				name: 'Botchu Aparna',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '7396585623',
-				email: '',
-				linkedin: '',
-				photo: ''
+			title: 'Mrs',
+			name: 'Botchu Aparna',
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '7396585623',
+			email: '',
+			linkedin: '',
+			photo: ''
 		},
 		{
-				title: 'Mr',
+			title: 'Mr',
 			name: 'Ashok Kumar Ratanala',
-				qualification: '',
-				designation: 'Assistant Professor',
-				department: 'CSE',
-				mobile: '9160766133',
-				email: '',
-				linkedin: '',
-				photo: ''
+			qualification: '',
+			designation: 'Assistant Professor',
+			department: 'CSE',
+			mobile: '9160766133',
+			email: '',
+			linkedin: '',
+			photo: ''
+		}
+	,
+		{
+			title: 'Dr',
+			name: 'Kamaraju Vechalapu',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'EEE',
+			mobile: '9963268636',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Bhuvanagiri Hindu',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '8977741234',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Binnada Lohidas',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '8790949565',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Bobbili Lakshminarayana',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9618994579',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Doki Sudhamsha',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9177228301',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Gompa Rajesh',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '8106992143',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Gurla Aliveni',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '6305862557',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Kasi Venkateswararao',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '8897173977',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Manthri Venkta Satya Prem Sagar',
+			qualification: 'M.Tech., M.B.A',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '7799885355',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Terukoti Divya',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9553007531',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Velagala L S S Phani Reddy',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9966963328',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Modugu Kranthi Kumar',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '9550090904',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Pallapothula Naga Praveen Kumar',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'EEE',
+			mobile: '8978180559',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Pathem Uma Chaithanya',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Associate Professor',
+			department: 'Mechanical',
+			mobile: '9817049898',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'A S Bhanu Prasanna',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Associate Professor',
+			department: 'Mechanical',
+			mobile: '8008633321',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Fathimunnisa Begum',
+			qualification: 'M.Tech., Ph.D',
+			designation: 'Associate Professor',
+			department: 'Mechanical',
+			mobile: '9966540481',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Andiboyina Sireesha',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '6617920112',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Azeez Mohammed Ali',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9676873876',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Bodapati Durga Prasad',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9494714351',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Dharmala Venkata Padmaja',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9985888669',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Maddula Leela Sai Suguna Mani',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '8297830888',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Mallapu Satyanarayana',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9491626873',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Pothina Surya Rao',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '8374302229',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Reddy Ramesh',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '8500652035',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vadapalli Preetham Kumar',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9701161391',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vamsi Krishna Balaga',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9492017425',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vikas Ranjan',
+			qualification: 'Ph.D',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '7794868025',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Maturi Kishore',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'Mechanical',
+			mobile: '9502034507',
+			email: '',
+			linkedin: '',
+			photo: ''
+		}
+,
+		{
+			title: 'Dr',
+			name: 'Mallavarapu Rajan Babu',
+			qualification: 'Ph.D',
+			designation: 'Principal',
+			department: 'ECE',
+			mobile: '9492618186',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Babburu Kiranamaii',
+			qualification: 'Ph.D',
+			designation: 'Professor',
+			department: 'ECE',
+			mobile: '8500267193',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Rudra Pratap Das',
+			qualification: 'Ph.D',
+			designation: 'Professor',
+			department: 'ECE',
+			mobile: '9640552861',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Kondapalli Pradeep',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '9160350380',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Ravi Kishore Maddugaru',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '7989527137',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Yaddanapudi Venkata Bhaskara Lakshmi',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '7893676891',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Gera Aswani Kumar',
+			qualification: 'M.Tech',
+			designation: 'Associate Professor',
+			department: 'ECE',
+			mobile: '8886065888',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Chinta Santoshi Kumari',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '7731993013',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Hari Sai Krishna Tripurana',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '8247069915',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Kaki Venkata Sagara Srujana',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '9110378493',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Kumar R N',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '9676397891',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'M M Komali Chittapragada',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '8121206946',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Mariserla Sri Lakshmi',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '8121979622',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Moningi Ravindra Kumar',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '8919641346',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Nallanichakravartula Satya Srinivasa Santosh Phani Krishna',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '9441092231',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Punyamantula Venkata Hari Krishna Babu',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '8142349157',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Antharakonda Ramesh',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '9247856668',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Sonti Sowjanya',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '6303483862',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Talari Sai Kumari',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '9550448999',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Temburu Pavani',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '8501068852',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Vishnu Murty Tammineni',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '7893312721',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Bhyri Priyanka',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '7382126203',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'P PREETHI',
+			qualification: 'M.Tech',
+			designation: 'Assistant Professor',
+			department: 'ECE',
+			mobile: '',
+			email: '',
+			linkedin: '',
+			photo: ''
+		}
+,
+		{
+			title: 'Dr',
+			name: 'Dusi Narasimha Murty',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9398688852',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Jayarangarao Prathipati',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9885597842',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Ganduri Uma Sankar',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9885056352',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Paromita Mukherjee',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9313184040',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Samareddy Sravan Kumar',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9494369900',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Palla Venkata Murali',
+			qualification: 'M.A., B.Ed., Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '9492535197',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Dr',
+			name: 'Gandham Suneetha Rani',
+			qualification: 'Ph.D',
+			designation: 'Associate Professor',
+			department: 'BS&H',
+			mobile: '8008506949',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Kathula Serisha',
+			qualification: 'M.Sc., M.Tech',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9440938025',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Gollamandala Noel',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '7989675577',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Gottumukkala Jyothi',
+			qualification: 'M.Phil., M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9989609399',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Kamada Piyali Varma',
+			qualification: 'M.A',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9642932971',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Lanka Priyanka',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '8074127417',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Mondi Mounika',
+			qualification: 'M.Sc., B.Ed',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9515099654',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Palakollu Mahesh',
+			qualification: 'Ph.D., M.Phil., M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9866358722',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Pulli Eswararao',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9705059627',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Pydikondala Surya Kumari',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9951934411',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Sriperembudhuru Sowmya Latha',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9848585013',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Sukka Venkatakavitha',
+			qualification: 'M.Sc., B.Ed., Ph.D',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '9985388148',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Yarra Appalaraju',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '8500337689',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Ms',
+			name: 'Vidhyarani Mehar',
+			qualification: 'M.Sc',
+			designation: 'Assistant Professor',
+			department: 'BS&H',
+			mobile: '6301298509',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Aratikatla Pydi Raju',
+			qualification: 'M.A., M.L.I.Sc., M.Ed',
+			designation: 'Chief Librarian',
+			department: 'BS&H',
+			mobile: '7893429433',
+			email: '',
+			linkedin: '',
+			photo: ''
+		},
+		{
+			title: 'Mr',
+			name: 'Choppa Chandra Sekhar',
+			qualification: 'M.P.Ed',
+			designation: 'Physical Director',
+			department: 'BS&H',
+			mobile: '9885075455',
+			email: '',
+			linkedin: '',
+			photo: ''
 		}
 ].map((faculty) => {
 		// Normalize name for experience lookup (remove Dr. prefix and extra spaces)
@@ -1845,7 +1863,7 @@
 		'Anudeep',
 		'Botchu Aparna',
 		'Ashok Kumar Ratanala'
-];
+	];
 
 	const csePriorityIndex = csePriorityOrder.reduce((map, name, index) => {
 		map[normalizeNameKey(name)] = index;
@@ -1853,17 +1871,29 @@
 	}, /** @type {Record<string, number>} */ ({}));
 
 	const ecePriorityOrder = [
-		'Dr. B. Kiranmai',
-		'Rudra Prathap Das',
-		'K. Pradeep',
-		'Y. V. Bhaskararao',
-		'H. Ravi Kishore',
-		'G. Aswan Kumar',
-		'G. Arjun Kumar',
-		'T. Vishnu Murthy',
-		'CH. M. M. KOMALI',
-		'Ch. SANTOSHI KUMARI',
-		'T. Pavani'
+		'Mallavarapu Rajan Babu',
+		'Babburu Kiranamaii',
+		'Rudra Pratap Das',
+		'Kondapalli Pradeep',
+		'Ravi Kishore Maddugaru',
+		'Yaddanapudi Venkata Bhaskara Lakshmi',
+		'Gera Aswani Kumar',
+		'Chinta Santoshi Kumari',
+		'Hari Sai Krishna Tripurana',
+		'Kaki Venkata Sagara Srujana',
+		'Kumar R N',
+		'M M Komali Chittapragada',
+		'Mariserla Sri Lakshmi',
+		'Moningi Ravindra Kumar',
+		'Nallanichakravartula Satya Srinivasa Santosh Phani Krishna',
+		'Punyamantula Venkata Hari Krishna Babu',
+		'Antharakonda Ramesh',
+		'Sonti Sowjanya',
+		'Talari Sai Kumari',
+		'Temburu Pavani',
+		'Vishnu Murty Tammineni',
+		'Bhyri Priyanka',
+		'P PREETHI'
 	];
 
 	const ecePriorityIndex = ecePriorityOrder.reduce((map, name, index) => {
@@ -1872,13 +1902,19 @@
 	}, /** @type {Record<string, number>} */ ({}));
 
 	const eeePriorityOrder = [
-		'U. KAMARAJU',
-		'E. Anil Kumar',
-		'P. Arun Tez',
-		'B. V. S. PREM SAGAR',
-		'D. Sudharshan',
-		'G. Alirani',
-		'Mr. D. Sudharshan'
+		'Kamaraju Vechalapu',
+		'Bhuvanagiri Hindu',
+		'Binnada Lohidas',
+		'Bobbili Lakshminarayana',
+		'Doki Sudhamsha',
+		'Gompa Rajesh',
+		'Gurla Aliveni',
+		'Kasi Venkateswararao',
+		'Manthri Venkta Satya Prem Sagar',
+		'Terukoti Divya',
+		'Velagala L S S Phani Reddy',
+		'Modugu Kranthi Kumar',
+		'Pallapothula Naga Praveen Kumar'
 	];
 
 	const eeePriorityIndex = eeePriorityOrder.reduce((map, name, index) => {
@@ -1887,18 +1923,21 @@
 	}, /** @type {Record<string, number>} */ ({}));
 
 	const mechanicalPriorityOrder = [
-		'P. UMA CHAITHANYA',
-		'Dr. A. S. Bhanu Prasanna',
-		'FATHIMUNNISA BEGUM',
-		'H. SATYANARAYANA',
-		'Vikas Ranjan',
+		'A S Bhanu Prasanna',
+		'Pathem Uma Chaithanya',
+		'Fathimunnisa Begum',
+		'Andiboyina Sireesha',
+		'Azeez Mohammed Ali',
+		'Bodapati Durga Prasad',
+		'Dharmala Venkata Padmaja',
+		'Maddula Leela Sai Suguna Mani',
+		'Mallapu Satyanarayana',
+		'Pothina Surya Rao',
 		'Reddy Ramesh',
-		'V. Preetham Kumar',
-		'Parameswar Rao',
-		'N. S Appala Naidu',
-		'K. Jayababu',
-		'N. Ramesh',
-		'N. Donbru'
+		'Vadapalli Preetham Kumar',
+		'Vamsi Krishna Balaga',
+		'Vikas Ranjan',
+		'Maturi Kishore'
 	];
 
 	const mechanicalPriorityIndex = mechanicalPriorityOrder.reduce((map, name, index) => {
@@ -1934,20 +1973,28 @@
 	}, /** @type {Record<string, number>} */ ({}));
 
 	const bshPriorityOrder = [
-		'P. JAYARANGARAO',
+		'Dusi Narasimha Murty',
+		'Jayarangarao Prathipati',
+		'Ganduri Uma Sankar',
 		'Paromita Mukherjee',
-		'P. V. Murali',
-		'T.Suneetha Rani',
-		'Dr. Piyali Varma',
-		'P. MAHESH',
-		'P.Surya Kumari',
-		'G. JYOTHI',
-		'K .Serisha',
-		'B. V. KAVITHA',
-		'L. Priyanka',
-		'Dr. M. Mounika',
-		'V. Jyothi',
-		'A. PYDIRAJU'
+		'Samareddy Sravan Kumar',
+		'Palla Venkata Murali',
+		'Gandham Suneetha Rani',
+		'Kathula Serisha',
+		'Gollamandala Noel',
+		'Gottumukkala Jyothi',
+		'Kamada Piyali Varma',
+		'Lanka Priyanka',
+		'Mondi Mounika',
+		'Palakollu Mahesh',
+		'Pulli Eswararao',
+		'Pydikondala Surya Kumari',
+		'Sriperembudhuru Sowmya Latha',
+		'Sukka Venkatakavitha',
+		'Yarra Appalaraju',
+		'Vidhyarani Mehar',
+		'Aratikatla Pydi Raju',
+		'Choppa Chandra Sekhar'
 	];
 
 	const bshPriorityIndex = bshPriorityOrder.reduce((map, name, index) => {
