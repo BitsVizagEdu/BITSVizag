@@ -21,132 +21,154 @@
 		{
 			name: 'Dr. Dusi Narasimha Murty',
 			role: 'Associate Professor',
+			exp: '15+ Years',
 			qual: 'Ph.D',
 			mobile: '9398688852'
 		},
 		{
-			name: 'Dr. P. Jayarangarao',
-			role: 'Associate Professor & HOD',
+			name: 'Dr. Jayarangarao Prathipati',
+			role: 'Associate Professor',
+			exp: '32+ Years',
 			qual: 'Ph.D',
 			mobile: '9885597842'
 		},
 		{
 			name: 'Dr. Ganduri Uma Sankar',
 			role: 'Associate Professor',
+			exp: '15+ Years',
 			qual: 'Ph.D',
 			mobile: '9885056352'
 		},
 		{
 			name: 'Dr. Paromita Mukherjee',
 			role: 'Associate Professor',
+			exp: '11+ Years',
 			qual: 'Ph.D',
 			mobile: '9313184040'
 		},
 		{
 			name: 'Dr. Samareddy Sravan Kumar',
 			role: 'Associate Professor',
+			exp: '15+ Years',
 			qual: 'Ph.D',
 			mobile: '9494369900'
 		},
 		{
-			name: 'Dr. P. V. Murali',
-			role: 'Sr. Assistant Professor',
-			qual: 'Ph.D',
+			name: 'Mr. Palla Venkata Murali',
+			role: 'Associate Professor',
+			exp: '25+ Years',
+			qual: 'M.A., B.Ed., Ph.D',
 			mobile: '9492535197'
 		},
 		{
 			name: 'Dr. Gandham Suneetha Rani',
 			role: 'Associate Professor',
+			exp: '13+ Years',
 			qual: 'Ph.D',
 			mobile: '8008506949'
 		},
 		{
-			name: 'Kathula Serisha',
+			name: 'Ms. Kathula Serisha',
 			role: 'Assistant Professor',
-			qual: 'M.Tech',
+			exp: '15+ Years',
+			qual: 'M.Sc., M.Tech',
 			mobile: '9440938025'
 		},
 		{
-			name: 'Gollamandala Noel',
+			name: 'Mr. Gollamandala Noel',
 			role: 'Assistant Professor',
+			exp: '5+ Years',
 			qual: 'M.Sc',
 			mobile: '7989675577'
 		},
 		{
-			name: 'Mrs. G. Jyothi',
-			role: 'Sr. Assistant Professor',
-			qual: 'M.Phil',
+			name: 'Ms. Gottumukkala Jyothi',
+			role: 'Assistant Professor',
+			exp: '15+ Years',
+			qual: 'M.Phil., M.Sc',
 			mobile: '9989609399'
 		},
 		{
-			name: 'Mrs. Dr. Piyali Varma',
-			role: 'Sr. Assistant Professor',
+			name: 'Ms. Kamada Piyali Varma',
+			role: 'Assistant Professor',
+			exp: '20+ Years',
 			qual: 'M.A',
 			mobile: '9642932971'
 		},
 		{
-			name: 'Lanka Priyanka',
+			name: 'Ms. Lanka Priyanka',
 			role: 'Assistant Professor',
+			exp: '10+ Years',
 			qual: 'M.Sc',
 			mobile: '8074127417'
 		},
 		{
-			name: 'Mondi Mounika',
+			name: 'Ms. Mondi Mounika',
 			role: 'Assistant Professor',
-			qual: 'M.Sc',
+			exp: '9+ Years',
+			qual: 'M.Sc., B.Ed',
 			mobile: '9515099654'
 		},
 		{
-			name: 'Palakollu Mahesh',
+			name: 'Mr. Palakollu Mahesh',
 			role: 'Assistant Professor',
-			qual: 'Ph.D',
+			exp: '18+ Years',
+			qual: 'Ph.D., M.Phil., M.Sc',
 			mobile: '9866358722'
 		},
 		{
-			name: 'Pulli Eswararao',
+			name: 'Mr. Pulli Eswararao',
 			role: 'Assistant Professor',
+			exp: '5+ Years',
 			qual: 'M.Sc',
 			mobile: '9705059627'
 		},
 		{
-			name: 'Pydikondala Surya Kumari',
+			name: 'Ms. Pydikondala Surya Kumari',
 			role: 'Assistant Professor',
+			exp: '16+ Years',
 			qual: 'M.Sc',
 			mobile: '9951934411'
 		},
 		{
-			name: 'Sriperembudhuru Sowmya Latha',
+			name: 'Ms. Sriperembudhuru Sowmya Latha',
 			role: 'Assistant Professor',
+			exp: '5+ Years',
 			qual: 'M.Sc',
 			mobile: '9848585013'
 		},
 		{
-			name: 'Sukka Venkatakavitha',
+			name: 'Ms. Sukka Venkatakavitha',
 			role: 'Assistant Professor',
-			qual: 'Ph.D',
+			exp: '13+ Years',
+			qual: 'M.Sc., B.Ed., Ph.D',
 			mobile: '9985388148'
 		},
 		{
-			name: 'Yarra Appalaraju',
+			name: 'Mr. Yarra Appalaraju',
 			role: 'Assistant Professor',
+			exp: '5+ Years',
 			qual: 'M.Sc',
 			mobile: '8500337689'
 		},
 		{
-			name: 'Vidhyarani Mehar',
+			name: 'Ms. Vidhyarani Mehar',
 			role: 'Assistant Professor',
+			exp: '5+ Years',
 			qual: 'M.Sc',
 			mobile: '6301298509'
 		},
 		{
-			name: 'Aratikatla Pydi Raju',
+			name: 'Mr. Aratikatla Pydi Raju',
 			role: 'Chief Librarian',
-			qual: 'M.A',
+			exp: '15+ Years',
+			qual: 'M.A., M.L.I.Sc., M.Ed',
 			mobile: '7893429433'
 		},
 		{
-			name: 'Choppa Chandra Sekhar',
+			name: 'Mr. Choppa Chandra Sekhar',
 			role: 'Physical Director',
+			exp: '15+ Years',
 			qual: 'M.P.Ed',
 			mobile: '9885075455'
 		}

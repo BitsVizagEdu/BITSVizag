@@ -13,7 +13,7 @@
 	import DepartmentofEce from './components/Department of ECE.svelte';
 	import DepartmentofEee from './components/Department of EEE.svelte';
 	import DepartmentofMech from './components/Department of MECH.svelte';
-	// import DepartmentofMba from './components/Department of MBA.svelte';
+	import DepartmentofMba from './components/Department of MBA.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;

@@ -326,74 +326,165 @@
 
 	const facultyRows = [
 		{
-			name: 'Dr. B. Kiranmai',
-			role: 'HOD - Professor',
-			exp: '22+ Years',
-			qual: 'M.Tech., Ph.D',
+			name: 'Dr. Mallavarapu Rajan Babu',
+			role: 'Principal',
+			exp: '25+ Years',
+			qual: 'Ph.D',
+			mobile: '9492618186'
+		},
+		{
+			name: 'Dr. Babburu Kiranamaii',
+			role: 'Professor',
+			exp: '25+ Years',
+			qual: 'Ph.D',
 			mobile: '8500267193'
 		},
 		{
-			name: 'Dr. K. Pradeep',
+			name: 'Dr. Rudra Pratap Das',
 			role: 'Professor',
-			exp: '18+ Years',
-			qual: 'M.Tech., Ph.D',
-			mobile: '9966270111'
+			exp: '30+ Years',
+			qual: 'Ph.D',
+			mobile: '9640552861'
 		},
 		{
-			name: 'Dr. Rudra Prathap Das',
-			role: 'Professor',
-			exp: '15+ Years',
-			qual: 'M.Tech., Ph.D',
-			mobile: ''
+			name: 'Dr. Kondapalli Pradeep',
+			role: 'Associate Professor',
+			exp: '20+ Years',
+			qual: 'Ph.D',
+			mobile: '9160350380'
 		},
 		{
-			name: 'Dr. Y. V. Bhaskararao',
+			name: 'Dr. Ravi Kishore Maddugaru',
 			role: 'Associate Professor',
 			exp: '15+ Years',
-			qual: 'M.Tech., Ph.D',
-			mobile: '7893676891'
-		},
-		{
-			name: 'Dr. H. Ravi Kishore',
-			role: 'Associate Professor',
-			exp: '14+ Years',
-			qual: 'M.Tech., Ph.D',
+			qual: 'Ph.D',
 			mobile: '7989527137'
 		},
 		{
-			name: 'Mr. G. Aswan Kumar',
-			role: 'Sr. Assistant Professor',
+			name: 'Dr. Yaddanapudi Venkata Bhaskara Lakshmi',
+			role: 'Associate Professor',
+			exp: '15+ Years',
+			qual: 'Ph.D',
+			mobile: '7893676891'
+		},
+		{
+			name: 'Mr. Gera Aswani Kumar',
+			role: 'Associate Professor',
 			exp: '12+ Years',
-			qual: 'M.Tech., Ph.D',
+			qual: 'M.Tech',
 			mobile: '8886065888'
 		},
 		{
-			name: 'Mr. T. Vishnu Murthy',
-			role: 'Sr. Assistant Professor',
-			exp: '11+ Years',
+			name: 'Ms. Chinta Santoshi Kumari',
+			role: 'Assistant Professor',
+			exp: '3+ Years',
 			qual: 'M.Tech',
-			mobile: '9154628433'
+			mobile: '7731993013'
 		},
 		{
-			name: 'Mrs. T. Pavani',
+			name: 'Mr. Hari Sai Krishna Tripurana',
 			role: 'Assistant Professor',
-			exp: '10+ Years',
+			exp: '5+ Years',
 			qual: 'M.Tech',
-			mobile: '8501068852'
+			mobile: '8247069915'
 		},
 		{
-			name: 'Mrs. CH. M. M. KOMALI',
+			name: 'Ms. Kaki Venkata Sagara Srujana',
 			role: 'Assistant Professor',
-			exp: '10+ Years',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9110378493'
+		},
+		{
+			name: 'Mr. Kumar R N',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9676397891'
+		},
+		{
+			name: 'Ms. M M Komali Chittapragada',
+			role: 'Assistant Professor',
+			exp: '9+ Years',
 			qual: 'M.Tech',
 			mobile: '8121206946'
 		},
 		{
-			name: 'Mrs. Ch. SANTOSHI KUMARI',
+			name: 'Mr. Mariserla Sri Lakshmi',
 			role: 'Assistant Professor',
-			exp: '9+ Years',
+			exp: '5+ Years',
 			qual: 'M.Tech',
-			mobile: '7731993013'
+			mobile: '8121979622'
+		},
+		{
+			name: 'Mr. Moningi Ravindra Kumar',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8919641346'
+		},
+		{
+			name: 'Mr. Nallanichakravartula Satya Srinivasa Santosh Phani Krishna',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9441092231'
+		},
+		{
+			name: 'Mr. Punyamantula Venkata Hari Krishna Babu',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '8142349157'
+		},
+		{
+			name: 'Mr. Antharakonda Ramesh',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9247856668'
+		},
+		{
+			name: 'Ms. Sonti Sowjanya',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '6303483862'
+		},
+		{
+			name: 'Ms. Talari Sai Kumari',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '9550448999'
+		},
+		{
+			name: 'Ms. Temburu Pavani',
+			role: 'Assistant Professor',
+			exp: '2.8+ Years',
+			qual: 'M.Tech',
+			mobile: '8501068852'
+		},
+		{
+			name: 'Mr. Vishnu Murty Tammineni',
+			role: 'Assistant Professor',
+			exp: '20+ Years',
+			qual: 'M.Tech',
+			mobile: '7893312721'
+		},
+		{
+			name: 'Ms. Bhyri Priyanka',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: '7382126203'
+		},
+		{
+			name: 'Ms. P PREETHI',
+			role: 'Assistant Professor',
+			exp: '5+ Years',
+			qual: 'M.Tech',
+			mobile: ''
 		}
 	];
 
