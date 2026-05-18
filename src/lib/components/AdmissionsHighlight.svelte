@@ -10,7 +10,7 @@
 		},
 		{
 			label: 'Students Enrolled',
-			value: '3500+',
+			value: '500+',
 			color: 'text-emerald-600',
 			borderColor: 'border-emerald-500'
 		},

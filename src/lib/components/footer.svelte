@@ -37,6 +37,30 @@
 		{ name: 'BITS CMS Portal', icon: 'fa-desktop', href: '#' },
 		{ name: 'Pay Tuition Fees', icon: 'fa-credit-card', href: '#' }
 	];
+
+	let visitorCount = 0;
+	let liveUsers = 12;
+
+	onMount(() => {
+		// Fetch count from localStorage, start from 0 if null, increment by 1
+		const storedCount = localStorage.getItem('bits_visitor_count');
+		if (storedCount === null) {
+			visitorCount = 1;
+		} else {
+			visitorCount = parseInt(storedCount, 10) + 1;
+		}
+		localStorage.setItem('bits_visitor_count', visitorCount.toString());
+
+		// Simulate real-time fluctuating active viewers
+		const interval = setInterval(() => {
+			const fluctuation = Math.floor(Math.random() * 5) - 2; // fluctuates -2 to +2
+			liveUsers = Math.max(8, Math.min(32, liveUsers + fluctuation));
+		}, 5000);
+
+		return () => clearInterval(interval);
+	});
+
+	$: formattedCount = visitorCount.toString().padStart(6, '0');
 </script>
 
 <footer class="bg-[#080e1f] text-white pt-12 pb-8 overflow-hidden relative">
@@ -154,6 +178,34 @@
 		<div
 			class="mt-12 pt-8 border-t border-white/5 flex flex-col items-center justify-center gap-6 footer-bottom-bar pb-4"
 		>
+			<!-- Premium Visitor Counter & Live Status -->
+			<div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl">
+				<!-- Live Users Indicator -->
+				<div class="flex items-center gap-2">
+					<span class="relative flex h-2.5 w-2.5">
+						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+						<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+					</span>
+					<span class="text-[11px] md:text-xs text-slate-300 font-semibold tracking-wide">
+						Live Site Viewers: <span class="text-emerald-400 font-black font-mono ml-1">{liveUsers}</span>
+					</span>
+				</div>
+
+				<div class="hidden sm:block h-4 w-[1px] bg-white/10"></div>
+
+				<!-- Total Page Views -->
+				<div class="flex items-center gap-3">
+					<span class="text-[11px] md:text-xs text-slate-300 font-semibold tracking-wide">Your Visits:</span>
+					<div class="flex items-center gap-1 font-mono">
+						{#each formattedCount.split('') as digit}
+							<span class="flex items-center justify-center w-5.5 h-7.5 rounded bg-[#050816] border border-white/10 text-amber-500 font-black text-sm shadow-inner shadow-amber-500/10">
+								{digit}
+							</span>
+						{/each}
+					</div>
+				</div>
+			</div>
+
 			<div class="text-center space-y-2">
 				<p class="text-slate-500 text-[12px] md:text-[13px] tracking-wide">
 					© 2026 <span class="text-white font-bold">bitsvizag.edu.in</span>. All Rights Reserved.

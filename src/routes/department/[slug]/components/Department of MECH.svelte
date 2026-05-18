@@ -126,9 +126,24 @@
 	];
 
 	const labCategories = [
-		{ name: 'Design & Simulation', color: '#059669', labs: ['CAD Lab', 'Simulation Lab', 'FEA Lab'], desc: 'Digital twinning ecosystem.' },
-		{ name: 'Thermal & Fluid', color: '#10b981', labs: ['Thermal Lab', 'Heat Transfer', 'Fluid Mech'], desc: 'Energy research hub.' },
-		{ name: 'Manufacturing', color: '#0d9488', labs: ['Workshop', 'Production Tech', 'Metallurgy'], desc: 'Precision machining.' }
+		{
+			name: 'Design & Simulation',
+			color: '#059669',
+			labs: ['CAD Lab', 'Simulation Lab', 'FEA Lab'],
+			desc: 'Digital twinning ecosystem.'
+		},
+		{
+			name: 'Thermal & Fluid',
+			color: '#10b981',
+			labs: ['Thermal Lab', 'Heat Transfer', 'Fluid Mech'],
+			desc: 'Energy research hub.'
+		},
+		{
+			name: 'Manufacturing',
+			color: '#0d9488',
+			labs: ['Workshop', 'Production Tech', 'Metallurgy'],
+			desc: 'Precision machining.'
+		}
 	];
 
 	let mounted = false;
@@ -142,13 +157,18 @@
 
 	onMount(() => {
 		mounted = true;
-		const interval = setInterval(() => { currentImg = (currentImg + 1) % deptImages.length; }, 4000);
+		const interval = setInterval(() => {
+			currentImg = (currentImg + 1) % deptImages.length;
+		}, 4000);
 		return () => clearInterval(interval);
 	});
 </script>
 
 <svelte:head>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&family=Satoshi:wght@700;900&display=swap" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&family=Satoshi:wght@700;900&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 <div class="mech-refined-root" class:mounted>
@@ -177,7 +197,10 @@
 				<div class="about-grid-neat">
 					<div class="info text-center lg:text-left">
 						<p class="inter bold">Precision. Power. Innovation.</p>
-						<p class="inter detail">Established in 2008, the Department of Mechanical Engineering at BITS Vizag blends core mechanics with advanced automation to shape the future of industrial design.</p>
+						<p class="inter detail">
+							Established in 2008, the Department of Mechanical Engineering at BITS Vizag blends
+							core mechanics with advanced automation to shape the future of industrial design.
+						</p>
 					</div>
 					<div class="visual">
 						<div class="frame">
@@ -208,7 +231,7 @@
 			</section>
 
 			<!-- Faculty: Neat Numbers -->
-			<section id="faculty" class="block-neat">
+			<!-- <section id="faculty" class="block-neat">
 				<div class="block-head text-center">
 					<h2 class="outfit">Faculty Profile</h2>
 					<div class="line mx-auto" style="background: #065f46"></div>
@@ -240,7 +263,7 @@
 						</tbody>
 					</table>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- HOD: Premium Colored Neat UI -->
 			<section id="hod" class="block-neat">
@@ -251,7 +274,10 @@
 					<div class="hod-info-neat">
 						<span class="hod-label satoshi">HOD MESSAGE</span>
 						<h2 class="outfit">Dr. A. S. Bhanu Prasanna</h2>
-						<p class="inter message">“We empower our students to bridge the gap between theoretical mechanics and real-world industrial applications through innovation and ethics.”</p>
+						<p class="inter message">
+							“We empower our students to bridge the gap between theoretical mechanics and
+							real-world industrial applications through innovation and ethics.”
+						</p>
 						<div class="hod-accent"></div>
 					</div>
 				</div>
@@ -262,7 +288,9 @@
 				<div class="text-center">
 					<h2 class="outfit">Get in Touch</h2>
 					<div class="line mx-auto" style="background: #047857"></div>
-					<p class="inter minimal-p">Have questions about our Mechanical department? Reach out to us.</p>
+					<p class="inter minimal-p">
+						Have questions about our Mechanical department? Reach out to us.
+					</p>
 					<div class="contact-links inter">
 						<a href="mailto:hod.mech@bitsvizag.com">hod.mech@bitsvizag.com</a>
 						<span class="sep">|</span>
@@ -281,7 +309,9 @@
 		opacity: 0;
 		transition: opacity 1s ease;
 	}
-	.mech-refined-root.mounted { opacity: 1; }
+	.mech-refined-root.mounted {
+		opacity: 1;
+	}
 
 	/* Hero */
 	.hero-neat {
@@ -298,83 +328,295 @@
 		background-size: cover;
 		background-position: center;
 	}
-	.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(6,78,59,0.8)); }
-	.hero-content { position: relative; z-index: 10; padding: 0 20px; }
-	.tag { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.3em; color: #34d399; margin-bottom: 0.8rem; }
-	.hero-content h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #fff; margin-bottom: 1rem; }
-	.pills { display: flex; gap: 8px; justify-content: center; }
-	.pill { padding: 4px 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 99px; color: #fff; font-size: 0.75rem; font-weight: 500; }
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(6, 78, 59, 0.8));
+	}
+	.hero-content {
+		position: relative;
+		z-index: 10;
+		padding: 0 20px;
+	}
+	.tag {
+		font-size: 0.7rem;
+		font-weight: 800;
+		letter-spacing: 0.3em;
+		color: #34d399;
+		margin-bottom: 0.8rem;
+	}
+	.hero-content h1 {
+		font-size: clamp(1.8rem, 4vw, 2.8rem);
+		font-weight: 900;
+		color: #fff;
+		margin-bottom: 1rem;
+	}
+	.pills {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+	}
+	.pill {
+		padding: 4px 12px;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 99px;
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
 
 	/* Layout */
-	.layout-neat { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
-	.content-stream-neat { display: flex; flex-direction: column; gap: 60px; }
+	.layout-neat {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 60px 24px;
+	}
+	.content-stream-neat {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+	}
 
 	/* Block Headers */
-	.block-head h2 { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 6px; }
-	.line { width: 30px; height: 3px; border-radius: 2px; }
+	.block-head h2 {
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: #111;
+		margin-bottom: 6px;
+	}
+	.line {
+		width: 30px;
+		height: 3px;
+		border-radius: 2px;
+	}
 
 	/* About */
-	.about-grid-neat { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 30px; }
-	.bold { font-size: 1.1rem; font-weight: 600; color: #059669; margin-bottom: 10px; }
-	.detail { font-size: 0.9rem; color: #64748b; line-height: 1.7; }
-	.frame { border-radius: 16px; overflow: hidden; aspect-ratio: 16/10; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
-	.frame img { width: 100%; height: 100%; object-fit: cover; }
+	.about-grid-neat {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.bold {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #059669;
+		margin-bottom: 10px;
+	}
+	.detail {
+		font-size: 0.9rem;
+		color: #64748b;
+		line-height: 1.7;
+	}
+	.frame {
+		border-radius: 16px;
+		overflow: hidden;
+		aspect-ratio: 16/10;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+	}
+	.frame img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 	/* Labs */
-	.labs-grid-neat { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 30px; }
-	.lab-card-neat { background: #fff; border: 1px solid #f1f5f9; padding: 20px; border-radius: 16px; }
-	.lab-card-neat h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
-	.tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
-	.tag-row span { background: #f8fafc; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; color: #64748b; border: 1px solid #f1f5f9; }
+	.labs-grid-neat {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 16px;
+		margin-top: 30px;
+	}
+	.lab-card-neat {
+		background: #fff;
+		border: 1px solid #f1f5f9;
+		padding: 20px;
+		border-radius: 16px;
+	}
+	.lab-card-neat h3 {
+		font-size: 1rem;
+		font-weight: 700;
+		margin-bottom: 12px;
+	}
+	.tag-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+	.tag-row span {
+		background: #f8fafc;
+		padding: 4px 8px;
+		border-radius: 6px;
+		font-size: 0.75rem;
+		color: #64748b;
+		border: 1px solid #f1f5f9;
+	}
 
 	/* Faculty Table */
-	.table-wrap-neat { overflow-x: auto; border-radius: 12px; border: 1px solid #f1f5f9; margin-top: 30px; }
-	.table-neat { width: 100%; border-collapse: collapse; text-align: left; }
-	.table-neat th { padding: 14px 18px; background: #f8fafc; color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; }
-	.table-neat td { padding: 14px 18px; border-top: 1px solid #f1f5f9; font-size: 0.8rem; }
-	.role-cell { color: #64748b; font-size: 0.75rem; }
-	.tel-link { display: inline-flex; align-items: center; gap: 6px; color: #059669; font-weight: 600; text-decoration: none; }
+	.table-wrap-neat {
+		overflow-x: auto;
+		border-radius: 12px;
+		border: 1px solid #f1f5f9;
+		margin-top: 30px;
+	}
+	.table-neat {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: left;
+	}
+	.table-neat th {
+		padding: 14px 18px;
+		background: #f8fafc;
+		color: #94a3b8;
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+	.table-neat td {
+		padding: 14px 18px;
+		border-top: 1px solid #f1f5f9;
+		font-size: 0.8rem;
+	}
+	.role-cell {
+		color: #64748b;
+		font-size: 0.75rem;
+	}
+	.tel-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		color: #059669;
+		font-weight: 600;
+		text-decoration: none;
+	}
 
 	/* HOD Premium UI */
-	.hod-premium-box { 
-		display: grid; 
-		grid-template-columns: 200px 1fr; 
-		gap: 0; 
-		background: linear-gradient(135deg, #064e3b 0%, #065f46 100%); 
-		border-radius: 24px; 
-		overflow: hidden; 
-		color: #fff; 
+	.hod-premium-box {
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		gap: 0;
+		background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+		border-radius: 24px;
+		overflow: hidden;
+		color: #fff;
 		margin-top: 30px;
 		box-shadow: 0 20px 40px rgba(6, 78, 59, 0.15);
 	}
-	.hod-image { aspect-ratio: 1; overflow: hidden; }
-	.hod-image img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); }
-	.hod-info-neat { padding: 30px; display: flex; flex-direction: column; justify-content: center; position: relative; }
-	.hod-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.2em; color: #34d399; margin-bottom: 0.5rem; }
-	.hod-info-neat h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #fff; }
-	.message { font-size: 1rem; font-style: italic; line-height: 1.6; color: #d1fae5; opacity: 0.9; }
-	.hod-accent { position: absolute; right: -20px; bottom: -20px; width: 100px; height: 100px; background: #34d399; opacity: 0.05; border-radius: 50%; }
+	.hod-image {
+		aspect-ratio: 1;
+		overflow: hidden;
+	}
+	.hod-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(0.9);
+	}
+	.hod-info-neat {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+	}
+	.hod-label {
+		font-size: 0.65rem;
+		font-weight: 800;
+		letter-spacing: 0.2em;
+		color: #34d399;
+		margin-bottom: 0.5rem;
+	}
+	.hod-info-neat h2 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		color: #fff;
+	}
+	.message {
+		font-size: 1rem;
+		font-style: italic;
+		line-height: 1.6;
+		color: #d1fae5;
+		opacity: 0.9;
+	}
+	.hod-accent {
+		position: absolute;
+		right: -20px;
+		bottom: -20px;
+		width: 100px;
+		height: 100px;
+		background: #34d399;
+		opacity: 0.05;
+		border-radius: 50%;
+	}
 
 	/* Contact Minimal */
-	.contact-minimal { padding-bottom: 60px; }
-	.minimal-p { font-size: 0.85rem; color: #64748b; margin: 15px 0; }
-	.contact-links { display: flex; gap: 15px; justify-content: center; font-size: 0.9rem; font-weight: 600; }
-	.contact-links a { color: #059669; text-decoration: none; }
-	.sep { color: #e2e8f0; }
+	.contact-minimal {
+		padding-bottom: 60px;
+	}
+	.minimal-p {
+		font-size: 0.85rem;
+		color: #64748b;
+		margin: 15px 0;
+	}
+	.contact-links {
+		display: flex;
+		gap: 15px;
+		justify-content: center;
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+	.contact-links a {
+		color: #059669;
+		text-decoration: none;
+	}
+	.sep {
+		color: #e2e8f0;
+	}
 
 	/* Responsive */
 	@media (max-width: 768px) {
-		.hero-neat { height: 25vh; }
-		.about-grid-neat { grid-template-columns: 1fr; text-align: center; }
-		.hod-premium-box { grid-template-columns: 1fr; }
-		.hod-image { max-width: 150px; margin: 30px auto 0; border-radius: 50%; border: 4px solid #34d399; }
-		.hod-info-neat { text-align: center; }
-		.hidden-xs { display: none; }
-		.contact-links { flex-direction: column; gap: 8px; }
-		.sep { display: none; }
+		.hero-neat {
+			height: 25vh;
+		}
+		.about-grid-neat {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+		.hod-premium-box {
+			grid-template-columns: 1fr;
+		}
+		.hod-image {
+			max-width: 150px;
+			margin: 30px auto 0;
+			border-radius: 50%;
+			border: 4px solid #34d399;
+		}
+		.hod-info-neat {
+			text-align: center;
+		}
+		.hidden-xs {
+			display: none;
+		}
+		.contact-links {
+			flex-direction: column;
+			gap: 8px;
+		}
+		.sep {
+			display: none;
+		}
 	}
 
-	.text-center { text-align: center; }
-	.mx-auto { margin-left: auto; margin-right: auto; }
-	.font-600 { font-weight: 600; }
+	.text-center {
+		text-align: center;
+	}
+	.mx-auto {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.font-600 {
+		font-weight: 600;
+	}
 </style>

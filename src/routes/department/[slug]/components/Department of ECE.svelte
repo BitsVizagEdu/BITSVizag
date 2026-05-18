@@ -978,7 +978,7 @@
 		</section>
 
 		<!-- Faculty Profile -->
-		<section id="faculty" class="dept-section-card faculty-table-section">
+		<!-- <section id="faculty" class="dept-section-card faculty-table-section">
 			<div class="section-header-row">
 				<div class="section-title-wrap">
 					<h2 class="satoshi">ECE Faculty</h2>
@@ -1060,7 +1060,7 @@
 					</div>
 				{/if}
 			</div>
-		</section>
+		</section> -->
 
 		<!-- HOD Profile & Message - CSE Match Style -->
 		<section id="hod" class="dept-section-card hod-premium-card" style="--section-accent: #db2777">

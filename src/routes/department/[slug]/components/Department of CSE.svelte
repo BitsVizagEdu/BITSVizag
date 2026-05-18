@@ -997,7 +997,7 @@
 				</section>
 
 				<!-- Faculty Profile - Screenshot-Matched Professional Table -->
-				<section id="faculty" class="dept-section-card faculty-table-section">
+				<!-- <section id="faculty" class="dept-section-card faculty-table-section">
 					<div class="section-header-row">
 						<div class="section-title-wrap">
 							<h2 class="satoshi">CSE Faculty</h2>
@@ -1151,7 +1151,7 @@
 							</div>
 						{/if}
 					</div>
-				</section>
+				</section> -->
 
 				<!-- HOD Message - Upgraded with Impactful Motion -->
 				<section

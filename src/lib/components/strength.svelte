@@ -8,17 +8,17 @@
 			icon: 'M12 14.25c2.761 0 5-2.015 5-4.5s-2.239-4.5-5-4.5-5 2.015-5 4.5 2.239 4.5 5 4.5zM4.5 20.25a7.5 7.5 0 0115 0v.75h-15v-.75z'
 		},
 		{
-			value: '17+',
+			value: '18+',
 			label: 'Years of academic excellence',
 			icon: 'M12 3l2.7 5.47 6.03.87-4.37 4.26 1.03 6.01L12 16.86l-5.39 2.75 1.03-6.01-4.37-4.26 6.03-.87L12 3z'
 		},
 		{
-			value: '250+',
+			value: '150+',
 			label: 'Experienced faculty members',
 			icon: 'M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9zM4.5 21a7.5 7.5 0 0115 0v.75h-15V21z'
 		},
 		{
-			value: '1000+',
+			value: '200+',
 			label: 'Placement offers every year',
 			icon: 'M3.75 7.5h5.25v9h-5.25v-9zM15 7.5h5.25v9H15v-9zM9 12h6m-3-3v6'
 		}
@@ -38,17 +38,17 @@
 			title: 'Placements',
 			colorClass: 'card-placements',
 			items: [
-				{ value: '750+', text: 'Interns' },
+				{ value: '1000+', text: 'Interns' },
 				{ value: '90%', text: 'Placement' },
-				{ value: '200+', text: 'Staff' }
+				{ value: '5000+', text: 'Placed Students' }
 			]
 		},
 		{
 			title: 'Research',
 			colorClass: 'card-research',
 			items: [
-				{ value: '200+', text: 'Staff' },
-				{ value: '3200+', text: 'Projects' },
+				{ value: '50+', text: 'Publications' },
+				{ value: '200+', text: 'Projects' },
 				{ value: '10+', text: 'Patents' }
 			]
 		}

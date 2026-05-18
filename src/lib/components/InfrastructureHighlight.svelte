@@ -27,7 +27,7 @@
 			icon: '🏠'
 		},
 		{
-			value: '1200+',
+			value: '200+',
 			label: 'Computers & Workstations',
 			color: 'text-[#DC2626]',
 			icon: '💻'
