@@ -88,7 +88,8 @@
 		},
 		{
 			role: 'AI Architect',
-			description: 'Designing end-to-end AI systems, infrastructure, and scalable deployment pipelines.',
+			description:
+				'Designing end-to-end AI systems, infrastructure, and scalable deployment pipelines.',
 			skills: ['MLES', 'Docker/K8s', 'Cloud AI', 'System Design'],
 			icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
 			color: '#0d9488'
@@ -958,7 +959,7 @@
 		</section>
 
 		<!-- Faculty Profile -->
-		<section id="faculty" class="dept-section-card faculty-table-section">
+		<!-- <section id="faculty" class="dept-section-card faculty-table-section">
 			<div class="section-header-row">
 				<div class="section-title-wrap">
 					<h2 class="satoshi">AI & ML Faculty</h2>
@@ -1041,7 +1042,7 @@
 					</div>
 				{/if}
 			</div>
-		</section>
+		</section> -->
 
 		<!-- HOD Profile & Message - Redesigned Premium Layout -->
 		<section id="hod" class="dept-section-card hod-premium-section">
@@ -1049,11 +1050,16 @@
 				<!-- Profile Visual -->
 				<div class="hod-visual-side" in:fly={{ x: -30, duration: 800 }}>
 					<div class="visual-container">
-						<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" loading="lazy" class="hod-main-img" />
+						<img
+							src="/cse hod.jpg"
+							alt="Prof. S. Durga Prasad"
+							loading="lazy"
+							class="hod-main-img"
+						/>
 						<div class="visual-decor">
 							<div class="experience-badge satoshi">
 								<span class="num">22+</span>
-								<span class="label">Years of<br/>Excellence</span>
+								<span class="label">Years of<br />Excellence</span>
 							</div>
 						</div>
 					</div>
@@ -1067,13 +1073,13 @@
 							<h3 class="satoshi">Prof. S. Durga Prasad</h3>
 							<p class="inter role">Head of Department | CSE (AI & ML)</p>
 						</header>
-						
+
 						<div class="message-content">
 							<p class="inter">
-								Welcome to the AI & ML specialisation at BITS Vizag. Our department is dedicated 
-								to nurturing technical leadership and pioneering research in intelligent systems. 
-								We blend rigorous mathematical foundations with cutting-edge engineering 
-								practices to prepare our students for the global AI landscape.
+								Welcome to the AI & ML specialisation at BITS Vizag. Our department is dedicated to
+								nurturing technical leadership and pioneering research in intelligent systems. We
+								blend rigorous mathematical foundations with cutting-edge engineering practices to
+								prepare our students for the global AI landscape.
 							</p>
 						</div>
 
@@ -2131,7 +2137,9 @@
 		display: flex;
 		flex-direction: column;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+		box-shadow:
+			0 4px 6px -1px rgba(0, 0, 0, 0.02),
+			0 2px 4px -1px rgba(0, 0, 0, 0.01);
 	}
 
 	.job-card:hover {
@@ -2368,9 +2376,18 @@
 	}
 
 	@keyframes pulse {
-		0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4); }
-		70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(13, 148, 136, 0); }
-		100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+		0% {
+			transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+		}
+		70% {
+			transform: scale(1.1);
+			box-shadow: 0 0 0 10px rgba(13, 148, 136, 0);
+		}
+		100% {
+			transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+		}
 	}
 
 	.timeline-connector .line {
@@ -3255,7 +3272,8 @@
 			white-space: nowrap;
 		}
 
-		.col-sno, .td-sno {
+		.col-sno,
+		.td-sno {
 			display: none !important; /* Hide S.NO for more space */
 		}
 
@@ -3312,7 +3330,7 @@
 			gap: 0;
 			padding: 0;
 		}
-		
+
 		.hod-visual-side {
 			width: 100%;
 		}
@@ -3336,7 +3354,7 @@
 		.experience-badge .label {
 			font-size: 0.6rem;
 		}
-		
+
 		.hod-message-side {
 			margin-top: -32px;
 			width: 100%;
@@ -3535,7 +3553,7 @@
 
 		/* Section Card Design */
 		.dept-section-card {
-			box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
 			border: 1px solid #e2e8f0 !important;
 			padding: 40px !important;
 			margin: 0 30px 40px 30px !important;

@@ -3,11 +3,11 @@
 		<div class="welcome-section">
 			<span class="welcome-text">
 				Welcome to <span class="bits-accent">
-					<span class="b">B</span>
-					<span class="i">I</span>
-					<span class="t">T</span>
-					<span class="s">S</span>
-				</span> VIZAG
+					<span class="b">2</span>
+					<span class="i">0</span>
+					<span class="t">2</span>
+					<span class="s">6</span>
+				</span> Batch !!!
 			</span>
 		</div>
 
@@ -141,7 +141,7 @@
 		color: #ef4444;
 	}
 	.bits-accent .i {
-		color: #fbbf24;
+		color: #24c12f;
 	}
 	.bits-accent .t {
 		color: #f59e0b;

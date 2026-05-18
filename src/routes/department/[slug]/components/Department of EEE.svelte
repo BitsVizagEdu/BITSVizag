@@ -907,7 +907,7 @@
 		</section>
 
 		<!-- Faculty Table Section -->
-		<section
+		<!-- <section
 			id="faculty"
 			class="dept-section-card faculty-table-section"
 			style="--section-accent: #059669"
@@ -972,7 +972,7 @@
 					</tbody>
 				</table>
 			</div>
-		</section>
+		</section> -->
 
 		<!-- HOD Message Section -->
 		<section id="hod" class="dept-section-card hod-ultra-section" style="--section-accent: #db2777">

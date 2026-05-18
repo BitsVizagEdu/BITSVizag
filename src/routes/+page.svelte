@@ -188,7 +188,7 @@
 							target="_blank"
 							class="btn-glass-premium"
 						>
-							Admission Portal
+							EAMCET Portal
 							<i class="fa-solid fa-graduation-cap"></i>
 						</a>
 					</div>

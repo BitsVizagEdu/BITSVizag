@@ -281,7 +281,7 @@
 			</section>
 
 			<!-- Faculty -->
-			<section id="faculty" class="block-neat">
+			<!-- <section id="faculty" class="block-neat">
 				<div class="block-head text-center">
 					<h2 class="outfit">Expert Faculty</h2>
 					<div class="line mx-auto" style="background: #3730a3"></div>
@@ -323,7 +323,7 @@
 						</tbody>
 					</table>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- HOD: Premium Indigo UI -->
 			<section id="hod" class="block-neat">

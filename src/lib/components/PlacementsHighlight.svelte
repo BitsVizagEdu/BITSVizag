@@ -140,7 +140,7 @@
 				<div
 					class="relative overflow-hidden rounded-3xl border border-white/40 bg-white/10 shadow-2xl backdrop-blur-sm flex items-center justify-center"
 				>
-					<img src="/placee.png" alt="Placement Success" class="w-full h-auto object-contain" />
+					<img src="/placement.png" alt="Placement Success" class="w-full h-auto object-contain" />
 				</div>
 
 				<div class="grid grid-cols-2 gap-3 sm:gap-4">
