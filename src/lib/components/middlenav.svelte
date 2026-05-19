@@ -803,6 +803,14 @@
 		position: relative;
 	}
 
+	.mega-box .content {
+		border-radius: 1.5rem !important; /* Smooth curved card matching screenshot */
+		box-shadow: 0 15px 40px -8px rgba(0, 0, 0, 0.07), 
+		            0 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+		border: 1px solid #e2e8f0 !important;
+		background: #ffffff !important;
+	}
+
 	.mega-box .content header {
 		font-family: 'Roboto', sans-serif !important;
 		font-weight: 600;
