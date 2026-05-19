@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
 	export let title = '';
 	export let eyebrow = '';
@@ -12,379 +12,228 @@
 	export let personName = '';
 	export let personMeta = '';
 	export let personRole = '';
-	export let mediaFirst = false;
-	export let imageFit = 'cover';
-	export let disableImageMotion = false;
-	export let stickyMedia = true;
+	export let mediaFirst = false; // Kept for API compatibility
 
-	/** @type {HTMLElement | null} */
-	let sectionEl = null;
+	let isExpanded = false;
 
-	onMount(() => {
-		if (!sectionEl) {
-			return;
-		}
-
-		const target = sectionEl;
-		let ticking = false;
-
-		const updateMediaMotion = () => {
-			if (disableImageMotion) {
-				target.style.setProperty('--about-image-y', '0px');
-				target.style.setProperty('--about-image-scale', '1');
-				ticking = false;
-				return;
-			}
-
-			const rect = target.getBoundingClientRect();
-			const viewport = window.innerHeight || 1;
-			const progress = Math.max(0, Math.min(1, (viewport - rect.top) / (viewport + rect.height)));
-			const y = (progress - 0.5) * 20;
-			const scale = 1 + progress * 0.04;
-
-			target.style.setProperty('--about-image-y', `${y.toFixed(2)}px`);
-			target.style.setProperty('--about-image-scale', scale.toFixed(3));
-			ticking = false;
-		};
-
-		const onScroll = () => {
-			if (!ticking) {
-				ticking = true;
-				requestAnimationFrame(updateMediaMotion);
-			}
-		};
-
-		updateMediaMotion();
-
-		window.addEventListener('scroll', onScroll, { passive: true });
-		window.addEventListener('resize', onScroll, { passive: true });
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onScroll);
-		};
-	});
+	function toggleExpand() {
+		isExpanded = !isExpanded;
+	}
 </script>
 
-<section class="about-showcase" bind:this={sectionEl}>
-	<div class="about-grid" class:media-first={mediaFirst}>
-		<div class="about-copy">
-			{#if eyebrow}
-				<p class="about-eyebrow">{eyebrow}</p>
-			{/if}
+<section class="about-premium-wrapper">
+	<!-- Main centered outer layout canvas matching the screenshot's white viewport -->
+	<div
+		class="relative w-full max-w-6xl mx-auto px-4 py-16 flex flex-col items-center justify-center"
+	>
+		<!-- Skewed Cyan Background Card (Absolute, offset to the left, beautifully rotated) -->
+		<!-- On desktop: Skewed 5.5deg and starts at right-[15%] to let the image float on the right edge -->
+		<div
+			class="absolute inset-y-0 left-4 right-4 lg:right-[15%] bg-[#e8f7f9] border border-white/50 shadow-[0_20px_50px_rgba(0,0,0,0.02)] rounded-[2.5rem] transform lg:skew-y-[5.5deg] pointer-events-none"
+		></div>
 
-			<h1 class="about-title">{title}</h1>
+		<!-- Custom Geometry Container (Centering wrapper, increased to 420px height for a larger image) -->
+		<div class="relative z-10 w-full lg:h-[420px] flex flex-col py-8 lg:py-0">
+			<!-- Image Column - Right side aligned, width 44%, height 94%, vertically centered on desktop -->
+			<div class="showcase-image-wrap z-20 p-2 lg:p-0">
+				<div class="image-3d-wrap">
+					<!-- Colored aura shadow under the 3D card -->
+					<div
+						class="absolute -inset-1.5 bg-gradient-to-tr from-[#00bcd4]/30 to-[#2563eb]/25 rounded-[26px] blur-md opacity-40"
+					></div>
 
-			{#each intro as paragraph}
-				<p class="about-paragraph">{paragraph}</p>
-			{/each}
+					<div class="image-box relative w-full h-full">
+						<img
+							src={imageSrc}
+							alt={imageAlt || title}
+							class="transition-transform duration-[1200ms] ease-out hover:scale-105"
+						/>
 
-			{#each sections as section}
-				<article class="about-section">
-					<h2>{section.heading}</h2>
-					{#if section.text}
-						<p>{section.text}</p>
-					{/if}
-					{#if section.bullets}
-						<ul>
-							{#each section.bullets as bullet}
-								<li>{bullet}</li>
-							{/each}
-						</ul>
-					{/if}
-				</article>
-			{/each}
+						<!-- Premium caption banner for credentials/names -->
+						{#if personName || personRole}
+							<div
+								class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-5 text-white flex flex-col rounded-b-[26px]"
+							>
+								<span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#00bcd4]"
+									>{personRole}</span
+								>
+								<strong class="text-sm font-extrabold mt-0.5 tracking-wide">{personName}</strong>
+								{#if personMeta}
+									<span class="text-[10px] text-white/70 mt-0.5 font-medium">{personMeta}</span>
+								{/if}
+							</div>
+						{/if}
+					</div>
+				</div>
+			</div>
+
+			<!-- Content Column - Left side aligned, width 52%, vertically centered inside card -->
+			<div class="showcase-content-wrap z-20 text-slate-800">
+				{#if eyebrow}
+					<span class="text-[10px] font-black uppercase tracking-[0.25em] text-[#0b4fb0]/80 mb-2"
+						>{eyebrow}</span
+					>
+				{/if}
+
+				<h2
+					class="text-2xl sm:text-3.5xl font-black tracking-tight text-slate-900 leading-[1.2] max-w-xl"
+				>
+					{title}
+				</h2>
+
+				<!-- Shortened, highly effective introduction matter -->
+				<p
+					class="text-slate-600 font-medium leading-[1.65] text-[13.5px] sm:text-[14.5px] mt-4 max-w-[500px] text-justify text-pretty"
+				>
+					{intro[0] ||
+						'Baba Institute of Technology and Sciences stands as an institution of high distinction, delivering industry-focused engineering excellence.'}
+				</p>
+
+				<!-- Read More Button matching the image styling perfectly -->
+				<div class="mt-6 flex">
+					<button
+						on:click={toggleExpand}
+						class="px-6 py-2.5 bg-[#00bcd4] hover:bg-[#00acc1] text-white font-extrabold text-[12px] uppercase tracking-wider rounded-lg shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 transform active:scale-95 cursor-pointer"
+					>
+						{isExpanded ? 'Close Details' : 'Read More'}
+					</button>
+				</div>
+			</div>
 		</div>
 
-		<aside class="about-media-wrap" class:static-media={!stickyMedia} aria-label="About page image section">
-			<figure class="about-media">
-				<div class="parallax-viewport">
-					<img src={imageSrc} alt={imageAlt} loading="lazy" class:contain-fit={imageFit === 'contain'} />
+		<!-- Expandable Details Grid utilizing native Svelte transition slide -->
+		{#if isExpanded}
+			<div transition:slide={{ duration: 500 }} class="w-full mt-4 z-20">
+				<div
+					class="bg-white border border-slate-100 rounded-[2rem] p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.03)] grid grid-cols-1 md:grid-cols-2 gap-8 mt-4"
+				>
+					<!-- Additional Matter Column -->
+					<div class="flex flex-col gap-4">
+						<h3
+							class="text-[15px] font-extrabold text-slate-800 border-b pb-2 border-slate-100 flex items-center gap-2.5"
+						>
+							<span class="w-1.5 h-5 bg-[#00bcd4] rounded-full"></span>
+							Academic Foundation
+						</h3>
+						{#each intro.slice(1) as para}
+							<p class="text-slate-600 text-[13px] leading-relaxed text-justify">{para}</p>
+						{/each}
+						{#if intro.length <= 1}
+							<p class="text-slate-600 text-[13px] leading-relaxed text-justify">
+								Our engineering ecosystems combine state-of-the-art laboratory experimentation with
+								high-fidelity classroom learning to develop robust student foundations, enabling
+								graduates to conquer global industry landscapes.
+							</p>
+						{/if}
+					</div>
+
+					<!-- Strategic Sections (Vision, Mission, Trust, or Messages) -->
+					<div class="flex flex-col gap-6">
+						{#each sections as sec}
+							<div class="flex flex-col gap-2">
+								<h3
+									class="text-[15px] font-extrabold text-[#be123c] border-b pb-2 border-slate-100 flex items-center gap-2.5"
+								>
+									<span class="w-1.5 h-5 bg-[#be123c] rounded-full"></span>
+									{sec.heading}
+								</h3>
+								{#if sec.text}
+									<p class="text-slate-600 text-[13px] leading-relaxed">{sec.text}</p>
+								{/if}
+								{#if sec.bullets}
+									<ul class="list-disc pl-5 text-slate-600 text-[13px] leading-relaxed space-y-1.5">
+										{#each sec.bullets as bullet}
+											<li>{bullet}</li>
+										{/each}
+									</ul>
+								{/if}
+							</div>
+						{/each}
+					</div>
 				</div>
-				{#if personName || personRole || personMeta}
-					<figcaption class:align-center={mediaFirst}>
-						{#if personName}
-							<strong>{personName}</strong>
-						{/if}
-						{#if personMeta}
-							<span class="meta">{personMeta}</span>
-						{/if}
-						{#if personRole}
-							<span class="role">{personRole}</span>
-						{/if}
-					</figcaption>
-				{/if}
-			</figure>
-		</aside>
+			</div>
+		{/if}
 	</div>
 </section>
 
 <style>
-	.about-showcase {
-		--about-image-y: 0px;
-		--about-image-scale: 1;
-		padding: clamp(0.65rem, 1.3vw, 1rem) 0 clamp(2rem, 3.4vw, 2.8rem);
-		font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+	.about-premium-wrapper {
+		background: #ffffff; /* Pure white canvas backing exactly like the screenshot */
+		font-family: 'Inter', 'Segoe UI', sans-serif;
 	}
 
-	.about-grid {
-		width: min(1100px, 93vw);
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-		gap: clamp(1.4rem, 2.6vw, 2.4rem);
-		align-items: start;
+	/* 3D Isometric View Perspective skewing the image right-side closer, left-side receding (rotated layout) */
+	.image-3d-wrap {
+		perspective: 1200px;
+		transform-style: preserve-3d;
 	}
 
-	.about-grid.media-first {
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+	.image-3d-wrap > .image-box {
+		transform: rotateY(-18deg) rotateX(1.5deg) rotateZ(1deg) scale(1.02);
+		transition:
+			transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+			box-shadow 0.6s ease;
 	}
 
-	.about-grid.media-first .about-media-wrap {
-		order: 1;
+	/* Micro-animation smoothly flattening the image and scaling on hover for premium response */
+	.image-3d-wrap:hover > .image-box {
+		transform: rotateY(-6deg) rotateX(0.5deg) rotateZ(0.5deg) scale(1.05);
 	}
 
-	.about-grid.media-first .about-copy {
-		order: 2;
-	}
-
-	.about-copy {
-		max-width: 650px;
-	}
-
-	.about-eyebrow {
-		margin: 0 0 0.5rem;
-		font-size: 0.72rem;
-		font-weight: 700;
-		letter-spacing: 0.14em;
-		text-transform: uppercase;
-		color: #0b4fb0;
-		text-align: left;
-	}
-
-	.about-title {
-		margin: 0 0 0.95rem;
-		font-size: clamp(1.72rem, 3vw, 2.45rem);
-		line-height: 1.08;
-		font-weight: 800;
-		letter-spacing: -0.02em;
-		color: #0f172a;
-		text-align: left;
-	}
-
-	.about-paragraph {
-		margin: 0 0 0.9rem;
-		font-size: clamp(0.95rem, 0.88vw, 1rem);
-		line-height: 1.72;
-		color: #4b5563;
-		text-wrap: pretty;
-		text-align: justify;
-	}
-
-	.about-section {
-		margin-top: 1.35rem;
-	}
-
-	.about-section h2 {
-		margin: 0;
-		font-size: clamp(1.15rem, 1.7vw, 1.38rem);
-		line-height: 1.2;
-		font-weight: 700;
-		color: #be123c;
-		text-align: left;
-	}
-
-	.about-section p {
-		margin: 0.66rem 0 0;
-		font-size: 0.98rem;
-		line-height: 1.72;
-		color: #4b5563;
-	}
-
-	.about-section ul {
-		margin: 0.7rem 0 0;
-		padding-left: 1.3rem;
-		display: grid;
-		gap: 0.44rem;
-		color: #4b5563;
-	}
-
-	.about-section li {
-		line-height: 1.65;
-		font-size: 0.97rem;
-	}
-
-	.about-media-wrap {
-		position: sticky;
-		top: 6.3rem;
-		display: flex;
-		justify-content: center;
-	}
-
-	.about-media-wrap.static-media {
-		position: static;
-	}
-
-	.about-media {
-		margin: 0;
-		width: min(360px, 100%);
-		border-radius: 1.2rem;
-		overflow: hidden;
-		background: #ffffff;
-		box-shadow: 0 18px 36px -24px rgba(15, 23, 42, 0.32);
-	}
-
-	.parallax-viewport {
-		position: relative;
+	.image-box img {
 		width: 100%;
-		aspect-ratio: 4 / 5.2; /* Taller aspect ratio for institutional look */
-		overflow: hidden;
-	}
-
-	.about-media img {
-		position: absolute;
-		top: -12.5%; /* Significant vertical bleed */
-		left: 0;
-		width: 100%;
-		height: 125%; /* Large buffer to ensure NO CUTTING ever occurs */
+		height: 100%;
 		object-fit: cover;
-		object-position: center;
-		transform: translate3d(0, var(--about-image-y), 0) scale(var(--about-image-scale));
-		transition: transform 300ms cubic-bezier(0.1, 0, 0.2, 1);
-		will-change: transform;
+		border-radius: 26px;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 	}
 
-	.about-media img.contain-fit {
-		object-fit: contain;
-		background: #ffffff;
-		padding: 0.85rem;
-	}
-
-	.about-media figcaption {
-		padding: 0.8rem 0.85rem 0.92rem;
-		display: grid;
-		gap: 0.2rem;
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), #ffffff);
-	}
-
-	.about-media figcaption.align-center {
-		text-align: center;
-	}
-
-	.about-media figcaption strong {
-		font-size: 1.1rem;
-		font-weight: 700;
-		color: #111827;
-	}
-
-	.about-media figcaption .meta {
-		font-size: 0.94rem;
-		line-height: 1.45;
-		color: #6b7280;
-	}
-
-	.about-media figcaption .role {
-		font-size: 0.9rem;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: #be123c;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.about-media img {
-			transform: none !important;
-		}
-	}
-
-	@media (max-width: 1023px) {
-		.about-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
+	/* Desktop layout absolute positioning styles with rotated layout & neatly increased image size */
+	@media (min-width: 1024px) {
+		.showcase-image-wrap {
+			position: absolute;
+			right: 0;
+			left: auto;
+			top: 3%; /* Vertically centered (100% - 94% = 6% remaining, so 3% top/bottom) */
+			height: 94%; /* Height increased from 82% to 94% for a larger, premium image */
+			width: 44%; /* Width increased from 38% to 44% for a wider, bolder presentation */
 		}
 
-		.about-grid.media-first .about-copy,
-		.about-grid.media-first .about-media-wrap {
-			order: initial;
-		}
-
-		.about-copy {
-			max-width: none;
-			text-align: center;
-			order: 2;
-			padding: 0 0.5rem;
-		}
-
-		.about-eyebrow,
-		.about-title,
-		.about-section h2 {
-			text-align: center;
-		}
-
-		.about-media-wrap {
-			position: static;
-			order: 1;
+		.showcase-content-wrap {
+			position: absolute;
+			left: 0;
+			right: auto;
+			top: 0;
+			bottom: 0;
+			width: 52%; /* Content takes 52% width, leaving a premium 4% gap before the 44% wide image starts at right: 0 */
+			display: flex;
+			flex-direction: column;
 			justify-content: center;
+			padding-left: 2rem;
+			padding-right: 3rem;
+		}
+
+		.image-3d-wrap {
 			width: 100%;
-		}
-
-		.about-media {
-			margin: 0 auto;
-			width: min(400px, 90vw);
-			box-shadow: 0 12px 28px -10px rgba(15, 23, 42, 0.2);
-		}
-
-		.about-paragraph {
-			text-align: center;
-			font-size: 0.92rem;
-			margin-bottom: 1.2rem;
-		}
-
-		.about-section {
-			margin-top: 1.8rem;
-		}
-
-		.about-section p {
-			text-align: center;
-			font-size: 0.9rem;
-		}
-
-		.about-section ul {
-			text-align: left;
-			display: inline-block;
-			margin: 1rem auto 0;
-			max-width: 90%;
+			height: 100%;
 		}
 	}
 
-	@media (max-width: 640px) {
-		.about-showcase {
-			padding-top: 1rem;
+	/* Mobile layout fallback styles with neatly increased image size */
+	@media (max-width: 1023px) {
+		.showcase-image-wrap {
+			width: 92%;
+			max-width: 390px; /* Increased from 340px to 390px to match premium high-res display */
+			margin: 0 auto 2rem;
 		}
 
-		.about-title {
-			font-size: 1.75rem;
-			margin-bottom: 0.75rem;
+		.image-box {
+			height: 390px; /* Taller image to match the larger, premium desktop aesthetic */
 		}
 
-		.about-eyebrow {
-			font-size: 0.65rem;
-			margin-bottom: 0.4rem;
-		}
-
-		.about-paragraph,
-		.about-section p,
-		.about-section li {
-			font-size: 0.88rem;
-			line-height: 1.6;
-		}
-
-		.about-media {
-			width: min(340px, 92vw);
-		}
-		
-		.parallax-viewport {
-			aspect-ratio: 1 / 1; /* More compact for mobile */
+		.showcase-content-wrap {
+			width: 100%;
+			padding: 0 1rem;
 		}
 	}
 </style>

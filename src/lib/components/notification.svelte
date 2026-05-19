@@ -341,7 +341,7 @@
 	@media (max-width: 768px) {
 		.marquee-container {
 			padding: 10px 0;
-			background: rgba(9, 25, 50, 0.9);
+			background: rgba(3, 16, 38, 0.9);
 		}
 		.marquee-item {
 			padding-right: 1.5rem;
