@@ -16,13 +16,20 @@
 	import MobileHeader from '$lib/components/MobileHeader.svelte';
 
 	let aosInitialized = false;
-	let showWelcomeOverlay = true;
+	let showWelcomeOverlay = false;
 
 	function closeWelcome() {
 		showWelcomeOverlay = false;
+		sessionStorage.setItem('bits_has_seen_welcome', 'true');
 	}
 
 	onMount(() => {
+		// Only display welcome overlay if the user hasn't visited in this browser session
+		const hasSeen = sessionStorage.getItem('bits_has_seen_welcome');
+		if (!hasSeen) {
+			showWelcomeOverlay = true;
+		}
+
 		// Defer AOS initialization to next frame to avoid blocking render
 		if (!aosInitialized) {
 			requestAnimationFrame(() => {
@@ -94,27 +101,35 @@
 				class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050816]/95 backdrop-blur-2xl p-2 sm:p-4 select-none"
 			>
 				<!-- Atmospheric Glows -->
-				<div class="absolute -top-[20%] left-[20%] w-[500px] h-[500px] bg-[#7C4DFF]/10 blur-[120px] rounded-full pointer-events-none"></div>
-				<div class="absolute -bottom-[20%] right-[20%] w-[500px] h-[500px] bg-[#FF4FD8]/10 blur-[120px] rounded-full pointer-events-none"></div>
+				<div
+					class="absolute -top-[20%] left-[20%] w-[500px] h-[500px] bg-[#7C4DFF]/10 blur-[120px] rounded-full pointer-events-none"
+				></div>
+				<div
+					class="absolute -bottom-[20%] right-[20%] w-[500px] h-[500px] bg-[#FF4FD8]/10 blur-[120px] rounded-full pointer-events-none"
+				></div>
 
-				<div class="relative max-w-5xl md:max-w-6xl lg:max-w-[85vw] w-full flex flex-col items-center animate-fade-in px-2 sm:px-4">
+				<div
+					class="relative max-w-5xl md:max-w-6xl lg:max-w-[85vw] w-full flex flex-col items-center animate-fade-in px-2 sm:px-4"
+				>
 					<!-- Clickable Premium Image Container -->
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-					<div 
+					<div
 						on:click={closeWelcome}
 						class="relative group cursor-pointer rounded-2xl sm:rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.85)] hover:scale-[1.005] hover:border-amber-500/40 transition-all duration-500"
 					>
 						<!-- Neon Edge Glow -->
-						<div class="absolute -inset-0.5 bg-gradient-to-br from-[#7C4DFF] via-[#FF4FD8] to-[#00D4FF] rounded-2xl sm:rounded-[2rem] blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+						<div
+							class="absolute -inset-0.5 bg-gradient-to-br from-[#7C4DFF] via-[#FF4FD8] to-[#00D4FF] rounded-2xl sm:rounded-[2rem] blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+						></div>
 
 						<div class="relative bg-[#080e1f] rounded-2xl sm:rounded-[2rem] overflow-hidden">
 							<picture>
 								<source media="(max-width: 768px)" srcset="/mobile-overlay.png" />
-								<img 
-									src="/welcomr-overlay.png" 
-									alt="Welcome to BITS Vizag" 
-									class="w-full h-auto object-cover max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] transition-transform duration-700"
+								<img
+									src="/welcomr-overlay.png"
+									alt="Welcome to BITS Vizag"
+									class="w-full h-auto object-cover max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
 								/>
 							</picture>
 						</div>
@@ -326,15 +341,17 @@
 	@keyframes fadeInWelcome {
 		from {
 			opacity: 0;
-			transform: scale(0.96);
+			transform: scale(0.93);
+			filter: blur(8px) brightness(0.9);
 		}
 		to {
 			opacity: 1;
 			transform: scale(1);
+			filter: blur(0px) brightness(1);
 		}
 	}
 
 	.animate-fade-in {
-		animation: fadeInWelcome 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		animation: fadeInWelcome 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 	}
 </style>
