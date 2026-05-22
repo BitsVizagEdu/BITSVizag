@@ -33,16 +33,6 @@ const config = {
 			publicPrefix: 'PUBLIC_'
 		}
 	},
-	compilerOptions: {
-		dev: false,
-		// Enable performance optimizations
-		immutable: false,
-		legacy: false,
-		accessors: false,
-		customElement: false,
-		preserveComments: false,
-		preserveWhitespace: false
-	}
 };
 
 export default config;
