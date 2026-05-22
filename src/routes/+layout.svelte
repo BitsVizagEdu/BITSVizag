@@ -27,7 +27,9 @@
 		// Only display welcome overlay if the user hasn't visited in this browser session
 		const hasSeen = sessionStorage.getItem('bits_has_seen_welcome');
 		if (!hasSeen) {
-			showWelcomeOverlay = true;
+			setTimeout(() => {
+				showWelcomeOverlay = true;
+			}, 1500);
 		}
 
 		// Defer AOS initialization to next frame to avoid blocking render

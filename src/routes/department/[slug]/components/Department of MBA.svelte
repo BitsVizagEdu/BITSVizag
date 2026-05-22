@@ -217,7 +217,7 @@
 	</section>
 
 	<!-- FACULTY -->
-	<section class="s-faculty">
+	<!-- <section class="s-faculty">
 		<div class="shell">
 			<div class="s-header" use:reveal={0}>
 				<span class="eyebrow-pill">Our Team</span>
@@ -240,7 +240,7 @@
 				{/each}
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<!-- HOD -->
 	<section class="s-hod">

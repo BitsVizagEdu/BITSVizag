@@ -82,8 +82,6 @@
 
 <svelte:head>
 	<title>Home</title>
-	<link rel="preload" as="image" href="/baba.png" />
-	<link rel="preload" as="image" href="/header/T10main.webp" />
 </svelte:head>
 {#if !$showNavBar}
 	<Notification />

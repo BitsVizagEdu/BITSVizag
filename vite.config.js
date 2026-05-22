@@ -26,6 +26,18 @@ export default {
 		reportCompressedSize: true
 	},
 	optimizeDeps: {
-		include: ['aos', 'gsap', 'swiper']
+		include: [
+			'aos',
+			'gsap',
+			'swiper',
+			'lenis',
+			'@studio-freight/lenis',
+			'@splidejs/splide',
+			'@splidejs/svelte-splide',
+			'flowbite',
+			'flowbite-svelte',
+			'motion',
+			'tailwind-merge'
+		]
 	}
 };
