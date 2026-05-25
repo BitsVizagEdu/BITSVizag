@@ -3,7 +3,7 @@ export const documentLinks = {
 		{ label: 'IQAC (Quality Assurance)', href: '/governance/IQAC', icon: 'fa-solid fa-users-gear' },
 		{ label: 'GRC (Grievances)', href: '/governance/GRC', icon: 'fa-solid fa-scale-balanced' },
 		{ label: 'ICC (Complaints)', href: '/governance/ICC', icon: 'fa-solid fa-shield-halved' },
-		{ label: 'Code of Conduct', href: '/pdfs/code-of-conduct.pdf', icon: 'fa-solid fa-book-open' }
+		{ label: 'Code of Conduct', href: '/governance/code-of-conduct', icon: 'fa-solid fa-book-open' }
 	],
 	institutional: [
 		{ label: 'Strategic Plan 2025-30', href: '/pdfs/Strategic-Plan-2025-30.pdf', icon: 'fa-solid fa-compass' },
