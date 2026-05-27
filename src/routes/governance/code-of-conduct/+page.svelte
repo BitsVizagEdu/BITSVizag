@@ -20,6 +20,16 @@
           <h1>Code of Conduct — Handbook</h1>
           <p class="tagline">Baba Institute of Technology and Sciences — Standards & Responsibilities</p>
         </div>
+        <div class="action-bar">
+          <a class="action-btn" href="/pdfs/code-of-conduct.pdf" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><path d="M12 15V3"/></svg>
+            <span>Download PDF</span>
+          </a>
+          <button class="action-btn" on:click={() => window.print()}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><rect x="6" y="13" width="12" height="8" rx="2"/></svg>
+            <span>Print</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -136,8 +146,12 @@
   .breadcrumb { font-size: 0.75rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:.5rem }
   h1 { font-size: 2.8rem; font-weight:900; color:#0f172a; margin-bottom:.25rem }
   .tagline { color:#1e40af; font-weight:600 }
-  .bento-card { background:#fff; border:1px solid #f1f5f9; border-radius:1rem; padding:1.5rem; margin-bottom:1rem }
-  h2 { font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:.5rem }
+  .action-bar { display:flex; gap:.75rem; margin-top:1rem; margin-bottom:1rem }
+  .action-btn { display:inline-flex; align-items:center; gap:.5rem; padding:.5rem .75rem; background:#0f172a; color:#fff; border-radius:.5rem; text-decoration:none; border:none; cursor:pointer; font-weight:700 }
+  .action-btn svg { opacity:.95 }
+  .action-btn:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(15,23,42,0.06) }
+  .bento-card { background:linear-gradient(180deg,#ffffff,#fbfdff); border-radius:.85rem; padding:1.5rem; margin-bottom:1rem; box-shadow:0 6px 18px rgba(16,24,40,0.04); border-left:6px solid #e2e8f0 }
+  h2 { font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:.5rem; display:flex; align-items:center; gap:.6rem }
   p { line-height:1.6; color:#475569 }
   .tight-list { list-style:none; padding-left:0; display:grid; grid-template-columns:1fr; gap:.5rem }
   .tight-list li { padding:.6rem 0; font-weight:600; color:#0f172a }
@@ -146,4 +160,8 @@
   .signed { font-weight:800; margin:0.25rem 0 }
   .muted { font-weight:600; color:#64748b }
   @media (min-width:800px) { .tight-list { grid-template-columns:1fr 1fr } }
+  @media (min-width:800px) {
+    .action-bar { justify-content:flex-end }
+    .container > .action-bar { max-width:1100px; margin:0 auto; padding:0 1.5rem }
+  }
 </style>
