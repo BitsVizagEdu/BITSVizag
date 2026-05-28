@@ -7,16 +7,39 @@
 	export let label = '';
 	export let icon = '';
 	export let external = false;
+	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
 	export let onClick = () => {};
+
+	async function handleClick(event) {
+		try {
+			onClick(event);
+		} catch (err) {}
+
+		if (external) return;
+		event.preventDefault();
+		await tick();
+		if (!href) return;
+		try {
+			await goto(href);
+		} catch (err) {
+			console.error('SubMenuItem navigation failed for', href, err);
+			try {
+				window.location.href = href;
+			} catch (e) {
+				console.error('Fallback navigation also failed', e);
+			}
+		}
+	}
 </script>
 
-<a
-	{href}
-	target={external ? '_blank' : undefined}
-	rel={external ? 'external noopener noreferrer' : undefined}
-	on:click={onClick}
-	class="flex w-full items-center justify-between border-b border-slate-50 bg-white px-6 py-4.5 transition-colors hover:bg-slate-50 active:bg-slate-100"
->
+	<a
+			{href}
+			target={external ? '_blank' : undefined}
+			rel={external ? 'external noopener noreferrer' : undefined}
+			on:click={handleClick}
+			class="flex w-full items-center justify-between border-b border-slate-50 bg-white px-6 py-4.5 transition-colors hover:bg-slate-50 active:bg-slate-100"
+	>
 	<div class="flex items-center gap-4">
 		{#if icon}
 			<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500">

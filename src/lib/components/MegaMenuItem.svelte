@@ -9,16 +9,46 @@
 	export let iconColorClass = ''; // Ignored to ensure unified aesthetic matching the image
 	export let iconBgClass = ''; // Ignored to ensure unified aesthetic matching the image
 	export let external = false;
+	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
 	export let onClick = () => {};
+
+	async function handleClick(event) {
+		// allow parent to run close handlers first
+		try {
+			onClick(event);
+		} catch (err) {
+			// ignore
+		}
+
+		// external links should use normal navigation
+		if (external) return;
+
+		// prevent default anchor navigation and use client router after DOM updates
+		event.preventDefault();
+		await tick();
+		if (!href) return;
+		try {
+			await goto(href);
+		} catch (err) {
+			console.error('MegaMenuItem navigation failed for', href, err);
+			// fallback to full navigation if client router fails
+			try {
+				window.location.href = href;
+			} catch (e) {
+				console.error('Fallback navigation also failed', e);
+			}
+		}
+	}
 </script>
 
-<a
-	{href}
-	target={external ? '_blank' : undefined}
-	rel={external ? 'external noopener noreferrer' : undefined}
-	on:click={onClick}
-	class="nav-dropdown-item group"
->
+	<a
+			{href}
+			target={external ? '_blank' : undefined}
+			rel={external ? 'external noopener noreferrer' : undefined}
+			on:click={handleClick}
+			class="nav-dropdown-item group"
+	>
 	<!-- Left Icon: Grey by default, morphs to Leaf Green on hover -->
 	{#if icon}
 		<div class="nav-dropdown-icon-box">

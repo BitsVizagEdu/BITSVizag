@@ -305,16 +305,23 @@
 									</div>
 								</div>
 								<div class="grid w-full grid-cols-1 gap-2">
+									<!-- Explicit stable link for Code of Conduct to avoid routing race issues -->
+									<a href="/governance/code-of-conduct" class="nav-dropdown-item group" on:click={closeMenus}>
+										<div class="nav-dropdown-icon-box"><i class="fa-solid fa-book-open fa-fw" aria-hidden="true" /></div>
+										<span class="nav-dropdown-label">Code of Conduct</span>
+									</a>
 									{#each documentLinks.governance as link}
-										<MegaMenuItem
-											href={link.href}
-											label={link.label}
-											icon={link.icon}
-											iconColorClass="text-orange-600"
-											iconBgClass="bg-orange-50"
-											external={link.href.endsWith('.pdf') || link.href.endsWith('.xlsx')}
-											onClick={closeMenus}
-										/>
+										{#if link.href !== '/governance/Code-of-Conduct'}
+											<MegaMenuItem
+												href={link.href}
+												label={link.label}
+												icon={link.icon}
+												iconColorClass="text-orange-600"
+												iconBgClass="bg-orange-50"
+												external={link.href.endsWith('.pdf') || link.href.endsWith('.xlsx')}
+												onClick={closeMenus}
+											/>
+										{/if}
 									{/each}
 								</div>
 							</div>
@@ -343,7 +350,7 @@
 											icon={link.icon}
 											iconColorClass="text-orange-600"
 											iconBgClass="bg-orange-50"
-											external={true}
+											external={link.href.startsWith('/pdfs/')}
 											onClick={closeMenus}
 										/>
 									{/each}
@@ -541,13 +548,25 @@
 				>
 			</div>
 			{#each documentLinks.governance as link}
-				<SubMenuItem
-					label={link.label}
-					href={link.href}
-					icon={link.icon}
-					external={link.href.endsWith('.pdf') || link.href.endsWith('.xlsx')}
-					onClick={closeMenus}
-				/>
+				{#if link.href === '/governance/Code-of-Conduct'}
+					<a href="/governance/code-of-conduct" class="flex w-full items-center justify-between border-b border-slate-50 bg-white px-6 py-4.5 hover:bg-slate-50" on:click={closeMenus}>
+						<div class="flex items-center gap-4">
+							<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500">
+								<i class="fa-solid fa-book-open fa-fw" aria-hidden="true" />
+							</div>
+							<span class="text-[16px] font-semibold text-slate-800">Code of Conduct</span>
+						</div>
+						<i class="fa-solid fa-chevron-right text-xs text-slate-300" aria-hidden="true" />
+					</a>
+				{:else}
+					<SubMenuItem
+						label={link.label}
+						href={link.href}
+						icon={link.icon}
+						external={link.href.endsWith('.pdf') || link.href.endsWith('.xlsx')}
+						onClick={closeMenus}
+					/>
+				{/if}
 			{/each}
 			<div class="px-6 py-3 border-b border-slate-100 bg-slate-50 mt-4">
 				<span class="text-xs font-bold uppercase tracking-widest text-orange-600"
@@ -559,7 +578,7 @@
 					label={link.label}
 					href={link.href}
 					icon={link.icon}
-					external={true}
+					external={link.href.startsWith('/pdfs/')}
 					onClick={closeMenus}
 				/>
 			{/each}
