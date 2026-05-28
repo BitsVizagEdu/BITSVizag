@@ -350,7 +350,7 @@
 											icon={link.icon}
 											iconColorClass="text-orange-600"
 											iconBgClass="bg-orange-50"
-											external={true}
+											external={link.href.startsWith('/pdfs/')}
 											onClick={closeMenus}
 										/>
 									{/each}
@@ -578,7 +578,7 @@
 					label={link.label}
 					href={link.href}
 					icon={link.icon}
-					external={true}
+					external={link.href.startsWith('/pdfs/')}
 					onClick={closeMenus}
 				/>
 			{/each}
