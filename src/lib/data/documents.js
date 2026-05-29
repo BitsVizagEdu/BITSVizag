@@ -1,5 +1,6 @@
 export const documentLinks = {
 	governance: [
+		{ label: 'Mandatory Disclosure', href: '/governance/mandatory-disclosure', icon: 'fa-solid fa-file-shield' },
 		{ label: 'IQAC (Quality Assurance)', href: '/governance/IQAC', icon: 'fa-solid fa-users-gear' },
 		{ label: 'GRC (Grievances)', href: '/governance/GRC', icon: 'fa-solid fa-scale-balanced' },
 		{ label: 'ICC (Complaints)', href: '/governance/ICC', icon: 'fa-solid fa-shield-halved' },
@@ -7,7 +8,7 @@ export const documentLinks = {
 	],
 	institutional: [
 		{ label: 'Strategic Plan 2025-30', href: '/governance/strategic-plan-2025-30', icon: 'fa-solid fa-compass' },
-		{ label: 'Mandatory Disclosure', href: '/pdfs/BITS-Mandatory-Disclosure.pdf', icon: 'fa-solid fa-rectangle-list' },
+		{ label: 'Mandatory Disclosure', href: '/governance/mandatory-disclosure', icon: 'fa-solid fa-rectangle-list' },
 		{ label: 'Institutional Policy', href: '/pdfs/Institutional-Policy.pdf', icon: 'fa-solid fa-building-shield' },
 		{ label: 'Institutional Best Practices', href: '/pdfs/Institutional-Best-Practices.pdf', icon: 'fa-solid fa-award' }
 	],
