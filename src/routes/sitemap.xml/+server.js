@@ -174,7 +174,7 @@ export async function GET() {
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/Mandatory</loc>
+		<loc>https://bitsvizag.com/governance/mandatory-disclosure</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
