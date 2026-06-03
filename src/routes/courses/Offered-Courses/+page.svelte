@@ -14,14 +14,14 @@
 		{
 			sno: 2,
 			estd: 2024,
-			name: 'CSE - AI & Machine Learning',
+			name: 'AI & Machine Learning',
 			intake: 60,
 			slug: 'Department of CSE (AI & ML)'
 		},
 		{
 			sno: 3,
 			estd: 2024,
-			name: 'CSE - Cyber Security',
+			name: 'Cyber Security',
 			intake: 60,
 			slug: 'Department of CSE (Cyber Security)'
 		},
