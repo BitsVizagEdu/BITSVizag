@@ -15,12 +15,12 @@
 		{ label: 'Civil', href: '/department/Department%20of%20CIVIL', level: 'UG' },
 		{ label: 'BS&H', href: '/department/Department%20of%20BS%26H', level: 'UG' },
 		{
-			label: 'CSE (AI & ML)',
+			label: 'AI & ML',
 			href: '/department/Department%20of%20CSE%20(AI%20%26%20ML)',
 			level: 'UG'
 		},
 		{
-			label: 'CSE (Cyber Security)',
+			label: 'Cyber Security',
 			href: '/department/Department%20of%20CSE%20(Cyber%20Security)',
 			level: 'UG'
 		},
@@ -112,8 +112,8 @@
 
 							<div class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3">
 								<MegaMenuItem href="/department/Department%20of%20CSE" label="CSE - Computer Science and Engineering" icon="fa-solid fa-laptop-code" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20CSE%20(AI%20%26%20ML)" label="CSE - AI & ML" icon="fa-solid fa-brain" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20CSE%20(Cyber%20Security)" label="CSE - Cyber Security" icon="fa-solid fa-shield-halved" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20CSE%20(AI%20%26%20ML)" label="AI & ML" icon="fa-solid fa-brain" onClick={closeMenus} />
+								<MegaMenuItem href="/department/Department%20of%20CSE%20(Cyber%20Security)" label="Cyber Security" icon="fa-solid fa-shield-halved" onClick={closeMenus} />
 								<MegaMenuItem href="/department/Department%20of%20ECE" label="ECE - Electronics & Communication" icon="fa-solid fa-microchip" onClick={closeMenus} />
 								<MegaMenuItem href="/department/Department%20of%20EEE" label="EEE - Electrical & Electronics" icon="fa-solid fa-bolt" onClick={closeMenus} />
 								<MegaMenuItem href="/department/Department%20of%20MECH" label="Mechanical" icon="fa-solid fa-cogs" onClick={closeMenus} />

@@ -6,12 +6,12 @@
 			href: '/department/Department%20of%20CSE'
 		},
 		{
-			name: 'CSE - AI & Machine Learning',
+			name: 'AI & Machine Learning',
 			intake: 60,
 			href: '/department/Department%20of%20CSE%20(AI%20%26%20ML)'
 		},
 		{
-			name: 'CSE - Cyber Security',
+			name: 'Cyber Security',
 			intake: 60,
 			href: '/department/Department%20of%20CSE%20(Cyber%20Security)'
 		},

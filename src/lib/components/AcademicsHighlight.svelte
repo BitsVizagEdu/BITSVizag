@@ -8,8 +8,8 @@
 
 	const ugPrograms = [
 		'B.Tech Computer Science & Engineering',
-		'B.Tech CSE (AI & ML)',
-		'B.Tech CSE (Cyber Security)',
+		'B.Tech AI & ML',
+		'B.Tech Cyber Security',
 		'B.Tech Electronics & Communication',
 		'B.Tech Electrical & Electronics',
 		'B.Tech Mechanical Engineering'
