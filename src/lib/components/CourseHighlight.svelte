@@ -13,7 +13,7 @@
 			color: 'amber-500'
 		},
 		{
-			title: 'CSE AI & ML',
+			title: 'AI & ML',
 			image: '/Course-highlight/newAI.jpg',
 			desc: 'Artificial Intelligence & Machine Learning',
 			duration: '4 Years',

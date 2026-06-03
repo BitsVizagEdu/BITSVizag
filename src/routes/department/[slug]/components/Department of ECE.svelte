@@ -622,13 +622,13 @@
 				<div class="about-grid-content">
 					<div class="about-text-side">
 						<p class="inter main-para">
-							The Department of Computer Science (AI & ML) at BITS Vizag is at the forefront of the
-							technological revolution, shaping the future of autonomous systems.
+							The Department of Electronics &amp; Communication Engineering (ECE) at BITS Vizag is focused on
+							advancing communication systems, signal processing, and embedded electronics to build
+							industry-ready engineers.
 						</p>
 						<p class="inter sub-para">
-							Focusing on Artificial Intelligence and Machine Learning, we prepare students for a
-							tech-driven world where intelligent algorithms solve complex problems in healthcare,
-							finance, and global sustainability.
+							With strengths in VLSI, digital and analog communications, and IoT systems, we prepare students
+							for careers in telecommunications, semiconductor design, and embedded systems development.
 						</p>
 					</div>
 					<div class="about-visual-side">

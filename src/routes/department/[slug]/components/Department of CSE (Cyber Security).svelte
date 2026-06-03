@@ -512,13 +512,13 @@
 				<div class="about-grid-content">
 					<div class="about-text-side">
 						<p class="inter main-para">
-							The Department of Computer Science (AI & ML) at BITS Vizag is at the forefront of the
+							The Department of Cyber Security at BITS Vizag is at the forefront of the
 							technological revolution, shaping the future of autonomous systems.
 						</p>
 						<p class="inter sub-para">
-							Focusing on Artificial Intelligence and Machine Learning, we prepare students for a
-							tech-driven world where intelligent algorithms solve complex problems in healthcare,
-							finance, and global sustainability.
+							The department boasts state-of-the-art labs,
+							a distinguished faculty, and a strong placement record, preparing graduates to
+							become leaders in the rapidly evolving field of cybersecurity.
 						</p>
 					</div>
 					<div class="about-visual-side">
