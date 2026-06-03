@@ -1,5 +1,6 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
+	import OptimizedImage from './OptimizedImage.svelte';
 
 	const slides = [
 		{
@@ -152,13 +153,13 @@
 				rel="noopener noreferrer"
 				tabindex={i === current ? 0 : -1}
 			>
-				<img
-					class="sl-img"
+				<OptimizedImage
+					className="sl-img"
 					src={slide.src}
 					alt={slide.alt}
-					draggable="false"
-					loading={i === 0 ? 'eager' : 'lazy'}
-					decoding="async"
+					eager={i === 0}
+					fetchpriority={i === 0 ? 'high' : 'auto'}
+					sizes="100vw"
 				/>
 			</a>
 		</div>

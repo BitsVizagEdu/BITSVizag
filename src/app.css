@@ -13,6 +13,34 @@
 		width: 100%;
 		position: relative;
 	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	img,
+	picture,
+	video,
+	iframe {
+		max-width: 100%;
+		display: block;
+	}
+
+	img {
+		height: auto;
+		image-rendering: auto;
+	}
 }
 
 @layer utilities {
@@ -31,6 +59,11 @@
 
 	.font-inter {
 		font-family: 'Inter', 'Satoshi', sans-serif;
+	}
+
+	.content-visibility-auto {
+		content-visibility: auto;
+		contain-intrinsic-size: 800px;
 	}
 }
 

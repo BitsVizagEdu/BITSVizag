@@ -22,7 +22,15 @@
 	/** @type {ReturnType<typeof setTimeout> | undefined} */
 	let typingTimer = undefined;
 	let shouldUseVideo = true;
-	let heroVideo;
+let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
+let displayText = '';
+let wordIndex = 0;
+let isDeleting = false;
+let typeSpeed = 150;
+/** @type {ReturnType<typeof setTimeout> | undefined} */
+let typingTimer = undefined;
+let shouldUseVideo = true;
+let heroVideo;
 
 	function handleTyping() {
 		const currentWord = words[wordIndex];
@@ -48,19 +56,18 @@
 	}
 
 	onMount(() => {
-		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		const saveData = Boolean((/** @type {any} */ (navigator)).connection?.saveData);
-		shouldUseVideo = !prefersReducedMotion && !saveData;
+	const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const saveData = Boolean((/** @type {any} */ (navigator)).connection?.saveData);
+	shouldUseVideo = !prefersReducedMotion && !saveData;
 
-		// If browser blocked autoplay due to save-data or reduced-motion, allow user to
-		// manually enable the background video via a small control.
-		if (shouldUseVideo && heroVideo) {
-			// try programmatic play for browsers that require a play() call
-			try { heroVideo.play?.(); } catch (e) {}
-		}
+	if (shouldUseVideo && heroVideo) {
+		try {
+			heroVideo.play?.();
+		} catch (e) {}
+	}
 
-		handleTyping();
-	});
+	handleTyping();
+});
 
 	onDestroy(() => {
 		if (typingTimer) {
@@ -95,7 +102,7 @@
 </script>
 
 <Seo
-	title="BITS Vizag - Top Engineering College in Visakhapatnam"
+	title="BITS Vizag - Top Engineering Colleges in Visakhapatnam"
 	description="Baba Institute of Technology and Sciences (BITS Vizag),BITS Vizag is a best engineering college in Visakhapatnam, offering a world-class education in various disciplines."
 	url="https://bitsvizag.com"
 	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
@@ -110,43 +117,41 @@
 	<Notification />
 	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#050816]">
 			{#if shouldUseVideo}
-				<video
-				<video
-					bind:this={heroVideo}
-					playsinline
-					autoplay
-					muted
-					loop
-					preload="metadata"
-					poster="/baba.png"
-					class="absolute inset-0 h-full w-full object-cover z-0"
-				>
-					<source src="/baba.webm" type="video/webm" />
-					<source src="/baba.mp4" type="video/mp4" />
-				</video>
-			{:else}
-				<img
-					src="/baba.png"
-					alt="BITS Vizag campus"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-					class="absolute inset-0 h-full w-full object-cover z-0"
-				/>
-
-				<!-- Manual play control when video is disabled by user agent -->
-				<div class="absolute left-4 bottom-6 z-30">
-					<button
-						on:click={() => {
-							shouldUseVideo = true;
-							// allow the DOM to update then play
-							setTimeout(() => heroVideo?.play?.(), 50);
-						}}
-						class="px-4 py-2 rounded-md bg-white/10 text-white backdrop-blur-md border border-white/20"
-					>
-						Play background video
-					</button>
-				</div>
+			{#if shouldUseVideo}
+	<video
+		bind:this={heroVideo}
+		playsinline
+		autoplay
+		muted
+		loop
+		preload="metadata"
+		poster="/baba.png"
+		class="absolute inset-0 h-full w-full object-cover z-0"
+	>
+		<source src="/baba.webm" type="video/webm" />
+		<source src="/baba.mp4" type="video/mp4" />
+	</video>
+{:else}
+	<img
+		src="/bitsvizag.png"
+		alt="BITS Vizag campus"
+		loading="eager"
+		decoding="async"
+		fetchpriority="high"
+		class="absolute inset-0 h-full w-full object-cover z-0"
+	/>
+{/if}
+<div class="absolute left-4 bottom-6 z-30">
+	<button
+		on:click={() => {
+			shouldUseVideo = true;
+			setTimeout(() => heroVideo?.play?.(), 50);
+		}}
+		class="px-4 py-2 rounded-md bg-white/10 text-white backdrop-blur-md border border-white/20"
+	>
+		Play background video
+	</button>
+</div>
 			{/if}
 
 		<div class="absolute inset-0 z-[1] hero-overlay"></div>

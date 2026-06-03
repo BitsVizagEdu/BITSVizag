@@ -1,32 +1,55 @@
 <script>
 	import { onMount } from 'svelte';
-	import Lenis from 'lenis';
 
 	let lenisInstance = null;
+	let animationFrameId = 0;
 
 	onMount(() => {
-		// Initialize Lenis with optimal settings for smooth scroll
-		lenisInstance = new Lenis({
-			duration: 1.2, // Smoothness factor (higher = smoother)
-			easing: (t) => 1 - Math.pow(1 - t, 3), // Smooth easing function
-			smooth: true,
-			wheelMultiplier: 1, // Adjust scroll speed
-			touchMultiplier: 2, // Adjust touch scroll speed
-			infinite: false,
-		});
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const saveData = navigator.connection?.saveData;
 
-		// RAF loop for continuous smooth scrolling
-		function raf(time) {
-			lenisInstance.raf(time);
-			requestAnimationFrame(raf);
+		if (prefersReducedMotion || saveData) {
+			return;
 		}
 
-		requestAnimationFrame(raf);
+		let cancelled = false;
 
-		// Cleanup
+		import('lenis').then(({ default: Lenis }) => {
+			if (cancelled) {
+				return;
+			}
+
+			lenisInstance = new Lenis({
+				duration: 1.1,
+				easing: (t) => 1 - Math.pow(1 - t, 3),
+				smooth: true,
+				wheelMultiplier: 1,
+				touchMultiplier: 1.5,
+				infinite: false,
+			});
+
+			const raf = (time) => {
+				if (!lenisInstance || cancelled) {
+					return;
+				}
+
+				lenisInstance.raf(time);
+				animationFrameId = requestAnimationFrame(raf);
+			};
+
+			animationFrameId = requestAnimationFrame(raf);
+		});
+
 		return () => {
+			cancelled = true;
+			if (animationFrameId) {
+				cancelAnimationFrame(animationFrameId);
+				animationFrameId = 0;
+			}
+
 			if (lenisInstance) {
 				lenisInstance.destroy();
+				lenisInstance = null;
 			}
 		};
 	});

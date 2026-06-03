@@ -9,6 +9,8 @@
 	 * @param {string} [sizes] - Responsive image sizes
 	 * @param {string} [srcset] - Responsive image srcset
 	 * @param {string} [className] - Additional CSS classes
+	 * @param {string} [fetchpriority] - Browser fetch priority hint
+	 * @param {string} [style] - Additional inline styles
 	 */
 	export let src = '';
 	export let alt = '';
@@ -18,6 +20,8 @@
 	export let sizes = undefined;
 	export let srcset = undefined;
 	export let className = '';
+	export let fetchpriority = undefined;
+	export let style = '';
 
 	let imageLoaded = false;
 
@@ -33,9 +37,10 @@
 	{height}
 	{sizes}
 	{srcset}
+	{fetchpriority}
 	loading={eager ? 'eager' : 'lazy'}
 	decoding="async"
 	class="transition-opacity duration-300 {imageLoaded ? 'opacity-100' : 'opacity-0'} {className}"
 	on:load={handleImageLoad}
-	style="contain: layout style paint;"
+	style="contain: layout style paint; {style}"
 />
