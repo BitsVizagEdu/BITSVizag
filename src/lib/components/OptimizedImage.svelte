@@ -8,8 +8,8 @@
 	 * @param {boolean} [eager=false] - Load image eagerly (for above-fold images)
 	 * @param {string} [sizes] - Responsive image sizes
 	 * @param {string} [srcset] - Responsive image srcset
+	 * @param {string} [fetchpriority] - Native image fetch priority hint
 	 * @param {string} [className] - Additional CSS classes
-	 * @param {string} [fetchpriority] - Browser fetch priority hint
 	 * @param {string} [style] - Additional inline styles
 	 */
 	export let src = '';
@@ -19,8 +19,8 @@
 	export let eager = false;
 	export let sizes = undefined;
 	export let srcset = undefined;
-	export let className = '';
 	export let fetchpriority = undefined;
+	export let className = '';
 	export let style = '';
 
 	let imageLoaded = false;

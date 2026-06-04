@@ -22,15 +22,8 @@
 	/** @type {ReturnType<typeof setTimeout> | undefined} */
 	let typingTimer = undefined;
 	let shouldUseVideo = true;
-let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
-let displayText = '';
-let wordIndex = 0;
-let isDeleting = false;
-let typeSpeed = 150;
-/** @type {ReturnType<typeof setTimeout> | undefined} */
-let typingTimer = undefined;
-let shouldUseVideo = true;
-let heroVideo;
+	/** @type {HTMLVideoElement | undefined} */
+	let heroVideo = undefined;
 
 	function handleTyping() {
 		const currentWord = words[wordIndex];
@@ -117,42 +110,43 @@ let heroVideo;
 	<Notification />
 	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#050816]">
 			{#if shouldUseVideo}
-			{#if shouldUseVideo}
-	<video
-		bind:this={heroVideo}
-		playsinline
-		autoplay
-		muted
-		loop
-		preload="metadata"
-		poster="/baba.png"
-		class="absolute inset-0 h-full w-full object-cover z-0"
-	>
-		<source src="/baba.webm" type="video/webm" />
-		<source src="/baba.mp4" type="video/mp4" />
-	</video>
-{:else}
-	<img
-		src="/bitsvizag.png"
-		alt="BITS Vizag campus"
-		loading="eager"
-		decoding="async"
-		fetchpriority="high"
-		class="absolute inset-0 h-full w-full object-cover z-0"
-	/>
-{/if}
-<div class="absolute left-4 bottom-6 z-30">
-	<button
-		on:click={() => {
-			shouldUseVideo = true;
-			setTimeout(() => heroVideo?.play?.(), 50);
-		}}
-		class="px-4 py-2 rounded-md bg-white/10 text-white backdrop-blur-md border border-white/20"
-	>
-		Play background video
-	</button>
-</div>
+				<video
+					bind:this={heroVideo}
+					playsinline
+					autoplay
+					muted
+					loop
+					preload="metadata"
+					poster="/baba.png"
+					class="absolute inset-0 h-full w-full object-cover z-0"
+				>
+					<source src="/baba.webm" type="video/webm" />
+					<source src="/baba.mp4" type="video/mp4" />
+				</video>
+			{:else}
+				<img
+					src="/bitsvizag.png"
+					alt="BITS Vizag campus"
+					loading="eager"
+					decoding="async"
+					fetchpriority="high"
+					class="absolute inset-0 h-full w-full object-cover z-0"
+				/>
 			{/if}
+
+			<!-- Manual play control when video is disabled by user agent -->
+			<div class="absolute left-4 bottom-6 z-30">
+				<button
+					on:click={() => {
+						shouldUseVideo = true;
+						// allow the DOM to update then play
+						setTimeout(() => heroVideo?.play?.(), 50);
+					}}
+					class="px-4 py-2 rounded-md bg-white/10 text-white backdrop-blur-md border border-white/20"
+				>
+					Play background video
+				</button>
+			</div>
 
 		<div class="absolute inset-0 z-[1] hero-overlay"></div>
 
