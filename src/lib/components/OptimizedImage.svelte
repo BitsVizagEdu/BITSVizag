@@ -12,6 +12,8 @@
 	 * @param {string} [className] - Additional CSS classes
 	 * @param {string} [style] - Additional inline styles
 	 */
+	import { onMount } from 'svelte';
+
 	export let src = '';
 	export let alt = '';
 	export let width = undefined;
@@ -24,13 +26,22 @@
 	export let style = '';
 
 	let imageLoaded = false;
+	/** @type {HTMLImageElement | undefined} */
+	let imgElement = undefined;
 
 	const handleImageLoad = () => {
 		imageLoaded = true;
 	};
+
+	onMount(() => {
+		if (imgElement && imgElement.complete) {
+			imageLoaded = true;
+		}
+	});
 </script>
 
 <img
+	bind:this={imgElement}
 	{src}
 	{alt}
 	{width}
