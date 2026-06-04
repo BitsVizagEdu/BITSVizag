@@ -147,7 +147,6 @@
 					Play background video
 				</button>
 			</div>
-			{/if}
 
 		<div class="absolute inset-0 z-[1] hero-overlay"></div>
 
