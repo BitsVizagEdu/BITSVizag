@@ -22,7 +22,8 @@
 	/** @type {ReturnType<typeof setTimeout> | undefined} */
 	let typingTimer = undefined;
 	let shouldUseVideo = true;
-	let heroVideo;
+	/** @type {HTMLVideoElement | undefined} */
+	let heroVideo = undefined;
 
 	function handleTyping() {
 		const currentWord = words[wordIndex];
@@ -110,7 +111,6 @@
 	<Notification />
 	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#050816]">
 			{#if shouldUseVideo}
-				<video
 				<video
 					bind:this={heroVideo}
 					playsinline

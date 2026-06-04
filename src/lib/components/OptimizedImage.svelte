@@ -8,6 +8,7 @@
 	 * @param {boolean} [eager=false] - Load image eagerly (for above-fold images)
 	 * @param {string} [sizes] - Responsive image sizes
 	 * @param {string} [srcset] - Responsive image srcset
+	 * @param {string} [fetchpriority] - Native image fetch priority hint
 	 * @param {string} [className] - Additional CSS classes
 	 */
 	export let src = '';
@@ -17,6 +18,7 @@
 	export let eager = false;
 	export let sizes = undefined;
 	export let srcset = undefined;
+	export let fetchpriority = undefined;
 	export let className = '';
 
 	let imageLoaded = false;
@@ -33,6 +35,7 @@
 	{height}
 	{sizes}
 	{srcset}
+	{fetchpriority}
 	loading={eager ? 'eager' : 'lazy'}
 	decoding="async"
 	class="transition-opacity duration-300 {imageLoaded ? 'opacity-100' : 'opacity-0'} {className}"
