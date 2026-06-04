@@ -38,7 +38,7 @@
 		},
 		{ label: 'Infrastructure', href: '/infrastructure', icon: 'fa-solid fa-building-columns' },
 		{ label: 'Finance & Quality', href: '/finance-quality', icon: 'fa-solid fa-chart-line' },
-		{ label: 'Disclosures', href: '/Mandatory', icon: 'fa-solid fa-file-circle-check' },
+		{ label: 'Disclosures', href: '/governance/mandatory-disclosure', icon: 'fa-solid fa-file-circle-check' },
 		{ label: 'Online Grievances', href: '/Online-Grievances', icon: 'fa-solid fa-circle-info' },
 		{ label: 'Contact', href: '/contactus', icon: 'fa-solid fa-address-book' }
 	];

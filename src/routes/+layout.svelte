@@ -6,7 +6,6 @@
 	import Nav from '$lib/components/navmenu.svelte';
 	import BackToTop from '$lib/components/backtotop.svelte';
 	import Hero from '$lib/components/navbar.svelte';
-	import AOS from 'aos';
 	import Middlenav from '$lib/components/middlenav.svelte';
 	import ScrollProgressBar from '$lib/components/ScrollProgressBar.svelte';
 	import LenisScroll from '$lib/components/LenisScroll.svelte';
@@ -17,6 +16,8 @@
 
 	let aosInitialized = false;
 	let showWelcomeOverlay = false;
+	let welcomeTimer;
+	let welcomeAnimationFrame = 0;
 
 	function closeWelcome() {
 		showWelcomeOverlay = false;
@@ -27,18 +28,33 @@
 		// Only display welcome overlay if the user hasn't visited in this browser session
 		const hasSeen = sessionStorage.getItem('bits_has_seen_welcome');
 		if (!hasSeen) {
-			setTimeout(() => {
+			welcomeTimer = setTimeout(() => {
 				showWelcomeOverlay = true;
 			}, 1500);
 		}
 
-		// Defer AOS initialization to next frame to avoid blocking render
 		if (!aosInitialized) {
-			requestAnimationFrame(() => {
-				AOS.init();
+			welcomeAnimationFrame = requestAnimationFrame(async () => {
+				const { default: AOS } = await import('aos');
+				AOS.init({
+					once: true,
+					duration: 650,
+					offset: 80,
+				});
 				aosInitialized = true;
 			});
 		}
+
+		return () => {
+			if (welcomeTimer) {
+				clearTimeout(welcomeTimer);
+				welcomeTimer = undefined;
+			}
+			if (welcomeAnimationFrame) {
+				cancelAnimationFrame(welcomeAnimationFrame);
+				welcomeAnimationFrame = 0;
+			}
+		};
 	});
 </script>
 

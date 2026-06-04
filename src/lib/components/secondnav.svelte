@@ -53,7 +53,7 @@
 				aria-label="Infrastructure"
 				on:click={closeMobileMenu}>Infrastructure</a
 			>
-			<a href="/Mandatory" class="mobile-visible-link" on:click={closeMobileMenu}>Disclosures</a>
+			<a href="/governance/mandatory-disclosure" class="mobile-visible-link" on:click={closeMobileMenu}>Disclosures</a>
 		</div>
 
 		<button
@@ -101,7 +101,7 @@
 				<a href="/infrastructure" on:click={closeMobileMenu}>Infrastructure</a>
 			</li>
 			<li><a href="/finance-quality" on:click={closeMobileMenu}>Finance & Quality</a></li>
-			<li><a href="/Mandatory" on:click={closeMobileMenu}>Disclosures</a></li>
+			<li><a href="/governance/mandatory-disclosure" on:click={closeMobileMenu}>Disclosures</a></li>
 			<li>
 				<a
 					href="https://docs.google.com/forms/d/e/1FAIpQLSeLM-fVFfXfLMtIzC2QcO-djxj14gqkW1F18eGdqG9m9mt-Sg/viewform"
