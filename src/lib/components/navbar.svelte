@@ -358,6 +358,9 @@
 		overflow: hidden;
 		animation: goldShimmer 4s linear infinite;
 		white-space: nowrap;
+		/* Contain animation repaint to this element only */
+		contain: layout style paint;
+		will-change: background-position;
 	}
 
 	.ugc-badge::before {
@@ -371,6 +374,8 @@
 		transform: rotate(35deg);
 		animation: sparkSweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 		pointer-events: none;
+		/* GPU-accelerate the sweep animation */
+		will-change: transform;
 	}
 
 	@keyframes sparkSweep {
@@ -424,6 +429,8 @@
 		color: #a05805;
 		filter: drop-shadow(0 0 3px rgba(217, 119, 6, 0.4));
 		animation: starSparkle 2s ease-in-out infinite;
+		/* GPU-accelerate star sparkle animation */
+		will-change: transform;
 	}
 
 	.status-pill {
@@ -463,6 +470,7 @@
 		transform: rotate(35deg);
 		animation: sparkSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 1s;
 		pointer-events: none;
+		will-change: transform;
 	}
 
 	.apply-cta {

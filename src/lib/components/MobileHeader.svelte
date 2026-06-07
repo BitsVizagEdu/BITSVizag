@@ -8,8 +8,9 @@
 		const handleScroll = () => {
 			isScrolled = window.scrollY > 20;
 		};
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		// passive: true tells browser we won't call preventDefault → unlocks scroll thread
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll, { passive: true });
 	});
 
 	function toggleNav() {
@@ -159,8 +160,10 @@
 	.main-header {
 		background: white;
 		padding: 6px 12px;
-		transition: all 0.3s ease;
+		/* Only transition transform/opacity - avoids layout recalc on scroll */
+		transition: box-shadow 0.3s ease, padding 0.3s ease;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		will-change: box-shadow;
 	}
 
 	.main-header.scrolled {
@@ -170,6 +173,7 @@
 		right: 0;
 		padding: 4px 12px;
 		z-index: 100;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 	}
 
 	.header-inner {

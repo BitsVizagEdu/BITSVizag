@@ -160,6 +160,8 @@ video {
 	display: grid;
 	place-items: center;
 	overflow: hidden;
+	/* Contain layout so animations don't trigger full-page layout checks */
+	contain: layout style;
 }
 
 .slider::before,
@@ -195,6 +197,9 @@ video {
 	display: flex;
 	animation: scroll 20s linear infinite;
 	justify-content: space-between;
+	/* GPU-accelerate the marquee — moves to its own compositor layer */
+	will-change: transform;
+	transform: translateZ(0);
 }
 
 .slide-track2 {
@@ -202,6 +207,8 @@ video {
 	display: flex;
 	animation: scroll2 15s linear infinite;
 	justify-content: space-between;
+	will-change: transform;
+	transform: translateZ(0);
 }
 
 .slide {
