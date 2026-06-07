@@ -11,11 +11,20 @@ export default {
 			output: {
 				manualChunks: (id) => {
 					if (id.includes('node_modules')) {
-						if (id.includes('gsap') || id.includes('locomotion')) {
+						// Animation libraries in a separate lazy chunk
+						if (id.includes('gsap') || id.includes('locomotive-scroll')) {
 							return 'animation';
 						}
 						if (id.includes('aos')) {
 							return 'aos';
+						}
+						// Scroll library in its own chunk (loaded async)
+						if (id.includes('lenis')) {
+							return 'scroll';
+						}
+						// Splide carousel
+						if (id.includes('splide')) {
+							return 'carousel';
 						}
 						return 'vendor';
 					}
@@ -23,7 +32,10 @@ export default {
 			}
 		},
 		cssCodeSplit: true,
-		reportCompressedSize: true
+		reportCompressedSize: false,
+		// Minify for production
+		minify: 'esbuild',
+		target: 'es2020'
 	},
 	optimizeDeps: {
 		include: [
@@ -31,10 +43,8 @@ export default {
 			'gsap',
 			'swiper',
 			'lenis',
-			'@studio-freight/lenis',
 			'@splidejs/splide',
 			'@splidejs/svelte-splide',
-			'flowbite',
 			'flowbite-svelte',
 			'motion',
 			'tailwind-merge'

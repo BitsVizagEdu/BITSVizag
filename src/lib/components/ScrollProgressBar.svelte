@@ -29,22 +29,20 @@
 {#if mounted}
 	<div class="fixed top-0 right-0 w-[4px] h-full z-[9999] pointer-events-none">
 		<div
-			class="w-full origin-top"
+			class="w-full h-full origin-top"
 			style="
-				height: {scrollProgress * 100}%;
-				background-color: #2563eb; 
-				transition: height 0.15s cubic-bezier(0.23, 1, 0.32, 1);
-				will-change: height;
+				background-color: #2563eb;
+				transform: scaleY({scrollProgress});
+				transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+				will-change: transform;
 			"
 		></div>
 	</div>
 {/if}
 
 <style>
-	:global {
-		/* Disable native scroll smoothing (Lenis takes over) */
-		html {
-			scroll-behavior: auto;
-		}
+	/* Disable native scroll smoothing (Lenis takes over) */
+	:global(html) {
+		scroll-behavior: auto;
 	}
 </style>

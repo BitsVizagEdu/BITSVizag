@@ -59,45 +59,30 @@
 </script>
 
 <svelte:head>
-	<!-- Font Preloading for Performance -->
+	<!-- Font Preconnect for Performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://api.fontshare.com" crossorigin="anonymous" />
+
+	<!-- Non-blocking font load: media=print swapped to all onload -->
 	<link
-		rel="preload"
-		as="style"
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet"
+		media="print"
+		onload="this.media='all'"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap"
 	/>
 	<link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-	/>
-	<link
-		rel="preload"
-		as="style"
+		media="print"
+		onload="this.media='all'"
 		href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400,500&display=swap"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400,500&display=swap"
-	/>
-	<link
-		rel="preload"
-		as="style"
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&display=swap"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Serif:wght@400;600&family=Lato:wght@400;700&display=swap"
 	/>
 
-	<!-- Font Awesome CDN - Async Load -->
-	<link
-		rel="preload"
-		as="style"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-	/>
+	<!-- Font Awesome CDN - Non-blocking -->
 	<link
 		rel="stylesheet"
+		media="print"
+		onload="this.media='all'"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 	/>
 
@@ -117,6 +102,7 @@
 			<div
 				out:fade={{ duration: 600 }}
 				class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050816]/95 backdrop-blur-2xl p-2 sm:p-4 select-none"
+				style="will-change: opacity;"
 			>
 				<!-- Atmospheric Glows -->
 				<div
@@ -359,17 +345,16 @@
 	@keyframes fadeInWelcome {
 		from {
 			opacity: 0;
-			transform: scale(0.93);
-			filter: blur(8px) brightness(0.9);
+			transform: scale(0.95);
 		}
 		to {
 			opacity: 1;
 			transform: scale(1);
-			filter: blur(0px) brightness(1);
 		}
 	}
 
 	.animate-fade-in {
-		animation: fadeInWelcome 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		animation: fadeInWelcome 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		will-change: transform, opacity;
 	}
 </style>
