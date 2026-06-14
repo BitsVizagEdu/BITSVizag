@@ -59,7 +59,7 @@
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center h-full items-center">
 			<!-- LEFT SIDE: PLACEMENT CONTENT -->
 			<div
-				class="flex flex-col space-y-6 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
+				class="flex flex-col space-y-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 					? 'opacity-100 translate-y-0'
 					: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 			>
@@ -133,7 +133,7 @@
 
 			<!-- RIGHT SIDE: IMAGE + SMALL STATS -->
 			<div
-				class="relative flex flex-col gap-6 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
+				class="relative flex flex-col gap-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
 					? 'opacity-100 translate-x-0'
 					: 'opacity-0 translate-x-12 pointer-events-none'} h-full justify-center"
 			>

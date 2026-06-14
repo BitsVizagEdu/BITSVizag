@@ -46,6 +46,10 @@
 			prevSlide();
 		}
 	}
+	$: isSlideVisible = (i) => {
+		const diff = Math.abs(activeSlide - i);
+		return diff <= 1 || diff === slides.length - 1;
+	};
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -69,7 +73,10 @@
 		tabindex="0"
 	>
 		{#each slides as slide, i}
-			<div class="w-full shrink-0 slide-isolation">
+			<div 
+				class="w-full shrink-0 slide-isolation"
+				style="visibility: {isSlideVisible(i) ? 'visible' : 'hidden'};"
+			>
 				<svelte:component this={slide.component} isActive={activeSlide === i} />
 			</div>
 		{/each}

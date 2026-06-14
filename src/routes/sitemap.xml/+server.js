@@ -179,6 +179,16 @@ export async function GET() {
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
+		<loc>https://bitsvizag.com/governance/strategic-plan-2025-30</loc>
+		<priority>0.6</priority>
+		<changefreq>quarterly</changefreq>
+	</url>
+	<url>
+		<loc>https://bitsvizag.com/governance/best-practices</loc>
+		<priority>0.6</priority>
+		<changefreq>quarterly</changefreq>
+	</url>
+	<url>
 		<loc>https://bitsvizag.com/affilation-reports</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>

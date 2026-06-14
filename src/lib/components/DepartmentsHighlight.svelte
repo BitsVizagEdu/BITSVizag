@@ -42,7 +42,7 @@
 
 	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-10 w-full h-full py-6">
 		<div
-			class="flex flex-col gap-8 transition-all duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
+			class="flex flex-col gap-8 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 				? 'opacity-100 translate-y-0'
 				: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 		>

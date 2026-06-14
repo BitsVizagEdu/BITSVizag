@@ -134,20 +134,6 @@
 				/>
 			{/if}
 
-			<!-- Manual play control when video is disabled by user agent -->
-			<div class="absolute left-4 bottom-6 z-30">
-				<button
-					on:click={() => {
-						shouldUseVideo = true;
-						// allow the DOM to update then play
-						setTimeout(() => heroVideo?.play?.(), 50);
-					}}
-					class="px-4 py-2 rounded-md bg-white/10 text-white backdrop-blur-md border border-white/20"
-				>
-					Play background video
-				</button>
-			</div>
-
 		<div class="absolute inset-0 z-[1] hero-overlay"></div>
 
 		<div
@@ -486,6 +472,8 @@
 	.hero-card-ultra {
 		@apply relative transition-all duration-1000 ease-out;
 		animation: float-ultra 8s ease-in-out infinite;
+		will-change: transform;
+		transform: translateZ(0);
 	}
 
 	.hero-card-ultra img {
@@ -631,6 +619,8 @@
 		filter: contrast(1.1) brightness(1.05) saturate(1.15);
 		animation: ken-burns 30s ease-in-out infinite alternate;
 		transition: filter 0.5s ease;
+		will-change: transform;
+		transform: translateZ(0);
 	}
 
 	.hero-card:hover .hero-img-animated {
@@ -874,5 +864,10 @@
 		.hero-copy h1 {
 			font-size: 2.4rem !important;
 		}
+	}
+
+	:global(.hero-content-anim) {
+		will-change: transform, opacity;
+		transform: translateZ(0);
 	}
 </style>

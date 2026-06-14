@@ -84,7 +84,7 @@
 	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full h-full flex flex-col justify-center gap-8 py-6">
 			<!-- Premium Gold Lighting Header -->
 			<div
-				class="flex flex-col items-center text-center space-y-2 transition-all duration-1000 cubic-bezier(0.23, 1, 0.32, 1) {isActive
+				class="flex flex-col items-center text-center space-y-2 transition-[transform,opacity] duration-1000 cubic-bezier(0.23, 1, 0.32, 1) {isActive
 					? 'opacity-100 translate-y-0'
 					: 'opacity-0 translate-y-8'}"
 			>
@@ -109,7 +109,7 @@
 			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
 				{#each accreditations as item, i}
 					<div
-						class="group relative flex flex-col items-center justify-center p-3 sm:p-8 bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-amber-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl {isActive
+						class="group relative flex flex-col items-center justify-center p-3 sm:p-8 bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-amber-100 transition-[transform,opacity] duration-500 hover:-translate-y-2 hover:shadow-xl {isActive
 							? 'opacity-100 translate-y-0'
 							: 'opacity-0 translate-y-10'} min-h-[100px] sm:min-h-[180px]"
 						style="transition-delay: {100 + i * 50}ms;"
