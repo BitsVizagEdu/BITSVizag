@@ -94,4 +94,9 @@
 	.transition-bridge {
 		box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.5);
 	}
+
+	.radial-glow-anim {
+		will-change: transform, opacity;
+		transform: translateZ(0);
+	}
 </style>

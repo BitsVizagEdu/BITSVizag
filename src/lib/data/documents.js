@@ -11,7 +11,7 @@ export const documentLinks = {
 		{ label: 'Mandatory Disclosure', href: '/governance/mandatory-disclosure', icon: 'fa-solid fa-rectangle-list' },
 		{ label: 'Mandatory Disclosure PDF', href: '/pdfs/BITS-Mandatory-Disclosure.pdf', icon: 'fa-solid fa-file-pdf' },
 		{ label: 'Institutional Policy', href: '/pdfs/Institutional-Policy.pdf', icon: 'fa-solid fa-building-shield' },
-		{ label: 'Institutional Best Practices', href: '/pdfs/Institutional-Best-Practices.pdf', icon: 'fa-solid fa-award' }
+		{ label: 'Institutional Best Practices', href: '/governance/best-practices', icon: 'fa-solid fa-award' }
 	],
 	examcell: [
 		{ label: 'Programs Offered', href: '/pdfs/Programs-Offered.pdf', icon: 'fa-solid fa-graduation-cap' },

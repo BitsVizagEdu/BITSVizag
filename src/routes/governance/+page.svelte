@@ -159,7 +159,9 @@
 							? 'View the premium disclosure page with institutional data, committees, programs, and a PDF preview.'
 							: link.href === '/governance/strategic-plan-2025-30'
 								? 'Review the five-year direction for teaching, research, innovation, and student growth.'
-								: 'Open the page or document in the governance stack.'}
+								: link.href === '/governance/best-practices'
+									? 'Explore outcome-based education (OBE) mechanisms and employability skill enhancement programs.'
+									: 'Open the page or document in the governance stack.'}
 					</p>
 					<div class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-orange-600 transition-transform duration-200 group-hover:translate-x-1">
 						<span>Open</span>
