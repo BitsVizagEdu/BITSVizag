@@ -68,13 +68,13 @@
 	<link
 		rel="stylesheet"
 		media="print"
-		onload="this.media='all'"
+		{...{ onload: "this.media='all'" }}
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap"
 	/>
 	<link
 		rel="stylesheet"
 		media="print"
-		onload="this.media='all'"
+		{...{ onload: "this.media='all'" }}
 		href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400,500&display=swap"
 	/>
 
@@ -82,7 +82,7 @@
 	<link
 		rel="stylesheet"
 		media="print"
-		onload="this.media='all'"
+		{...{ onload: "this.media='all'" }}
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 	/>
 

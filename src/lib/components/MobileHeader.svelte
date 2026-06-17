@@ -9,8 +9,8 @@
 			isScrolled = window.scrollY > 20;
 		};
 		// passive: true tells browser we won't call preventDefault → unlocks scroll thread
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		return () => window.removeEventListener('scroll', handleScroll, { passive: true });
+		window.addEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
+		return () => window.removeEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
 	});
 
 	function toggleNav() {

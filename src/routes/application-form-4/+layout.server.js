@@ -3,6 +3,7 @@ import {redirect} from "@sveltejs/kit";
 
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({url}) {
+    /** @type {any} */
     let result = {};
     for (let [key, value] of url.searchParams.entries()) {
         result[key] = value;

@@ -93,21 +93,26 @@
     import {onMount} from "svelte";
 
     onMount(() => {
-        document.getElementById('application-form-3').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var form = event.target;
+        const formEl = document.getElementById('application-form-3');
+        if (formEl) {
+            formEl.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var form = /** @type {HTMLFormElement} */ (event.target);
 
-            // Create a FormData object from the form
-            var formData = new FormData(form);
+                // Create a FormData object from the form
+                var formData = new FormData(form);
 
-            queryParams.Student_Name = formData.get("Student_Name")
-            queryParams.Parent_Guardian_Name = formData.get("Parent_Guardian_Name")
-            queryParams.Relationship = formData.get("Relationship")
+                /** @type {any} */
+                const params = queryParams;
+                params.Student_Name = formData.get("Student_Name")
+                params.Parent_Guardian_Name = formData.get("Parent_Guardian_Name")
+                params.Relationship = formData.get("Relationship")
 
-            window.location.href = ('/application-form-4?' +  Object.keys(queryParams)
-                .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(queryParams[key]))
-                .join('&'));
-        });
+                window.location.href = ('/application-form-4?' +  Object.keys(params)
+                    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(params[key]))
+                    .join('&'));
+            });
+        }
     })
 
 </script>

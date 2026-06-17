@@ -110,46 +110,47 @@
     var isLoading = writable(false)
 
     onMount(() => {
-        document.getElementById('application-form-4').addEventListener('submit', function (event) {
-            isLoading.set(true)
-            event.preventDefault();
+        const formEl = document.getElementById('application-form-4');
+        if (formEl) {
+            formEl.addEventListener('submit', function (event) {
+                isLoading.set(true)
+                event.preventDefault();
 
-            var form = event.target;
+                var form = /** @type {HTMLFormElement} */ (event.target);
 
-            var formData = new FormData(form);
+                var formData = new FormData(form);
 
-            formData.set("Application ID", queryParams.id)
-            formData.set("Student_Name", queryParams.Student_Name)
-            formData.set("Parent_Guardian_Name", queryParams.Parent_Guardian_Name)
-            formData.set("Relationship", queryParams.Relationship)
+                formData.set("Application ID", queryParams.id)
+                formData.set("Student_Name", queryParams.Student_Name)
+                formData.set("Parent_Guardian_Name", queryParams.Parent_Guardian_Name)
+                formData.set("Relationship", queryParams.Relationship)
 
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            }).then(async function (response) {
-                if (response.ok) {
-                    await fetch("/api/storeForm", {
-                        method: "POST", body: JSON.stringify({
-                            name: queryParams.name, branch: queryParams.branch,
-                            mobile: queryParams.mobile,
-                            reference: queryParams.reference, id: queryParams.id,
-                        }), headers: {"Content-Type": "application/json"}
-                    })
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                }).then(async function (response) {
+                    if (response.ok) {
+                        await fetch("/api/storeForm", {
+                            method: "POST", body: JSON.stringify({
+                                name: queryParams.name, branch: queryParams.branch,
+                                mobile: queryParams.mobile,
+                                reference: queryParams.reference, id: queryParams.id,
+                            }), headers: {"Content-Type": "application/json"}
+                        })
+                        isLoading.set(false)
+                        alert("Successfully submitted form")
+                        window.location.href = '/';
+                    } else {
+                        isLoading.set(false)
+                        alert('There was a problem with the submission. Please try again.');
+                    }
+                }).catch(function (error) {
                     isLoading.set(false)
-                    alert("Successfully submitted form")
-                    window.location.href = '/';
-                } else {
-                    isLoading.set(false)
+                    console.error('Error:', error);
                     alert('There was a problem with the submission. Please try again.');
-                }
-            }).catch(function (error) {
-                isLoading.set(false)
-                console.error('Error:', error);
-                alert('There was a problem with the submission. Please try again.');
+                });
             });
-
-
-        });
+        }
     })
 
 </script>

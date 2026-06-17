@@ -1,16 +1,13 @@
 <script>
-	import { fade, fly } from 'svelte/transition';
-	/** @typedef {{ title: string; description: string }} Feature */
-	/** @typedef {{ label: string; value: string }} Metric */
-
+	import { fade, fly, scale } from 'svelte/transition';
 	export let title = '';
 	export let kicker = 'Signature Campus Amenities';
 	export let intro = '';
 	export let imageSrc = '';
 	export let imageAlt = '';
-	/** @type {Feature[]} */
+	/** @type {any[]} */
 	export let features = [];
-	/** @type {Metric[]} */
+	/** @type {any[]} */
 	export let metrics = [];
 	/** @type {string[]} */
 	export let galleryImages = [];
@@ -61,7 +58,7 @@
 					{#each galleryImages as image, i}
 						<div
 							class="img-container item-{i + 1}"
-							in:fly={{ scale: 0.95, opacity: 0, duration: 800, delay: 300 + i * 150 }}
+							in:scale={{ start: 0.95, opacity: 0, duration: 800, delay: 300 + i * 150 }}
 						>
 							<img src={image} alt={`${title} visual ${i + 1}`} />
 							{#if i === 0}

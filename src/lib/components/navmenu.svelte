@@ -35,9 +35,11 @@
 			if (isOpening) {
 				val = val.map(() => false);
 				// Scroll the clicked element into view after a short delay
-				const target = event.currentTarget;
+				const target = /** @type {HTMLElement} */ (event.currentTarget);
 				setTimeout(() => {
-					target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					if (target) {
+						target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					}
 				}, 100);
 			}
 			val[index] = !val[index];

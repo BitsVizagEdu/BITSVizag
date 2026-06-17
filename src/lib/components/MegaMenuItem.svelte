@@ -11,7 +11,7 @@
 	export let external = false;
 	import { goto } from '$app/navigation';
 	import { tick } from 'svelte';
-	export let onClick = () => {};
+	export let onClick = (event) => {};
 
 	async function handleClick(event) {
 		// allow parent to run close handlers first

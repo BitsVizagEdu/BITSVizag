@@ -13,6 +13,9 @@
 	export let personMeta = '';
 	export let personRole = '';
 	export let mediaFirst = false; // Kept for API compatibility
+	export let imageFit = 'cover';
+	export let disableImageMotion = false;
+	export let stickyMedia = true;
 
 	let isExpanded = false;
 
@@ -42,11 +45,12 @@
 						class="absolute -inset-1.5 bg-gradient-to-tr from-[#00bcd4]/30 to-[#2563eb]/25 rounded-[26px] blur-md opacity-40"
 					></div>
 
-					<div class="image-box relative w-full h-full">
+					<div class="image-box relative w-full h-full" class:no-motion={disableImageMotion}>
 						<img
 							src={imageSrc}
 							alt={imageAlt || title}
 							class="transition-transform duration-[1200ms] ease-out hover:scale-105"
+							style="object-fit: {imageFit};"
 						/>
 
 						<!-- Premium caption banner for credentials/names -->
@@ -235,5 +239,13 @@
 			width: 100%;
 			padding: 0 1rem;
 		}
+	}
+
+	.image-box.no-motion {
+		transform: none !important;
+		transition: none !important;
+	}
+	.image-3d-wrap:hover > .image-box.no-motion {
+		transform: none !important;
 	}
 </style>

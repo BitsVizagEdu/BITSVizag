@@ -365,52 +365,56 @@
      let selectedBranch = "";
 
     onMount(() => {
-        document.getElementById('application-form-1').addEventListener('submit', function (event) {
-            isLoading.set(true)
-            event.preventDefault();
-            var form = event.target;
+        const formEl = document.getElementById('application-form-1');
+        if (formEl) {
+            formEl.addEventListener('submit', function (event) {
+                isLoading.set(true)
+                event.preventDefault();
+                var form = /** @type {HTMLFormElement} */ (event.target);
 
-            // Create a FormData object from the form
-            var formData = new FormData(form);
+                // Create a FormData object from the form
+                var formData = new FormData(form);
 
-            formData.delete("Terms")
+                formData.delete("Terms")
 
-            const name = formData.get("Student Name")
-            const branchName = formData.get("Branch")
-            const courseName = formData.get("Course")
+                const name = formData.get("Student Name")
+                const branchName = formData.get("Branch")
+                const courseName = formData.get("Course")
 
-            let branch = `${branchName} : ${courseName}`;
+                let branch = `${branchName} : ${courseName}`;
 
-            const mobile = formData.get("Mobile")
-            const reference = formData.get("Reference_Name")
-            const data = {
-                name,
-                branch,
-                mobile,
-                reference,
-                id: "BABA-" + uuidv4().substring(0,8),
-            }
-
-            formData.set("Application ID", data.id)
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            }).then(function (response) {
-                isLoading.set(false)
-                if (response.ok) {
-                    window.location.href = '/application-form-2?' + Object.keys(data)
-                        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-                        .join('&');
-                } else {
-                    alert('There was a problem with the submission. Please try again.');
+                const mobile = formData.get("Mobile")
+                const reference = formData.get("Reference_Name")
+                /** @type {any} */
+                const data = {
+                    name,
+                    branch,
+                    mobile,
+                    reference,
+                    id: "BABA-" + uuidv4().substring(0,8),
                 }
-            }).catch(function (error) {
-                isLoading.set(false)
-                console.error('Error:', error);
-                alert('There was a problem with the submission. Please try again.');
+
+                formData.set("Application ID", data.id)
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                }).then(function (response) {
+                    isLoading.set(false)
+                    if (response.ok) {
+                        window.location.href = '/application-form-2?' + Object.keys(data)
+                            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+                            .join('&');
+                    } else {
+                        alert('There was a problem with the submission. Please try again.');
+                    }
+                }).catch(function (error) {
+                    isLoading.set(false)
+                    console.error('Error:', error);
+                    alert('There was a problem with the submission. Please try again.');
+                });
             });
-        });
+        }
     })
 
 </script>

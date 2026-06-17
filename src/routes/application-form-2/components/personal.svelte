@@ -162,35 +162,40 @@
   let queryParams = $page.data.queryParams;
 
   onMount(() => {
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      isLoading.set(true)
-      event.preventDefault();
-      var form = event.target;
+    const formEl = document.getElementById('registrationForm');
+    if (formEl) {
+      formEl.addEventListener('submit', function(event) {
+        isLoading.set(true)
+        event.preventDefault();
+        var form = /** @type {HTMLFormElement} */ (event.target);
 
-      // Create a FormData object from the form
-      var formData = new FormData(form);
+        // Create a FormData object from the form
+        var formData = new FormData(form);
 
-      formData.set("Application ID", queryParams.id)
+        formData.set("Application ID", queryParams.id)
 
-      // Send the form data to the Google Apps Script
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      }).then(function(response) {
-        isLoading.set(false)
-        if (response.ok) {
-          window.location.href = '/application-form-3?' + Object.keys(queryParams)
-                  .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(queryParams[key]))
-                  .join('&');
-        } else {
+        // Send the form data to the Google Apps Script
+        fetch(form.action, {
+          method: 'POST',
+          body: formData
+        }).then(function(response) {
+          isLoading.set(false)
+          if (response.ok) {
+            /** @type {any} */
+            const params = queryParams;
+            window.location.href = '/application-form-3?' + Object.keys(params)
+                    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(params[key]))
+                    .join('&');
+          } else {
+            alert('There was a problem with the submission. Please try again.');
+          }
+        }).catch(function(error) {
+          isLoading.set(false)
+          console.error('Error:', error);
           alert('There was a problem with the submission. Please try again.');
-        }
-      }).catch(function(error) {
-        isLoading.set(false)
-        console.error('Error:', error);
-        alert('There was a problem with the submission. Please try again.');
+        });
       });
-    });
+    }
   })
 
 </script>
