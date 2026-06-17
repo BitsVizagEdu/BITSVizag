@@ -334,7 +334,7 @@
 			</div>
 
 			<h2
-				class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-6 uppercase"
+				class="text-3xl md:text-5xl font-semibold text-slate-900 tracking-tight mb-6 uppercase"
 				data-aos="fade-up"
 			>
 				Celebrate Life at

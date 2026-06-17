@@ -60,7 +60,8 @@
 		class="flex transition-transform duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1) will-change-transform gpu-layer" 
 		style="transform: translate3d(-{activeSlide * 100}%, 0, 0);"
 		on:click={(e) => {
-			if (!e.target.closest('a, button')) {
+			const target = /** @type {HTMLElement} */ (e.target);
+			if (target && typeof target.closest === 'function' && !target.closest('a, button')) {
 				nextSlide();
 			}
 		}}

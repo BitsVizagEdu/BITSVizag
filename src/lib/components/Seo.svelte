@@ -3,7 +3,7 @@
 	export let description;
 	export let type = 'website';
 	export let url;
-	export let imageUrl;
+	export let imageUrl = '';
 	export let siteName;
 	/** @type {Record<string, unknown> | null} */
 	export let structuredData = null;

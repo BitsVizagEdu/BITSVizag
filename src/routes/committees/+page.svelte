@@ -1,5 +1,6 @@
 <script>
-	import Committies from '$lib/components/committies.svelte';
+	// @ts-nocheck
+	import Committies from '../../lib/components/committies.svelte';
 </script>
 
 <svelte:head>

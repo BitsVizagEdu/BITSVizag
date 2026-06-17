@@ -6,7 +6,8 @@
 
 	onMount(() => {
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		const saveData = navigator.connection?.saveData;
+		const connection = /** @type {any} */ (navigator).connection;
+		const saveData = connection?.saveData;
 
 		if (prefersReducedMotion || saveData) {
 			return;
@@ -22,7 +23,7 @@
 			lenisInstance = new Lenis({
 				duration: 1.1,
 				easing: (t) => 1 - Math.pow(1 - t, 3),
-				smooth: true,
+				smoothWheel: true,
 				wheelMultiplier: 1,
 				touchMultiplier: 1.5,
 				infinite: false,
