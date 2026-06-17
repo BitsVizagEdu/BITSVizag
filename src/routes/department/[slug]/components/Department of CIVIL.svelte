@@ -1,6 +1,7 @@
 <script>
 	import HodMessage from '$lib/components/HodMessage.svelte';
 	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	let mounted = false;
 	let heroReady = false;
@@ -196,21 +197,36 @@
 		</div>
 	</section>
 
-	<!-- HOD -->
-	<section class="s-hod">
-		<div class="shell">
-			<div class="s-header" use:reveal={0}>
-				<span class="eyebrow-pill">Leadership</span>
-				<h2 class="s-heading">Head of Department</h2>
+	<!-- HOD Message - Upgraded with Impactful Motion -->
+	<section
+		id="hod"
+		class="dept-section-card hod-premium-card"
+		style="--section-accent: #b45309"
+	>
+		<div class="hod-container">
+			<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
+				<div class="hod-image-glow"></div>
+				<img src="/civil-hod.jpg" alt="Prof. M. Mohan" loading="lazy" />
+				<div class="hod-badge satoshi">15+ Years Exp</div>
 			</div>
-			<div use:reveal={80}>
-				<HodMessage
-					hodName="Prof. M. Mohan"
-					designation="Head of Department"
-					department="Civil Engineering"
-					hodMessage="Welcome to the Department of Civil Engineering at BITS Vizag. My profound expertise and industry connections enable us to foster strong collaborations with leading construction companies and research organisations. Driven by a passion for excellence, I inspire our students to excel academically and participate in research that addresses real-world engineering challenges — producing skilled and responsible civil engineers poised to make a positive impact on society."
-					hodImage="/civil-hod.jpg"
-				/>
+			<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
+				<div class="quote-icon">
+					<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
+						<path
+							d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
+						></path>
+					</svg>
+				</div>
+				<h2 class="satoshi">Prof. M. Mohan</h2>
+				<p class="hod-designation inter">
+					Head of Department | Civil Engineering
+				</p>
+				<div class="hod-message-body">
+					<p class="inter">
+						"Welcome to the Department of Civil Engineering at BITS Vizag. My profound expertise and industry connections enable us to foster strong collaborations with leading construction companies and research organisations. Driven by a passion for excellence, I inspire our students to excel academically and participate in research that addresses real-world engineering challenges — producing skilled and responsible civil engineers poised to make a positive impact on society."
+					</p>
+					<p class="inter signature">Prof. M. Mohan</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -700,11 +716,107 @@
 		transform: translate(2px, -2px);
 	}
 
-	/* HOD */
-	.s-hod {
-		background: var(--surface);
-		padding: 5.5rem 0 6.5rem;
-		border-top: 1px solid var(--border);
+	/* HOD Premium Card */
+	/* HOD Premium Card */
+	.hod-premium-card {
+		padding: 0 !important;
+		overflow: hidden;
+		background: #0f172a !important;
+		border: none !important;
+		margin: 5.5rem 0 6.5rem;
+		border-radius: 32px;
+	}
+
+	.hod-container {
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		min-height: 480px;
+	}
+
+	.hod-visual {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hod-visual img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.hod-visual:hover img {
+		transform: scale(1.05);
+	}
+
+	.hod-image-glow {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
+		z-index: 1;
+	}
+
+	.hod-badge {
+		position: absolute;
+		bottom: 32px;
+		left: 32px;
+		background: var(--section-accent);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 12px;
+		font-weight: 800;
+		font-size: 0.9rem;
+		z-index: 2;
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+	}
+
+	.hod-content {
+		padding: 48px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		color: white;
+	}
+
+	.quote-icon {
+		margin-bottom: 24px;
+		color: var(--section-accent);
+	}
+
+	.hod-content h2 {
+		font-size: 2.2rem;
+		font-weight: 900;
+		margin: 0;
+		color: #ffffff;
+		letter-spacing: -0.04em;
+	}
+
+	.hod-designation {
+		font-size: 1rem;
+		color: #94a3b8;
+		font-weight: 600;
+		margin: 8px 0 24px;
+		text-align: left;
+	}
+
+	.hod-message-body p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		color: #e2e8f0;
+		font-weight: 500;
+		font-style: italic;
+		text-align: left;
+	}
+
+	.signature {
+		margin-top: 24px !important;
+		font-size: 1rem !important;
+		font-style: normal !important;
+		font-weight: 800 !important;
+		color: var(--section-accent) !important;
+		letter-spacing: 0.02em;
+		text-align: left;
 	}
 
 	/* RESPONSIVE */
@@ -739,9 +851,6 @@
 		.s-stats {
 			padding: 3.5rem 0;
 		}
-		.s-hod {
-			padding: 4rem 0 5rem;
-		}
 		.stats-card {
 			flex-wrap: wrap;
 		}
@@ -769,6 +878,68 @@
 		}
 		.s-heading {
 			font-size: 1.5rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* HOD Section Mobile - Minimal & Compact */
+		.hod-container {
+			grid-template-columns: 1fr;
+		}
+
+		.hod-visual {
+			height: 180px;
+			order: 1;
+		}
+
+		.hod-content {
+			padding: 24px 16px;
+			order: 2;
+			text-align: center;
+			align-items: center;
+		}
+
+		.quote-icon {
+			margin-bottom: 12px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.quote-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		.hod-content h2 {
+			font-size: 1.5rem;
+			margin-top: 4px;
+		}
+
+		.hod-designation {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+			text-align: center;
+		}
+
+		.hod-message-body p {
+			font-size: 0.95rem;
+			max-width: 100%;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.signature {
+			margin-top: 16px !important;
+			font-size: 0.9rem !important;
+			text-align: center;
+		}
+
+		.hod-badge {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 4px 10px;
+			font-size: 0.7rem;
 		}
 	}
 </style>
