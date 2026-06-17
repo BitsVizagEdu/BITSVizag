@@ -1044,61 +1044,35 @@
 			</div>
 		</section> -->
 
-		<!-- HOD Profile & Message - Redesigned Premium Layout -->
-		<section id="hod" class="dept-section-card hod-premium-section">
-			<div class="hod-profile-grid">
-				<!-- Profile Visual -->
-				<div class="hod-visual-side" in:fly={{ x: -30, duration: 800 }}>
-					<div class="visual-container">
-						<img
-							src="/cse hod.jpg"
-							alt="Prof. S. Durga Prasad"
-							loading="lazy"
-							class="hod-main-img"
-						/>
-						<div class="visual-decor">
-							<div class="experience-badge satoshi">
-								<span class="num">22+</span>
-								<span class="label">Years of<br />Excellence</span>
-							</div>
-						</div>
-					</div>
+		<!-- HOD Message - Upgraded with Impactful Motion -->
+		<section
+			id="hod"
+			class="dept-section-card hod-premium-card"
+			style="--section-accent: #db2777"
+		>
+			<div class="hod-container">
+				<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
+					<div class="hod-image-glow"></div>
+					<img src="/cse hod.jpg" alt="Prof. S. Durga Prasad" loading="lazy" />
+					<div class="hod-badge satoshi">22+ Years Exp</div>
 				</div>
-
-				<!-- Message Side -->
-				<div class="hod-message-side" in:fly={{ x: 30, duration: 800 }}>
-					<div class="message-card">
-						<div class="quote-mark">“</div>
-						<header class="message-header">
-							<h3 class="satoshi">Prof. S. Durga Prasad</h3>
-							<p class="inter role">Head of Department | CSE (AI & ML)</p>
-						</header>
-
-						<div class="message-content">
-							<p class="inter">
-								Welcome to the AI & ML specialisation at BITS Vizag. Our department is dedicated to
-								nurturing technical leadership and pioneering research in intelligent systems. We
-								blend rigorous mathematical foundations with cutting-edge engineering practices to
-								prepare our students for the global AI landscape.
-							</p>
-						</div>
-
-						<footer class="message-footer">
-							<div class="signature-wrap">
-								<p class="signature-text satoshi">S. Durga Prasad</p>
-								<div class="signature-line"></div>
-							</div>
-							<div class="hod-stats">
-								<div class="stat-item">
-									<span class="stat-val">50+</span>
-									<span class="stat-label">Papers</span>
-								</div>
-								<div class="stat-item">
-									<span class="stat-val">15+</span>
-									<span class="stat-label">Projects</span>
-								</div>
-							</div>
-						</footer>
+				<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
+					<div class="quote-icon">
+						<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
+							<path
+								d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
+							></path>
+						</svg>
+					</div>
+					<h2 class="satoshi">Prof. S. Durga Prasad</h2>
+					<p class="hod-designation inter">
+						Head of Department | CSE (AI & ML)
+					</p>
+					<div class="hod-message-body">
+						<p class="inter">
+							"Welcome to the AI & ML specialisation at BITS Vizag. Our department is dedicated to nurturing technical leadership and pioneering research in intelligent systems. We blend rigorous mathematical foundations with cutting-edge engineering practices to prepare our students for the global AI landscape."
+						</p>
+						<p class="inter signature">Prof. S. Durga Prasad</p>
 					</div>
 				</div>
 			</div>
@@ -1848,22 +1822,22 @@
 		flex-shrink: 0;
 	}
 
-	/* HOD Message Upgraded */
+	/* HOD Premium Card */
 	.hod-premium-card {
-		background: #ffffff !important;
+		padding: 0 !important;
+		overflow: hidden;
+		background: #0f172a !important;
+		border: none !important;
 	}
 
 	.hod-container {
 		display: grid;
-		grid-template-columns: 380px 1fr;
-		gap: 60px;
-		align-items: center;
+		grid-template-columns: 400px 1fr;
+		min-height: 500px;
 	}
 
 	.hod-visual {
 		position: relative;
-		height: 480px;
-		border-radius: 32px;
 		overflow: hidden;
 	}
 
@@ -1871,77 +1845,86 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		position: relative;
-		z-index: 2;
+		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.hod-visual:hover img {
+		transform: scale(1.05);
 	}
 
 	.hod-image-glow {
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at center, var(--section-accent) 0%, transparent 70%);
-		opacity: 0.2;
+		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
 		z-index: 1;
 	}
 
 	.hod-badge {
 		position: absolute;
-		bottom: 24px;
-		left: 24px;
-		right: 24px;
-		background: rgba(255, 255, 255, 0.9);
-		backdrop-filter: blur(10px);
-		padding: 16px;
-		border-radius: 20px;
-		text-align: center;
+		bottom: 32px;
+		left: 32px;
+		background: var(--section-accent);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 12px;
 		font-weight: 800;
-		color: #0f172a;
-		z-index: 3;
-		border: 1px solid rgba(255, 255, 255, 0.2);
+		font-size: 0.9rem;
+		z-index: 2;
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
 	}
 
 	.hod-content {
-		padding-right: 40px;
+		padding: 64px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		color: white;
+	}
+
+	.quote-icon {
+		margin-bottom: 24px;
+		color: var(--section-accent);
 	}
 
 	.hod-eyebrow {
-		display: block;
-		font-size: 0.75rem;
-		font-weight: 900;
+		font-size: 0.8rem;
+		font-weight: 800;
 		letter-spacing: 0.2em;
 		color: var(--section-accent);
-		margin-bottom: 12px;
-	}
-
-	.hod-content h2 {
-		font-size: 2.4rem;
-		font-weight: 900;
-		color: #0f172a;
 		margin-bottom: 8px;
 	}
 
+	.hod-content h2 {
+		font-size: 3rem;
+		font-weight: 900;
+		margin: 0;
+		color: #ffffff;
+		letter-spacing: -0.04em;
+	}
+
 	.hod-designation {
-		font-size: 1rem;
-		color: #64748b;
+		font-size: 1.1rem;
+		color: #94a3b8;
 		font-weight: 600;
-		margin-bottom: 32px;
+		margin: 8px 0 32px;
 	}
 
 	.hod-message-body p {
-		font-size: 1.1rem;
-		line-height: 1.8;
-		color: #334155;
-		margin-bottom: 24px;
+		font-size: 1.4rem;
+		line-height: 1.6;
+		color: #e2e8f0;
+		font-weight: 500;
+		font-style: italic;
 	}
 
 	.signature {
-		font-family: 'Satoshi', sans-serif;
-		font-weight: 900;
-		font-size: 1.2rem !important;
-		color: #0f172a !important;
-		margin-top: 32px;
-		border-top: 1px solid #f1f5f9;
-		padding-top: 24px;
-		display: inline-block;
+		margin-top: 32px !important;
+		font-size: 1.1rem !important;
+		font-style: normal !important;
+		font-weight: 800 !important;
+		color: var(--section-accent) !important;
+		letter-spacing: 0.02em;
 	}
 
 	/* Contact Page Premium */

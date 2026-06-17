@@ -974,9 +974,13 @@
 			</div>
 		</section> -->
 
-		<!-- HOD Message Section -->
-		<section id="hod" class="dept-section-card hod-ultra-section" style="--section-accent: #db2777">
-			<div class="hod-container-layout">
+		<!-- HOD Message - Upgraded with Impactful Motion -->
+		<section
+			id="hod"
+			class="dept-section-card hod-premium-card"
+			style="--section-accent: #db2777"
+		>
+			<div class="hod-container">
 				<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
 					<div class="hod-image-glow"></div>
 					<img src="/eee hod.jpg" alt="Prof. K. Venkateswara Rao" loading="lazy" />
@@ -984,21 +988,21 @@
 				</div>
 				<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
 					<div class="quote-icon">
-						<svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+						<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
 							<path
-								d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11M14.017 21H10.017V11C10.017 10.4477 10.4647 10 11.017 10H14.017M14.017 21C14.017 21.5523 13.5693 22 13.017 22H11.017C10.4647 22 10.017 21.5523 10.017 21V19C10.017 18.4477 10.4647 18 11.017 18H14.017"
+								d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
 							></path>
 						</svg>
 					</div>
-					<h3 class="satoshi hod-title">From the desk of HOD</h3>
-					<p class="inter hod-message">
-						We are committed to fostering excellence in Electrical Engineering, empowering students
-						with the skills and innovation needed to lead in the global energy and automation
-						landscape.
+					<h2 class="satoshi">Prof. K. Venkateswara Rao</h2>
+					<p class="hod-designation inter">
+						Head of Department | Electrical & Electronics Engineering
 					</p>
-					<div class="hod-signature">
-						<span class="name satoshi">Prof. K. Venkateswara Rao</span>
-						<span class="title inter">Head of Department, EEE</span>
+					<div class="hod-message-body">
+						<p class="inter">
+							"We are committed to fostering excellence in Electrical Engineering, empowering students with the skills and innovation needed to lead in the global energy and automation landscape."
+						</p>
+						<p class="inter signature">Prof. K. Venkateswara Rao</p>
 					</div>
 				</div>
 			</div>
@@ -2167,105 +2171,109 @@
 		font-weight: 600;
 	}
 
-	/* HOD Ultra Section Redesign */
-	.hod-ultra-section {
-		background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-		padding: 80px 40px;
+	/* HOD Premium Card */
+	.hod-premium-card {
+		padding: 0 !important;
+		overflow: hidden;
+		background: #0f172a !important;
+		border: none !important;
 	}
 
-	.hod-container-layout {
-		display: flex;
-		align-items: center;
-		gap: 60px;
-		max-width: 1000px;
-		margin: 0 auto;
+	.hod-container {
+		display: grid;
+		grid-template-columns: 400px 1fr;
+		min-height: 500px;
 	}
 
 	.hod-visual {
 		position: relative;
-		flex-shrink: 0;
+		overflow: hidden;
 	}
 
 	.hod-visual img {
-		width: 320px;
-		height: 420px;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
-		border-radius: 28px;
-		position: relative;
-		z-index: 2;
-		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-		border: 6px solid white;
+		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.hod-visual:hover img {
+		transform: scale(1.05);
 	}
 
 	.hod-image-glow {
 		position: absolute;
-		inset: -15px;
-		background: radial-gradient(circle, var(--section-accent) 0%, transparent 70%);
-		opacity: 0.1;
+		inset: 0;
+		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
 		z-index: 1;
-		filter: blur(20px);
 	}
 
 	.hod-badge {
 		position: absolute;
-		bottom: 20px;
-		right: -15px;
-		background: white;
+		bottom: 32px;
+		left: 32px;
+		background: var(--section-accent);
+		color: white;
 		padding: 10px 20px;
 		border-radius: 12px;
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 		font-weight: 800;
-		color: var(--section-accent);
-		font-size: 0.75rem;
-		z-index: 3;
-		border: 1px solid #f1f5f9;
+		font-size: 0.9rem;
+		z-index: 2;
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
 	}
 
 	.hod-content {
-		flex: 1;
+		padding: 64px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		color: white;
 	}
 
 	.quote-icon {
+		margin-bottom: 24px;
 		color: var(--section-accent);
-		opacity: 0.15;
+	}
+
+	.hod-eyebrow {
+		font-size: 0.8rem;
+		font-weight: 800;
+		letter-spacing: 0.2em;
+		color: var(--section-accent);
 		margin-bottom: 8px;
 	}
 
-	.hod-title {
-		font-size: 0.75rem;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		color: #94a3b8;
-		margin-bottom: 20px;
+	.hod-content h2 {
+		font-size: 3rem;
+		font-weight: 900;
+		margin: 0;
+		color: #ffffff;
+		letter-spacing: -0.04em;
 	}
 
-	.hod-message {
-		font-size: 1.05rem;
-		line-height: 1.8;
-		color: #334155;
+	.hod-designation {
+		font-size: 1.1rem;
+		color: #94a3b8;
+		font-weight: 600;
+		margin: 8px 0 32px;
+	}
+
+	.hod-message-body p {
+		font-size: 1.4rem;
+		line-height: 1.6;
+		color: #e2e8f0;
 		font-weight: 500;
-		margin-bottom: 32px;
 		font-style: italic;
 	}
 
-	.hod-signature {
-		display: flex;
-		flex-direction: column;
-		border-left: 3px solid var(--section-accent);
-		padding-left: 20px;
-	}
-
-	.hod-signature .name {
-		font-size: 1.2rem;
-		font-weight: 800;
-		color: #0f172a;
-	}
-
-	.hod-signature .title {
-		font-size: 0.85rem;
-		color: #64748b;
-		font-weight: 600;
+	.signature {
+		margin-top: 32px !important;
+		font-size: 1.1rem !important;
+		font-style: normal !important;
+		font-weight: 800 !important;
+		color: var(--section-accent) !important;
+		letter-spacing: 0.02em;
 	}
 
 	/* Contact Section */
@@ -2551,20 +2559,6 @@
 			padding: 16px !important;
 		}
 
-		.hod-container-layout {
-			gap: 24px !important;
-		}
-		.hod-visual img {
-			width: 200px !important;
-			height: 250px !important;
-			border-radius: 20px !important;
-		}
-		.hod-message {
-			font-size: 0.95rem !important;
-			line-height: 1.6 !important;
-			margin-bottom: 20px !important;
-		}
-
 		.contact-grid-layout {
 			gap: 32px !important;
 		}
@@ -2573,30 +2567,62 @@
 		.faculty-table-section {
 			margin-top: -20px !important;
 		}
-	}
 
-	@media (max-width: 1000px) {
-		.hod-ultra-section {
-			padding: 40px 20px;
+		/* HOD Section Mobile - Minimal & Compact */
+		.hod-container {
+			grid-template-columns: 1fr;
 		}
-		.hod-container-layout {
-			flex-direction: column;
+
+		.hod-visual {
+			height: 180px;
+			order: 1;
+		}
+
+		.hod-content {
+			padding: 24px 16px;
+			order: 2;
 			text-align: center;
-			gap: 40px;
-		}
-		.hod-signature {
-			border-left: none;
-			padding-left: 0;
 			align-items: center;
 		}
-		.hod-badge {
-			right: 50%;
-			transform: translateX(50%);
-			bottom: -15px;
+
+		.quote-icon {
+			margin-bottom: 12px;
+			display: flex;
+			justify-content: center;
 		}
-		.hod-visual img {
-			width: 260px;
-			height: 340px;
+
+		.quote-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		.hod-content h2 {
+			font-size: 1.5rem;
+			margin-top: 4px;
+		}
+
+		.hod-designation {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+		}
+
+		.hod-message-body p {
+			font-size: 0.95rem;
+			max-width: 100%;
+			line-height: 1.5;
+		}
+
+		.signature {
+			margin-top: 16px !important;
+			font-size: 0.9rem !important;
+		}
+
+		.hod-badge {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 4px 10px;
+			font-size: 0.7rem;
 		}
 	}
 </style>

@@ -325,20 +325,36 @@
 				</div>
 			</section> -->
 
-			<!-- HOD: Premium Indigo UI -->
-			<section id="hod" class="block-neat">
-				<div class="hod-premium-box">
-					<div class="hod-image">
-						<img src="/rangaraosir.png" alt="HOD BS&H" />
+			<!-- HOD Message - Upgraded with Impactful Motion -->
+			<section
+				id="hod"
+				class="dept-section-card hod-premium-card"
+				style="--section-accent: #4f46e5"
+			>
+				<div class="hod-container">
+					<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
+						<div class="hod-image-glow"></div>
+						<img src="/rangaraosir.png" alt="Dr. P. Jaya Ranga Rao" loading="lazy" />
+						<div class="hod-badge satoshi">32+ Years Exp</div>
 					</div>
-					<div class="hod-info-neat">
-						<span class="hod-label satoshi">HOD MESSAGE</span>
-						<h2 class="outfit">Dr. P. Jaya Ranga Rao</h2>
-						<p class="inter message">
-							“We ensure students grasp the fundamental principles of science and communication —
-							empowering them to excel in their chosen engineering discipline.”
+					<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
+						<div class="quote-icon">
+							<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
+								<path
+									d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
+								></path>
+							</svg>
+						</div>
+						<h2 class="satoshi">Dr. P. Jaya Ranga Rao</h2>
+						<p class="hod-designation inter">
+							Head of Department | Basic Sciences & Humanities
 						</p>
-						<div class="hod-accent"></div>
+						<div class="hod-message-body">
+							<p class="inter">
+								"We ensure students grasp the fundamental principles of science and communication — empowering them to excel in their chosen engineering discipline."
+							</p>
+							<p class="inter signature">Dr. P. Jaya Ranga Rao</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -565,64 +581,106 @@
 		text-decoration: none;
 	}
 
-	/* HOD Premium UI */
-	.hod-premium-box {
-		display: grid;
-		grid-template-columns: 200px 1fr;
-		gap: 0;
-		background: linear-gradient(135deg, #312e81 0%, #4338ca 100%);
-		border-radius: 24px;
+	/* HOD Premium Card */
+	.hod-premium-card {
+		padding: 0 !important;
 		overflow: hidden;
-		color: #fff;
+		background: #0f172a !important;
+		border: none !important;
 		margin-top: 30px;
-		box-shadow: 0 20px 40px rgba(49, 46, 129, 0.15);
+		border-radius: 32px;
 	}
-	.hod-image {
-		aspect-ratio: 1;
+
+	.hod-container {
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		min-height: 480px;
+	}
+
+	.hod-visual {
+		position: relative;
 		overflow: hidden;
 	}
-	.hod-image img {
+
+	.hod-visual img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		filter: brightness(0.9);
+		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	}
-	.hod-info-neat {
-		padding: 30px;
+
+	.hod-visual:hover img {
+		transform: scale(1.05);
+	}
+
+	.hod-image-glow {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
+		z-index: 1;
+	}
+
+	.hod-badge {
+		position: absolute;
+		bottom: 32px;
+		left: 32px;
+		background: var(--section-accent);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 12px;
+		font-weight: 800;
+		font-size: 0.9rem;
+		z-index: 2;
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+	}
+
+	.hod-content {
+		padding: 48px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		position: relative;
+		color: white;
 	}
-	.hod-label {
-		font-size: 0.65rem;
-		font-weight: 800;
-		letter-spacing: 0.2em;
-		color: #a5b4fc;
-		margin-bottom: 0.5rem;
+
+	.quote-icon {
+		margin-bottom: 24px;
+		color: var(--section-accent);
 	}
-	.hod-info-neat h2 {
-		font-size: 1.5rem;
-		font-weight: 700;
-		margin-bottom: 1rem;
-		color: #fff;
+
+	.hod-content h2 {
+		font-size: 2.2rem;
+		font-weight: 900;
+		margin: 0;
+		color: #ffffff;
+		letter-spacing: -0.04em;
 	}
-	.message {
+
+	.hod-designation {
 		font-size: 1rem;
-		font-style: italic;
-		line-height: 1.6;
-		color: #e0e7ff;
-		opacity: 0.9;
+		color: #94a3b8;
+		font-weight: 600;
+		margin: 8px 0 24px;
+		text-align: left;
 	}
-	.hod-accent {
-		position: absolute;
-		right: -20px;
-		bottom: -20px;
-		width: 100px;
-		height: 100px;
-		background: #a5b4fc;
-		opacity: 0.05;
-		border-radius: 50%;
+
+	.hod-message-body p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		color: #e2e8f0;
+		font-weight: 500;
+		font-style: italic;
+		text-align: left;
+	}
+
+	.signature {
+		margin-top: 24px !important;
+		font-size: 1rem !important;
+		font-style: normal !important;
+		font-weight: 800 !important;
+		color: var(--section-accent) !important;
+		letter-spacing: 0.02em;
+		text-align: left;
 	}
 
 	/* Contact Minimal */
@@ -658,17 +716,64 @@
 			grid-template-columns: 1fr;
 			text-align: center;
 		}
-		.hod-premium-box {
+		/* HOD Section Mobile - Minimal & Compact */
+		.hod-container {
 			grid-template-columns: 1fr;
 		}
-		.hod-image {
-			max-width: 150px;
-			margin: 30px auto 0;
-			border-radius: 50%;
-			border: 4px solid #a5b4fc;
+
+		.hod-visual {
+			height: 180px;
+			order: 1;
 		}
-		.hod-info-neat {
+
+		.hod-content {
+			padding: 24px 16px;
+			order: 2;
 			text-align: center;
+			align-items: center;
+		}
+
+		.quote-icon {
+			margin-bottom: 12px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.quote-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		.hod-content h2 {
+			font-size: 1.5rem;
+			margin-top: 4px;
+		}
+
+		.hod-designation {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+			text-align: center;
+		}
+
+		.hod-message-body p {
+			font-size: 0.95rem;
+			max-width: 100%;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.signature {
+			margin-top: 16px !important;
+			font-size: 0.9rem !important;
+			text-align: center;
+		}
+
+		.hod-badge {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 4px 10px;
+			font-size: 0.7rem;
 		}
 		.hidden-mobile {
 			display: none;

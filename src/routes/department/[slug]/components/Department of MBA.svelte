@@ -1,6 +1,7 @@
 <script>
 	import HodMessage from '$lib/components/HodMessage.svelte';
 	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	let mounted = false;
 	let heroReady = false;
@@ -806,11 +807,107 @@
 		color: var(--gold-700);
 	}
 
-	/* HOD */
-	.s-hod {
-		background: var(--surface);
-		padding: 5.5rem 0 6.5rem;
-		border-top: 1px solid var(--border);
+	/* HOD Premium Card */
+	/* HOD Premium Card */
+	.hod-premium-card {
+		padding: 0 !important;
+		overflow: hidden;
+		background: #0f172a !important;
+		border: none !important;
+		margin: 5.5rem 0 6.5rem;
+		border-radius: 32px;
+	}
+
+	.hod-container {
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		min-height: 480px;
+	}
+
+	.hod-visual {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hod-visual img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.hod-visual:hover img {
+		transform: scale(1.05);
+	}
+
+	.hod-image-glow {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
+		z-index: 1;
+	}
+
+	.hod-badge {
+		position: absolute;
+		bottom: 32px;
+		left: 32px;
+		background: var(--section-accent);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 12px;
+		font-weight: 800;
+		font-size: 0.9rem;
+		z-index: 2;
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+	}
+
+	.hod-content {
+		padding: 48px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		color: white;
+	}
+
+	.quote-icon {
+		margin-bottom: 24px;
+		color: var(--section-accent);
+	}
+
+	.hod-content h2 {
+		font-size: 2.2rem;
+		font-weight: 900;
+		margin: 0;
+		color: #ffffff;
+		letter-spacing: -0.04em;
+	}
+
+	.hod-designation {
+		font-size: 1rem;
+		color: #94a3b8;
+		font-weight: 600;
+		margin: 8px 0 24px;
+		text-align: left;
+	}
+
+	.hod-message-body p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		color: #e2e8f0;
+		font-weight: 500;
+		font-style: italic;
+		text-align: left;
+	}
+
+	.signature {
+		margin-top: 24px !important;
+		font-size: 1rem !important;
+		font-style: normal !important;
+		font-weight: 800 !important;
+		color: var(--section-accent) !important;
+		letter-spacing: 0.02em;
+		text-align: left;
 	}
 
 	/* RESPONSIVE */
@@ -845,9 +942,6 @@
 		.s-stats {
 			padding: 3.5rem 0;
 		}
-		.s-hod {
-			padding: 4rem 0 5rem;
-		}
 		.stats-card {
 			flex-wrap: wrap;
 		}
@@ -875,6 +969,68 @@
 		}
 		.s-heading {
 			font-size: 1.5rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* HOD Section Mobile - Minimal & Compact */
+		.hod-container {
+			grid-template-columns: 1fr;
+		}
+
+		.hod-visual {
+			height: 180px;
+			order: 1;
+		}
+
+		.hod-content {
+			padding: 24px 16px;
+			order: 2;
+			text-align: center;
+			align-items: center;
+		}
+
+		.quote-icon {
+			margin-bottom: 12px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.quote-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		.hod-content h2 {
+			font-size: 1.5rem;
+			margin-top: 4px;
+		}
+
+		.hod-designation {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+			text-align: center;
+		}
+
+		.hod-message-body p {
+			font-size: 0.95rem;
+			max-width: 100%;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.signature {
+			margin-top: 16px !important;
+			font-size: 0.9rem !important;
+			text-align: center;
+		}
+
+		.hod-badge {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 4px 10px;
+			font-size: 0.7rem;
 		}
 	}
 </style>
