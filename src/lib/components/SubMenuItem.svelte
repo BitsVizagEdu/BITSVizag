@@ -7,29 +7,12 @@
 	export let label = '';
 	export let icon = '';
 	export let external = false;
-	import { goto } from '$app/navigation';
-	import { tick } from 'svelte';
 	export let onClick = (event) => {};
 
-	async function handleClick(event) {
+	function handleClick(event) {
 		try {
 			onClick(event);
 		} catch (err) {}
-
-		if (external) return;
-		event.preventDefault();
-		await tick();
-		if (!href) return;
-		try {
-			await goto(href);
-		} catch (err) {
-			console.error('SubMenuItem navigation failed for', href, err);
-			try {
-				window.location.href = href;
-			} catch (e) {
-				console.error('Fallback navigation also failed', e);
-			}
-		}
 	}
 </script>
 

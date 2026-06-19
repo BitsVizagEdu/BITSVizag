@@ -346,12 +346,11 @@
 							</svg>
 						</div>
 						<h2 class="satoshi">Dr. P. Jaya Ranga Rao</h2>
-						<p class="hod-designation inter">
-							Head of Department | Basic Sciences & Humanities
-						</p>
+						<p class="hod-designation inter">Head of Department | Basic Sciences & Humanities</p>
 						<div class="hod-message-body">
 							<p class="inter">
-								"We ensure students grasp the fundamental principles of science and communication — empowering them to excel in their chosen engineering discipline."
+								"We ensure students grasp the fundamental principles of science and communication —
+								empowering them to excel in their chosen engineering discipline."
 							</p>
 							<p class="inter signature">Dr. P. Jaya Ranga Rao</p>
 						</div>
@@ -370,7 +369,7 @@
 					<div class="contact-links inter">
 						<a href="mailto:hod.bsh@bitsvizag.com">hod.bsh@bitsvizag.com</a>
 						<span class="sep">|</span>
-						<a href="/admissions">First Year Admissions</a>
+						<a href="">+91-9885597842</a>
 					</div>
 				</div>
 			</section>

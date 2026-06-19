@@ -9,35 +9,13 @@
 	export let iconColorClass = ''; // Ignored to ensure unified aesthetic matching the image
 	export let iconBgClass = ''; // Ignored to ensure unified aesthetic matching the image
 	export let external = false;
-	import { goto } from '$app/navigation';
-	import { tick } from 'svelte';
 	export let onClick = (event) => {};
 
-	async function handleClick(event) {
-		// allow parent to run close handlers first
+	function handleClick(event) {
 		try {
 			onClick(event);
 		} catch (err) {
 			// ignore
-		}
-
-		// external links should use normal navigation
-		if (external) return;
-
-		// prevent default anchor navigation and use client router after DOM updates
-		event.preventDefault();
-		await tick();
-		if (!href) return;
-		try {
-			await goto(href);
-		} catch (err) {
-			console.error('MegaMenuItem navigation failed for', href, err);
-			// fallback to full navigation if client router fails
-			try {
-				window.location.href = href;
-			} catch (e) {
-				console.error('Fallback navigation also failed', e);
-			}
 		}
 	}
 </script>

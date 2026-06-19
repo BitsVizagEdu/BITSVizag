@@ -10,13 +10,13 @@
 		},
 		{
 			label: 'Highest Package',
-			value: '30.50 LPA',
+			value: '30.60 LPA',
 			color: 'text-amber-600',
 			borderColor: 'border-amber-500'
 		},
 		{
 			label: 'Average Package',
-			value: '4.6 LPA',
+			value: '3.6 LPA',
 			color: 'text-emerald-600',
 			borderColor: 'border-emerald-500'
 		},

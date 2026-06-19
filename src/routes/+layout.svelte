@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { navigating } from '$app/stores';
 
 	import '../app.css';
 	import Nav from '$lib/components/navmenu.svelte';
@@ -114,6 +115,11 @@
 	<main>
 		<!-- Scroll Progress Bar - Always on Top -->
 		<ScrollProgressBar />
+
+		<!-- Navigation Progress Bar -->
+		{#if $navigating}
+			<div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 z-[100000] animate-loading-bar" style="will-change: transform;"></div>
+		{/if}
 
 		{#if showWelcomeOverlay}
 			<div
@@ -375,5 +381,28 @@
 	.animate-fade-in {
 		animation: fadeInWelcome 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 		will-change: transform, opacity;
+	}
+
+	@keyframes loading-bar {
+		0% {
+			transform: scaleX(0);
+			transform-origin: left;
+		}
+		50% {
+			transform: scaleX(0.7);
+			transform-origin: left;
+		}
+		95% {
+			transform: scaleX(0.95);
+			transform-origin: left;
+		}
+		100% {
+			transform: scaleX(0.98);
+			transform-origin: left;
+		}
+	}
+
+	.animate-loading-bar {
+		animation: loading-bar 2.5s cubic-bezier(0.1, 0.8, 0.1, 1) forwards;
 	}
 </style>

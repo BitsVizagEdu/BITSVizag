@@ -13,22 +13,20 @@
 
 	const quickLinks = [
 		{ name: 'About Us', href: '/aboutus/About-BITS' },
-		{ name: 'Courses Offered', href: '/department/Department of BS&H' },
-		{ name: 'Admissions', href: '/admission-procedure' },
-		{ name: 'Placements', href: '/placement' },
+		{ name: 'Courses Offered', href: '/courses/Offered-Courses' },
+		{ name: 'Admissions', href: '/application-form' },
+		{ name: 'Placements / CDC', href: '/placements' },
 		{ name: 'Gallery', href: '/gallery' },
-		{ name: 'Events', href: '/events' },
-		{ name: 'BITS Holidays 2026', href: '#' }
+		{ name: 'Contact Us', href: '/contactus' }
 	];
 
-	const usefulLinks = [
-		{ name: 'IQAC', href: '#' },
-		{ name: 'IIC', href: '#' },
-		{ name: 'NIRF', href: '#' },
-		{ name: 'IPR Cell', href: '#' },
-		{ name: 'Mandatory Disclosure', href: '#' },
-		{ name: 'AICTE Feedback', href: '#' },
-		{ name: 'Social Media', href: '#' }
+	const exploreLinks = [
+		{ name: 'EAPCET 2026 ↗', href: 'https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx', external: true },
+		{ name: 'Facilities', href: '/facilities/Knowledge-Resource-Center' },
+		{ name: 'Faculty', href: '/faculty' },
+		{ name: 'Governance', href: '/governance/mandatory-disclosure' },
+		{ name: 'Research', href: '/research/publications' },
+		{ name: 'IQAC', href: '/governance/IQAC' }
 	];
 
 	const portals = [
@@ -114,14 +112,14 @@
 				</div>
 			</div>
 
-			<!-- Quick & Useful Links (Compact Grid on Mobile) -->
+			<!-- Quick & Explore Links (Compact Grid on Mobile) -->
 			<div class="lg:col-span-4 grid grid-cols-2 gap-6">
 				<div class="space-y-4">
 					<h4 class="text-[11px] md:text-sm font-black uppercase tracking-[0.15em] text-slate-300">
 						Quick Links
 					</h4>
 					<ul class="space-y-2">
-						{#each quickLinks.slice(0, 5) as link}
+						{#each quickLinks as link}
 							<li>
 								<a
 									href={link.href}
@@ -136,14 +134,15 @@
 				</div>
 				<div class="space-y-4">
 					<h4 class="text-[11px] md:text-sm font-black uppercase tracking-[0.15em] text-slate-300">
-						Useful Links
+						Explore
 					</h4>
 					<ul class="space-y-2">
-						{#each usefulLinks.slice(0, 5) as link}
+						{#each exploreLinks as link}
 							<li>
 								<a
 									href={link.href}
-									class="text-slate-400 hover:text-amber-500 text-[11px] md:text-[13px] flex items-center gap-2 transition-all"
+									{...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+									class="text-slate-400 hover:text-amber-500 text-[11px] md:text-[13px] flex items-center gap-2 transition-all {link.external ? 'text-amber-400/80 hover:text-amber-400' : ''}"
 								>
 									<i class="fa-solid fa-chevron-right text-[8px] text-amber-500/40"></i>
 									{link.name}

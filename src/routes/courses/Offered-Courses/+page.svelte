@@ -22,7 +22,7 @@
 			sno: 3,
 			estd: 2024,
 			name: 'Cyber Security',
-			intake: 120,
+			intake: 60,
 			slug: 'Department of CSE (Cyber Security)'
 		},
 		{
