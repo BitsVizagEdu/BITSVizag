@@ -30,15 +30,11 @@
 	const moreLinks = [
 		{ label: 'Committees', href: '/committees', icon: 'fa-solid fa-list-check' },
 		{ label: 'Gallery', href: '/gallery', icon: 'fa-solid fa-images' },
-		{ label: 'Students', href: '/Students', icon: 'fa-solid fa-user-graduate' },
 		{
-			label: 'Industry Linkages',
-			href: '/Industry-Linkages',
-			icon: 'fa-solid fa-handshake-angle'
+			label: 'Disclosures',
+			href: '/governance/mandatory-disclosure',
+			icon: 'fa-solid fa-file-circle-check'
 		},
-		{ label: 'Infrastructure', href: '/infrastructure', icon: 'fa-solid fa-building-columns' },
-		{ label: 'Finance & Quality', href: '/finance-quality', icon: 'fa-solid fa-chart-line' },
-		{ label: 'Disclosures', href: '/governance/mandatory-disclosure', icon: 'fa-solid fa-file-circle-check' },
 		{ label: 'Online Grievances', href: '/Online-Grievances', icon: 'fa-solid fa-circle-info' },
 		{ label: 'Contact', href: '/contactus', icon: 'fa-solid fa-address-book' }
 	];
@@ -75,9 +71,7 @@
 		: ''} h-[32px] lg:h-auto"
 >
 	<div class="wrapper !h-[32px] hidden lg:flex">
-
 		<ul class="nav-links h-full hidden lg:grid">
-
 			<li>
 				<a href="/" class="desktop-item" on:click={closeMenus}>Home</a>
 				<a href="/" class="mobile-item" on:click={closeMenus}>Home</a>
@@ -99,26 +93,67 @@
 				>
 				<!-- DESKTOP MEGA BOX: Departments -->
 				<div class="mega-box hidden lg:block">
-					<div class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto">
+					<div
+						class="content overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-2xl lg:max-w-3xl lg:mx-auto"
+					>
 						<div class="flex flex-col items-start w-full">
 							<div class="mb-5 flex w-full items-center gap-4 border-b border-slate-100 pb-4">
-								<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 border border-emerald-100">
-									<i class="fa-solid fa-graduation-cap text-xl text-emerald-600" aria-hidden="true"></i>
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 border border-emerald-100"
+								>
+									<i class="fa-solid fa-graduation-cap text-xl text-emerald-600" aria-hidden="true"
+									></i>
 								</div>
 								<div class="flex flex-col text-left">
-									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">Departments</header>
+									<header class="text-[17px] font-bold tracking-tight text-slate-900 leading-tight">
+										Departments
+									</header>
 								</div>
 							</div>
 
 							<div class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3">
-								<MegaMenuItem href="/department/Department%20of%20CSE" label="CSE - Computer Science and Engineering" icon="fa-solid fa-laptop-code" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20CSE%20(AI%20%26%20ML)" label="AI & ML" icon="fa-solid fa-brain" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20CSE%20(Cyber%20Security)" label="Cyber Security" icon="fa-solid fa-shield-halved" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20ECE" label="ECE - Electronics & Communication" icon="fa-solid fa-microchip" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20EEE" label="EEE - Electrical & Electronics" icon="fa-solid fa-bolt" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20MECH" label="Mechanical" icon="fa-solid fa-cogs" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20BS%26H" label="H&S - Humanities & Sciences" icon="fa-solid fa-book" onClick={closeMenus} />
-								<MegaMenuItem href="/department/Department%20of%20MBA" label="MBA - Master of Business Administration" icon="fa-solid fa-briefcase" onClick={closeMenus} />
+								<MegaMenuItem
+									href="/department/Department%20of%20CSE"
+									label="CSE - Computer Science and Engineering"
+									icon="fa-solid fa-laptop-code"
+									onClick={closeMenus}
+								/>
+								<MegaMenuItem
+									href="/department/Department%20of%20CSE%20(AI%20%26%20ML)"
+									label="AI & ML"
+									icon="fa-solid fa-brain"
+									onClick={closeMenus}
+								/>
+								<MegaMenuItem
+									href="/department/Department%20of%20CSE%20(Cyber%20Security)"
+									label="Cyber Security"
+									icon="fa-solid fa-shield-halved"
+									onClick={closeMenus}
+								/>
+								<MegaMenuItem
+									href="/department/Department%20of%20ECE"
+									label="ECE - Electronics & Communication"
+									icon="fa-solid fa-microchip"
+									onClick={closeMenus}
+								/>
+								<MegaMenuItem
+									href="/department/Department%20of%20EEE"
+									label="EEE - Electrical & Electronics"
+									icon="fa-solid fa-bolt"
+									onClick={closeMenus}
+								/>
+								<MegaMenuItem
+									href="/department/Department%20of%20MECH"
+									label="Mechanical"
+									icon="fa-solid fa-cogs"
+									onClick={closeMenus}
+								/>
+								<MegaMenuItem
+									href="/department/Department%20of%20BS%26H"
+									label="H&S - Humanities & Sciences"
+									icon="fa-solid fa-book"
+									onClick={closeMenus}
+								/>
 							</div>
 						</div>
 					</div>
@@ -306,8 +341,14 @@
 								</div>
 								<div class="grid w-full grid-cols-1 gap-2">
 									<!-- Explicit stable link for Code of Conduct to avoid routing race issues -->
-									<a href="/governance/code-of-conduct" class="nav-dropdown-item group" on:click={closeMenus}>
-										<div class="nav-dropdown-icon-box"><i class="fa-solid fa-book-open fa-fw" aria-hidden="true" /></div>
+									<a
+										href="/governance/code-of-conduct"
+										class="nav-dropdown-item group"
+										on:click={closeMenus}
+									>
+										<div class="nav-dropdown-icon-box">
+											<i class="fa-solid fa-book-open fa-fw" aria-hidden="true" />
+										</div>
 										<span class="nav-dropdown-label">Code of Conduct</span>
 									</a>
 									{#each documentLinks.governance as link}
@@ -549,9 +590,15 @@
 			</div>
 			{#each documentLinks.governance as link}
 				{#if link.href === '/governance/Code-of-Conduct'}
-					<a href="/governance/code-of-conduct" class="flex w-full items-center justify-between border-b border-slate-50 bg-white px-6 py-4.5 hover:bg-slate-50" on:click={closeMenus}>
+					<a
+						href="/governance/code-of-conduct"
+						class="flex w-full items-center justify-between border-b border-slate-50 bg-white px-6 py-4.5 hover:bg-slate-50"
+						on:click={closeMenus}
+					>
 						<div class="flex items-center gap-4">
-							<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500">
+							<div
+								class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500"
+							>
 								<i class="fa-solid fa-book-open fa-fw" aria-hidden="true" />
 							</div>
 							<span class="text-[16px] font-semibold text-slate-800">Code of Conduct</span>
@@ -824,8 +871,9 @@
 
 	.mega-box .content {
 		border-radius: 1.5rem !important; /* Smooth curved card matching screenshot */
-		box-shadow: 0 15px 40px -8px rgba(0, 0, 0, 0.07), 
-		            0 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+		box-shadow:
+			0 15px 40px -8px rgba(0, 0, 0, 0.07),
+			0 0 1px 0 rgba(0, 0, 0, 0.15) !important;
 		border: 1px solid #e2e8f0 !important;
 		background: #ffffff !important;
 	}
