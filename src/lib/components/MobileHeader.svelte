@@ -41,8 +41,8 @@
 				<a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
 				<a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
 			</div>
-			<a href="https://bitsvizageamcetexamportal1.vercel.app/" target="_blank" class="btn-eamcet"
-				>EAMCET PORTAL</a
+			<a href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx" target="_blank" rel="noopener noreferrer" class="btn-eamcet"
+				>EAPCET 2026 ↗</a
 			>
 		</div>
 	</div>
@@ -56,7 +56,9 @@
 					<div class="acc-logo-wrap white-bg">
 						<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
 					</div>
-					<img src="/Accredation-logos/JNTUGV.jpg" alt="JNTU" class="acc-logo" />
+					<div class="acc-logo-wrap white-bg">
+						<img src="/Accredation-logos/JNTUGV.jpg" alt="JNTU" class="acc-logo" />
+					</div>
 					<img src="/naac.png" alt="NAAC" class="acc-logo" />
 					<div class="acc-logo-wrap white-bg">
 						<img src="/rcb.png" alt="RCB" class="acc-logo" />

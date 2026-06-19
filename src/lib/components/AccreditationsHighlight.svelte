@@ -24,7 +24,8 @@
 			name: 'JNTU-GV',
 			subtitle: 'Affiliated',
 			color: 'from-emerald-400 to-teal-600',
-			logo: '/Accredation-logos/JNTUGV.jpg'
+			logo: '/Accredation-logos/JNTUGV.jpg',
+			whiteBg: true
 		},
 		{
 			name: 'IIC',
@@ -134,7 +135,7 @@
 								<img
 									src={item.logo}
 									alt={item.name}
-									class="w-7 h-7 sm:w-11 sm:h-11 object-contain opacity-90 group-hover:opacity-100 transition-all duration-500 mix-blend-multiply"
+									class="w-7 h-7 sm:w-11 sm:h-11 object-contain opacity-90 group-hover:opacity-100 transition-all duration-500 {item.whiteBg ? '' : 'mix-blend-multiply'}"
 								/>
 							{:else}
 								<span

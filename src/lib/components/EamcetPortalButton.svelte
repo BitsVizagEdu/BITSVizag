@@ -1,6 +1,6 @@
 <script>
-	export let href = 'https://bitsvizageamcetexamportal1.vercel.app/';
-	export let text = 'EAMCET Portal ↗';
+	export let href = 'https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx';
+	export let text = 'EAPCET 2026 ↗';
 	export let size = 'md'; // 'sm' for nav, 'md' for hero
 </script>
 
@@ -8,7 +8,10 @@
 	{href}
 	target="_blank"
 	rel="noopener noreferrer"
-	class="eamcet-btn group relative inline-flex items-center justify-center font-bold text-white transition-all duration-300 rounded-full overflow-hidden {size === 'sm' ? 'px-5 py-2 text-[10px]' : 'px-8 py-3.5 text-sm'} "
+	class="eamcet-btn group relative inline-flex items-center justify-center font-bold text-white transition-all duration-300 rounded-full overflow-hidden {size ===
+	'sm'
+		? 'px-5 py-2 text-[10px]'
+		: 'px-8 py-3.5 text-sm'} "
 >
 	<!-- Premium Gradient Background -->
 	<div
@@ -42,23 +45,26 @@
 
 		<span class="tracking-[0.05em] uppercase font-black">
 			{text.split(' ↗')[0]}
-			<span class="inline-block transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ml-0.5 opacity-70 group-hover:opacity-100">↗</span>
+			<span
+				class="inline-block transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ml-0.5 opacity-70 group-hover:opacity-100"
+				>↗</span
+			>
 		</span>
 	</div>
 </a>
 
 <style>
 	.eamcet-btn {
-		box-shadow: 
-			0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+		box-shadow:
+			0 4px 6px -1px rgba(0, 0, 0, 0.1),
 			0 2px 4px -1px rgba(0, 0, 0, 0.06),
 			inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
 	}
 
 	.eamcet-btn:hover {
 		transform: translateY(-1px);
-		box-shadow: 
-			0 10px 15px -3px rgba(0, 0, 0, 0.2), 
+		box-shadow:
+			0 10px 15px -3px rgba(0, 0, 0, 0.2),
 			0 4px 6px -2px rgba(0, 0, 0, 0.05),
 			0 0 15px rgba(6, 182, 212, 0.1);
 	}

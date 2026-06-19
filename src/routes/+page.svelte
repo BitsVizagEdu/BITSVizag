@@ -225,12 +225,13 @@
 							<i class="fa-solid fa-arrow-right"></i>
 						</a>
 						<a
-							href="https://bitsvizageamcetexamportal1.vercel.app/"
+							href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"
 							target="_blank"
+							rel="noopener noreferrer"
 							class="btn-glass-premium"
 						>
-							EAMCET Portal
-							<i class="fa-solid fa-graduation-cap"></i>
+							EAPCET 2026
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
 						</a>
 					</div>
 
