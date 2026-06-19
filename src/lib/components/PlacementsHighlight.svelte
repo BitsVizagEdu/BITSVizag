@@ -3,7 +3,7 @@
 
 	const stats = [
 		{
-			label: 'Total Offers',
+			label: 'Alumni Placed in Global Companies',
 			value: '1000+',
 			color: 'text-blue-600',
 			borderColor: 'border-blue-500'
@@ -21,8 +21,8 @@
 			borderColor: 'border-emerald-500'
 		},
 		{
-			label: 'Fortune 100+ Companies',
-			value: '100+',
+			label: 'Top Recruiters Visited BITSVIZAG',
+			value: '40+',
 			color: 'text-indigo-900',
 			borderColor: 'border-indigo-900'
 		}

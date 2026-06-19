@@ -59,7 +59,7 @@
 			</div>
 
 			<!-- Main Content Grid -->
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6 items-center h-full">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6 items-center">
 				<!-- LEFT: UG PROGRAMS -->
 					<div class="space-y-6">
 					<div class="flex items-center gap-2 mb-1 border-b border-rose-100 pb-2">
@@ -129,55 +129,55 @@
 					</div>
 
 					<!-- Bottom Accents -->
-					<div class="pt-4 grid grid-cols-1 gap-3">
+					<div class="pt-4 grid grid-cols-2 gap-3">
 						<div
 							class="flex items-center justify-between p-2 rounded-lg bg-rose-50 border border-rose-100 shadow-sm"
 						>
-							<div class="flex items-center gap-2">
-								<span class="text-base">🎓</span>
+							<div class="flex items-center gap-1.5">
+								<span class="text-sm">🎓</span>
 								<span class="text-[9px] font-bold text-rose-900 uppercase tracking-widest"
 									>Code:</span
 								>
 							</div>
-							<span class="text-xl font-black text-rose-600 tracking-widest uppercase">BABA</span>
+							<span class="text-sm sm:text-base font-black text-rose-600 tracking-widest uppercase">BABA</span>
 						</div>
 						<div
-							class="flex items-center justify-center p-2 rounded-lg bg-slate-50 border border-slate-200"
+							class="flex items-center justify-center p-2 rounded-lg bg-slate-50 border border-slate-200 text-center"
 						>
 							<span class="text-[9px] font-bold text-slate-500 tracking-normal text-center"
 								>UGC Autonomous • NAAC 'A' Grade</span
 							>
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<!-- Explore Button -->
-			<div class="flex justify-center pt-4 sm:pt-8">
-				<a
-					href="/department/Department%20of%20CSE"
-					class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-rose-600 px-6 py-2.5 sm:px-10 sm:py-4 text-xs sm:text-sm font-bold text-white transition-all hover:bg-rose-700 hover:shadow-xl hover:shadow-rose-900/30"
-				>
-					<span class="relative z-10 flex items-center gap-2">
-						Explore Departments
-						<svg
-							class="w-4 h-4 group-hover:translate-x-1 transition-transform"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
+					<!-- Explore Button -->
+					<div class="pt-4 flex justify-start">
+						<a
+							href="/department/Department%20of%20CSE"
+							class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-rose-600 px-6 py-2.5 text-xs sm:text-sm font-bold text-white transition-all hover:bg-rose-700 hover:shadow-xl hover:shadow-rose-900/30 w-full sm:w-auto"
 						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M13 7l5 5m0 0l-5 5m5-5H6"
-							/>
-						</svg>
-					</span>
-					<div
-						class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"
-					></div>
-				</a>
+							<span class="relative z-10 flex items-center gap-2">
+								Explore Departments
+								<svg
+									class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M13 7l5 5m0 0l-5 5m5-5H6"
+									/>
+								</svg>
+							</span>
+							<div
+								class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"
+							></div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
