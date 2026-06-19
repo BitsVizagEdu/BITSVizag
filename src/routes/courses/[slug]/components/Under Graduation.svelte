@@ -2,7 +2,7 @@
 	const departments = [
 		{
 			name: 'Computer Science & Engineering',
-			intake: 180,
+			intake: 240,
 			href: '/department/Department%20of%20CSE'
 		},
 		{

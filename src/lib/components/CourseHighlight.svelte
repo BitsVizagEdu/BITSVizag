@@ -8,7 +8,7 @@
 			image: '/gallery/g2.jpg',
 			desc: 'Computer Science & Engineering',
 			duration: '4 Years',
-			seats: '180 Seats',
+			seats: '240 Seats',
 			href: `/department/${encodeURIComponent('Department of CSE')}`,
 			color: 'amber-500'
 		},
@@ -26,7 +26,7 @@
 			image: '/CS-Banners/CS-images/get4.jpg',
 			desc: 'Protecting the Digital Frontier',
 			duration: '4 Years',
-			seats: '120 Seats',
+			seats: '60 Seats',
 			href: `/department/${encodeURIComponent('Department of CSE (Cyber Security)')}`,
 			color: 'emerald-500'
 		},

@@ -2,7 +2,7 @@
 	export let isActive = false;
 
 	const ugPrograms = [
-		{ name: 'B.Tech in Computer Science & Engg. (CSE)', intake: '180', icon: '💻' },
+		{ name: 'B.Tech in Computer Science & Engg. (CSE)', intake: '240', icon: '💻' },
 		{ name: 'B.Tech in AI & Machine Learning', intake: '120', icon: '🤖' },
 		{ name: 'B.Tech in Cyber Security', intake: '60', icon: '🛡️' },
 		{ name: 'B.Tech in Electronics & Comm. (ECE)', intake: '120', icon: '📡' },

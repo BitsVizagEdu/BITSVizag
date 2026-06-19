@@ -8,7 +8,7 @@
 			sno: 1,
 			estd: 2008,
 			name: 'Computer Science & Engineering',
-			intake: 180,
+			intake: 240,
 			slug: 'Department of CSE'
 		},
 		{
