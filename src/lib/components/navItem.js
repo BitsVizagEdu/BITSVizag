@@ -84,13 +84,8 @@ export const NavItems = writable([
     "items": [
       "committees",
       "gallery",
-      "Students",
-      "Industry-Linkages",
-      "infrastructure",
-      "finance-quality",
-      "Mandatory",
       "Online-Grievances",
       "contactus"
     ]
   }
-])
+])

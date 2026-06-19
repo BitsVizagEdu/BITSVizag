@@ -4,12 +4,136 @@
 	import HodMessage from '$lib/components/HodMessage.svelte';
 
 	const navItems = [
-		{ id: 'about', label: 'About', color: '#059669' },
-		{ id: 'vision', label: 'Vision', color: '#10b981' },
-		{ id: 'labs', label: 'Labs', color: '#0d9488' },
-		{ id: 'faculty', label: 'Faculty', color: '#065f46' },
-		{ id: 'hod', label: 'HOD', color: '#064e3b' },
-		{ id: 'contact', label: 'Contact', color: '#047857' }
+		{
+			id: 'about',
+			label: 'About Department',
+			icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+			color: '#059669'
+		},
+		{
+			id: 'vision',
+			label: 'Vision & Mission',
+			icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z',
+			color: '#10b981'
+		},
+		{
+			id: 'labs',
+			label: 'Labs & Infra',
+			icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+			color: '#0d9488'
+		},
+		{
+			id: 'jobs',
+			label: 'Job Opportunities',
+			icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#f59e0b'
+		},
+		{
+			id: 'faculty',
+			label: 'Faculty Profile',
+			icon: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2 M9 7a4 4 0 110-8 4 4 0 010 8z M23 21v-2a4 4 0 00-3-3.87 M16 3.13a4 4 0 010 7.75',
+			color: '#065f46'
+		},
+		{
+			id: 'hod',
+			label: 'HOD Message',
+			icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z',
+			color: '#064e3b'
+		},
+		{
+			id: 'contact',
+			label: 'Contact Info',
+			icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#047857'
+		}
+	];
+
+	const jobRoles = [
+		{
+			role: 'Design & CAD Engineer',
+			description: 'Designing, modeling, and verifying mechanical components, systems, and product packaging.',
+			skills: ['SolidWorks', 'AutoCAD', 'CATIA', 'FEA/CAE'],
+			icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m19-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#059669'
+		},
+		{
+			role: 'Robotics & Mechatronics Specialist',
+			description: 'Developing smart automated systems integrating mechanical design, sensors, and electronic control.',
+			skills: ['Mechatronics', 'PLC programming', 'Sensors & Actuators', 'Robotics'],
+			icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
+			color: '#0d9488'
+		},
+		{
+			role: 'Thermal & CFD Analyst',
+			description: 'Analyzing and optimizing heat transfer, HVAC systems, aerodynamics, and fluid flow networks.',
+			skills: ['CFD/ANSYS Fluent', 'Thermodynamics', 'HVAC Design', 'Heat Exchangers'],
+			icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+			color: '#0ea5e9'
+		},
+		{
+			role: 'Manufacturing & Production Engineer',
+			description: 'Optimizing assembly lines, programming CNC systems, and planning production strategies.',
+			skills: ['CNC Programming', 'Lean Manufacturing', 'Six Sigma', 'CAM Software'],
+			icon: 'M16 8v8m-4-5v5m-4-2v2M4 18h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z',
+			color: '#06b6d4'
+		},
+		{
+			role: 'Automotive System Developer',
+			description: 'Designing vehicles, powertrains, suspensions, and electric vehicle (EV) mechanical layouts.',
+			skills: ['Vehicle Dynamics', 'EV Technology', 'Engine Design', 'Simulink'],
+			icon: 'M8.114 6.403A12.026 12.026 0 0110.821 4m1.358 0a12.026 12.026 0 012.707 2.403M9.878 10a3 3 0 104.244 0 3 3 0 00-4.244 0zM9.878 14.243a9 9 0 014.244 0',
+			color: '#f59e0b'
+		},
+		{
+			role: 'Maintenance & Reliability Engineer',
+			description: 'Ensuring machine health, performing diagnostics, and managing plant-level safety systems.',
+			skills: ['Predictive Maintenance', 'Root Cause Analysis', 'Industrial Safety', 'FMEA'],
+			icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
+			color: '#10b981'
+		}
+	];
+
+	const careerResources = {
+		jobs: [
+			{ name: 'LinkedIn Engineering', url: 'https://www.linkedin.com' },
+			{ name: 'MechanicalJobs', url: 'https://www.mechanicaljobs.com' },
+			{ name: 'Indeed', url: 'https://www.indeed.com' },
+			{ name: 'Naukri', url: 'https://www.naukri.com' }
+		],
+		tools: [
+			{ name: 'SolidWorks', url: 'https://www.solidworks.com' },
+			{ name: 'ANSYS', url: 'https://www.ansys.com' },
+			{ name: 'Autodesk AutoCAD', url: 'https://www.autodesk.com' },
+			{ name: 'MATLAB', url: 'https://www.mathworks.com' }
+		],
+		learning: [
+			{ name: 'ASME website', url: 'https://www.asme.org' },
+			{ name: 'NPTEL Mechanical', url: 'https://nptel.ac.in' },
+			{ name: 'Coursera MECH', url: 'https://www.coursera.org' }
+		],
+		resume: [
+			{ name: 'Overleaf', url: 'https://www.overleaf.com' },
+			{ name: 'Canva', url: 'https://www.canva.com' }
+		]
+	};
+
+	const focusRoadmap = [
+		{
+			year: '1st Year',
+			goals: ['Engineering Mechanics', 'Graphics & CAD', 'Workshop Craftsmanship']
+		},
+		{
+			year: '2nd Year',
+			goals: ['Thermodynamics', 'Strength of Materials', 'Fluid Mechanics', 'Kinematics of Machinery']
+		},
+		{
+			year: '3rd Year',
+			goals: ['Heat Transfer', 'Machine Element Design', 'Manufacturing Tech', 'Core Industry Internships']
+		},
+		{
+			year: 'Final Year',
+			goals: ['CAD/CAM & CNC', 'Mechatronics & Robotics', 'Power Plant Engg', 'Automated Capstone Projects']
+		}
 	];
 
 	const intake = [
@@ -17,10 +141,155 @@
 		{ key: 'M.Tech', value: '18', color: '#065f46' }
 	];
 
+	const deptImages = ['/mech.jpg', '/mech1.jpg', '/mech2.jpg', '/mech3.jpg', '/mech4.jpg', '/mech5.jpg', '/mech6.jpg'];
+
+	const labCategories = [
+		{
+			id: 'design',
+			name: 'Design & Simulation',
+			color: '#059669',
+			icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m19-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z',
+			labs: [
+				'CAD/CAM Lab',
+				'Finite Element Analysis (FEA) Lab',
+				'Computational Fluid Dynamics (CFD) Lab',
+				'Simulation & Modeling Lab'
+			],
+			description: 'Digital twinning ecosystems enabling computer-aided design, finite element validation, and structural/fluid analysis utilizing modern engineering tools.'
+		},
+		{
+			id: 'thermal',
+			name: 'Thermal & Fluids',
+			color: '#10b981',
+			icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+			labs: [
+				'Thermal Engineering Lab',
+				'Fluid Mechanics & Hydraulic Machinery Lab',
+				'Heat Transfer Lab',
+				'IC Engines Lab'
+			],
+			description: 'Energy research hubs studying thermodynamics, heat exchange mechanisms, aerodynamics, and engine combustion diagnostics.'
+		},
+		{
+			id: 'manufacturing',
+			name: 'Manufacturing Tech',
+			color: '#0d9488',
+			icon: 'M16 8v8m-4-5v5m-4-2v2M4 18h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z',
+			labs: [
+				'Machine Tools Lab',
+				'Production Technology Lab',
+				'Metallurgy & Material Science Lab',
+				'Metrology & Measurements Lab'
+			],
+			description: 'Precision machining hubs for studying chip formation, material characterization, non-destructive testing, and micro-metric diagnostics.'
+		},
+		{
+			id: 'workshop',
+			name: 'Core Workshops',
+			color: '#065f46',
+			icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+			labs: [
+				'Fitting & Carpentry Shops',
+				'Welding & Blacksmithing Shops',
+				'Foundry & Tin Smithy Shops',
+				'Machine Assembly Workshop'
+			],
+			description: 'Hands-on training grounds for mastering primary manufacturing skills, manual metal joining, and mechanical components assembly.'
+		}
+	];
+
+	let activeLabCat = 'design';
+
+	function downloadFacultyPDF() {
+		window.print();
+	}
+
+	const visionMissionTabs = [
+		{
+			id: 'vision',
+			label: 'Vision',
+			color: '#059669',
+			icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
+		},
+		{ id: 'mission', label: 'Mission', color: '#10b981', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+		{
+			id: 'peos',
+			label: 'PEOs',
+			color: '#0d9488',
+			icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+		},
+		{
+			id: 'psos',
+			label: 'PSOs',
+			color: '#f59e0b',
+			icon: 'M11 4a2 2 0 114 0v1a2 2 0 11-4 0V4zM7 8a2 2 0 012-2h6a2 2 0 012 2v1a2 2 0 01-2 2H9a2 2 0 01-2-2V8zM3 13a2 2 0 012-2h14a2 2 0 012 2v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1z'
+		},
+		{ id: 'pos', label: 'POs', color: '#065f46', icon: 'M4 6h16M4 10h16M4 14h16M4 18h16' },
+		{
+			id: 'sdgs',
+			label: 'SDGs',
+			color: '#047857',
+			icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9'
+		}
+	];
+
+	let activeVmTab = 'vision';
+	$: activeTabColor = visionMissionTabs.find((t) => t.id === activeVmTab)?.color || '#059669';
+
+	const vmContent = {
+		vision: {
+			title: 'Our Vision',
+			text: '“To be a premier center of education and research in Mechanical Engineering, producing innovative, ethically strong, and globally competent professionals capable of addressing modern industrial and societal challenges.”'
+		},
+		mission: [
+			{
+				id: 'M1',
+				text: 'Deliver high-quality, industry-relevant education in core mechanical sciences and modern CAD/CAM/CAE tools.'
+			},
+			{
+				id: 'M2',
+				text: 'Develop practical skills through hands-on laboratory training, machine shops, and real-world industrial projects.'
+			},
+			{
+				id: 'M3',
+				text: 'Promote innovation, research, and interdisciplinary engineering in automation and robotics.'
+			},
+			{
+				id: 'M4',
+				text: 'Foster professional ethics, leadership qualities, and a mindset for continuous learning and adaptation.'
+			}
+		],
+		peos: [
+			{ id: 'PEO1', text: 'Excel in careers within core mechanical, automotive, aerospace, or industrial automation sectors.' },
+			{ id: 'PEO2', text: 'Use engineering knowledge and modern software tools to design, analyze, and optimize mechanical systems.' },
+			{ id: 'PEO3', text: 'Demonstrate effective communication, ethical leadership, and successful teamwork in multidisciplinary environments.' },
+			{ id: 'PEO4', text: 'Pursue advanced studies, professional certifications, or entrepreneurial ventures for continuous growth.' }
+		],
+		psos: [
+			{ id: 'PSO1', text: 'Apply modern CAD/CAM/CAE software (SolidWorks, ANSYS) to model and solve design and thermal engineering problems.' },
+			{ id: 'PSO2', text: 'Plan and optimize CNC manufacturing processes, production schedules, and quality management systems.' },
+			{ id: 'PSO3', text: 'Integrate mechanical components with electrical and control systems to design smart mechatronic and robotic systems.' }
+		],
+		pos: [
+			{ id: 'PO1', title: 'Knowledge', text: 'Apply mathematics, science, and core engineering principles to solve mechanical engineering problems.' },
+			{ id: 'PO2', title: 'Analysis', text: 'Identify and analyze complex mechanical and thermal systems.' },
+			{ id: 'PO3', title: 'Design', text: 'Design components or systems that satisfy functional, safety, and environmental standards.' },
+			{ id: 'PO4', title: 'Investigation', text: 'Conduct experiments, analyze datasets, and interpret experimental outcomes.' },
+			{ id: 'PO5', title: 'Modern Tools', text: 'Use state-of-the-art computational design and simulation software tools.' },
+			{ id: 'PO6', title: 'Ethics', text: 'Uphold professional and environmental ethics in engineering designs.' }
+		],
+		sdgs: [
+			{ goal: 'Quality Education', desc: 'Providing high-quality core engineering training and computer-aided design skills.' },
+			{ goal: 'Clean Energy', desc: 'Fostering research in thermodynamics, heat transfer, and green energy technologies.' },
+			{ goal: 'Industry & Innovation', desc: 'Promoting advanced manufacturing, CNC machining, and automated mechatronic designs.' },
+			{ goal: 'Decent Work', desc: 'Equipping students with industry-ready skills for global core engineering careers.' }
+		]
+	};
+
 	const facultyRows = [
 		{
 			name: 'Dr. A S Bhanu Prasanna',
-			role: 'Associate Professor',
+			role: 'Associate Professor & HOD',
 			exp: '19+ Years',
 			qual: 'M.Tech., Ph.D',
 			mobile: '8008633321'
@@ -125,34 +394,27 @@
 		}
 	];
 
-	const labCategories = [
-		{
-			name: 'Design & Simulation',
-			color: '#059669',
-			labs: ['CAD Lab', 'Simulation Lab', 'FEA Lab'],
-			desc: 'Digital twinning ecosystem.'
-		},
-		{
-			name: 'Thermal & Fluid',
-			color: '#10b981',
-			labs: ['Thermal Lab', 'Heat Transfer', 'Fluid Mech'],
-			desc: 'Energy research hub.'
-		},
-		{
-			name: 'Manufacturing',
-			color: '#0d9488',
-			labs: ['Workshop', 'Production Tech', 'Metallurgy'],
-			desc: 'Precision machining.'
-		}
-	];
+	let facultySearch = '';
+	$: filteredFacultyRows = facultyRows.filter(
+		(f) =>
+			f.name.toLowerCase().includes(facultySearch.toLowerCase()) ||
+			f.role.toLowerCase().includes(facultySearch.toLowerCase()) ||
+			f.qual.toLowerCase().includes(facultySearch.toLowerCase())
+	);
 
+	let activeNav = 'about';
 	let mounted = false;
 	let currentImg = 0;
-	const deptImages = ['/mech.jpg', '/mech1.jpg', '/mech2.jpg'];
+	let sectionObserver;
 
 	function scrollToSection(id) {
 		const el = document.getElementById(id);
-		if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+		if (el) {
+			window.scrollTo({
+				top: el.offsetTop - 100,
+				behavior: 'smooth'
+			});
+		}
 	}
 
 	onMount(() => {
@@ -160,112 +422,613 @@
 		const interval = setInterval(() => {
 			currentImg = (currentImg + 1) % deptImages.length;
 		}, 4000);
+
+		const targets = navItems.map((item) => document.getElementById(item.id)).filter(Boolean);
+		sectionObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+						activeNav = entry.target.id;
+					}
+				});
+			},
+			{ threshold: 0.3, rootMargin: '-10% 0px -40% 0px' }
+		);
+		targets.forEach((t) => sectionObserver.observe(t));
+
 		return () => clearInterval(interval);
+	});
+
+	onDestroy(() => {
+		if (sectionObserver) sectionObserver.disconnect();
 	});
 </script>
 
 <svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&family=Satoshi:wght@700;900&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
 
-<div class="mech-refined-root" class:mounted>
-	<!-- Compact Hero -->
-	<header class="hero-neat">
-		<div class="hero-overlay"></div>
-		<div class="hero-content" in:fly={{ y: 20, duration: 800 }}>
-			<div class="tag inter">MECH DEPARTMENT</div>
-			<h1 class="satoshi">Mechanical Engineering</h1>
-			<div class="pills inter">
-				{#each intake as item}
-					<span class="pill">{item.key}: {item.value} Seats</span>
+<div class="dept-premium-root" class:mounted>
+	<!-- Hero Header -->
+	<header class="header-hero">
+		<div class="header-overlay"></div>
+		<div class="header-content" in:fly={{ y: 30, duration: 1000 }}>
+			<div class="welcome-text inter">
+				{#each 'Welcome to MECH 2026'.split('') as char, i}
+					<span class="animated-char" style="animation-delay: {i * 0.05}s">
+						{char === ' ' ? '\u00A0' : char}
+					</span>
 				{/each}
 			</div>
+
+			<h1 class="satoshi leading-[0.6rem]">Mechanical Engineering</h1>
 		</div>
 	</header>
 
-	<div class="layout-neat">
-		<main class="content-stream-neat">
-			<!-- About -->
-			<section id="about" class="block-neat">
-				<div class="block-head text-center">
-					<h2 class="outfit">About MECH</h2>
-					<div class="line mx-auto" style="background: #059669"></div>
+	<div class="main-content-layout">
+		<!-- Sidebar Navigation -->
+		<aside class="side-nav-container">
+			<div class="side-nav-card">
+				<div class="side-nav-title satoshi">DEPARTMENT MENU</div>
+				<nav class="side-nav-list">
+					{#each navItems as item}
+						<button
+							class="side-nav-btn inter"
+							class:active={activeNav === item.id}
+							on:click={() => scrollToSection(item.id)}
+							style="--nav-accent: {item.color}"
+						>
+							<div class="nav-btn-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="18"
+									height="18"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d={item.icon}></path>
+								</svg>
+							</div>
+							<span class="nav-btn-label">{item.label}</span>
+							{#if activeNav === item.id}
+								<div class="nav-active-dot" in:fade></div>
+							{/if}
+						</button>
+					{/each}
+				</nav>
+			</div>
+		</aside>
+
+		<!-- Main Content Area -->
+		<main class="content-body-grid">
+			<!-- About Department -->
+			<section id="about" class="dept-section-card" style="--section-accent: #059669">
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<h2 class="satoshi">About Department</h2>
+						<div class="section-underline"></div>
+					</div>
+					<div class="intake-group">
+						{#each intake as item}
+							<div class="intake-badge inter" style="--bg: {item.color}">
+								<span class="key">{item.key}:</span>
+								<span class="val">{item.value} Seats</span>
+							</div>
+						{/each}
+					</div>
 				</div>
-				<div class="about-grid-neat">
-					<div class="info text-center lg:text-left">
-						<p class="inter bold">Precision. Power. Innovation.</p>
-						<p class="inter detail">
-							Established in 2008, the Department of Mechanical Engineering at BITS Vizag blends
-							core mechanics with advanced automation to shape the future of industrial design.
+				<div class="about-grid-content">
+					<div class="about-text-side">
+						<p class="inter main-para">
+							The Department of Mechanical Engineering at BITS Vizag blends core mechanical principles with advanced software, materials design, and industrial automation to engineer the future.
+						</p>
+						<p class="inter sub-para">
+							Established in 2008, the department provides robust hands-on workshop training, advanced design laboratories, and deep industrial connections. We focus on CAD/CAM tools, manufacturing optimization, thermodynamics research, and modern mechatronics/robotics integration to prepare our students for successful careers in automotive, aerospace, and energy sectors.
 						</p>
 					</div>
-					<div class="visual">
-						<div class="frame">
-							<img src={deptImages[currentImg]} alt="Mech Center" in:fade />
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Labs -->
-			<section id="labs" class="block-neat">
-				<div class="block-head text-center">
-					<h2 class="outfit">Facilities</h2>
-					<div class="line mx-auto" style="background: #0d9488"></div>
-				</div>
-				<div class="labs-grid-neat">
-					{#each labCategories as cat}
-						<div class="lab-card-neat">
-							<h3 class="outfit" style="color: {cat.color}">{cat.name}</h3>
-							<div class="tag-row inter">
-								{#each cat.labs as lab}
-									<span>{lab}</span>
+					<div class="about-visual-side">
+						<div class="visual-slideshow">
+							{#each deptImages as img, i}
+								{#if currentImg === i}
+									<img
+										src={img}
+										alt="Dept View {i}"
+										loading="lazy"
+										in:fade={{ duration: 800 }}
+										out:fade={{ duration: 800 }}
+									/>
+								{/if}
+							{/each}
+							<div class="slideshow-indicators">
+								{#each deptImages as _, i}
+									<div class="dot" class:active={currentImg === i}></div>
 								{/each}
 							</div>
 						</div>
-					{/each}
+					</div>
 				</div>
 			</section>
 
-			<!-- Faculty: Neat Numbers -->
-			<!-- <section id="faculty" class="block-neat">
-				<div class="block-head text-center">
-					<h2 class="outfit">Faculty Profile</h2>
-					<div class="line mx-auto" style="background: #065f46"></div>
+			<!-- Vision & Mission Section -->
+			<section
+				id="vision"
+				class="dept-section-card vm-premium-section"
+				style="--section-accent: {activeTabColor}"
+			>
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<div class="vm-title-row">
+							<div class="vm-icon-badge" style="color: {activeTabColor}">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+								>
+									<circle cx="12" cy="12" r="3"></circle>
+									<path
+										d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+									></path>
+								</svg>
+							</div>
+							<h2 class="satoshi">Vision & Mission</h2>
+						</div>
+						<div class="section-underline"></div>
+					</div>
 				</div>
-				<div class="table-wrap-neat">
-					<table class="table-neat inter">
+
+				<!-- VM Tab Navigation -->
+				<div class="vm-tabs-nav scrollbar-hide">
+					{#each visionMissionTabs as tab}
+						<button
+							class="vm-tab-btn inter"
+							class:active={activeVmTab === tab.id}
+							on:click={() => (activeVmTab = tab.id)}
+							style="--tab-color: {tab.color}"
+						>
+							<svg
+								viewBox="0 0 24 24"
+								width="16"
+								height="16"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.5"
+							>
+								<path d={tab.icon}></path>
+							</svg>
+							<span>{tab.label}</span>
+						</button>
+					{/each}
+				</div>
+
+				<!-- VM Content Display -->
+				<div class="vm-content-viewport">
+					{#key activeVmTab}
+						<div class="vm-tab-panel" in:fade={{ duration: 300 }}>
+							{#if activeVmTab === 'vision'}
+								<div class="vision-panel" in:fly={{ y: 20, duration: 500, delay: 100 }}>
+									<h3 class="satoshi panel-title">Our Vision</h3>
+									<p class="inter vision-quote">{vmContent.vision.text}</p>
+								</div>
+							{:else if activeVmTab === 'mission'}
+								<div class="mission-panel">
+									<div class="panel-grid">
+										{#each vmContent.mission as m, i}
+											<div class="m-card" in:fly={{ y: 30, duration: 500, delay: i * 100 }}>
+												<span class="m-id satoshi">{m.id}</span>
+												<p class="inter">{m.text}</p>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'peos'}
+								<div class="peos-panel">
+									<div class="panel-list">
+										{#each vmContent.peos as peo, i}
+											<div class="peo-item" in:fly={{ x: -20, duration: 400, delay: i * 100 }}>
+												<div class="peo-dot"></div>
+												<div class="peo-content">
+													<span class="peo-id satoshi">{peo.id}</span>
+													<p class="inter">{peo.text}</p>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'psos'}
+								<div class="psos-panel">
+									<div class="panel-grid">
+										{#each vmContent.psos as pso, i}
+											<div class="pso-card" in:fly={{ y: 30, duration: 500, delay: i * 100 }}>
+												<div class="pso-icon" style="background: {activeTabColor}">
+													<svg
+														viewBox="0 0 24 24"
+														width="20"
+														height="20"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+													>
+														<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+													</svg>
+												</div>
+												<div class="pso-text">
+													<span class="pso-id satoshi">{pso.id}</span>
+													<p class="inter">{pso.text}</p>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'pos'}
+								<div class="pos-panel">
+									<div class="pos-grid">
+										{#each vmContent.pos as po, i}
+											<div class="po-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
+												<div class="po-header">
+													<span class="po-id satoshi">{po.id}</span>
+													<h4 class="satoshi">{po.title}</h4>
+												</div>
+												<p class="inter">{po.text}</p>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'sdgs'}
+								<div class="sdgs-panel">
+									<div class="sdg-grid">
+										{#each vmContent.sdgs as sdg, i}
+											<div
+												class="sdg-card"
+												in:fly={{ x: 20, duration: 400, delay: i * 100 }}
+												style="--sdg-color: {['#4C9F38', '#BF1D2D', '#26BDE2', '#FCC30B'][i % 4]}"
+											>
+												<div class="sdg-icon-wrap" style="color: var(--sdg-color)">
+													<svg
+														viewBox="0 0 24 24"
+														width="24"
+														height="24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+													>
+														<circle cx="12" cy="12" r="10"></circle>
+														<path d="M12 6v6l4 2"></path>
+													</svg>
+												</div>
+												<div class="sdg-content">
+													<h4 class="satoshi">{sdg.goal}</h4>
+													<p class="inter">{sdg.desc}</p>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{/if}
+						</div>
+					{/key}
+				</div>
+			</section>
+
+			<!-- Labs & Infrastructure -->
+			<section
+				id="labs"
+				class="dept-section-card labs-premium-section"
+				style="--section-accent: #0d9488"
+			>
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<div class="labs-title-row">
+							<div class="labs-icon-badge">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+									></path>
+								</svg>
+							</div>
+							<h2 class="satoshi">Labs & Infrastructure</h2>
+						</div>
+						<div class="section-underline"></div>
+					</div>
+				</div>
+
+				<div class="labs-interactive-grid">
+					<!-- Category Navigation -->
+					<div class="labs-nav-sidebar scrollbar-hide">
+						{#each labCategories as cat}
+							<button
+								class="lab-nav-item inter"
+								class:active={activeLabCat === cat.id}
+								on:click={() => (activeLabCat = cat.id)}
+								style="--nav-color: {cat.color}"
+							>
+								<div class="nav-icon">
+									<svg
+										viewBox="0 0 24 24"
+										width="20"
+										height="20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d={cat.icon}></path>
+									</svg>
+								</div>
+								<div class="nav-text">
+									<span class="cat-name">{cat.name}</span>
+									<span class="cat-count">{cat.labs.length} Facilities</span>
+								</div>
+								<div class="active-indicator"></div>
+							</button>
+						{/each}
+					</div>
+
+					<!-- Content Display Area -->
+					<div class="labs-display-pane">
+						{#each labCategories as cat}
+							{#if activeLabCat === cat.id}
+								<div class="labs-content-wrap" in:fly={{ x: 20, duration: 400 }}>
+									<div class="display-header">
+										<h3 class="satoshi" style="color: {cat.color}">{cat.name}</h3>
+										<p class="inter">{cat.description}</p>
+									</div>
+
+									<div class="lab-items-grid">
+										{#each cat.labs as lab, i}
+											<div class="lab-item-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
+												<div class="lab-status-dot" style="background: {cat.color}"></div>
+												<span class="inter lab-name">{lab}</span>
+												<div class="lab-action-btn">
+													<svg
+														viewBox="0 0 24 24"
+														width="14"
+														height="14"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="3"
+													>
+														<path d="M5 12h14m-7-7l7 7-7 7"></path>
+													</svg>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{/if}
+						{/each}
+					</div>
+				</div>
+			</section>
+
+			<!-- Job Opportunities -->
+			<section
+				id="jobs"
+				class="dept-section-card jobs-premium-section"
+				style="--section-accent: #f59e0b"
+			>
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<h2 class="satoshi">Career Pathways</h2>
+						<p class="inter dept-label">Strategic Industry Guidance for MECH Candidates</p>
+						<div class="section-underline"></div>
+					</div>
+					<div class="jobs-stats inter">
+						<span class="pulse-dot"></span>
+						<span class="stat-text">Core Placements Focus</span>
+					</div>
+				</div>
+
+				<!-- Primary Roles -->
+				<div class="jobs-grid">
+					{#each jobRoles as job, i}
+						<div class="job-card" in:fly={{ y: 20, duration: 600, delay: i * 100 }}>
+							<div class="job-icon-wrap" style="--icon-bg: {job.color}">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d={job.icon}></path>
+								</svg>
+							</div>
+							<div class="job-details">
+								<h4 class="satoshi">{job.role}</h4>
+								<p class="inter">{job.description}</p>
+								<div class="job-skills">
+									{#each job.skills as skill}
+										<span class="skill-tag">{skill}</span>
+									{/each}
+								</div>
+							</div>
+							<div class="job-hover-accent" style="background: {job.color}"></div>
+						</div>
+					{/each}
+				</div>
+
+				<!-- Roadmap & Insights -->
+				<div class="career-insights-grid">
+					<div class="insight-block roadmap">
+						<h3 class="satoshi">Year-wise Focus</h3>
+						<div class="roadmap-timeline">
+							{#each focusRoadmap as step}
+								<div class="roadmap-item">
+									<div class="year-label satoshi">{step.year}</div>
+									<div class="goals-list inter">
+										{#each step.goals as goal}
+											<span>{goal}</span>
+										{/each}
+									</div>
+								</div>
+							{/each}
+						</div>
+					</div>
+
+					<div class="insight-block reality">
+						<h3 class="satoshi">Placements Reality Check</h3>
+						<div class="reality-content inter">
+							<p class="warning-text">
+								Standard classrooms only teach theory. Success in core mechanical requires:
+							</p>
+							<ul class="fail-list">
+								<li>Strong command of drafting and assembly (CAD/CAM)</li>
+								<li>Hands-on familiarity with CNC and automated machine tools</li>
+								<li>Portfolio of design analysis (FEA, CFD)</li>
+								<li>Interdisciplinary mechatronics project experience</li>
+							</ul>
+							<div class="success-formula">
+								<span class="formula-title">Success Formula</span>
+								<p>8.0+ CGPA + SolidWorks/ANSYS Mastery + Core Internships = HIGHEST CAREER READY</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Resources Hub -->
+				<div class="resources-hub">
+					<header class="hub-header">
+						<h3 class="satoshi">Digital Resource Hub</h3>
+						<p class="inter">Curated tools for mechanical engineering validation and learning</p>
+					</header>
+					<div class="hub-grid">
+						{#each Object.entries(careerResources) as [category, links]}
+							<div class="hub-cat">
+								<h4 class="satoshi capitalize">{category}</h4>
+								<div class="link-list">
+									{#each links as link}
+										<a
+											href={link.url}
+											target="_blank"
+											rel="noopener noreferrer"
+											class="inter resource-link"
+										>
+											{link.name}
+											<svg
+												viewBox="0 0 24 24"
+												width="14"
+												height="14"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="3"
+											><path d="M7 17L17 7M7 7h10v10"></path></svg>
+										</a>
+									{/each}
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</section>
+
+			<!-- Faculty Profile Section -->
+			<!-- <section id="faculty" class="dept-section-card faculty-table-section">
+				<div class="section-header-row">
+					<div class="section-title-wrap">
+						<h2 class="satoshi">Mechanical Faculty</h2>
+						<p class="inter dept-label">Department of Mechanical Engineering</p>
+						<div class="section-underline"></div>
+					</div>
+				</div>
+
+				<div class="table-controls-row">
+					<div class="control-actions">
+						<button
+							class="round-action-btn download"
+							on:click={downloadFacultyPDF}
+							title="Download PDF"
+						>
+							<svg
+								viewBox="0 0 24 24"
+								width="20"
+								height="20"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.5"
+								><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+								></path></svg>
+						</button>
+					</div>
+					<div class="search-wrap">
+						<div class="search-box">
+							<svg
+								viewBox="0 0 24 24"
+								width="16"
+								height="16"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.5"
+								><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+							<input
+								type="text"
+								placeholder="Search records..."
+								bind:value={facultySearch}
+								class="inter"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="premium-table-viewport scrollbar-hide">
+					<table class="faculty-main-table">
 						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Role</th>
-								<th class="hidden-xs">Exp</th>
-								<th>Contact</th>
+							<tr class="inter">
+								<th class="col-sno">S.NO.</th>
+								<th class="col-name">NAME</th>
+								<th class="col-qual">HIGHEST QUALIFICATION</th>
+								<th class="col-role">DESIGNATION</th>
+								<th class="col-exp">EXPERIENCE</th>
+								<th class="col-mobile">MOBILE</th>
 							</tr>
 						</thead>
-						<tbody>
-							{#each facultyRows as f}
-								<tr>
-									<td class="font-600">{f.name}</td>
-									<td class="role-cell">{f.role}</td>
-									<td class="hidden-xs">{f.exp}</td>
-									<td>
-										<a href="tel:{f.mobile}" class="tel-link">
-											<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l2.27-2.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-											{f.mobile}
+						<tbody class="inter">
+							{#each filteredFacultyRows as faculty, i}
+								<tr in:fly={{ y: 10, duration: 400, delay: i * 30 }}>
+									<td class="td-sno">{i + 1}</td>
+									<td class="td-name">
+										<span class="name-val">{faculty.name}</span>
+									</td>
+									<td class="td-qual">{faculty.qual}</td>
+									<td class="td-role">{faculty.role}</td>
+									<td class="td-exp">{faculty.exp}</td>
+									<td class="td-mobile">
+										<a href="tel:{faculty.mobile}" class="mobile-link">
+											{faculty.mobile}
 										</a>
 									</td>
 								</tr>
 							{/each}
 						</tbody>
 					</table>
+
+					{#if filteredFacultyRows.length === 0}
+						<div class="empty-results inter" in:fade>
+							<p>No faculty records match your search.</p>
+						</div>
+					{/if}
 				</div>
 			</section> -->
 
-			<!-- HOD Message - Upgraded with Impactful Motion -->
+			<!-- HOD Message -->
 			<section
 				id="hod"
 				class="dept-section-card hod-premium-card"
@@ -299,18 +1062,84 @@
 				</div>
 			</section>
 
-			<!-- Contact: Simple & Minimal -->
-			<section id="contact" class="block-neat contact-minimal">
-				<div class="text-center">
-					<h2 class="outfit">Get in Touch</h2>
-					<div class="line mx-auto" style="background: #047857"></div>
-					<p class="inter minimal-p">
-						Have questions about our Mechanical department? Reach out to us.
-					</p>
-					<div class="contact-links inter">
-						<a href="mailto:hod.mech@bitsvizag.com">hod.mech@bitsvizag.com</a>
-						<span class="sep">|</span>
-						<a href="/admissions">Admissions 2026</a>
+			<!-- Contact Info -->
+			<section
+				id="contact"
+				class="dept-section-card contact-premium-section"
+				style="--section-accent: #047857"
+			>
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<h2 class="satoshi">Get in Touch</h2>
+						<div class="section-underline"></div>
+					</div>
+				</div>
+				<div class="contact-action-grid">
+					<div class="contact-tile email" in:fly={{ y: 20, duration: 500, delay: 100 }}>
+						<div class="tile-icon">
+							<svg
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								><path
+									d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+								></path><polyline points="22,6 12,13 2,6"></polyline></svg
+							>
+						</div>
+						<div class="tile-content">
+							<span class="inter label">Official Email</span>
+							<span class="inter value">hod.mech@bitsvizag.com</span>
+						</div>
+						<a href="mailto:hod.mech@bitsvizag.com" class="tile-link">Send Mail</a>
+					</div>
+
+					<div class="contact-tile phone" in:fly={{ y: 20, duration: 500, delay: 200 }}>
+						<div class="tile-icon">
+							<svg
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								><path
+									d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+								></path></svg
+							>
+						</div>
+						<div class="tile-content">
+							<span class="inter label">Phone Support</span>
+							<span class="inter value">+91 80086 33321</span>
+						</div>
+						<a href="tel:+918008633321" class="tile-link">Call Now</a>
+					</div>
+
+					<div class="contact-tile location" in:fly={{ y: 20, duration: 500, delay: 300 }}>
+						<div class="tile-icon">
+							<svg
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle
+									cx="12"
+									cy="10"
+									r="3"
+								></circle></svg
+							>
+						</div>
+						<div class="tile-content">
+							<span class="inter label">Office Location</span>
+							<span class="inter value"
+								>BITS Vizag campus, near bakkannapalem, Madhurawada, Visakhapatnam, AP - 530048</span
+							>
+						</div>
+						<a href="#" class="tile-link">View Maps</a>
 					</div>
 				</div>
 			</section>
@@ -319,210 +1148,364 @@
 </div>
 
 <style>
-	.mech-refined-root {
-		background: #fff;
-		color: #334155;
+	:global(body) {
+		background-color: #ffffff;
+		margin: 0;
+		padding: 0;
+	}
+
+	.dept-premium-root {
 		opacity: 0;
 		transition: opacity 1s ease;
+		background: #ffffff;
 	}
-	.mech-refined-root.mounted {
+
+	.dept-premium-root.mounted {
 		opacity: 1;
 	}
 
-	/* Hero */
-	.hero-neat {
-		height: 30vh;
-		min-height: 250px;
+	/* Hero Header */
+	.header-hero {
+		height: 430px;
+		background: #09090b
+			url('/mech.jpg')
+			center/cover;
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: relative;
-		background: #000;
-		overflow: hidden;
 		text-align: center;
-		background-image: url('/mech.jpg');
-		background-size: cover;
-		background-position: center;
+		color: white;
+		padding-bottom: 110px;
 	}
-	.hero-overlay {
+
+	.header-overlay {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(6, 78, 59, 0.8));
+		background: radial-gradient(
+			circle at center,
+			rgba(9, 9, 11, 0.4) 0%,
+			rgba(9, 9, 11, 0.85) 100%
+		);
 	}
-	.hero-content {
+
+	.header-content {
 		position: relative;
 		z-index: 10;
-		padding: 0 20px;
-	}
-	.tag {
-		font-size: 0.7rem;
-		font-weight: 800;
-		letter-spacing: 0.3em;
-		color: #34d399;
-		margin-bottom: 0.8rem;
-	}
-	.hero-content h1 {
-		font-size: clamp(1.8rem, 4vw, 2.8rem);
-		font-weight: 900;
-		color: #fff;
-		margin-bottom: 1rem;
-	}
-	.pills {
-		display: flex;
-		gap: 8px;
-		justify-content: center;
-	}
-	.pill {
-		padding: 4px 12px;
-		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		border-radius: 99px;
-		color: #fff;
-		font-size: 0.75rem;
-		font-weight: 500;
-	}
-
-	/* Layout */
-	.layout-neat {
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 60px 24px;
-	}
-	.content-stream-neat {
+		padding: 0 24px;
+		max-width: 1200px;
+		margin-top: -30px;
 		display: flex;
 		flex-direction: column;
-		gap: 60px;
+		align-items: center;
 	}
 
-	/* Block Headers */
-	.block-head h2 {
-		font-size: 1.6rem;
-		font-weight: 700;
-		color: #111;
-		margin-bottom: 6px;
-	}
-	.line {
-		width: 30px;
-		height: 3px;
-		border-radius: 2px;
+	.welcome-text {
+		display: flex;
+		gap: 0;
+		margin-bottom: 12px;
 	}
 
-	/* About */
-	.about-grid-neat {
+	.animated-char {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 800;
+		letter-spacing: 0.4em;
+		color: #ffffff;
+		text-transform: uppercase;
+		opacity: 0;
+		transform: translateY(10px);
+		animation: charAppear 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	}
+
+	@keyframes charAppear {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.header-content h1 {
+		font-size: clamp(2rem, 6vw, 3.8rem);
+		font-weight: 900;
+		margin: 0;
+		letter-spacing: -0.04em;
+		line-height: 1.3;
+		padding: 10px 0;
+		background: linear-gradient(
+			to right,
+			#f4f4f5 0%,
+			#ffffff 25%,
+			#10b981 50%,
+			#ffffff 75%,
+			#f4f4f5 100%
+		);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine 6s linear infinite;
+		filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
+		white-space: nowrap;
+	}
+
+	@keyframes shine {
+		to {
+			background-position: 200% center;
+		}
+	}
+
+	/* Layout Grid */
+	.main-content-layout {
+		max-width: 1300px;
+		margin: -180px auto 0;
+		padding: 40px 24px 60px;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 320px 1fr;
+		gap: 32px;
+		position: relative;
+		z-index: 20;
+	}
+
+	/* Sidebar */
+	.side-nav-container {
+		position: sticky;
+		top: 40px;
+		height: calc(100vh - 80px);
+	}
+	.side-nav-card {
+		background: white;
+		border-radius: 24px;
+		padding: 24px;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+		border: 1px solid #f8fafc;
+	}
+
+	.side-nav-title {
+		font-size: 0.8rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+		color: #64748b;
+		margin-bottom: 24px;
+		padding-left: 12px;
+	}
+	.side-nav-list {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.side-nav-btn {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		padding: 12px 16px;
+		border-radius: 14px;
+		border: none;
+		background: transparent;
+		color: #475569;
+		font-weight: 600;
+		font-size: 0.95rem;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		text-align: left;
+		position: relative;
+	}
+
+	.side-nav-btn:hover {
+		background: #f8fafc;
+		color: #0f172a;
+		transform: translateX(5px);
+	}
+	.side-nav-btn.active {
+		background: #f1f5f9;
+		color: var(--nav-accent);
+	}
+	.nav-btn-icon {
+		color: #94a3b8;
+		transition: color 0.2s;
+	}
+	.side-nav-btn.active .nav-btn-icon {
+		color: var(--nav-accent);
+	}
+	.nav-active-dot {
+		position: absolute;
+		right: 16px;
+		width: 6px;
+		height: 6px;
+		background: var(--nav-accent);
+		border-radius: 50%;
+		box-shadow: 0 0 10px var(--nav-accent);
+	}
+
+	/* Main Section Cards */
+	.content-body-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	/* Special case for Vision section to expand full width */
+	#vision.vm-premium-section {
+		grid-column: 1 / -1;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.dept-section-card {
+		background: white;
+		border-radius: 32px;
+		padding: 48px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+		border: 1px solid #f8fafc;
+		transition: transform 0.3s ease;
+	}
+
+	.dept-section-card:hover {
+		transform: translateY(-4px);
+	}
+	.section-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 40px;
+	}
+	.section-title-wrap h2 {
+		font-size: 2.2rem;
+		font-weight: 800;
+		margin: 0;
+		color: #0f172a;
+		letter-spacing: -0.03em;
+	}
+	.section-underline {
+		width: 100px;
+		height: 4px;
+		background: linear-gradient(90deg, var(--section-accent), #0f172a);
+		border-radius: 100px;
+		margin-top: 12px;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 4px 15px -4px var(--section-accent);
+		transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.section-underline::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 50%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+		animation: hyper-shimmer 2.5s infinite linear;
+	}
+
+	@keyframes hyper-shimmer {
+		0% {
+			left: -100%;
+		}
+		100% {
+			left: 200%;
+		}
+	}
+
+	.dept-section-card:hover .section-underline {
+		width: 200px;
+		box-shadow: 0 6px 20px -2px var(--section-accent);
+	}
+	.intake-group {
+		display: flex;
+		gap: 12px;
+	}
+	.intake-badge {
+		padding: 8px 16px;
+		border-radius: 100px;
+		background: #f8fafc;
+		border: 1px solid #f8fafc;
+		font-size: 0.85rem;
+		font-weight: 700;
+		display: flex;
+		gap: 6px;
+	}
+	.intake-badge .val {
+		color: var(--bg);
+	}
+
+	/* About Grid */
+	.about-grid-content {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
 		gap: 40px;
 		align-items: center;
-		margin-top: 30px;
 	}
-	.bold {
+	.main-para {
 		font-size: 1.1rem;
-		font-weight: 600;
-		color: #059669;
-		margin-bottom: 10px;
+		line-height: 1.5;
+		color: #1e2e34;
+		margin-bottom: 20px;
+		font-weight: 500;
 	}
-	.detail {
-		font-size: 0.9rem;
-		color: #64748b;
+	.sub-para {
+		font-size: 1rem;
 		line-height: 1.7;
+		color: #11344e;
+		text-align: justify;
 	}
-	.frame {
-		border-radius: 16px;
+
+	/* Slideshow Styles */
+	.visual-slideshow {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 4/3;
+		border-radius: 24px;
 		overflow: hidden;
-		aspect-ratio: 16/10;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+		background: #f1f5f9;
 	}
-	.frame img {
+
+	.visual-slideshow img {
+		position: absolute;
+		inset: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 
-	/* Labs */
-	.labs-grid-neat {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-		gap: 16px;
-		margin-top: 30px;
-	}
-	.lab-card-neat {
-		background: #fff;
-		border: 1px solid #f1f5f9;
-		padding: 20px;
-		border-radius: 16px;
-	}
-	.lab-card-neat h3 {
-		font-size: 1rem;
-		font-weight: 700;
-		margin-bottom: 12px;
-	}
-	.tag-row {
+	.slideshow-indicators {
+		position: absolute;
+		bottom: 16px;
+		left: 50%;
+		transform: translateX(-50%);
 		display: flex;
-		flex-wrap: wrap;
-		gap: 6px;
-	}
-	.tag-row span {
-		background: #f8fafc;
-		padding: 4px 8px;
-		border-radius: 6px;
-		font-size: 0.75rem;
-		color: #64748b;
-		border: 1px solid #f1f5f9;
+		gap: 8px;
+		z-index: 10;
 	}
 
-	/* Faculty Table */
-	.table-wrap-neat {
-		overflow-x: auto;
-		border-radius: 12px;
-		border: 1px solid #f1f5f9;
-		margin-top: 30px;
-	}
-	.table-neat {
-		width: 100%;
-		border-collapse: collapse;
-		text-align: left;
-	}
-	.table-neat th {
-		padding: 14px 18px;
-		background: #f8fafc;
-		color: #94a3b8;
-		font-size: 0.7rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-	}
-	.table-neat td {
-		padding: 14px 18px;
-		border-top: 1px solid #f1f5f9;
-		font-size: 0.8rem;
-	}
-	.role-cell {
-		color: #64748b;
-		font-size: 0.75rem;
-	}
-	.tel-link {
-		display: inline-flex;
-		align-items: center;
-		gap: 6px;
-		color: #059669;
-		font-weight: 600;
-		text-decoration: none;
+	.slideshow-indicators .dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.4);
+		transition: all 0.3s ease;
 	}
 
-	/* HOD Premium Card */
+	.slideshow-indicators .dot.active {
+		background: white;
+		width: 24px;
+		border-radius: 4px;
+	}
+
 	/* HOD Premium Card */
 	.hod-premium-card {
 		padding: 0 !important;
 		overflow: hidden;
 		background: #0f172a !important;
 		border: none !important;
-		margin-top: 30px;
-		border-radius: 32px;
 	}
 
 	.hod-container {
 		display: grid;
-		grid-template-columns: 320px 1fr;
-		min-height: 480px;
+		grid-template-columns: 400px 1fr;
+		min-height: 500px;
 	}
 
 	.hod-visual {
@@ -534,6 +1517,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: right center;
 		transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	}
 
@@ -544,7 +1528,7 @@
 	.hod-image-glow {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(to right, transparent 60%, #0f172a 100%);
+		background: linear-gradient(to right, transparent 85%, #0f172a 100%);
 		z-index: 1;
 	}
 
@@ -563,7 +1547,7 @@
 	}
 
 	.hod-content {
-		padding: 48px;
+		padding: 64px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -577,7 +1561,7 @@
 	}
 
 	.hod-content h2 {
-		font-size: 2.2rem;
+		font-size: 3rem;
 		font-weight: 900;
 		margin: 0;
 		color: #ffffff;
@@ -585,72 +1569,1621 @@
 	}
 
 	.hod-designation {
-		font-size: 1rem;
+		font-size: 1.1rem;
 		color: #94a3b8;
 		font-weight: 600;
-		margin: 8px 0 24px;
-		text-align: left;
+		margin: 8px 0 32px;
 	}
 
 	.hod-message-body p {
-		font-size: 1.15rem;
+		font-size: 1.4rem;
 		line-height: 1.6;
 		color: #e2e8f0;
 		font-weight: 500;
 		font-style: italic;
-		text-align: left;
 	}
 
 	.signature {
-		margin-top: 24px !important;
-		font-size: 1rem !important;
+		margin-top: 32px !important;
+		font-size: 1.1rem !important;
 		font-style: normal !important;
 		font-weight: 800 !important;
 		color: var(--section-accent) !important;
 		letter-spacing: 0.02em;
+	}
+
+	/* Contact Premium Action Grid */
+	.contact-premium-section {
+		background: #ffffff !important;
+	}
+
+	.contact-action-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		margin-top: 10px;
+	}
+
+	.contact-tile {
+		padding: 32px;
+		background: #f8fafc;
+		border-radius: 32px;
+		border: 1px solid #f1f5f9;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		position: relative;
+	}
+
+	.contact-tile:hover {
+		background: #ffffff;
+		transform: translateY(-12px);
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+		border-color: var(--section-accent);
+	}
+
+	.tile-icon {
+		width: 52px;
+		height: 52px;
+		background: #ffffff;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--section-accent);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		transition: all 0.3s;
+	}
+
+	.contact-tile:hover .tile-icon {
+		background: var(--section-accent);
+		color: white;
+		transform: rotate(-10deg);
+	}
+
+	.tile-content {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.tile-content .label {
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: #64748b;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.tile-content .value {
+		font-size: 1.1rem;
+		font-weight: 800;
+		color: #0f172a;
+	}
+
+	.tile-link {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		font-size: 0.9rem;
+		font-weight: 700;
+		color: var(--section-accent);
+		text-decoration: none;
+		gap: 8px;
+		transition: gap 0.3s;
+	}
+
+	.tile-link:hover {
+		gap: 12px;
+	}
+
+	.tile-link::after {
+		content: '→';
+	}
+
+	/* Vision & Mission Premium Tabs */
+	.vm-premium-section {
+		padding: 24px 32px !important;
+		overflow: hidden;
+		margin-top: -150px !important; /* Move up significantly to close gap */
+	}
+
+	.vm-title-row {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 4px;
+	}
+
+	.vm-icon-badge {
+		background: #ffffff;
+		color: #059669;
+		padding: 8px;
+		border-radius: 12px;
+		border: 1px solid #f8fafc;
+	}
+
+	.vm-tabs-nav {
+		display: flex;
+		gap: 6px;
+		margin: 20px 0;
+		padding-bottom: 8px;
+		overflow-x: auto;
+		border-bottom: 1px solid #f1f5f9;
+	}
+
+	.vm-tab-btn {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 8px 16px;
+		border-radius: 100px;
+		border: 1px solid #f8fafc;
+		background: white;
+		color: #64748b;
+		font-weight: 700;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.vm-tab-btn.active {
+		background: var(--tab-color);
+		color: white;
+		border-color: var(--tab-color);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.vm-content-viewport {
+		min-height: auto;
+		position: relative;
+	}
+
+	.panel-title {
+		font-size: 1.2rem;
+		font-weight: 800;
+		color: #1e293b;
+		margin-bottom: 16px;
+	}
+
+	/* Vision Panel */
+	.vision-panel {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 0;
+		text-align: center;
+	}
+
+	.vision-quote {
+		font-size: 1.5rem;
+		line-height: 1.6;
+		color: #0f172a;
+		font-weight: 700;
+		padding: 60px 80px;
+		background: white;
+		border-radius: 40px;
+		border: 1px solid #f1f5f9;
+		box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.08);
+		position: relative;
+		max-width: 900px;
+		z-index: 1;
+	}
+
+	.vision-quote::before {
+		content: '';
+		position: absolute;
+		inset: -2px;
+		background: linear-gradient(45deg, var(--section-accent), transparent, var(--section-accent));
+		border-radius: 42px;
+		z-index: -1;
+		opacity: 0.2;
+	}
+
+	/* Mission Cards */
+	.mission-panel .panel-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 32px;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.m-card {
+		text-align: center;
+		align-items: center;
+		padding: 40px 32px;
+		background: white;
+		border-radius: 32px;
+		border: 1px solid #f1f5f9;
+		box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+		transition: all 0.3s ease;
+	}
+
+	.m-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+		border-color: var(--section-accent);
+	}
+
+	.m-id {
+		margin: 0 auto 16px;
+		font-size: 0.75rem;
+		padding: 6px 16px;
+		border-radius: 100px;
+		text-transform: uppercase;
+		background: #f1f5f9;
+		color: #475569;
+		display: inline-block;
+		font-weight: 700;
+	}
+
+	.m-card p {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: #475569;
+		margin: 0;
+	}
+
+	/* PEOs */
+	.peos-panel .panel-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+	}
+
+	.peo-item {
+		display: flex;
+		gap: 24px;
+		background: white;
+		padding: 24px;
+		border-radius: 20px;
+		border: 1px solid #f1f5f9;
+		align-items: center;
+		transition: all 0.3s ease;
+		flex: 1;
+		min-width: 200px;
+		max-width: 280px;
+	}
+
+	.peo-item:hover {
+		border-color: var(--section-accent);
+		background: color-mix(in srgb, var(--section-accent), transparent 98%);
+	}
+
+	.peo-dot {
+		width: 12px;
+		height: 12px;
+		background: var(--section-accent);
+		border-radius: 4px;
+		rotate: 45deg;
+		flex-shrink: 0;
+		box-shadow: 0 0 15px var(--section-accent);
+	}
+
+	.peo-id {
+		font-weight: 900;
+		color: var(--section-accent);
+		font-size: 0.8rem;
+		margin-bottom: 4px;
+		display: block;
+	}
+
+	.peo-content p {
+		font-size: 0.9rem;
+		color: #334155;
+		margin: 0;
+	}
+
+	/* PSOs */
+	.psos-panel .panel-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+	}
+
+	.pso-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 24px;
+		background: white;
+		border-radius: 24px;
+		border: 1px solid #f1f5f9;
+		transition: all 0.4s ease;
+	}
+
+	.pso-card:hover {
+		border-color: var(--section-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.05);
+	}
+
+	.pso-icon {
+		background: var(--section-accent);
+		color: white;
+		padding: 12px;
+		border-radius: 16px;
+		box-shadow: 0 10px 20px -5px var(--section-accent);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.pso-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.pso-id {
+		font-weight: 900;
+		color: var(--section-accent);
+		font-size: 0.8rem;
+		margin-bottom: 4px;
+		display: block;
+	}
+
+	.pso-text p {
+		font-size: 0.9rem;
+		color: #334155;
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	/* POs Grid */
+	.pos-panel {
+		padding: 10px 0;
+	}
+
+	.pos-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+		width: 100%;
+	}
+
+	.po-card {
+		background: #f8fafc;
+		padding: 20px;
+		border-radius: 20px;
+		border: 1px solid #f8fafc;
+		transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.po-card:hover {
+		background: white;
+		border-color: var(--section-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+	}
+
+	.po-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.po-id {
+		background: var(--section-accent);
+		color: white;
+		padding: 4px 10px;
+		border-radius: 8px;
+		font-size: 0.7rem;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+	}
+
+	.po-card h4 {
+		font-size: 0.95rem;
+		font-weight: 800;
+		color: #0f172a;
+		margin: 0;
+	}
+
+	.po-card p {
+		font-size: 0.85rem;
+		line-height: 1.5;
+		color: #64748b;
+		margin: 0;
+	}
+
+	/* SDGs List Style */
+	.sdg-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.sdg-card {
+		background: white;
+		padding: 24px;
+		border-radius: 20px;
+		border: 1px solid #f1f5f9;
+		border-left: 6px solid var(--sdg-color);
+		display: flex;
+		gap: 20px;
+		transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	.sdg-card:hover {
+		transform: translateX(12px) scale(1.02);
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+	}
+
+	.sdg-icon-wrap {
+		color: var(--sdg-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.sdg-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sdg-content h4 {
+		font-size: 1rem;
+		font-weight: 800;
+		color: #0f172a;
+		margin: 0 0 4px;
+	}
+
+	.sdg-content p {
+		font-size: 0.85rem;
+		color: #64748b;
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	/* Faculty Table Section */
+	.faculty-table-section {
+		background: #ffffff !important;
+		padding: 48px !important;
+	}
+
+	.section-header-row {
+		margin-bottom: 32px;
+	}
+
+	.dept-label {
+		font-size: 0.9rem;
+		color: #64748b;
+		font-weight: 600;
+		margin: 4px 0 0;
+	}
+
+	.table-controls-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+		gap: 20px;
+	}
+
+	.control-actions {
+		display: flex;
+		gap: 12px;
+	}
+
+	.round-action-btn {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+		color: white;
+	}
+
+	.round-action-btn.download {
+		background: #059669;
+		box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+	}
+
+	.round-action-btn:hover {
+		transform: scale(1.1);
+		filter: brightness(1.1);
+	}
+
+	.search-box {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		background: #f8fafc;
+		border: 1px solid #f8fafc;
+		padding: 10px 18px;
+		border-radius: 100px;
+		width: 300px;
+		transition: all 0.3s;
+	}
+
+	.search-box:focus-within {
+		border-color: #059669;
+		background: white;
+		box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
+	}
+
+	.search-box input {
+		border: none;
+		background: transparent;
+		outline: none;
+		font-size: 0.9rem;
+		width: 100%;
+		color: #1e293b;
+	}
+
+	.premium-table-viewport {
+		border-radius: 16px;
+		border: 1px solid #f8fafc;
+		overflow: hidden;
+	}
+
+	.faculty-main-table {
+		width: 100%;
+		border-collapse: collapse;
 		text-align: left;
 	}
 
-	/* Contact Minimal */
-	.contact-minimal {
-		padding-bottom: 60px;
-	}
-	.minimal-p {
-		font-size: 0.85rem;
-		color: #64748b;
-		margin: 15px 0;
-	}
-	.contact-links {
-		display: flex;
-		gap: 15px;
-		justify-content: center;
-		font-size: 0.9rem;
-		font-weight: 600;
-	}
-	.contact-links a {
-		color: #059669;
-		text-decoration: none;
-	}
-	.sep {
-		color: #e2e8f0;
+	.faculty-main-table thead tr {
+		background: #0f172a;
+		color: #ffffff;
 	}
 
-	/* Responsive */
-	@media (max-width: 768px) {
-		.hero-neat {
-			height: 25vh;
+	.faculty-main-table th {
+		padding: 18px 24px;
+		font-size: 0.7rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+
+	.faculty-main-table td {
+		padding: 16px 24px;
+		border-bottom: 1px solid #f1f5f9;
+		font-size: 0.9rem;
+		color: #334155;
+	}
+
+	.faculty-main-table tr:last-child td {
+		border-bottom: none;
+	}
+
+	.name-val {
+		color: #059669;
+		font-weight: 700;
+	}
+
+	.td-sno {
+		font-weight: 700;
+		color: #64748b;
+	}
+
+	.mobile-link {
+		color: #059669;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 0.85rem;
+	}
+
+	.mobile-link:hover {
+		text-decoration: underline;
+	}
+
+	.empty-results {
+		padding: 40px;
+		text-align: center;
+		color: #94a3b8;
+	}
+
+	/* Jobs Stats */
+	.jobs-stats {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		background: #f0fdf4;
+		padding: 8px 16px;
+		border-radius: 100px;
+		border: 1px solid #dcfce7;
+	}
+
+	.pulse-dot {
+		width: 8px;
+		height: 8px;
+		background: #059669;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0 rgba(5, 150, 101, 0.4);
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			box-shadow: 0 0 0 0 rgba(5, 150, 101, 0.4);
 		}
-		.about-grid-neat {
+		70% {
+			box-shadow: 0 0 0 10px rgba(5, 150, 101, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 0 rgba(5, 150, 101, 0);
+		}
+	}
+
+	.stat-text {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: #065f46;
+	}
+
+	.job-card {
+		background: #f8fafc;
+		border: 1px solid #f1f5f9;
+		border-radius: 24px;
+		padding: 24px;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.job-card:hover {
+		background: white;
+		transform: translateY(-8px);
+		box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+		border-color: #e2e8f0;
+	}
+
+	.job-icon-wrap {
+		width: 52px;
+		height: 52px;
+		background: var(--icon-bg);
+		color: white;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 8px 16px -4px var(--icon-bg);
+		opacity: 0.9;
+	}
+
+	.job-details h4 {
+		font-size: 1.15rem;
+		font-weight: 800;
+		color: #0f172a;
+		margin: 0 0 8px;
+	}
+
+	.job-details p {
+		font-size: 0.85rem;
+		color: #64748b;
+		line-height: 1.5;
+		margin: 0 0 16px;
+	}
+
+	.job-skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	.skill-tag {
+		padding: 4px 10px;
+		background: #ffffff;
+		border: 1px solid #f8fafc;
+		border-radius: 6px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: #475569;
+		transition: all 0.3s;
+	}
+
+	.job-card:hover .skill-tag {
+		border-color: #cbd5e1;
+		background: #f8fafc;
+	}
+
+	/* Career Insights Grid */
+	.career-insights-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+		margin-top: 48px;
+	}
+
+	.insight-block {
+		background: #f8fafc;
+		border-radius: 28px;
+		padding: 32px;
+		border: 1px solid #f1f5f9;
+	}
+
+	.insight-block h3 {
+		font-size: 1.4rem;
+		font-weight: 800;
+		color: #0f172a;
+		margin-bottom: 24px;
+	}
+
+	.roadmap-timeline {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.roadmap-item {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		gap: 20px;
+		position: relative;
+	}
+
+	.roadmap-item::before {
+		content: '';
+		position: absolute;
+		left: 110px;
+		top: 30px;
+		bottom: -20px;
+		width: 2px;
+		background: #e2e8f0;
+	}
+
+	.roadmap-item:last-child::before {
+		display: none;
+	}
+
+	.year-label {
+		font-size: 0.75rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: #f59e0b;
+		padding-top: 4px;
+	}
+
+	.goals-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.goals-list span {
+		background: white;
+		padding: 6px 12px;
+		border-radius: 10px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #334155;
+		border: 1px solid #f8fafc;
+	}
+
+	.warning-text {
+		color: #ef4444;
+		font-weight: 700;
+		font-size: 0.9rem;
+		margin-bottom: 20px;
+	}
+
+	.fail-list {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.fail-list li {
+		padding-left: 28px;
+		position: relative;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: #475569;
+	}
+
+	.fail-list li::before {
+		content: '✕';
+		position: absolute;
+		left: 0;
+		color: #ef4444;
+		font-weight: 900;
+	}
+
+	.success-formula {
+		background: #ecfdf5;
+		padding: 24px;
+		border-radius: 20px;
+		border: 1px solid #d1fae5;
+	}
+
+	.formula-title {
+		display: block;
+		font-size: 0.75rem;
+		font-weight: 900;
+		color: #059669;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+
+	.success-formula p {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: #065f46;
+		margin: 0;
+	}
+
+	/* Resources Hub */
+	.resources-hub {
+		margin-top: 48px;
+		background: #0f172a;
+		border-radius: 32px;
+		padding: 40px;
+		color: white;
+	}
+
+	.hub-header {
+		margin-bottom: 32px;
+	}
+
+	.hub-header h3 {
+		font-size: 1.6rem;
+		font-weight: 800;
+		margin-bottom: 8px;
+	}
+
+	.hub-header p {
+		font-size: 0.9rem;
+		color: #94a3b8;
+	}
+
+	.hub-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 40px;
+	}
+
+	.hub-cat h4 {
+		font-size: 0.8rem;
+		font-weight: 900;
+		color: #f59e0b;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 20px;
+	}
+
+	.link-list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.resource-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-decoration: none;
+		color: #cbd5e1;
+		font-size: 0.9rem;
+		font-weight: 600;
+		transition: all 0.3s;
+		padding: 4px 0;
+	}
+
+	.resource-link:hover {
+		color: white;
+		transform: translateX(5px);
+	}
+
+	/* Labs Premium Section */
+	.labs-premium-section {
+		grid-column: 1 / -1;
+		width: 100%;
+		margin-top: 20px;
+		background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+	}
+
+	.labs-title-row {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.labs-icon-badge {
+		background: #0d9488;
+		color: white;
+		padding: 10px;
+		border-radius: 14px;
+		box-shadow: 0 8px 16px -4px rgba(13, 148, 136, 0.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.labs-interactive-grid {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		gap: 40px;
+		margin-top: 40px;
+		min-height: 450px;
+	}
+
+	.labs-nav-sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.lab-nav-item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 16px;
+		background: white;
+		border: 1px solid #f8fafc;
+		border-radius: 20px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.lab-nav-item:hover {
+		border-color: var(--nav-color);
+		transform: translateX(8px);
+		background: #fdfdfd;
+	}
+
+	.lab-nav-item.active {
+		background: white;
+		border-color: var(--nav-color);
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+	}
+
+	.lab-nav-item .nav-icon {
+		padding: 10px;
+		background: #f8fafc;
+		border-radius: 12px;
+		color: #94a3b8;
+		transition: all 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.lab-nav-item.active .nav-icon {
+		background: var(--nav-color);
+		color: white;
+	}
+
+	.nav-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.cat-name {
+		font-weight: 800;
+		font-size: 0.95rem;
+		color: #1e293b;
+	}
+
+	.cat-count {
+		font-size: 0.75rem;
+		color: #94a3b8;
+		font-weight: 600;
+	}
+
+	.active-indicator {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 4px;
+		height: 0;
+		background: var(--nav-color);
+		transition: height 0.3s;
+		border-radius: 0 4px 4px 0;
+	}
+
+	.lab-nav-item.active .active-indicator {
+		height: 60%;
+	}
+
+	.labs-display-pane {
+		background: white;
+		border-radius: 32px;
+		border: 1px solid #f1f5f9;
+		padding: 40px;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+		position: relative;
+	}
+
+	.display-header {
+		margin-bottom: 32px;
+	}
+
+	.display-header h3 {
+		font-size: 1.8rem;
+		font-weight: 900;
+		margin-bottom: 8px;
+	}
+
+	.display-header p {
+		color: #64748b;
+		line-height: 1.6;
+		max-width: 800px;
+	}
+
+	.lab-items-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 16px;
+	}
+
+	.lab-item-card {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 20px;
+		background: #f8fafc;
+		border-radius: 20px;
+		border: 1px solid #f8fafc;
+		transition: all 0.3s;
+	}
+
+	.lab-item-card:hover {
+		background: white;
+		border-color: #cbd5e1;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+	}
+
+	.lab-status-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	.lab-name {
+		font-weight: 700;
+		color: #334155;
+		font-size: 0.95rem;
+		flex-grow: 1;
+	}
+
+	.lab-action-btn {
+		width: 28px;
+		height: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: white;
+		border-radius: 8px;
+		border: 1px solid #f8fafc;
+		color: #94a3b8;
+		transition: all 0.3s;
+	}
+
+	.lab-item-card:hover .lab-action-btn {
+		background: #0f172a;
+		color: white;
+		border-color: #0f172a;
+	}
+
+	/* Scrollbar Utilities */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	/* Responsive Media Queries */
+	@media (max-width: 1200px) {
+		.main-content-layout {
 			grid-template-columns: 1fr;
+			padding: 0 16px 60px;
+		}
+		.side-nav-container {
+			position: static;
+			height: auto;
+			margin-bottom: 32px;
+		}
+		.side-nav-list {
+			flex-direction: row;
+			overflow-x: auto;
+			padding-bottom: 10px;
+		}
+		.side-nav-btn {
+			white-space: nowrap;
+		}
+		.header-hero {
+			margin-bottom: -40px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.main-content-layout {
+			padding: 0 12px 40px;
+			display: block;
+			margin-top: -30px;
+		}
+
+		.side-nav-container {
+			display: none;
+		}
+
+		.dept-section-card {
+			padding: 24px 16px !important;
+			border-radius: 20px;
+			text-align: center;
+			margin-bottom: 32px;
+			overflow: hidden;
+		}
+
+		.section-top {
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+		}
+
+		.section-title-wrap h2 {
+			font-size: 1.55rem;
+			font-weight: 700;
+			letter-spacing: -0.015em;
+			line-height: 1.2;
+		}
+
+		.section-underline {
+			width: 56px;
+			height: 3px;
+			margin: 10px auto 0;
+			background: linear-gradient(90deg, var(--section-accent), #1e293b);
+		}
+
+		.intake-group {
+			justify-content: center;
+			flex-wrap: nowrap;
+			gap: 8px;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		.intake-badge {
+			padding: 6px 10px;
+			font-size: 0.75rem;
+			flex: 1;
+			justify-content: center;
+			white-space: nowrap;
+		}
+
+		.about-grid-content {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.about-text-side {
+			order: 2;
 			text-align: center;
 		}
+
+		.main-para {
+			font-size: 0.95rem;
+			margin-bottom: 12px;
+			line-height: 1.5;
+		}
+
+		.sub-para {
+			font-size: 0.85rem;
+			text-align: center;
+			line-height: 1.6;
+		}
+
+		.about-visual-side {
+			order: 1;
+			width: 100%;
+		}
+
+		.visual-slideshow {
+			height: 180px;
+			border-radius: 16px;
+		}
+
+		.vm-premium-section {
+			margin-top: 0 !important;
+			padding: 24px 12px !important;
+		}
+
+		.vm-icon-badge {
+			display: none;
+		}
+
+		.vm-title-row {
+			flex-direction: column;
+			gap: 8px;
+			text-align: center;
+			align-items: center;
+		}
+
+		.vm-tabs-nav {
+			justify-content: flex-start;
+			padding: 4px 0 12px;
+			margin: 12px 0;
+			gap: 8px;
+		}
+
+		.vm-tab-btn {
+			padding: 6px 14px;
+			font-size: 0.75rem;
+		}
+
+		.vision-quote {
+			font-size: 1.05rem;
+			padding: 24px 16px;
+			border-radius: 20px;
+			max-width: 100%;
+			line-height: 1.5;
+		}
+
+		.vision-panel {
+			padding: 20px 0;
+		}
+
+		.panel-title {
+			font-size: 1.1rem;
+			margin-bottom: 12px;
+		}
+
+		.mission-panel .panel-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.m-card {
+			padding: 12px 14px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			border-radius: 12px;
+		}
+
+		.m-card p {
+			font-size: 0.8rem;
+		}
+
+		.peos-panel .panel-list {
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		.peo-item {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			gap: 8px;
+		}
+
+		.peo-dot {
+			display: none;
+		}
+
+		.peo-id {
+			font-size: 0.75rem;
+			color: var(--section-accent);
+			font-weight: 800;
+			min-width: 32px;
+		}
+
+		.peo-content p {
+			font-size: 0.8rem;
+		}
+
+		.psos-panel .panel-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.pso-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+			gap: 8px;
+		}
+
+		.pso-icon {
+			display: none;
+		}
+
+		.pso-id {
+			font-size: 0.75rem;
+			color: var(--section-accent);
+			font-weight: 800;
+			min-width: 36px;
+		}
+
+		.pso-text p {
+			font-size: 0.8rem;
+		}
+
+		.pos-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.po-card {
+			padding: 12px 14px;
+			border-radius: 12px;
+			background: #f8fafc;
+			border: 1px solid #f1f5f9;
+		}
+
+		.po-header {
+			margin-bottom: 4px;
+			gap: 10px;
+			display: flex;
+			align-items: center;
+		}
+
+		.po-card h4 {
+			font-size: 0.85rem;
+			margin: 0;
+		}
+
+		.po-card p {
+			font-size: 0.75rem;
+			line-height: 1.4;
+			color: #64748b;
+		}
+
+		.sdg-grid {
+			grid-template-columns: 1fr;
+			gap: 8px;
+		}
+
+		.sdg-card {
+			padding: 10px 12px;
+			gap: 12px;
+			border-radius: 12px;
+			border-left-width: 4px;
+		}
+
+		.sdg-content h4 {
+			font-size: 0.85rem;
+			margin-bottom: 2px;
+		}
+
+		.sdg-content p {
+			font-size: 0.75rem;
+		}
+
+		.labs-icon-badge {
+			display: none;
+		}
+
+		.labs-interactive-grid {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.labs-nav-sidebar {
+			flex-direction: row;
+			overflow-x: auto;
+			padding: 4px 0 12px;
+			gap: 10px;
+			border-bottom: 1px solid #f1f5f9;
+			margin-bottom: 8px;
+		}
+
+		.lab-nav-item {
+			min-width: 130px;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 12px 8px;
+			gap: 8px;
+			border-radius: 16px;
+		}
+
+		.lab-nav-item .nav-icon {
+			padding: 8px;
+			border-radius: 10px;
+		}
+
+		.cat-name {
+			font-size: 0.8rem;
+		}
+
+		.cat-count {
+			font-size: 0.65rem;
+		}
+
+		.labs-display-pane {
+			padding: 24px 16px;
+			border-radius: 24px;
+			text-align: center;
+		}
+
+		.display-header h3 {
+			font-size: 1.3rem;
+			margin-bottom: 8px;
+		}
+
+		.display-header p {
+			font-size: 0.85rem;
+			line-height: 1.5;
+			margin: 0 auto;
+		}
+
+		.lab-item-card {
+			padding: 12px 16px;
+			border-radius: 14px;
+			gap: 12px;
+		}
+
+		.lab-name {
+			font-size: 0.85rem;
+			text-align: left;
+		}
+
+		.lab-items-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.jobs-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+		}
+
+		.job-card {
+			padding: 16px 12px;
+			gap: 10px;
+			border-radius: 16px;
+		}
+
+		.job-icon-wrap {
+			width: 36px;
+			height: 36px;
+			margin-bottom: 4px;
+			border-radius: 10px;
+		}
+
+		.job-icon-wrap svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.job-details h4 {
+			font-size: 0.9rem;
+			margin-bottom: 4px;
+		}
+
+		.job-details p {
+			font-size: 0.7rem;
+			margin-bottom: 10px;
+			line-height: 1.4;
+		}
+
+		.job-skills {
+			gap: 4px;
+		}
+
+		.skill-tag {
+			font-size: 0.6rem;
+			padding: 2px 6px;
+			border-radius: 6px;
+		}
+
+		.career-insights-grid {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+
+		.roadmap-timeline {
+			padding-left: 12px;
+			border-left: 2px solid #f1f5f9;
+			margin-left: 10px;
+		}
+
+		.roadmap-item {
+			display: block;
+			text-align: left;
+			margin-bottom: 32px;
+			position: relative;
+		}
+
+		.roadmap-item::after {
+			content: '';
+			position: absolute;
+			left: -17px;
+			top: 8px;
+			width: 10px;
+			height: 10px;
+			background: #f59e0b;
+			border-radius: 50%;
+			box-shadow:
+				0 0 0 4px white,
+				0 0 0 5px #f59e0b;
+		}
+
+		.year-label {
+			font-size: 0.85rem;
+			margin-bottom: 12px;
+			display: block;
+		}
+
+		.goals-list {
+			gap: 6px;
+		}
+
+		.goals-list span {
+			font-size: 0.75rem;
+			padding: 4px 10px;
+		}
+
+		.faculty-table-section {
+			padding: 24px 12px !important;
+		}
+
+		.section-header-row {
+			text-align: center;
+			margin-bottom: 24px;
+		}
+
+		.table-controls-row {
+			flex-direction: column;
+			gap: 16px;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.control-actions {
+			justify-content: center;
+			width: 100%;
+		}
+
+		.search-box {
+			width: 100%;
+			max-width: 320px;
+		}
+
+		.faculty-main-table th,
+		.faculty-main-table td {
+			padding: 12px 14px;
+			font-size: 0.8rem;
+		}
+
+		.col-sno,
+		.td-sno {
+			display: none;
+		}
+
 		/* HOD Section Mobile - Minimal & Compact */
 		.hod-container {
 			grid-template-columns: 1fr;
+			min-height: auto;
 		}
 
 		.hod-visual {
-			height: 180px;
+			height: 240px;
 			order: 1;
 		}
 
@@ -673,18 +3206,17 @@
 		}
 
 		.hod-content h2 {
-			font-size: 1.5rem;
+			font-size: 1.75rem;
 			margin-top: 4px;
 		}
 
 		.hod-designation {
-			font-size: 0.85rem;
+			font-size: 0.9rem;
 			margin-bottom: 16px;
-			text-align: center;
 		}
 
 		.hod-message-body p {
-			font-size: 0.95rem;
+			font-size: 1.05rem;
 			max-width: 100%;
 			line-height: 1.5;
 			text-align: center;
@@ -692,7 +3224,7 @@
 
 		.signature {
 			margin-top: 16px !important;
-			font-size: 0.9rem !important;
+			font-size: 1rem !important;
 			text-align: center;
 		}
 
@@ -701,28 +3233,133 @@
 			left: 50%;
 			transform: translateX(-50%);
 			padding: 4px 10px;
+			font-size: 0.75rem;
+		}
+
+		.premium-table-viewport {
+			margin: 0 -8px;
+			padding: 0 8px;
+			border-radius: 12px;
+		}
+
+		.resources-hub {
+			padding: 32px 20px;
+			margin-top: 32px;
+			border-radius: 24px;
+			text-align: center;
+		}
+
+		.hub-header {
+			margin-bottom: 24px;
+		}
+
+		.hub-header h3 {
+			font-size: 1.3rem;
+		}
+
+		.hub-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px 16px;
+			text-align: left;
+		}
+
+		.hub-cat h4 {
 			font-size: 0.7rem;
+			margin-bottom: 12px;
 		}
-		.hidden-xs {
-			display: none;
-		}
-		.contact-links {
-			flex-direction: column;
+
+		.link-list {
 			gap: 8px;
 		}
-		.sep {
+
+		.resource-link {
+			font-size: 0.8rem;
+		}
+
+		/* Contact Details Mobile */
+		.contact-action-grid {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+
+		.contact-tile {
+			padding: 20px 16px;
+			flex-direction: row;
+			align-items: center;
+			text-align: left;
+			gap: 16px;
+			border-radius: 20px;
+		}
+
+		.tile-icon {
+			width: 40px;
+			height: 40px;
+			border-radius: 12px;
+			flex-shrink: 0;
+		}
+
+		.tile-icon svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.tile-content .label {
+			font-size: 0.7rem;
+		}
+
+		.tile-content .value {
+			font-size: 0.95rem;
+		}
+
+		.tile-link {
 			display: none;
+		}
+
+		/* Hero Adjustments */
+		.header-hero {
+			height: 220px;
+			margin-bottom: 10px;
+			padding-bottom: 40px;
+		}
+
+		.header-content h1 {
+			font-size: 1.8rem;
+			line-height: 1.25;
+			white-space: normal;
+			text-align: center;
+			max-width: 320px;
+		}
+
+		.welcome-text {
+			font-size: 0.65rem;
+			gap: 1px;
+			margin-bottom: 8px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.welcome-text .animated-char {
+			letter-spacing: 0.15em;
+			font-size: 0.7rem;
 		}
 	}
 
-	.text-center {
-		text-align: center;
-	}
-	.mx-auto {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.font-600 {
-		font-weight: 600;
+	@media (max-width: 480px) {
+		.header-hero {
+			height: 220px;
+		}
+
+		.dept-section-card {
+			padding: 20px 12px !important;
+		}
+
+		.vision-quote {
+			font-size: 1rem;
+			padding: 24px 16px;
+		}
+
+		.lab-nav-item {
+			min-width: 140px;
+		}
 	}
 </style>
