@@ -92,7 +92,7 @@
 		['Electrical and Electronics Engineering', '02', '60'],
 		['Mechanical Engineering', '03', '60'],
 		['Electronics and Communication Engineering', '04', '120'],
-		['Computer Science and Engineering', '05', '180'],
+		['Computer Science and Engineering', '05', '240'],
 		['Artificial Intelligence and Machine Learning', '61', '60'],
 		['Cyber Security', '59', '60']
 	];

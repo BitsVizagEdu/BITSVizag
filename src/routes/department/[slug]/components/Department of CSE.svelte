@@ -136,7 +136,7 @@
 	];
 
 	const intake = [
-		{ key: 'B.Tech', value: '180', color: '#2563eb' },
+		{ key: 'B.Tech', value: '240', color: '#2563eb' },
 		{ key: 'M.Tech', value: '18', color: '#0284c7' }
 	];
 
@@ -569,7 +569,7 @@
 							academic excellence dedicated to producing world-class engineers.
 						</p>
 						<p class="inter sub-para">
-							Established in 2008, the department has evolved into a thriving community of 180
+							Established in 2008, the department has evolved into a thriving community of 240
 							undergraduate and 18 postgraduate students. We focus on outcome-based education,
 							industry collaboration, and cutting-edge research in AI, Data Science, and Modern
 							Systems.
