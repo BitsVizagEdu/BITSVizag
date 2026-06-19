@@ -44,7 +44,7 @@
 			visibility 0.5s;
 		position: fixed;
 		z-index: 99;
-		right: 22px;
+		right: 74px;
 		user-select: none;
 		bottom: 74px;
 		color: white;
@@ -67,7 +67,7 @@
 
 	@media (max-width: 640px) {
 		.back-to-top {
-			right: 10px;
+			right: 60px;
 			bottom: 80px;
 			padding: 8px 14px;
 			border-radius: 12px;

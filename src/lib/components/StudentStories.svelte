@@ -9,7 +9,7 @@
 			batch: '2022-2026',
 			placement: 'Cognizant',
 			initial: 'P',
-			color: 'bg-blue-100 text-blue-600',
+			theme: 'blue',
 			quote:
 				'The specialized Data Science labs equipped with high-end backend GPUs gave me pure, hands-on architectural training that instantly put my technical skills years ahead of my peers.'
 		},
@@ -19,7 +19,7 @@
 			batch: '2022-2024',
 			placement: 'TCS Digital',
 			initial: 'A',
-			color: 'bg-amber-100 text-amber-600',
+			theme: 'amber',
 			quote:
 				'The M.Tech program at BITS offers an incredibly deep dive into advanced algorithms and data pipelines. The research facilities and publication support allowed me to present my paper at an international conference.'
 		},
@@ -29,7 +29,7 @@
 			batch: '2022-2026',
 			placement: 'Tech Mahindra',
 			initial: 'P',
-			color: 'bg-emerald-100 text-emerald-600',
+			theme: 'emerald',
 			quote:
 				'The Artificial Intelligence hubs in our college are phenomenal. I was fully funded and mentored to publish my first major research paper thanks to the dedicated R&D wing!'
 		},
@@ -39,7 +39,7 @@
 			batch: '2021-2025',
 			placement: 'Infosys',
 			initial: 'R',
-			color: 'bg-indigo-100 text-indigo-600',
+			theme: 'indigo',
 			quote:
 				'The electronics curriculum is perfectly balanced between theory and industry-grade VLSI design. The faculty encouraged me to push beyond textbooks and build real-world IoT solutions.'
 		},
@@ -48,8 +48,8 @@
 			program: 'B.Tech MECH',
 			batch: '2020-2024',
 			placement: 'L&T',
-			initial: 'S',
-			color: 'bg-orange-100 text-orange-600',
+			initial: 'K',
+			theme: 'orange',
 			quote:
 				'Our mechanical labs and CNC centers are at par with industrial standards. The hands-on training on modern machinery made my transition to L&T seamless and confident.'
 		},
@@ -58,26 +58,66 @@
 			program: 'B.Tech EEE',
 			batch: '2019-2023',
 			placement: 'NTPC',
-			initial: 'S',
-			color: 'bg-rose-100 text-rose-600',
+			initial: 'C',
+			theme: 'rose',
 			quote:
 				'The electrical engineering department provided me with strong fundamental knowledge and hands-on experience in power systems, which helped me clear the NTPC exams with flying colors.'
 		}
 	];
 
-	// Doubling the stories for a seamless infinite marquee effect
-	const marqueeStories = [...stories, ...stories];
+	const themeColors = {
+		blue: {
+			text: 'text-blue-600',
+			border: 'hover:border-blue-400/80',
+			initialBg: 'bg-blue-50 text-blue-600 border border-blue-100',
+			badge: 'bg-blue-50/80 border-blue-100 text-blue-700'
+		},
+		amber: {
+			text: 'text-amber-600',
+			border: 'hover:border-amber-400/80',
+			initialBg: 'bg-amber-50 text-amber-600 border border-amber-100',
+			badge: 'bg-amber-50/80 border-amber-100 text-amber-700'
+		},
+		emerald: {
+			text: 'text-emerald-600',
+			border: 'hover:border-emerald-400/80',
+			initialBg: 'bg-emerald-50 text-emerald-600 border border-emerald-100',
+			badge: 'bg-emerald-50/80 border-emerald-100 text-emerald-700'
+		},
+		indigo: {
+			text: 'text-indigo-600',
+			border: 'hover:border-indigo-400/80',
+			initialBg: 'bg-indigo-50 text-indigo-600 border border-indigo-100',
+			badge: 'bg-indigo-50/80 border-indigo-100 text-indigo-700'
+		},
+		orange: {
+			text: 'text-orange-600',
+			border: 'hover:border-orange-400/80',
+			initialBg: 'bg-orange-50 text-orange-600 border border-orange-100',
+			badge: 'bg-orange-50/80 border-orange-100 text-orange-700'
+		},
+		rose: {
+			text: 'text-rose-600',
+			border: 'hover:border-rose-400/80',
+			initialBg: 'bg-rose-50 text-rose-600 border border-rose-100',
+			badge: 'bg-rose-50/80 border-rose-100 text-rose-700'
+		}
+	};
+
+	// Doubling the split stories lists for a seamless infinite loop in opposite directions
+	const row1Stories = [...stories.slice(0, 3), ...stories.slice(0, 3)];
+	const row2Stories = [...stories.slice(3, 6), ...stories.slice(3, 6)];
 </script>
 
-<section class="py-12 md:py-24 bg-[#f8faff] overflow-hidden border-t border-slate-100">
+<section class="py-16 md:py-24 bg-gradient-to-b from-[#fbfdff] via-[#f5f8ff] to-[#f8faff] overflow-hidden border-t border-slate-100">
 	<div class="w-full">
 		<!-- Header -->
-		<div class="text-center mb-10 md:mb-16 px-6" data-aos="fade-up">
+		<div class="text-center mb-12 md:mb-20 px-6" data-aos="fade-up">
 			<div
-				class="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 mb-4 md:mb-6"
+				class="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-indigo-50 border border-indigo-100 mb-4 md:mb-6"
 			>
-				<i class="fa-solid fa-star text-amber-600 text-[10px]"></i>
-				<span class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.1em] text-amber-600"
+				<i class="fa-solid fa-graduation-cap text-indigo-600 text-[10px]"></i>
+				<span class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.1em] text-indigo-600"
 					>Success Stories</span
 				>
 			</div>
@@ -85,11 +125,11 @@
 			<h2 class="text-3xl md:text-5xl font-semibold tracking-normal text-[#1a233e] mb-4 md:mb-6">
 				Real Stories, <span class="relative inline-block">
 					<span
-						class="absolute inset-0 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-300 bg-clip-text text-transparent blur-lg opacity-60 animate-shimmer-glow"
+						class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent blur-lg opacity-60 animate-shimmer-glow"
 						>Real Success</span
 					>
 					<span
-						class="relative bg-gradient-to-z from-amber-400 via-amber-500 to-amber-300 bg-clip-text text-transparent animate-shimmer-text"
+						class="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer-text"
 						>Real Success</span
 					>
 				</span>
@@ -100,66 +140,138 @@
 			</p>
 		</div>
 
-		<!-- 🏎️ SLOWLY MOVING MARQUEE (Moves Right) -->
-		<div class="relative flex overflow-hidden group">
-			<div class="flex animate-marquee-reverse hover:pause gap-5 md:gap-8 py-4">
-				{#each marqueeStories as story, i}
-					<div
-						class="flex-shrink-0 w-[280px] md:w-[450px] bg-white rounded-[1.75rem] md:rounded-[2.5rem] p-6 md:p-10 shadow-xl shadow-slate-200/40 border border-slate-100 relative transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-					>
-						<!-- Quote Icon -->
+		<!-- 🏎️ SLOWLY MOVING MARQUEES -->
+		<div class="space-y-6 md:space-y-8">
+			<!-- Row 1: Moves Left -->
+			<div class="relative flex overflow-hidden group/m1 w-full">
+				<div class="flex animate-marquee hover:pause gap-6 md:gap-8 py-4">
+					{#each row1Stories as story, i}
 						<div
-							class="absolute top-10 right-10 opacity-[0.03] transform scale-[4] pointer-events-none transition-opacity"
+							class="flex-shrink-0 w-[295px] md:w-[420px] bg-white rounded-3xl p-6 md:p-8 shadow-[0_15px_30px_rgba(0,0,0,0.02)] border border-slate-100 relative transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(15,23,42,0.08)] {themeColors[story.theme].border} overflow-hidden flex flex-col justify-between"
 						>
-							<i class="fa-solid fa-quote-right text-[#1a233e]"></i>
-						</div>
-
-						<!-- Stars -->
-						<div class="flex gap-1 mb-6">
-							{#each Array(5) as _}
-								<i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
-							{/each}
-						</div>
-
-						<!-- Quote -->
-						<blockquote
-							class="text-slate-600 italic leading-relaxed mb-6 md:mb-8 text-[13px] md:text-[15px] relative z-10 line-clamp-3 md:line-clamp-4"
-						>
-							"{story.quote}"
-						</blockquote>
-
-						<!-- Student Info -->
-						<div class="flex items-center gap-3 md:gap-4 border-t border-slate-50 pt-6 md:pt-8">
-							<div
-								class="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-base md:text-lg flex-shrink-0 {story.color}"
-							>
-								{story.initial}
-							</div>
-							<div class="flex flex-col min-w-0">
-								<h4 class="font-bold text-[#1a233e] truncate">{story.name}</h4>
-								<p class="text-[10px] text-slate-400 font-medium truncate">
-									{story.program} ({story.batch})
-								</p>
-
-								<div
-									class="mt-2 inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-100 w-fit"
-								>
-									<i class="fa-solid fa-briefcase text-emerald-600 text-[10px]"></i>
-									<span class="text-[8px] font-black uppercase tracking-wider text-emerald-700"
-										>Placed @ {story.placement}</span
-									>
+							<div>
+								<!-- Student Profile Header (Top) -->
+								<div class="flex items-center gap-4 mb-6">
+									<!-- Avatar Container -->
+									<div class="relative flex-shrink-0">
+										<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center font-black text-sm md:text-base {themeColors[story.theme].initialBg}">
+											{story.initial}
+										</div>
+										<!-- Mini Quote Icon -->
+										<div class="absolute -bottom-1.5 -right-1.5 w-5 h-5 rounded-full bg-slate-900 border-2 border-white flex items-center justify-center shadow-sm">
+											<i class="fa-solid fa-quote-right text-[8px] text-white"></i>
+										</div>
+									</div>
+									
+									<!-- Name & Batch -->
+									<div class="flex flex-col min-w-0">
+										<h4 class="font-bold text-slate-800 text-sm md:text-base tracking-tight truncate">{story.name}</h4>
+										<p class="text-[10px] md:text-xs text-slate-400 font-semibold truncate mt-0.5">
+											{story.program} &bull; {story.batch}
+										</p>
+									</div>
 								</div>
+
+								<!-- Rating & Placement Badge Row -->
+								<div class="flex items-center justify-between gap-3 mb-5 border-b border-slate-50 pb-4">
+									<!-- Stars -->
+									<div class="flex gap-0.5">
+										{#each Array(5) as _}
+											<i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+										{/each}
+									</div>
+									
+									<!-- Placed Badge -->
+									<div
+										class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[9px] font-black uppercase tracking-wider {themeColors[story.theme].badge}"
+									>
+										<i class="fa-solid fa-briefcase text-[10px]"></i>
+										<span>{story.placement}</span>
+									</div>
+								</div>
+
+								<!-- Quote Text -->
+								<p class="text-slate-600 leading-relaxed font-medium text-[13px] md:text-[14.5px] line-clamp-4 relative z-10 italic mb-2">
+									"{story.quote}"
+								</p>
 							</div>
 						</div>
-					</div>
-				{/each}
+					{/each}
+				</div>
+			</div>
+
+			<!-- Row 2: Moves Right -->
+			<div class="relative flex overflow-hidden group/m2 w-full">
+				<div class="flex animate-marquee-reverse hover:pause gap-6 md:gap-8 py-4">
+					{#each row2Stories as story, i}
+						<div
+							class="flex-shrink-0 w-[295px] md:w-[420px] bg-white rounded-3xl p-6 md:p-8 shadow-[0_15px_30px_rgba(0,0,0,0.02)] border border-slate-100 relative transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(15,23,42,0.08)] {themeColors[story.theme].border} overflow-hidden flex flex-col justify-between"
+						>
+							<div>
+								<!-- Student Profile Header (Top) -->
+								<div class="flex items-center gap-4 mb-6">
+									<!-- Avatar Container -->
+									<div class="relative flex-shrink-0">
+										<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center font-black text-sm md:text-base {themeColors[story.theme].initialBg}">
+											{story.initial}
+										</div>
+										<!-- Mini Quote Icon -->
+										<div class="absolute -bottom-1.5 -right-1.5 w-5 h-5 rounded-full bg-slate-900 border-2 border-white flex items-center justify-center shadow-sm">
+											<i class="fa-solid fa-quote-right text-[8px] text-white"></i>
+										</div>
+									</div>
+									
+									<!-- Name & Batch -->
+									<div class="flex flex-col min-w-0">
+										<h4 class="font-bold text-slate-800 text-sm md:text-base tracking-tight truncate">{story.name}</h4>
+										<p class="text-[10px] md:text-xs text-slate-400 font-semibold truncate mt-0.5">
+											{story.program} &bull; {story.batch}
+										</p>
+									</div>
+								</div>
+
+								<!-- Rating & Placement Badge Row -->
+								<div class="flex items-center justify-between gap-3 mb-5 border-b border-slate-50 pb-4">
+									<!-- Stars -->
+									<div class="flex gap-0.5">
+										{#each Array(5) as _}
+											<i class="fa-solid fa-star text-amber-400 text-[10px]"></i>
+										{/each}
+									</div>
+									
+									<!-- Placed Badge -->
+									<div
+										class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[9px] font-black uppercase tracking-wider {themeColors[story.theme].badge}"
+									>
+										<i class="fa-solid fa-briefcase text-[10px]"></i>
+										<span>{story.placement}</span>
+									</div>
+								</div>
+
+								<!-- Quote Text -->
+								<p class="text-slate-600 leading-relaxed font-medium text-[13px] md:text-[14.5px] line-clamp-4 relative z-10 italic mb-2">
+									"{story.quote}"
+								</p>
+							</div>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
 <style>
-	/* 🏎️ Infinite Marquee Animation (Reverse for moving RIGHT) */
+	/* 🏎️ Infinite Marquee Animations */
+	@keyframes marquee {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
 	@keyframes marquee-reverse {
 		0% {
 			transform: translateX(-50%);
@@ -169,10 +281,16 @@
 		}
 	}
 
+	.animate-marquee {
+		display: flex;
+		width: max-content;
+		animation: marquee 50s linear infinite;
+	}
+
 	.animate-marquee-reverse {
 		display: flex;
 		width: max-content;
-		animation: marquee-reverse 60s linear infinite;
+		animation: marquee-reverse 50s linear infinite;
 	}
 
 	.hover\:pause:hover {
@@ -210,15 +328,15 @@
 	.animate-shimmer-text {
 		background-size: 200% auto;
 		animation: shimmer-text 3s ease-in-out infinite;
-		font-weight: 700;
+		font-weight: 800;
 		letter-spacing: -0.02em;
 		background-image: linear-gradient(
 			90deg,
-			#fbbf24 0%,
-			#f59e0b 25%,
-			#d97706 50%,
-			#f59e0b 75%,
-			#fbbf24 100%
+			#6366f1 0%,
+			#a855f7 25%,
+			#ec4899 50%,
+			#a855f7 75%,
+			#6366f1 100%
 		);
 	}
 
@@ -227,17 +345,21 @@
 		animation: shimmer-glow 3s ease-in-out infinite;
 		background-image: linear-gradient(
 			90deg,
-			#fbbf24 0%,
-			#f59e0b 25%,
-			#d97706 50%,
-			#f59e0b 75%,
-			#fbbf24 100%
+			#6366f1 0%,
+			#a855f7 25%,
+			#ec4899 50%,
+			#a855f7 75%,
+			#6366f1 100%
 		);
 	}
 
 	@media (max-width: 768px) {
+		.animate-marquee {
+			animation-duration: 30s;
+		}
+
 		.animate-marquee-reverse {
-			animation-duration: 40s;
+			animation-duration: 30s;
 		}
 
 		.animate-shimmer-text {

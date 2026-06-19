@@ -44,7 +44,7 @@
 			image: './Course-highlight/eeenew.png',
 			desc: 'Electrical & Electronics Engineering',
 			duration: '4 Years',
-			seats: '80 Seats',
+			seats: '60 Seats',
 			href: `/department/${encodeURIComponent('Department of EEE')}`,
 			color: 'indigo-500'
 		},
@@ -53,7 +53,7 @@
 			image: '/mechnew.png',
 			desc: 'Mechanical Engineering & Innovation',
 			duration: '4 Years',
-			seats: '80 Seats',
+			seats: '60 Seats',
 			href: `/department/${encodeURIComponent('Department of MECH')}`,
 			color: 'orange-500'
 		}
@@ -303,7 +303,7 @@
 	}
 
 	.gpu-image {
-		transform: translate3d(0,0,0);
+		transform: translate3d(0, 0, 0);
 		backface-visibility: hidden;
 		perspective: 1000px;
 	}

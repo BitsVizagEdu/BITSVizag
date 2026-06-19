@@ -18,6 +18,21 @@
 	let showWelcomeOverlay = false;
 	let welcomeTimer;
 	let welcomeAnimationFrame = 0;
+	let hideSocialRail = false;
+
+	function handleScroll() {
+		if (typeof window === 'undefined') return;
+		const scrollTop = window.scrollY || document.documentElement.scrollTop;
+		const scrollHeight = document.documentElement.scrollHeight;
+		const clientHeight = window.innerHeight;
+		
+		// Hide social rail when within 400px of the footer
+		if (scrollHeight - scrollTop - clientHeight < 400) {
+			hideSocialRail = true;
+		} else {
+			hideSocialRail = false;
+		}
+	}
 
 	function closeWelcome() {
 		showWelcomeOverlay = false;
@@ -57,6 +72,8 @@
 		};
 	});
 </script>
+
+<svelte:window on:scroll={handleScroll} />
 
 <svelte:head>
 	<!-- Font Preconnect for Performance -->
@@ -143,9 +160,9 @@
 		{/if}
 
 		<div
-			class="social-rail flex fixed right-3 top-1/2 -translate-y-1/2 z-[100] transition-opacity duration-300 {$showNavBar
-				? 'opacity-0 pointer-events-none'
-				: 'opacity-100'}"
+			class="social-rail flex fixed right-3 bottom-20 z-[100] transition-all duration-300 {$showNavBar || hideSocialRail
+				? 'opacity-0 pointer-events-none translate-y-4'
+				: 'opacity-100 translate-y-0'}"
 			aria-label="Social links"
 		>
 			<a
@@ -337,7 +354,9 @@
 	@media (max-width: 768px) {
 		:global(.social-rail) {
 			right: 0.5rem !important;
-			top: 60% !important;
+			top: auto !important;
+			bottom: 5.5rem !important;
+			transform: none !important;
 			scale: 0.85;
 		}
 	}

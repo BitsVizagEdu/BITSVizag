@@ -36,7 +36,7 @@
 			icon: 'fa-solid fa-file-circle-check'
 		},
 		{ label: 'Online Grievances', href: '/Online-Grievances', icon: 'fa-solid fa-circle-info' },
-		{ label: 'Contact', href: '/contactus', icon: 'fa-solid fa-address-book' }
+		{ label: 'Contact Us', href: '/contactus', icon: 'fa-solid fa-address-book' }
 	];
 
 	function toggleMobileMenu() {

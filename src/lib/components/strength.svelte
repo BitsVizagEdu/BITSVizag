@@ -47,7 +47,7 @@
 			title: 'Research',
 			colorClass: 'card-research',
 			items: [
-				{ value: '50+', text: 'Publications' },
+				{ value: '20+', text: 'Publications' },
 				{ value: '200+', text: 'Projects' },
 				{ value: '10+', text: 'Patents' }
 			]
