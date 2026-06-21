@@ -172,44 +172,25 @@
 					</div>
 				{/each}
 
-				<!-- QR Card -->
+				<!-- Welcome Note Card -->
 				<div
-					class="col-span-2 flex items-center gap-6 rounded-3xl border border-white/60 bg-white/70 p-6 shadow-xl shadow-emerald-900/5 backdrop-blur-xl transition-all hover:bg-white hover:shadow-2xl"
+					class="col-span-2 flex items-start gap-4 sm:gap-6 rounded-3xl border border-amber-500/20 bg-white/80 p-6 sm:p-8 shadow-xl shadow-amber-900/5 backdrop-blur-xl transition-all hover:bg-white hover:shadow-2xl hover:border-amber-500/30"
 				>
-					<div class="hidden shrink-0 rounded-2xl bg-white p-2.5 shadow-inner sm:block">
-						<div class="h-20 w-20 bg-slate-100 p-2">
-							<!-- Placeholder QR -->
-							<div
-								class="flex h-full w-full items-center justify-center border-2 border-dashed border-slate-300 text-[10px] font-bold text-slate-400"
-							>
-								QR CODE
-							</div>
+					<div class="shrink-0 mt-1 hidden sm:block">
+						<div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 text-amber-500">
+							<i class="fa-solid fa-quote-left text-2xl opacity-80"></i>
 						</div>
 					</div>
-					<div class="space-y-2">
-						<p class="gold-label text-[10px] font-bold tracking-[0.05em] uppercase">
-							Smart Application
+					<div class="space-y-3">
+						<p class="text-[13px] sm:text-[15px] font-semibold leading-relaxed text-slate-700 italic">
+							"Empowering the next generation of engineers with world-class education, innovation, and ethical values to shape a better tomorrow."
 						</p>
-						<h3 class="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
-							Apply Instantly <br />
-							<span class="text-emerald-600 text-lg font-semibold">from Mobile</span>
-						</h3>
-						<div class="flex items-center gap-2 text-[10px] font-semibold text-slate-500">
-							<!-- Premium iPhone Icon -->
-							<svg
-								class="h-4 w-4 text-slate-400"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<rect x="5" y="2" width="14" height="20" rx="3" ry="3" />
-								<path d="M12 18h.01" />
-								<path d="M11 5h2" />
-							</svg>
-							Scan to Start Application
+						<div class="flex items-center gap-3 pt-2">
+							<div class="h-[2px] w-6 bg-amber-500 rounded-full"></div>
+							<div>
+								<p class="text-[11px] sm:text-xs font-black text-slate-900 tracking-wider uppercase">Dr. M. Rajan Babu</p>
+								<p class="text-[9px] sm:text-[10px] font-bold text-slate-500 tracking-widest uppercase mt-0.5">Principal, BITS Vizag</p>
+							</div>
 						</div>
 					</div>
 				</div>

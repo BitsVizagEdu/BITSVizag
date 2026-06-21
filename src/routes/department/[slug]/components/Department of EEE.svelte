@@ -430,6 +430,7 @@
 	function scrollToSection(id) {
 		const el = document.getElementById(id);
 		if (el) {
+			activeNav = id;
 			window.scrollTo({
 				top: el.offsetTop - 100,
 				behavior: 'smooth'
@@ -583,7 +584,6 @@
 					</div>
 				</div>
 			</section>
-		</main>
 
 		<!-- Vision & Mission Section -->
 		<section
@@ -1118,6 +1118,7 @@
 				</div>
 			</div>
 		</section>
+		</main>
 	</div>
 </div>
 

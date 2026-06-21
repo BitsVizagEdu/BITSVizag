@@ -204,7 +204,7 @@
 									onClick={closeMenus}
 								/>
 								<MegaMenuItem
-									href="/facilities/Accomidation"
+									href="/facilities/Accommdation"
 									label="Accommodation"
 									icon="fa-solid fa-bed"
 									iconColorClass="text-slate-700"
@@ -340,17 +340,6 @@
 									</div>
 								</div>
 								<div class="grid w-full grid-cols-1 gap-2">
-									<!-- Explicit stable link for Code of Conduct to avoid routing race issues -->
-									<a
-										href="/governance/code-of-conduct"
-										class="nav-dropdown-item group"
-										on:click={closeMenus}
-									>
-										<div class="nav-dropdown-icon-box">
-											<i class="fa-solid fa-book-open fa-fw" aria-hidden="true" />
-										</div>
-										<span class="nav-dropdown-label">Code of Conduct</span>
-									</a>
 									{#each documentLinks.governance as link}
 										{#if link.href !== '/governance/Code-of-Conduct'}
 											<MegaMenuItem

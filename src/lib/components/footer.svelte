@@ -3,12 +3,11 @@
 	import { fade } from 'svelte/transition';
 
 	const socialLinks = [
-		{ name: 'facebook-f', href: 'https://www.facebook.com/BITSVizagOfficial/' },
 		{ name: 'instagram', href: 'https://www.instagram.com/bits_vizag_official/' },
 		{ name: 'whatsapp', href: 'https://wa.me/918008844699' },
 		{ name: 'linkedin-in', href: 'https://www.linkedin.com/company/bits-vizag/' },
 		{ name: 'youtube', href: 'https://www.youtube.com/@bitsmediacenter8449/videos' },
-		{ name: 'x-twitter', href: '#' }
+		{ name: 'x-twitter', href: 'https://x.com/bits_vizag' }
 	];
 
 	const quickLinks = [
@@ -21,11 +20,15 @@
 	];
 
 	const exploreLinks = [
-		{ name: 'EAPCET 2026 ↗', href: 'https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx', external: true },
+		{
+			name: 'EAPCET 2026 ↗',
+			href: 'https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx',
+			external: true
+		},
 		{ name: 'Facilities', href: '/facilities/Knowledge-Resource-Center' },
 		{ name: 'Faculty', href: '/faculty' },
 		{ name: 'Governance', href: '/governance/mandatory-disclosure' },
-		{ name: 'Research', href: '/research/publications' },
+		{ name: 'Research', href: '/governance/best-practices' },
 		{ name: 'IQAC', href: '/governance/IQAC' }
 	];
 
@@ -141,8 +144,10 @@
 							<li>
 								<a
 									href={link.href}
-									{...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-									class="text-slate-400 hover:text-amber-500 text-[11px] md:text-[13px] flex items-center gap-2 transition-all {link.external ? 'text-amber-400/80 hover:text-amber-400' : ''}"
+									{...link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+									class="text-slate-400 hover:text-amber-500 text-[11px] md:text-[13px] flex items-center gap-2 transition-all {link.external
+										? 'text-amber-400/80 hover:text-amber-400'
+										: ''}"
 								>
 									<i class="fa-solid fa-chevron-right text-[8px] text-amber-500/40"></i>
 									{link.name}
@@ -178,44 +183,37 @@
 			class="mt-12 pt-8 border-t border-white/5 flex flex-col items-center justify-center gap-6 footer-bottom-bar pb-4"
 		>
 			<!-- Premium Visitor Counter & Live Status -->
-			<div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl">
+			<div
+				class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl"
+			>
 				<!-- Live Users Indicator -->
 				<div class="flex items-center gap-2">
 					<span class="relative flex h-2.5 w-2.5">
-						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+						<span
+							class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+						></span>
 						<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-					</span>
-					<span class="text-[11px] md:text-xs text-slate-300 font-semibold tracking-wide">
-						Live Site Viewers: <span class="text-emerald-400 font-black font-mono ml-1">{liveUsers}</span>
 					</span>
 				</div>
 
 				<div class="hidden sm:block h-4 w-[1px] bg-white/10"></div>
 
 				<!-- Total Page Views -->
-				<div class="flex items-center gap-3">
-					<span class="text-[11px] md:text-xs text-slate-300 font-semibold tracking-wide">Your Visits:</span>
-					<div class="flex items-center gap-1 font-mono">
-						{#each formattedCount.split('') as digit}
-							<span class="flex items-center justify-center w-5.5 h-7.5 rounded bg-[#050816] border border-white/10 text-amber-500 font-black text-sm shadow-inner shadow-amber-500/10">
-								{digit}
-							</span>
-						{/each}
-					</div>
-				</div>
-			</div>
 
-			<div class="text-center space-y-2">
-				<p class="text-slate-500 text-[12px] md:text-[13px] tracking-wide">
-					© 2026 <span class="text-white font-bold">bitsvizag.edu.in</span>. All Rights Reserved.
-				</p>
-			</div>
-			<div class="text-center">
-				<p class="uppercase tracking-[0.2em] text-[10px] md:text-[11px] font-black text-slate-400">
-					DEVELOPED BY <span class="text-amber-500 border-b border-amber-500/30 pb-0.5"
-						>BITS STUDENTS</span
+				<div class="text-center space-y-2">
+					<p class="text-slate-500 text-[12px] md:text-[13px] tracking-wide">
+						© 2026 <span class="text-white font-bold">bitsvizag.edu.in</span>. All Rights Reserved.
+					</p>
+				</div>
+				<div class="text-center">
+					<p
+						class="uppercase tracking-[0.2em] text-[10px] md:text-[11px] font-black text-slate-400"
 					>
-				</p>
+						DEVELOPED BY <span class="text-amber-500 border-b border-amber-500/30 pb-0.5"
+							>BITS STUDENTS</span
+						>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>

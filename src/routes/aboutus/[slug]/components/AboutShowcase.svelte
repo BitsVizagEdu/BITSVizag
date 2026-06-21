@@ -40,10 +40,7 @@
 			<!-- Image Column - Right side aligned, width 44%, height 94%, vertically centered on desktop -->
 			<div class="showcase-image-wrap z-20 p-2 lg:p-0">
 				<div class="image-3d-wrap">
-					<!-- Colored aura shadow under the 3D card -->
-					<div
-						class="absolute -inset-1.5 bg-gradient-to-tr from-[#00bcd4]/30 to-[#2563eb]/25 rounded-[26px] blur-md opacity-40"
-					></div>
+
 
 					<div class="image-box relative w-full h-full" class:no-motion={disableImageMotion}>
 						<img
@@ -184,12 +181,16 @@
 		transform: rotateY(-6deg) rotateX(0.5deg) rotateZ(0.5deg) scale(1.05);
 	}
 
+	.image-box {
+		border-radius: 26px;
+		overflow: hidden;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+	}
+
 	.image-box img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: 26px;
-		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 	}
 
 	/* Desktop layout absolute positioning styles with rotated layout & neatly increased image size */

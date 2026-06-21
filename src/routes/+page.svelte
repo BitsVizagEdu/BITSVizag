@@ -49,18 +49,18 @@
 	}
 
 	onMount(() => {
-	const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	const saveData = Boolean((/** @type {any} */ (navigator)).connection?.saveData);
-	shouldUseVideo = !prefersReducedMotion && !saveData;
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const saveData = Boolean(/** @type {any} */ (navigator).connection?.saveData);
+		shouldUseVideo = !prefersReducedMotion && !saveData;
 
-	if (shouldUseVideo && heroVideo) {
-		try {
-			heroVideo.play?.();
-		} catch (e) {}
-	}
+		if (shouldUseVideo && heroVideo) {
+			try {
+				heroVideo.play?.();
+			} catch (e) {}
+		}
 
-	handleTyping();
-});
+		handleTyping();
+	});
 
 	onDestroy(() => {
 		if (typingTimer) {
@@ -109,30 +109,30 @@
 {#if !$showNavBar}
 	<Notification />
 	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#050816]">
-			{#if shouldUseVideo}
-				<video
-					bind:this={heroVideo}
-					playsinline
-					autoplay
-					muted
-					loop
-					preload="metadata"
-					poster="/baba.png"
-					class="absolute inset-0 h-full w-full object-cover z-0"
-				>
-					<source src="/baba.webm" type="video/webm" />
-					<source src="/baba.mp4" type="video/mp4" />
-				</video>
-			{:else}
-				<img
-					src="/bitsvizag.png"
-					alt="BITS Vizag campus"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-					class="absolute inset-0 h-full w-full object-cover z-0"
-				/>
-			{/if}
+		{#if shouldUseVideo}
+			<video
+				bind:this={heroVideo}
+				playsinline
+				autoplay
+				muted
+				loop
+				preload="metadata"
+				poster="/baba.png"
+				class="absolute inset-0 h-full w-full object-cover z-0"
+			>
+				<source src="/baba.webm" type="video/webm" />
+				<source src="/baba.mp4" type="video/mp4" />
+			</video>
+		{:else}
+			<img
+				src="/bitsvizag.png"
+				alt="BITS Vizag campus"
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+				class="absolute inset-0 h-full w-full object-cover z-0"
+			/>
+		{/if}
 
 		<div class="absolute inset-0 z-[1] hero-overlay"></div>
 
@@ -397,7 +397,7 @@
 		background:
 			radial-gradient(circle at 10% 20%, rgba(26, 20, 67, 0.8) 0%, transparent 50%),
 			radial-gradient(circle at 90% 80%, rgba(124, 77, 255, 0.2) 0%, transparent 50%),
-			linear-gradient(to bottom, #050816 0%, rgba(5, 8, 22, 0.8) 50%, #050816 100%);
+			linear-gradient(to bottom, #050816 0%, transparent 20%, transparent 80%, #050816 100%);
 		position: relative;
 	}
 
