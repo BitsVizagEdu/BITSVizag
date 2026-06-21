@@ -157,7 +157,7 @@
 			imageAlt: 'Portrait of Dr. K. Srilakshmi',
 			personName: 'Dr. K. Srilakshmi',
 			personRole: 'Secretary & Correspondent',
-			imageFit: 'contain'
+			imageFit: 'cover'
 		},
 		'Message-from-Principal': {
 			eyebrow: 'Leadership Message',

@@ -6,97 +6,218 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		// Hero fade out and scale down on scroll
-		gsap.to('.hero-content-anim', {
-			scrollTrigger: {
-				trigger: '.hero-wrap',
-				start: 'top top',
-				end: 'bottom center',
-				scrub: 1
-			},
-			opacity: 0,
-			y: -50,
-			scale: 0.95,
-			ease: 'none'
-		});
-
-		// Parallax shift for the transition layer
-		gsap.to('.transition-layer-parallax', {
-			scrollTrigger: {
-				trigger: '.transition-bridge',
-				start: 'top bottom',
-				end: 'bottom top',
-				scrub: 1
-			},
-			yPercent: 20,
-			ease: 'none'
-		});
-
-		// Radial glow animation
-		gsap.to('.radial-glow-anim', {
-			opacity: 0.6,
-			scale: 1.2,
-			duration: 3,
-			repeat: -1,
-			yoyo: true,
-			ease: 'sine.inOut'
-		});
+		// One-time trigger only — no scrub, no per-frame scroll work
+		gsap.fromTo(
+			'.transition-line',
+			{ scaleX: 0 },
+			{
+				scaleX: 1,
+				duration: 1,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: '.transition-bridge',
+					start: 'top 85%',
+					once: true
+				}
+			}
+		);
 	});
 </script>
 
-<div
-	class="transition-bridge relative w-full h-32 md:h-48 -mt-16 md:-mt-24 z-20 overflow-hidden pointer-events-none"
->
-	<!-- Glassmorphism Multi-stop Gradient Bridge
-	<div
-		class="absolute inset-0 bg-gradient-to-b from-[#14204a] via-[#14204a]/80 via-white/5 to-[#ECFDF5] backdrop-blur-[20px] transition-layer-parallax"
-	></div> -->
+<div class="transition-bridge">
+	<div class="transition-glow glow-navy"></div>
+	<div class="transition-glow glow-purple"></div>
+	<div class="transition-glow glow-pink"></div>
+	<div class="transition-glow glow-gold"></div>
 
-	<!-- Noise/Grain Texture Layer -->
-	<div class="absolute inset-0 opacity-[0.03] mix-blend-overlay noise-bg"></div>
+	<div class="grid-overlay"></div>
 
-	<!-- Premium Soft Wave Divider -->
-	<div class="absolute bottom-0 left-0 w-full leading-[0]">
-		<svg
-			class="relative block w-full h-12 md:h-20"
-			viewBox="0 0 1200 120"
-			preserveAspectRatio="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-				fill="#14204a"
-				opacity=".2"
-			></path>
-			<path
-				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-				fill="#14204a"
-				opacity=".5"
-			></path>
-			<path
-				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-				fill="#14204a"
-			></path>
-		</svg>
+	<div class="line-wrap">
+		<span class="dot"></span>
+		<span class="transition-line"></span>
+		<span class="dot"></span>
 	</div>
 
-	<!-- Soft Radial Glow Bloom -->
-	<div
-		class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-tr from-amber-400/20 to-emerald-400/20 rounded-full blur-[80px] radial-glow-anim opacity-40"
-	></div>
+	<div class="transition-wave">
+		<svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="waveFill" x1="0" y1="0" x2="1" y2="0">
+					<stop offset="0%" stop-color="#1e1b4b" />
+					<stop offset="35%" stop-color="#7c3aed" />
+					<stop offset="70%" stop-color="#ec4899" />
+					<stop offset="100%" stop-color="#f5b324" />
+				</linearGradient>
+			</defs>
+			<path
+				fill="url(#waveFill)"
+				fill-opacity="0.95"
+				d="M0,40L80,36C160,32,320,26,480,29C640,32,800,46,960,47C1120,48,1280,38,1360,33L1440,28L1440,70L1360,70C1280,70,1120,70,960,70C800,70,640,70,480,70C320,70,160,70,80,70L0,70Z"
+			/>
+		</svg>
+	</div>
 </div>
 
 <style>
-	.noise-bg {
-		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-	}
-
 	.transition-bridge {
-		box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.5);
+		position: relative;
+		width: 100%;
+		height: 60px;
+		overflow: hidden;
+		pointer-events: none;
+		contain: layout style paint;
+		background: linear-gradient(
+			to bottom,
+			rgba(10, 12, 30, 0) 0%,
+			rgba(10, 12, 30, 0.5) 40%,
+			#ffffff 100%
+		);
 	}
 
-	.radial-glow-anim {
-		will-change: transform, opacity;
+	/* Ambient float handled by lightweight CSS keyframes,
+	   NOT scroll-linked GSAP — this is the fix for the jank */
+	.transition-glow {
+		position: absolute;
+		border-radius: 9999px;
+		will-change: transform;
 		transform: translateZ(0);
+		animation: drift 14s ease-in-out infinite;
+	}
+
+	.glow-navy {
+		width: 380px;
+		height: 120px;
+		left: 50%;
+		top: -40px;
+		margin-left: -190px;
+		background: rgba(30, 27, 75, 0.35);
+		filter: blur(75px);
+		animation-delay: 0s;
+	}
+
+	.glow-purple {
+		width: 240px;
+		height: 95px;
+		right: 18%;
+		top: -15px;
+		background: rgba(124, 58, 237, 0.2);
+		filter: blur(65px);
+		animation-delay: 2s;
+	}
+
+	.glow-pink {
+		width: 220px;
+		height: 90px;
+		left: 8%;
+		top: -15px;
+		background: rgba(236, 72, 153, 0.16);
+		filter: blur(60px);
+		animation-delay: 4s;
+	}
+
+	.glow-gold {
+		width: 160px;
+		height: 70px;
+		right: -20px;
+		top: -5px;
+		background: rgba(245, 179, 36, 0.12);
+		filter: blur(55px);
+		animation-delay: 6s;
+	}
+
+	@keyframes drift {
+		0%,
+		100% {
+			transform: translate3d(0, 0, 0);
+		}
+		50% {
+			transform: translate3d(0, 8px, 0);
+		}
+	}
+
+	.grid-overlay {
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+		background-size: 28px 28px;
+		opacity: 0.35;
+		mask-image: radial-gradient(ellipse 70% 100% at 50% 0%, black 35%, transparent 80%);
+	}
+
+	.line-wrap {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		z-index: 2;
+	}
+
+	.dot {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #7c3aed, #f5b324);
+		box-shadow: 0 0 8px rgba(236, 72, 153, 0.8);
+	}
+
+	.transition-line {
+		width: 44px;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.7), transparent);
+		transform-origin: center;
+	}
+
+	.transition-wave {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		line-height: 0;
+		z-index: 1;
+	}
+
+	.transition-wave svg {
+		display: block;
+		width: 100%;
+		height: 60px;
+	}
+
+	@media (max-width: 768px) {
+		.transition-bridge {
+			height: 42px;
+		}
+		.transition-wave svg {
+			height: 42px;
+		}
+		.glow-navy {
+			width: 220px;
+			height: 76px;
+			margin-left: -110px;
+		}
+		.glow-purple,
+		.glow-pink {
+			width: 150px;
+			height: 60px;
+		}
+		.glow-gold {
+			width: 100px;
+			height: 48px;
+		}
+		.line-wrap {
+			top: 6px;
+		}
+		.transition-line {
+			width: 32px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.transition-glow {
+			animation: none;
+		}
 	}
 </style>

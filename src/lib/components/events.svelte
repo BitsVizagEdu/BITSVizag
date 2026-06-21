@@ -362,7 +362,12 @@
 
 					<!-- Content Area -->
 					<div class="flex-1 pt-0.5">
-						<a href={event.href} target="_blank" rel="noopener noreferrer" class="block group/title">
+						<a
+							href={event.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="block group/title"
+						>
 							<h3
 								class="text-lg font-semibold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight mb-2"
 							>
@@ -455,17 +460,6 @@
 	</div>
 
 	<!-- 🧠 5. EXPLORE MORE -->
-	{#if limit < events.length}
-		<div class="mt-20 flex justify-center pt-12 border-t border-slate-50">
-			<button
-				on:click={showMore}
-				class="group flex items-center gap-4 bg-slate-950 text-white rounded-xl px-10 py-5 font-bold text-xs uppercase tracking-[0.2em] hover:bg-amber-600/80 shadow-xl active:scale-95"
-			>
-				Explore More Highlights
-				<i class="fa-solid fa-chevron-down group-hover:translate-y-0.5 transition-transform"></i>
-			</button>
-		</div>
-	{/if}
 </section>
 
 <style>
@@ -511,7 +505,7 @@
 	}
 
 	.gpu-card {
-		transform: translate3d(0,0,0);
+		transform: translate3d(0, 0, 0);
 		backface-visibility: hidden;
 	}
 
