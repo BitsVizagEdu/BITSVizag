@@ -37,17 +37,10 @@
 				</div>
 
 				<div in:fly={{ y: 20, duration: 600, delay: 600 }}>
-					{#if actionText}
-						<a href={actionLink} class="btn-action">
-							{actionText}
-							<i class="fa-solid fa-arrow-right-long"></i>
-						</a>
-					{:else}
-						<div class="status-indicator">
-							<span class="dot"></span>
-							Available for Students
-						</div>
-					{/if}
+					<div class="status-indicator">
+						<span class="dot"></span>
+						{actionText || 'Available for Students'}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -185,27 +178,6 @@
 		opacity: 0.85;
 		font-weight: 400;
 		max-width: 35ch;
-	}
-
-	.btn-action {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		background: #ffffff;
-		color: #1e293b;
-		padding: 0.75rem 1.5rem;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 0.85rem;
-		width: fit-content;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-	}
-
-	.btn-action:hover {
-		transform: translateX(4px);
-		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 	}
 
 	.status-indicator {
@@ -455,7 +427,6 @@
 			max-width: 100%;
 			margin: 0 auto;
 		}
-		.btn-action,
 		.status-indicator {
 			margin: 0 auto;
 		}

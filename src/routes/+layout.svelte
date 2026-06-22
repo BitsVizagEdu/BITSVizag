@@ -43,7 +43,7 @@
 	onMount(() => {
 		// Only display welcome overlay if the user hasn't visited in this browser session
 		const hasSeen = sessionStorage.getItem('bits_has_seen_welcome');
-		if (!hasSeen) {
+		if (!hasSeen && window.location.pathname === '/') {
 			welcomeTimer = setTimeout(() => {
 				showWelcomeOverlay = true;
 			}, 1500);
