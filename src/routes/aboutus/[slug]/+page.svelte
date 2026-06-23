@@ -192,7 +192,7 @@
 	title={meta.title}
 	description={meta.description}
 	url={`https://bitsvizag.com/aboutus/${currentSlug}`}
-	imageUrl="/bits.jpg"
+	imageUrl="/bits.png"
 	siteName="BITS Vizag"
 	{structuredData}
 />

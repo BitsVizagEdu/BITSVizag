@@ -70,7 +70,7 @@
 	title="Courses Offered - BITS Vizag"
 	description="Explore the comprehensive range of academic programs offered at BITS Vizag. Join us to shape your future."
 	url="https://bitsvizag.com/courses/Offered-Courses"
-	imageUrl="https://bitsvizag.com/bits.jpg"
+	imageUrl="/bits.png"
 	siteName="BITS Vizag"
 />
 

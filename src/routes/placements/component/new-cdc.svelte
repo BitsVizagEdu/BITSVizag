@@ -118,8 +118,7 @@
 	const logos = [
 		...Array.from({ length: 40 }, (_, i) => `/company/image (${i + 1}).png`),
 		'/company/image(41).jpg',
-		'/company/image(42).jpg',
-		'/company/[CITYPNG.COM]Google High Resolution Logo Icon G Suite - 4545x2054.png'
+		'/company/image(42).jpg'
 	];
 	const additionalCompanyLogos = logos;
 
