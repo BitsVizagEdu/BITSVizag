@@ -443,7 +443,7 @@
 
 	/* Layout */
 	.layout-neat {
-		max-width: 900px;
+		max-width: 1300px;
 		margin: 0 auto;
 		padding: 60px 24px;
 	}

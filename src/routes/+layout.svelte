@@ -37,12 +37,12 @@
 
 	function closeWelcome() {
 		showWelcomeOverlay = false;
-		sessionStorage.setItem('bits_has_seen_welcome', 'true');
+		localStorage.setItem('bits_has_seen_welcome', 'true');
 	}
 
 	onMount(() => {
 		// Only display welcome overlay if the user hasn't visited in this browser session
-		const hasSeen = sessionStorage.getItem('bits_has_seen_welcome');
+		const hasSeen = localStorage.getItem('bits_has_seen_welcome');
 		if (!hasSeen && window.location.pathname === '/') {
 			welcomeTimer = setTimeout(() => {
 				showWelcomeOverlay = true;

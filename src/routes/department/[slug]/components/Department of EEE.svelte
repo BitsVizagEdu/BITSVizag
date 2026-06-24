@@ -1238,7 +1238,7 @@
 
 	/* Main Layout */
 	.main-content-layout {
-		max-width: 100%;
+		max-width: 1300px;
 		margin: -60px auto 0;
 		padding: 0 24px 100px;
 		display: grid;
