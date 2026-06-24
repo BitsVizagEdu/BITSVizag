@@ -1242,7 +1242,7 @@
 
 	/* Main Layout */
 	.main-content-layout {
-		max-width: 1440px;
+		max-width: 1300px;
 		margin: -60px auto 0;
 		padding: 0 40px 100px;
 		display: grid;

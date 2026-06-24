@@ -1,18 +1,19 @@
 <script>
-	import Events from '$lib/components/events.svelte';
-	import Strength from '$lib/components/strength.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import HighlightsSlider from '$lib/components/HighlightsSlider.svelte';
-	import Gallery from '$lib/components/gallery.svelte';
-	import Placement from '$lib/components/placement.svelte';
 	import { showNavBar } from '$lib/stores/store.js';
 
 	import Notification from '$lib/components/notification.svelte';
 	import SectionTransition from '$lib/components/SectionTransition.svelte';
-	import CourseHighlight from '$lib/components/CourseHighlight.svelte';
-	import StudentStories from '$lib/components/StudentStories.svelte';
 	import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 	import { onDestroy, onMount } from 'svelte';
+
+	let EventsComp = null;
+	let StrengthComp = null;
+	let GalleryComp = null;
+	let PlacementComp = null;
+	let CourseHighlightComp = null;
+	let StudentStoriesComp = null;
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
 	let displayText = '';
@@ -60,6 +61,14 @@
 		}
 
 		handleTyping();
+
+		// Dynamic imports for below-the-fold components to speed up initial load
+		import('$lib/components/events.svelte').then(m => EventsComp = m.default);
+		import('$lib/components/strength.svelte').then(m => StrengthComp = m.default);
+		import('$lib/components/gallery.svelte').then(m => GalleryComp = m.default);
+		import('$lib/components/placement.svelte').then(m => PlacementComp = m.default);
+		import('$lib/components/CourseHighlight.svelte').then(m => CourseHighlightComp = m.default);
+		import('$lib/components/StudentStories.svelte').then(m => StudentStoriesComp = m.default);
 	});
 
 	onDestroy(() => {
@@ -361,27 +370,39 @@
 
 	<div class="bg-white pb-20">
 		<div class="content-visibility-auto">
-			<Gallery />
+			{#if GalleryComp}
+				<svelte:component this={GalleryComp} />
+			{/if}
 		</div>
 
 		<div class="content-visibility-auto mt-12">
-			<Events />
+			{#if EventsComp}
+				<svelte:component this={EventsComp} />
+			{/if}
 		</div>
 
 		<div class="content-visibility-auto mt-20">
-			<CourseHighlight />
+			{#if CourseHighlightComp}
+				<svelte:component this={CourseHighlightComp} />
+			{/if}
 		</div>
 	</div>
 	<div class="content-visibility-auto">
-		<Strength />
+		{#if StrengthComp}
+			<svelte:component this={StrengthComp} />
+		{/if}
 	</div>
 
 	<div class="content-visibility-auto">
-		<Placement />
+		{#if PlacementComp}
+			<svelte:component this={PlacementComp} />
+		{/if}
 	</div>
 
 	<div class="content-visibility-auto">
-		<StudentStories />
+		{#if StudentStoriesComp}
+			<svelte:component this={StudentStoriesComp} />
+		{/if}
 	</div>
 
 	<!-- <a
