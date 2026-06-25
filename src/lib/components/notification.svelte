@@ -88,11 +88,11 @@
 	.marquee-container {
 		width: 100%;
 		overflow: hidden;
-		background: rgba(0, 0, 0, 0.9);
+		background: rgba(0, 0, 0, 0.95);
 		backdrop-filter: blur(8px);
-		border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+		border-bottom: 1px solid rgba(251, 191, 36, 0.25);
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-		padding: 8px 0;
+		padding: 10px 0;
 		position: relative;
 		z-index: 40;
 	}
@@ -132,8 +132,8 @@
 	}
 
 	.scholarship-badge {
-		background: #1d4ed8;
-		color: #ffffff;
+		background: #fbbf24;
+		color: #050816;
 		padding: 4px 12px;
 		border-radius: 4px;
 		font-size: 10px;
@@ -146,29 +146,17 @@
 
 	.new-badge {
 		position: relative;
-		background: linear-gradient(
-			45deg,
-			#fbbf24 0%,
-			#f59e0b 25%,
-			#ef4444 50%,
-			#f59e0b 75%,
-			#fbbf24 100%
-		);
-		background-size: 200% auto;
-		color: #ffffff;
+		background: rgba(251, 191, 36, 0.15);
+		border: 1px solid #fbbf24;
+		color: #fbbf24;
 		padding: 2px 9px;
 		border-radius: 4px;
 		font-size: 10px;
 		font-weight: 900;
 		margin-right: 8px;
 		letter-spacing: 0.08em;
-		box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
 		flex-shrink: 0;
 		overflow: hidden;
-		animation:
-			gradientMove 2s linear infinite,
-			badgePulse 2s ease-in-out infinite;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 	}
 
 	.new-badge::before {

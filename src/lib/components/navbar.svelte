@@ -40,7 +40,7 @@
 				<span>More Details</span>
 			</a>
 
-			<a href="/alumini-data" class="contact-item dropdown" aria-label="Global Alumni Network">
+			<a href="/alumini-data" class="contact-item dropdown" aria-label="Alumni">
 				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 					<circle cx="12" cy="12" r="10" />
 					<line x1="2" y1="12" x2="22" y2="12" />
@@ -48,7 +48,7 @@
 						d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
 					/>
 				</svg>
-				<span>Global Alumni Network</span>
+				<span>Alumni</span>
 				<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
 					<polyline points="6 9 12 15 18 9" />
 				</svg>
@@ -478,9 +478,9 @@
 		color: #080e1f;
 		background: #fbbf24;
 		border: 1px solid #fbbf24;
-		padding: 0.5rem 1.65rem;
-		border-radius: 999px;
-		font-size: 0.72rem;
+		padding: 0.55rem 1.3rem;
+		border-radius: 2px;
+		font-size: 0.8rem;
 		font-weight: 800;
 		letter-spacing: 0.04em;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

@@ -63,12 +63,12 @@
 		handleTyping();
 
 		// Dynamic imports for below-the-fold components to speed up initial load
-		import('$lib/components/events.svelte').then(m => EventsComp = m.default);
-		import('$lib/components/strength.svelte').then(m => StrengthComp = m.default);
-		import('$lib/components/gallery.svelte').then(m => GalleryComp = m.default);
-		import('$lib/components/placement.svelte').then(m => PlacementComp = m.default);
-		import('$lib/components/CourseHighlight.svelte').then(m => CourseHighlightComp = m.default);
-		import('$lib/components/StudentStories.svelte').then(m => StudentStoriesComp = m.default);
+		import('$lib/components/events.svelte').then((m) => (EventsComp = m.default));
+		import('$lib/components/strength.svelte').then((m) => (StrengthComp = m.default));
+		import('$lib/components/gallery.svelte').then((m) => (GalleryComp = m.default));
+		import('$lib/components/placement.svelte').then((m) => (PlacementComp = m.default));
+		import('$lib/components/CourseHighlight.svelte').then((m) => (CourseHighlightComp = m.default));
+		import('$lib/components/StudentStories.svelte').then((m) => (StudentStoriesComp = m.default));
 	});
 
 	onDestroy(() => {
@@ -114,219 +114,102 @@
 
 <svelte:head>
 	<title>Home</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&family=Lobster&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 {#if !$showNavBar}
 	<Notification />
-	<section class="hero-wrap relative min-h-[78vh] md:min-h-[88vh] overflow-hidden bg-[#050816]">
-		{#if shouldUseVideo}
-			<video
-				bind:this={heroVideo}
-				playsinline
-				autoplay
-				muted
-				loop
-				preload="metadata"
-				poster="/baba.png"
-				class="absolute inset-0 h-full w-full object-cover z-0"
-			>
-				<source src="/baba.webm" type="video/webm" />
-				<source src="/baba.mp4" type="video/mp4" />
-			</video>
-		{:else}
-			<img
-				src="/bitsvizag.png"
-				alt="BITS Vizag campus"
-				loading="eager"
-				decoding="async"
-				fetchpriority="high"
-				class="absolute inset-0 h-full w-full object-cover z-0"
-			/>
-		{/if}
+	<section
+		class="hero-wrap relative min-h-[92vh] md:min-h-screen overflow-hidden bg-[#050816] flex items-center justify-center"
+	>
+		<!-- Background Image occupying full Hero section -->
+		<img
+			src="/bitsvizag.png"
+			alt="BITS Vizag campus"
+			loading="eager"
+			decoding="async"
+			fetchpriority="high"
+			class="absolute inset-0 h-full w-full object-cover z-0 hero-bg-img"
+		/>
 
-		<div class="absolute inset-0 z-[1] hero-overlay"></div>
+		<!-- High quality gradient overlay for contrast and readability -->
+		<div class="absolute inset-0 z-[1] hero-gradient-overlay"></div>
 
+		<!-- Centered content block -->
 		<div
-			class="hero-content-anim relative z-[2] mx-auto flex min-h-[78vh] md:min-h-[88vh] w-full max-w-screen-sm md:max-w-7xl items-start px-4 py-10 md:px-12 md:py-20"
+			class="hero-content-anim relative z-[2] mx-auto flex w-full max-w-7xl items-center justify-center px-6 pt-16 pb-24 md:pt-20 md:pb-28"
 		>
 			<div
-				class="flex flex-col gap-5 w-full lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-12"
+				class="flex flex-col items-center text-center w-full max-w-4xl gap-6 md:gap-8 -translate-y-12 md:-translate-y-24"
 			>
-				<div
-					class="hero-copy text-white text-center items-center flex flex-col w-full md:text-left md:items-start"
+				<!-- Intro phrase above title -->
+				<p
+					class="text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-[0.3em] text-[#fbbf24] animate-fade-up-reveal mt-2 translate-x-2 sm:translate-x-4 md:translate-x-6"
 				>
-					<div class="hero-badges-mobile md:hidden mb-8 w-full flex flex-col items-center gap-4">
-						<!-- Combined Badge Row -->
-						<div
-							class="inline-flex items-stretch rounded-lg border border-[#fbbf24] overflow-hidden shadow-lg shadow-amber-500/10"
-						>
-							<!-- UGC Autonomous -->
-							<div
-								class="px-3 py-2 bg-[#fbbf24]/10 flex items-center gap-2 border-r border-[#fbbf24]/30"
-							>
-								<i class="fa-solid fa-sun text-[#fbbf24] text-[11px]"></i>
-								<span class="text-[#fbbf24] text-[10px] font-black uppercase tracking-wider"
-									>UGC Autonomous</span
-								>
-							</div>
-							<!-- College Code -->
-							<div class="px-3 py-2 bg-white/5 flex items-center gap-2">
-								<i class="fa-solid fa-building-columns text-white/70 text-[11px]"></i>
-								<span class="text-white/90 text-[10px] font-black uppercase tracking-wider"
-									>Code: <span class="text-[#fbbf24]">BABA</span></span
-								>
-							</div>
-						</div>
+					Start your journey with
+				</p>
 
-						<div class="text-[11px] font-black tracking-[0.2em] text-white/60 uppercase">
-							EST. 2008 • VIZAG, AP
-						</div>
-					</div>
+				<!-- Main Title: BITS VIZAG (Satoshi Sans-Serif Style, shifted upper) -->
+				<h1
+					class="hero-main-title text-6xl sm:text-8xl md:text-9xl font-bold text-white leading-none drop-shadow-lg translate-x-2 sm:translate-x-4 md:translate-x-6"
+				>
+					Bits Vizag
+				</h1>
 
-					<!-- Desktop-only Badges (STRICTLY HIDDEN ON MOBILE) -->
-					<!-- <div class="hero-badges hidden lg:flex items-center gap-4 mb-8">
-						<div
-							class="badge-pill est uppercase tracking-widest text-[10px] font-black border border-[#fbbf24] px-4 py-1 rounded-full text-[#fbbf24] bg-[#fbbf24]/5"
-						>
-							Established in 2008
-						</div>
-						<div
-							class="badge-pill code uppercase tracking-widest text-[10px] font-black text-white/80"
-						>
-							College Code: <span class="text-[#fbbf24]">BABA</span>
-						</div>
-					</div> -->
-
-					<h1
-						class="hero-title text-5xl md:text-7xl lg:text-7xl mb-6 font-semibold tracking-tighter leading-[0.85] text-center md:text-left"
+				<!-- Subtitle (typing and premium tagline) -->
+				<p
+					class="text-base md:text-xl text-[#f8fafc] max-w-3xl leading-relaxed font-bold drop-shadow hero-subtitle animate-fade-up-reveal mt-3"
+				>
+					Empowering tomorrow's <span class="typing-text-accent">{displayText}</span><span
+						class="custom-cursor"
+					></span>
+					<span
+						class="block mt-4 text-white/90 text-sm md:text-base font-semibold tracking-wide max-w-2xl mx-auto leading-relaxed"
 					>
-						<span class="block">Shaping Future</span>
-						<span class="relative inline-block">
-							<span class="gradient-text">Engineers</span>
-							<!-- Creative Neon Stroke - Now under Engineers -->
-							<svg
-								class="absolute -bottom-4 left-0 w-full h-8 opacity-80 -z-10"
-								viewBox="0 0 400 30"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M5 25C100 5 300 5 395 25"
-									stroke="#7C4DFF"
-									stroke-width="4"
-									stroke-linecap="round"
-									class="neon-path"
-								/>
-							</svg>
-						</span>
-					</h1>
+						A legacy of engineering excellence, NAAC 'A' accreditation, and elite industry
+						partnerships fostering next-gen careers.
+					</span>
+				</p>
 
-					<p
-						class="text-base md:text-lg text-[#B8C0D9]/80 leading-relaxed max-w-lg mb-10 font-medium text-center md:text-left"
+				<!-- CTA Buttons -->
+				<div
+					class="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto mt-10"
+				>
+					<a href="/courses/Offered-Courses" class="btn-yellow-glow w-full sm:w-auto">
+						Start Your Journey
+						<i class="fa-solid fa-compass text-sm animate-spin-slow"></i>
+					</a>
+					<a
+						href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn-glass-premium w-full sm:w-auto"
 					>
-						Baba Institute of Technology and Sciences is a premier destination for engineering
-						excellence. NAAC 'A' accredited, empowering tomorrow's innovators today with world-class
-						facilities.
-					</p>
-
-					<div class="flex flex-col gap-5 w-full md:flex-row md:items-center mb-12">
-						<a href="/courses/Offered-Courses" class="btn-yellow-glow">
-							Explore Courses
-							<i class="fa-solid fa-arrow-right"></i>
-						</a>
-						<a
-							href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="btn-glass-premium"
-						>
-							EAPCET 2026
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</a>
-					</div>
-
-					<!-- Premium Statistics Row -->
-					<div class="stats-row grid grid-cols-2 sm:flex items-center gap-6 md:gap-10">
-						<div class="stat-item">
-							<span class="stat-num">150+</span>
-							<span class="stat-label">Expert Faculty</span>
-						</div>
-						<div class="stat-item">
-							<span class="stat-num">50+</span>
-							<span class="stat-label">Programs</span>
-						</div>
-						<div class="stat-item">
-							<span class="stat-num">6000+</span>
-							<span class="stat-label">Alumni</span>
-						</div>
-						<div class="stat-item">
-							<span class="stat-num">18+</span>
-							<span class="stat-label">Years</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="mt-16 w-full lg:mt-12 lg:flex lg:justify-end lg:items-center">
-					<div class="relative group">
-						<!-- Atmospheric Bloom -->
-						<div
-							class="absolute -inset-10 bg-[#7C4DFF]/10 blur-[100px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity duration-1000"
-						></div>
-
-						<!-- Enhanced Pink/Purple Neon Edge Glow -->
-						<div
-							class="absolute -inset-1 bg-gradient-to-br from-[#7C4DFF] via-[#FF4FD8] via-[#FF4FD8] to-[#00D4FF] rounded-[2rem] md:rounded-[32px] blur-md opacity-60 group-hover:opacity-90 transition-opacity duration-700"
-						></div>
-
-						<div
-							class="hero-card-ultra relative w-full max-w-lg rounded-[2rem] md:rounded-[32px] overflow-hidden border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.8)] cursor-pointer"
-						>
-							<!-- Glassmorphism Container Layer -->
-							<div
-								class="absolute inset-0 bg-gradient-to-tr from-[#050816]/10 via-transparent to-white/5 z-10 pointer-events-none"
-							></div>
-
-							<!-- Cinematic Grading Overlay (Lightened) -->
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-[#050816]/10 via-transparent to-transparent z-10 opacity-30"
-							></div>
-							<!-- Quality & Blend Overlays -->
-							<div
-								class="absolute inset-0 bg-gradient-to-tr from-[#050816]/20 via-transparent to-amber-500/5 z-10 pointer-events-none"
-							></div>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent z-10"
-							></div>
-
-							<!-- Main Animated Image -->
-							<OptimizedImage
-								src="/bitsvizag.png"
-								alt="BITS Vizag Campus"
-								className="hero-img-animated w-full h-full object-cover"
-								eager={true}
-								fetchpriority="high"
-								sizes="100vw"
-							/>
-
-							<!-- Moving Shine Effect -->
-							<div class="absolute inset-0 z-15 glass-shine pointer-events-none"></div>
-
-							<!-- Floating Pill Badge -->
-							<div class="absolute top-5 right-5 z-20">
-								<div class="minimal-pill">
-									<span class="pill-dot-small"></span>
-									Admissions 2026
-								</div>
-							</div>
-						</div>
-					</div>
+						Admissions 2026
+						<i class="fa-solid fa-graduation-cap text-sm"></i>
+					</a>
 				</div>
 			</div>
 		</div>
+
+		<!-- Crimson Red Bottom Bar (Explore BITS Vizag style like Explore Stanford) -->
+		<a
+			href="#explore"
+			class="absolute bottom-0 left-0 right-0 z-10 bg-[#8c1515] hover:bg-[#a31a1a] text-white flex items-center justify-center gap-2 py-3.5 transition-colors duration-300 font-bold uppercase tracking-wider text-[11px] md:text-xs shadow-[0_-4px_20px_rgba(0,0,0,0.3)] cursor-pointer animate-fade-in"
+		>
+			Explore BITS Vizag <i class="fa-solid fa-chevron-down animate-bounce text-[9px] mt-0.5"></i>
+		</a>
 	</section>
 
 	<SectionTransition />
 
-	<HighlightsSlider />
+	<div id="explore">
+		<HighlightsSlider />
+	</div>
 
 	<div class="celebrate-header-container py-12 md:py-20 bg-white overflow-hidden relative">
 		<!-- Subtle decorative background element -->
@@ -414,25 +297,46 @@
 {/if}
 
 <style>
-	.hero-overlay {
-		background:
-			radial-gradient(circle at 10% 20%, rgba(26, 20, 67, 0.8) 0%, transparent 50%),
-			radial-gradient(circle at 90% 80%, rgba(124, 77, 255, 0.2) 0%, transparent 50%),
-			linear-gradient(to bottom, #050816 0%, transparent 20%, transparent 80%, #050816 100%);
-		position: relative;
+	.hero-bg-img {
+		filter: brightness(0.92) contrast(1.02);
+		transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);
+		animation: zoom-slow 20s ease-in-out infinite alternate;
 	}
 
-	.hero-overlay::after {
-		content: '';
+	@keyframes zoom-slow {
+		0% {
+			transform: scale(1);
+		}
+		100% {
+			transform: scale(1.08);
+		}
+	}
+
+	.hero-gradient-overlay {
+		background:
+			radial-gradient(circle at center, rgba(5, 8, 22, 0.45) 0%, rgba(5, 8, 22, 0.8) 100%),
+			linear-gradient(
+				to bottom,
+				rgba(5, 8, 22, 0.75) 0%,
+				transparent 20%,
+				transparent 80%,
+				rgba(5, 8, 22, 0.9) 100%
+			);
 		position: absolute;
 		inset: 0;
-		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-		opacity: 0.03;
-		pointer-events: none;
 	}
 
-	.hero-title {
-		font-family: 'Clash Display', 'Inter', sans-serif;
+	.hero-main-title {
+		font-family: 'Lobster', cursive;
+		font-weight: 500;
+		letter-spacing: normal;
+		text-transform: none;
+		color: #ffffff;
+		text-shadow:
+			0 0 25px rgba(255, 255, 255, 0.3),
+			0 10px 45px rgba(0, 0, 0, 0.85);
+		margin-top: -14px;
+		margin-bottom: 6px;
 	}
 
 	.gradient-text {
@@ -472,11 +376,12 @@
 	}
 
 	.btn-glass-premium {
-		@apply flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl backdrop-blur-md transition-all duration-300;
+		@apply flex items-center justify-center gap-3 px-8 py-4 bg-transparent border-2 border-white text-white font-extrabold rounded-xl transition-all duration-300;
 	}
 
 	.btn-glass-premium:hover {
-		@apply bg-white/10 border-white/20 -translate-y-1;
+		@apply bg-white text-[#050816] -translate-y-1;
+		box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 	}
 
 	.stat-item {
@@ -546,15 +451,26 @@
 		}
 	}
 
-	.cursor {
-		display: inline-block;
-		color: #fbbf24;
-		margin-left: 2px;
-		animation: blink 1s step-end infinite;
-		font-weight: 300;
+	.typing-text-accent {
+		color: #f59e0b; /* Amber 400 */
+		text-shadow: 0 0 15px rgba(245, 158, 11, 0.45);
+		font-weight: 800;
 	}
 
-	@keyframes blink {
+	.custom-cursor {
+		display: inline-block;
+		width: 3px;
+		height: 1.25em;
+		background-color: #f59e0b;
+		margin-left: 4px;
+		vertical-align: middle;
+		box-shadow:
+			0 0 8px #f59e0b,
+			0 0 16px #f59e0b;
+		animation: pulse-cursor 0.8s step-end infinite;
+	}
+
+	@keyframes pulse-cursor {
 		from,
 		to {
 			opacity: 1;
@@ -562,6 +478,19 @@
 		50% {
 			opacity: 0;
 		}
+	}
+
+	@keyframes spin-slow {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.animate-spin-slow {
+		animation: spin-slow 8s linear infinite;
 	}
 
 	.hero-badges {
@@ -759,132 +688,28 @@
 
 	@media (max-width: 768px) {
 		.hero-wrap {
-			min-height: 82vh !important; /* Slightly tighter for 'best' view */
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			min-height: 85vh !important;
 		}
 
 		.hero-content-anim {
-			min-height: auto !important;
-			padding-top: 1.5rem !important;
-			padding-bottom: 2.5rem !important;
-			align-items: center !important;
-			justify-content: center !important;
+			padding-top: 3rem !important;
+			padding-bottom: 5rem !important;
 		}
 
-		.hero-copy {
-			text-align: center !important;
-			align-items: center !important;
+		.hero-main-title {
+			font-size: 5.5rem !important;
 		}
 
-		.hero-copy h1 {
-			font-family: 'Satoshi', sans-serif !important;
-			font-size: 3.2rem !important;
-			font-weight: 900 !important;
-			line-height: 1.05 !important;
-			letter-spacing: -0.04em !important;
-			margin-bottom: 1.2rem !important;
-		}
-
-		.hero-copy p {
-			font-family: 'Inter', sans-serif !important;
+		.hero-content-anim p {
 			font-size: 0.95rem !important;
-			font-weight: 500 !important;
-			line-height: 1.6 !important;
-			color: rgba(255, 255, 255, 0.85) !important;
-			max-width: 95% !important;
-			margin-bottom: 2rem !important;
-			text-align: center !important;
-		}
-
-		.hero-badges-mobile div {
-			font-family: 'Satoshi', sans-serif !important;
-			font-weight: 800 !important; /* Bolder for 'best weighted' */
-			letter-spacing: 0.05em !important;
-			border-radius: 4px !important; /* Even sharper 'shapred' look */
-		}
-
-		.hero-card {
-			display: block !important;
-			margin-top: 2rem !important;
-			width: 100% !important;
-			max-width: 320px !important;
-			border-radius: 12px !important;
-			transform: none !important;
-			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
-		}
-
-		.hero-overlay {
-			background: linear-gradient(
-				to bottom,
-				rgba(8, 14, 31, 0.7) 0%,
-				rgba(8, 14, 31, 0.3) 50%,
-				rgba(8, 14, 31, 0.6) 100%
-			) !important; /* Reduced transparency for clearer video */
-		}
-
-		.btn-primary-new {
-			font-family: 'Satoshi', sans-serif !important;
-			font-weight: 900 !important;
-			font-size: 1.05rem !important;
-			padding: 1rem 2.2rem !important;
-			border-radius: 8px !important; /* Match 'shapred' style */
-			letter-spacing: 0.02em !important;
+			line-height: 1.5 !important;
+			max-width: 100% !important;
 		}
 	}
 
-	@media (max-width: 640px) {
-		/* Mobile Scaling for Hero Badges */
-		.hero-card .absolute.top-6 {
-			top: 0.65rem !important;
-			right: 0.65rem !important;
-		}
-
-		.hero-card .absolute.bottom-6 {
-			bottom: 0.65rem !important;
-			left: 0.65rem !important;
-		}
-
-		.hero-card .px-6,
-		.hero-card .px-5 {
-			padding-left: 0.75rem !important;
-			padding-right: 0.75rem !important;
-		}
-
-		.hero-card .py-2\.5 {
-			padding-top: 0.35rem !important;
-			padding-bottom: 0.35rem !important;
-		}
-
-		.hero-card .p-4 {
-			padding: 0.6rem 0.8rem !important;
-		}
-
-		.hero-card h3 {
-			font-size: 13px !important;
-			margin-bottom: 0.1rem !important;
-		}
-
-		.hero-card p {
-			font-size: 8px !important;
-			letter-spacing: 0.04em !important;
-		}
-
-		.hero-card .text-\[11px\] {
-			font-size: 8px !important;
-			letter-spacing: 0.08em !important;
-		}
-
-		.hero-card .w-2\.5 {
-			width: 6px !important;
-			height: 6px !important;
-		}
-	}
-
-	@media (max-width: 400px) {
-		.hero-copy h1 {
-			font-size: 2.4rem !important;
+	@media (max-width: 480px) {
+		.hero-main-title {
+			font-size: 4.2rem !important;
 		}
 	}
 

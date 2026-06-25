@@ -707,7 +707,8 @@
 		width: 100%;
 		background: linear-gradient(90deg, #14204a 0%, #101a3d 60%, #080e1f 100%);
 		font-family: 'Inter', sans-serif;
-		box-shadow: 0 6px 18px rgba(8, 14, 31, 0.28);
+		box-shadow: 0 6px 20px rgba(8, 14, 31, 0.2);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 	}
 
 	nav .wrapper {
