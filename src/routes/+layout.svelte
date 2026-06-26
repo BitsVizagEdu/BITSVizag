@@ -26,7 +26,7 @@
 		const scrollTop = window.scrollY || document.documentElement.scrollTop;
 		const scrollHeight = document.documentElement.scrollHeight;
 		const clientHeight = window.innerHeight;
-		
+
 		// Hide social rail when within 400px of the footer
 		if (scrollHeight - scrollTop - clientHeight < 400) {
 			hideSocialRail = true;
@@ -55,7 +55,7 @@
 				AOS.init({
 					once: true,
 					duration: 650,
-					offset: 80,
+					offset: 80
 				});
 				aosInitialized = true;
 			});
@@ -118,7 +118,10 @@
 
 		<!-- Navigation Progress Bar -->
 		{#if $navigating}
-			<div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 z-[100000] animate-loading-bar" style="will-change: transform;"></div>
+			<div
+				class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 z-[100000] animate-loading-bar"
+				style="will-change: transform;"
+			></div>
 		{/if}
 
 		{#if showWelcomeOverlay}
@@ -141,6 +144,7 @@
 					<!-- Clickable Premium Image Container -->
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
 						on:click={closeWelcome}
 						class="relative group cursor-pointer rounded-2xl sm:rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.85)] hover:scale-[1.005] hover:border-amber-500/40 transition-all duration-500"
@@ -154,7 +158,7 @@
 							<picture>
 								<source media="(max-width: 768px)" srcset="/mobile-overlay.png" />
 								<img
-									src="/welcomr-overlay.png"
+									src="/welcome-overlay.png"
 									alt="Welcome to BITS Vizag"
 									class="w-full h-auto object-cover max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
 								/>
@@ -166,7 +170,8 @@
 		{/if}
 
 		<div
-			class="social-rail flex fixed right-3 bottom-20 z-[100] transition-all duration-300 {$showNavBar || hideSocialRail
+			class="social-rail flex fixed right-3 bottom-20 z-[100] transition-all duration-300 {$showNavBar ||
+			hideSocialRail
 				? 'opacity-0 pointer-events-none translate-y-4'
 				: 'opacity-100 translate-y-0'}"
 			aria-label="Social links"
