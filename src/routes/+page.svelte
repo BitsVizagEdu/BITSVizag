@@ -117,7 +117,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&family=Lobster&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&family=Lobster&family=Graduate&family=VT323&family=Press+Start+2P&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
@@ -144,54 +144,127 @@
 			class="hero-content-anim relative z-[2] mx-auto flex w-full max-w-7xl items-center justify-center px-6 pt-16 pb-24 md:pt-20 md:pb-28"
 		>
 			<div
-				class="flex flex-col items-center text-center w-full max-w-4xl gap-6 md:gap-8 -translate-y-12 md:-translate-y-24"
+				class="flex flex-col items-center text-center w-full max-w-5xl gap-2 md:gap-5 pt-2 md:pt-6 -translate-y-16 md:translate-y-0"
 			>
 				<!-- Intro phrase above title -->
 				<p
-					class="text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-[0.3em] text-[#fbbf24] animate-fade-up-reveal mt-2 translate-x-2 sm:translate-x-4 md:translate-x-6"
+					class="text-[9px] sm:text-xs md:text-sm font-bold uppercase animate-fade-up-reveal mt-0 sm:mt-2 -translate-y-4 sm:translate-y-0 translate-x-1 sm:translate-x-2 md:translate-x-3"
+					style="font-family: 'Press Start 2P', monospace; letter-spacing: 0.02em; background: #FFD84D; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 8px rgba(255, 216, 77, 0.4));"
 				>
 					Start your journey with
 				</p>
 
 				<!-- Main Title: BITS VIZAG (Satoshi Sans-Serif Style, shifted upper) -->
 				<h1
-					class="hero-main-title text-6xl sm:text-8xl md:text-9xl font-bold text-white leading-none drop-shadow-lg translate-x-2 sm:translate-x-4 md:translate-x-6"
+					class="hero-main-title text-6xl sm:text-8xl md:text-9xl font-bold text-white leading-none drop-shadow-lg translate-x-2 sm:translate-x-2 md:translate-x-4 mt-3 sm:mt-0"
 				>
 					Bits Vizag
 				</h1>
 
 				<!-- Subtitle (typing and premium tagline) -->
 				<p
-					class="text-base md:text-xl text-[#f8fafc] max-w-3xl leading-relaxed font-bold drop-shadow hero-subtitle animate-fade-up-reveal mt-3"
+					class="text-base md:text-xl text-[#f8fafc] max-w-3xl leading-relaxed font-bold drop-shadow hero-subtitle animate-fade-up-reveal mt-6 md:mt-2"
 				>
 					Empowering tomorrow's <span class="typing-text-accent">{displayText}</span><span
 						class="custom-cursor"
 					></span>
-					<span
-						class="block mt-4 text-white/90 text-sm md:text-base font-semibold tracking-wide max-w-2xl mx-auto leading-relaxed"
-					>
-						A legacy of engineering excellence, NAAC 'A' accreditation, and elite industry
-						partnerships fostering next-gen careers.
-					</span>
 				</p>
 
 				<!-- CTA Buttons -->
 				<div
-					class="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto mt-10"
+					class="flex flex-row items-center justify-center gap-2.5 w-full max-w-[320px] sm:max-w-none mx-auto mt-28 md:mt-36 px-2"
 				>
-					<a href="/courses/Offered-Courses" class="btn-yellow-glow w-full sm:w-auto">
+					<a href="/courses/Offered-Courses" class="btn-yellow-glow flex-1 sm:flex-initial text-center px-3.5 py-2.5 sm:px-8 sm:py-4 text-[10px] sm:text-sm md:text-base whitespace-nowrap">
 						Start Your Journey
-						<i class="fa-solid fa-compass text-sm animate-spin-slow"></i>
+						<i class="fa-solid fa-compass text-[10px] sm:text-sm animate-spin-slow"></i>
 					</a>
 					<a
 						href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="btn-glass-premium w-full sm:w-auto"
+						class="btn-glass-premium flex-1 sm:flex-initial text-center px-3.5 py-2.5 sm:px-8 sm:py-4 text-[10px] sm:text-sm md:text-base whitespace-nowrap"
 					>
 						Admissions 2026
-						<i class="fa-solid fa-graduation-cap text-sm"></i>
+						<i class="fa-solid fa-graduation-cap text-[10px] sm:text-sm"></i>
 					</a>
+				</div>
+
+				<!-- Glassmorphic Key Points Grid (Hidden on Mobile) -->
+				<div class="hidden md:grid grid-cols-3 gap-6 w-full mt-14 px-4 animate-fade-up-reveal">
+					<!-- Card 1: NAAC 'A' -->
+					<div
+						class="relative group p-6 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.06] hover:border-amber-400/30 hover:-translate-y-1 text-left"
+					>
+						<div
+							class="absolute -top-3 left-6 px-3 py-0.5 bg-amber-400 text-black font-black text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.3)]"
+						>
+							Accredited
+						</div>
+						<div class="flex items-start gap-4 mt-1">
+							<div
+								class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-amber-400/10 text-amber-400 text-lg border border-amber-400/20"
+							>
+								<i class="fa-solid fa-award animate-pulse"></i>
+							</div>
+							<div>
+								<h3 class="text-white font-bold text-sm md:text-base">NAAC 'A' Grade</h3>
+								<p class="text-slate-300/80 text-[11px] mt-1 leading-relaxed">
+									Elite national rating demonstrating top-tier quality standards and engineering
+									research labs.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 2: Excellence -->
+					<div
+						class="relative group p-6 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.06] hover:border-cyan-400/30 hover:-translate-y-1 text-left"
+					>
+						<div
+							class="absolute -top-3 left-6 px-3 py-0.5 bg-cyan-400 text-black font-black text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_15px_rgba(34,211,238,0.3)]"
+						>
+							Excellence
+						</div>
+						<div class="flex items-start gap-4 mt-1">
+							<div
+								class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-lg border border-cyan-400/20"
+							>
+								<i class="fa-solid fa-graduation-cap"></i>
+							</div>
+							<div>
+								<h3 class="text-white font-bold text-sm md:text-base">Engineering Excellence</h3>
+								<p class="text-slate-300/80 text-[11px] mt-1 leading-relaxed">
+									A legacy of quality academics, hands-on projects, and elite-tier career shaping
+									mentorship.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 3: Placements -->
+					<div
+						class="relative group p-6 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.06] hover:border-emerald-400/30 hover:-translate-y-1 text-left"
+					>
+						<div
+							class="absolute -top-3 left-6 px-3 py-0.5 bg-emerald-400 text-black font-black text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_15px_rgba(52,211,153,0.3)]"
+						>
+							Industry-Linked
+						</div>
+						<div class="flex items-start gap-4 mt-1">
+							<div
+								class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-400 text-lg border border-emerald-400/20"
+							>
+								<i class="fa-solid fa-handshake"></i>
+							</div>
+							<div>
+								<h3 class="text-white font-bold text-sm md:text-base">Elite Placements</h3>
+								<p class="text-slate-300/80 text-[11px] mt-1 leading-relaxed">
+									Direct recruitment partnerships with leading global tech firms, fostering
+									immediate high-value careers.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -686,13 +759,24 @@
 		transform: translateZ(0); /* Force GPU acceleration */
 	}
 
+	.hero-bg-img {
+		object-fit: cover;
+		object-position: center;
+		transition: transform 0.5s ease;
+	}
+
 	@media (max-width: 768px) {
 		.hero-wrap {
 			min-height: 85vh !important;
 		}
 
+		.hero-bg-img {
+			object-fit: cover !important;
+			object-position: 50% 25% !important;
+		}
+
 		.hero-content-anim {
-			padding-top: 3rem !important;
+			padding-top: 0rem !important;
 			padding-bottom: 5rem !important;
 		}
 
