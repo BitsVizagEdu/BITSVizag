@@ -511,7 +511,7 @@
 	</header>
 
 	<div class="main-content-layout">
-		<!-- Sidebar Navigation -->
+		<!-- Sidebar Navigation
 		<aside class="side-nav-container">
 			<div class="side-nav-card">
 				<div class="side-nav-title satoshi">DEPARTMENT MENU</div>
@@ -544,6 +544,7 @@
 				</nav>
 			</div>
 		</aside>
+		-->
 
 		<!-- Main Content Area -->
 		<main class="content-body-grid">
@@ -1388,7 +1389,7 @@
 		margin: -180px auto 0;
 		padding: 40px 24px 60px;
 		display: grid;
-		grid-template-columns: 320px 1fr;
+		grid-template-columns: 1fr;
 		gap: 32px;
 		position: relative;
 		z-index: 20;
