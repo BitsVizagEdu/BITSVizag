@@ -158,7 +158,7 @@
 							<picture>
 								<source media="(max-width: 768px)" srcset="/mobile-overlay.png" />
 								<img
-									src="/welcome-overlay.png"
+									src="/welcomr-overlay.png"
 									alt="Welcome to BITS Vizag"
 									class="w-full h-auto object-cover max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
 								/>
