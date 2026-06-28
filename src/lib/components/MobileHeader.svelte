@@ -19,33 +19,7 @@
 </script>
 
 <div class="mobile-header-container lg:hidden">
-	<!-- Top Info Bar -->
-	<div class="top-info-bar">
-		<div class="contact-info">
-			<a href="tel:+918886634502" class="info-link">
-				<i class="fa-solid fa-phone"></i>
-				<span class="bright-text">88866 34502</span>
-			</a>
-			<a href="mailto:principal@bitsvizag.com" class="info-link">
-				<i class="fa-solid fa-envelope"></i>
-				<span class="bright-text">principal@bitsvizag.com</span>
-			</a>
-		</div>
-		<div class="social-and-buttons">
-			<div class="social-icons">
-				<a href="https://instagram.com/bitsvizag" target="_blank"
-					><i class="fa-brands fa-instagram"></i></a
-				>
-				<a href="https://whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-				<a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-				<a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-				<a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-			</div>
-			<a href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx" target="_blank" rel="noopener noreferrer" class="btn-eamcet"
-				>EAPCET 2026 ↗</a
-			>
-		</div>
-	</div>
+
 
 	<!-- Main Header -->
 	<header class="main-header {isScrolled ? 'scrolled' : ''}">
@@ -53,6 +27,9 @@
 			<a href="/" class="brand">
 				<img src="/1.png" alt="BITS Vizag Logo" class="logo" />
 				<div class="accreditation-row">
+					<div class="acc-logo-wrap white-bg">
+						<img src="/18.png" alt="18 Years Logo" class="acc-logo" />
+					</div>
 					<div class="acc-logo-wrap white-bg">
 						<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
 					</div>
@@ -210,13 +187,13 @@
 	}
 
 	.acc-logo-wrap.white-bg {
-		background: rgb(255, 255, 255);
+		background-color: #ffffff !important;
 		border-radius: 4px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 2px;
-		box-shadow: 0 1px 3px rgb(248, 246, 246);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	}
 
 	.acc-logo {

@@ -144,11 +144,11 @@
 			class="hero-content-anim relative z-[2] mx-auto flex w-full max-w-7xl items-center justify-center px-6 pt-16 pb-24 md:pt-20 md:pb-28"
 		>
 			<div
-				class="flex flex-col items-center text-center w-full max-w-5xl gap-2 md:gap-5 pt-2 md:pt-6 -translate-y-16 md:translate-y-0"
+				class="flex flex-col items-center text-center w-full max-w-5xl gap-2 md:gap-5 pt-6 md:pt-6 -translate-y-14 md:translate-y-0"
 			>
 				<!-- Intro phrase above title -->
 				<p
-					class="text-[9px] sm:text-xs md:text-sm font-bold uppercase animate-fade-up-reveal mt-0 sm:mt-2 -translate-y-4 sm:translate-y-0 translate-x-1 sm:translate-x-2 md:translate-x-3"
+					class="text-[9px] sm:text-xs md:text-sm font-bold uppercase animate-fade-up-reveal mt-0 sm:mt-2 -translate-y-8 sm:translate-y-0 translate-x-1 sm:translate-x-2 md:translate-x-3"
 					style="font-family: 'Press Start 2P', monospace; letter-spacing: 0.02em; background: #FFD84D; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 8px rgba(255, 216, 77, 0.4));"
 				>
 					Start your journey with
@@ -172,95 +172,114 @@
 
 				<!-- CTA Buttons -->
 				<div
-					class="flex flex-row items-center justify-center gap-2.5 w-full max-w-[320px] sm:max-w-none mx-auto mt-28 md:mt-36 px-2"
+					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-24 sm:mt-28 md:mt-36 px-1.5"
 				>
-					<a href="/courses/Offered-Courses" class="btn-yellow-glow flex-1 sm:flex-initial text-center px-3.5 py-2.5 sm:px-8 sm:py-4 text-[10px] sm:text-sm md:text-base whitespace-nowrap">
-						Start Your Journey
-						<i class="fa-solid fa-compass text-[10px] sm:text-sm animate-spin-slow"></i>
+					<a
+						href="/courses/Offered-Courses"
+						class="font-cta text-[10px] sm:text-xs md:text-sm font-bold text-white bg-[#c8960c] px-3 sm:px-8 py-2 sm:py-4 rounded-lg hover:bg-[#b0820a] transition-all duration-200 uppercase tracking-wider text-center flex items-center justify-center gap-1 sm:gap-2 shadow-[0_4px_15px_rgba(200,150,12,0.3)] flex-1 sm:flex-initial whitespace-nowrap"
+					>
+						Start Your Journey &rarr;
 					</a>
 					<a
 						href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="btn-glass-premium flex-1 sm:flex-initial text-center px-3.5 py-2.5 sm:px-8 sm:py-4 text-[10px] sm:text-sm md:text-base whitespace-nowrap"
+						class="font-cta text-[10px] sm:text-xs md:text-sm font-bold text-white bg-[#0d1b3e] px-3 sm:px-8 py-2.5 sm:py-4 rounded-lg hover:bg-[#152857] transition-all duration-200 uppercase tracking-wider text-center flex items-center justify-center gap-1 sm:gap-2 shadow-[0_4px_15px_rgba(13,27,62,0.3)] flex-1 sm:flex-initial whitespace-nowrap"
 					>
-						Admissions 2026
-						<i class="fa-solid fa-graduation-cap text-[10px] sm:text-sm"></i>
+						Admissions 2026 🎓
 					</a>
 				</div>
 
 				<!-- Glassmorphic Key Points Grid (Hidden on Mobile) -->
 				<div class="hidden md:grid grid-cols-3 gap-6 w-full mt-14 px-4 animate-fade-up-reveal">
-					<!-- Card 1: NAAC 'A' -->
+					<!-- Card 1: Foundation -->
 					<div
-						class="relative group p-6 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.06] hover:border-amber-400/30 hover:-translate-y-1 text-left"
+						class="relative group p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[18px] transition-all duration-300 hover:bg-white/[0.05] hover:border-amber-400/40 hover:-translate-y-1 text-left shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
 					>
 						<div
-							class="absolute -top-3 left-6 px-3 py-0.5 bg-amber-400 text-black font-black text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.3)]"
+							class="absolute -top-2.5 left-5 px-3 py-0.5 bg-amber-400 text-black font-extrabold text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_12px_rgba(251,191,36,0.3)]"
 						>
-							Accredited
+							Foundation
 						</div>
-						<div class="flex items-start gap-4 mt-1">
+						<div class="flex items-start gap-4 mt-1.5">
 							<div
-								class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-amber-400/10 text-amber-400 text-lg border border-amber-400/20"
+								class="w-11 h-11 shrink-0 flex items-center justify-center rounded-[12px] bg-amber-400/10 text-amber-400 text-lg border border-amber-400/30 shadow-[0_0_15px_rgba(245,158,11,0.15)] transition-all duration-300 group-hover:scale-105"
 							>
-								<i class="fa-solid fa-award animate-pulse"></i>
+								<i class="fa-solid fa-book-open group-hover:animate-pulse"></i>
 							</div>
 							<div>
-								<h3 class="text-white font-bold text-sm md:text-base">NAAC 'A' Grade</h3>
-								<p class="text-slate-300/80 text-[11px] mt-1 leading-relaxed">
-									Elite national rating demonstrating top-tier quality standards and engineering
-									research labs.
+								<h3
+									class="text-white font-extrabold text-sm md:text-base tracking-tight group-hover:text-amber-400 transition-colors duration-200"
+								>
+									Engineering Foundation
+								</h3>
+								<p
+									class="text-slate-300/80 text-[11px] md:text-[11.5px] mt-1 leading-relaxed font-medium"
+								>
+									Experienced faculty, modern laboratories, outcome-based learning, and
+									industry-aligned curriculum.
 								</p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Card 2: Excellence -->
+					<!-- Card 2: Innovation -->
 					<div
-						class="relative group p-6 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.06] hover:border-cyan-400/30 hover:-translate-y-1 text-left"
+						class="relative group p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[18px] transition-all duration-300 hover:bg-white/[0.05] hover:border-cyan-400/40 hover:-translate-y-1 text-left shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
 					>
 						<div
-							class="absolute -top-3 left-6 px-3 py-0.5 bg-cyan-400 text-black font-black text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_15px_rgba(34,211,238,0.3)]"
+							class="absolute -top-2.5 left-5 px-3 py-0.5 bg-cyan-400 text-black font-extrabold text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_12px_rgba(34,211,238,0.3)]"
 						>
-							Excellence
+							Innovation
 						</div>
-						<div class="flex items-start gap-4 mt-1">
+						<div class="flex items-start gap-4 mt-1.5">
 							<div
-								class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-lg border border-cyan-400/20"
+								class="w-11 h-11 shrink-0 flex items-center justify-center rounded-[12px] bg-cyan-400/10 text-cyan-400 text-lg border border-cyan-400/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all duration-300 group-hover:scale-105"
 							>
-								<i class="fa-solid fa-graduation-cap"></i>
+								<i class="fa-solid fa-lightbulb group-hover:animate-bounce"></i>
 							</div>
 							<div>
-								<h3 class="text-white font-bold text-sm md:text-base">Engineering Excellence</h3>
-								<p class="text-slate-300/80 text-[11px] mt-1 leading-relaxed">
-									A legacy of quality academics, hands-on projects, and elite-tier career shaping
-									mentorship.
+								<h3
+									class="text-white font-extrabold text-sm md:text-base tracking-tight group-hover:text-cyan-400 transition-colors duration-200"
+								>
+									Practical Learning
+								</h3>
+								<p
+									class="text-slate-300/80 text-[11px] md:text-[11.5px] mt-1 leading-relaxed font-medium"
+								>
+									Hands-on experience through project-based learning, technical clubs, workshops,
+									and research.
 								</p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Card 3: Placements -->
+					<!-- Card 3: Career Development -->
 					<div
-						class="relative group p-6 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.06] hover:border-emerald-400/30 hover:-translate-y-1 text-left"
+						class="relative group p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[18px] transition-all duration-300 hover:bg-white/[0.05] hover:border-emerald-400/40 hover:-translate-y-1 text-left shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
 					>
 						<div
-							class="absolute -top-3 left-6 px-3 py-0.5 bg-emerald-400 text-black font-black text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_15px_rgba(52,211,153,0.3)]"
+							class="absolute -top-2.5 left-5 px-3 py-0.5 bg-emerald-400 text-black font-extrabold text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_12px_rgba(52,211,153,0.3)]"
 						>
-							Industry-Linked
+							Careers
 						</div>
-						<div class="flex items-start gap-4 mt-1">
+						<div class="flex items-start gap-4 mt-1.5">
 							<div
-								class="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-400 text-lg border border-emerald-400/20"
+								class="w-11 h-11 shrink-0 flex items-center justify-center rounded-[12px] bg-emerald-400/10 text-emerald-400 text-lg border border-emerald-400/30 shadow-[0_0_15px_rgba(52,211,153,0.15)] transition-all duration-300 group-hover:scale-105"
 							>
-								<i class="fa-solid fa-handshake"></i>
+								<i class="fa-solid fa-briefcase group-hover:animate-pulse"></i>
 							</div>
 							<div>
-								<h3 class="text-white font-bold text-sm md:text-base">Elite Placements</h3>
-								<p class="text-slate-300/80 text-[11px] mt-1 leading-relaxed">
-									Direct recruitment partnerships with leading global tech firms, fostering
-									immediate high-value careers.
+								<h3
+									class="text-white font-extrabold text-sm md:text-base tracking-tight group-hover:text-emerald-400 transition-colors duration-200"
+								>
+									Career Development
+								</h3>
+								<p
+									class="text-slate-300/80 text-[11px] md:text-[11.5px] mt-1 leading-relaxed font-medium"
+								>
+									Dedicated career preparation, industry collaborations, internships, and placement
+									assistance.
 								</p>
 							</div>
 						</div>
