@@ -43,7 +43,12 @@ module.exports = {
         'purpleS1': '#432cba',
         'sortwhite': '#f4f4f4',
         'red1':'#cc0033',
-        'gray1':"#d5d5d5"
+        'gray1':"#d5d5d5",
+        "brand-ivory": "#F8F4EC",
+        "brand-navy": "#0D1B3E",
+        "brand-gold": "#C8960C",
+        "brand-stone": "#E8E2D9",
+        "brand-terracotta": "#B55A38"
       },
       keyframes: {
         'fade-in-down': {

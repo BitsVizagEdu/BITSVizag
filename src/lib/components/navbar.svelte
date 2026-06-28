@@ -97,8 +97,8 @@
 <style>
 	.top-bar {
 		display: block;
-		background: #080e1f;
-		border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+		background: #0D1B3E;
+		border-bottom: 1px solid rgba(200, 150, 12, 0.3);
 		padding: 0.2rem 0; /* Reduced from 0.35rem */
 		color: #ffffff;
 		font-family: 'Inter', sans-serif;
@@ -106,8 +106,16 @@
 		font-weight: 500;
 	}
 
+	.header-shell {
+		background-color: rgba(248, 244, 236, 0.95);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid #E8E2D9;
+		width: 100%;
+		transition: all 0.3s ease;
+	}
+
 	@media (max-width: 1024px) {
-		.top-bar {
+		.top-bar, .header-shell {
 			display: none !important;
 		}
 	}
@@ -249,7 +257,7 @@
 		font-weight: 900;
 		line-height: 1.1;
 		letter-spacing: -0.01em;
-		color: #101f2f;
+		color: #0D1B3E;
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
@@ -259,7 +267,7 @@
 		font-size: clamp(0.64rem, 0.72vw, 0.68rem);
 		font-weight: 600;
 		letter-spacing: 0.02em;
-		color: rgb(28, 65, 80);
+		color: #B55A38;
 		text-transform: none;
 		opacity: 0.92;
 		white-space: nowrap;
@@ -452,11 +460,11 @@
 	.status-pill.dark {
 		position: relative;
 		overflow: hidden;
-		background: #0f172a;
-		border-color: #fbbf24;
-		color: #fbbf24;
+		background: #0D1B3E;
+		border-color: #C8960C;
+		color: #C8960C;
 		font-weight: 900;
-		box-shadow: 0 0 15px rgba(251, 191, 36, 0.2);
+		box-shadow: 0 0 15px rgba(200, 150, 12, 0.2);
 	}
 
 	.status-pill.dark::before {
@@ -466,7 +474,7 @@
 		left: -150%;
 		width: 100%;
 		height: 200%;
-		background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.4), transparent);
+		background: linear-gradient(90deg, transparent, rgba(200, 150, 12, 0.4), transparent);
 		transform: rotate(35deg);
 		animation: sparkSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 1s;
 		pointer-events: none;
@@ -475,9 +483,9 @@
 
 	.apply-cta {
 		text-decoration: none;
-		color: #080e1f;
-		background: #fbbf24;
-		border: 1px solid #fbbf24;
+		color: #ffffff;
+		background: #C8960C;
+		border: 1px solid #C8960C;
 		padding: 0.55rem 1.3rem;
 		border-radius: 2px;
 		font-size: 0.8rem;
@@ -485,14 +493,14 @@
 		letter-spacing: 0.04em;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		text-transform: uppercase;
-		box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+		box-shadow: 0 4px 12px rgba(200, 150, 12, 0.15);
 		white-space: nowrap;
 	}
 
 	.apply-cta:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
-		background: #f59e0b;
+		box-shadow: 0 8px 20px rgba(200, 150, 12, 0.4);
+		background: #b0820a;
 	}
 
 	@media (max-width: 1024px) {
