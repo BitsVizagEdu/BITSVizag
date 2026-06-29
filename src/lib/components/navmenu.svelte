@@ -132,7 +132,6 @@
 
 		<!-- Minimal Footer CTA -->
 		<div class="nav-base">
-			<a href="/admissions" class="btn-apply-mini" on:click={toggleNavBar}>Apply Now</a>
 			<div class="social-row-mini">
 				<a href="https://instagram.com/bitsvizag"><i class="fa-brands fa-instagram"></i></a>
 				<a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>

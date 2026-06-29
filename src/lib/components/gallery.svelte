@@ -1,6 +1,13 @@
 <script>
 	let pics = [
 		{
+			pic: '/hackothon-winners.jpg',
+			name: 'Hackathon Winners 2026',
+			date: '30/03/2026',
+			href: '#',
+			id: 'box-hackathon'
+		},
+		{
 			pic: '/gallery/RAJ_4078.JPG21.webp',
 			name: 'Mega Job Fair 2026 A Remarkable Success !!!',
 			date: '10/03/2026',
@@ -66,28 +73,37 @@
 	];
 </script>
 
-<section class="max-w-7xl mx-auto px-6 py-12">
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section class="max-w-7xl mx-auto px-3 sm:px-6 pt-2 pb-3 md:py-12">
+	<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
 		{#each pics as img, i}
-			<div 
+			<div
 				class="rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ease-out group bg-white border border-slate-100 cursor-pointer hover:-translate-y-2"
 				data-aos="fade-up"
 				data-aos-delay={i * 80}
 			>
 				<!-- Aspect Ratio Container -->
 				<div class="relative aspect-[4/3] w-full overflow-hidden">
-					<img 
-						src={img.pic} 
+					<img
+						src={img.pic}
 						alt={img.name}
 						class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
 						loading="lazy"
 					/>
-					
+
 					<!-- Dark Overlay on Hover -->
-					<div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex flex-col justify-end p-6">
-						<div class="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-							<span class="text-amber-400 font-bold text-[10px] tracking-[0.2em] uppercase mb-2 block">{img.date}</span>
-							<h3 class="text-white font-bold text-lg leading-tight mb-2">{img.name}</h3>
+					<div
+						class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex flex-col justify-end p-3 sm:p-6"
+					>
+						<div
+							class="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+						>
+							<span
+								class="text-amber-400 font-bold text-[8px] sm:text-[10px] tracking-[0.2em] uppercase mb-1 sm:mb-2 block"
+								>{img.date}</span
+							>
+							<h3 class="text-white font-bold text-xs sm:text-lg leading-tight mb-1 sm:mb-2">
+								{img.name}
+							</h3>
 							<div class="h-0.5 w-8 bg-amber-400 rounded-full"></div>
 						</div>
 					</div>

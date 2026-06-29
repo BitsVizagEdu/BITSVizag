@@ -316,7 +316,7 @@
 	}
 </script>
 
-<section class="max-w-7xl mx-auto px-6 py-24 bg-white performance-layer">
+<section class="max-w-7xl mx-auto px-3 sm:px-6 pt-6 pb-12 md:py-24 bg-white performance-layer">
 	<!-- ✅ REFINED CLEAN HEADER -->
 	<div class="max-w-2xl mb-12" data-aos="fade-up">
 		<h2 class="text-2xl md:text-4xl font-semibold tracking-tight text-slate-900/90">
@@ -459,10 +459,39 @@
 		</div>
 	</div>
 
-	<!-- 🧠 5. EXPLORE MORE -->
+	<!-- Follow for more (Instagram Call to Action) -->
+	<div class="mt-12 md:mt-16 flex justify-center" data-aos="fade-up">
+		<a
+			href="https://www.instagram.com/bits_vizag_official/?hl=en"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="group flex items-center gap-3 bg-white hover:bg-slate-50 border border-slate-200 px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95"
+		>
+			<span
+				class="text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors"
+			>
+				Follow for more
+			</span>
+			<span
+				class="flex items-center justify-center w-8 h-8 rounded-full text-white shadow-sm transition-transform duration-300 group-hover:scale-110 instagram-gradient-bg"
+			>
+				<i class="fa-brands fa-instagram text-base"></i>
+			</span>
+		</a>
+	</div>
 </section>
 
 <style>
+	.instagram-gradient-bg {
+		background: radial-gradient(
+			circle at 30% 107%,
+			#fdf497 0%,
+			#fdf497 5%,
+			#fd5949 45%,
+			#d6249f 60%,
+			#285aeb 90%
+		);
+	}
 	/* Clean Motion & Hierarchy Logic */
 	:global(.line-clamp-2) {
 		display: -webkit-box;

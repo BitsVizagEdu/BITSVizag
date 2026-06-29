@@ -172,7 +172,7 @@
 
 				<!-- CTA Buttons -->
 				<div
-					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-24 sm:mt-28 md:mt-36 px-1.5"
+					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-24 sm:mt-28 md:mt-36 px-1.5 translate-x-1 sm:translate-x-2 md:translate-x-3"
 				>
 					<a
 						href="/courses/Offered-Courses"
@@ -303,14 +303,14 @@
 		<HighlightsSlider />
 	</div>
 
-	<div class="celebrate-header-container py-12 md:py-20 bg-white overflow-hidden relative">
+	<div class="celebrate-header-container pt-16 pb-6 md:py-20 bg-white overflow-hidden relative">
 		<!-- Subtle decorative background element -->
 		<div
 			class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-blue-50/50 blur-[100px] rounded-full -z-0"
 		></div>
 
 		<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-			<div class="inline-flex items-center gap-3 mb-6" data-aos="fade-down">
+			<div class="inline-flex items-center gap-3 mb-3 md:mb-6" data-aos="fade-down">
 				<span class="h-[1px] w-8 bg-blue-400"></span>
 				<span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] md:text-[12px]"
 					>Lifestyle & Culture</span
@@ -319,15 +319,14 @@
 			</div>
 
 			<h2
-				class="text-3xl md:text-5xl font-semibold text-slate-900 tracking-tight mb-6 uppercase"
+				class="celebrate-title text-3xl md:text-5xl font-semibold text-slate-900 tracking-tight mb-3 md:mb-6 uppercase"
 				data-aos="fade-up"
 			>
-				Celebrate Life at
-				<span class="text-blue-700 block md:inline mt-2 md:mt-0">BITS Vizag</span>
+				Celebrate Life at <span class="text-blue-700">BITS Vizag</span>
 			</h2>
 
 			<p
-				class="max-w-2xl mx-auto text-slate-500 font-medium text-sm md:text-lg leading-relaxed mb-10 px-4"
+				class="max-w-2xl mx-auto text-slate-500 font-medium text-sm md:text-lg leading-relaxed mb-4 md:mb-10 px-4"
 				data-aos="fade-up"
 				data-aos-delay="100"
 			>
@@ -343,20 +342,20 @@
 		</div>
 	</div>
 
-	<div class="bg-white pb-20">
+	<div class="bg-white pb-10 md:pb-20">
 		<div class="content-visibility-auto">
 			{#if GalleryComp}
 				<svelte:component this={GalleryComp} />
 			{/if}
 		</div>
 
-		<div class="content-visibility-auto mt-12">
+		<div class="content-visibility-auto mt-3 md:mt-12">
 			{#if EventsComp}
 				<svelte:component this={EventsComp} />
 			{/if}
 		</div>
 
-		<div class="content-visibility-auto mt-20">
+		<div class="content-visibility-auto mt-4 md:mt-20">
 			{#if CourseHighlightComp}
 				<svelte:component this={CourseHighlightComp} />
 			{/if}
@@ -429,6 +428,18 @@
 			0 10px 45px rgba(0, 0, 0, 0.85);
 		margin-top: -14px;
 		margin-bottom: 6px;
+	}
+
+	@media (max-width: 768px) {
+		.celebrate-title {
+			font-family: 'Lobster', cursive !important;
+			text-transform: none !important;
+			font-size: 6.2vw !important;
+			font-weight: normal !important;
+			letter-spacing: normal !important;
+			line-height: 1.25 !important;
+			white-space: nowrap !important;
+		}
 	}
 
 	.gradient-text {

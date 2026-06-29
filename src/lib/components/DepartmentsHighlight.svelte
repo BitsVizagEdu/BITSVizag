@@ -18,7 +18,7 @@
 </script>
 
 <section
-	class="relative h-[82vh] flex items-center justify-center w-full overflow-hidden bg-white"
+	class="relative h-full w-full flex items-center justify-center overflow-hidden bg-white py-4 md:py-0"
 >
 	<!-- Premium Background Layer -->
 	<div class="absolute inset-0 z-0 pointer-events-none">
@@ -40,9 +40,9 @@
 		<div class="absolute inset-0 bg-gradient-to-tr from-rose-50/60 via-white/40 to-white"></div>
 	</div>
 
-	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-10 w-full h-full py-6">
+	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-10 w-full h-full flex flex-col justify-center py-2 md:py-6">
 		<div
-			class="flex flex-col gap-8 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
+			class="flex flex-col gap-6 sm:gap-8 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 				? 'opacity-100 translate-y-0'
 				: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 		>
@@ -61,32 +61,31 @@
 			<!-- Main Content Grid -->
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6 items-center">
 				<!-- LEFT: UG PROGRAMS -->
-					<div class="space-y-6">
+				<div class="space-y-3 sm:space-y-6">
 					<div class="flex items-center gap-2 mb-1 border-b border-rose-100 pb-2">
 						<span class="text-rose-600 text-xl">🎓</span>
 						<h3 class="text-[11px] font-black tracking-[0.1em] text-rose-900 uppercase">
 							Undergraduate Programs
 						</h3>
 					</div>
-					<div class="space-y-2">
+					<div class="grid grid-cols-2 gap-2 sm:block sm:space-y-2">
 						{#each ugPrograms as program}
 							<div
-								class="group flex items-center justify-between p-3 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300"
+								class="group flex flex-col sm:flex-row items-center sm:justify-between p-2 sm:p-3 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 text-center sm:text-left gap-1.5 sm:gap-3"
 							>
-								<div class="flex items-center gap-3">
+								<div class="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3">
 									<span
-										class="w-8 h-8 rounded bg-rose-50 flex items-center justify-center text-base shadow-sm group-hover:scale-110 transition-transform"
+										class="w-7 h-7 sm:w-8 sm:h-8 rounded bg-rose-50 flex items-center justify-center text-sm sm:text-base shadow-sm group-hover:scale-110 transition-transform"
 									>
 										{program.icon}
 									</span>
-									<span class="text-sm font-bold text-slate-700 tracking-tight">{program.name}</span
-									>
+									<span class="text-[9.5px] sm:text-sm font-bold text-slate-700 tracking-tight leading-tight">{program.name}</span>
 								</div>
-								<div class="flex items-center gap-2">
-									<span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest"
+								<div class="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-0">
+									<span class="text-[8px] font-bold text-slate-400 uppercase tracking-widest"
 										>Intake</span
 									>
-									<span class="text-base font-black text-rose-600 w-10 text-right"
+									<span class="text-xs sm:text-base font-black text-rose-600 w-auto sm:w-10 sm:text-right"
 										>{program.intake}</span
 									>
 								</div>
@@ -96,7 +95,7 @@
 				</div>
 
 				<!-- RIGHT: PG PROGRAMS -->
-					<div class="space-y-4">
+				<div class="hidden sm:block space-y-4">
 					<div class="flex items-center gap-2 mb-1 border-b border-rose-100 pb-2">
 						<span class="text-rose-600 text-xl">🏛️</span>
 						<h3 class="text-[11px] font-black tracking-[0.1em] text-rose-900 uppercase">

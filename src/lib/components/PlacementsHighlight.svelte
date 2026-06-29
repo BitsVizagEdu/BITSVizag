@@ -42,7 +42,7 @@
 	];
 </script>
 
-<section class="relative h-[82vh] flex items-center w-full overflow-hidden">
+<section class="relative h-full w-full flex items-center overflow-hidden py-4 md:py-0">
 	<!-- Premium Background Layer -->
 	<div class="absolute inset-0 z-0">
 		<img
@@ -55,11 +55,11 @@
 		></div>
 	</div>
 
-	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full h-full py-6">
-		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center h-full items-center">
+	<div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-10 w-full h-full flex flex-col justify-center py-2 md:py-6">
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-center h-full items-center">
 			<!-- LEFT SIDE: PLACEMENT CONTENT -->
 			<div
-				class="flex flex-col space-y-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
+				class="flex flex-col space-y-4 sm:space-y-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 					? 'opacity-100 translate-y-0'
 					: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 			>
@@ -100,7 +100,7 @@
 				</p>
 
 				<!-- Recruiters Minimal Marquee -->
-				<div class="space-y-4">
+				<div class="hidden sm:block space-y-4">
 					<p class="text-[10px] font-bold tracking-widest text-slate-400 uppercase">
 						Our Recruiters till Date
 					</p>
@@ -118,10 +118,10 @@
 				</div>
 
 				<!-- CTA -->
-				<div class="pt-4">
+				<div class="pt-2 md:pt-4">
 					<a
 						href="/placements"
-						class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-900/30"
+						class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-blue-600 px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-900/30"
 					>
 						<span class="relative z-10">View Placement Gallery</span>
 						<div
@@ -133,12 +133,12 @@
 
 			<!-- RIGHT SIDE: IMAGE + SMALL STATS -->
 			<div
-				class="relative flex flex-col gap-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
+				class="relative flex flex-col gap-4 sm:gap-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
 					? 'opacity-100 translate-x-0'
-					: 'opacity-0 translate-x-12 pointer-events-none'} h-full justify-center"
+					: 'opacity-0 translate-x-12 pointer-events-none'} md:h-full justify-center"
 			>
 				<div
-					class="relative overflow-hidden rounded-3xl border border-white/40 bg-white/10 shadow-2xl backdrop-blur-sm flex items-center justify-center"
+					class="hidden md:flex relative overflow-hidden rounded-3xl border border-white/40 bg-white/10 shadow-2xl backdrop-blur-sm items-center justify-center"
 				>
 					<img src="/placement.png" alt="Placement Success" class="w-full h-auto object-contain" />
 				</div>

@@ -10,7 +10,8 @@
 		};
 		// passive: true tells browser we won't call preventDefault → unlocks scroll thread
 		window.addEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
-		return () => window.removeEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
+		return () =>
+			window.removeEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
 	});
 
 	function toggleNav() {
@@ -19,30 +20,25 @@
 </script>
 
 <div class="mobile-header-container lg:hidden">
-
-
 	<!-- Main Header -->
 	<header class="main-header {isScrolled ? 'scrolled' : ''}">
 		<div class="header-inner">
 			<a href="/" class="brand">
 				<img src="/1.png" alt="BITS Vizag Logo" class="logo" />
-				<div class="accreditation-row">
-					<div class="acc-logo-wrap white-bg">
-						<img src="/18.png" alt="18 Years Logo" class="acc-logo" />
-					</div>
-					<div class="acc-logo-wrap white-bg">
-						<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
-					</div>
-					<div class="acc-logo-wrap white-bg">
-						<img src="/Accredation-logos/JNTUGV.jpg" alt="JNTU" class="acc-logo" />
-					</div>
-					<img src="/naac.png" alt="NAAC" class="acc-logo" />
-					<div class="acc-logo-wrap white-bg">
-						<img src="/rcb.png" alt="RCB" class="acc-logo" />
-					</div>
-					<img src="/bits.png" alt="BITS" class="acc-logo" />
-				</div>
 			</a>
+			<div class="accreditation-row">
+				<div class="acc-logo-wrap white-bg">
+					<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
+				</div>
+				<div class="acc-logo-wrap white-bg">
+					<img src="/Accredation-logos/JNTUGV.jpg?v=2" alt="JNTU" class="acc-logo" />
+				</div>
+				<img src="/naac.png" alt="NAAC" class="acc-logo" />
+				<div class="acc-logo-wrap white-bg">
+					<img src="/rcb.png" alt="RCB" class="acc-logo" />
+				</div>
+				<img src="/bits.png" alt="BITS" class="acc-logo" />
+			</div>
 			<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle Menu">
 				<div class="hamburger">
 					<span></span>
@@ -140,7 +136,9 @@
 		background: white;
 		padding: 6px 12px;
 		/* Only transition transform/opacity - avoids layout recalc on scroll */
-		transition: box-shadow 0.3s ease, padding 0.3s ease;
+		transition:
+			box-shadow 0.3s ease,
+			padding 0.3s ease;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 		will-change: box-shadow;
 	}
@@ -168,7 +166,6 @@
 		gap: 10px;
 		text-decoration: none;
 		color: #080e1f;
-		flex: 1;
 		min-width: 0;
 	}
 
@@ -180,10 +177,9 @@
 	.accreditation-row {
 		display: flex;
 		align-items: center;
-		gap: 4px;
-		margin-left: 6px;
-		padding-left: 6px;
-		border-left: 1px solid #e5e7eb;
+		justify-content: center;
+		gap: 6px;
+		flex: 1;
 	}
 
 	.acc-logo-wrap.white-bg {
