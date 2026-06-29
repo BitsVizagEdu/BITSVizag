@@ -80,31 +80,31 @@
 	}
 </script>
 
-<section id="academics-highlight" class="relative h-[82vh] flex items-center w-full overflow-hidden px-4 md:px-8">
-	<div class="max-w-5xl mx-auto h-full flex flex-col justify-center py-6">
+<section id="academics-highlight" class="relative h-full w-full flex items-center overflow-hidden px-4 md:px-8 py-4 md:py-0">
+	<div class="max-w-5xl mx-auto w-full h-full flex flex-col justify-center py-2 md:py-6">
 		<!-- Header -->
-		<div class="text-center mb-12">
-			<span class="text-emerald-600 font-semibold text-sm uppercase tracking-wide">Our Programs</span>
-			<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-2">World-Class Engineering & Management Education</h2>
-			<p class="text-lg text-slate-600 max-w-2xl mx-auto">
+		<div class="text-center mb-6 md:mb-12">
+			<span class="text-emerald-600 font-semibold text-xs sm:text-sm uppercase tracking-wide">Our Programs</span>
+			<h2 class="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-2 leading-tight">World-Class Engineering & Management Education</h2>
+			<p class="text-sm sm:text-lg text-slate-600 max-w-2xl mx-auto px-2">
 				Discover our comprehensive range of undergraduate and postgraduate programs designed to shape future leaders.
 			</p>
 		</div>
 
 		<!-- Tab Selector with Animated Counter -->
-		<div class="grid grid-cols-2 gap-4 mb-10">
+		<div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6 md:mb-10">
 			<!-- UG Tab -->
 			<button
 				on:click={() => handleTabChange('ug')}
 				class="relative group transition-all duration-300 {selectedTab === 'ug' ? 'scale-105' : 'hover:scale-102'}"
 			>
-				<div class="p-8 rounded-2xl border-2 transition-all duration-300 {selectedTab === 'ug' ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 bg-white hover:border-emerald-300'}">
+				<div class="p-4 sm:p-8 rounded-2xl border-2 transition-all duration-300 {selectedTab === 'ug' ? 'border-emerald-500 bg-emerald-50' : 'border-slate-200 bg-white hover:border-emerald-300'}">
 					<div class="text-center">
-						<div class="text-5xl md:text-6xl font-bold text-emerald-600 mb-2 font-mono">
+						<div class="text-3xl sm:text-5xl md:text-6xl font-bold text-emerald-600 mb-1 sm:mb-2 font-mono">
 							{selectedTab === 'ug' ? ugCount : '06'}
 						</div>
-						<div class="text-xl font-semibold text-slate-900">UG Programs</div>
-						<p class="text-sm text-slate-600 mt-2">Bachelor of Technology</p>
+						<div class="text-base sm:text-xl font-semibold text-slate-900">UG Programs</div>
+						<p class="text-xs sm:text-sm text-slate-600 mt-1">Bachelor of Technology</p>
 					</div>
 				</div>
 			</button>
@@ -114,13 +114,13 @@
 				on:click={() => handleTabChange('pg')}
 				class="relative group transition-all duration-300 {selectedTab === 'pg' ? 'scale-105' : 'hover:scale-102'}"
 			>
-				<div class="p-8 rounded-2xl border-2 transition-all duration-300 {selectedTab === 'pg' ? 'border-blue-500 bg-blue-50' : 'border-slate-200 bg-white hover:border-blue-300'}">
+				<div class="p-4 sm:p-8 rounded-2xl border-2 transition-all duration-300 {selectedTab === 'pg' ? 'border-blue-500 bg-blue-50' : 'border-slate-200 bg-white hover:border-blue-300'}">
 					<div class="text-center">
-						<div class="text-5xl md:text-6xl font-bold text-blue-600 mb-2 font-mono">
+						<div class="text-3xl sm:text-5xl md:text-6xl font-bold text-blue-600 mb-1 sm:mb-2 font-mono">
 							{selectedTab === 'pg' ? pgCount : '05'}
 						</div>
-						<div class="text-xl font-semibold text-slate-900">PG Programs</div>
-						<p class="text-sm text-slate-600 mt-2">Master's Degrees</p>
+						<div class="text-base sm:text-xl font-semibold text-slate-900">PG Programs</div>
+						<p class="text-xs sm:text-sm text-slate-600 mt-1">Master's Degrees</p>
 					</div>
 				</div>
 			</button>
@@ -131,18 +131,18 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200 h-full">
 				{#each programLists[selectedTab] as program, i (program)}
 					<div
-						class="p-6 hover:bg-slate-50 transition-colors duration-300 animate-fadeIn flex items-start"
+						class="p-4 sm:p-6 hover:bg-slate-50 transition-colors duration-300 animate-fadeIn flex items-start"
 						style="--delay: {i * 50}ms"
 					>
-						<div class="flex items-start gap-4">
-							<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br {selectedTab === 'ug' ? 'from-emerald-100 to-emerald-50' : 'from-blue-100 to-blue-50'} flex items-center justify-center">
-								<span class="text-lg font-bold {selectedTab === 'ug' ? 'text-emerald-600' : 'text-blue-600'}">
+						<div class="flex items-start gap-3 sm:gap-4">
+							<div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br {selectedTab === 'ug' ? 'from-emerald-100 to-emerald-50' : 'from-blue-100 to-blue-50'} flex items-center justify-center">
+								<span class="text-sm sm:text-lg font-bold {selectedTab === 'ug' ? 'text-emerald-600' : 'text-blue-600'}">
 									{i + 1}
 								</span>
 							</div>
-							<div>
-								<h4 class="font-semibold text-slate-900">{program}</h4>
-								<p class="text-sm text-slate-600 mt-1">
+							<div class="text-left">
+								<h4 class="font-semibold text-sm sm:text-base text-slate-900">{program}</h4>
+								<p class="text-xs sm:text-sm text-slate-600 mt-0.5 sm:mt-1">
 									{selectedTab === 'ug' ? '4-year comprehensive curriculum' : 'Advanced specialization program'}
 								</p>
 							</div>
@@ -153,10 +153,10 @@
 		</div>
 
 		<!-- Explore Link -->
-		<div class="mt-10 text-center">
-			<a href="/department/Department%20of%20CSE" class="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-semibold {selectedTab === 'ug' ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-blue-600 hover:bg-blue-700'} text-white transition-colors duration-300">
+		<div class="mt-6 md:mt-10 text-center">
+			<a href="/department/Department%20of%20CSE" class="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold {selectedTab === 'ug' ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-blue-600 hover:bg-blue-700'} text-white transition-colors duration-300">
 				Explore Programs
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 				</svg>
 			</a>

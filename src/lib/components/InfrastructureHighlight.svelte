@@ -41,7 +41,7 @@
 	];
 </script>
 
-<section class="relative h-[82vh] flex items-center w-full overflow-hidden bg-[#fdf8f4]">
+<section class="relative h-full w-full flex items-center overflow-hidden bg-[#fdf8f4] py-4 md:py-0">
 	<!-- Premium Background Overlay -->
 	<div class="absolute inset-0 z-0">
 		<img
@@ -54,12 +54,12 @@
 		></div>
 	</div>
 
-	<div class="relative z-10 mx-auto max-w-7xl px-6 md:px-10 w-full h-full py-6">
-		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center h-full items-center">
+	<div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-10 w-full h-full flex flex-col justify-center py-2 md:py-6">
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-center h-full items-center">
 			<div
 				class="flex flex-col space-y-4 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
 					? 'opacity-100 translate-y-0'
-					: 'opacity-0 translate-y-12 pointer-events-none'}"
+					: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
 			>
 				<div class="flex">
 					<span
@@ -91,21 +91,21 @@
 				</div>
 
 				<!-- Message -->
-				<p class="max-w-md text-xs leading-relaxed text-slate-600">
+				<p class="hidden sm:block max-w-md text-xs leading-relaxed text-slate-600">
 					A sprawling 15+ acre campus equipped with cutting-edge laboratories, a massive library,
 					and modern facilities designed to foster innovation and academic excellence.
 				</p>
 
 				<!-- Scholarship Highlight Box -->
 				<div
-					class="group relative overflow-hidden rounded-xl border-l-4 border-amber-400 bg-white p-4 shadow-md transition-all hover:shadow-lg"
+					class="group relative overflow-hidden rounded-xl border-l-4 border-amber-400 bg-white p-2.5 sm:p-4 shadow-md transition-all hover:shadow-lg"
 				>
-					<div class="relative z-10 flex items-center gap-4">
+					<div class="relative z-10 flex items-center gap-3 sm:gap-4">
 						<div
-							class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-50 text-amber-600"
+							class="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-amber-50 text-amber-600"
 						>
 							<svg
-								class="h-6 w-6"
+								class="h-5 w-5 sm:h-6 sm:w-6"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -119,8 +119,8 @@
 							</svg>
 						</div>
 						<div>
-							<h4 class="text-2xl font-black tracking-tight text-slate-800">Smart Learning</h4>
-							<p class="text-[9px] font-bold tracking-widest text-slate-400 uppercase">
+							<h4 class="text-sm sm:text-2xl font-black tracking-tight text-slate-800">Smart Learning</h4>
+							<p class="text-[7.5px] sm:text-[9px] font-bold tracking-widest text-slate-400 uppercase">
 								Building Intelligent Learning Environments
 							</p>
 						</div>
@@ -130,22 +130,22 @@
 
 			<!-- RIGHT SIDE: STATS GRID -->
 			<div
-				class="relative flex flex-col gap-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
+				class="relative flex flex-col gap-4 sm:gap-6 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) delay-200 {isActive
 					? 'opacity-100 translate-x-0'
-					: 'opacity-0 translate-x-12 pointer-events-none'} h-full justify-center"
+					: 'opacity-0 translate-x-12 pointer-events-none'} md:h-full justify-center"
 			>
 				<!-- Stats Grid -->
-				<div class="grid grid-cols-2 gap-3 sm:gap-4">
+				<div class="grid grid-cols-3 sm:grid-cols-2 gap-2 sm:gap-4">
 					{#each stats as stat}
 						<div
-							class="group relative flex flex-col items-start justify-center rounded-2xl bg-white p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+							class="group relative flex flex-col items-start justify-center rounded-xl sm:rounded-2xl bg-white p-2.5 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
 						>
-							<div class="text-xl sm:text-2xl mb-1 sm:mb-2">{stat.icon}</div>
-							<p class="text-lg font-bold tracking-tight {stat.color} sm:text-2xl md:text-3xl">
+							<div class="text-sm sm:text-2xl mb-0.5 sm:mb-2">{stat.icon}</div>
+							<p class="text-xs sm:text-lg font-bold tracking-tight {stat.color} sm:text-2xl md:text-3xl">
 								{stat.value}
 							</p>
 							<p
-								class="mt-0.5 text-[8px] sm:text-[11px] capitalize font-bold tracking-normal text-slate-600"
+								class="mt-0.5 text-[6.5px] sm:text-[11px] capitalize font-bold tracking-normal text-slate-600"
 							>
 								{stat.label}
 							</p>

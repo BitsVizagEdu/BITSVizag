@@ -329,7 +329,7 @@
 	@media (max-width: 768px) {
 		.marquee-container {
 			padding: 10px 0;
-			background: rgba(3, 16, 38, 0.9);
+			background: linear-gradient(135deg, #000000, #0d1b3e);
 		}
 		.marquee-item {
 			padding-right: 1.5rem;

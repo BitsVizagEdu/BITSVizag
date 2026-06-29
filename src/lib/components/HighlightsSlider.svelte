@@ -54,59 +54,62 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div bind:this={sectionRef} class="relative w-full overflow-hidden bg-white group container-isolate">
-	<!-- Slides Container -->
-	<div 
-		class="flex transition-transform duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1) will-change-transform gpu-layer" 
-		style="transform: translate3d(-{activeSlide * 100}%, 0, 0);"
-		on:click={(e) => {
-			const target = /** @type {HTMLElement} */ (e.target);
-			if (target && typeof target.closest === 'function' && !target.closest('a, button')) {
-				nextSlide();
-			}
-		}}
-		on:keydown={(e) => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				nextSlide();
-			}
-		}}
-		role="button"
-		tabindex="0"
-	>
-		{#each slides as slide, i}
-			<div 
-				class="w-full shrink-0 slide-isolation"
-				style="visibility: {isSlideVisible(i) ? 'visible' : 'hidden'};"
-			>
-				<svelte:component this={slide.component} isActive={activeSlide === i} />
-			</div>
-		{/each}
+<div bind:this={sectionRef} class="relative w-full bg-white group container-isolate">
+	<!-- Slide Area Wrapper with Responsive Height -->
+	<div class="relative w-full h-[520px] md:h-[82vh] overflow-hidden">
+		<!-- Slides Container -->
+		<div 
+			class="flex h-full transition-transform duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1) will-change-transform gpu-layer" 
+			style="transform: translate3d(-{activeSlide * 100}%, 0, 0);"
+			on:click={(e) => {
+				const target = /** @type {HTMLElement} */ (e.target);
+				if (target && typeof target.closest === 'function' && !target.closest('a, button')) {
+					nextSlide();
+				}
+			}}
+			on:keydown={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					nextSlide();
+				}
+			}}
+			role="button"
+			tabindex="0"
+		>
+			{#each slides as slide, i}
+				<div 
+					class="w-full h-full shrink-0 slide-isolation"
+					style="visibility: {isSlideVisible(i) ? 'visible' : 'hidden'};"
+				>
+					<svelte:component this={slide.component} isActive={activeSlide === i} />
+				</div>
+			{/each}
+		</div>
+
+		<!-- Navigation Arrows -->
+		<button 
+			on:click|stopPropagation={prevSlide}
+			class="absolute left-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/70 md:bg-white/40 backdrop-blur-md text-slate-800 opacity-100 md:opacity-0 transition-all hover:bg-white hover:shadow-xl md:group-hover:opacity-100 focus:outline-none border border-white/40"
+			aria-label="Previous Slide"
+		>
+			<svg class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+			</svg>
+		</button>
+
+		<button 
+			on:click|stopPropagation={nextSlide}
+			class="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/70 md:bg-white/40 backdrop-blur-md text-slate-800 opacity-100 md:opacity-0 transition-all hover:bg-white hover:shadow-xl md:group-hover:opacity-100 focus:outline-none border border-white/40"
+			aria-label="Next Slide"
+		>
+			<svg class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+			</svg>
+		</button>
 	</div>
 
-	<!-- Navigation Arrows -->
-	<button 
-		on:click|stopPropagation={prevSlide}
-		class="absolute left-4 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/40 backdrop-blur-md text-slate-800 opacity-0 transition-all hover:bg-white hover:shadow-xl group-hover:opacity-100 focus:outline-none border border-white/40"
-		aria-label="Previous Slide"
-	>
-		<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-		</svg>
-	</button>
-
-	<button 
-		on:click|stopPropagation={nextSlide}
-		class="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/40 backdrop-blur-md text-slate-800 opacity-0 transition-all hover:bg-white hover:shadow-xl group-hover:opacity-100 focus:outline-none border border-white/40"
-		aria-label="Next Slide"
-	>
-		<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-		</svg>
-	</button>
-
-	<!-- Premium Indicators (Pill Style) -->
-	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
-		<div class="flex items-center gap-3 rounded-full bg-white/60 px-4 py-3 backdrop-blur-md shadow-lg border border-white/40">
+	<!-- Premium Indicators (Pill Style) - Rendered outside slider with clean white gap -->
+	<div class="w-full flex justify-center py-6 bg-white relative z-30">
+		<div class="flex items-center gap-3 rounded-full bg-slate-100 px-4 py-2 border border-slate-200 shadow-sm">
 			{#each slides as _, i}
 				<button 
 					on:click|stopPropagation={() => { activeSlide = i; resetInterval(); }}

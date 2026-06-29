@@ -128,28 +128,29 @@
 
 <section class="max-w-7xl mx-auto px-6 py-12 bg-white overflow-hidden performance-layer">
 	<!-- ✅ CENTERED PREMIUM HEADER -->
-	<div class="mb-16 max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
-		<h2 class="text-4xl md:text-5xl lg:text-5xl font-semibold text-[#1a233e] mb-4">
+	<div class="mb-6 md:mb-16 max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
+		<h2 class="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#1a233e] mb-2 md:mb-4">
 			Programmes & <span
 				class="bg-gradient-to-r from-[#e67e22] to-[#f1c40f] bg-clip-text text-transparent"
 				>Courses</span
 			>
 		</h2>
-		<p class="text-sm md:text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
+		<p class="text-xs sm:text-sm md:text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
 			Discover our AICTE-approved, UGC-recognised programmes. From core engineering to emerging
 			specialisations, each course is crafted to build exceptional careers.
 		</p>
 	</div>
 
-	<!-- Desktop Accordion Slider -->
-	<div class="hidden md:flex gap-4 h-[480px] w-full" on:mouseleave={handleMouseLeave} role="list">
+	<!-- Responsive Accordion Slider -->
+	<div class="flex flex-col md:flex-row gap-2 sm:gap-4 h-[440px] md:h-[480px] w-full" on:mouseleave={handleMouseLeave} role="list">
 		{#each courses as course, i}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
-				class="relative rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group shadow-sm hover:shadow-xl will-change-flex"
-				style="flex: {active === i ? 3.5 : 1};"
+				class="relative rounded-2xl md:rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group shadow-sm hover:shadow-xl will-change-flex"
+				style="flex: {active === i ? 6 : 0.85};"
 				on:mouseenter={() => handleMouseEnter(i)}
+				on:click={() => { active = i; paused = true; }}
 			>
 				<!-- Image -->
 				<img
@@ -165,35 +166,35 @@
 				></div>
 
 				<!-- Content -->
-				<div class="absolute bottom-8 left-8 right-8 text-white z-10">
+				<div class="absolute bottom-3 left-3 right-3 md:bottom-8 md:left-8 md:right-8 text-white z-10">
 					{#if active === i}
-						<div class="flex flex-col gap-2">
+						<div class="flex flex-col gap-1 md:gap-2">
 							<span
-								class="text-[10px] font-black uppercase tracking-[0.3em] {colorMap[course.color]
+								class="text-[7px] md:text-[10px] font-black uppercase tracking-[0.3em] {colorMap[course.color]
 									.accent}">Featured Course</span
 							>
-							<h3 class="text-2xl lg:text-3xl font-bold tracking-tight">
+							<h3 class="text-sm md:text-2xl lg:text-3xl font-bold tracking-tight">
 								{course.title}
 							</h3>
-							<p class="text-sm text-slate-200 mt-1 max-w-xs leading-relaxed">
-								{course.desc}. Deep dive into advanced curriculum and industry projects.
+							<p class="hidden xs:block text-[9px] md:text-sm text-slate-200 mt-0.5 md:mt-1 max-w-xs leading-relaxed">
+								{course.desc}.
 							</p>
 
-							<!-- 💎 Added Stats & Button -->
-							<div class="mt-6 flex flex-col gap-6" in:fade={{ delay: 200 }}>
+							<!-- Stats & Button -->
+							<div class="mt-2 md:mt-6 flex flex-col gap-2.5 md:gap-6" in:fade={{ delay: 200 }}>
 								<div
-									class="flex items-center gap-6 text-xs font-bold text-slate-200/90 tracking-wide"
+									class="flex items-center gap-3 md:gap-6 text-[8px] md:text-xs font-bold text-slate-200/90 tracking-wide"
 								>
 									<div
-										class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg backdrop-blur-sm"
+										class="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-md md:rounded-lg backdrop-blur-sm"
 									>
-										<i class="fa-regular fa-clock {colorMap[course.color].accent} text-sm"></i>
+										<i class="fa-regular fa-clock {colorMap[course.color].accent} text-[9px] md:text-sm"></i>
 										{course.duration}
 									</div>
 									<div
-										class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg backdrop-blur-sm"
+										class="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-md md:rounded-lg backdrop-blur-sm"
 									>
-										<i class="fa-solid fa-users {colorMap[course.color].accent} text-sm"></i>
+										<i class="fa-solid fa-users {colorMap[course.color].accent} text-[9px] md:text-sm"></i>
 										{course.seats}
 									</div>
 								</div>
@@ -201,11 +202,11 @@
 								<a href={course.href} class="w-fit">
 									<button
 										class="w-fit {colorMap[course.color].bg} {colorMap[course.color]
-											.btnText} px-8 py-3.5 rounded-xl font-black text-[13px] uppercase tracking-wider flex items-center gap-3 hover:bg-white hover:text-slate-950 transition-all group/btn shadow-xl active:scale-95"
+											.btnText} px-4 py-2 md:px-8 md:py-3.5 rounded-lg md:rounded-xl font-black text-[9px] md:text-[13px] uppercase tracking-wider flex items-center gap-1.5 md:gap-3 hover:bg-white hover:text-slate-950 transition-all group/btn shadow-xl active:scale-95"
 									>
-										Explore {course.title}
+										Explore <span class="hidden xs:inline">{course.title}</span>
 										<i
-											class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"
+											class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform text-[8px] md:text-sm"
 										></i>
 									</button>
 								</a>
@@ -214,68 +215,18 @@
 					{/if}
 				</div>
 
-				<!-- Collapsed State Vertical Title -->
+				<!-- Collapsed State Title -->
 				{#if active !== i}
 					<div
-						class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10"
+						class="absolute inset-0 flex items-center justify-start pl-6 md:justify-center md:pl-0 pointer-events-none z-10"
 					>
 						<span
-							class="whitespace-nowrap uppercase tracking-[0.4em] font-black text-[11px] transform -rotate-90 origin-center text-slate-300 group-hover:text-white transition-colors"
+							class="whitespace-nowrap uppercase tracking-[0.25em] md:tracking-[0.4em] font-black text-[10px] md:text-[11px] md:transform md:-rotate-90 origin-center text-slate-300 group-hover:text-white transition-colors"
 						>
 							{course.title}
 						</span>
 					</div>
 				{/if}
-			</div>
-		{/each}
-	</div>
-
-	<!-- Mobile Snap Slider (Showing All Departments) -->
-	<div class="md:hidden flex flex-col gap-8 pb-8 px-4">
-		{#each courses as course, i}
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-static-element-interactions -->
-			<div
-				class="w-full relative rounded-3xl overflow-hidden aspect-[5/4] shadow-lg"
-				on:click={() => (active = i)}
-			>
-				<img
-					src={course.image}
-					alt={course.title}
-					class="absolute inset-0 w-full h-full object-cover"
-				/>
-				<div
-					class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"
-				></div>
-
-				<div class="absolute bottom-6 left-6 right-6 text-white">
-					<span
-						class="text-[9px] font-black uppercase tracking-[0.3em] {colorMap[course.color]
-							.accent} mb-2 block">Program</span
-					>
-					<h3 class="text-2xl font-bold tracking-tight mb-4">{course.title}</h3>
-
-					<div class="flex items-center gap-4 text-[10px] font-bold text-slate-200 mb-6">
-						<div class="flex items-center gap-1.5">
-							<i class="fa-regular fa-clock {colorMap[course.color].accent}"></i>
-							{course.duration}
-						</div>
-						<div class="flex items-center gap-1.5">
-							<i class="fa-solid fa-users {colorMap[course.color].accent}"></i>
-							{course.seats}
-						</div>
-					</div>
-
-					<a href={course.href} class="w-full block">
-						<button
-							class="w-full {colorMap[course.color].bg} {colorMap[course.color]
-								.btnText} py-3.5 rounded-xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg"
-						>
-							Explore {course.title}
-							<i class="fa-solid fa-arrow-right text-[10px]"></i>
-						</button>
-					</a>
-				</div>
 			</div>
 		{/each}
 	</div>
