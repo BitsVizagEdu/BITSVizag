@@ -8,8 +8,9 @@
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 		const connection = /** @type {any} */ (navigator).connection;
 		const saveData = connection?.saveData;
+		const isMobileOrTouch = window.innerWidth < 768 || window.matchMedia('(pointer: coarse)').matches;
 
-		if (prefersReducedMotion || saveData) {
+		if (prefersReducedMotion || saveData || isMobileOrTouch) {
 			return;
 		}
 
