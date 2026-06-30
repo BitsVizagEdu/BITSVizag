@@ -148,7 +148,7 @@
 			>
 				<!-- Intro phrase above title -->
 				<p
-					class="text-[9px] sm:text-xs md:text-sm font-bold uppercase animate-fade-up-reveal mt-0 sm:mt-2 -translate-y-8 sm:translate-y-0 translate-x-1 sm:translate-x-2 md:translate-x-3"
+					class="text-[7px] sm:text-[7px] md:text-sm font-bold uppercase animate-fade-up-reveal mt-0 sm:mt-2 -translate-y-2 sm:translate-y-0 translate-x-1 sm:translate-x-2 md:translate-x-3"
 					style="font-family: 'Press Start 2P', monospace; letter-spacing: 0.02em; background: #FFD84D; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 8px rgba(255, 216, 77, 0.4));"
 				>
 					Start your journey with
@@ -156,7 +156,7 @@
 
 				<!-- Main Title: BITS VIZAG (Satoshi Sans-Serif Style, shifted upper) -->
 				<h1
-					class="hero-main-title text-6xl sm:text-8xl md:text-9xl font-bold text-white leading-none drop-shadow-lg translate-x-2 sm:translate-x-2 md:translate-x-4 mt-3 sm:mt-0"
+					class="hero-main-title text-6xl sm:text-8xl md:text-9xl font-bold text-white leading-none drop-shadow-lg translate-x-2 sm:translate-x-2 md:translate-x-4 mt-10 sm:mt-0"
 				>
 					Bits Vizag
 				</h1>
@@ -172,7 +172,7 @@
 
 				<!-- CTA Buttons -->
 				<div
-					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-6 sm:mt-12 md:mt-16 px-1.5 translate-x-1 sm:translate-x-2 md:translate-x-3"
+					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-10 sm:mt-18 md:mt-24 px-1.5 translate-x-1 sm:translate-x-2 md:translate-x-3"
 				>
 					<a
 						href="/courses/Offered-Courses"
@@ -859,8 +859,8 @@
 			width: 100%;
 			max-width: 320px;
 			margin: 44px auto 0; /* Pushed down for breathing room */
-			box-shadow: 
-				0 4px 20px rgba(255, 255, 255, 0.01), 
+			box-shadow:
+				0 4px 20px rgba(255, 255, 255, 0.01),
 				inset 0 1px 1px rgba(255, 255, 255, 0.03),
 				inset 0 -1px 1px rgba(255, 255, 255, 0.02);
 		}

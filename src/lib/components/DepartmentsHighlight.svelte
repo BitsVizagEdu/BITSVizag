@@ -1,189 +1,214 @@
 <script>
 	export let isActive = false;
+	let expandedCardId = null;
 
-	const ugPrograms = [
-		{ name: 'B.Tech in Computer Science & Engg. (CSE)', intake: '240', icon: '💻' },
-		{ name: 'B.Tech in AI & Machine Learning', intake: '120', icon: '🤖' },
-		{ name: 'B.Tech in Cyber Security', intake: '60', icon: '🛡️' },
-		{ name: 'B.Tech in Electronics & Comm. (ECE)', intake: '120', icon: '📡' },
-		{ name: 'B.Tech in Electrical & Electronics (EEE)', intake: '60', icon: '⚡' },
-		{ name: 'B.Tech in Mechanical Engineering', intake: '60', icon: '⚙️' }
+	const programs = [
+		{ 
+			id: 'cse', 
+			name: 'Computer Science', 
+			sub: 'B.Tech CSE', 
+			intake: '240', 
+			icon: '💻', 
+			theme: 'blue', 
+			labs: 'Advanced Coding Hub, Systems Lab', 
+			roles: 'SDE, Systems Architect', 
+			link: '/department/Department%20of%20CSE' 
+		},
+		{ 
+			id: 'aiml', 
+			name: 'AI & Machine Learning', 
+			sub: 'B.Tech AI & ML', 
+			intake: '120', 
+			icon: '🤖', 
+			theme: 'amber', 
+			labs: 'AI Research Lab, GPU Hub', 
+			roles: 'AI Engineer, Data Scientist', 
+			link: '/department/Department%20of%20CSE%20(AI%20&%20ML)' 
+		},
+		{ 
+			id: 'cyber', 
+			name: 'Cyber Security', 
+			sub: 'B.Tech CS', 
+			intake: '60', 
+			icon: '🛡️', 
+			theme: 'emerald', 
+			labs: 'Security Ops Lab, Cyber Range', 
+			roles: 'Security Analyst, Ethical Hacker', 
+			link: '/department/Department%20of%20CSE%20(Cyber%20Security)' 
+		},
+		{ 
+			id: 'ece', 
+			name: 'Electronics & Comm.', 
+			sub: 'B.Tech ECE', 
+			intake: '120', 
+			icon: '📡', 
+			theme: 'indigo', 
+			labs: 'VLSI Design, IoT Labs', 
+			roles: 'VLSI Analyst, IoT Developer', 
+			link: '/department/Department%20of%20ECE' 
+		},
+		{ 
+			id: 'eee', 
+			name: 'Electrical & Electronics', 
+			sub: 'B.Tech EEE', 
+			intake: '60', 
+			icon: '⚡', 
+			theme: 'rose', 
+			labs: 'Power Systems, Machines Lab', 
+			roles: 'Grid Analyst, Control Engineer', 
+			link: '/department/Department%20of%20EEE' 
+		},
+		{ 
+			id: 'mba', 
+			name: 'Business Administration', 
+			sub: 'MBA Program', 
+			intake: '120', 
+			icon: '📊', 
+			theme: 'purple', 
+			labs: 'Business Analytics, FinLab', 
+			roles: 'Manager, Consultant', 
+			link: '/department/Department%20of%20MBA' 
+		}
 	];
 
-	const pgPrograms = [
-		{ name: 'Master of Business Administration (MBA)', intake: '120', icon: '📊' },
-		{ name: 'M.Tech in Computer Science & Engg.', intake: '18', icon: '🖥️' },
-		{ name: 'M.Tech in Power Systems (EEE)', intake: '18', icon: '🔌' }
-	];
+	const themeStyles = {
+		blue: {
+			border: 'hover:border-blue-300',
+			iconBg: 'bg-blue-50 text-blue-600',
+			glow: 'shadow-blue-50',
+			badge: 'bg-blue-50 text-blue-700 border-blue-100',
+			accentBg: 'bg-blue-600'
+		},
+		amber: {
+			border: 'hover:border-amber-300',
+			iconBg: 'bg-amber-50 text-amber-600',
+			glow: 'shadow-amber-50',
+			badge: 'bg-amber-50 text-amber-700 border-amber-100',
+			accentBg: 'bg-amber-500'
+		},
+		emerald: {
+			border: 'hover:border-emerald-300',
+			iconBg: 'bg-emerald-50 text-emerald-600',
+			glow: 'shadow-emerald-50',
+			badge: 'bg-emerald-50 text-emerald-700 border-emerald-100',
+			accentBg: 'bg-emerald-600'
+		},
+		indigo: {
+			border: 'hover:border-indigo-300',
+			iconBg: 'bg-indigo-50 text-indigo-600',
+			glow: 'shadow-indigo-50',
+			badge: 'bg-indigo-50 text-indigo-700 border-indigo-100',
+			accentBg: 'bg-indigo-600'
+		},
+		rose: {
+			border: 'hover:border-rose-300',
+			iconBg: 'bg-rose-50 text-rose-600',
+			glow: 'shadow-rose-50',
+			badge: 'bg-rose-50 text-rose-700 border-rose-100',
+			accentBg: 'bg-rose-600'
+		},
+		purple: {
+			border: 'hover:border-purple-300',
+			iconBg: 'bg-purple-50 text-purple-600',
+			glow: 'shadow-purple-50',
+			badge: 'bg-purple-50 text-purple-700 border-purple-100',
+			accentBg: 'bg-purple-600'
+		}
+	};
+
+	function toggleCard(id) {
+		expandedCardId = expandedCardId === id ? null : id;
+	}
 </script>
 
-<section
-	class="relative h-full w-full flex items-center justify-center overflow-hidden bg-white py-4 md:py-0"
->
-	<!-- Premium Background Layer -->
-	<div class="absolute inset-0 z-0 pointer-events-none">
-		<!-- Full Screen Campus Background (Low Opacity) -->
-		<img
-			src="/maingall/img-13.jpg"
-			alt="Campus Background"
-			class="absolute inset-0 h-full w-full object-cover opacity-[0.04] grayscale"
-		/>
-
-		<!-- Large Transparent AI Image Overlay (Accent) -->
-		<img
-			src="/CS-Banners/CS-images/AI-1.png"
-			alt="Background Accent"
-			class="absolute right-[-5%] top-1/2 -translate-y-1/2 h-[100%] w-auto object-contain opacity-[0.08] grayscale blur-[0.5px]"
-		/>
-
-		<!-- Soft Gradient Overlay -->
-		<div class="absolute inset-0 bg-gradient-to-tr from-rose-50/60 via-white/40 to-white"></div>
-	</div>
-
-	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-10 w-full h-full flex flex-col justify-center py-2 md:py-6">
-		<div
-			class="flex flex-col gap-6 sm:gap-8 transition-[transform,opacity] duration-[1000ms] cubic-bezier(0.23, 1, 0.32, 1) {isActive
-				? 'opacity-100 translate-y-0'
-				: 'opacity-0 translate-y-12 pointer-events-none'} h-full justify-center"
-		>
-			<!-- Top Header -->
-			<div class="flex flex-col items-center text-center space-y-1 pt-2">
-				<div class="inline-block rounded-full bg-rose-600/10 px-4 py-1 border border-rose-200">
-					<p class="text-[10px] font-bold text-rose-800 tracking-widest uppercase">
-						Courses Offered
-					</p>
+<section class="relative h-full w-full flex items-center justify-center overflow-hidden bg-[#fafcff] py-6 md:py-10">
+	<div class="relative z-10 mx-auto max-w-6xl px-4 md:px-8 w-full h-full flex flex-col justify-center">
+		<!-- Animating Container -->
+		<div class="flex flex-col gap-5 md:gap-8 transition-all duration-[800ms] {isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}">
+			
+			<!-- Section Header -->
+			<div class="flex flex-col items-center text-center space-y-1.5">
+				<div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-rose-50 border border-rose-100">
+					<i class="fa-solid fa-layer-group text-rose-600 text-[9px]"></i>
+					<span class="text-[9px] font-black uppercase tracking-wider text-rose-800">Departments</span>
 				</div>
-				<h2 class="text-2xl sm:text-3xl md:text-5xl font-semibold text-slate-900 tracking-tight">
+				<h2 class="text-xl sm:text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
 					Academic <span class="text-rose-600">Excellence</span>
 				</h2>
+				<p class="text-slate-500 text-[10px] sm:text-xs font-semibold">Touch any card to reveal labs, roles & explore</p>
 			</div>
 
-			<!-- Main Content Grid -->
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6 items-center">
-				<!-- LEFT: UG PROGRAMS -->
-				<div class="space-y-3 sm:space-y-6">
-					<div class="flex items-center gap-2 mb-1 border-b border-rose-100 pb-2">
-						<span class="text-rose-600 text-xl">🎓</span>
-						<h3 class="text-[11px] font-black tracking-[0.1em] text-rose-900 uppercase">
-							Undergraduate Programs
-						</h3>
-					</div>
-					<div class="grid grid-cols-2 gap-2 sm:block sm:space-y-2">
-						{#each ugPrograms as program}
-							<div
-								class="group flex flex-col sm:flex-row items-center sm:justify-between p-2 sm:p-3 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300 text-center sm:text-left gap-1.5 sm:gap-3"
-							>
-								<div class="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3">
-									<span
-										class="w-7 h-7 sm:w-8 sm:h-8 rounded bg-rose-50 flex items-center justify-center text-sm sm:text-base shadow-sm group-hover:scale-110 transition-transform"
-									>
-										{program.icon}
-									</span>
-									<span class="text-[9.5px] sm:text-sm font-bold text-slate-700 tracking-tight leading-tight">{program.name}</span>
+			<!-- blockbuster Tap-to-Open Grid (2 Cols Mobile, 3 Cols Tablet/Desktop) -->
+			<div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 max-w-4xl mx-auto w-full">
+				{#each programs as prog}
+					<!-- Card Container -->
+					<div 
+						class="program-card bg-white border border-slate-100 rounded-2xl p-3 md:p-5 flex flex-col justify-between transition-all duration-300 shadow-sm cursor-pointer select-none hover:-translate-y-1 hover:shadow-md {themeStyles[prog.theme].border} {expandedCardId === prog.id ? 'active-expanded ring-2 ring-offset-2' : ''}"
+						on:click={() => toggleCard(prog.id)}
+						on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleCard(prog.id)}
+						role="button"
+						tabindex="0"
+					>
+						<div>
+							<!-- Header: Icon & Intake -->
+							<div class="flex items-center justify-between gap-2 mb-2 md:mb-3">
+								<div class="w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center font-bold text-sm md:text-lg shrink-0 shadow-sm {themeStyles[prog.theme].iconBg}">
+									{prog.icon}
 								</div>
-								<div class="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-0">
-									<span class="text-[8px] font-bold text-slate-400 uppercase tracking-widest"
-										>Intake</span
-									>
-									<span class="text-xs sm:text-base font-black text-rose-600 w-auto sm:w-10 sm:text-right"
-										>{program.intake}</span
-									>
+								
+								<div class="flex items-center gap-1 shrink-0">
+									<span class="text-[8px] font-bold text-slate-400 uppercase tracking-wider">Intake</span>
+									<span class="text-xs md:text-sm font-black text-rose-600">{prog.intake}</span>
 								</div>
 							</div>
-						{/each}
-					</div>
-				</div>
 
-				<!-- RIGHT: PG PROGRAMS -->
-				<div class="hidden sm:block space-y-4">
-					<div class="flex items-center gap-2 mb-1 border-b border-rose-100 pb-2">
-						<span class="text-rose-600 text-xl">🏛️</span>
-						<h3 class="text-[11px] font-black tracking-[0.1em] text-rose-900 uppercase">
-							Postgraduate Programs
-						</h3>
-					</div>
-					<div class="space-y-2">
-						{#each pgPrograms as program}
-							<div
-								class="group flex items-center justify-between p-2 rounded-lg bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-rose-200 transition-all duration-300"
-							>
-								<div class="flex items-center gap-2">
-									<span
-										class="w-6 h-6 rounded bg-rose-50 flex items-center justify-center text-sm shadow-sm group-hover:scale-110 transition-transform"
-									>
-										{program.icon}
-									</span>
-									<span class="text-[10px] sm:text-sm font-bold text-slate-700 tracking-tight">{program.name}</span>
-								</div>
-								<div class="flex items-center gap-1.5">
-									<span class="text-[8px] font-bold text-slate-400 uppercase tracking-widest"
-										>Intake</span
-									>
-									<span class="text-sm font-black text-rose-600 w-8 text-right"
-										>{program.intake}</span
-									>
-								</div>
-							</div>
-						{/each}
-					</div>
-
-					<!-- Bottom Accents -->
-					<div class="pt-4 grid grid-cols-2 gap-3">
-						<div
-							class="flex items-center justify-between p-2 rounded-lg bg-rose-50 border border-rose-100 shadow-sm"
-						>
-							<div class="flex items-center gap-1.5">
-								<span class="text-sm">🎓</span>
-								<span class="text-[9px] font-bold text-rose-900 uppercase tracking-widest"
-									>Code:</span
-								>
-							</div>
-							<span class="text-sm sm:text-base font-black text-rose-600 tracking-widest uppercase">BABA</span>
+							<!-- Names -->
+							<h3 class="text-slate-800 font-extrabold text-xs md:text-[14px] leading-tight mb-1">{prog.name}</h3>
+							<p class="text-slate-400 text-[9px] md:text-[11px] font-semibold">{prog.sub}</p>
 						</div>
-						<div
-							class="flex items-center justify-center p-2 rounded-lg bg-slate-50 border border-slate-200 text-center"
-						>
-							<span class="text-[9px] font-bold text-slate-500 tracking-normal text-center"
-								>UGC Autonomous • NAAC 'A' Grade</span
-							>
+
+						<!-- Smooth Expandable Segment (Touch & Open) -->
+						<div class="expand-wrapper overflow-hidden transition-all duration-300" style="max-height: {expandedCardId === prog.id ? '160px' : '0px'}">
+							<div class="pt-3 border-t border-slate-50 mt-3 text-[9.5px] md:text-xs text-slate-500 space-y-2">
+								<div>
+									<span class="block font-black text-slate-700 uppercase tracking-wider text-[8px] mb-0.5">Core Labs</span>
+									<p class="leading-relaxed text-slate-500 font-medium">{prog.labs}</p>
+								</div>
+								<div>
+									<span class="block font-black text-slate-700 uppercase tracking-wider text-[8px] mb-0.5">Top Roles</span>
+									<p class="leading-relaxed text-slate-500 font-medium">{prog.roles}</p>
+								</div>
+								<!-- Explore Button -->
+								<a 
+									href={prog.link}
+									class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-[9px] uppercase tracking-wider transition-colors w-full justify-center shadow-md shadow-rose-600/10 mt-1"
+									on:click|stopPropagation
+								>
+									<span>Explore Page</span>
+									<i class="fa-solid fa-arrow-right text-[8px]"></i>
+								</a>
+							</div>
 						</div>
 					</div>
-
-					<!-- Explore Button -->
-					<div class="pt-4 flex justify-start">
-						<a
-							href="/department/Department%20of%20CSE"
-							class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-rose-600 px-6 py-2.5 text-xs sm:text-sm font-bold text-white transition-all hover:bg-rose-700 hover:shadow-xl hover:shadow-rose-900/30 w-full sm:w-auto"
-						>
-							<span class="relative z-10 flex items-center gap-2">
-								Explore Departments
-								<svg
-									class="w-4 h-4 group-hover:translate-x-1 transition-transform"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M13 7l5 5m0 0l-5 5m5-5H6"
-									/>
-								</svg>
-							</span>
-							<div
-								class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"
-							></div>
-						</a>
-					</div>
-				</div>
+				{/each}
 			</div>
+
 		</div>
 	</div>
 </section>
 
 <style>
-	:global(body) {
-		font-family: 'Inter', sans-serif;
+	.program-card {
+		will-change: transform, box-shadow, border-color;
+	}
+
+	.active-expanded {
+		background: #ffffff;
+		border-color: rgba(225, 29, 72, 0.4) !important;
+		box-shadow: 0 10px 25px rgba(225, 29, 72, 0.05);
+	}
+
+	.expand-wrapper {
+		will-change: max-height;
 	}
 </style>
