@@ -73,34 +73,25 @@
 
 	<div class="max-w-7xl mx-auto px-6 relative z-10">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
-			<!-- Column 1: Brand & Identity -->
-			<div
-				class="lg:col-span-4 space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left"
-			>
-				<div class="flex items-center justify-center lg:justify-start w-full">
-					<img
-						src="/1.png"
-						alt="BITS Logo"
-						class="h-16 w-auto bg-white p-2 rounded-xl"
-					/>
-				</div>
-
-				<div class="space-y-4 pt-2 w-full max-w-sm">
-					<div class="flex items-start lg:items-center gap-4 text-sm group">
-						<i class="fa-solid fa-location-dot text-amber-500 mt-1 lg:mt-0"></i>
-						<span class="text-slate-300 text-[11px] md:text-sm leading-snug"
+			<!-- Column 1: Brand & Identity (Compact Side-by-Side layout) -->
+			<div class="lg:col-span-4 flex items-center gap-4 text-left justify-start w-full">
+				<!-- Logo with transparent background (no bg-white) -->
+				<img src="/1.png" alt="BITS Logo" class="h-16 w-auto shrink-0 object-contain" />
+				<!-- Details beside the logo -->
+				<div class="space-y-1.5 min-w-0">
+					<div class="flex items-start gap-2.5 group">
+						<i class="fa-solid fa-location-dot text-amber-500 mt-0.5 shrink-0 text-xs"></i>
+						<span class="text-slate-300 text-[11px] leading-snug"
 							>Baba college, Visakhapatnam, AP - 530048</span
 						>
 					</div>
-					<div class="flex items-center gap-4 text-sm group">
-						<i class="fa-solid fa-phone text-amber-500"></i>
-						<span class="text-slate-300 text-[11px] md:text-sm">+91 80088 44699 / 91212 14313</span>
+					<div class="flex items-center gap-2.5 group">
+						<i class="fa-solid fa-phone text-amber-500 shrink-0 text-xs"></i>
+						<span class="text-slate-300 text-[11px]">+91 80088 44699 / 91212 14313</span>
 					</div>
-					<div class="flex items-center gap-4 text-sm group">
-						<i class="fa-solid fa-envelope text-amber-500"></i>
-						<span class="text-slate-300 text-[11px] md:text-sm lowercase"
-							>principal@bitsvizag.com</span
-						>
+					<div class="flex items-center gap-2.5 group">
+						<i class="fa-solid fa-envelope text-amber-500 shrink-0 text-xs"></i>
+						<span class="text-slate-300 text-[11px] lowercase">principal@bitsvizag.com</span>
 					</div>
 				</div>
 			</div>
@@ -170,40 +161,19 @@
 
 		<!-- Bottom Bar -->
 		<div
-			class="mt-12 pt-8 border-t border-white/5 flex flex-col items-center justify-center gap-6 footer-bottom-bar pb-4"
+			class="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 footer-bottom-bar pb-4 w-full"
 		>
-			<!-- Premium Visitor Counter & Live Status -->
-			<div
-				class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl"
-			>
-				<!-- Live Users Indicator -->
-				<div class="flex items-center gap-2">
-					<span class="relative flex h-2.5 w-2.5">
-						<span
-							class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
-						></span>
-						<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-					</span>
-				</div>
-
-				<div class="hidden sm:block h-4 w-[1px] bg-white/10"></div>
-
-				<!-- Total Page Views -->
-
-				<div class="text-center space-y-2">
-					<p class="text-slate-500 text-[12px] md:text-[13px] tracking-wide">
-						© 2026 <span class="text-white font-bold">bitsvizag.edu.in</span>. All Rights Reserved.
-					</p>
-				</div>
-				<div class="text-center">
-					<p
-						class="uppercase tracking-[0.2em] text-[10px] md:text-[11px] font-black text-slate-400"
+			<div class="text-center sm:text-left">
+				<p class="text-slate-500 text-[12px] md:text-[13px] tracking-wide">
+					© 2026 <span class="text-slate-500">bitsvizag.edu.in</span>. All Rights Reserved.
+				</p>
+			</div>
+			<div class="text-center sm:text-right">
+				<p class="uppercase tracking-[0.2em] text-[10px] md:text-[11px] font-black text-slate-500">
+					DEVELOPED BY <span class="text-amber-500 border-b border-amber-500/30 pb-0.5"
+						>BITS STUDENTS</span
 					>
-						DEVELOPED BY <span class="text-amber-500 border-b border-amber-500/30 pb-0.5"
-							>BITS STUDENTS</span
-						>
-					</p>
-				</div>
+				</p>
 			</div>
 		</div>
 	</div>

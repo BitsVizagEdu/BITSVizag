@@ -1,28 +1,13 @@
 <script>
 	import { toggleNavBar } from '../stores/store.js';
-	import { fade, slide } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	// Toggle states for expandable sections
-	let openSections = {
-		courses: false,
-		facilities: false,
-		about: false,
-		contact: false,
-		more: false
-	};
-
-	function toggleSection(section) {
-		openSections[section] = !openSections[section];
-		// Close other sections for accordion effect
-		for (let key in openSections) {
-			if (key !== section) {
-				openSections[key] = false;
-			}
-		}
-	}
+	// Drill-down view states: 'main', 'courses', 'facilities', 'about', 'contact', 'more'
+	let currentView = 'main';
 
 	function handleAction() {
+		currentView = 'main'; // reset to main on close
 		toggleNavBar();
 	}
 </script>
@@ -43,142 +28,124 @@
 
 	<!-- Main navigation list -->
 	<div class="nav-scroll-area">
-		<nav class="primary-nav">
-			<!-- Home -->
-			<div class="nav-item-wrap">
+		{#if currentView === 'main'}
+			<nav class="primary-nav" in:fly={{ x: -30, duration: 250, delay: 100, easing: cubicOut }} out:fly={{ x: -30, duration: 200, easing: cubicOut }}>
+				<!-- Home -->
 				<a href="/" class="nav-item" on:click={handleAction}>
 					<span>Home</span>
 				</a>
-			</div>
 
-			<!-- Courses -->
-			<div class="nav-item-wrap">
-				<button 
-					class="nav-item {openSections.courses ? 'active' : ''}" 
-					on:click={() => toggleSection('courses')}
-					aria-expanded={openSections.courses}
-				>
+				<!-- Courses Folder -->
+				<button class="nav-item" on:click={() => currentView = 'courses'}>
 					<span>Courses</span>
-					<svg class="chevron {openSections.courses ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-						<polyline points="6 9 12 15 18 9" />
+					<svg class="chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+						<polyline points="9 18 15 12 9 6" />
 					</svg>
 				</button>
-				{#if openSections.courses}
-					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
-						<a href="/department/Department%20of%20CSE" on:click={handleAction}>CSE</a>
-						<a href="/department/Department%20of%20CSE%20(AI%20&%20ML)" on:click={handleAction}>AI & ML</a>
-						<a href="/department/Department%20of%20CSE%20(Cyber%20Security)" on:click={handleAction}>CS</a>
-						<a href="/department/Department%20of%20ECE" on:click={handleAction}>ECE</a>
-						<a href="/department/Department%20of%20EEE" on:click={handleAction}>EEE</a>
-						<a href="/department/Department%20of%20MBA" on:click={handleAction}>MBA</a>
-					</div>
-				{/if}
-			</div>
 
-			<!-- Facilities -->
-			<div class="nav-item-wrap">
-				<button 
-					class="nav-item {openSections.facilities ? 'active' : ''}" 
-					on:click={() => toggleSection('facilities')}
-					aria-expanded={openSections.facilities}
-				>
+				<!-- Facilities Folder -->
+				<button class="nav-item" on:click={() => currentView = 'facilities'}>
 					<span>Facilities</span>
-					<svg class="chevron {openSections.facilities ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-						<polyline points="6 9 12 15 18 9" />
+					<svg class="chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+						<polyline points="9 18 15 12 9 6" />
 					</svg>
 				</button>
-				{#if openSections.facilities}
-					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
-						<a href="/facilities/Laboratories" on:click={handleAction}>Laboratories</a>
-						<a href="/facilities/Knowledge-Resource-Center" on:click={handleAction}>Knowledge Resource Center</a>
-						<a href="/facilities/Accomidation" on:click={handleAction}>Accommodation</a>
-						<a href="/facilities/Cafeteria" on:click={handleAction}>Cafeteria</a>
-						<a href="/facilities/Sports" on:click={handleAction}>Sports</a>
-						<a href="/facilities/Transport" on:click={handleAction}>Transport</a>
-					</div>
-				{/if}
-			</div>
 
-			<!-- About Us -->
-			<div class="nav-item-wrap">
-				<button 
-					class="nav-item {openSections.about ? 'active' : ''}" 
-					on:click={() => toggleSection('about')}
-					aria-expanded={openSections.about}
-				>
+				<!-- About Us Folder -->
+				<button class="nav-item" on:click={() => currentView = 'about'}>
 					<span>About Us</span>
-					<svg class="chevron {openSections.about ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-						<polyline points="6 9 12 15 18 9" />
+					<svg class="chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+						<polyline points="9 18 15 12 9 6" />
 					</svg>
 				</button>
-				{#if openSections.about}
-					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
-						<a href="/aboutus/About-BITS" on:click={handleAction}>About BITS</a>
-						<a href="/aboutus/About-ABWEC" on:click={handleAction}>About ABWEC</a>
-						<a href="/aboutus/Message-from-Secretary-&-Correspondent" on:click={handleAction}>Secretary & Correspondent</a>
-						<a href="/aboutus/Message-from-Principal" on:click={handleAction}>Principal's Message</a>
-					</div>
-				{/if}
-			</div>
 
-			<!-- Contact Us -->
-			<div class="nav-item-wrap">
-				<button 
-					class="nav-item {openSections.contact ? 'active' : ''}" 
-					on:click={() => toggleSection('contact')}
-					aria-expanded={openSections.contact}
-				>
+				<!-- Contact Us Folder -->
+				<button class="nav-item" on:click={() => currentView = 'contact'}>
 					<span>Contact Us</span>
-					<svg class="chevron {openSections.contact ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-						<polyline points="6 9 12 15 18 9" />
+					<svg class="chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+						<polyline points="9 18 15 12 9 6" />
 					</svg>
 				</button>
-				{#if openSections.contact}
-					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
-						<a href="/contactus#location" on:click={handleAction}>Campus Location</a>
-						<a href="/contactus#phone" on:click={handleAction}>Phone Numbers</a>
-						<a href="/contactus#admissions" on:click={handleAction}>Admissions Office</a>
-						<a href="/contactus#email" on:click={handleAction}>Email</a>
-						<a href="https://www.google.com/maps/search/?api=1&query=Baba+college+Lake+near+Pothinamallayyapalem" target="_blank" rel="noopener noreferrer" on:click={handleAction}>Google Maps</a>
-					</div>
-				{/if}
-			</div>
 
-			<!-- Admissions -->
-			<div class="nav-item-wrap">
+				<!-- Admissions Link -->
 				<a href="/courses/Offered-Courses" class="nav-item admissions-link" on:click={handleAction}>
 					<span>Admissions</span>
-					<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 18px; height: 18px;">
+					<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
 						<line x1="5" y1="12" x2="19" y2="12"></line>
 						<polyline points="12 5 19 12 12 19"></polyline>
 					</svg>
 				</a>
-			</div>
 
-			<!-- More... Expandable Dropdown -->
-			<div class="nav-item-wrap">
-				<button 
-					class="nav-item {openSections.more ? 'active' : ''}" 
-					on:click={() => toggleSection('more')}
-					aria-expanded={openSections.more}
-				>
+				<!-- More... Folder -->
+				<button class="nav-item" on:click={() => currentView = 'more'}>
 					<span>More...</span>
-					<svg class="chevron {openSections.more ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-						<polyline points="6 9 12 15 18 9" />
+					<svg class="chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+						<polyline points="9 18 15 12 9 6" />
 					</svg>
 				</button>
-				{#if openSections.more}
-					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
-						<a href="/faculty" on:click={handleAction}>Faculty Profiles</a>
-						<a href="/examcell" on:click={handleAction}>Exam Cell Portal</a>
-						<a href="/research" on:click={handleAction}>R&D and Publications</a>
-						<a href="/placements" on:click={handleAction}>CDC & Placements</a>
-						<a href="/gallery" on:click={handleAction}>Campus Gallery</a>
-						<a href="/Online-Grievances" on:click={handleAction}>Online Grievance</a>
-					</div>
-				{/if}
+			</nav>
+
+		{:else}
+			<!-- Submenu Drill-Down View (Courses, Facilities, etc.) -->
+			<div class="submenu-container" in:fly={{ x: 30, duration: 250, delay: 100, easing: cubicOut }} out:fly={{ x: 30, duration: 200, easing: cubicOut }}>
+				<!-- Back Button -->
+				<button class="back-btn" on:click={() => currentView = 'main'}>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+					</svg>
+					<span>Back to Menu</span>
+				</button>
+
+				<h3 class="submenu-title">
+					{#if currentView === 'courses'}Courses Offered
+					{:else if currentView === 'facilities'}Campus Facilities
+					{:else if currentView === 'about'}About BITS
+					{:else if currentView === 'contact'}Contact BITS
+					{:else if currentView === 'more'}Explore More
+					{/if}
+				</h3>
+
+				<div class="submenu-links-grid">
+					{#if currentView === 'courses'}
+						<a href="/department/Department%20of%20CSE" on:click={handleAction} class="submenu-link">CSE</a>
+						<a href="/department/Department%20of%20CSE%20(AI%20&%20ML)" on:click={handleAction} class="submenu-link">AI & ML</a>
+						<a href="/department/Department%20of%20CSE%20(Cyber%20Security)" on:click={handleAction} class="submenu-link">CS (Cyber Security)</a>
+						<a href="/department/Department%20of%20ECE" on:click={handleAction} class="submenu-link">ECE</a>
+						<a href="/department/Department%20of%20EEE" on:click={handleAction} class="submenu-link">EEE</a>
+						<a href="/department/Department%20of%20MBA" on:click={handleAction} class="submenu-link">MBA</a>
+
+					{:else if currentView === 'facilities'}
+						<a href="/facilities/Laboratories" on:click={handleAction} class="submenu-link">Laboratories</a>
+						<a href="/facilities/Knowledge-Resource-Center" on:click={handleAction} class="submenu-link">Knowledge Resource Center</a>
+						<a href="/facilities/Accomidation" on:click={handleAction} class="submenu-link">Accommodation</a>
+						<a href="/facilities/Cafeteria" on:click={handleAction} class="submenu-link">Cafeteria</a>
+						<a href="/facilities/Sports" on:click={handleAction} class="submenu-link">Sports & Athletics</a>
+						<a href="/facilities/Transport" on:click={handleAction} class="submenu-link">Transport Services</a>
+
+					{:else if currentView === 'about'}
+						<a href="/aboutus/About-BITS" on:click={handleAction} class="submenu-link">About BITS</a>
+						<a href="/aboutus/About-ABWEC" on:click={handleAction} class="submenu-link">About ABWEC</a>
+						<a href="/aboutus/Message-from-Secretary-&-Correspondent" on:click={handleAction} class="submenu-link">Secretary & Correspondent Message</a>
+						<a href="/aboutus/Message-from-Principal" on:click={handleAction} class="submenu-link">Principal's Message</a>
+
+					{:else if currentView === 'contact'}
+						<a href="/contactus#location" on:click={handleAction} class="submenu-link">Campus Location</a>
+						<a href="/contactus#phone" on:click={handleAction} class="submenu-link">Contact Phone Numbers</a>
+						<a href="/contactus#admissions" on:click={handleAction} class="submenu-link">Admissions Office Details</a>
+						<a href="/contactus#email" on:click={handleAction} class="submenu-link">Official Email Addresses</a>
+						<a href="https://www.google.com/maps/search/?api=1&query=Baba+college+Lake+near+Pothinamallayyapalem" target="_blank" rel="noopener noreferrer" on:click={handleAction} class="submenu-link">Google Maps Location ↗</a>
+
+					{:else if currentView === 'more'}
+						<a href="/faculty" on:click={handleAction} class="submenu-link">Faculty Profiles</a>
+						<a href="/examcell" on:click={handleAction} class="submenu-link">Exam Cell Portal</a>
+						<a href="/research" on:click={handleAction} class="submenu-link">R&D and Publications</a>
+						<a href="/placements" on:click={handleAction} class="submenu-link">CDC & Career Placements</a>
+						<a href="/gallery" on:click={handleAction} class="submenu-link">Campus Gallery</a>
+						<a href="/Online-Grievances" on:click={handleAction} class="submenu-link">Online Grievance Form</a>
+					{/if}
+				</div>
 			</div>
-		</nav>
+		{/if}
 
 		<!-- Bottom Social Icons Area (Smooth and Elegant) -->
 		<div class="nav-footer">
@@ -259,7 +226,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		gap: 40px;
+		gap: 32px;
 	}
 
 	/* Primary Navigation styles on dark overlay */
@@ -267,10 +234,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-	}
-
-	.nav-item-wrap {
-		width: 100%;
 	}
 
 	.nav-item {
@@ -293,73 +256,107 @@
 		transition: all 0.2s ease;
 	}
 
-	.nav-item:hover, .nav-item.active {
+	.nav-item:hover, .nav-item:active {
 		color: #3b82f6; /* Premium Blue */
 		background: rgba(255, 255, 255, 0.05);
 	}
 
-	.nav-item:active {
-		color: #60a5fa;
-		background: rgba(255, 255, 255, 0.08);
+	.chevron-right {
+		opacity: 0.6;
+		transition: transform 0.2s ease;
+	}
+
+	.nav-item:hover .chevron-right {
+		transform: translateX(2px);
+		opacity: 1;
 	}
 
 	.admissions-link {
-		color: #3b82f6;
+		color: #c8960c; /* gold/amber highlight */
 	}
 
-	.chevron {
-		width: 16px;
-		height: 16px;
-		color: rgba(255, 255, 255, 0.4);
-		transition: transform 0.25s ease;
+	.admissions-link:hover {
+		color: #b0820a;
 	}
 
-	.chevron.rotate {
-		transform: rotate(180deg);
-		color: #3b82f6;
-	}
-
-	/* Submenu Panel inside Dark Overlay */
-	.submenu {
+	/* Submenu Panel Styles */
+	.submenu-container {
 		display: flex;
 		flex-direction: column;
-		gap: 2px;
-		padding: 6px 0 12px 24px;
-		border-left: 2px solid rgba(255, 255, 255, 0.1);
-		margin-left: 24px;
-		margin-top: 2px;
+		width: 100%;
 	}
 
-	.submenu a {
-		height: 40px;
+	.back-btn {
 		display: flex;
 		align-items: center;
-		color: rgba(255, 255, 255, 0.6);
+		gap: 8px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		color: #ffffff;
+		padding: 8px 16px;
+		border-radius: 20px;
+		font-size: 13px;
+		font-weight: 600;
+		cursor: pointer;
+		margin-bottom: 24px;
+		transition: all 0.2s ease;
+		width: fit-content;
+	}
+
+	.back-btn:active {
+		background: rgba(255, 255, 255, 0.12);
+		transform: scale(0.95);
+	}
+
+	.submenu-title {
+		font-size: 24px;
+		font-weight: 800;
+		color: #ffffff;
+		margin-bottom: 24px;
+		letter-spacing: -0.01em;
+	}
+
+	.submenu-links-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.submenu-link {
+		display: flex;
+		align-items: center;
+		padding: 16px 20px;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		color: rgba(255, 255, 255, 0.85);
 		text-decoration: none;
-		font-size: 16px;
-		font-weight: 400;
-		transition: color 0.2s ease;
+		font-size: 15px;
+		font-weight: 600;
+		border-radius: 14px;
+		transition: all 0.2s ease;
 	}
 
-	.submenu a:hover {
+	.submenu-link:hover, .submenu-link:active {
+		background: rgba(59, 130, 246, 0.1);
+		border-color: rgba(59, 130, 246, 0.3);
 		color: #3b82f6;
+		transform: translateX(4px);
 	}
 
-	/* Navigation Footer Area (Social Icons & Copyright) */
 	.nav-footer {
+		margin-top: auto;
+		border-top: 1px solid rgba(255, 255, 255, 0.06);
+		padding-top: 24px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		gap: 16px;
-		border-top: 1px solid rgba(255, 255, 255, 0.08);
-		padding-top: 24px;
-		margin-top: auto;
+		align-items: center;
+		flex-shrink: 0;
 	}
 
 	.social-links-row {
 		display: flex;
-		gap: 24px;
-		align-items: center;
+		gap: 16px;
 	}
 
 	.social-links-row a {
@@ -369,16 +366,12 @@
 	}
 
 	.social-links-row a:hover {
-		color: #3b82f6;
+		color: #ffffff;
 		transform: translateY(-2px);
 	}
 
-	.social-links-row a:active {
-		transform: translateY(0);
-	}
-
 	.copyright-micro {
-		font-size: 11px;
+		font-size: 10px;
 		color: rgba(255, 255, 255, 0.3);
 		text-align: center;
 	}
