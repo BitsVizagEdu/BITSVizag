@@ -74,7 +74,7 @@
 	});
 </script>
 
-<svelte:window on:scroll={handleScroll} />
+<svelte:window on:scroll|passive={handleScroll} />
 
 <svelte:head>
 	<!-- Font Preconnect for Performance -->
@@ -183,7 +183,7 @@
 				rel="noreferrer"
 				aria-label="Google Maps"
 			>
-				<svg viewBox="0 0 256 394" aria-hidden="true">
+				<svg viewBox="-69 0 394 394" aria-hidden="true">
 					<path
 						fill="#4285F4"
 						d="M128 0C57.308 0 0 57.308 0 128c0 22.81 12.062 50.36 30.654 81.31l97.346 184.69 97.346-184.69c18.592-30.95 30.654-58.5 30.654-81.31C256 57.308 198.692 0 128 0z"
@@ -287,12 +287,21 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		background: rgba(255, 255, 255, 0.15);
-		backdrop-filter: blur(8px);
+		background: transparent;
 		padding: 0.5rem 0.35rem;
 		border-radius: 1.25rem;
-		border: 1px solid rgba(255, 255, 255, 0.25);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+		border: none;
+		box-shadow: none;
+	}
+
+	@media (max-width: 768px) {
+		:global(.social-rail) {
+			background: transparent;
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			border: none;
+			box-shadow: none;
+		}
 	}
 
 	:global(.social-btn) {

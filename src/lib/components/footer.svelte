@@ -77,22 +77,12 @@
 			<div
 				class="lg:col-span-4 space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left"
 			>
-				<div class="flex items-center gap-4">
+				<div class="flex items-center justify-center lg:justify-start w-full">
 					<img
 						src="/1.png"
 						alt="BITS Logo"
-						class="h-14 w-auto md:h-16 md:bg-white md:p-2 md:rounded-xl"
+						class="h-16 w-auto bg-white p-2 rounded-xl"
 					/>
-					<div class="flex flex-col items-center lg:items-start">
-						<h2 class="text-2xl md:text-3xl font-black tracking-normal">
-							BITS <span class="text-amber-500">VIZAG</span>
-						</h2>
-						<div
-							class="mt-1 inline-flex items-center px-3 py-0.5 rounded-full bg-amber-500 text-[#080e1f] text-[9px] font-black uppercase tracking-widest shadow-lg shadow-amber-500/20"
-						>
-							NAAC 'A' Grade
-						</div>
-					</div>
 				</div>
 
 				<div class="space-y-4 pt-2 w-full max-w-sm">

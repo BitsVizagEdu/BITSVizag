@@ -23,7 +23,7 @@
 	}
 </script>
 
-<svelte:window on:scroll={handleOnScroll} />
+<svelte:window on:scroll|passive={handleOnScroll} />
 
 <button
 	class="back-to-top flex items-center justify-center"
