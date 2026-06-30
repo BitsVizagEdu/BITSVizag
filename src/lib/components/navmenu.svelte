@@ -1,142 +1,202 @@
 <script>
-	import {
-		activeTab,
-		setActiveTabValue,
-		tempTabValue,
-		toggleIsActiveTab,
-		toggleNavBar
-	} from '../stores/store.js';
-	import { dropdown, NavItems } from './navItem.js';
-	import { slide, fade } from 'svelte/transition';
+	import { toggleNavBar } from '../stores/store.js';
+	import { fade, slide } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 
-	import { onMount, onDestroy } from 'svelte';
+	// Toggle states for expandable sections
+	let openSections = {
+		courses: false,
+		facilities: false,
+		about: false,
+		contact: false,
+		more: false
+	};
 
-	/** @param {string} text */
-	function replaceHyphenWithSpace(text) {
-		return text.replace(/-/g, ' ');
-	}
-
-	onMount(() => {
-		document.body.style.overflow = 'hidden';
-		document.body.style.touchAction = 'none';
-	});
-
-	onDestroy(() => {
-		document.body.style.overflow = '';
-		document.body.style.touchAction = '';
-	});
-
-	/** @param {number} index
-	 * @param {MouseEvent} event
-	 */
-	function dropdown_toggle(index, event) {
-		dropdown.update((val) => {
-			const isOpening = !val[index];
-			if (isOpening) {
-				val = val.map(() => false);
-				// Scroll the clicked element into view after a short delay
-				const target = /** @type {HTMLElement} */ (event.currentTarget);
-				setTimeout(() => {
-					if (target) {
-						target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-					}
-				}, 100);
+	function toggleSection(section) {
+		openSections[section] = !openSections[section];
+		// Close other sections for accordion effect
+		for (let key in openSections) {
+			if (key !== section) {
+				openSections[key] = false;
 			}
-			val[index] = !val[index];
-			return val;
-		});
+		}
 	}
 
-	/** @param {string} item */
-	function onClick(item) {
-		toggleIsActiveTab(true);
-		setActiveTabValue(item);
+	function handleAction() {
 		toggleNavBar();
-	}
-
-	/** @param {string} folder
-	 * @param {string} item
-	 */
-	function getItemHref(folder, item) {
-		if (item.startsWith('/') || item.startsWith('http')) return item;
-		return `${folder}/${encodeURIComponent(item)}`;
 	}
 </script>
 
-<div class="mobile-nav-root" in:fade={{ duration: 200 }}>
-	<!-- Combined Top Header Row -->
-	<header class="nav-top-bar">
-		<div class="brand-side">
+<!-- Fullscreen mobile nav overlay matching hero blue color theme -->
+<div class="mobile-nav-root" transition:fade={{ duration: 250 }}>
+	<!-- Top Header Row -->
+	<header class="nav-top-header">
+		<a href="/" class="brand" on:click={handleAction}>
 			<img src="/1.png" alt="BITS Logo" class="logo-mini" />
-		</div>
-		<button on:click={toggleNavBar} class="close-minimal" aria-label="Close Menu">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="2.5"
-				stroke="currentColor"
-				class="w-6 h-6"
-			>
+		</a>
+		<button on:click={handleAction} class="close-btn" aria-label="Close Menu">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 			</svg>
 		</button>
 	</header>
 
+	<!-- Main navigation list -->
 	<div class="nav-scroll-area">
-		<nav class="nav-list-compact">
-			{#each $NavItems as nav, index}
-				<div class="nav-group-item {$dropdown[index] ? 'is-expanded' : ''}">
-					{#if nav.items && nav.items.length > 0}
-						<button class="row-link" on:click={(e) => dropdown_toggle(index, e)}>
-							<span class="label-text">{nav.name}</span>
-							<svg
-								class="chevron-icon {$dropdown[index] ? 'rotate' : ''}"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="3"
-							>
-								<polyline points="6 9 12 15 18 9" />
-							</svg>
-						</button>
-					{:else}
-						<a href={nav.folder || '#'} class="row-link" on:click={toggleNavBar}>
-							<span class="label-text">{nav.name}</span>
-						</a>
-					{/if}
+		<nav class="primary-nav">
+			<!-- Home -->
+			<div class="nav-item-wrap">
+				<a href="/" class="nav-item" on:click={handleAction}>
+					<span>Home</span>
+				</a>
+			</div>
 
-					{#if $dropdown[index] && nav.items && nav.items.length > 0}
-						<div class="submenu-compact" transition:slide={{ duration: 350 }}>
-							{#if nav.folder && nav.folder !== '#' && nav.folder !== '/'}
-								<a href={nav.folder} class="sub-link-neat overview-link" on:click={toggleNavBar}>
-									<div class="dot-indicator"></div>
-									<span>{nav.name} Overview</span>
-								</a>
-							{/if}
-							{#each nav.items as item}
-								<a
-									href={getItemHref(nav.folder, item)}
-									class="sub-link-neat"
-									on:click={() => onClick(item)}
-								>
-									<div class="dot-indicator"></div>
-									<span class="capitalize">{replaceHyphenWithSpace(item)}</span>
-								</a>
-							{/each}
-						</div>
-					{/if}
-				</div>
-			{/each}
+			<!-- Courses -->
+			<div class="nav-item-wrap">
+				<button 
+					class="nav-item {openSections.courses ? 'active' : ''}" 
+					on:click={() => toggleSection('courses')}
+					aria-expanded={openSections.courses}
+				>
+					<span>Courses</span>
+					<svg class="chevron {openSections.courses ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+						<polyline points="6 9 12 15 18 9" />
+					</svg>
+				</button>
+				{#if openSections.courses}
+					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
+						<a href="/department/Department%20of%20CSE" on:click={handleAction}>CSE</a>
+						<a href="/department/Department%20of%20CSE%20(AI%20&%20ML)" on:click={handleAction}>AI & ML</a>
+						<a href="/department/Department%20of%20CSE%20(Cyber%20Security)" on:click={handleAction}>CS</a>
+						<a href="/department/Department%20of%20ECE" on:click={handleAction}>ECE</a>
+						<a href="/department/Department%20of%20EEE" on:click={handleAction}>EEE</a>
+						<a href="/department/Department%20of%20MBA" on:click={handleAction}>MBA</a>
+					</div>
+				{/if}
+			</div>
+
+			<!-- Facilities -->
+			<div class="nav-item-wrap">
+				<button 
+					class="nav-item {openSections.facilities ? 'active' : ''}" 
+					on:click={() => toggleSection('facilities')}
+					aria-expanded={openSections.facilities}
+				>
+					<span>Facilities</span>
+					<svg class="chevron {openSections.facilities ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+						<polyline points="6 9 12 15 18 9" />
+					</svg>
+				</button>
+				{#if openSections.facilities}
+					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
+						<a href="/facilities/Laboratories" on:click={handleAction}>Laboratories</a>
+						<a href="/facilities/Knowledge-Resource-Center" on:click={handleAction}>Knowledge Resource Center</a>
+						<a href="/facilities/Accomidation" on:click={handleAction}>Accommodation</a>
+						<a href="/facilities/Cafeteria" on:click={handleAction}>Cafeteria</a>
+						<a href="/facilities/Sports" on:click={handleAction}>Sports</a>
+						<a href="/facilities/Transport" on:click={handleAction}>Transport</a>
+					</div>
+				{/if}
+			</div>
+
+			<!-- About Us -->
+			<div class="nav-item-wrap">
+				<button 
+					class="nav-item {openSections.about ? 'active' : ''}" 
+					on:click={() => toggleSection('about')}
+					aria-expanded={openSections.about}
+				>
+					<span>About Us</span>
+					<svg class="chevron {openSections.about ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+						<polyline points="6 9 12 15 18 9" />
+					</svg>
+				</button>
+				{#if openSections.about}
+					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
+						<a href="/aboutus/About-BITS" on:click={handleAction}>About BITS</a>
+						<a href="/aboutus/About-ABWEC" on:click={handleAction}>About ABWEC</a>
+						<a href="/aboutus/Message-from-Secretary-&-Correspondent" on:click={handleAction}>Secretary & Correspondent</a>
+						<a href="/aboutus/Message-from-Principal" on:click={handleAction}>Principal's Message</a>
+					</div>
+				{/if}
+			</div>
+
+			<!-- Contact Us -->
+			<div class="nav-item-wrap">
+				<button 
+					class="nav-item {openSections.contact ? 'active' : ''}" 
+					on:click={() => toggleSection('contact')}
+					aria-expanded={openSections.contact}
+				>
+					<span>Contact Us</span>
+					<svg class="chevron {openSections.contact ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+						<polyline points="6 9 12 15 18 9" />
+					</svg>
+				</button>
+				{#if openSections.contact}
+					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
+						<a href="/contactus#location" on:click={handleAction}>Campus Location</a>
+						<a href="/contactus#phone" on:click={handleAction}>Phone Numbers</a>
+						<a href="/contactus#admissions" on:click={handleAction}>Admissions Office</a>
+						<a href="/contactus#email" on:click={handleAction}>Email</a>
+						<a href="https://www.google.com/maps/search/?api=1&query=Baba+college+Lake+near+Pothinamallayyapalem" target="_blank" rel="noopener noreferrer" on:click={handleAction}>Google Maps</a>
+					</div>
+				{/if}
+			</div>
+
+			<!-- Admissions -->
+			<div class="nav-item-wrap">
+				<a href="/courses/Offered-Courses" class="nav-item admissions-link" on:click={handleAction}>
+					<span>Admissions</span>
+					<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 18px; height: 18px;">
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+						<polyline points="12 5 19 12 12 19"></polyline>
+					</svg>
+				</a>
+			</div>
+
+			<!-- More... Expandable Dropdown -->
+			<div class="nav-item-wrap">
+				<button 
+					class="nav-item {openSections.more ? 'active' : ''}" 
+					on:click={() => toggleSection('more')}
+					aria-expanded={openSections.more}
+				>
+					<span>More...</span>
+					<svg class="chevron {openSections.more ? 'rotate' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+						<polyline points="6 9 12 15 18 9" />
+					</svg>
+				</button>
+				{#if openSections.more}
+					<div class="submenu" transition:slide={{ duration: 250, easing: cubicOut }}>
+						<a href="/faculty" on:click={handleAction}>Faculty Profiles</a>
+						<a href="/examcell" on:click={handleAction}>Exam Cell Portal</a>
+						<a href="/research" on:click={handleAction}>R&D and Publications</a>
+						<a href="/placements" on:click={handleAction}>CDC & Placements</a>
+						<a href="/gallery" on:click={handleAction}>Campus Gallery</a>
+						<a href="/Online-Grievances" on:click={handleAction}>Online Grievance</a>
+					</div>
+				{/if}
+			</div>
 		</nav>
 
-		<!-- Minimal Footer CTA -->
-		<div class="nav-base">
-			<div class="social-row-mini">
-				<a href="https://instagram.com/bitsvizag"><i class="fa-brands fa-instagram"></i></a>
-				<a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
-				<a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+		<!-- Bottom Social Icons Area (Smooth and Elegant) -->
+		<div class="nav-footer">
+			<div class="social-links-row">
+				<a href="https://www.instagram.com/bits_vizag_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+				<a href="https://www.linkedin.com/company/bits-vizag/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+				<a href="https://youtube.com/@bitsmediacenter8449" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+					<i class="fa-brands fa-youtube"></i>
+				</a>
+				<a href="https://x.com/bits_vizag" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+					<i class="fa-brands fa-x-twitter"></i>
+				</a>
 			</div>
+			<p class="copyright-micro">&copy; 2026 Baba Institute of Technology and Sciences</p>
 		</div>
 	</div>
 </div>
@@ -145,196 +205,181 @@
 	.mobile-nav-root {
 		position: fixed;
 		inset: 0;
-		width: 100%;
-		height: 100vh;
-		background: #fff;
+		width: 100vw;
+		height: 100dvh;
+		background: rgba(5, 8, 22, 0.98); /* Rich dark blue overlay matching the hero section */
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		z-index: 10000;
 		display: flex;
 		flex-direction: column;
-		font-family: 'Inter', sans-serif;
-		z-index: 999999;
 		overflow: hidden;
+		font-family: 'Inter', sans-serif;
 	}
 
-	.nav-top-bar {
+	.nav-top-header {
+		height: 72px;
+		padding: 0 24px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1.2rem;
-		border-bottom: 1px solid #f1f5f9;
-		background: #fff;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 		flex-shrink: 0;
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-	}
-
-	.brand-side {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 4px;
-		max-width: 75%;
 	}
 
 	.logo-mini {
-		height: 44px;
+		height: 48px;
 		width: auto;
-		object-fit: contain;
-		margin-left: -2px;
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 	}
 
-	.tagline-micro {
-		font-size: 8px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		color: #94a3b8;
-		line-height: 1;
-	}
-
-	.close-minimal {
-		padding: 0.6rem;
-		color: #1e293b;
-		border-radius: 50%;
-		background: #f8fafc;
+	.close-btn {
+		background: none;
 		border: none;
+		padding: 8px;
+		margin-right: -8px;
+		color: #ffffff;
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: all 0.2s;
+		transition: transform 0.2s ease, opacity 0.2s ease;
 	}
 
-	.close-minimal:active {
-		background: #f1f5f9;
-		scale: 0.95;
+	.close-btn:active {
+		transform: scale(0.9);
+		opacity: 0.8;
 	}
 
 	.nav-scroll-area {
 		flex: 1;
-		display: flex;
-		flex-direction: column;
 		overflow-y: auto;
-		overflow-x: hidden;
 		-webkit-overflow-scrolling: touch;
-		overscroll-behavior: contain;
-		touch-action: pan-y;
-		padding: 1.5rem 1.2rem 12rem;
-		scrollbar-width: none;
-	}
-
-	.nav-scroll-area::-webkit-scrollbar {
-		display: none;
-	}
-
-	.nav-list-compact {
+		padding: 24px;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		gap: 40px;
+	}
+
+	/* Primary Navigation styles on dark overlay */
+	.primary-nav {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.nav-item-wrap {
 		width: 100%;
 	}
 
-	.nav-group-item {
-		border-bottom: 1px solid #f8fafc;
+	.nav-item {
 		width: 100%;
-	}
-
-	.row-link {
-		width: 100%;
+		height: 52px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0.9rem 0.5rem;
-		text-align: left;
 		background: none;
 		border: none;
+		padding: 0 16px;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 600;
+		color: rgba(255, 255, 255, 0.9);
+		text-align: left;
 		cursor: pointer;
 		text-decoration: none;
-	}
-
-	.label-text {
-		font-size: 1.05rem;
-		font-weight: 600;
-		color: #0f172a;
-	}
-
-	.chevron-icon {
-		width: 1.1rem;
-		height: 1.1rem;
-		color: #cbd5e1;
-		transition: transform 0.25s;
-	}
-
-	.is-expanded .label-text {
-		color: #fbbf24;
-	}
-	.chevron-icon.rotate {
-		transform: rotate(180deg);
-		color: #fbbf24;
-	}
-
-	.submenu-compact {
-		background: #fcfcfd;
-		padding: 0.5rem 0 1.2rem;
-		margin-bottom: 0.5rem;
 		border-radius: 12px;
+		transition: all 0.2s ease;
 	}
 
-	.sub-link-neat {
+	.nav-item:hover, .nav-item.active {
+		color: #3b82f6; /* Premium Blue */
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.nav-item:active {
+		color: #60a5fa;
+		background: rgba(255, 255, 255, 0.08);
+	}
+
+	.admissions-link {
+		color: #3b82f6;
+	}
+
+	.chevron {
+		width: 16px;
+		height: 16px;
+		color: rgba(255, 255, 255, 0.4);
+		transition: transform 0.25s ease;
+	}
+
+	.chevron.rotate {
+		transform: rotate(180deg);
+		color: #3b82f6;
+	}
+
+	/* Submenu Panel inside Dark Overlay */
+	.submenu {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding: 6px 0 12px 24px;
+		border-left: 2px solid rgba(255, 255, 255, 0.1);
+		margin-left: 24px;
+		margin-top: 2px;
+	}
+
+	.submenu a {
+		height: 40px;
 		display: flex;
 		align-items: center;
-		gap: 0.8rem;
-		padding: 0.8rem 1.2rem;
+		color: rgba(255, 255, 255, 0.6);
 		text-decoration: none;
-		color: #475569;
-		font-size: 0.95rem;
-		font-weight: 600;
+		font-size: 16px;
+		font-weight: 400;
+		transition: color 0.2s ease;
 	}
 
-	.sub-link-neat:active {
-		color: #fbbf24;
-		background: #fff;
+	.submenu a:hover {
+		color: #3b82f6;
 	}
 
-	.overview-link {
-		color: #fbbf24;
-		font-style: italic;
-		opacity: 0.9;
-	}
-
-	.dot-indicator {
-		width: 5px;
-		height: 5px;
-		background: #e2e8f0;
-		border-radius: 50%;
-	}
-
-	.nav-base {
-		margin-top: auto;
-		padding: 3rem 0;
+	/* Navigation Footer Area (Social Icons & Copyright) */
+	.nav-footer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 1.5rem;
-		border-top: 1px dashed #f1f5f9;
-		width: 100%;
+		gap: 16px;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		padding-top: 24px;
+		margin-top: auto;
 	}
 
-	.btn-apply-mini {
-		width: 100%;
-		max-width: 240px;
-		background: #0f172a;
-		color: #fff;
-		text-align: center;
-		padding: 0.9rem;
-		border-radius: 99px;
-		font-weight: 700;
-		font-size: 0.9rem;
-		text-transform: uppercase;
-		text-decoration: none;
-		box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
-	}
-
-	.social-row-mini {
+	.social-links-row {
 		display: flex;
-		gap: 1.5rem;
-		color: #94a3b8;
-		font-size: 1.2rem;
+		gap: 24px;
+		align-items: center;
+	}
+
+	.social-links-row a {
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 20px;
+		transition: color 0.2s ease, transform 0.2s ease;
+	}
+
+	.social-links-row a:hover {
+		color: #3b82f6;
+		transform: translateY(-2px);
+	}
+
+	.social-links-row a:active {
+		transform: translateY(0);
+	}
+
+	.copyright-micro {
+		font-size: 11px;
+		color: rgba(255, 255, 255, 0.3);
+		text-align: center;
 	}
 </style>

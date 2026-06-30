@@ -97,6 +97,12 @@
 		z-index: 40;
 	}
 
+	@media (max-width: 1024px) {
+		.marquee-container {
+			display: none !important;
+		}
+	}
+
 	.marquee-track {
 		display: flex;
 		width: fit-content;

@@ -926,6 +926,8 @@
 		}
 
 		nav {
+			position: relative !important;
+			top: auto !important;
 			z-index: 999;
 			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 		}

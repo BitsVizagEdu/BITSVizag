@@ -144,7 +144,7 @@
 			class="hero-content-anim relative z-[2] mx-auto flex w-full max-w-7xl items-center justify-center px-6 pt-16 pb-24 md:pt-20 md:pb-28"
 		>
 			<div
-				class="flex flex-col items-center text-center w-full max-w-5xl gap-2 md:gap-5 pt-6 md:pt-6 -translate-y-14 md:translate-y-0"
+				class="flex flex-col items-center text-center w-full max-w-5xl gap-2 md:gap-5 pt-6 md:pt-6 translate-y-12 md:translate-y-6"
 			>
 				<!-- Intro phrase above title -->
 				<p
@@ -172,7 +172,7 @@
 
 				<!-- CTA Buttons -->
 				<div
-					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-24 sm:mt-28 md:mt-36 px-1.5 translate-x-1 sm:translate-x-2 md:translate-x-3"
+					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-6 sm:mt-12 md:mt-16 px-1.5 translate-x-1 sm:translate-x-2 md:translate-x-3"
 				>
 					<a
 						href="/courses/Offered-Courses"
@@ -188,6 +188,22 @@
 					>
 						Admissions 2026 🎓
 					</a>
+				</div>
+
+				<!-- Compact Key Metrics Panel (2 Columns, 2 Rows) -->
+				<div class="metrics-panel lg:hidden">
+					<div class="metric-item">
+						<span class="shine-text" style="animation-delay: 0s;">Admissions Open 2026–27</span>
+					</div>
+					<div class="metric-item">
+						<span class="shine-text" style="animation-delay: 1s;">Autonomous Institution</span>
+					</div>
+					<div class="metric-item">
+						<span class="shine-text" style="animation-delay: 2s;">95% Placement Assistance</span>
+					</div>
+					<div class="metric-item">
+						<span class="shine-text" style="animation-delay: 3s;">18+ Years Legacy</span>
+					</div>
 				</div>
 
 				<!-- Glassmorphic Key Points Grid (Hidden on Mobile) -->
@@ -287,14 +303,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Crimson Red Bottom Bar (Explore BITS Vizag style like Explore Stanford) -->
-		<a
-			href="#explore"
-			class="absolute bottom-0 left-0 right-0 z-10 bg-[#8c1515] hover:bg-[#a31a1a] text-white flex items-center justify-center gap-2 py-3.5 transition-colors duration-300 font-bold uppercase tracking-wider text-[11px] md:text-xs shadow-[0_-4px_20px_rgba(0,0,0,0.3)] cursor-pointer animate-fade-in"
-		>
-			Explore BITS Vizag <i class="fa-solid fa-chevron-down animate-bounce text-[9px] mt-0.5"></i>
-		</a>
 	</section>
 
 	<SectionTransition />
@@ -830,5 +838,64 @@
 	:global(.hero-content-anim) {
 		will-change: transform, opacity;
 		transform: translateZ(0);
+	}
+
+	/* Compact Metrics Panel Styling - Hidden by default on desktop, shown only on mobile/tablet */
+	.metrics-panel {
+		display: none;
+	}
+
+	@media (max-width: 1023px) {
+		.metrics-panel {
+			display: grid;
+			grid-template-columns: 1fr; /* Stacked: one item per row */
+			gap: 12px;
+			padding: 16px 24px;
+			background: rgba(255, 255, 255, 0.02);
+			border: 1.5px solid rgba(255, 255, 255, 0.05);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border-radius: 14px;
+			width: 100%;
+			max-width: 320px;
+			margin: 44px auto 0; /* Pushed down for breathing room */
+			box-shadow: 
+				0 4px 20px rgba(255, 255, 255, 0.01), 
+				inset 0 1px 1px rgba(255, 255, 255, 0.03),
+				inset 0 -1px 1px rgba(255, 255, 255, 0.02);
+		}
+	}
+
+	.metric-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 24px;
+	}
+
+	/* Zinc colored text with shining text animation */
+	.shine-text {
+		font-size: 13.5px; /* Larger font size since they are stacked */
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+		background: linear-gradient(90deg, #a1a1aa 30%, #ffffff 50%, #a1a1aa 70%);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textShine 4s ease-in-out infinite;
+	}
+
+	/* Sequential shine sweeps from 0% to 100% position, then remains static */
+	@keyframes textShine {
+		0% {
+			background-position: 150% center;
+		}
+		30%,
+		100% {
+			background-position: -50% center;
+		}
 	}
 </style>

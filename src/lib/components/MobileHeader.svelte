@@ -1,14 +1,35 @@
 <script>
 	import { showNavBar } from '$lib/stores/store.js';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let isScrolled = false;
+	let lastScrollY = 0;
+	let isHeaderHidden = false;
+	let scrollProgress = 0;
+
+	$: isHome = $page.url.pathname === '/';
 
 	onMount(() => {
 		const handleScroll = () => {
-			isScrolled = window.scrollY > 20;
+			const currentScrollY = window.scrollY;
+			
+			// Check if page has been scrolled
+			isScrolled = currentScrollY > 10;
+			
+			// Interpolate scroll progress over 120px for pixel-perfect transitions
+			scrollProgress = Math.min(currentScrollY / 120, 1);
+			
+			// Smart sticky header behavior: hide on scroll down, reveal on scroll up
+			if (currentScrollY > lastScrollY && currentScrollY > 80) {
+				isHeaderHidden = true;
+			} else {
+				isHeaderHidden = false;
+			}
+			
+			lastScrollY = currentScrollY;
 		};
-		// passive: true tells browser we won't call preventDefault → unlocks scroll thread
+		
 		window.addEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
 		return () =>
 			window.removeEventListener('scroll', handleScroll, /** @type {any} */ ({ passive: true }));
@@ -20,30 +41,42 @@
 </script>
 
 <div class="mobile-header-container lg:hidden">
-	<!-- Main Header -->
-	<header class="main-header {isScrolled ? 'scrolled' : ''}">
+	<!-- Smart sticky header transitioning background styles dynamically -->
+	<header 
+		class="main-header {isScrolled ? 'scrolled' : ''} {isHeaderHidden ? 'hidden-header' : ''} {!isHome ? 'subpage-header' : ''}"
+		style={isHome ? `
+			background: rgba(255, 255, 255, ${scrollProgress * 0.8}); 
+			backdrop-filter: blur(${scrollProgress * 16}px); 
+			-webkit-backdrop-filter: blur(${scrollProgress * 16}px); 
+			box-shadow: 0 4px 20px rgba(0, 0, 0, ${scrollProgress * 0.04}); 
+			border-bottom: 1px solid rgba(0, 0, 0, ${scrollProgress * 0.05});
+			--hamburger-color: rgb(${Math.round(255 - scrollProgress * (255 - 15))}, ${Math.round(255 - scrollProgress * (255 - 23))}, ${Math.round(255 - scrollProgress * (255 - 42))});
+		` : ''}
+	>
 		<div class="header-inner">
-			<a href="/" class="brand">
-				<img src="/1.png" alt="BITS Vizag Logo" class="logo" />
-			</a>
-			<div class="accreditation-row">
-				<div class="acc-logo-wrap white-bg">
-					<img src="/Accredation-logos/UGC.png" alt="UGC" class="acc-logo" />
-				</div>
-				<div class="acc-logo-wrap white-bg">
-					<img src="/Accredation-logos/JNTUGV.jpg?v=2" alt="JNTU" class="acc-logo" />
-				</div>
-				<img src="/naac.png" alt="NAAC" class="acc-logo" />
-				<div class="acc-logo-wrap white-bg">
-					<img src="/rcb.png" alt="RCB" class="acc-logo" />
-				</div>
-				<img src="/bits.png" alt="BITS" class="acc-logo" />
+			<div class="left-section">
+				<!-- Elegant Back to Home Button shown only on subpages (Replaces logo completely on subpages) -->
+				{#if !isHome}
+					<a href="/" class="back-link" aria-label="Back to Home">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+						</svg>
+						<span>Home</span>
+					</a>
+				{:else}
+					<a href="/" class="brand">
+						<!-- Official BITS Vizag Logo (Only visible on home page) -->
+						<img src="/1.png" alt="BITS Vizag Logo" class="logo" />
+					</a>
+				{/if}
 			</div>
+
+			<!-- Minimal Hamburger Icon (Right) -->
 			<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle Menu">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
+				<div class="hamburger" class:dark={!isHome}>
+					<span class="line-1"></span>
+					<span class="line-2"></span>
+					<span class="line-3"></span>
 				</div>
 			</button>
 		</div>
@@ -53,172 +86,121 @@
 <style>
 	.mobile-header-container {
 		width: 100%;
-		position: relative;
-		z-index: 50;
-		font-family: 'Inter', sans-serif;
-	}
-
-	.top-info-bar {
-		background: #060b18;
-		color: #ffffff;
-		padding: 2px 10px;
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-		border-bottom: 1px solid rgba(251, 191, 36, 0.3);
-	}
-
-	.bright-text {
-		color: #ffffff;
-		text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
-	}
-
-	.contact-info {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-		justify-content: center;
-		font-size: 10px;
-		font-weight: 500;
-	}
-
-	.info-link {
-		color: #ffffff;
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		gap: 4px;
-	}
-
-	.info-link i {
-		color: #fbbf24;
-		font-size: 10px;
-	}
-
-	.social-and-buttons {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 2px 10px;
-	}
-
-	.social-icons {
-		display: flex;
-		gap: 10px;
-	}
-
-	.social-icons a {
-		color: white;
-		font-size: 11px;
-		transition: color 0.2s;
-	}
-
-	.social-icons a:hover {
-		color: #fbbf24;
-	}
-
-	.btn-eamcet {
-		font-size: 9px;
-		font-weight: 900;
-		padding: 4px 12px;
-		border-radius: 4px;
-		text-decoration: none;
-		text-transform: uppercase;
-		color: #080e1f;
-		background: #fbbf24;
-		border: 1px solid #fbbf24;
-		white-space: nowrap;
-		box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
-	}
-
-	.main-header {
-		background: white;
-		padding: 6px 12px;
-		/* Only transition transform/opacity - avoids layout recalc on scroll */
-		transition:
-			box-shadow 0.3s ease,
-			padding 0.3s ease;
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-		will-change: box-shadow;
-	}
-
-	.main-header.scrolled {
 		position: fixed;
 		top: 0;
 		left: 0;
-		right: 0;
-		padding: 4px 12px;
-		z-index: 100;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+		z-index: 1000;
+		font-family: 'Inter', sans-serif;
+		pointer-events: none;
+	}
+
+	.main-header {
+		background: transparent;
+		height: 72px;
+		display: flex;
+		align-items: center;
+		padding: 0 24px;
+		width: 100%;
+		pointer-events: auto;
+		transform: translateY(0);
+		transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.1s linear, box-shadow 0.1s linear, backdrop-filter 0.1s linear;
+		will-change: transform, background, box-shadow, backdrop-filter;
+	}
+
+	/* Hidden state on scroll down: slides out slowly and smoothly */
+	.main-header.hidden-header {
+		transform: translateY(-100%);
+	}
+
+	/* Subpage styling (Neat glassmorphism white instead of black) */
+	.main-header.subpage-header {
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(16px);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
 	.header-inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		max-width: 100%;
+		width: 100%;
+	}
+
+	.left-section {
+		display: flex;
+		align-items: center;
+	}
+
+	/* Back link styling for subpages */
+	.back-link {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		color: #0f172a;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 6px 12px;
+		border-radius: 8px;
+		background: rgba(15, 23, 42, 0.05);
+		border: 1px solid rgba(15, 23, 42, 0.08);
+		transition: all 0.2s ease;
+	}
+
+	.back-link:active {
+		background: rgba(15, 23, 42, 0.1);
+		transform: scale(0.96);
 	}
 
 	.brand {
 		display: flex;
 		align-items: center;
-		gap: 10px;
 		text-decoration: none;
-		color: #080e1f;
 		min-width: 0;
 	}
 
 	.logo {
-		height: 40px;
-		width: auto;
-	}
-
-	.accreditation-row {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 6px;
-		flex: 1;
-	}
-
-	.acc-logo-wrap.white-bg {
-		background-color: #ffffff !important;
-		border-radius: 4px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 2px;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-	}
-
-	.acc-logo {
-		height: 28px;
+		height: 48px;
 		width: auto;
 		object-fit: contain;
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 	}
 
 	.menu-toggle {
-		background: none;
+		background: #0f172a; /* Dark circle background */
 		border: none;
-		padding: 6px;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
 		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.menu-toggle:active {
+		transform: scale(0.92);
 	}
 
 	.hamburger {
 		width: 20px;
-		height: 14px;
+		height: 12px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	.hamburger span {
 		display: block;
 		height: 2px;
 		width: 100%;
-		background: #080e1f;
-		border-radius: 2px;
-		transition: all 0.3s ease;
+		background: #ffffff; /* Always crisp white inside the dark circle button */
+		border-radius: 1.5px;
+		transition: background 0.3s ease;
 	}
 </style>

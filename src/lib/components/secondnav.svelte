@@ -39,7 +39,7 @@
 	});
 </script>
 
-<svelte:window on:keydown={handleEscape} on:scroll={handleScroll} />
+<svelte:window on:keydown={handleEscape} on:scroll|passive={handleScroll} />
 
 <nav class:isHidden>
 	<div class="wrapper">
@@ -253,6 +253,8 @@
 
 	@media screen and (max-width: 768px) {
 		nav {
+			position: relative !important;
+			top: auto !important;
 			overflow: visible;
 			z-index: 1001;
 		}
