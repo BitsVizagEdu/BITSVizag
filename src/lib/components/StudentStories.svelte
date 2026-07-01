@@ -81,21 +81,21 @@
 </script>
 
 <section
-	class="py-8 bg-gradient-to-b from-[#fbfdff] via-[#f5f8ff] to-[#f8faff] overflow-hidden border-t border-slate-100"
+	class="py-12 md:py-24 bg-gradient-to-b from-[#fbfdff] via-[#f5f8ff] to-[#f8faff] overflow-hidden border-t border-slate-100"
 >
 	<div class="max-w-7xl mx-auto px-4">
 		<!-- Compact Section Title -->
-		<div class="text-center mb-6">
+		<div class="text-center mb-8 md:mb-14">
 			<div
-				class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full mb-2"
+				class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full mb-3"
 				style="background-color: #EEF4FF; border: 1px solid rgba(37, 99, 235, 0.15);"
 			>
-				<i class="fa-solid fa-graduation-cap text-[9px]" style="color: #2563EB;"></i>
-				<span class="text-[10px] font-black uppercase tracking-wider" style="color: #1D4ED8;"
+				<i class="fa-solid fa-graduation-cap text-[10px] md:text-[11px]" style="color: #2563EB;"></i>
+				<span class="text-[10px] md:text-[11px] font-black uppercase tracking-wider" style="color: #1D4ED8;"
 					>Success Stories</span
 				>
 			</div>
-			<h2 class="text-base md:text-xl font-bold tracking-tight">
+			<h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">
 				<span style="color: #0F172A;">Real Stories,</span>
 				<span style="color: #0B5FFF;">Real Success</span>
 			</h2>
@@ -103,20 +103,19 @@
 
 		<!-- Horizontal Infinite Scrolling Marquee -->
 		<div class="relative w-full overflow-hidden mask-fade-edges">
-			<div class="marquee-track flex gap-4 animate-marquee py-2">
+			<div class="marquee-track flex gap-5 animate-marquee py-3">
 				<!-- Double the array to enable seamless looping -->
 				{#each [...stories, ...stories] as story}
 					<div
-						class="mini-story-card bg-white border border-slate-100 rounded-xl px-5 py-4 flex flex-col justify-between shrink-0 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-200"
+						class="mini-story-card bg-white border border-slate-100 rounded-xl px-5 py-4 md:px-7 md:py-6 flex flex-col justify-between shrink-0 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-200"
 					>
 						<!-- Info Column -->
 						<div class="flex flex-col text-left min-w-0">
-							<div class="flex items-center gap-2 flex-wrap sm:flex-nowrap">
-								<span class="font-bold text-slate-800 text-xs truncate">{story.name}</span>
-								<span class="text-[9px] text-slate-400 font-semibold shrink-0">{story.program}</span
-								>
+							<div class="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+								<span class="font-bold text-slate-800 text-xs md:text-base truncate">{story.name}</span>
+								<span class="text-[9px] md:text-xs text-slate-400 font-semibold shrink-0">{story.program}</span>
 								<span
-									class="px-1.5 py-0.5 rounded-full border text-[9px] font-black uppercase tracking-wider {themeColors[
+									class="px-1.5 py-0.5 md:px-2 md:py-1 rounded-full border text-[9px] md:text-[10.5px] font-black uppercase tracking-wider {themeColors[
 										story.theme
 									].badgeBg} shrink-0"
 								>
@@ -124,7 +123,7 @@
 								</span>
 							</div>
 							<p
-								class="text-slate-500 text-[10.5px] mt-2 font-medium italic leading-relaxed line-clamp-2"
+								class="text-slate-500 text-[10.5px] md:text-[13px] mt-2 md:mt-3 font-medium italic leading-relaxed line-clamp-2"
 							>
 								"{story.quote}"
 							</p>
@@ -159,6 +158,11 @@
 
 	.mini-story-card {
 		width: 320px;
+	}
+	@media (min-width: 768px) {
+		.mini-story-card {
+			width: 440px;
+		}
 	}
 
 	@keyframes marquee {

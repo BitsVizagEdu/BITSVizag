@@ -1,6 +1,14 @@
 <script>
 	let events = [
 		{
+			name: 'Graduation Day Celebration 2025',
+			description: 'Celebrating the achievements and success of the Class of 2025.',
+			date: 'June 27, 2026',
+			image: '/logo-150/RAJ_6455.JPG',
+			href: 'https://www.instagram.com/p/DaKqdNrE3X2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+			click: 'Click to view more >>>'
+		},
+		{
 			name: 'Mega Job Fair 2026',
 			description:
 				'The Mega Job Fair 2026, organized by BITS Vizag (A) and Magic Bus Foundation on 10th March 2026, saw 1,786 students from 121 colleges attend, with 696 selected and 368 shortlisted by 38 companies. The event was a grand success, empowering youth through meaningful industry connections.',
@@ -289,14 +297,6 @@
 			date: 'June 21, 2023',
 			image: '/events/6.jpeg',
 			href: 'https://www.instagram.com/p/Ctv-lUWroBU/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
-			click: 'Click to view more >>>'
-		},
-		{
-			name: 'GRADUATION DAY CELEBRATION',
-			description: 'Featuring Chief Guest Prof. G. Swami Naidu, Registrar - JNTU GV.',
-			date: 'September 2, 2022',
-			image: '/events/7.jpg',
-			href: 'https://www.instagram.com/p/CrtQ2fwPY26/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
 			click: 'Click to view more >>>'
 		}
 	];
