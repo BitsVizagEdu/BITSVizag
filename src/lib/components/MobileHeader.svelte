@@ -89,13 +89,13 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 1000;
+		z-index: 9999;
 		font-family: 'Inter', sans-serif;
 		pointer-events: none;
 	}
 
 	.main-header {
-		background: transparent;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 		height: 72px;
 		display: flex;
 		align-items: center;

@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 
 	import '../app.css';
 	import Nav from '$lib/components/navmenu.svelte';
@@ -276,7 +276,9 @@
 			<Middlenav />
 
 			<BackToTop />
-			<slot />
+			<div class={$page.url.pathname !== '/' ? 'pt-[72px] lg:pt-0' : ''}>
+				<slot />
+			</div>
 			<Footer />
 		{/if}
 	</main>
