@@ -22,9 +22,9 @@
 			id: 'box-2'
 		},
 		{
-			pic: '/gallery/g-03.jpg',
-			name: 'The Graduation Day',
-			date: '28/05/2025',
+			pic: '/logo-150/RAJ_6455.JPG',
+			name: 'The Graduation Day 2025',
+			date: '27/06/2026',
 			href: '#',
 			id: 'box-3'
 		},

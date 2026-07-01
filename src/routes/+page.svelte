@@ -148,6 +148,33 @@
 		<HighlightsSlider />
 	</div>
 
+	<!-- Placements Highlights Banner Section -->
+	<section
+		class="w-full bg-white py-6 md:py-12 flex items-center justify-center"
+		data-aos="fade-up"
+	>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+			<div
+				class="relative group w-full rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-slate-100 transition-all duration-500 hover:scale-[1.002]"
+			>
+				<!-- Subtle shine overlay -->
+				<div
+					class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shine pointer-events-none"
+				></div>
+				<a href="/placements">
+					<picture class="w-full h-auto block">
+						<source media="(max-width: 768px)" srcset="/mob-placements-2.png" />
+						<img
+							src="/placed-com.png"
+							alt="Placements Highlights"
+							class="w-full h-auto object-contain block mx-auto rounded-2xl"
+						/>
+					</picture>
+				</a>
+			</div>
+		</div>
+	</section>
+
 	<div class="celebrate-header-container pt-16 pb-6 md:py-20 bg-white overflow-hidden relative">
 		<!-- Subtle decorative background element -->
 		<div
