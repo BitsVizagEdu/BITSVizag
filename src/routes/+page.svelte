@@ -126,183 +126,20 @@
 	<section
 		class="hero-wrap relative min-h-[92vh] md:min-h-screen overflow-hidden bg-[#050816] flex items-center justify-center"
 	>
-		<!-- Background Image occupying full Hero section -->
-		<img
-			src="/bitsvizag.png"
-			alt="BITS Vizag campus"
-			loading="eager"
-			decoding="async"
-			fetchpriority="high"
-			class="absolute inset-0 h-full w-full object-cover z-0 hero-bg-img"
-		/>
+		<!-- Smooth Gradient Vignette Overlay for Premium Contrast -->
+		<div class="hero-vignette-overlay"></div>
 
-		<!-- High quality gradient overlay for contrast and readability -->
-		<div class="absolute inset-0 z-[1] hero-gradient-overlay"></div>
-
-		<!-- Centered content block -->
-		<div
-			class="hero-content-anim relative z-[2] mx-auto flex w-full max-w-7xl items-center justify-center px-6 pt-16 pb-24 md:pt-20 md:pb-28"
-		>
-			<div
-				class="flex flex-col items-center text-center w-full max-w-5xl gap-2 md:gap-5 pt-6 md:pt-6 translate-y-12 md:translate-y-6"
-			>
-				<!-- Intro phrase above title -->
-				<p
-					class="text-[7px] sm:text-[7px] md:text-sm font-bold uppercase animate-fade-up-reveal mt-0 sm:mt-2 -translate-y-2 sm:translate-y-0 translate-x-1 sm:translate-x-2 md:translate-x-3"
-					style="font-family: 'Press Start 2P', monospace; letter-spacing: 0.02em; background: #FFD84D; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 8px rgba(255, 216, 77, 0.4));"
-				>
-					Start your journey with
-				</p>
-
-				<!-- Main Title: BITS VIZAG (Satoshi Sans-Serif Style, shifted upper) -->
-				<h1
-					class="hero-main-title text-6xl sm:text-8xl md:text-9xl font-bold text-white leading-none drop-shadow-lg translate-x-2 sm:translate-x-2 md:translate-x-4 mt-10 sm:mt-0"
-				>
-					Bits Vizag
-				</h1>
-
-				<!-- Subtitle (typing and premium tagline) -->
-				<p
-					class="text-base md:text-xl text-[#f8fafc] max-w-3xl leading-relaxed font-bold drop-shadow hero-subtitle animate-fade-up-reveal mt-6 md:mt-2"
-				>
-					Empowering tomorrow's <span class="typing-text-accent">{displayText}</span><span
-						class="custom-cursor"
-					></span>
-				</p>
-
-				<!-- CTA Buttons -->
-				<div
-					class="flex flex-row items-center justify-center gap-2 sm:gap-2.5 w-full max-w-[350px] sm:max-w-none mx-auto mt-10 sm:mt-18 md:mt-24 px-1.5 translate-x-1 sm:translate-x-2 md:translate-x-3"
-				>
-					<a
-						href="/courses/Offered-Courses"
-						class="font-cta text-[10px] sm:text-xs md:text-sm font-bold text-white bg-[#c8960c] px-3 sm:px-8 py-2 sm:py-4 rounded-lg hover:bg-[#b0820a] transition-all duration-200 uppercase tracking-wider text-center flex items-center justify-center gap-1 sm:gap-2 shadow-[0_4px_15px_rgba(200,150,12,0.3)] flex-1 sm:flex-initial whitespace-nowrap"
-					>
-						Start Your Journey &rarr;
-					</a>
-					<a
-						href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="font-cta text-[10px] sm:text-xs md:text-sm font-bold text-white bg-[#0d1b3e] px-3 sm:px-8 py-2.5 sm:py-4 rounded-lg hover:bg-[#152857] transition-all duration-200 uppercase tracking-wider text-center flex items-center justify-center gap-1 sm:gap-2 shadow-[0_4px_15px_rgba(13,27,62,0.3)] flex-1 sm:flex-initial whitespace-nowrap"
-					>
-						Admissions 2026 🎓
-					</a>
-				</div>
-
-				<!-- Compact Key Metrics Panel (2 Columns, 2 Rows) -->
-				<div class="metrics-panel lg:hidden">
-					<div class="metric-item">
-						<span class="shine-text" style="animation-delay: 0s;">Admissions Open 2026–27</span>
-					</div>
-					<div class="metric-item">
-						<span class="shine-text" style="animation-delay: 1s;">Autonomous Institution</span>
-					</div>
-					<div class="metric-item">
-						<span class="shine-text" style="animation-delay: 2s;">95% Placement Assistance</span>
-					</div>
-					<div class="metric-item">
-						<span class="shine-text" style="animation-delay: 3s;">18+ Years Legacy</span>
-					</div>
-				</div>
-
-				<!-- Glassmorphic Key Points Grid (Hidden on Mobile) -->
-				<div class="hidden md:grid grid-cols-3 gap-6 w-full mt-14 px-4 animate-fade-up-reveal">
-					<!-- Card 1: Foundation -->
-					<div
-						class="relative group p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[18px] transition-all duration-300 hover:bg-white/[0.05] hover:border-amber-400/40 hover:-translate-y-1 text-left shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
-					>
-						<div
-							class="absolute -top-2.5 left-5 px-3 py-0.5 bg-amber-400 text-black font-extrabold text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_12px_rgba(251,191,36,0.3)]"
-						>
-							Foundation
-						</div>
-						<div class="flex items-start gap-4 mt-1.5">
-							<div
-								class="w-11 h-11 shrink-0 flex items-center justify-center rounded-[12px] bg-amber-400/10 text-amber-400 text-lg border border-amber-400/30 shadow-[0_0_15px_rgba(245,158,11,0.15)] transition-all duration-300 group-hover:scale-105"
-							>
-								<i class="fa-solid fa-book-open group-hover:animate-pulse"></i>
-							</div>
-							<div>
-								<h3
-									class="text-white font-extrabold text-sm md:text-base tracking-tight group-hover:text-amber-400 transition-colors duration-200"
-								>
-									Engineering Foundation
-								</h3>
-								<p
-									class="text-slate-300/80 text-[11px] md:text-[11.5px] mt-1 leading-relaxed font-medium"
-								>
-									Experienced faculty, modern laboratories, outcome-based learning, and
-									industry-aligned curriculum.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Card 2: Innovation -->
-					<div
-						class="relative group p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[18px] transition-all duration-300 hover:bg-white/[0.05] hover:border-cyan-400/40 hover:-translate-y-1 text-left shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
-					>
-						<div
-							class="absolute -top-2.5 left-5 px-3 py-0.5 bg-cyan-400 text-black font-extrabold text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_12px_rgba(34,211,238,0.3)]"
-						>
-							Innovation
-						</div>
-						<div class="flex items-start gap-4 mt-1.5">
-							<div
-								class="w-11 h-11 shrink-0 flex items-center justify-center rounded-[12px] bg-cyan-400/10 text-cyan-400 text-lg border border-cyan-400/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all duration-300 group-hover:scale-105"
-							>
-								<i class="fa-solid fa-lightbulb group-hover:animate-bounce"></i>
-							</div>
-							<div>
-								<h3
-									class="text-white font-extrabold text-sm md:text-base tracking-tight group-hover:text-cyan-400 transition-colors duration-200"
-								>
-									Practical Learning
-								</h3>
-								<p
-									class="text-slate-300/80 text-[11px] md:text-[11.5px] mt-1 leading-relaxed font-medium"
-								>
-									Hands-on experience through project-based learning, technical clubs, workshops,
-									and research.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Card 3: Career Development -->
-					<div
-						class="relative group p-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[18px] transition-all duration-300 hover:bg-white/[0.05] hover:border-emerald-400/40 hover:-translate-y-1 text-left shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
-					>
-						<div
-							class="absolute -top-2.5 left-5 px-3 py-0.5 bg-emerald-400 text-black font-extrabold text-[9px] uppercase rounded-full tracking-wider shadow-[0_0_12px_rgba(52,211,153,0.3)]"
-						>
-							Careers
-						</div>
-						<div class="flex items-start gap-4 mt-1.5">
-							<div
-								class="w-11 h-11 shrink-0 flex items-center justify-center rounded-[12px] bg-emerald-400/10 text-emerald-400 text-lg border border-emerald-400/30 shadow-[0_0_15px_rgba(52,211,153,0.15)] transition-all duration-300 group-hover:scale-105"
-							>
-								<i class="fa-solid fa-briefcase group-hover:animate-pulse"></i>
-							</div>
-							<div>
-								<h3
-									class="text-white font-extrabold text-sm md:text-base tracking-tight group-hover:text-emerald-400 transition-colors duration-200"
-								>
-									Career Development
-								</h3>
-								<p
-									class="text-slate-300/80 text-[11px] md:text-[11.5px] mt-1 leading-relaxed font-medium"
-								>
-									Dedicated career preparation, industry collaborations, internships, and placement
-									assistance.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<picture class="absolute inset-0 h-full w-full block">
+			<source media="(max-width: 768px)" srcset="/bits-hero-mob.png" />
+			<img
+				src="/hero-bits.png"
+				alt="BITS Vizag Campus"
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+				class="absolute inset-0 h-full w-full object-cover object-bottom z-0 animate-hero-premium"
+			/>
+		</picture>
 	</section>
 
 	<SectionTransition />
@@ -897,5 +734,27 @@
 		100% {
 			background-position: -50% center;
 		}
+	}
+
+	@keyframes heroKenBurns {
+		0% {
+			opacity: 0;
+			transform: scale(1.05) translateY(12px);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+		}
+	}
+	.animate-hero-premium {
+		animation: heroKenBurns 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		will-change: transform, opacity;
+	}
+	.hero-vignette-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 25%);
+		z-index: 1;
+		pointer-events: none;
 	}
 </style>
