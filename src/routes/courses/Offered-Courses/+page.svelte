@@ -336,6 +336,69 @@
 								</tbody>
 							</table>
 						</div>
+
+						<div class="mobile-courses-list">
+							{#each bTechPrograms as course}
+								<div class="mobile-course-card is-clickable" on:click={() => navigateToCourse(course.slug)}>
+									<div class="card-header">
+										<div class="course-icon-bubble">
+											{#if course.sno === 1}
+												<!-- Computer Science Monitor Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+												</svg>
+											{:else if course.sno === 2}
+												<!-- AI Brain Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+												</svg>
+											{:else if course.sno === 3}
+												<!-- Cyber Security Shield/Lock Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+												</svg>
+											{:else if course.sno === 4}
+												<!-- Chip/Processor Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+												</svg>
+											{:else if course.sno === 5}
+												<!-- Lightning Bolt Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+												</svg>
+											{:else if course.sno === 6}
+												<!-- Gear/Mechanical Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+													<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+												</svg>
+											{/if}
+										</div>
+										<span class="card-sno">S.No. {course.sno}</span>
+									</div>
+									<div class="card-body">
+										<h3 class="card-course-name">{course.name}</h3>
+										<div class="card-details-row">
+											<div class="card-detail-item">
+												<span class="detail-label">ESTD</span>
+												<span class="detail-value">{course.estd}</span>
+											</div>
+											<div class="card-detail-item">
+												<span class="detail-label">Intake</span>
+												<span class="detail-value highlighted">{course.intake} Seats</span>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										<span class="card-action-text text-blue">Explore Department</span>
+										<svg class="card-action-icon text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+										</svg>
+									</div>
+								</div>
+							{/each}
+						</div>
 					</div>
 				{:else if activeTab === 'pg'}
 					<div class="course-section">
@@ -447,6 +510,52 @@
 									{/each}
 								</tbody>
 							</table>
+						</div>
+
+						<div class="mobile-courses-list">
+							{#each pgPrograms as course}
+								<div
+									class="mobile-course-card {course.slug ? 'is-clickable' : 'is-static'}"
+									on:click={() => navigateToCourse(course.slug)}
+								>
+									<div class="card-header">
+										<div class="course-icon-bubble">
+											{#if course.sno === 1}
+												<!-- Academic cap outline -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+													<path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+												</svg>
+											{:else if course.sno === 2}
+												<!-- Briefcase/MBA Icon -->
+												<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4.67 12.89a3 3 0 11-5.34 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
+											{/if}
+										</div>
+										<span class="card-sno">S.No. {course.sno}</span>
+									</div>
+									<div class="card-body">
+										<h3 class="card-course-name">{course.name}</h3>
+										<div class="card-details-row">
+											<div class="card-detail-item">
+												<span class="detail-label">Duration</span>
+												<span class="detail-value">{course.duration}</span>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										{#if course.slug}
+											<span class="card-action-text text-blue">Explore Department</span>
+											<svg class="card-action-icon text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+											</svg>
+										{:else}
+											<span class="card-action-text text-gray">Information Only</span>
+										{/if}
+									</div>
+								</div>
+							{/each}
 						</div>
 					</div>
 				{/if}
@@ -1239,6 +1348,138 @@
 		.intake-badge {
 			font-size: 0.8rem;
 			padding: 0.3rem 0.75rem;
+		}
+	}
+
+	.mobile-courses-list {
+		display: none;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		.table-wrapper {
+			display: none;
+		}
+
+		.mobile-courses-list {
+			display: flex;
+		}
+
+		.mobile-course-card {
+			background: #ffffff;
+			border: 1px solid #e2e8f0;
+			border-radius: 1rem;
+			padding: 1.25rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.85rem;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+			transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.mobile-course-card.is-clickable {
+			cursor: pointer;
+		}
+
+		.mobile-course-card.is-clickable:active {
+			transform: scale(0.98);
+			border-color: #fbbf24;
+			background: #fafafa;
+		}
+
+		.mobile-course-card .card-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.mobile-course-card .card-sno {
+			font-size: 0.8rem;
+			font-weight: 800;
+			color: #94a3b8;
+			background: #f1f5f9;
+			padding: 0.2rem 0.6rem;
+			border-radius: 0.375rem;
+		}
+
+		.mobile-course-card .card-body {
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+		}
+
+		.mobile-course-card .card-course-name {
+			font-size: 1.1rem;
+			font-weight: 800;
+			color: #0e214d;
+			line-height: 1.4;
+			margin: 0;
+		}
+
+		.mobile-course-card .card-details-row {
+			display: flex;
+			gap: 1.5rem;
+			border-top: 1px dashed #e2e8f0;
+			padding-top: 0.75rem;
+		}
+
+		.mobile-course-card .card-detail-item {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+
+		.mobile-course-card .detail-label {
+			font-size: 0.7rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			color: #64748b;
+		}
+
+		.mobile-course-card .detail-value {
+			font-size: 0.9rem;
+			font-weight: 700;
+			color: #334155;
+		}
+
+		.mobile-course-card .detail-value.highlighted {
+			color: #e0a92e;
+		}
+
+		.mobile-course-card .card-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-top: 1px solid #f1f5f9;
+			padding-top: 0.75rem;
+			margin-top: 0.25rem;
+		}
+
+		.mobile-course-card .card-action-text {
+			font-size: 0.8rem;
+			font-weight: 800;
+			letter-spacing: 0.02em;
+		}
+
+		.mobile-course-card .card-action-text.text-blue {
+			color: #3b82f6;
+		}
+
+		.mobile-course-card .card-action-text.text-gray {
+			color: #64748b;
+		}
+
+		.mobile-course-card .card-action-icon {
+			width: 1rem;
+			height: 1rem;
+		}
+
+		.mobile-course-card .card-action-icon.text-blue {
+			color: #3b82f6;
 		}
 	}
 </style>
