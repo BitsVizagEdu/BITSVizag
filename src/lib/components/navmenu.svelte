@@ -181,6 +181,9 @@
 
 				<div class="submenu-links-grid">
 					{#if currentView === 'courses'}
+						<a href="/courses/Offered-Courses" on:click={handleAction} class="submenu-link highlight-menu-item"
+							>Courses Offered Overview</a
+						>
 						<a href="/department/Department%20of%20CSE" on:click={handleAction} class="submenu-link"
 							>CSE</a
 						>
@@ -528,6 +531,19 @@
 		border-color: rgba(59, 130, 246, 0.3);
 		color: #3b82f6;
 		transform: translateX(4px);
+	}
+
+	.submenu-link.highlight-menu-item {
+		background: rgba(251, 191, 36, 0.08);
+		border-color: rgba(251, 191, 36, 0.35);
+		color: #fbbf24;
+	}
+
+	.submenu-link.highlight-menu-item:hover,
+	.submenu-link.highlight-menu-item:active {
+		background: rgba(251, 191, 36, 0.15);
+		border-color: #fbbf24;
+		color: #ffffff;
 	}
 
 	.nav-footer {
