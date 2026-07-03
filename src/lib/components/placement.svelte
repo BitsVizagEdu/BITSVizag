@@ -13,44 +13,79 @@
 </script>
 
 <section class="recruiters-premium">
-	<div class="ambient one" aria-hidden="true"></div>
-	<div class="ambient two" aria-hidden="true"></div>
-
-	<div class="inner-shell">
-		<div class="heading performance-layer">
-			<p class="eyebrow">Industry Network</p>
-			<h2>
-				<span class="headline-strong">Our Recruiters</span>
-				<span class="headline-muted">Till Date</span>
-			</h2>
-			<p class="subtitle">
-				A trusted network of companies driving placements, innovation, and real-world impact for our
-				students.
-			</p>
+	<!-- Top Area with Background Image -->
+	<div class="hero-header-area">
+		<div class="inner-shell">
+			<div class="header-grid">
+				<h2 class="main-title">
+					Build careers with confidence<br />and lead the future
+				</h2>
+				
+				<div class="sub-row">
+					<div class="sub-col col-left">
+						<p>Empowering talented students with premium industry partnerships, expanding opportunities, and securing records. <span class="arrow-indicator">→</span></p>
+					</div>
+					<div class="sub-col col-mid">
+						<p>Comprehensive placement support, technical mentoring, and internships across all engineering disciplines.</p>
+					</div>
+					<div class="sub-col col-right">
+						<p class="rating-box">
+							<span class="rating-num">90% / 100%</span>
+							<span class="stars">★★★★★</span>
+							<span class="rating-label">Impartial placement record & MNC partners</span>
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="marquee-wrapper">
-			<div class="fade-edge left" aria-hidden="true"></div>
-			<div class="fade-edge right" aria-hidden="true"></div>
-			<div class="marquee-row marquee-row-left" aria-label="Recruiter logos moving left to right">
-				<div class="marquee-track">
-					{#each [...firstRowLogos, ...firstRowLogos] as logo}
-						<div class="logo-chip">
-							<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" loading="lazy" />
-						</div>
-					{/each}
+	<!-- Logo Section -->
+	<div class="logos-section">
+		<div class="inner-shell">
+			<p class="section-label">TRUSTED BY 100+ LEADING MULTINATIONAL COMPANIES & CORPORATE PARTNERS</p>
+			
+			<div class="marquee-wrapper">
+				<div class="fade-edge left" aria-hidden="true"></div>
+				<div class="fade-edge right" aria-hidden="true"></div>
+				
+				<div class="marquee-row marquee-row-left" aria-label="Recruiter logos row one">
+					<div class="marquee-track">
+						{#each [...firstRowLogos, ...firstRowLogos] as logo}
+							<div class="logo-chip">
+								<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" loading="lazy" />
+							</div>
+						{/each}
+					</div>
+				</div>
+
+				<div class="marquee-row marquee-row-right" aria-label="Recruiter logos row two">
+					<div class="marquee-track">
+						{#each [...secondRowLogos, ...secondRowLogos] as logo}
+							<div class="logo-chip">
+								<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" loading="lazy" />
+							</div>
+						{/each}
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 
-			<div class="marquee-row marquee-row-right" aria-label="Recruiter logos moving right to left">
-				<div class="marquee-track">
-					{#each [...secondRowLogos, ...secondRowLogos] as logo}
-						<div class="logo-chip">
-							<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" loading="lazy" />
-						</div>
-					{/each}
-				</div>
-			</div>
+	<!-- Statement Section with Badges -->
+	<div class="statement-section">
+		<div class="inner-shell">
+			<p class="colored-statement">
+				We help <span class="dim">our students</span>
+				<span class="badge blue">speed up</span>
+				<span class="dim">career growth,</span>
+				<span class="badge orange">modernize</span>
+				<span class="dim">technical skills, and</span>
+				<span class="badge sky">adopt AI</span>
+				<span class="dim">so they can</span>
+				<span class="badge pink">lead the future</span>
+				<span class="dim">without compromising on academic excellence. That's our promise.</span>
+			</p>
 		</div>
 	</div>
 </section>
@@ -61,116 +96,122 @@
 	.recruiters-premium {
 		position: relative;
 		overflow: hidden;
-		padding: 5rem 0;
-		font-family: 'Roboto', 'Segoe UI', sans-serif;
-		background:
-			radial-gradient(980px 420px at -10% -24%, rgba(94, 176, 255, 0.2), transparent 56%),
-			radial-gradient(920px 420px at 108% 115%, rgba(122, 208, 255, 0.19), transparent 57%),
-			linear-gradient(125deg, #ffffff 0%, #f8fcff 46%, #eef7ff 100%);
+		background: #f8fafc;
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		padding-bottom: 4rem;
 	}
 
-	.ambient {
-		position: absolute;
-		width: 320px;
-		height: 320px;
-		border-radius: 50%;
-		filter: blur(52px);
-		opacity: 0.45;
-		pointer-events: none;
-	}
-
-	.ambient.one {
-		top: -180px;
-		left: -90px;
-		background: rgba(111, 196, 255, 0.34);
-	}
-
-	.ambient.two {
-		right: -120px;
-		bottom: -190px;
-		background: rgba(153, 214, 255, 0.32);
-	}
-
-	.performance-layer {
-		content-visibility: auto;
-		contain-intrinsic-size: 500px;
-		transform: translateZ(0);
-		opacity: 1 !important;
-		visibility: visible !important;
+	.hero-header-area {
+		padding: 5rem 0 3rem;
+		background: 
+			linear-gradient(to bottom, rgba(248, 250, 252, 0.1) 40%, rgba(248, 250, 252, 1) 100%),
+			url('/place-back.png') no-repeat center top / cover;
+		min-height: 380px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.inner-shell {
 		position: relative;
 		z-index: 2;
-		width: min(1500px, 94vw);
+		width: min(1240px, 88vw);
 		margin: 0 auto;
-		padding: 0 0.25rem;
 	}
 
-	.heading {
-		text-align: center;
-		margin-bottom: 1.65rem;
-	}
-
-	.eyebrow {
-		margin: 0;
-		font-size: 0.82rem;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		font-weight: 800;
-		color: #0ea55a;
-	}
-
-	.eyebrow::after {
-		content: '';
-		display: block;
-		width: 74px;
-		height: 2px;
-		margin: 0.55rem auto 0;
-		background: linear-gradient(90deg, rgba(14, 165, 90, 0.15), rgba(14, 165, 90, 0.95));
-	}
-
-	.heading h2 {
-		margin: 1.2rem 0 0;
-		font-size: clamp(2.2rem, 5vw, 3.5rem);
-		line-height: 1.1;
-		font-weight: 700;
-		letter-spacing: -0.04em;
-		color: #03172a;
+	.header-grid {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.15rem;
+		text-align: center;
+		gap: 2.5rem;
 	}
 
-	.heading h2 .headline-strong {
-		color: #020617;
+	.main-title {
+		font-size: clamp(2rem, 4vw, 3.8rem);
+		font-weight: 700;
+		line-height: 1.05;
+		color: #0f172a;
+		letter-spacing: -0.03em;
+		margin: 0;
+		text-align: center;
 	}
 
-	.heading h2 .headline-muted {
-		font-size: 0.7em;
-		font-weight: 600;
-		color: #fff705;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
+	.sub-row {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr 1fr;
+		gap: 2.5rem;
+		border-top: 1px solid rgba(15, 23, 42, 0.08);
+		padding-top: 1.5rem;
+		width: 100%;
 	}
 
-	.subtitle {
-		margin: 1rem auto 0;
-		max-width: 40rem;
-		font-size: 1.04rem;
-		line-height: 1.65;
+	.sub-col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.sub-col p {
+		margin: 0;
+		font-size: clamp(0.85rem, 1.05vw, 1rem);
+		line-height: 1.5;
+		color: #475569;
 		font-weight: 500;
-		color: #5f6b7b;
+		text-align: center;
+	}
+
+	.arrow-indicator {
+		display: inline-block;
+		margin-left: 0.5rem;
+		font-weight: 700;
+		color: #0f172a;
+	}
+
+	.rating-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.2rem;
+	}
+
+	.rating-num {
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: #0f172a;
+	}
+
+	.stars {
+		color: #f59e0b;
+		font-size: 1rem;
+	}
+
+	.rating-label {
+		font-size: 0.8rem;
+		color: #64748b;
+		text-align: center;
+	}
+
+	/* Logos Area */
+	.logos-section {
+		padding: 2rem 0;
+	}
+
+	.section-label {
+		text-align: center;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		color: #64748b;
+		margin-bottom: 1.5rem;
 	}
 
 	.marquee-wrapper {
 		position: relative;
 		width: 100%;
 		overflow: hidden;
-		padding: 0.25rem 0 0.4rem;
-		mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-		-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+		padding: 0.75rem 0;
 	}
 
 	.fade-edge {
@@ -183,138 +224,207 @@
 
 	.fade-edge.left {
 		left: 0;
-		background: linear-gradient(to right, rgba(245, 251, 255, 1), rgba(245, 251, 255, 0));
+		background: linear-gradient(to right, #f8fafc, transparent);
 	}
 
 	.fade-edge.right {
 		right: 0;
-		background: linear-gradient(to left, rgba(245, 251, 255, 1), rgba(245, 251, 255, 0));
+		background: linear-gradient(to left, #f8fafc, transparent);
 	}
 
 	.marquee-row {
 		display: flex;
 		overflow: hidden;
-		padding: 0.55rem 0;
+		padding: 0.3rem 0;
 	}
 
 	.marquee-track {
 		display: flex;
 		width: max-content;
-		gap: 2.5rem;
-		padding: 0.25rem 0;
+		gap: 1.5rem;
 		will-change: transform;
-		transform: translate3d(0, 0, 0);
-		backface-visibility: hidden;
 	}
 
 	.marquee-row-left .marquee-track {
-		animation: scroll-left 32s linear infinite;
+		animation: scroll-left 38s linear infinite;
 	}
 
 	.marquee-row-right .marquee-track {
-		animation: scroll-right 32s linear infinite;
-	}
-
-	.marquee-row:hover .marquee-track {
-		animation-play-state: paused;
+		animation: scroll-right 38s linear infinite;
 	}
 
 	.logo-chip {
-		position: relative;
-		width: 188px;
-		height: 84px;
+		background: rgba(255, 255, 255, 0.7);
+		border: 1px solid rgba(15, 23, 42, 0.05);
+		border-radius: 8px;
+		width: 150px;
+		height: 68px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0;
-		cursor: pointer;
 		flex-shrink: 0;
+		padding: 0.5rem;
+		transition: all 0.3s ease;
+	}
+
+	.logo-chip:hover {
+		background: #ffffff;
+		border-color: rgba(15, 23, 42, 0.15);
+		box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 	}
 
 	.company-logo {
 		max-width: 100%;
-		max-height: 48px;
-		width: auto;
+		max-height: 36px;
 		object-fit: contain;
-		filter: grayscale(1) contrast(0.95) opacity(0.78);
-		transition:
-			transform 0.28s ease,
-			filter 0.28s ease,
-			opacity 0.28s ease;
-		transform: translateZ(0);
+		filter: grayscale(1) opacity(0.8);
+		transition: all 0.3s ease;
 	}
 
 	.logo-chip:hover .company-logo {
-		filter: grayscale(0) contrast(1) opacity(1);
-		transform: scale(1.05);
+		filter: grayscale(0) opacity(1);
+	}
+
+	/* Statement Section with Badges */
+	.statement-section {
+		padding: 2rem 0;
+	}
+
+	.colored-statement {
+		font-size: clamp(1.2rem, 2vw, 2rem);
+		font-weight: 700;
+		line-height: 1.5;
+		color: #0f172a;
+		letter-spacing: -0.01em;
+		margin: 0;
+		text-align: center;
+	}
+
+	.dim {
+		color: #94a3b8;
+		font-weight: 600;
+	}
+
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.1rem 0.5rem;
+		border-radius: 6px;
+		font-weight: 700;
+		white-space: nowrap;
+		font-size: 0.85em;
+	}
+
+	.badge.blue {
+		background-color: rgba(99, 102, 241, 0.12);
+		color: #6366f1;
+	}
+
+	.badge.orange {
+		background-color: rgba(245, 158, 11, 0.12);
+		color: #f59e0b;
+	}
+
+	.badge.sky {
+		background-color: rgba(14, 165, 233, 0.12);
+		color: #0ea5e9;
+	}
+
+	.badge.pink {
+		background-color: rgba(236, 72, 153, 0.12);
+		color: #ec4899;
 	}
 
 	@keyframes scroll-left {
-		0% {
-			transform: translate3d(0, 0, 0);
-		}
-		100% {
-			transform: translate3d(-50%, 0, 0);
-		}
+		0% { transform: translate3d(0, 0, 0); }
+		100% { transform: translate3d(-50%, 0, 0); }
 	}
 
 	@keyframes scroll-right {
-		0% {
-			transform: translate3d(-50%, 0, 0);
-		}
-		100% {
-			transform: translate3d(0, 0, 0);
-		}
+		0% { transform: translate3d(-50%, 0, 0); }
+		100% { transform: translate3d(0, 0, 0); }
 	}
 
-	@media (prefers-reduced-motion: reduce) {
-		.marquee-track {
-			animation: none !important;
-			transform: none !important;
+	@media (max-width: 992px) {
+		.sub-row {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.hero-header-area {
+			padding: 3rem 0 2rem;
 		}
 	}
 
 	@media (max-width: 768px) {
-		.recruiters-premium {
-			padding: 2.5rem 0;
-		}
-
-		.heading {
-			margin-bottom: 1.5rem;
-		}
-
-		.heading h2 {
-			flex-direction: column;
-			gap: 0.1rem;
-			font-size: clamp(1.8rem, 8vw, 2.4rem);
-		}
-
-		.subtitle {
-			font-size: 0.95rem;
-			line-height: 1.5;
-			max-width: 90%;
-			margin-top: 0.6rem;
-		}
-
-		.marquee-track {
-			gap: 1.8rem;
+		.header-grid {
+			gap: 2rem;
 		}
 
 		.logo-chip {
-			width: 142px;
-			height: 68px;
+			width: 130px;
+			height: 60px;
 		}
 
 		.company-logo {
-			max-height: 38px;
+			max-height: 28px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-header-area {
+			padding: 2.5rem 0 1.5rem;
+			min-height: auto;
 		}
 
-		.fade-edge {
-			width: 2.5rem;
+		.main-title {
+			font-size: 1.8rem;
+			line-height: 1.1;
 		}
 
-		.marquee-row {
-			padding: 0.35rem 0;
+		.sub-row {
+			gap: 1rem;
+			padding-top: 1rem;
+		}
+
+		.sub-col p {
+			font-size: 0.85rem;
+		}
+
+		.rating-num {
+			font-size: 1rem;
+		}
+
+		.stars {
+			font-size: 0.9rem;
+		}
+
+		.rating-label {
+			font-size: 0.75rem;
+		}
+
+		.logo-chip {
+			width: 110px;
+			height: 52px;
+			padding: 0.3rem;
+		}
+
+		.company-logo {
+			max-height: 22px;
+		}
+
+		.statement-section {
+			padding: 1.5rem 0;
+		}
+
+		.colored-statement {
+			font-size: 1.15rem;
+			line-height: 1.45;
+		}
+
+		.badge {
+			padding: 0.05rem 0.35rem;
+			border-radius: 4px;
 		}
 	}
 </style>
