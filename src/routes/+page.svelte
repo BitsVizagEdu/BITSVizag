@@ -175,41 +175,32 @@
 		</div>
 	</section>
 
-	<div class="celebrate-header-container pt-16 pb-6 md:py-20 bg-white overflow-hidden relative">
-		<!-- Subtle decorative background element -->
-		<div
-			class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-blue-50/50 blur-[100px] rounded-full -z-0"
-		></div>
-
+	<div class="celebrate-header-container">
+		<!-- Soft ambient glows -->
+		<div class="ambient-glow top-right-glow"></div>
+		<div class="ambient-glow bottom-left-glow"></div>
+		
 		<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-			<div class="inline-flex items-center gap-3 mb-3 md:mb-6" data-aos="fade-down">
-				<span class="h-[1px] w-8 bg-blue-400"></span>
-				<span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] md:text-[12px]"
-					>Lifestyle & Culture</span
-				>
-				<span class="h-[1px] w-8 bg-blue-400"></span>
+			<!-- Premium Badged Eyebrow -->
+			<div class="eyebrow-container" data-aos="fade-down">
+				<span class="lifestyle-badge">
+					<span class="badge-dot"></span>
+					STUDENT LIFE
+				</span>
 			</div>
 
-			<h2
-				class="celebrate-title text-3xl md:text-5xl font-semibold text-slate-900 tracking-tight mb-3 md:mb-6 uppercase"
-				data-aos="fade-up"
-			>
-				Celebrate Life at <span class="text-blue-700">BITS Vizag</span>
+			<!-- Main Headline -->
+			<h2 class="celebrate-title-main" data-aos="fade-up">
+				Experience <span class="premium-gradient">Campus Life</span>
 			</h2>
 
-			<p
-				class="max-w-2xl mx-auto text-slate-500 font-medium text-sm md:text-lg leading-relaxed mb-4 md:mb-10 px-4"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			>
-				Beyond academics, explore a vibrant ecosystem of events, clubs, and moments that define the
-				unforgettable BITS experience.
-			</p>
-
-			<div class="flex items-center justify-center gap-3" data-aos="zoom-in" data-aos-delay="200">
-				<div class="h-1.5 w-1.5 rounded-full bg-blue-400"></div>
-				<div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue-400 to-blue-600"></div>
-				<div class="h-1.5 w-1.5 rounded-full bg-blue-600"></div>
+			<!-- Description with lines -->
+			<div class="description-row" data-aos="fade-up" data-aos-delay="100">
+				<span class="side-fade-line left-fade"></span>
+				<p class="celebrate-desc">
+					Beyond academics, explore a vibrant ecosystem of events, clubs, and moments that define the unforgettable BITS experience.
+				</p>
+				<span class="side-fade-line right-fade"></span>
 			</div>
 		</div>
 	</div>
@@ -260,6 +251,177 @@
 {/if}
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+	.celebrate-header-container {
+		background: #fdfdfd;
+		padding: 3rem 0 3rem; /* Reduced top padding by 60-80px */
+		overflow: hidden;
+		position: relative;
+	}
+
+	/* Soft Ambient Glow Elements */
+	.ambient-glow {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(120px);
+		opacity: 0.55;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.top-right-glow {
+		top: -10%;
+		right: -10%;
+		width: 450px;
+		height: 450px;
+		background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+	}
+
+	.bottom-left-glow {
+		bottom: -15%;
+		left: -10%;
+		width: 500px;
+		height: 500px;
+		background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+	}
+
+	.eyebrow-container {
+		margin-bottom: 1.25rem;
+	}
+
+	/* Frosted Glass Badge */
+	.lifestyle-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(37, 99, 235, 0.06);
+		border: 1px solid rgba(37, 99, 235, 0.12);
+		padding: 0.45rem 1rem;
+		border-radius: 9999px;
+		color: #2563eb;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+	}
+
+	.badge-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #2563eb;
+		animation: pulse-dot 2s infinite;
+	}
+
+	@keyframes pulse-dot {
+		0%, 100% {
+			transform: scale(1);
+			opacity: 1;
+		}
+		50% {
+			transform: scale(1.2);
+			opacity: 0.6;
+		}
+	}
+
+	.celebrate-title-main {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-size: clamp(2rem, 3.8vw, 3.8rem);
+		font-weight: 800;
+		color: #0f172a;
+		letter-spacing: -0.02em;
+		margin: 0 0 1.75rem;
+		line-height: 1.1;
+	}
+
+	/* Premium Saturated Blue-Indigo-Violet Palette */
+	.premium-gradient {
+		background: linear-gradient(135deg, #2563eb 0%, #6366f1 50%, #8b5cf6 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.description-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2.5rem;
+		max-width: 860px; /* Widened to read in 2 balanced lines */
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.celebrate-desc {
+		margin: 0;
+		font-size: clamp(0.9rem, 1.1rem, 1.1rem);
+		line-height: 1.65;
+		color: #475569;
+		font-weight: 500;
+		flex: 1;
+		text-align: center;
+	}
+
+	.side-fade-line {
+		flex: 0 1 120px;
+		height: 1px;
+	}
+
+	.left-fade {
+		background: linear-gradient(to left, rgba(71, 85, 105, 0.25), transparent);
+	}
+
+	.right-fade {
+		background: linear-gradient(to right, rgba(71, 85, 105, 0.25), transparent);
+	}
+
+	@media (max-width: 640px) {
+		.celebrate-header-container {
+			padding: 2.5rem 0 1.5rem;
+		}
+
+		.lifestyle-badge {
+			padding: 0.35rem 0.85rem;
+			font-size: 0.7rem;
+		}
+
+		.celebrate-title-main {
+			font-size: 2.1rem;
+			margin: 0 0 1rem;
+			line-height: 1.15;
+			padding: 0 1rem;
+		}
+
+		.description-row {
+			gap: 1rem;
+			padding: 0 1rem;
+		}
+
+		.celebrate-desc {
+			font-size: 0.9rem;
+			line-height: 1.55;
+			padding: 0;
+		}
+
+		.side-fade-line {
+			display: none;
+		}
+
+		.hidden-mobile {
+			display: none;
+		}
+
+		.top-right-glow {
+			width: 250px;
+			height: 250px;
+		}
+
+		.bottom-left-glow {
+			width: 250px;
+			height: 250px;
+		}
+	}
+
 	.hero-bg-img {
 		filter: brightness(0.92) contrast(1.02);
 		transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);

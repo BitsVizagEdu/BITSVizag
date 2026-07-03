@@ -375,7 +375,7 @@
 
 	@media (max-width: 768px) {
 		:global(.social-rail) {
-			right: 0.5rem !important;
+			right: 0.15rem !important;
 			top: auto !important;
 			bottom: 5.5rem !important;
 			transform: none !important;

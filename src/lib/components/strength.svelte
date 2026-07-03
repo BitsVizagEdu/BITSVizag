@@ -1,116 +1,102 @@
 <script>
-	import Counter from './Counter.svelte';
+	import { onMount } from 'svelte';
 
-	const excellenceStats = [
+	let activeIndex = 0;
+
+	const strengths = [
 		{
-			value: '10000+',
-			label: 'Engineers graduated so far',
-			icon: 'M12 14.25c2.761 0 5-2.015 5-4.5s-2.239-4.5-5-4.5-5 2.015-5 4.5 2.239 4.5 5 4.5zM4.5 20.25a7.5 7.5 0 0115 0v.75h-15v-.75z'
+			id: '01',
+			title: 'ACADEMIC EXCELLENCE',
+			description:
+				'Over 18 years of academic excellence driven by 150+ experienced faculty members, nurturing 1,500+ undergraduate and 200+ postgraduate minds.',
+			color: '#ffb356', // Orange
+			textColor: '#1a1a1a'
 		},
 		{
-			value: '18+',
-			label: 'Years of academic excellence',
-			icon: 'M12 3l2.7 5.47 6.03.87-4.37 4.26 1.03 6.01L12 16.86l-5.39 2.75 1.03-6.01-4.37-4.26 6.03-.87L12 3z'
+			id: '02',
+			title: 'PREMIUM PLACEMENTS',
+			description:
+				'Securing 200+ placement offers annually with a 90% placement rate. Empowering 5,000+ placed students and 1,000+ interns in leading global companies.',
+			color: '#8ecdfa', // Light Blue
+			textColor: '#1a1a1a'
 		},
 		{
-			value: '150+',
-			label: 'Experienced faculty members',
-			icon: 'M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9zM4.5 21a7.5 7.5 0 0115 0v.75h-15V21z'
+			id: '03',
+			title: 'RESEARCH & INNOVATION',
+			description:
+				'Fostering future-ready research with 20+ international publications, 200+ successfully executed projects, and 10+ filed patents.',
+			color: '#c3b5ff', // Soft Purple
+			textColor: '#1a1a1a'
 		},
 		{
-			value: '200+',
-			label: 'Placement offers every year',
-			icon: 'M3.75 7.5h5.25v9h-5.25v-9zM15 7.5h5.25v9H15v-9zM9 12h6m-3-3v6'
+			id: '04',
+			title: 'GLOBAL ALUMNI NETWORK',
+			description:
+				'Connecting over 10,000+ graduated engineers and 8,500+ active alumni who are making an impact in technology and leadership globally.',
+			color: '#e7b2ff', // Soft Pink/Magenta
+			textColor: '#1a1a1a'
 		}
 	];
 
-	const infoCards = [
-		{
-			title: 'Academics',
-			colorClass: 'card-academics',
-			items: [
-				{ value: '1500+', text: 'Undergraduate Students' },
-				{ value: '200+', text: 'Postgraduate Students' },
-				{ value: '8500+', text: 'Alumni' }
-			]
-		},
-		{
-			title: 'Placements',
-			colorClass: 'card-placements',
-			items: [
-				{ value: '1000+', text: 'Interns' },
-				{ value: '90%', text: 'Placement' },
-				{ value: '5000+', text: 'Placed Students' }
-			]
-		},
-		{
-			title: 'Research',
-			colorClass: 'card-research',
-			items: [
-				{ value: '20+', text: 'Publications' },
-				{ value: '200+', text: 'Projects' },
-				{ value: '10+', text: 'Patents' }
-			]
-		}
-	];
+	function setActive(index) {
+		activeIndex = index;
+	}
 </script>
 
 <section class="strength-shell" data-aos="fade-up">
 	<div class="strength-container">
-		<div class="excellence-panel" data-aos="fade-up" data-aos-delay="40">
-			<h2 class="excellence-title">
-				<svg
-					class="title-icon"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						d="M12 3L1.5 8.25 12 13.5l8.58-4.29v5.58H22.5V8.25L12 3zm-7.5 9.3V15c0 2.49 3.36 4.5 7.5 4.5s7.5-2.01 7.5-4.5v-2.7L12 16.5 4.5 12.3z"
-					/>
-				</svg>
-				ACADEMIC EXCELLENCE
-			</h2>
-			<div class="title-divider"></div>
-
-			<div class="excellence-grid">
-				{#each excellenceStats as stat, idx}
-					<article class="excellence-item" data-aos="fade-up" data-aos-delay={80 + idx * 60}>
-						<div class="item-icon-wrap">
-							<svg
-								class="item-icon"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								aria-hidden="true"
-							>
-								<path d={stat.icon} />
-							</svg>
-						</div>
-						<div class="item-copy">
-							<p class="item-value"><Counter value={stat.value} /></p>
-							<p class="item-label">{stat.label}</p>
-						</div>
-					</article>
-				{/each}
-			</div>
+		<!-- Header Section -->
+		<div class="strength-header">
+			<h4 class="main-title">
+				See tangible<br />outcomes
+			</h4>
+			<span class="sub-title">OUR STRENGTHS</span>
 		</div>
 
-		<div class="info-cards" data-aos="fade-up" data-aos-delay="120">
-			{#each infoCards as card, idx}
-				<article
-					class={`info-card ${card.colorClass}`}
-					data-aos="zoom-in"
-					data-aos-delay={140 + idx * 70}
+		<!-- Accordion Section -->
+		<div class="accordion-list">
+			{#each strengths as item, idx}
+				<button
+					class="accordion-item {activeIndex === idx ? 'active' : ''}"
+					style="--item-bg: {item.color}; --item-color: {item.textColor};"
+					on:click={() => setActive(idx)}
+					aria-expanded={activeIndex === idx}
 				>
-					<h3 class="card-title">{card.title}</h3>
-					<div class="card-lines">
-						{#each card.items as line}
-							<p class="card-line"><strong><Counter value={line.value} /></strong> {line.text}</p>
-						{/each}
-					</div>
-				</article>
+					{#if activeIndex === idx}
+						<div class="active-content">
+							<div class="text-side">
+								<h3 class="item-title">
+									<span class="id-num">{item.id}</span>
+									<span class="arrow-symbol">→</span>
+									<span class="title-text">{item.title}</span>
+								</h3>
+								<p class="item-desc">{item.description}</p>
+							</div>
+							<div class="arrow-side">
+								<svg
+									class="large-arrow"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<line x1="5" y1="12" x2="19" y2="12"></line>
+									<polyline points="12 5 19 12 12 19"></polyline>
+								</svg>
+							</div>
+						</div>
+					{:else}
+						<div class="collapsed-content">
+							<h3 class="item-title collapsed">
+								<span class="id-num">{item.id}</span>
+								<span class="arrow-symbol">→</span>
+								<span class="title-text">{item.title}</span>
+							</h3>
+						</div>
+					{/if}
+				</button>
 			{/each}
 		</div>
 	</div>
@@ -118,260 +104,188 @@
 
 <style>
 	.strength-shell {
-		padding: 2rem 0 3rem;
-		background: #eceff2;
-		font-family: 'Roboto', 'Segoe UI', sans-serif;
+		padding: 6rem 0;
+		background: #ffffff;
+		font-family:
+			'Inter',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			sans-serif;
 	}
 
 	.strength-container {
-		width: min(1360px, 98vw);
+		width: min(1280px, 92vw);
 		margin: 0 auto;
 	}
 
-	.excellence-panel {
-		border-radius: 14px;
-		padding: 2.4rem 1.6rem 2.2rem;
-		background: linear-gradient(180deg, #0d0f14 0%, #0b0c11 100%);
-		color: #fff;
-		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.26);
+	.strength-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 4rem;
 	}
 
-	.excellence-title {
+	.main-title {
+		font-size: clamp(2rem, 3.5vw, 3.5rem);
+		font-weight: 700;
+		line-height: 0.95;
+		color: #1a1a1a;
+		letter-spacing: -0.03em;
 		margin: 0;
+	}
+
+	.sub-title {
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: #1a1a1a;
+		text-transform: uppercase;
+		margin-top: 1rem;
+	}
+
+	.accordion-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.accordion-item {
+		width: 100%;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		text-align: left;
+		background-color: var(--item-bg);
+		color: var(--item-color);
+		border-radius: 4px;
+		padding: 0;
+		transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+		overflow: hidden;
+	}
+
+	.accordion-item:focus-visible {
+		outline: 3px solid #1a1a1a;
+		outline-offset: 2px;
+	}
+
+	/* Collapsed Styles */
+	.collapsed-content {
+		padding: 1.5rem 2rem;
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: 0.68rem;
-		font-size: clamp(1.75rem, 3vw, 3.2rem);
-		font-weight: 900;
-		letter-spacing: -0.01em;
-		text-align: center;
 	}
 
-	.title-icon {
-		width: clamp(2rem, 3vw, 3rem);
-		height: clamp(2rem, 3vw, 3rem);
-	}
-
-	.title-divider {
-		height: 1px;
-		margin: 2rem auto 1.8rem;
-		max-width: 86%;
-		background: linear-gradient(
-			90deg,
-			rgba(255, 255, 255, 0),
-			rgba(255, 255, 255, 0.24),
-			rgba(255, 255, 255, 0)
-		);
-	}
-
-	.excellence-grid {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 1.2rem;
-	}
-
-	.excellence-item {
+	.item-title {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: 0.9rem;
-		padding: 0.7rem 0.4rem;
-	}
-
-	.item-icon-wrap {
-		display: grid;
-		place-items: center;
-		flex-shrink: 0;
-		width: 52px;
-		height: 52px;
-		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.06);
-	}
-
-	.item-icon {
-		width: 28px;
-		height: 28px;
-		color: #fff;
-	}
-
-	.item-copy {
-		min-width: 0;
-	}
-
-	.item-value {
 		margin: 0;
-		font-size: clamp(1.5rem, 2.3vw, 2.75rem);
-		font-weight: 800;
-		line-height: 1;
-		color: #ffffff;
-	}
-
-	.item-label {
-		margin: 0.25rem 0 0;
-		font-size: clamp(0.75rem, 1.05vw, 1.45rem);
-		line-height: 1.35;
-		color: rgba(255, 255, 255, 0.9);
-	}
-
-	.info-cards {
-		margin-top: 1.1rem;
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 1rem;
-	}
-
-	.info-card {
-		border-radius: 10px;
-		padding: 1.45rem 1.5rem 1.6rem;
-		color: #fff;
-		box-shadow: 0 12px 26px rgba(18, 26, 40, 0.18);
-	}
-
-	.card-title {
-		margin: 0;
-		font-size: clamp(2rem, 2.3vw, 2.25rem);
-		line-height: 1.05;
-		font-weight: 800;
+		font-size: clamp(1.1rem, 2vw, 1.6rem);
+		font-weight: 600;
 		letter-spacing: -0.01em;
 	}
 
-	.card-lines {
-		margin-top: 1.1rem;
-		display: grid;
-		gap: 0.65rem;
+	.item-title.collapsed {
+		opacity: 0.9;
 	}
 
-	.card-line {
+	.id-num {
+		font-variant-numeric: tabular-nums;
+		margin-right: 0.75rem;
+	}
+
+	.arrow-symbol {
+		margin-right: 1.25rem;
+		opacity: 0.7;
+	}
+
+	/* Active Styles */
+	.accordion-item.active {
+		cursor: default;
+	}
+
+	.active-content {
+		display: grid;
+		grid-template-columns: 1fr 200px;
+		min-height: 260px;
+	}
+
+	.text-side {
+		padding: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.text-side .item-title {
+		font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+
+	.item-desc {
 		margin: 0;
-		font-size: clamp(1.5rem, 1.75vw, 2rem);
-		line-height: 1.18;
+		font-size: clamp(1rem, 1.3vw, 1.4rem);
+		line-height: 1.5;
+		max-width: 680px;
+		opacity: 0.85;
 		font-weight: 500;
 	}
 
-	.card-line strong {
-		font-weight: 800;
+	.arrow-side {
+		border-left: 1px solid rgba(0, 0, 0, 0.1);
+		display: grid;
+		place-items: center;
 	}
 
-	.card-academics {
-		background: #5aa80f;
+	.large-arrow {
+		width: 44px;
+		height: 44px;
+		opacity: 0.85;
+		stroke-width: 2.2;
+		transition: transform 0.3s ease;
 	}
 
-	.card-placements {
-		background: #f7851b;
+	.accordion-item:hover .large-arrow {
+		transform: translateX(4px);
 	}
 
-	.card-research {
-		background: #a01987;
-	}
-
-	@media (max-width: 1024px) {
-		.excellence-grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 0.9rem;
-		}
-
-		.info-cards {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.strength-shell {
-			padding: 1.5rem 0 2.5rem;
-		}
-
-		.excellence-panel {
-			padding: 1.2rem 0.8rem 1.2rem;
-			border-radius: 12px;
-		}
-
-		.excellence-title {
-			font-size: clamp(1.1rem, 5vw, 1.8rem);
-			gap: 0.4rem;
-		}
-
-		.title-divider {
-			margin: 0.8rem auto 0.8rem;
-			max-width: 90%;
-		}
-
-		.excellence-grid {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 0.5rem;
-		}
-
-		.excellence-item {
+	/* Responsive design */
+	@media (max-width: 768px) {
+		.strength-header {
 			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			padding: 0.8rem 0.4rem;
-			background: rgba(255, 255, 255, 0.03);
-			border-radius: 12px;
+			gap: 1rem;
+			margin-bottom: 2.5rem;
 		}
 
-		.item-icon-wrap {
-			width: 36px;
-			height: 36px;
-			margin-bottom: 0.5rem;
+		.sub-title {
+			margin-top: 0;
 		}
 
-		.item-icon {
-			width: 18px;
-			height: 18px;
+		.active-content {
+			grid-template-columns: 1fr;
+			min-height: auto;
 		}
 
-		.item-value {
-			font-size: 1.4rem;
+		.text-side {
+			padding: 2rem 1.5rem;
 		}
 
-		.item-label {
-			font-size: 0.7rem;
-			margin-top: 0.15rem;
+		.arrow-side {
+			border-left: none;
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			padding: 1.5rem;
+			justify-content: flex-end;
 		}
 
-		.info-cards {
-			margin-top: 1rem;
-			gap: 0.8rem;
+		.large-arrow {
+			width: 32px;
+			height: 32px;
 		}
 
-		.info-card {
-			padding: 1rem 0.9rem 1.1rem;
-		}
-
-		.card-title {
-			font-size: 1.5rem;
-		}
-
-		.card-lines {
-			margin-top: 0.7rem;
-			gap: 0.4rem;
-		}
-
-		.card-line {
-			font-size: 1.15rem;
-		}
-	}
-
-	@media (max-width: 360px) {
-		.excellence-grid {
-			gap: 0.4rem;
-		}
-
-		.excellence-item {
-			padding: 0.6rem 0.3rem;
-		}
-
-		.item-value {
-			font-size: 1.25rem;
-		}
-
-		.card-title {
-			font-size: 1.35rem;
-		}
-
-		.card-line {
-			font-size: 1.05rem;
+		.collapsed-content {
+			padding: 1.25rem 1.25rem;
 		}
 	}
 </style>
