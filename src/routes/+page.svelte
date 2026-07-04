@@ -14,6 +14,7 @@
 	let PlacementComp = null;
 	let CourseHighlightComp = null;
 	let StudentStoriesComp = null;
+	let CampusLifeMosaicComp = null;
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
 	let displayText = '';
@@ -69,6 +70,7 @@
 		import('$lib/components/placement.svelte').then((m) => (PlacementComp = m.default));
 		import('$lib/components/CourseHighlight.svelte').then((m) => (CourseHighlightComp = m.default));
 		import('$lib/components/StudentStories.svelte').then((m) => (StudentStoriesComp = m.default));
+		import('$lib/components/CampusLifeMosaic.svelte').then((m) => (CampusLifeMosaicComp = m.default));
 	});
 
 	onDestroy(() => {
@@ -179,26 +181,17 @@
 		<!-- Soft ambient glows -->
 		<div class="ambient-glow top-right-glow"></div>
 		<div class="ambient-glow bottom-left-glow"></div>
-		
-		<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-			<!-- Premium Badged Eyebrow -->
-			<div class="eyebrow-container" data-aos="fade-down">
-				<span class="lifestyle-badge">
-					<span class="badge-dot"></span>
-					STUDENT LIFE
-				</span>
-			</div>
 
+		<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
 			<!-- Main Headline -->
-			<h2 class="celebrate-title-main" data-aos="fade-up">
-				Experience <span class="premium-gradient">Campus Life</span>
-			</h2>
+			<h2 class="celebrate-title-main" data-aos="fade-up">Experience Campus Life</h2>
 
 			<!-- Description with lines -->
 			<div class="description-row" data-aos="fade-up" data-aos-delay="100">
 				<span class="side-fade-line left-fade"></span>
 				<p class="celebrate-desc">
-					Beyond academics, explore a vibrant ecosystem of events, clubs, and moments that define the unforgettable BITS experience.
+					Beyond academics, explore a vibrant ecosystem of events, clubs, and moments that define
+					the unforgettable BITS experience.
 				</p>
 				<span class="side-fade-line right-fade"></span>
 			</div>
@@ -233,6 +226,12 @@
 	<div class="content-visibility-auto">
 		{#if PlacementComp}
 			<svelte:component this={PlacementComp} />
+		{/if}
+	</div>
+
+	<div class="content-visibility-auto">
+		{#if CampusLifeMosaicComp}
+			<svelte:component this={CampusLifeMosaicComp} />
 		{/if}
 	</div>
 
@@ -315,7 +314,8 @@
 	}
 
 	@keyframes pulse-dot {
-		0%, 100% {
+		0%,
+		100% {
 			transform: scale(1);
 			opacity: 1;
 		}
@@ -386,7 +386,7 @@
 		}
 
 		.celebrate-title-main {
-			font-size: 2.1rem;
+			font-size: 1.4rem;
 			margin: 0 0 1rem;
 			line-height: 1.15;
 			padding: 0 1rem;
@@ -398,7 +398,7 @@
 		}
 
 		.celebrate-desc {
-			font-size: 0.9rem;
+			font-size: 0.7rem;
 			line-height: 1.55;
 			padding: 0;
 		}

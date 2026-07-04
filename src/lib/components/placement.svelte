@@ -20,21 +20,10 @@
 				<h2 class="main-title">
 					Build careers with confidence<br />and lead the future
 				</h2>
-				
-				<div class="sub-row">
-					<div class="sub-col col-left">
-						<p>Empowering talented students with premium industry partnerships, expanding opportunities, and securing records. <span class="arrow-indicator">→</span></p>
-					</div>
-					<div class="sub-col col-mid">
-						<p>Comprehensive placement support, technical mentoring, and internships across all engineering disciplines.</p>
-					</div>
-					<div class="sub-col col-right">
-						<p class="rating-box">
-							<span class="rating-num">90% / 100%</span>
-							<span class="stars">★★★★★</span>
-							<span class="rating-label">Impartial placement record & MNC partners</span>
-						</p>
-					</div>
+
+				<div class="rating-box">
+					<span class="rating-num">90% / 100%</span>
+					<span class="stars">★★★★★</span>
 				</div>
 			</div>
 		</div>
@@ -43,17 +32,26 @@
 	<!-- Logo Section -->
 	<div class="logos-section">
 		<div class="inner-shell">
-			<p class="section-label">TRUSTED BY 100+ LEADING MULTINATIONAL COMPANIES & CORPORATE PARTNERS</p>
-			
-			<div class="marquee-wrapper">
+			<p class="section-label">
+				TRUSTED BY 100+ LEADING MULTINATIONAL COMPANIES & CORPORATE PARTNERS
+			</p>
+
+			<div
+				class="marquee-wrapper max-w-4xl mx-auto rounded-2xl border border-slate-100 bg-white/30 shadow-[0_8px_30px_rgb(0,0,0,0.02)]"
+			>
 				<div class="fade-edge left" aria-hidden="true"></div>
 				<div class="fade-edge right" aria-hidden="true"></div>
-				
+
 				<div class="marquee-row marquee-row-left" aria-label="Recruiter logos row one">
 					<div class="marquee-track">
 						{#each [...firstRowLogos, ...firstRowLogos] as logo}
 							<div class="logo-chip">
-								<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" loading="lazy" />
+								<img
+									src={encodeURI(logo)}
+									alt="Recruiter logo"
+									class="company-logo"
+									loading="lazy"
+								/>
 							</div>
 						{/each}
 					</div>
@@ -63,7 +61,12 @@
 					<div class="marquee-track">
 						{#each [...secondRowLogos, ...secondRowLogos] as logo}
 							<div class="logo-chip">
-								<img src={encodeURI(logo)} alt="Recruiter logo" class="company-logo" loading="lazy" />
+								<img
+									src={encodeURI(logo)}
+									alt="Recruiter logo"
+									class="company-logo"
+									loading="lazy"
+								/>
 							</div>
 						{/each}
 					</div>
@@ -97,13 +100,19 @@
 		position: relative;
 		overflow: hidden;
 		background: #f8fafc;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-family:
+			'Inter',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			sans-serif;
 		padding-bottom: 4rem;
 	}
 
 	.hero-header-area {
 		padding: 5rem 0 3rem;
-		background: 
+		background:
 			linear-gradient(to bottom, rgba(248, 250, 252, 0.1) 40%, rgba(248, 250, 252, 1) 100%),
 			url('/place-back.png') no-repeat center top / cover;
 		min-height: 380px;
@@ -291,7 +300,7 @@
 	}
 
 	.colored-statement {
-		font-size: clamp(1.2rem, 2vw, 2rem);
+		font-size: clamp(1.1rem, 1.8vw, 1.9rem);
 		font-weight: 700;
 		line-height: 1.5;
 		color: #0f172a;
@@ -336,13 +345,21 @@
 	}
 
 	@keyframes scroll-left {
-		0% { transform: translate3d(0, 0, 0); }
-		100% { transform: translate3d(-50%, 0, 0); }
+		0% {
+			transform: translate3d(0, 0, 0);
+		}
+		100% {
+			transform: translate3d(-50%, 0, 0);
+		}
 	}
 
 	@keyframes scroll-right {
-		0% { transform: translate3d(-50%, 0, 0); }
-		100% { transform: translate3d(0, 0, 0); }
+		0% {
+			transform: translate3d(-50%, 0, 0);
+		}
+		100% {
+			transform: translate3d(0, 0, 0);
+		}
 	}
 
 	@media (max-width: 992px) {

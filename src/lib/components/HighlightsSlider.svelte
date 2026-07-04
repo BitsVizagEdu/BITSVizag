@@ -88,21 +88,21 @@
 		<!-- Navigation Arrows -->
 		<button 
 			on:click|stopPropagation={prevSlide}
-			class="absolute left-4 top-1/2 -translate-y-1/2 z-30 hidden md:flex h-12 w-12 items-center justify-center rounded-full bg-white/40 backdrop-blur-md text-slate-800 opacity-0 transition-all hover:bg-white hover:shadow-xl group-hover:opacity-100 focus:outline-none border border-white/40"
+			class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 group/btn flex h-12 w-12 items-center justify-center bg-transparent border-none text-slate-800/35 transition-all duration-300 hover:scale-115 active:scale-90 hover:text-slate-800 focus:outline-none"
 			aria-label="Previous Slide"
 		>
-			<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+			<svg class="h-6 w-6 md:h-8 md:w-8 transition-transform duration-300 ease-out group-hover/btn:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 5l-6 7 6 7M13 5l-6 7 6 7M7 5l-6 7 6 7" />
 			</svg>
 		</button>
 
 		<button 
 			on:click|stopPropagation={nextSlide}
-			class="absolute right-4 top-1/2 -translate-y-1/2 z-30 hidden md:flex h-12 w-12 items-center justify-center rounded-full bg-white/40 backdrop-blur-md text-slate-800 opacity-0 transition-all hover:bg-white hover:shadow-xl group-hover:opacity-100 focus:outline-none border border-white/40"
+			class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 group/btn flex h-12 w-12 items-center justify-center bg-transparent border-none text-slate-800/35 transition-all duration-300 hover:scale-115 active:scale-90 hover:text-slate-800 focus:outline-none"
 			aria-label="Next Slide"
 		>
-			<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+			<svg class="h-6 w-6 md:h-8 md:w-8 transition-transform duration-300 ease-out group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 5l6 7-6 7M11 5l6 7-6 7M17 5l6 7-6 7" />
 			</svg>
 		</button>
 	</div>

@@ -45,11 +45,10 @@
 	<header 
 		class="main-header {isScrolled ? 'scrolled' : ''} {isHeaderHidden ? 'hidden-header' : ''} {!isHome ? 'subpage-header' : ''}"
 		style={isHome ? `
-			background: rgba(255, 255, 255, ${scrollProgress * 0.8}); 
+			background: ${scrollProgress > 0.05 ? `rgba(255, 255, 255, ${scrollProgress * 0.8})` : 'linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%)'}; 
 			backdrop-filter: blur(${scrollProgress * 16}px); 
 			-webkit-backdrop-filter: blur(${scrollProgress * 16}px); 
 			box-shadow: 0 4px 20px rgba(0, 0, 0, ${scrollProgress * 0.04}); 
-			border-bottom: 1px solid rgba(0, 0, 0, ${scrollProgress * 0.05});
 			--hamburger-color: rgb(${Math.round(255 - scrollProgress * (255 - 15))}, ${Math.round(255 - scrollProgress * (255 - 23))}, ${Math.round(255 - scrollProgress * (255 - 42))});
 		` : ''}
 	>
@@ -95,11 +94,11 @@
 	}
 
 	.main-header {
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
 		height: 72px;
 		display: flex;
 		align-items: center;
-		padding: 0 24px;
+		padding: 0 12px;
 		width: 100%;
 		pointer-events: auto;
 		transform: translateY(0);
@@ -118,7 +117,6 @@
 		backdrop-filter: blur(16px);
 		-webkit-backdrop-filter: blur(16px);
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
 	.header-inner {
@@ -165,14 +163,14 @@
 		height: 48px;
 		width: auto;
 		object-fit: contain;
-		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+		filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
 	}
 
 	.menu-toggle {
 		background: #0f172a; /* Dark circle background */
 		border: none;
-		width: 44px;
-		height: 44px;
+		width: 36px;
+		height: 36px;
 		border-radius: 50%;
 		cursor: pointer;
 		display: flex;
@@ -187,8 +185,8 @@
 	}
 
 	.hamburger {
-		width: 20px;
-		height: 12px;
+		width: 16px;
+		height: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -197,10 +195,10 @@
 
 	.hamburger span {
 		display: block;
-		height: 2px;
+		height: 1.5px;
 		width: 100%;
 		background: #ffffff; /* Always crisp white inside the dark circle button */
-		border-radius: 1.5px;
+		border-radius: 1px;
 		transition: background 0.3s ease;
 	}
 </style>
