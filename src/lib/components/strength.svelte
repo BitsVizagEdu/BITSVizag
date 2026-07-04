@@ -47,9 +47,7 @@
 	<div class="strength-container">
 		<!-- Header Section -->
 		<div class="strength-header">
-			<h4 class="main-title">
-				See tangible<br />outcomes
-			</h4>
+			<h4 class="main-title">See tangible outcomes</h4>
 			<span class="sub-title">OUR STRENGTHS</span>
 		</div>
 
@@ -253,14 +251,25 @@
 
 	/* Responsive design */
 	@media (max-width: 768px) {
+		.strength-shell {
+			padding: 2.5rem 0;
+		}
+
 		.strength-header {
-			flex-direction: column;
-			gap: 1rem;
-			margin-bottom: 2.5rem;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			gap: 0.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.main-title {
+			font-size: 1.6rem;
 		}
 
 		.sub-title {
 			margin-top: 0;
+			font-size: 0.75rem;
 		}
 
 		.active-content {
@@ -269,23 +278,29 @@
 		}
 
 		.text-side {
-			padding: 2rem 1.5rem;
+			padding: 1.25rem 1rem;
+		}
+
+		.text-side .item-title {
+			font-size: 1.1rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.item-desc {
+			font-size: 0.85rem;
+			line-height: 1.45;
 		}
 
 		.arrow-side {
-			border-left: none;
-			border-top: 1px solid rgba(0, 0, 0, 0.1);
-			padding: 1.5rem;
-			justify-content: flex-end;
-		}
-
-		.large-arrow {
-			width: 32px;
-			height: 32px;
+			display: none; /* Hide arrow side to save vertical height on mobile */
 		}
 
 		.collapsed-content {
-			padding: 1.25rem 1.25rem;
+			padding: 0.85rem 1rem;
+		}
+
+		.item-title {
+			font-size: 1rem;
 		}
 	}
 </style>

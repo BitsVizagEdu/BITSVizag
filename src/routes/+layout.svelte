@@ -183,25 +183,7 @@
 				rel="noreferrer"
 				aria-label="Google Maps"
 			>
-				<svg viewBox="-69 0 394 394" aria-hidden="true">
-					<path
-						fill="#4285F4"
-						d="M128 0C57.308 0 0 57.308 0 128c0 22.81 12.062 50.36 30.654 81.31l97.346 184.69 97.346-184.69c18.592-30.95 30.654-58.5 30.654-81.31C256 57.308 198.692 0 128 0z"
-					/>
-					<path
-						fill="#EA4335"
-						d="M128 0C78.432 0 35.808 28.16 16 69.12l81.92 104.96L128 128l30.08 46.08 81.92-104.96C220.192 28.16 177.568 0 128 0z"
-					/>
-					<path
-						fill="#FBBC04"
-						d="M16 69.12C5.888 88.064 0 107.52 0 128c0 22.81 12.062 50.36 30.654 81.31l97.346 42.69-30.08-78.08L16 69.12z"
-					/>
-					<path
-						fill="#34A853"
-						d="M240 69.12c10.112 18.944 16 38.4 16 58.88 0 22.81-12.062 50.36-30.654 81.31l-97.346 42.69 30.08-78.08L240 69.12z"
-					/>
-					<circle fill="#ffffff" cx="128" cy="128" r="48" />
-				</svg>
+				<img src="/map.png" alt="Google Maps" class="w-full h-full object-cover rounded-full block" />
 			</a>
 			<a
 				class="social-btn instagram"
@@ -332,12 +314,13 @@
 	}
 
 	:global(.social-btn.maps) {
-		background: rgba(255, 255, 255, 0.1) !important;
-		border-color: rgba(255, 255, 255, 0.4);
+		background: transparent !important;
+		border: none !important;
 	}
-	:global(.social-btn.maps svg) {
-		width: 1.7rem !important;
-		height: 1.7rem !important;
+	:global(.social-btn.maps img) {
+		width: 2.2rem !important;
+		height: 2.2rem !important;
+		object-fit: contain;
 	}
 	:global(.social-btn.instagram) {
 		background: linear-gradient(

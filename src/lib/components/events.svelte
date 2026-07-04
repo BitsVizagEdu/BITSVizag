@@ -323,8 +323,8 @@
 			Campus <span class="text-amber-600 font-semibold">Highlights</span>
 		</h2>
 
-		<p class="text-sm md:text-base text-slate-700 mt-2 leading-relaxed">
-			Events, achievements, and moments that reflect campus life.
+		<p class="text-xs md:text-sm text-slate-700 mt-2 leading-relaxed">
+			Events, achievements, and moments <br /> that reflect campus life.
 		</p>
 
 		<div
@@ -369,14 +369,14 @@
 							class="block group/title"
 						>
 							<h3
-								class="text-lg font-semibold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight mb-2"
+								class="text-sm sm:text-base font-semibold text-slate-900 group-hover:text-amber-600 transition-colors leading-tight mb-2"
 							>
 								{event.name}
 							</h3>
 						</a>
 
 						<p
-							class="text-sm text-slate-600 mt-1 leading-relaxed line-clamp-2 md:line-clamp-3 mb-3"
+							class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed line-clamp-2 mb-3"
 						>
 							{event.description}
 						</p>
@@ -427,20 +427,6 @@
 					</p>
 				</div>
 
-				<div class="relative z-10">
-					<a
-						href="https://www.instagram.com/bits_vizag_official/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-4 bg-white text-slate-950 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-rose-500 transition-colors shadow-lg group/ig"
-					>
-						Follow @bitsvizag
-						<i
-							class="fa-brands fa-instagram text-base group-hover/ig:scale-110 transition-transform"
-						></i>
-					</a>
-				</div>
-
 				<!-- Decorative Glimpse Grid -->
 				<div
 					class="absolute bottom-0 right-0 w-1/2 h-1/2 translate-x-1/4 translate-y-1/4 opacity-20 group-hover:opacity-40 transition-opacity duration-1000 rotate-12"
@@ -460,23 +446,37 @@
 	</div>
 
 	<!-- Follow for more (Instagram Call to Action) -->
-	<div class="mt-12 md:mt-16 flex justify-center" data-aos="fade-up">
+	<div class="mt-12 md:mt-16 flex justify-center px-4" data-aos="fade-up">
 		<a
-			href="https://www.instagram.com/bits_vizag_official/?hl=en"
+			href="https://www.instagram.com/bits_vizag_official/?hl=en#"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="group flex items-center gap-3 bg-white hover:bg-slate-50 border border-slate-200 px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95"
+			class="group block w-full max-w-sm sm:max-w-md bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-md border border-slate-100/80 bird-dance"
 		>
-			<span
-				class="text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors"
-			>
-				Follow for more
-			</span>
-			<span
-				class="flex items-center justify-center w-8 h-8 rounded-full text-white shadow-sm transition-transform duration-300 group-hover:scale-110 instagram-gradient-bg"
-			>
-				<i class="fa-brands fa-instagram text-base"></i>
-			</span>
+			<div class="flex items-center gap-3">
+				<!-- Left: Logo -->
+				<div class="relative shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-50 rounded-lg overflow-hidden flex items-center justify-center p-1 border border-slate-100 shadow-sm">
+					<img src="/bits.png" alt="BITS Vizag Logo" class="w-full h-full object-contain" />
+				</div>
+
+				<!-- Middle: Info -->
+				<div class="flex-grow min-w-0 py-0.5">
+					<h3 class="font-bold text-slate-900 text-xs sm:text-sm truncate group-hover:text-blue-600 transition-colors leading-normal">
+						bits_vizag_official
+					</h3>
+					<p class="text-[9px] sm:text-xs text-slate-500 mt-1 leading-normal truncate">
+						Follow and Be a Part of BIG BITS FAMILY ♥️
+					</p>
+				</div>
+
+				<!-- Right: Black Button -->
+				<div class="shrink-0">
+					<span class="inline-flex items-center gap-1 bg-[#0f172a] text-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full font-bold text-[9px] sm:text-xs uppercase tracking-wider group-hover:bg-black transition-colors shadow-sm">
+						Follow
+						<i class="fa-brands fa-instagram text-[10px] sm:text-xs"></i>
+					</span>
+				</div>
+			</div>
 		</a>
 	</div>
 </section>
@@ -546,5 +546,21 @@
 	.xs\:h-\[300px\].xs\:w-\[300px\] {
 		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	/* Snappy Spring-Loaded Hover Trigger */
+	.bird-dance {
+		transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+	}
+
+	.bird-dance:hover {
+		transform: translateY(-8px) scale(1.02) rotate(1deg);
+		box-shadow: 0 16px 36px rgba(181, 148, 91, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+		border-color: rgba(181, 148, 91, 0.3);
+	}
+
+	.bird-dance:active {
+		transform: translateY(-2px) scale(0.97) rotate(-0.5deg);
+		transition: transform 0.1s ease;
 	}
 </style>

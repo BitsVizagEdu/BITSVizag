@@ -69,6 +69,20 @@
 			date: '25/12/2025',
 			href: '#',
 			id: 'box-9'
+		},
+		{
+			pic: '/gallery/g1.jpg',
+			name: 'Annual Sports Meet',
+			date: '10/02/2026',
+			href: '#',
+			id: 'box-10'
+		},
+		{
+			pic: '/gallery/img1.jpeg',
+			name: 'Campus Youth Festival',
+			date: '20/02/2026',
+			href: '#',
+			id: 'box-11'
 		}
 	];
 </script>
@@ -77,7 +91,7 @@
 	<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
 		{#each pics as img, i}
 			<div
-				class="rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ease-out group bg-white border border-slate-100 cursor-pointer hover:-translate-y-2"
+				class="rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 ease-out group bg-white border border-slate-100 cursor-pointer hover:-translate-y-2 {i >= 10 ? 'hidden md:block' : ''}"
 				data-aos="fade-up"
 				data-aos-delay={i * 80}
 			>
