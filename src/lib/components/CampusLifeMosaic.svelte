@@ -416,94 +416,22 @@
 			padding: 2.5rem 1rem;
 		}
 
+		.collage-panel {
+			width: 100%;
+			overflow: hidden;
+			height: calc(100vw - 32px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
 		.mosaic-wrapper {
-			width: 260px;
-			height: 260px;
-			margin: 1.5rem auto;
-		}
-
-		.diamond-card {
-			width: 60px;
-			height: 60px;
-			border-radius: 10px;
-			border-width: 2px;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-		}
-
-		.diamond-badge {
-			width: 60px;
-			height: 60px;
-			border-radius: 10px;
-			border-width: 2px;
-		}
-
-		.badge-content svg {
-			width: 12px;
-			height: 12px;
-		}
-
-		.badge-text {
-			font-size: 0.38rem;
-			letter-spacing: 0.08em;
-		}
-
-		.center-gold-circle {
-			width: 58px;
-			height: 58px;
-			top: 101px;
-			left: 101px;
-			border-width: 2px;
-			box-shadow: 0 4px 10px rgba(164, 130, 69, 0.25);
-		}
-
-		.circle-main {
-			font-size: 0.55rem;
-		}
-
-		.circle-tag {
-			font-size: 0.35rem;
-		}
-
-		/* Mobile Native Coordinates (Perfect 260px containment) */
-		.d1 {
-			top: 8px;
-			left: 73px;
-		}
-		.d2 {
-			top: 38px;
-			left: 134px;
-		}
-		.d3 {
-			top: 8px;
-			left: 195px;
-		}
-		.d4 {
-			top: 68px;
-			left: 43px;
-		}
-		.d5 {
-			top: 98px;
-			left: 162px;
-		}
-		.d6 {
-			top: 128px;
-			left: 12px;
-		}
-		.d7 {
-			top: 158px;
-			left: 73px;
-		}
-		.d8 {
-			top: 210px;
-			left: 30px;
-		}
-		.d9 {
-			top: 188px;
-			left: 134px;
-		}
-		.d10 {
-			top: 158px;
-			left: 195px;
+			width: 580px;
+			height: 580px;
+			margin: 0;
+			transform: scale(calc((100vw - 32px) / 580));
+			transform-origin: center center;
+			flex-shrink: 0;
 		}
 	}
 </style>
