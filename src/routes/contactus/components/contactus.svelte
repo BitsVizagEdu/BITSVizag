@@ -9,7 +9,7 @@
 			email: 'principal@bitsvizag.com',
 			phone: '+91 88866 34502',
 			icon: 'fa-user-tie',
-			color: '#3b82f6'
+			color: '#0f172a'
 		},
 		{
 			role: 'Dean Academics',
@@ -17,7 +17,7 @@
 			email: 'deanacademics@bitsvizag.com',
 			phone: '+91 91212 14313',
 			icon: 'fa-graduation-cap',
-			color: '#8b5cf6'
+			color: '#0f172a'
 		},
 		{
 			role: 'Admin Officer',
@@ -25,7 +25,7 @@
 			email: 'ao@bitsvizag.com',
 			phone: '+91 80088 44699',
 			icon: 'fa-building',
-			color: '#10b981'
+			color: '#0f172a'
 		},
 		{
 			role: 'Exam Cell',
@@ -33,467 +33,649 @@
 			email: 'examcellinfo@bitsvizag.com',
 			phone: '+91 80088 44699',
 			icon: 'fa-file-invoice',
-			color: '#f59e0b'
+			color: '#0f172a'
 		}
 	];
 
 	let mounted = false;
+	let formSubmitted = false;
+
 	onMount(() => {
 		mounted = true;
 	});
+
+	function handleSubmit(e) {
+		e.preventDefault();
+		formSubmitted = true;
+		setTimeout(() => {
+			formSubmitted = false;
+		}, 4000);
+	}
 </script>
 
 <svelte:head>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Satoshi:wght@700;900&family=Outfit:wght@400;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
 
-<section class="contact-premium-root">
-	<!-- Ambient Background -->
-	<div class="ambient-bg">
-		<div class="glow glow-1"></div>
-		<div class="glow glow-2"></div>
+<section class="contact-page-root">
+	<!-- Hero Banner Section -->
+	<div
+		class="hero-banner"
+		style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/college.jpg');"
+	>
+		<div class="hero-content">
+			<h1 class="hero-title">Contact Us</h1>
+			<div class="breadcrumb">
+				<a href="/">Home</a>
+				<span class="separator">/</span>
+				<span class="current">Contact Us</span>
+			</div>
+		</div>
 	</div>
 
-	<div class="container-minimal">
-		{#if mounted}
-			<!-- Header -->
-			<header class="header-minimal" in:fly={{ y: -20, duration: 800 }}>
-				<span class="tag-minimal">GET IN TOUCH</span>
-				<h1 class="satoshi">Connect With Us</h1>
-				<p class="inter subtitle">
-					Experience excellence in engineering education. We're here to help you navigate your
-					journey.
-				</p>
-			</header>
+	{#if mounted}
+		<div class="container" in:fade={{ duration: 600 }}>
+			<!-- Main Split Section -->
+			<div class="main-split-grid">
+				<!-- Left Column: Info -->
+				<div class="info-column" in:fly={{ x: -30, duration: 800 }}>
+					<h2 class="section-title">Always Here to Help you</h2>
+					<p class="section-description">
+						Whether you have questions about admissions, academic programs, facilities, or general
+						inquiries, our team is ready to assist you. Get in touch with us using the channels
+						below.
+					</p>
 
-			<div class="contact-grid-wrapper">
-				<!-- Contact Cards -->
-				<div class="cards-grid">
-					{#each contacts as contact, i}
-						<div class="contact-card-minimal" in:fly={{ y: 20, duration: 600, delay: 100 * i }}>
-							<div class="card-top">
-								<div class="icon-box" style="--accent: {contact.color}">
-									<i class="fa-solid {contact.icon}"></i>
-								</div>
-								<div class="role-info">
-									<span class="role-label">{contact.role}</span>
-									<h3 class="name-minimal">{contact.name}</h3>
-								</div>
+					<div class="info-list">
+						<!-- Location -->
+						<div class="info-item">
+							<div class="icon-wrapper">
+								<i class="fa-solid fa-location-dot"></i>
 							</div>
-							<div class="card-actions">
-								<a href="mailto:{contact.email}" class="action-link">
-									<i class="fa-solid fa-envelope"></i>
-									<span>{contact.email}</span>
-								</a>
-								<a href="tel:{contact.phone}" class="action-link">
+							<div class="info-details">
+								<h4 class="info-label">Location</h4>
+								<p class="info-value">
+									Baba college, Lake, near Pothinamallayyapalem, Pothinamallayya Palem,
+									Bakkanapalem, Andhra Pradesh 530048
+								</p>
+							</div>
+						</div>
+
+						<!-- Contact -->
+						<div class="info-item">
+							<div class="icon-wrapper">
+								<i class="fa-solid fa-phone"></i>
+							</div>
+							<div class="info-details">
+								<h4 class="info-label">Contact</h4>
+								<p class="info-value">
+									+91 80088 44699<br />
+									+91 88866 34502
+								</p>
+							</div>
+						</div>
+
+						<!-- Email -->
+						<div class="info-item">
+							<div class="icon-wrapper">
+								<i class="fa-solid fa-envelope"></i>
+							</div>
+							<div class="info-details">
+								<h4 class="info-label">Email</h4>
+								<p class="info-value">
+									principal@bitsvizag.com<br />
+									ao@bitsvizag.com
+								</p>
+							</div>
+						</div>
+
+						<!-- Hours of operation -->
+						<div class="info-item">
+							<div class="icon-wrapper">
+								<i class="fa-solid fa-clock"></i>
+							</div>
+							<div class="info-details">
+								<h4 class="info-label">Hours of operation</h4>
+								<p class="info-value">
+									Monday - Friday: 09.00 - 20.00<br />
+									Sunday & Saturday: 10.30 - 22.30
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column: Form -->
+				<div class="form-column" in:fly={{ x: 30, duration: 800 }}>
+					<div class="form-card">
+						<h3 class="form-title">Ready To Get Started?</h3>
+						<p class="form-subtitle">
+							Your email address will not be published. Required fields are marked.
+						</p>
+
+						{#if formSubmitted}
+							<div class="success-message" in:fade>
+								<i class="fa-solid fa-circle-check"></i>
+								<p>
+									Thank you! Your message has been sent successfully. We will get back to you
+									shortly.
+								</p>
+							</div>
+						{:else}
+							<form on:submit={handleSubmit} class="contact-form">
+								<div class="input-field">
+									<input type="text" placeholder="your name" required />
+								</div>
+								<div class="input-field">
+									<input type="email" placeholder="Email" required />
+								</div>
+								<div class="input-field">
+									<input type="tel" placeholder="Enter number" required />
+								</div>
+								<div class="input-field">
+									<textarea placeholder="Write a message..." rows="4" required></textarea>
+								</div>
+
+								<label class="terms-checkbox">
+									<input type="checkbox" required />
+									<span class="checkbox-text"
+										>Accept <a href="/terms">terms</a> and
+										<a href="/privacy">privacy policy</a>.</span
+									>
+								</label>
+
+								<button type="submit" class="submit-btn"> Send Message </button>
+							</form>
+						{/if}
+					</div>
+				</div>
+			</div>
+
+			<!-- Key Administration Directory Section -->
+			<div class="directory-section" in:fly={{ y: 30, duration: 800, delay: 200 }}>
+				<div class="directory-header">
+					<h3 class="directory-title">Key Administration Contacts</h3>
+					<p class="directory-subtitle">
+						Direct lines and support emails for administrative offices
+					</p>
+				</div>
+				<div class="directory-grid">
+					{#each contacts as contact}
+						<div class="directory-card">
+							<div class="dir-icon-box">
+								<i class="fa-solid {contact.icon}"></i>
+							</div>
+							<span class="dir-role">{contact.role}</span>
+							<h4 class="dir-name">{contact.name}</h4>
+							<div class="dir-links">
+								<a href="tel:{contact.phone}" class="dir-link">
 									<i class="fa-solid fa-phone"></i>
-									<span>{contact.phone}</span>
+									{contact.phone}
+								</a>
+								<a href="mailto:{contact.email}" class="dir-link">
+									<i class="fa-solid fa-envelope"></i>
+									{contact.email}
 								</a>
 							</div>
 						</div>
 					{/each}
 				</div>
-
-				<!-- Small Effective Blocks Side -->
-				<div class="side-blocks">
-					<!-- Location Block -->
-					<div class="block-minimal location-block" in:fly={{ x: 20, duration: 800, delay: 400 }}>
-						<div class="block-head">
-							<i class="fa-solid fa-location-dot"></i>
-							<span class="block-title">Campus Location</span>
-						</div>
-						<p class="address-text">
-							Baba College, Lake near Pothinamallayyapalem, Visakhapatnam, AP - 530048
-						</p>
-						<a
-							href="https://www.google.com/maps/place/Baba+Institute+of+Technology+%26+Sciences/@17.8115914,83.3320324,17z/data=!3m1!4b1!4m6!3m5!1s0x3a395befa9dda303:0x5781c56a5df412!8m2!3d17.8115914!4d83.3320324!16s%2Fg%2F1hc33f1gh?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D"
-							target="_blank"
-							class="map-trigger"
-						>
-							Open Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</a>
-					</div>
-
-					<!-- Form Block -->
-					<div class="block-minimal form-block" in:fly={{ x: 20, duration: 800, delay: 500 }}>
-						<div class="block-head">
-							<i class="fa-solid fa-paper-plane"></i>
-							<span class="block-title">Quick Message</span>
-						</div>
-						<form class="minimal-form">
-							<div class="input-group">
-								<input type="text" placeholder="Your Name" required />
-							</div>
-							<div class="input-group">
-								<input type="email" placeholder="Email Address" required />
-							</div>
-							<div class="input-group">
-								<textarea rows="3" placeholder="How can we help?"></textarea>
-							</div>
-							<button type="submit" class="btn-submit">
-								Send Message <i class="fa-solid fa-chevron-right"></i>
-							</button>
-						</form>
-					</div>
-				</div>
 			</div>
-		{/if}
-	</div>
+		</div>
+
+		<!-- Interactive Map Section -->
+		<div class="map-section" in:fade={{ duration: 800, delay: 400 }}>
+			<iframe
+				title="Baba Institute of Technology & Sciences Map"
+				src="https://maps.google.com/maps?q=17.8115914,83.3320324&z=16&output=embed"
+				width="100%"
+				height="450"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			>
+			</iframe>
+		</div>
+	{/if}
 </section>
 
 <style>
-	.contact-premium-root {
-		position: relative;
-		min-height: 100vh;
-		background: #f8fafc;
-		padding: 100px 20px;
-		overflow: hidden;
-	}
-
-	.ambient-bg {
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-	}
-
-	.glow {
-		position: absolute;
-		width: 40vw;
-		height: 40vw;
-		border-radius: 50%;
-		filter: blur(100px);
-		opacity: 0.4;
-	}
-
-	.glow-1 {
-		top: -10%;
-		left: -10%;
-		background: #bfdbfe;
-	}
-	.glow-2 {
-		bottom: -10%;
-		right: -10%;
-		background: #ddd6fe;
-	}
-
-	.container-minimal {
-		position: relative;
-		z-index: 10;
-		max-width: 1100px;
-		margin: 0 auto;
-	}
-
-	.header-minimal {
-		text-align: center;
-		margin-bottom: 60px;
-	}
-
-	.tag-minimal {
-		font-size: 0.7rem;
-		font-weight: 800;
-		letter-spacing: 0.3em;
-		color: #3b82f6;
-		margin-bottom: 1rem;
-		display: block;
-	}
-
-	.header-minimal h1 {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		color: #0f172a;
-		margin-bottom: 1.5rem;
-		letter-spacing: -0.04em;
-		font-weight: 600;
-	}
-
-	.subtitle {
-		font-size: 1.1rem;
-		color: #64748b;
-		max-width: 600px;
-		margin: 0 auto;
-		line-height: 1.6;
-	}
-
-	.contact-grid-wrapper {
-		display: grid;
-		grid-template-columns: 1.2fr 0.8fr;
-		gap: 30px;
-	}
-
-	.cards-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
-	}
-
-	.contact-card-minimal {
-		background: rgba(255, 255, 255, 0.7);
-		backdrop-filter: blur(12px);
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		border-radius: 24px;
-		padding: 30px 24px;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.contact-card-minimal:hover {
-		transform: translateY(-5px);
-		background: #fff;
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-	}
-
-	.card-top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 12px;
-		margin-bottom: 24px;
-		width: 100%;
-	}
-
-	.icon-box {
-		width: 48px;
-		height: 48px;
-		background: var(--accent);
-		color: #fff;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 14px;
-		font-size: 1.2rem;
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-	}
-
-	.role-label {
-		display: block;
-		font-size: 0.65rem;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: #94a3b8;
-		margin-bottom: 4px;
-	}
-
-	.name-minimal {
-		font-size: 1.05rem;
-		font-weight: 700;
+	.contact-page-root {
+		font-family: 'Inter', sans-serif;
 		color: #1e293b;
-		letter-spacing: -0.01em;
+		background-color: #ffffff;
+		overflow-x: hidden;
 	}
 
-	.card-actions {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		width: 100%;
-	}
-
-	.action-link {
+	/* Hero Banner Style */
+	.hero-banner {
+		height: 380px;
+		background-size: cover;
+		background-position: center;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 10px;
-		text-decoration: none;
-		color: #475569;
-		font-size: 0.85rem;
+		text-align: center;
+		color: #ffffff;
+		position: relative;
+	}
+
+	.hero-content {
+		z-index: 2;
+	}
+
+	.hero-title {
+		font-family: 'Inter', sans-serif;
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin: 0 0 12px 0;
+		letter-spacing: -0.02em;
+	}
+
+	.breadcrumb {
+		font-size: 0.95rem;
 		font-weight: 500;
-		transition: color 0.2s;
-	}
-
-	.action-link:hover {
-		color: #3b82f6;
-	}
-	.action-link i {
-		color: #cbd5e1;
-		width: 14px;
-	}
-
-	.side-blocks {
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-	}
-
-	.block-minimal {
-		background: #fff;
-		border-radius: 24px;
-		padding: 24px;
-		border: 1px solid rgba(0, 0, 0, 0.05);
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-	}
-
-	.block-head {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		margin-bottom: 16px;
-		color: #0f172a;
-	}
-
-	.block-title {
-		font-weight: 700;
-		font-size: 0.9rem;
-	}
-
-	.address-text {
-		font-size: 0.85rem;
-		color: #64748b;
-		line-height: 1.6;
-		margin-bottom: 16px;
-	}
-
-	.map-trigger {
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: #3b82f6;
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		gap: 6px;
-	}
-
-	.minimal-form {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-	}
-
-	.input-group input,
-	.input-group textarea {
-		width: 100%;
-		padding: 12px 16px;
-		background: #f8fafc;
-		border: 1px solid #e2e8f0;
-		border-radius: 12px;
-		font-size: 0.85rem;
-		font-family: inherit;
-		transition: all 0.2s;
-	}
-
-	.input-group input:focus,
-	.input-group textarea:focus {
-		outline: none;
-		border-color: #3b82f6;
-		background: #fff;
-		box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.05);
-	}
-
-	.btn-submit {
-		background: #0f172a;
-		color: #fff;
-		border: none;
-		padding: 12px;
-		border-radius: 12px;
-		font-weight: 700;
-		font-size: 0.85rem;
-		cursor: pointer;
+		color: rgba(255, 255, 255, 0.8);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		transition:
-			transform 0.2s,
-			background 0.2s;
 	}
 
-	.btn-submit:hover {
-		transform: translateY(-2px);
-		background: #1e293b;
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		transition: color 0.2s;
 	}
 
-	@media (max-width: 900px) {
-		.contact-grid-wrapper {
-			grid-template-columns: 1fr;
+	.breadcrumb a:hover {
+		color: #ffffff;
+	}
+
+	.breadcrumb .separator {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.breadcrumb .current {
+		color: #ffffff;
+	}
+
+	/* Container */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 80px 24px;
+	}
+
+	/* Main Split Grid */
+	.main-split-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
+		align-items: start;
+		margin-bottom: 80px;
+	}
+
+	/* Left Column - Info */
+	.section-title {
+		font-family: 'Inter', sans-serif;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #0f172a;
+		margin: 0 0 20px 0;
+		line-height: 1.2;
+	}
+
+	.section-description {
+		font-size: 1.05rem;
+		line-height: 1.6;
+		color: #64748b;
+		margin: 0 0 40px 0;
+	}
+
+	.info-list {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.info-item {
+		display: flex;
+		gap: 20px;
+		align-items: flex-start;
+	}
+
+	.icon-wrapper {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background-color: #f1f5f9;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #0f172a;
+		font-size: 1.2rem;
+		flex-shrink: 0;
+		transition: all 0.3s ease;
+	}
+
+	.info-item:hover .icon-wrapper {
+		background-color: #0f172a;
+		color: #ffffff;
+	}
+
+	.info-details {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.info-label {
+		font-size: 1.15rem;
+		font-weight: 600;
+		color: #0f172a;
+		margin: 0;
+	}
+
+	.info-value {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: #64748b;
+		margin: 0;
+	}
+
+	/* Right Column - Form */
+	.form-card {
+		background-color: #f8fafc;
+		border-radius: 20px;
+		padding: 40px;
+		border: 1px solid #e2e8f0;
+	}
+
+	.form-title {
+		font-family: 'Inter', sans-serif;
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: #0f172a;
+		margin: 0 0 8px 0;
+	}
+
+	.form-subtitle {
+		font-size: 0.9rem;
+		color: #64748b;
+		margin: 0 0 30px 0;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.input-field input,
+	.input-field textarea {
+		width: 100%;
+		padding: 14px 18px;
+		border: 1px solid #e2e8f0;
+		border-radius: 8px;
+		background-color: #ffffff;
+		font-family: inherit;
+		font-size: 0.95rem;
+		color: #0f172a;
+		transition: all 0.2s ease;
+	}
+
+	.input-field input:focus,
+	.input-field textarea:focus {
+		outline: none;
+		border-color: #0f172a;
+		box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05);
+	}
+
+	.input-field textarea {
+		resize: none;
+	}
+
+	.terms-checkbox {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 0.88rem;
+		color: #64748b;
+		cursor: pointer;
+		margin: 4px 0 10px 0;
+	}
+
+	.terms-checkbox input {
+		width: 16px;
+		height: 16px;
+		accent-color: #0f172a;
+		cursor: pointer;
+	}
+
+	.checkbox-text a {
+		color: #0f172a;
+		text-decoration: underline;
+	}
+
+	.submit-btn {
+		background-color: #0f172a;
+		color: #ffffff;
+		border: none;
+		padding: 14px 28px;
+		border-radius: 9999px;
+		font-size: 0.95rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		align-self: flex-start;
+	}
+
+	.submit-btn:hover {
+		background-color: #1e293b;
+		transform: translateY(-1px);
+	}
+
+	.submit-btn:active {
+		transform: translateY(0);
+	}
+
+	.success-message {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 16px;
+		padding: 40px 10px;
+		color: #10b981;
+	}
+
+	.success-message i {
+		font-size: 3rem;
+	}
+
+	.success-message p {
+		font-size: 1rem;
+		color: #0f172a;
+		font-weight: 500;
+		line-height: 1.5;
+	}
+
+	/* Key Directory Section */
+	.directory-section {
+		border-top: 1px solid #e2e8f0;
+		padding-top: 80px;
+		margin-top: 40px;
+	}
+
+	.directory-header {
+		text-align: center;
+		margin-bottom: 48px;
+	}
+
+	.directory-title {
+		font-family: 'Inter', sans-serif;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #0f172a;
+		margin: 0 0 8px 0;
+	}
+
+	.directory-subtitle {
+		font-size: 1rem;
+		color: #64748b;
+		margin: 0;
+	}
+
+	.directory-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 24px;
+	}
+
+	.directory-card {
+		background-color: #ffffff;
+		border: 1px solid #e2e8f0;
+		border-radius: 16px;
+		padding: 30px 20px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: all 0.3s ease;
+	}
+
+	.directory-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+		border-color: #cbd5e1;
+	}
+
+	.dir-icon-box {
+		width: 54px;
+		height: 54px;
+		border-radius: 14px;
+		background-color: #f8fafc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #0f172a;
+		font-size: 1.4rem;
+		margin-bottom: 16px;
+		border: 1px solid #f1f5f9;
+	}
+
+	.dir-role {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #64748b;
+		margin-bottom: 6px;
+	}
+
+	.dir-name {
+		font-size: 1.05rem;
+		font-weight: 600;
+		color: #0f172a;
+		margin: 0 0 16px 0;
+	}
+
+	.dir-links {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		width: 100%;
+		border-top: 1px solid #f1f5f9;
+		padding-top: 16px;
+	}
+
+	.dir-link {
+		font-size: 0.85rem;
+		color: #64748b;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		transition: color 0.2s;
+	}
+
+	.dir-link:hover {
+		color: #0f172a;
+	}
+
+	.dir-link i {
+		font-size: 0.8rem;
+		opacity: 0.7;
+	}
+
+	/* Map Section */
+	.map-section {
+		width: 100%;
+		height: 450px;
+		overflow: hidden;
+		line-height: 0;
+		display: block;
+		border-top: 1px solid #e2e8f0;
+	}
+
+	/* Responsive Media Queries */
+	@media (max-width: 1024px) {
+		.main-split-grid {
 			gap: 40px;
-			width: 100%;
-			margin: 0 auto;
 		}
-		.cards-grid {
+
+		.directory-grid {
 			grid-template-columns: repeat(2, 1fr);
-			width: 100%;
-		}
-		.header-minimal h1 {
-			font-size: 2.8rem;
 		}
 	}
 
-	@media (max-width: 640px) {
-		.contact-premium-root {
-			padding: 60px 15px;
+	@media (max-width: 768px) {
+		.hero-banner {
+			height: 280px;
 		}
-		.container-minimal {
+
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.main-split-grid {
+			grid-template-columns: 1fr;
+			gap: 50px;
+		}
+
+		.container {
+			padding: 50px 20px;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.directory-section {
+			padding-top: 50px;
+			margin-top: 20px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.directory-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.form-card {
+			padding: 24px;
+		}
+
+		.submit-btn {
 			width: 100%;
-			margin: 0 auto;
-		}
-		.header-minimal {
-			margin-bottom: 35px;
-			padding: 0 10px;
-		}
-		.header-minimal h1 {
-			font-size: 1.8rem;
-		}
-		.subtitle {
-			font-size: 0.8rem;
-			line-height: 1.5;
-		}
-		.cards-grid {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 10px;
-			width: 100%;
-		}
-		.contact-card-minimal {
-			padding: 15px 10px;
-			border-radius: 16px;
-			width: 100%;
-		}
-		.card-top {
-			flex-direction: column;
-			gap: 8px;
-			margin-bottom: 12px;
+			align-self: stretch;
 			text-align: center;
-		}
-		.icon-box {
-			width: 32px;
-			height: 32px;
-			font-size: 0.8rem;
-			margin: 0 auto;
-		}
-		.role-label {
-			font-size: 0.5rem;
-		}
-		.name-minimal {
-			font-size: 0.75rem;
-		}
-		.card-actions {
-			gap: 6px;
-		}
-		.action-link {
-			font-size: 0.65rem;
-			justify-content: center;
-		}
-		.action-link i {
-			font-size: 0.6rem;
-		}
-		.action-link span {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			max-width: 100%;
-		}
-		.block-minimal {
-			padding: 20px 15px;
-			border-radius: 20px;
-			width: 100%;
-		}
-		.side-blocks {
-			gap: 20px;
-			width: 100%;
 		}
 	}
 </style>
