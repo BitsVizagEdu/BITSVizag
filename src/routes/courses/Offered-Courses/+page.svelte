@@ -2,7 +2,6 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { fade, fly } from 'svelte/transition';
 
 	const bTechPrograms = [
 		{
@@ -10,76 +9,50 @@
 			estd: 2008,
 			name: 'Computer Science & Engineering',
 			intake: 240,
-			slug: 'Department of CSE',
-			icon: 'fa-desktop',
-			desc: 'Master software engineering, algorithms, systems design, and full-stack development.'
+			slug: 'Department of CSE'
 		},
 		{
 			sno: 2,
 			estd: 2024,
 			name: 'AI & Machine Learning',
 			intake: 120,
-			slug: 'Department of CSE (AI & ML)',
-			icon: 'fa-brain',
-			desc: 'Build intelligent systems, neural networks, predictive models, and data intelligence solutions.'
+			slug: 'Department of CSE (AI & ML)'
 		},
 		{
 			sno: 3,
 			estd: 2024,
 			name: 'Cyber Security',
 			intake: 60,
-			slug: 'Department of CSE (Cyber Security)',
-			icon: 'fa-shield-halved',
-			desc: 'Protect networks, data, and critical systems from cyber threats and security vulnerabilities.'
+			slug: 'Department of CSE (Cyber Security)'
 		},
 		{
 			sno: 4,
 			estd: 2008,
-			name: 'Electronics & Comm. Engineering',
+			name: 'Electronics & Communication Engineering',
 			intake: 120,
-			slug: 'Department of ECE',
-			icon: 'fa-microchip',
-			desc: 'Design semiconductor chips, communication networks, IoT nodes, and signal processors.'
+			slug: 'Department of ECE'
 		},
 		{
 			sno: 5,
 			estd: 2008,
 			name: 'Electrical & Electronic Engineering',
 			intake: 60,
-			slug: 'Department of EEE',
-			icon: 'fa-bolt',
-			desc: 'Develop clean energy systems, smart grids, power electronics, and automation systems.'
+			slug: 'Department of EEE'
 		},
-		{
-			sno: 6,
-			estd: 2008,
-			name: 'Mechanical Engineering',
-			intake: 60,
-			slug: 'Department of MECH',
-			icon: 'fa-gears',
-			desc: 'Innovate robotics, automotive design, thermodynamics, and manufacturing systems.'
-		}
+		{ sno: 6, estd: 2008, name: 'Mechanical Engineering', intake: 60, slug: 'Department of MECH' }
 	];
 
 	const pgPrograms = [
-		{
-			sno: 1,
-			duration: '2 Years',
-			name: 'Master of Technology (M.Tech)',
-			slug: null,
-			icon: 'fa-graduation-cap',
-			desc: 'Advanced research and specialization across core tech streams.'
-		},
+		{ sno: 1, duration: '2 Years', name: 'Master of Technology (M.Tech)', slug: null },
 		{
 			sno: 2,
 			duration: '2 Years',
 			name: 'Master of Business Administration (MBA)',
-			slug: 'Department of MBA',
-			icon: 'fa-briefcase',
-			desc: 'Develop leadership, scale marketing, finance operations, and entrepreneurial strategy.'
+			slug: 'Department of MBA'
 		}
 	];
 
+	let activeTab = 'btech';
 	let visible = false;
 
 	onMount(() => {
@@ -101,1201 +74,1171 @@
 	siteName="BITS Vizag"
 />
 
-<div class="highnote-root">
-	{#if visible}
-		<!-- HERO SECTION -->
-		<section class="hero-section" in:fade={{ duration: 600 }}>
-			<div class="hero-container">
-				<div class="hero-left" in:fly={{ x: -40, duration: 800 }}>
-					<span class="hero-tag">ACADEMIC OFFERINGS</span>
-					<h1 class="hero-title">The Region's Most Modern Engineering Academy</h1>
-					<p class="hero-subtitle">
-						BITS Vizag is the premier all-in-one platform for engineering, technology, and management education, preparing students for next-generation industrial demands.
+<div class="page-container">
+	<div class="background-blobs">
+		<div class="blob blob-1"></div>
+		<div class="blob blob-2"></div>
+		<div class="blob blob-3"></div>
+	</div>
+
+	<div class="content-wrapper {visible ? 'fade-in' : ''}">
+		<header class="page-header">
+			<div class="dot-grid-overlay"></div>
+			<div class="right-circle-overlay"></div>
+			<div class="header-glow"></div>
+
+			<div class="header-icon-badge">
+				<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+					<path
+						d="M4.14 12.18L12 16.47l7.86-4.29c.12-.06.14-.23.03-.32l-1.07-.86L12 14.86l-6.82-3.72-1.07.86c-.11.09-.09.26.03.32z"
+					/>
+				</svg>
+			</div>
+
+			<h1 class="page-title">Courses <span class="gold-text">Offered</span></h1>
+
+			<div class="gold-divider">
+				<span class="divider-line"></span>
+				<span class="divider-diamond"></span>
+				<span class="divider-line"></span>
+			</div>
+
+			<p class="subtitle">Comprehensive Academic Offerings at BITS Vizag</p>
+		</header>
+
+		<div class="admission-section">
+			<div class="admission-box">
+				<div class="info-icon-badge">
+					<span class="info-symbol">i</span>
+				</div>
+				<div class="admission-content">
+					<h3 class="admission-title">Admission Allocation</h3>
+					<div class="title-underline"></div>
+					<p class="admission-desc">
+						70% seats allotted via EAPCET / ECET / PGECET / ICET.<br />
+						30% seats earmarked for Management / NRI Quota.
 					</p>
-					<div class="hero-actions">
-						<a href="/application-form" class="btn-green-pill">
-							Apply for Admissions <span class="arrow">→</span>
-						</a>
-					</div>
 				</div>
+			</div>
+		</div>
 
-				<div class="hero-right" in:fly={{ x: 40, duration: 800 }}>
-					<!-- Interactive Floating Card Graphic (Highnote Credit Card Style mockup for BITS Student ID) -->
-					<div class="card-mockup-wrapper">
-						<div class="floating-card accent-green">
-							<div class="card-glow"></div>
-							<div class="card-logo">
-								<svg class="h-6" viewBox="0 0 24 24" fill="currentColor">
-									<path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+		<div class="tabs-container">
+			<div class="tabs-nav">
+				<button
+					class="tab-btn {activeTab === 'btech' ? 'active' : ''}"
+					on:click={() => (activeTab = 'btech')}
+				>
+					<svg class="tab-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 14l9-5-9-5-9 5 9 5z"
+						/>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+						/>
+					</svg>
+					B.Tech Specializations
+					{#if activeTab === 'btech'}
+						<div class="active-indicator">
+							<span class="indicator-blue"></span>
+							<span class="indicator-gold"></span>
+						</div>
+					{/if}
+				</button>
+				<button
+					class="tab-btn {activeTab === 'pg' ? 'active' : ''}"
+					on:click={() => (activeTab = 'pg')}
+				>
+					<svg class="tab-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+						/>
+					</svg>
+					Postgraduate Programs
+					{#if activeTab === 'pg'}
+						<div class="active-indicator">
+							<span class="indicator-blue"></span>
+							<span class="indicator-gold"></span>
+						</div>
+					{/if}
+				</button>
+			</div>
+
+			<div class="tab-content">
+				{#if activeTab === 'btech'}
+					<div class="course-section">
+						<div class="section-title-wrap">
+							<div class="title-left">
+								<div class="title-icon-bubble">
+									<svg
+										class="w-5 h-5"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+										/>
+									</svg>
+								</div>
+								<h2 class="section-title">Undergraduate Programs</h2>
+							</div>
+							<span class="duration-badge">
+								<svg
+									class="w-4 h-4 mr-1.5 text-slate-400"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+									/>
 								</svg>
-								<span class="logo-text">BITS VIZAG</span>
-							</div>
-							<div class="card-chip"></div>
-							<div class="card-number">4147 834 6763 8008</div>
-							<div class="card-footer-info">
-								<div class="card-holder">
-									<span class="label">STUDENT</span>
-									<span class="value">CSE SPECIALIST</span>
-								</div>
-								<div class="card-valid">
-									<span class="label">BATCH</span>
-									<span class="value">2026 - 2030</span>
-								</div>
-							</div>
+								Bachelor of Technology (4 Years)
+							</span>
 						</div>
-						
-						<!-- Sub decorative card -->
-						<div class="floating-card sub-card">
-							<div class="card-header-sub">
-								<span class="dot red"></span>
-								<span class="dot yellow"></span>
-								<span class="dot green"></span>
-							</div>
-							<div class="sub-card-content">
-								<span class="label">EAPCET CODE</span>
-								<strong class="value">BABA</strong>
-							</div>
+						<div class="table-wrapper">
+							<table class="courses-table">
+								<thead>
+									<tr>
+										<th>S. NO</th>
+										<th>ESTD.</th>
+										<th>COURSE SPECIALIZATION</th>
+										<th class="intake-header">INTAKE</th>
+									</tr>
+								</thead>
+								<tbody>
+									{#each bTechPrograms as course}
+										<tr class="course-row" on:click={() => navigateToCourse(course.slug)}>
+											<td class="sno-cell">{course.sno}</td>
+											<td class="estd-cell">{course.estd}</td>
+											<td class="course-name-cell">
+												<div class="course-name-wrap">
+													<div class="course-icon-bubble">
+														{#if course.sno === 1}
+															<!-- Computer Science Monitor Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+																/>
+															</svg>
+														{:else if course.sno === 2}
+															<!-- AI Brain Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+																/>
+															</svg>
+														{:else if course.sno === 3}
+															<!-- Cyber Security Shield/Lock Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+																/>
+															</svg>
+														{:else if course.sno === 4}
+															<!-- Chip/Processor Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+																/>
+															</svg>
+														{:else if course.sno === 5}
+															<!-- Lightning Bolt Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M13 10V3L4 14h7v7l9-11h-7z"
+																/>
+															</svg>
+														{:else if course.sno === 6}
+															<!-- Gear/Mechanical Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+																/>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+																/>
+															</svg>
+														{/if}
+													</div>
+													<span class="course-name">{course.name}</span>
+												</div>
+											</td>
+											<td class="intake-cell"><span class="intake-badge">{course.intake}</span></td>
+										</tr>
+									{/each}
+								</tbody>
+							</table>
 						</div>
 					</div>
-				</div>
+				{:else if activeTab === 'pg'}
+					<div class="course-section">
+						<div class="section-title-wrap">
+							<div class="title-left">
+								<div class="title-icon-bubble">
+									<svg
+										class="w-5 h-5"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+										/>
+									</svg>
+								</div>
+								<h2 class="section-title">Postgraduate Programs</h2>
+							</div>
+							<span class="duration-badge">
+								<svg
+									class="w-4 h-4 mr-1.5 text-slate-400"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+									/>
+								</svg>
+								M.Tech & MBA (2 Years)
+							</span>
+						</div>
+						<div class="table-wrapper">
+							<table class="courses-table">
+								<thead>
+									<tr>
+										<th>S. NO</th>
+										<th>DURATION</th>
+										<th>COURSE SPECIALIZATION</th>
+										<th class="intake-header">ACTION</th>
+									</tr>
+								</thead>
+								<tbody>
+									{#each pgPrograms as course}
+										<tr
+											class="course-row {course.slug ? 'is-clickable' : 'is-static'}"
+											on:click={() => navigateToCourse(course.slug)}
+										>
+											<td class="sno-cell">{course.sno}</td>
+											<td class="estd-cell">{course.duration}</td>
+											<td class="course-name-cell">
+												<div class="course-name-wrap">
+													<div class="course-icon-bubble">
+														{#if course.sno === 1}
+															<!-- Academic cap outline -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M12 14l9-5-9-5-9 5 9 5z"
+																/>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+																/>
+															</svg>
+														{:else if course.sno === 2}
+															<!-- Briefcase/MBA Icon -->
+															<svg
+																class="w-5 h-5"
+																fill="none"
+																viewBox="0 0 24 24"
+																stroke="currentColor"
+																stroke-width="2"
+															>
+																<path
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4.67 12.89a3 3 0 11-5.34 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+																/>
+															</svg>
+														{/if}
+													</div>
+													<span class="course-name">{course.name}</span>
+												</div>
+											</td>
+											<td class="intake-cell">
+												{#if course.slug}
+													<span class="action-chip clickable">Explore Department</span>
+												{:else}
+													<span class="action-chip static">Info Only</span>
+												{/if}
+											</td>
+										</tr>
+									{/each}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				{/if}
 			</div>
-		</section>
+		</div>
 
-		<!-- THREE COLUMN VALUE PROPOSITION ("Experiences built for tomorrow") -->
-		<section class="value-proposition-section">
-			<div class="container">
-				<div class="section-header-centered">
-					<h2 class="title-large">Educational pathways built for tomorrow, not yesterday</h2>
-					<a href="/aboutus" class="btn-outline-pill">
-						Learn About BITS <span class="arrow">→</span>
-					</a>
-				</div>
-
-				<div class="three-col-grid">
-					<!-- B.Tech Tech Specializations -->
-					<div class="value-col">
-						<div class="value-icon-box">
-							<i class="fa-solid fa-laptop-code"></i>
-						</div>
-						<h3 class="value-title">Streamlined B.Tech Tech</h3>
-						<p class="value-desc">
-							Accelerated technology paths covering CSE, Artificial Intelligence, and Cyber Security with dedicated sandbox labs and continuous product development models.
-						</p>
-					</div>
-
-					<!-- Core Engineering -->
-					<div class="value-col">
-						<div class="value-icon-box">
-							<i class="fa-solid fa-microchip"></i>
-						</div>
-						<h3 class="value-title">Core Engineering & Hardware</h3>
-						<p class="value-desc">
-							Comprehensive design systems covering ECE chip architecture, EEE electrical networks, and Mechanical systems engineering. Built for high-frequency deployment.
-						</p>
-					</div>
-
-					<!-- Postgraduate Studies -->
-					<div class="value-col">
-						<div class="value-icon-box">
-							<i class="fa-solid fa-graduation-cap"></i>
-						</div>
-						<h3 class="value-title">Built for Global Growth</h3>
-						<p class="value-desc">
-							Advanced MBA & M.Tech business frameworks and specialization research. Designed to scale management strategies from single-user to global platforms.
-						</p>
-					</div>
-				</div>
+		<div class="counselling-code-section">
+			<div class="code-box">
+				<div class="code-box-glow"></div>
+				<span class="code-label">Counselling Code</span>
+				<strong class="code-value">BABA</strong>
 			</div>
-		</section>
+		</div>
 
-		<!-- SEAT ALLOCATION SYSTEM -->
-		<section class="allocation-section">
-			<div class="container">
-				<div class="allocation-grid">
-					<div class="allocation-left">
-						<h2 class="title-large">Complete allocation structure for seats</h2>
-						<p class="section-desc-light">
-							Admissions to BITS Vizag are regulated under strict institutional standards, split into government quota channels and direct management seats.
-						</p>
-						<ul class="checklist-items">
-							<li>
-								<div class="check-icon">
-									<i class="fa-solid fa-circle-check"></i>
-								</div>
-								<div class="check-text">
-									<strong>EAPCET / ECET Quota:</strong> 70% seats allotted through the state counseling platform.
-								</div>
-							</li>
-							<li>
-								<div class="check-icon">
-									<i class="fa-solid fa-circle-check"></i>
-								</div>
-								<div class="check-text">
-									<strong>PGECET / ICET Quota:</strong> Direct PG counseling routes for M.Tech and MBA streams.
-								</div>
-							</li>
-							<li>
-								<div class="check-icon">
-									<i class="fa-solid fa-circle-check"></i>
-								</div>
-								<div class="check-text">
-									<strong>Management Quota:</strong> 30% seats earmarked for direct institutional selection.
-								</div>
-							</li>
-							<li>
-								<div class="check-icon">
-									<i class="fa-solid fa-circle-check"></i>
-								</div>
-								<div class="check-text">
-									<strong>Lateral Entry Option:</strong> Seamless admission to the second year of engineering for diploma holders.
-								</div>
-							</li>
-						</ul>
-						<div class="hero-actions">
-							<a href="/application-form" class="btn-black-pill">
-								Apply Online Now <span class="arrow">→</span>
-							</a>
-						</div>
-					</div>
-
-					<div class="allocation-right">
-						<!-- Custom diagram representation of Seat Division -->
-						<div class="seat-division-diagram">
-							<div class="diagram-header">
-								<span>Allocation Division Matrix</span>
-								<span class="badge">Live Schema</span>
-							</div>
-							<div class="diagram-flow">
-								<div class="flow-node active">
-									<span class="label">Total Seats</span>
-									<strong class="value">100%</strong>
-								</div>
-								<div class="flow-lines">
-									<div class="line branch-left"></div>
-									<div class="line branch-right"></div>
-								</div>
-								<div class="flow-destinations">
-									<div class="dest-card gov-quota">
-										<i class="fa-solid fa-building-columns"></i>
-										<span class="label">Govt Quota</span>
-										<strong class="value">70%</strong>
-										<span class="subtext">Counseling Entrance</span>
-									</div>
-									<div class="dest-card mgt-quota">
-										<i class="fa-solid fa-id-card"></i>
-										<span class="label">Mgt Quota</span>
-										<strong class="value">30%</strong>
-										<span class="subtext">Direct Admission</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		<footer class="accreditation-footer">
+			<div class="footer-pills">
+				<span>UGC Autonomous</span>
+				<span class="separator">|</span>
+				<span>NAAC 'A' Grade</span>
+				<span class="separator">|</span>
+				<span>JNTU-GV Affiliated</span>
 			</div>
-		</section>
-
-		<!-- INTERACTIVE B.TECH SPECIALIZATIONS LIST -->
-		<section class="specializations-section">
-			<div class="container">
-				<div class="section-title-wrap">
-					<h2 class="title-large">Undergraduate Program Matrix (B.Tech)</h2>
-					<span class="duration-tag">
-						<i class="fa-solid fa-calendar-days"></i> Duration: 4 Years
-					</span>
-				</div>
-
-				<div class="specializations-grid">
-					{#each bTechPrograms as course}
-						<div class="spec-card" on:click={() => navigateToCourse(course.slug)}>
-							<div class="card-top">
-								<div class="icon-bubble">
-									<i class="fa-solid {course.icon}"></i>
-								</div>
-								<span class="estd-text">Estd. {course.estd}</span>
-							</div>
-							<div class="card-mid">
-								<h3 class="spec-title">{course.name}</h3>
-								<p class="spec-desc">{course.desc}</p>
-							</div>
-							<div class="card-bottom">
-								<div class="intake-info">
-									<span class="label">Intake Capacity</span>
-									<span class="value">{course.intake} Seats</span>
-								</div>
-								<div class="action-arrow">
-									<span class="explore-text">Explore</span>
-									<i class="fa-solid fa-arrow-right"></i>
-								</div>
-							</div>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</section>
-
-		<!-- INTERACTIVE POSTGRADUATE SPECIALIZATIONS LIST -->
-		<section class="pg-section">
-			<div class="container">
-				<div class="section-title-wrap">
-					<h2 class="title-large">Postgraduate & Business Programs (PG)</h2>
-					<span class="duration-tag">
-						<i class="fa-solid fa-calendar-days"></i> Duration: 2 Years
-					</span>
-				</div>
-
-				<div class="pg-grid">
-					{#each pgPrograms as course}
-						<div class="pg-card {course.slug ? 'is-clickable' : ''}" on:click={() => navigateToCourse(course.slug)}>
-							<div class="card-top">
-								<div class="icon-bubble">
-									<i class="fa-solid {course.icon}"></i>
-								</div>
-								<span class="estd-text">{course.duration}</span>
-							</div>
-							<div class="card-mid">
-								<h3 class="spec-title">{course.name}</h3>
-								<p class="spec-desc">{course.desc}</p>
-							</div>
-							<div class="card-bottom">
-								{#if course.slug}
-									<div class="intake-info">
-										<span class="label">Status</span>
-										<span class="value active">Open to Explore</span>
-									</div>
-									<div class="action-arrow">
-										<span class="explore-text">Explore</span>
-										<i class="fa-solid fa-arrow-right"></i>
-									</div>
-								{:else}
-									<div class="intake-info">
-										<span class="label">Status</span>
-										<span class="value static">Information Only</span>
-									</div>
-								{/if}
-							</div>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</section>
-
-		<!-- ACCREDITATION FOOTER & CODE BLOCK -->
-		<section class="code-accreditation-section">
-			<div class="container">
-				<div class="counselling-code-card">
-					<div class="code-glow"></div>
-					<div class="code-details">
-						<span class="tag">EAPCET / ICET COUNSELLING CODE</span>
-						<h3 class="code-title">BABA</h3>
-						<p class="code-sub">Select Baba Institute of Technology & Sciences during college selection options</p>
-					</div>
-					<a href="/Online-Grievances" class="btn-green-pill shrink-on-mobile">
-						Student Portal Login <span class="arrow">→</span>
-					</a>
-				</div>
-
-				<div class="accreditation-footer">
-					<div class="footer-pills">
-						<span class="pill-badge">UGC Autonomous</span>
-						<span class="separator">|</span>
-						<span class="pill-badge">NAAC 'A' Grade</span>
-						<span class="separator">|</span>
-						<span class="pill-badge">JNTU-GV Affiliated</span>
-					</div>
-				</div>
-			</div>
-		</section>
-	{/if}
+		</footer>
+	</div>
 </div>
 
 <style>
-	.highnote-root {
-		font-family: 'Inter', sans-serif;
-		background-color: #fafaf9;
-		color: #1c1c1e;
-		min-height: 100vh;
-		overflow-x: hidden;
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 24px;
-	}
-
-	/* Hero Section */
-	.hero-section {
-		padding: 120px 24px 80px 24px;
-		background: radial-gradient(circle at 100% 0%, #f0fdf4 0%, #fafaf9 60%);
-	}
-
-	.hero-container {
-		max-width: 1200px;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1.1fr 0.9fr;
-		gap: 60px;
-		align-items: center;
-	}
-
-	.hero-tag {
-		display: inline-block;
-		font-size: 0.8rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: #16a34a;
-		margin-bottom: 16px;
-	}
-
-	.hero-title {
-		font-family: 'Outfit', sans-serif;
-		font-size: clamp(2.5rem, 5vw, 4.2rem);
-		font-weight: 800;
-		color: #0f172a;
-		line-height: 1.1;
-		letter-spacing: -0.03em;
-		margin: 0 0 24px 0;
-	}
-
-	.hero-subtitle {
-		font-size: 1.15rem;
-		line-height: 1.6;
-		color: #475569;
-		margin: 0 0 36px 0;
-		max-width: 540px;
-	}
-
-	/* Buttons styling */
-	.btn-green-pill {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		background-color: #10b981;
-		color: #ffffff;
-		padding: 14px 28px;
-		border-radius: 9999px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.2s ease;
-		box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
-	}
-
-	.btn-green-pill:hover {
-		background-color: #059669;
-		transform: translateY(-2px);
-		box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-	}
-
-	.btn-outline-pill {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		border: 1.5px solid #0f172a;
-		color: #0f172a;
-		padding: 12px 24px;
-		border-radius: 9999px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.2s ease;
-	}
-
-	.btn-outline-pill:hover {
-		background-color: #0f172a;
-		color: #ffffff;
-	}
-
-	.btn-black-pill {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		background-color: #0f172a;
-		color: #ffffff;
-		padding: 14px 28px;
-		border-radius: 9999px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.2s ease;
-	}
-
-	.btn-black-pill:hover {
-		background-color: #1e293b;
-		transform: translateY(-2px);
-	}
-
-	.arrow {
-		transition: transform 0.2s ease;
-	}
-
-	.btn-green-pill:hover .arrow,
-	.btn-outline-pill:hover .arrow,
-	.btn-black-pill:hover .arrow {
-		transform: translateX(4px);
-	}
-
-	/* Hero Right - Card Graphic */
-	.card-mockup-wrapper {
-		position: relative;
-		width: 100%;
-		height: 380px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.floating-card {
-		position: absolute;
-		width: 320px;
-		height: 200px;
-		border-radius: 20px;
-		padding: 24px;
-		color: #ffffff;
-		box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-		overflow: hidden;
-		transition: transform 0.3s ease;
-	}
-
-	.accent-green {
-		background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-		transform: rotate(-8deg) translate(-20px, -20px);
-		z-index: 2;
-	}
-
-	.sub-card {
-		background: #ffffff;
-		border: 1px solid #e2e8f0;
-		color: #0f172a;
-		width: 240px;
-		height: 140px;
-		transform: rotate(6deg) translate(80px, 60px);
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	.card-glow {
-		position: absolute;
-		top: -50%;
-		left: -50%;
-		width: 200%;
-		height: 200%;
-		background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-		pointer-events: none;
-	}
-
-	.card-logo {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		margin-bottom: 24px;
-	}
-
-	.logo-text {
-		font-size: 0.85rem;
-		font-weight: 800;
-		letter-spacing: 0.05em;
-	}
-
-	.card-chip {
-		width: 40px;
-		height: 30px;
-		background: linear-gradient(135deg, #ffe066 0%, #f5c400 100%);
-		border-radius: 6px;
-		margin-bottom: 16px;
-	}
-
-	.card-number {
-		font-family: monospace;
-		font-size: 1.1rem;
-		letter-spacing: 0.15em;
-		margin-bottom: 20px;
-		opacity: 0.9;
-	}
-
-	.card-footer-info {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.card-holder, .card-valid {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.label {
-		font-size: 0.55rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		opacity: 0.6;
-		margin-bottom: 4px;
-	}
-
-	.value {
-		font-size: 0.75rem;
-		font-weight: 700;
-	}
-
-	.card-header-sub {
-		display: flex;
-		gap: 6px;
-	}
-
-	.dot {
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-	}
-
-	.dot.red { background-color: #ef4444; }
-	.dot.yellow { background-color: #eab308; }
-	.dot.green { background-color: #10b981; }
-
-	.sub-card-content .label {
-		color: #64748b;
-	}
-
-	.sub-card-content .value {
-		font-size: 1.6rem;
-		font-weight: 900;
-		color: #0f172a;
-	}
-
-	/* Value Proposition Section */
-	.value-proposition-section {
-		padding: 80px 0;
-		background-color: #ffffff;
-		border-bottom: 1px solid #f1f5f9;
-	}
-
-	.section-header-centered {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		margin-bottom: 60px;
-		gap: 40px;
-	}
-
-	.title-large {
-		font-family: 'Outfit', sans-serif;
-		font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-		font-weight: 800;
-		color: #0f172a;
-		line-height: 1.2;
-		letter-spacing: -0.02em;
+	:global(body) {
 		margin: 0;
-		max-width: 600px;
-	}
-
-	.three-col-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 40px;
-	}
-
-	.value-col {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	.value-icon-box {
-		width: 56px;
-		height: 56px;
-		border-radius: 16px;
-		background-color: #f0fdf4;
-		color: #16a34a;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.4rem;
-	}
-
-	.value-title {
-		font-size: 1.25rem;
-		font-weight: 700;
-		color: #0f172a;
-		margin: 0;
-	}
-
-	.value-desc {
-		font-size: 0.95rem;
-		line-height: 1.6;
-		color: #64748b;
-		margin: 0;
-	}
-
-	/* Allocation Section */
-	.allocation-section {
-		padding: 100px 0;
-		background-color: #fafaf9;
-		border-bottom: 1px solid #f1f5f9;
-	}
-
-	.allocation-grid {
-		display: grid;
-		grid-template-columns: 1.1fr 0.9fr;
-		gap: 80px;
-		align-items: center;
-	}
-
-	.section-desc-light {
-		font-size: 1.05rem;
-		line-height: 1.6;
-		color: #475569;
-		margin: 16px 0 36px 0;
-	}
-
-	.checklist-items {
-		list-style: none;
 		padding: 0;
-		margin: 0 0 40px 0;
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
 	}
 
-	.checklist-items li {
+	.page-container {
+		position: relative;
+		min-height: 100vh;
+		background: radial-gradient(circle at 50% 0%, #111827 0%, #030712 100%);
+		overflow: hidden;
+		font-family: 'Inter', 'Poppins', sans-serif;
+		padding: 4rem 2rem;
 		display: flex;
-		gap: 14px;
+		justify-content: center;
 		align-items: flex-start;
 	}
 
-	.check-icon {
-		color: #10b981;
-		font-size: 1.2rem;
-		line-height: 1;
-		margin-top: 2px;
-	}
-
-	.check-text {
-		font-size: 0.98rem;
-		line-height: 1.5;
-		color: #475569;
-	}
-
-	.check-text strong {
-		color: #0f172a;
-	}
-
-	/* Diagram Representation */
-	.seat-division-diagram {
-		background-color: #ffffff;
-		border: 1.5px solid #e2e8f0;
-		border-radius: 24px;
-		padding: 30px;
-		box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-	}
-
-	.diagram-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		border-bottom: 1.5px solid #f1f5f9;
-		padding-bottom: 16px;
-		margin-bottom: 24px;
-		font-weight: 700;
-		font-size: 0.9rem;
-		color: #0f172a;
-	}
-
-	.diagram-header .badge {
-		background-color: #e2e8f0;
-		color: #475569;
-		font-size: 0.72rem;
-		font-weight: 700;
-		padding: 4px 8px;
-		border-radius: 9999px;
-		text-transform: uppercase;
-	}
-
-	.diagram-flow {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.flow-node {
-		background-color: #0f172a;
-		color: #ffffff;
-		border-radius: 12px;
-		padding: 12px 24px;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		min-width: 140px;
-	}
-
-	.flow-node .label {
-		color: rgba(255,255,255,0.6);
-	}
-
-	.flow-node .value {
-		font-size: 1.2rem;
-	}
-
-	.flow-lines {
-		position: relative;
-		width: 100%;
-		height: 40px;
-	}
-
-	.line {
+	.background-blobs {
 		position: absolute;
 		top: 0;
-		height: 100%;
-		border-top: 1.5px solid #cbd5e1;
-		width: 25%;
-	}
-
-	.line.branch-left {
-		right: 50%;
-		border-right: 1.5px solid #cbd5e1;
-		border-radius: 0 8px 0 0;
-	}
-
-	.line.branch-right {
-		left: 50%;
-		border-left: 1.5px solid #cbd5e1;
-		border-radius: 8px 0 0 0;
-	}
-
-	.flow-destinations {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 20px;
+		left: 0;
 		width: 100%;
+		height: 100%;
+		z-index: 0;
+		overflow: hidden;
+		pointer-events: none;
 	}
 
-	.dest-card {
-		border: 1px solid #e2e8f0;
-		border-radius: 16px;
-		padding: 20px;
+	.blob {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(120px);
+		opacity: 0.12;
+		animation: blob-float 22s infinite alternate;
+	}
+
+	.blob-1 {
+		width: 600px;
+		height: 600px;
+		background: #3b82f6;
+		top: -150px;
+		left: -150px;
+	}
+
+	.blob-2 {
+		width: 500px;
+		height: 500px;
+		background: #fbbf24;
+		bottom: -100px;
+		right: -100px;
+		animation-delay: -6s;
+	}
+
+	.blob-3 {
+		width: 400px;
+		height: 400px;
+		background: #10b981;
+		top: 40%;
+		left: 55%;
+		transform: translate(-50%, -50%);
+		animation-delay: -11s;
+		opacity: 0.06;
+	}
+
+	@keyframes blob-float {
+		0% {
+			transform: translate(0, 0) scale(1);
+		}
+		33% {
+			transform: translate(40px, -60px) scale(1.12);
+		}
+		66% {
+			transform: translate(-30px, 30px) scale(0.92);
+		}
+		100% {
+			transform: translate(0, 0) scale(1);
+		}
+	}
+
+	.content-wrapper {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		max-width: 1000px;
+		opacity: 0;
+		transform: translateY(24px);
+		transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.content-wrapper.fade-in {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Ultra-premium page header banner perfectly styled as screenshot */
+	.page-header {
+		position: relative;
 		text-align: center;
+		margin-bottom: 2.5rem;
+		padding: 3.5rem 2rem 3rem 2rem;
+		background: linear-gradient(135deg, #021a44 0%, #000c24 100%);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 1.5rem;
+		box-shadow:
+			0 20px 45px -15px rgba(0, 0, 0, 0.6),
+			inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+		overflow: hidden;
+	}
+
+	.header-glow {
+		position: absolute;
+		top: -50px;
+		left: -50px;
+		width: 350px;
+		height: 350px;
+		background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+		pointer-events: none;
+	}
+
+	.dot-grid-overlay {
+		position: absolute;
+		left: 4%;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 72px;
+		height: 96px;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+		background-size: 14px 14px;
+		opacity: 0.7;
+		pointer-events: none;
+	}
+
+	.right-circle-overlay {
+		position: absolute;
+		right: -10%;
+		bottom: -40%;
+		width: 380px;
+		height: 380px;
+		border-radius: 50%;
+		background: radial-gradient(circle at center, rgba(15, 52, 122, 0.35) 0%, transparent 80%);
+		pointer-events: none;
+	}
+
+	.header-icon-badge {
+		margin: 0 auto;
+		width: 56px;
+		height: 56px;
+		background: rgba(15, 32, 67, 0.6);
+		border: 1.5px solid rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
+		justify-content: center;
+		color: #e0a92e;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 	}
 
-	.dest-card.gov-quota {
-		background-color: #f0fdf4;
-		border-color: #bbf7d0;
-		color: #16a34a;
+	.page-title {
+		font-family: 'Playfair Display', 'Lora', 'Georgia', serif;
+		font-size: clamp(2.5rem, 5.5vw, 4rem);
+		font-weight: 700;
+		color: #ffffff;
+		margin: 1.25rem 0 0.5rem 0;
+		letter-spacing: -0.01em;
+		line-height: 1.2;
 	}
 
-	.dest-card.mgt-quota {
-		background-color: #f8fafc;
-		border-color: #e2e8f0;
-		color: #0f172a;
+	.gold-text {
+		color: #e0a92e;
 	}
 
-	.dest-card i {
-		font-size: 1.3rem;
-		margin-bottom: 8px;
+	/* Gold divider matching the image */
+	.gold-divider {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.25rem;
+		margin: 0.75rem auto 1.5rem auto;
+		max-width: 320px;
 	}
 
-	.dest-card .value {
-		font-size: 1.5rem;
+	.divider-line {
+		flex: 1;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, #e0a92e 50%, transparent);
+		opacity: 0.6;
+	}
+
+	.divider-diamond {
+		width: 6px;
+		height: 6px;
+		background-color: #e0a92e;
+		transform: rotate(45deg);
+		flex-shrink: 0;
+	}
+
+	.subtitle {
+		font-size: 1.15rem;
+		color: #cbd5e1;
+		margin: 0;
+		font-weight: 500;
+		letter-spacing: 0.01em;
+	}
+
+	/* High-end styled admission allocation alert */
+	.admission-section {
+		margin: 2rem 0;
+	}
+
+	.admission-box {
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+		background: #fffdf5;
+		border: 1px solid rgba(226, 163, 44, 0.2);
+		border-left: 5px solid #e2a32c;
+		border-radius: 0.75rem;
+		padding: 1.75rem 2rem;
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+
+	.admission-box:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.2);
+	}
+
+	.info-icon-badge {
+		width: 54px;
+		height: 54px;
+		background: #fcecb4;
+		border: 2px solid #e5a93c;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		box-shadow: 0 4px 10px rgba(229, 169, 60, 0.2);
+	}
+
+	.info-symbol {
+		font-family: 'Georgia', serif;
+		font-size: 1.85rem;
+		font-weight: 700;
+		color: #b27a1e;
+		line-height: 1;
+		margin-top: -2px;
+	}
+
+	.admission-content {
+		flex-grow: 1;
+	}
+
+	.admission-title {
+		font-family: 'Playfair Display', 'Georgia', serif;
+		font-size: 1.25rem;
+		font-weight: 800;
+		color: #0c1b40;
+		margin: 0;
+	}
+
+	.title-underline {
+		width: 42px;
+		height: 2px;
+		background-color: #e2a32c;
+		margin: 0.35rem 0 0.65rem 0;
+	}
+
+	.admission-desc {
+		margin: 0;
+		font-family: 'Inter', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: #2c3a58;
+		line-height: 1.6;
+	}
+
+	/* Light Bento Box Tabs & Table System styled exactly like screenshot */
+	.tabs-container {
+		background: #ffffff;
+		border: 1.5px solid #e2e8f0;
+		border-radius: 1rem;
+		overflow: hidden;
+		margin: 2.5rem 0;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+	}
+
+	.tabs-nav {
+		display: flex;
+		background: #f8fafc;
+		border-bottom: 1px solid #e2e8f0;
+		padding: 0;
+	}
+
+	.tab-btn {
+		flex: 1;
+		padding: 1.25rem 2rem;
+		border: none;
+		background: transparent;
+		color: #64748b;
+		font-weight: 700;
+		font-size: 1rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		position: relative;
+		transition: all 0.25s ease;
+		font-family: 'Inter', 'Poppins', sans-serif;
+	}
+
+	.tab-btn:hover {
+		color: #0f2249;
+		background: rgba(15, 34, 73, 0.02);
+	}
+
+	.tab-btn.active {
+		background: #ffffff;
+		color: #0f2249;
 		font-weight: 800;
 	}
 
-	.dest-card .subtext {
-		font-size: 0.72rem;
-		font-weight: 600;
-		margin-top: 4px;
-		opacity: 0.8;
+	/* Double indicator underline */
+	.active-indicator {
+		position: absolute;
+		bottom: -1.5px;
+		left: 0;
+		right: 0;
+		height: 3px;
+		display: flex;
 	}
 
-	/* Specializations Section */
-	.specializations-section {
-		padding: 100px 0;
-		background-color: #ffffff;
-		border-bottom: 1px solid #f1f5f9;
+	.indicator-blue {
+		flex: 1;
+		background-color: #0f2249;
+	}
+
+	.indicator-gold {
+		flex: 1;
+		background-color: #e0a92e;
+	}
+
+	.tab-icon {
+		width: 20px;
+		height: 20px;
+		color: currentColor;
+	}
+
+	.tab-content {
+		padding: 2.25rem;
+	}
+
+	.course-section {
+		animation: reveal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.section-title-wrap {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 48px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 2rem;
 		border-bottom: 1px solid #f1f5f9;
-		padding-bottom: 24px;
+		padding-bottom: 1.25rem;
 	}
 
-	.duration-tag {
-		font-size: 0.88rem;
-		font-weight: 700;
-		background-color: #f8fafc;
-		border: 1px solid #e2e8f0;
-		padding: 6px 14px;
-		border-radius: 9999px;
-		color: #475569;
+	.title-left {
 		display: flex;
 		align-items: center;
-		gap: 6px;
+		gap: 1rem;
 	}
 
-	.specializations-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 24px;
-	}
-
-	.spec-card {
-		border: 1.5px solid #e2e8f0;
-		background-color: #ffffff;
-		border-radius: 24px;
-		padding: 30px;
-		cursor: pointer;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		min-height: 280px;
-		transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-	}
-
-	.spec-card:hover {
-		transform: translateY(-6px);
-		border-color: #0f172a;
-		box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-	}
-
-	.spec-card .card-top {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 20px;
-	}
-
-	.icon-bubble {
-		width: 48px;
-		height: 48px;
-		border-radius: 12px;
-		background-color: #f8fafc;
-		color: #0f172a;
+	.title-icon-bubble {
+		width: 42px;
+		height: 42px;
+		background: #fff8eb;
+		border: 1px solid #fde047;
+		border-radius: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 1.15rem;
-		transition: all 0.2s ease;
+		color: #e0a92e;
+		flex-shrink: 0;
 	}
 
-	.spec-card:hover .icon-bubble {
-		background-color: #0f172a;
-		color: #ffffff;
-	}
-
-	.estd-text {
-		font-size: 0.72rem;
-		font-weight: 700;
-		color: #94a3b8;
-		letter-spacing: 0.05em;
-	}
-
-	.spec-title {
-		font-size: 1.25rem;
-		font-weight: 700;
-		color: #0f172a;
-		margin: 0 0 10px 0;
-		line-height: 1.3;
-	}
-
-	.spec-desc {
-		font-size: 0.88rem;
-		line-height: 1.5;
-		color: #64748b;
+	.section-title {
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: #0e214d;
 		margin: 0;
+		letter-spacing: -0.01em;
 	}
 
-	.spec-card .card-bottom {
-		border-top: 1px solid #f1f5f9;
-		padding-top: 20px;
-		margin-top: 24px;
-		display: flex;
-		justify-content: space-between;
+	.duration-badge {
+		display: inline-flex;
 		align-items: center;
-	}
-
-	.intake-info {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-	}
-
-	.intake-info .label {
-		color: #94a3b8;
-		font-size: 0.65rem;
-	}
-
-	.intake-info .value {
+		padding: 0.5rem 1.25rem;
+		background: #ffffff;
+		border: 1px solid #e2e8f0;
+		border-radius: 999px;
+		color: #475569;
 		font-size: 0.88rem;
 		font-weight: 700;
-		color: #0f172a;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 	}
 
-	.intake-info .value.active {
-		color: #16a34a;
+	.table-wrapper {
+		overflow-x: auto;
+		border-radius: 0.75rem;
+		border: 1px solid #e2e8f0;
+		background: #ffffff;
 	}
 
-	.intake-info .value.static {
-		color: #64748b;
+	.courses-table {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: left;
 	}
 
-	.action-arrow {
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		color: #0f172a;
-		font-weight: 700;
-		font-size: 0.82rem;
-		opacity: 0;
-		transform: translateX(-10px);
-		transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	.courses-table thead tr {
+		background: #ffffff;
+		border-bottom: 1px solid #e2e8f0;
 	}
 
-	.spec-card:hover .action-arrow,
-	.pg-card:hover .action-arrow {
-		opacity: 1;
-		transform: translateX(0);
+	.courses-table th {
+		padding: 1.1rem 1.5rem;
+		font-weight: 800;
+		font-size: 0.8rem;
+		letter-spacing: 0.08em;
+		color: #3b4e75;
+		text-transform: uppercase;
 	}
 
-	/* PG Section */
-	.pg-section {
-		padding: 100px 0;
-		background-color: #fafaf9;
+	.courses-table tbody tr {
 		border-bottom: 1px solid #f1f5f9;
+		transition: all 0.25s ease;
 	}
 
-	.pg-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 30px;
+	.courses-table tbody tr:last-child {
+		border-bottom: none;
 	}
 
-	.pg-card {
-		border: 1.5px solid #e2e8f0;
-		background-color: #ffffff;
-		border-radius: 24px;
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		min-height: 260px;
-		transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-	}
-
-	.pg-card.is-clickable {
+	.courses-table tbody tr.course-row {
 		cursor: pointer;
 	}
 
-	.pg-card.is-clickable:hover {
-		transform: translateY(-6px);
-		border-color: #0f172a;
-		box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+	.courses-table tbody tr.course-row:hover {
+		background: #fafafa;
 	}
 
-	.pg-card .card-top {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 20px;
+	.courses-table td {
+		padding: 1.1rem 1.5rem;
+		font-size: 0.95rem;
+		color: #475569;
+		vertical-align: middle;
 	}
 
-	.pg-card .card-bottom {
-		border-top: 1px solid #f1f5f9;
-		padding-top: 20px;
-		margin-top: 24px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	.sno-cell {
+		font-weight: 800;
+		color: #0e214d;
+		width: 10%;
 	}
 
-	/* Counselling code & accreditation footer */
-	.code-accreditation-section {
-		padding: 80px 0;
-		background-color: #ffffff;
-	}
-
-	.counselling-code-card {
-		background-color: #0f172a;
-		color: #ffffff;
-		border-radius: 28px;
-		padding: 48px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		position: relative;
-		overflow: hidden;
-		margin-bottom: 60px;
-	}
-
-	.code-glow {
-		position: absolute;
-		top: -40%;
-		right: -10%;
-		width: 300px;
-		height: 300px;
-		background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(16,185,129,0) 70%);
-		pointer-events: none;
-	}
-
-	.code-details {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-	}
-
-	.code-details .tag {
-		font-size: 0.72rem;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		color: #10b981;
-	}
-
-	.code-title {
-		font-family: 'Outfit', sans-serif;
-		font-size: 3rem;
-		font-weight: 900;
-		letter-spacing: 0.05em;
-		margin: 0;
-		line-height: 1;
-	}
-
-	.code-sub {
-		font-size: 0.88rem;
+	.estd-cell {
+		font-weight: 600;
 		color: #94a3b8;
-		margin: 0;
+		width: 15%;
 	}
 
+	.course-name-cell {
+		width: 55%;
+	}
+
+	.course-name-wrap {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.course-icon-bubble {
+		width: 38px;
+		height: 38px;
+		background: #fff8eb;
+		border: 1px solid #fde047;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #e0a92e;
+		flex-shrink: 0;
+	}
+
+	.course-name {
+		font-weight: 700;
+		color: #0e214d;
+		transition: color 0.2s ease;
+	}
+
+	.course-row:hover .course-name {
+		color: #e0a92e;
+	}
+
+	.intake-header {
+		text-align: right;
+		width: 20%;
+	}
+
+	.intake-cell {
+		text-align: right;
+		width: 20%;
+	}
+
+	.intake-badge {
+		background: #fffbeb;
+		color: #e0a92e;
+		border: 1.5px solid #fde047;
+		padding: 0.45rem 1.25rem;
+		border-radius: 999px;
+		font-weight: 800;
+		font-size: 0.92rem;
+		display: inline-block;
+		box-shadow: 0 2px 5px rgba(224, 169, 46, 0.05);
+		transition: all 0.2s ease;
+	}
+
+	.course-row:hover .intake-badge {
+		transform: scale(1.03);
+		box-shadow: 0 4px 10px rgba(224, 169, 46, 0.15);
+	}
+
+	/* Action Chips for PG Table */
+	.action-chip {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.45rem 1.1rem;
+		border-radius: 999px;
+		font-size: 0.78rem;
+		font-weight: 800;
+		letter-spacing: 0.02em;
+		transition: all 0.25s ease;
+	}
+
+	.action-chip.clickable {
+		background: #eff6ff;
+		color: #3b82f6;
+		border: 1.5px solid #dbeafe;
+	}
+
+	.course-row:hover .action-chip.clickable {
+		background: #3b82f6;
+		color: #ffffff;
+		border-color: #3b82f6;
+		box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+	}
+
+	.action-chip.static {
+		background: #f1f5f9;
+		border: 1.5px solid #e2e8f0;
+		color: #64748b;
+	}
+
+	/* High-end Counselling code segment */
+	.counselling-code-section {
+		text-align: center;
+		margin: 2.5rem 0;
+	}
+
+	.code-box {
+		position: relative;
+		background: rgba(30, 41, 59, 0.45);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border: 1px solid rgba(251, 191, 36, 0.18);
+		padding: 1.1rem 2.25rem;
+		border-radius: 1.5rem;
+		color: #94a3b8;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		box-shadow:
+			0 20px 40px -15px rgba(0, 0, 0, 0.4),
+			inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+		overflow: hidden;
+	}
+
+	.code-box-glow {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+	}
+
+	.code-label {
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-size: 0.8rem;
+		color: #94a3b8;
+	}
+
+	.code-value {
+		font-size: 1.45rem;
+		font-weight: 900;
+		color: #fbbf24;
+		letter-spacing: 0.05em;
+		text-shadow: 0 0 12px rgba(251, 191, 36, 0.35);
+	}
+
+	/* Premium Footer Accreditation grid */
 	.accreditation-footer {
-		border-top: 1.5px solid #f1f5f9;
-		padding-top: 40px;
+		margin-top: 3.5rem;
 		text-align: center;
 	}
 
 	.footer-pills {
 		display: inline-flex;
 		align-items: center;
-		gap: 16px;
-		background-color: #f8fafc;
-		border: 1px solid #e2e8f0;
-		padding: 8px 20px;
-		border-radius: 9999px;
-	}
-
-	.pill-badge {
-		font-size: 0.8rem;
+		gap: 1.25rem;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		padding: 0.9rem 2.25rem;
+		border-radius: 999px;
+		font-size: 0.82rem;
 		font-weight: 700;
-		color: #475569;
-		text-transform: uppercase;
 		letter-spacing: 0.03em;
+		color: #64748b;
+		box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.02);
 	}
 
 	.separator {
-		color: #cbd5e1;
-		font-size: 0.8rem;
+		color: rgba(255, 255, 255, 0.08);
 	}
 
-	/* Responsive Media Queries */
-	@media (max-width: 1024px) {
-		.hero-container {
-			gap: 40px;
-		}
-
-		.three-col-grid {
-			gap: 30px;
-		}
-
-		.specializations-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
+	/* Mobile responsive optimization */
 	@media (max-width: 768px) {
-		.hero-container {
-			grid-template-columns: 1fr;
-			text-align: center;
-			gap: 50px;
+		.page-container {
+			padding: 2rem 1rem;
 		}
 
-		.hero-left {
-			display: flex;
+		.page-header {
+			padding: 2.5rem 1.25rem;
+			margin-bottom: 2rem;
+		}
+
+		.page-title {
+			font-size: 2.15rem;
+		}
+
+		.subtitle {
+			font-size: 0.95rem;
+		}
+
+		.admission-box {
 			flex-direction: column;
-			align-items: center;
+			align-items: flex-start;
+			padding: 1.25rem;
 		}
 
-		.hero-actions {
-			display: flex;
-			justify-content: center;
-			width: 100%;
+		.tabs-nav {
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+			padding: 0.5rem;
 		}
 
-		.three-col-grid {
-			grid-template-columns: 1fr;
-			gap: 40px;
+		.tab-btn {
+			padding: 0.75rem 1.1rem;
+			font-size: 0.85rem;
+			flex-shrink: 0;
 		}
 
-		.allocation-grid {
-			grid-template-columns: 1fr;
-			gap: 50px;
+		.tab-content {
+			padding: 1.5rem 1rem;
 		}
 
-		.specializations-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.pg-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.counselling-code-card {
+		.section-title-wrap {
 			flex-direction: column;
-			text-align: center;
-			gap: 30px;
-			padding: 30px 20px;
+			align-items: flex-start;
+			gap: 0.5rem;
 		}
 
-		.shrink-on-mobile {
-			width: 100%;
+		.duration-badge {
+			align-self: flex-start;
+		}
+
+		.courses-table th,
+		.courses-table td {
+			padding: 1rem 0.75rem;
+			font-size: 0.86rem;
+		}
+
+		.course-name-cell {
+			width: 50%;
+		}
+
+		.intake-cell,
+		.intake-header {
+			width: 25%;
+		}
+
+		.footer-pills {
+			padding: 0.75rem 1.5rem;
+			font-size: 0.74rem;
+			flex-wrap: wrap;
 			justify-content: center;
+			gap: 0.75rem;
+			border-radius: 1.5rem;
+		}
+
+		.footer-pills .separator {
+			display: none;
 		}
 	}
 
 	@media (max-width: 480px) {
-		.hero-section {
-			padding-top: 80px;
+		.page-title {
+			font-size: 1.85rem;
 		}
 
-		.card-mockup-wrapper {
-			height: 320px;
+		.tab-btn {
+			flex: 1;
+			font-size: 0.8rem;
+			padding: 0.65rem 0.8rem;
 		}
 
-		.floating-card {
-			width: 280px;
-			height: 175px;
-		}
-
-		.sub-card {
-			width: 200px;
-			height: 120px;
-			transform: rotate(6deg) translate(60px, 50px);
-		}
-
-		.sub-card-content .value {
-			font-size: 1.3rem;
-		}
-
-		.footer-pills {
-			flex-direction: column;
-			gap: 8px;
-			border-radius: 16px;
-			width: 100%;
-		}
-
-		.separator {
+		.tab-icon {
 			display: none;
+		}
+
+		.courses-table th {
+			font-size: 0.7rem;
+		}
+
+		.courses-table td {
+			font-size: 0.82rem;
+		}
+
+		.estd-cell {
+			display: none;
+		}
+
+		.intake-badge {
+			font-size: 0.8rem;
+			padding: 0.3rem 0.75rem;
 		}
 	}
 </style>
