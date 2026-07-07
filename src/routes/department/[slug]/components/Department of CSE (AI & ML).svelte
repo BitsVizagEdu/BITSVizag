@@ -438,6 +438,15 @@
 	onDestroy(() => {
 		if (sectionObserver) sectionObserver.disconnect();
 	});
+
+	let formSubmitted = false;
+	function handleSubmit(e) {
+		e.preventDefault();
+		formSubmitted = true;
+		setTimeout(() => {
+			formSubmitted = false;
+		}, 4000);
+	}
 </script>
 
 <svelte:head>
@@ -1080,6 +1089,7 @@
 		</section>
 
 		<!-- Contact Info -->
+		<!-- Contact Info -->
 		<section
 			id="contact"
 			class="dept-section-card contact-premium-section"
@@ -1091,19 +1101,23 @@
 					<div class="section-underline"></div>
 				</div>
 			</div>
+			
 			<div class="contact-action-grid">
-				<div class="contact-tile email" in:fly={{ y: 20, duration: 500, delay: 100 }}>
+				<!-- Location Card -->
+				<div class="contact-tile location" in:fly={{ y: 20, duration: 500, delay: 100 }}>
 					<div class="tile-icon">
-						<svg
-							viewBox="0 0 24 24"
-							width="24"
-							height="24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-							></path><polyline points="22,6 12,13 2,6"></polyline></svg
-						>
+						<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+					</div>
+					<div class="tile-content">
+						<span class="inter label">Location</span>
+						<span class="inter value">Baba college, Lake, near Pothinamallayyapalem, Pothinamallayya Palem, Bakkanapalem, Andhra Pradesh 530048</span>
+					</div>
+				</div>
+
+				<!-- Email Card -->
+				<div class="contact-tile email" in:fly={{ y: 20, duration: 500, delay: 200 }}>
+					<div class="tile-icon">
+						<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
 					</div>
 					<div class="tile-content">
 						<span class="inter label">Official Email</span>
@@ -1112,19 +1126,10 @@
 					<a href="mailto:cse.aiml@bitsvizag.com" class="tile-link">Send Mail</a>
 				</div>
 
-				<div class="contact-tile phone" in:fly={{ y: 20, duration: 500, delay: 200 }}>
+				<!-- Phone Card -->
+				<div class="contact-tile phone" in:fly={{ y: 20, duration: 500, delay: 300 }}>
 					<div class="tile-icon">
-						<svg
-							viewBox="0 0 24 24"
-							width="24"
-							height="24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							><path
-								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-							></path></svg
-						>
+						<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 					</div>
 					<div class="tile-content">
 						<span class="inter label">Phone Support</span>
@@ -1929,81 +1934,105 @@
 		letter-spacing: 0.02em;
 	}
 
-	/* Contact Page Premium */
+	/* Contact Page Premium - White background and small layout */
 	.contact-premium-section {
-		background: #0f172a !important;
-		color: white !important;
+		background: #ffffff !important;
+		color: #1e293b !important;
+		padding: 40px !important;
+		border: 1px solid #e2e8f0 !important;
+		border-radius: 24px !important;
 	}
 
 	.contact-premium-section h2 {
-		color: white !important;
+		color: #0f172a !important;
 	}
 
 	.contact-action-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: 24px;
 	}
 
 	.contact-tile {
-		background: rgba(255, 255, 255, 0.03);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		padding: 32px;
-		border-radius: 28px;
-		transition: all 0.4s;
+		background: #f8fafc;
+		border: 1px solid #e2e8f0;
+		padding: 24px;
+		border-radius: 20px;
+		transition: all 0.3s ease;
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 16px;
 	}
 
 	.contact-tile:hover {
-		background: rgba(255, 255, 255, 0.05);
+		background: #ffffff;
 		border-color: var(--section-accent);
-		transform: translateY(-5px);
+		transform: translateY(-4px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
 	}
 
 	.tile-icon {
-		width: 48px;
-		height: 48px;
-		background: rgba(255, 255, 255, 0.05);
-		border-radius: 14px;
+		width: 44px;
+		height: 44px;
+		background: #f1f5f9;
+		border-radius: 12px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		color: var(--section-accent);
+		flex-shrink: 0;
+	}
+
+	.tile-content {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
 	}
 
 	.tile-content .label {
 		display: block;
-		font-size: 0.75rem;
+		font-size: 0.72rem;
 		font-weight: 800;
-		color: #94a3b8;
+		color: #64748b;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		margin-bottom: 8px;
+		letter-spacing: 0.05em;
 	}
 
 	.tile-content .value {
-		font-size: 1.1rem;
+		font-size: 0.95rem;
 		font-weight: 700;
-		color: white;
+		color: #0f172a;
+		line-height: 1.5;
 	}
 
 	.tile-link {
-		padding: 12px 24px;
+		padding: 10px 20px;
 		background: var(--section-accent);
 		color: white;
 		text-decoration: none;
-		border-radius: 12px;
+		border-radius: 8px;
 		font-weight: 700;
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		text-align: center;
-		transition: all 0.3s;
+		transition: all 0.2s;
+		align-self: flex-start;
+		margin-top: auto;
 	}
 
 	.tile-link:hover {
 		filter: brightness(1.1);
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 992px) {
+		.contact-action-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.contact-action-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	/* Faculty Table Fixes */

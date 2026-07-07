@@ -4,7 +4,26 @@ export default {
 	plugins: [sveltekit()],
 	server: {
 		port: 5173,
-		strictPort: true
+		strictPort: true,
+		// Faster HMR – use polling only as fallback on Windows
+		warmup: {
+			clientFiles: [
+				'./src/routes/+page.svelte',
+				'./src/routes/+layout.svelte',
+				'./src/lib/components/navbar.svelte',
+				'./src/lib/components/middlenav.svelte',
+				'./src/lib/components/footer.svelte',
+				'./src/lib/components/MobileHeader.svelte'
+			]
+		},
+		hmr: {
+			// Overlay shows errors as an overlay in the browser
+			overlay: true
+		},
+		// Enable fs.strict: false avoids spurious 'file not found' on Windows
+		fs: {
+			strict: false
+		}
 	},
 	build: {
 		rollupOptions: {
@@ -26,6 +45,10 @@ export default {
 						if (id.includes('splide')) {
 							return 'carousel';
 						}
+						// Flowbite & UI utilities
+						if (id.includes('flowbite')) {
+							return 'ui';
+						}
 						return 'vendor';
 					}
 				}
@@ -35,9 +58,11 @@ export default {
 		reportCompressedSize: false,
 		// Minify for production
 		minify: 'esbuild',
-		target: 'es2020'
+		target: 'es2020',
+		sourcemap: false
 	},
 	optimizeDeps: {
+		// Pre-bundle all heavy deps so first-load is instant
 		include: [
 			'aos',
 			'gsap',
@@ -47,7 +72,14 @@ export default {
 			'@splidejs/svelte-splide',
 			'flowbite-svelte',
 			'motion',
-			'tailwind-merge'
-		]
+			'tailwind-merge',
+			'cookie'
+		],
+		// Don't re-scan on every server restart
+		force: false
+	},
+	// Faster CSS processing in dev
+	css: {
+		devSourcemap: false
 	}
 };
