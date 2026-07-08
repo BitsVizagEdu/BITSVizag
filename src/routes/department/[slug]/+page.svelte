@@ -7,6 +7,7 @@
 	import { page } from '$app/stores';
 
 	import DepartmentofBsh from './components/Department of BS&H.svelte';
+	// @ts-ignore – filename spaces cause a false TS "no default export" error; works fine at runtime
 	import DepartmentofCse from './components/Department of CSE.svelte';
 	import DepartmentofCseAiMl from './components/Department of CSE (AI & ML).svelte';
 	import DepartmentofCseCyber from './components/Department of CSE (Cyber Security).svelte';

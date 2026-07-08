@@ -5,7 +5,11 @@ export default {
 	server: {
 		port: 5173,
 		strictPort: true,
-		// Faster HMR – use polling only as fallback on Windows
+		// Windows file-watcher: use polling so HMR doesn't miss saves
+		watch: {
+			usePolling: true,
+			interval: 100
+		},
 		warmup: {
 			clientFiles: [
 				'./src/routes/+page.svelte',
@@ -17,10 +21,10 @@ export default {
 			]
 		},
 		hmr: {
-			// Overlay shows errors as an overlay in the browser
+			// Show build errors as an overlay in the browser
 			overlay: true
 		},
-		// Enable fs.strict: false avoids spurious 'file not found' on Windows
+		// Avoids spurious "file not found" errors on Windows
 		fs: {
 			strict: false
 		}
@@ -62,16 +66,14 @@ export default {
 		sourcemap: false
 	},
 	optimizeDeps: {
-		// Pre-bundle all heavy deps so first-load is instant
+		// Pre-bundle heavy CJS deps so first-load is instant
 		include: [
 			'aos',
 			'gsap',
 			'swiper',
 			'lenis',
+			'@studio-freight/lenis',
 			'@splidejs/splide',
-			'@splidejs/svelte-splide',
-			'flowbite-svelte',
-			'motion',
 			'tailwind-merge',
 			'cookie'
 		],
