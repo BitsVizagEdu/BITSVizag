@@ -117,7 +117,7 @@
 <svelte:head>
 	<title>Home</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&family=Lobster&family=Graduate&family=VT323&family=Press+Start+2P&display=swap"
 		rel="stylesheet"
@@ -758,9 +758,8 @@
 
 	.content-visibility-auto {
 		content-visibility: auto;
-		contain-intrinsic-size: 800px;
+		contain-intrinsic-size: 0 800px;
 		will-change: transform, opacity;
-		render-strategy: auto;
 	}
 
 	@keyframes fade-up {
