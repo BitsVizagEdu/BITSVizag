@@ -1,40 +1,49 @@
-import {sendApplicationSubmittedMessage, sendWelcomeMessage} from "$lib/twilio.js";
+import { sendApplicationSubmittedMessage, sendWelcomeMessage } from '$lib/twilio.js';
+import { API_SECRET } from '$env/static/private';
 
 /** @type {import('./$types').RequestHandler} */
-export async function POST({request}) {
+export async function POST({ request }) {
+    // ── Authentication ──────────────────────────────────────────────────
+    const providedKey = request.headers.get('x-api-key');
+    if (!providedKey || providedKey !== API_SECRET) {
+        return new Response(JSON.stringify({ success: false, error: true, msg: 'Unauthorized' }), {
+            status: 401,
+            headers: { 'Content-Type': 'application/json' }
+        });
+    }
+
+    // ── Payload validation ───────────────────────────────────────────────
     try {
-        const {
-            name,
-            branch,
-            mobile,
-            reference, id
-        } = await request.json()
+        const { name, branch, mobile, reference, id } = await request.json();
+
         if (!name || !branch || !mobile || !reference || !id) {
-            return new Response(JSON.stringify({
-                success: false,
-                error: true,
-                msg: "Data missing"
-            }), {
-                status: 400, headers: {
-                    "Content-Type": "application/json"
-                }
-            })
+            return new Response(JSON.stringify({ success: false, error: true, msg: 'Data missing' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+            });
         }
 
-        await sendWelcomeMessage(mobile, id)
-        await sendApplicationSubmittedMessage(name, branch, reference, id)
+        // Validate mobile is numeric and 10 digits (basic sanity check)
+        if (!/^\d{10}$/.test(mobile)) {
+            return new Response(JSON.stringify({ success: false, error: true, msg: 'Invalid mobile number' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+            });
+        }
 
-        return new Response(JSON.stringify({success: true}), {headers: { "Content-Type": "application/json"}, status: 200});
+        // ── Business logic ─────────────────────────────────────────────────
+        await sendWelcomeMessage(mobile, id);
+        await sendApplicationSubmittedMessage(name, branch, reference, id);
+
+        return new Response(JSON.stringify({ success: true }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' }
+        });
     } catch (err) {
-        console.error(err)
-        return new Response(JSON.stringify({
-            success: false,
-            error: true,
-            msg: "something went wrong. please try again"
-        }), {
-            status: 500, headers: {
-                "Content-Type": "application/json"
-            }
-        })
+        console.error(err);
+        return new Response(JSON.stringify({ success: false, error: true, msg: 'Something went wrong. Please try again.' }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 }

@@ -12,11 +12,15 @@ export const handle = async ({ event, resolve }) => {
 
 	// Set userid cookie if it's a new visitor
 	if (!cookies['userid']) {
+		const isProduction = process.env.NODE_ENV === 'production';
 		response.headers.set(
 			'set-cookie',
 			cookie.serialize('userid', event.locals.userid, {
 				path: '/',
-				httpOnly: true
+				httpOnly: true,
+				sameSite: 'strict',
+				secure: isProduction, // only enforce HTTPS in production
+				maxAge: 60 * 60 * 24 * 365 // 1 year
 			})
 		);
 	}
@@ -36,10 +40,32 @@ export const handle = async ({ event, resolve }) => {
 	// HTML pages: allow serving stale while revalidating
 	else if (response.headers.get('content-type')?.includes('text/html')) {
 		response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
-		// Security headers for HTML responses
+
+		// ── Security headers for every HTML response ─────────────────────
 		response.headers.set('X-Content-Type-Options', 'nosniff');
 		response.headers.set('X-Frame-Options', 'SAMEORIGIN');
+		response.headers.set('X-XSS-Protection', '1; mode=block');
 		response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+		response.headers.set(
+			'Permissions-Policy',
+			'camera=(), microphone=(), geolocation=(), payment=()'
+		);
+		response.headers.set(
+			'Content-Security-Policy',
+			[
+				"default-src 'self'",
+				// SvelteKit inline scripts use nonces — allow 'unsafe-inline' for now; tighten with nonces later
+				"script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://script.google.com",
+				"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+				"font-src 'self' https://fonts.gstatic.com",
+				"img-src 'self' data: blob:",
+				// Allow connecting to Google Apps Script (form submissions) and Twilio (via server)
+				"connect-src 'self' https://script.google.com",
+				"frame-ancestors 'none'",
+				"base-uri 'self'",
+				"form-action 'self' https://script.google.com"
+			].join('; ')
+		);
 	}
 
 	return response;
