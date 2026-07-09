@@ -102,6 +102,7 @@
 
 <script>
     import {page} from '$app/stores';
+    import {PUBLIC_API_KEY} from '$env/static/public';
 
     let queryParams = $page.data.queryParams;
     import {onMount} from "svelte";
@@ -131,11 +132,18 @@
                 }).then(async function (response) {
                     if (response.ok) {
                         await fetch("/api/storeForm", {
-                            method: "POST", body: JSON.stringify({
-                                name: queryParams.name, branch: queryParams.branch,
+                            method: "POST",
+                            body: JSON.stringify({
+                                name: queryParams.name,
+                                branch: queryParams.branch,
                                 mobile: queryParams.mobile,
-                                reference: queryParams.reference, id: queryParams.id,
-                            }), headers: {"Content-Type": "application/json"}
+                                reference: queryParams.reference,
+                                id: queryParams.id,
+                            }),
+                            headers: {
+                                "Content-Type": "application/json",
+                                "x-api-key": PUBLIC_API_KEY
+                            }
                         })
                         isLoading.set(false)
                         alert("Successfully submitted form")
