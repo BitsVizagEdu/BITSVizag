@@ -40,14 +40,93 @@
 	];
 
 	const coordinators = [
-		{ name: 'Mr. T. Mouli', dept: 'Computer Science & Engineering' },
-		{ name: 'Mrs. T. Pavani', dept: 'Electronics & Communication Engineering' },
-		{ name: 'Ms. G. Aliveni', dept: 'Electrical & Electronics Engineering' },
-		{ name: 'Mr. V. Preetham', dept: 'Mechanical Engineering' },
-		{ name: 'Mrs. K. Lavanya', dept: 'Civil Engineering' },
-		{ name: 'Mrs. K Sireesha', dept: 'Basic Sciences & Humanities' },
-		{ name: 'Mr. L. Sairama', dept: 'MBA' }
+		{
+			name: 'Mr. T. Mouli',
+			dept: 'Computer Science & Engineering',
+			email: 't.mouli@bitsvizag.edu.in',
+			office: 'CSE Dept, Block-C',
+			specialty: 'Software Placements, Coding Contests & Hackathons & Fullstack Training',
+			gender: 'male',
+			color: 'linear-gradient(135deg, #6366f1, #a855f7)',
+			tag: 'CSE'
+		},
+		{
+			name: 'Mrs. T. Pavani',
+			dept: 'Electronics & Communication Engineering',
+			email: 't.pavani@bitsvizag.edu.in',
+			office: 'ECE Dept, Block-B',
+			specialty: 'Core Electronics Placements, VLSI Design & Embedded Systems',
+			gender: 'female',
+			color: 'linear-gradient(135deg, #ff512f, #dd2476)',
+			tag: 'ECE'
+		},
+		{
+			name: 'Ms. G. Aliveni',
+			dept: 'Electrical & Electronics Engineering',
+			email: 'g.aliveni@bitsvizag.edu.in',
+			office: 'EEE Dept, Block-B',
+			specialty: 'Power Sector Jobs, Smart Grid Technologies & PLC SCADA',
+			gender: 'female',
+			color: 'linear-gradient(135deg, #10b981, #059669)',
+			tag: 'EEE'
+		},
+		{
+			name: 'Mr. V. Preetham',
+			dept: 'Mechanical Engineering',
+			email: 'v.preetham@bitsvizag.edu.in',
+			office: 'Mech Dept, Workshops Block',
+			specialty: 'Automotive Design, CAD/CAM Applications & Industrial Internships',
+			gender: 'male',
+			color: 'linear-gradient(135deg, #708090, #4f5d75)',
+			tag: 'MECH'
+		},
+		{
+			name: 'Mrs. K. Lavanya',
+			dept: 'Civil Engineering',
+			email: 'k.lavanya@bitsvizag.edu.in',
+			office: 'Civil Dept, Block-A',
+			specialty: 'Infrastructure Placements, Structural Engg Tools & Site Internships',
+			gender: 'female',
+			color: 'linear-gradient(135deg, #d97706, #b45309)',
+			tag: 'CIVIL'
+		},
+		{
+			name: 'Mrs. K Sireesha',
+			dept: 'Basic Sciences & Humanities',
+			email: 'k.sireesha@bitsvizag.edu.in',
+			office: 'BS&H Dept, Block-A',
+			specialty: 'Soft Skills Training, Personality Development & Quantitative Aptitude',
+			gender: 'female',
+			color: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+			tag: 'BSH'
+		},
+		{
+			name: 'Mr. L. Sairama',
+			dept: 'MBA',
+			email: 'l.sairama@bitsvizag.edu.in',
+			office: 'MBA Dept, Block-C',
+			specialty: 'Management Trainee Positions, FinTech Careers & Corporate Relations',
+			gender: 'male',
+			color: 'linear-gradient(135deg, #f59e0b, #d97706)',
+			tag: 'MBA'
+		}
 	];
+
+	let activeCoordinatorIndex = 0;
+	let toastMessage = '';
+	let showToast = false;
+
+	function copyEmail(email) {
+		if (typeof navigator !== 'undefined' && navigator.clipboard) {
+			navigator.clipboard.writeText(email).then(() => {
+				toastMessage = `Copied to clipboard: ${email}`;
+				showToast = true;
+				setTimeout(() => {
+					showToast = false;
+				}, 3000);
+			});
+		}
+	}
 
 	const events = [
 		{
@@ -390,24 +469,103 @@
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="coord-section">
 	<div class="section-shell">
-		<h2 class="section-title reveal">Placement Coordinators</h2>
-		<p class="section-sub reveal">
-			Department coordinators guide students with focused support for training, placements, and
-			career readiness.
-		</p>
-		<div class="coord-grid">
-			{#each coordinators as c, i}
-				<article class="coord-card reveal" style="animation-delay:{i * 70}ms">
-					<div class="coord-avatar-ring">
-						<img src="/faculty.svg" alt={c.name} loading="lazy" class="coord-avatar" />
+		<div class="coord-header reveal">
+			<span class="section-label">Guidance Network</span>
+			<h2 class="section-title">Placement Coordinators</h2>
+			<p class="section-sub">
+				Department coordinators guide students with focused support for training, placements, and
+				career readiness.
+			</p>
+		</div>
+
+		<div class="coord-showcase-container reveal">
+			<!-- Featured Coordinator Panel -->
+			<div class="coord-featured-panel" style="--accent-gradient: {coordinators[activeCoordinatorIndex].color}">
+				<div class="featured-glow-bg"></div>
+				<div class="featured-header">
+					<div class="featured-avatar-wrap">
+						<div class="avatar-ring-glow"></div>
+						<img 
+							src={coordinators[activeCoordinatorIndex].gender === 'female' ? '/woman-professional.svg' : '/faculty.svg'} 
+							alt={coordinators[activeCoordinatorIndex].name} 
+							class="featured-avatar" 
+						/>
 					</div>
-					<h3 class="coord-name">{c.name}</h3>
-					<span class="coord-role">Department Coordinator</span>
-					<p class="coord-dept">{c.dept}</p>
-				</article>
-			{/each}
+					<div class="featured-title-block">
+						<span class="featured-badge" style="background: {coordinators[activeCoordinatorIndex].color}">
+							{coordinators[activeCoordinatorIndex].tag} Coordinator
+						</span>
+						<h3 class="featured-name">{coordinators[activeCoordinatorIndex].name}</h3>
+						<p class="featured-dept">{coordinators[activeCoordinatorIndex].dept}</p>
+					</div>
+				</div>
+
+				<div class="featured-body">
+					<div class="detail-row">
+						<div class="detail-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+						</div>
+						<div class="detail-content">
+							<span class="detail-label">Key Focus & Specialty</span>
+							<span class="detail-value">{coordinators[activeCoordinatorIndex].specialty}</span>
+						</div>
+					</div>
+
+					<div class="detail-row">
+						<div class="detail-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+						</div>
+						<div class="detail-content">
+							<span class="detail-label">Office Location</span>
+							<span class="detail-value">{coordinators[activeCoordinatorIndex].office}</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="featured-actions">
+					<button class="action-btn primary" on:click={() => copyEmail(coordinators[activeCoordinatorIndex].email)}>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+						Copy Email
+					</button>
+					<a href="mailto:{coordinators[activeCoordinatorIndex].email}" class="action-btn secondary">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+						Send Email
+					</a>
+				</div>
+			</div>
+
+			<!-- Grid Selector Panel -->
+			<div class="coord-selectors-grid">
+				{#each coordinators as c, i}
+					<button 
+						class="selector-card {activeCoordinatorIndex === i ? 'active' : ''}" 
+						style="--card-theme: {c.color}"
+						on:click={() => activeCoordinatorIndex = i}
+					>
+						<div class="card-avatar-container">
+							<img 
+								src={c.gender === 'female' ? '/woman-professional.svg' : '/faculty.svg'} 
+								alt={c.name} 
+								class="card-avatar" 
+							/>
+						</div>
+						<div class="card-info">
+							<h4 class="card-name">{c.name}</h4>
+							<p class="card-dept">{c.dept}</p>
+						</div>
+					</button>
+				{/each}
+			</div>
 		</div>
 	</div>
+
+	<!-- Toast Message Component -->
+	{#if showToast}
+		<div class="toast-notification">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+			{toastMessage}
+		</div>
+	{/if}
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
@@ -1317,76 +1475,389 @@
 	.coord-section {
 		padding: clamp(4rem, 8vw, 7rem) 0;
 		background: var(--surface);
+		position: relative;
+		overflow: hidden;
 	}
-	.coord-section .section-sub {
-		text-align: start;
-		margin: 0 0 3rem;
+	.coord-header {
+		text-align: center;
+		margin-bottom: 3.5rem;
 	}
-	.coord-grid {
+	.coord-header .section-sub {
+		margin-bottom: 0;
+	}
+	.coord-showcase-container {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1.25rem;
-		margin-top: 3rem;
+		grid-template-columns: 1fr 1.1fr;
+		gap: 2.5rem;
+		align-items: stretch;
+		max-width: 1240px;
+		margin: 0 auto;
 	}
-	.coord-card {
+	@media (max-width: 968px) {
+		.coord-showcase-container {
+			grid-template-columns: 1fr;
+		}
+	}
+	
+	/* Featured Panel */
+	.coord-featured-panel {
+		background: var(--surf-alt);
+		border-radius: var(--radius-xl);
+		padding: clamp(2rem, 3.5vw, 2.75rem);
+		border: 1px solid var(--border);
+		box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05);
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s var(--ease-out);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		padding: 2rem 1.25rem 1.5rem;
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--border);
-		background: var(--surf-alt);
-		gap: 0.5rem;
-		transition:
-			transform 0.28s var(--ease-out),
-			box-shadow 0.28s,
-			border-color 0.28s;
+		justify-content: space-between;
 	}
-	.coord-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 22px 44px -20px rgba(37, 99, 235, 0.18);
-		border-color: rgba(37, 99, 235, 0.25);
-	}
-	.coord-avatar-ring {
-		width: 5.5rem;
-		height: 5.5rem;
+	.featured-glow-bg {
+		position: absolute;
+		top: -20%;
+		right: -20%;
+		width: 60%;
+		height: 60%;
+		background: var(--accent-gradient);
+		filter: blur(80px);
+		opacity: 0.12;
+		pointer-events: none;
 		border-radius: 50%;
+	}
+	.featured-header {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid var(--border);
+		padding-bottom: 1.5rem;
+	}
+	@media (max-width: 480px) {
+		.featured-header {
+			flex-direction: column;
+			text-align: center;
+			gap: 1.25rem;
+		}
+	}
+	.featured-avatar-wrap {
+		position: relative;
+		width: 6rem;
+		height: 6rem;
+		flex-shrink: 0;
+	}
+	.avatar-ring-glow {
+		position: absolute;
+		inset: -4px;
+		border-radius: 50%;
+		background: var(--accent-gradient);
+		padding: 2px;
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		opacity: 0.8;
+	}
+	.featured-avatar {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		object-fit: contain;
+		background: #ffffff;
+		border: 4px solid var(--surface);
+		box-shadow: 0 8px 20px -8px rgba(15, 23, 42, 0.1);
+	}
+	.featured-title-block {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+	.featured-badge {
+		align-self: flex-start;
+		font-family: var(--font-body);
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: #ffffff;
+		padding: 0.28rem 0.75rem;
+		border-radius: 999px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	}
+	@media (max-width: 480px) {
+		.featured-badge {
+			align-self: center;
+		}
+	}
+	.featured-name {
+		font-family: var(--font-disp);
+		font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+		font-weight: 700;
+		color: var(--ink);
+		margin: 0;
+		line-height: 1.25;
+	}
+	.featured-dept {
+		font-family: var(--font-body);
+		font-size: 0.92rem;
+		color: var(--muted);
+		margin: 0;
+		font-weight: 500;
+	}
+	
+	.featured-body {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	.detail-row {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+	.detail-icon {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 10px;
+		background: var(--surface);
+		color: var(--ink-soft);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: #eef5ff;
-		border: 2px solid rgba(37, 99, 235, 0.2);
-		margin-bottom: 0.5rem;
+		flex-shrink: 0;
+		transition: all 0.3s;
+		border: 1px solid var(--border);
 	}
-	.coord-avatar {
-		width: 3.5rem;
-		height: 3.5rem;
-		object-fit: contain;
-		opacity: 0.85;
+	.detail-row:hover .detail-icon {
+		background: var(--accent-gradient);
+		color: #ffffff;
+		transform: scale(1.08);
+		box-shadow: 0 6px 15px -6px rgba(0, 0, 0, 0.15);
+		border-color: transparent;
 	}
-	.coord-name {
-		font-family: var(--font-disp);
-		font-size: 1rem;
+	.detail-icon svg {
+		width: 1.1rem;
+		height: 1.1rem;
+	}
+	.detail-content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.detail-label {
+		font-family: var(--font-body);
+		font-size: 0.7rem;
 		font-weight: 600;
+		color: var(--muted);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+	.detail-value {
+		font-family: var(--font-body);
+		font-size: 0.92rem;
+		font-weight: 500;
+		color: var(--ink);
+		line-height: 1.45;
+	}
+	
+	.featured-actions {
+		display: flex;
+		gap: 0.85rem;
+	}
+	@media (max-width: 400px) {
+		.featured-actions {
+			flex-direction: column;
+		}
+	}
+	.action-btn {
+		flex: 1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.8rem 1.25rem;
+		border-radius: 10px;
+		font-family: var(--font-body);
+		font-size: 0.88rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s var(--ease-out);
+		text-decoration: none;
+		border: none;
+	}
+	.action-btn.primary {
+		background: var(--accent-gradient);
+		color: #ffffff;
+		box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.15);
+	}
+	.action-btn.primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.25);
+	}
+	.action-btn.secondary {
+		background: var(--surface);
+		color: var(--ink);
+		border: 1px solid var(--border);
+	}
+	.action-btn.secondary:hover {
+		background: #f1f5f9;
+		transform: translateY(-2px);
+	}
+	.action-btn svg {
+		width: 1rem;
+		height: 1rem;
+	}
+	
+	/* Selector Grid */
+	.coord-selectors-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.8rem;
+		max-height: 520px;
+		overflow-y: auto;
+		padding-right: 0.5rem;
+		scrollbar-width: thin;
+		scrollbar-color: var(--border) transparent;
+	}
+	@media (max-width: 968px) {
+		.coord-selectors-grid {
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			max-height: none;
+			overflow-y: visible;
+		}
+	}
+	.coord-selectors-grid::-webkit-scrollbar {
+		width: 5px;
+	}
+	.coord-selectors-grid::-webkit-scrollbar-thumb {
+		background: var(--border);
+		border-radius: 3px;
+	}
+	.selector-card {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.95rem 1.25rem;
+		background: var(--surf-alt);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+		cursor: pointer;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s var(--ease-out);
+		width: 100%;
+	}
+	.selector-card::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 4px;
+		background: var(--card-theme);
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	.selector-card:hover {
+		transform: translateX(4px);
+		border-color: rgba(37, 99, 235, 0.2);
+		background: var(--surface);
+	}
+	@media (max-width: 968px) {
+		.selector-card:hover {
+			transform: translateY(-2px);
+		}
+	}
+	.selector-card.active {
+		background: var(--surface);
+		border-color: transparent;
+		box-shadow: 0 10px 25px -15px rgba(15, 23, 42, 0.1);
+	}
+	.selector-card.active::before {
+		opacity: 1;
+	}
+	.selector-card.active::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border: 1.5px solid transparent;
+		border-radius: var(--radius-lg);
+		background: var(--card-theme) border-box;
+		-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: destination-out;
+		mask-composite: exclude;
+		pointer-events: none;
+	}
+	
+	.card-avatar-container {
+		width: 2.85rem;
+		height: 2.85rem;
+		border-radius: 50%;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		transition: all 0.3s;
+	}
+	.selector-card.active .card-avatar-container {
+		border-color: transparent;
+		box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--card-theme);
+		transform: scale(1.05);
+	}
+	.card-avatar {
+		width: 1.85rem;
+		height: 1.85rem;
+		object-fit: contain;
+	}
+	.card-info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		flex-grow: 1;
+	}
+	.card-name {
+		font-family: var(--font-disp);
+		font-size: 0.92rem;
+		font-weight: 650;
 		color: var(--ink);
 		margin: 0;
-		line-height: 1.3;
+		line-height: 1.2;
 	}
-	.coord-role {
+	.card-dept {
 		font-family: var(--font-body);
-		font-size: 0.68rem;
-		font-weight: 600;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: var(--accent);
-	}
-	.coord-dept {
-		font-family: var(--font-body);
-		font-size: 0.85rem;
-		line-height: 1.5;
+		font-size: 0.75rem;
 		color: var(--muted);
 		margin: 0;
+		font-weight: 500;
+	}
+	
+	/* Toast Notification */
+	.toast-notification {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		background: var(--ink);
+		color: #ffffff;
+		padding: 0.85rem 1.35rem;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		font-family: var(--font-body);
+		font-size: 0.85rem;
+		font-weight: 500;
+		box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.35);
+		z-index: 1000;
+		animation: slide-in-up 0.3s var(--ease-out) forwards;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	.toast-notification svg {
+		width: 1rem;
+		height: 1rem;
+		color: #10b981;
 	}
 
 	/* ══════════ FOOTER ════════════════════════════════════════════════════════ */
