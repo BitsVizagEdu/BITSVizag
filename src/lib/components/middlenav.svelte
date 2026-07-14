@@ -873,40 +873,7 @@
 		font-weight: 600;
 	}
 
-	.wrapper .btn {
-		color: #1e293b;
-		font-size: 24px;
-		cursor: pointer;
-		display: none;
-		border: none;
-		background: transparent;
-		padding: 0;
-	}
 
-	.wrapper .btn.close-btn {
-		display: none;
-		position: absolute;
-		right: 25px;
-		top: 25px;
-		width: 45px;
-		height: 45px;
-		background: #f1f5f9;
-		border-radius: 50%;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-	}
-
-	.close-btn i {
-		font-size: 20px;
-		color: #1e293b;
-	}
-
-	.close-btn:hover {
-		background: #e2e8f0;
-		transform: rotate(90deg);
-	}
 
 	/* ─────────────────────────────────────────────────────────────
 	   MOBILE SIDEBAR  (≤1024px)
