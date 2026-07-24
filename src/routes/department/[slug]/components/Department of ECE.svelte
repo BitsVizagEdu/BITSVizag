@@ -368,10 +368,10 @@
 			mobile: '7893676891'
 		},
 		{
-			name: 'Mr. Gera Aswani Kumar',
+			name: 'Dr. Gera Aswan Kumar',
 			role: 'Associate Professor',
 			exp: '12+ Years',
-			qual: 'M.Tech',
+			qual: 'Ph.D',
 			mobile: '8886065888'
 		},
 		{

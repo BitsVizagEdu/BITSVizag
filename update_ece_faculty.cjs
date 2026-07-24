@@ -9,7 +9,7 @@ const eceFaculty = [
   { name: 'Dr.Kondapalli Pradeep', des: 'Associate Professor', mob: '9160350380', gender: 'Male', exp: 20, qual: 'Ph.D' },
   { name: 'Dr.Ravi Kishore Maddugaru', des: 'Associate Professor', mob: '7989527137', gender: 'Male', exp: 15, qual: 'Ph.D' },
   { name: 'Dr.Yaddanapudi Venkata Bhaskara Lakshmi', des: 'Associate Professor', mob: '7893676891', gender: 'Female', exp: 15, qual: 'Ph.D' },
-  { name: 'Gera Aswani Kumar', des: 'Associate Professor', mob: '8886065888', gender: 'Male', exp: 12, qual: 'M.Tech' },
+  { name: 'Dr.Gera Aswan Kumar', des: 'Associate Professor', mob: '8886065888', gender: 'Male', exp: 12, qual: 'Ph.D' },
   { name: 'Chinta Santoshi Kumari', des: 'Assistant Professor', mob: '7731993013', gender: 'Female', exp: 3, qual: 'M.Tech' },
   { name: 'Hari Sai Krishna Tripurana', des: 'Assistant Professor', mob: '8247069915', gender: 'Male', exp: 5, qual: 'M.Tech' },
   { name: 'Kaki Venkata Sagara Srujana', des: 'Assistant Professor', mob: '9110378493', gender: 'Female', exp: 5, qual: 'M.Tech' },
