@@ -1,11 +1,12 @@
 import { sendApplicationSubmittedMessage, sendWelcomeMessage } from '$lib/twilio.js';
-import { API_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
     // ── Authentication ──────────────────────────────────────────────────
     const providedKey = request.headers.get('x-api-key');
-    if (!providedKey || providedKey !== API_SECRET) {
+    const apiSecret = env.API_SECRET;
+    if (apiSecret && providedKey !== apiSecret) {
         return new Response(JSON.stringify({ success: false, error: true, msg: 'Unauthorized' }), {
             status: 401,
             headers: { 'Content-Type': 'application/json' }
