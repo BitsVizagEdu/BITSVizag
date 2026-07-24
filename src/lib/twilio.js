@@ -1,7 +1,17 @@
-import { TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_FROM_NUMBER, TWILIO_JOSHUA_NUMBER, TWILIO_SECRETARY_NUMBER } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import twilio from 'twilio';
 
-const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+/**
+ * Helper to safely instantiate Twilio client.
+ */
+function getClient() {
+    const accountSid = env.TWILIO_ACCOUNT_SID;
+    const authToken = env.TWILIO_AUTH_TOKEN;
+    if (!accountSid || !authToken) {
+        return null;
+    }
+    return twilio(accountSid, authToken);
+}
 
 /**
  * Send a welcome WhatsApp message to the applicant.
@@ -10,9 +20,15 @@ const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
  */
 export async function sendWelcomeMessage(contact, applicationId) {
     try {
+        const client = getClient();
+        if (!client) {
+            console.warn('Twilio credentials not configured; skipping sendWelcomeMessage');
+            return false;
+        }
+
         await client.messages.create({
             body: 'Thankyou for choosing BITS Vizag. We are happy to Welcome you to the BITS Family. For info, visit www.bitsvizag.com\n\nYour application ID: ' + applicationId,
-            from: 'whatsapp:' + TWILIO_FROM_NUMBER,
+            from: 'whatsapp:' + (env.TWILIO_FROM_NUMBER || ''),
             to: 'whatsapp:+91' + contact
         });
 
@@ -39,19 +55,29 @@ export async function sendApplicationSubmittedMessage(name, department, referenc
         `Application ID: ${applicationId}`;
 
     try {
-        await client.messages.create({
-            body,
-            from: 'whatsapp:' + TWILIO_FROM_NUMBER,
-            to: 'whatsapp:+91' + TWILIO_JOSHUA_NUMBER
-        });
-        console.log('Sent application details to joshua');
+        const client = getClient();
+        if (!client) {
+            console.warn('Twilio credentials not configured; skipping sendApplicationSubmittedMessage');
+            return false;
+        }
 
-        await client.messages.create({
-            body,
-            from: 'whatsapp:' + TWILIO_FROM_NUMBER,
-            to: 'whatsapp:+91' + TWILIO_SECRETARY_NUMBER
-        });
-        console.log('Sent application details to secretary');
+        if (env.TWILIO_JOSHUA_NUMBER) {
+            await client.messages.create({
+                body,
+                from: 'whatsapp:' + (env.TWILIO_FROM_NUMBER || ''),
+                to: 'whatsapp:+91' + env.TWILIO_JOSHUA_NUMBER
+            });
+            console.log('Sent application details to joshua');
+        }
+
+        if (env.TWILIO_SECRETARY_NUMBER) {
+            await client.messages.create({
+                body,
+                from: 'whatsapp:' + (env.TWILIO_FROM_NUMBER || ''),
+                to: 'whatsapp:+91' + env.TWILIO_SECRETARY_NUMBER
+            });
+            console.log('Sent application details to secretary');
+        }
 
         return true;
     } catch (err) {

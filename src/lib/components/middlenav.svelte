@@ -886,12 +886,6 @@
 			box-sizing: border-box;
 		}
 
-		:global(body.secondnav-drawer-open) .mobile-quick-nav {
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
-		}
-
 		nav {
 			position: relative !important;
 			top: auto !important;
@@ -907,13 +901,6 @@
 			height: 32px;
 			width: 100%;
 			overflow: hidden;
-		}
-
-		.mobile-quick-nav {
-			display: block !important;
-			overflow-x: auto;
-			white-space: nowrap;
-			-webkit-overflow-scrolling: touch;
 		}
 
 		.no-scrollbar::-webkit-scrollbar {
