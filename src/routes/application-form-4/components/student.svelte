@@ -102,8 +102,9 @@
 
 <script>
     import {page} from '$app/stores';
-    import {PUBLIC_API_KEY} from '$env/static/public';
+    import { env } from '$env/dynamic/public';
 
+    const PUBLIC_API_KEY = env.PUBLIC_API_KEY || '';
     let queryParams = $page.data.queryParams;
     import {onMount} from "svelte";
     import {writable} from "svelte/store";
