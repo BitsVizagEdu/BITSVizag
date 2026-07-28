@@ -624,13 +624,14 @@
 				<div class="about-grid-content">
 					<div class="about-text-side">
 						<p class="inter main-para">
-							The Department of Electronics &amp; Communication Engineering (ECE) at BITS Vizag is focused on
-							advancing communication systems, signal processing, and embedded electronics to build
-							industry-ready engineers.
+							The Department of Electronics &amp; Communication Engineering (ECE) at BITS Vizag is
+							focused on advancing communication systems, signal processing, and embedded
+							electronics to build industry-ready engineers.
 						</p>
 						<p class="inter sub-para">
-							With strengths in VLSI, digital and analog communications, and IoT systems, we prepare students
-							for careers in telecommunications, semiconductor design, and embedded systems development.
+							With strengths in VLSI, digital and analog communications, and IoT systems, we prepare
+							students for careers in telecommunications, semiconductor design, and embedded systems
+							development.
 						</p>
 					</div>
 					<div class="about-visual-side">
@@ -656,330 +657,330 @@
 				</div>
 			</section>
 
-		<!-- Vision & Mission Section -->
-		<section
-			id="vision"
-			class="dept-section-card vm-premium-section"
-			style="--section-accent: {activeTabColor}"
-		>
-			<div class="section-top">
-				<div class="section-title-wrap">
-					<div class="vm-title-row">
-						<div class="vm-icon-badge" style="color: {activeTabColor}">
+			<!-- Vision & Mission Section -->
+			<section
+				id="vision"
+				class="dept-section-card vm-premium-section"
+				style="--section-accent: {activeTabColor}"
+			>
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<div class="vm-title-row">
+							<div class="vm-icon-badge" style="color: {activeTabColor}">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+								>
+									<circle cx="12" cy="12" r="3"></circle>
+									<path
+										d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+									></path>
+								</svg>
+							</div>
+							<h2 class="satoshi">Vision & Mission</h2>
+						</div>
+						<div class="section-underline"></div>
+					</div>
+				</div>
+
+				<div class="vm-tabs-nav scrollbar-hide">
+					{#each visionMissionTabs as tab}
+						<button
+							class="vm-tab-btn inter"
+							class:active={activeVmTab === tab.id}
+							on:click={() => (activeVmTab = tab.id)}
+							style="--tab-color: {tab.color}"
+						>
 							<svg
 								viewBox="0 0 24 24"
-								width="24"
-								height="24"
+								width="16"
+								height="16"
 								fill="none"
 								stroke="currentColor"
 								stroke-width="2.5"
 							>
-								<circle cx="12" cy="12" r="3"></circle>
-								<path
-									d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
-								></path>
+								<path d={tab.icon}></path>
 							</svg>
-						</div>
-						<h2 class="satoshi">Vision & Mission</h2>
-					</div>
-					<div class="section-underline"></div>
+							<span>{tab.label}</span>
+						</button>
+					{/each}
 				</div>
-			</div>
 
-			<div class="vm-tabs-nav scrollbar-hide">
-				{#each visionMissionTabs as tab}
-					<button
-						class="vm-tab-btn inter"
-						class:active={activeVmTab === tab.id}
-						on:click={() => (activeVmTab = tab.id)}
-						style="--tab-color: {tab.color}"
-					>
-						<svg
-							viewBox="0 0 24 24"
-							width="16"
-							height="16"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2.5"
-						>
-							<path d={tab.icon}></path>
-						</svg>
-						<span>{tab.label}</span>
-					</button>
-				{/each}
-			</div>
+				<div class="vm-content-viewport">
+					{#key activeVmTab}
+						<div class="vm-tab-panel" in:fade={{ duration: 300 }}>
+							{#if activeVmTab === 'vision'}
+								<div class="vision-panel" in:fly={{ y: 20, duration: 500, delay: 100 }}>
+									<h3 class="satoshi panel-title">Our Vision</h3>
+									<p class="inter vision-quote">{vmContent.vision.text}</p>
+								</div>
+							{:else if activeVmTab === 'mission'}
+								<div class="mission-panel">
+									<div class="panel-grid">
+										{#each vmContent.mission as m, i}
+											<div class="m-card" in:fly={{ y: 30, duration: 500, delay: i * 100 }}>
+												<span class="m-id satoshi">{m.id}</span>
+												<p class="inter">{m.text}</p>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'peos'}
+								<div class="peos-panel">
+									<div class="panel-list">
+										{#each vmContent.peos as peo, i}
+											<div class="peo-item" in:fly={{ x: -20, duration: 400, delay: i * 100 }}>
+												<div class="peo-dot"></div>
+												<div class="peo-content">
+													<span class="peo-id satoshi">{peo.id}</span>
+													<p class="inter">{peo.text}</p>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'psos'}
+								<div class="psos-panel">
+									<div class="panel-grid">
+										{#each vmContent.psos as pso, i}
+											<div class="pso-card" in:fly={{ y: 30, duration: 500, delay: i * 100 }}>
+												<div class="pso-icon" style="background: {activeTabColor}">
+													<svg
+														viewBox="0 0 24 24"
+														width="20"
+														height="20"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+													>
+														<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+													</svg>
+												</div>
+												<div class="pso-text">
+													<span class="pso-id satoshi">{pso.id}</span>
+													<p class="inter">{pso.text}</p>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'pos'}
+								<div class="pos-panel">
+									<div class="pos-grid">
+										{#each vmContent.pos as po, i}
+											<div class="po-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
+												<div class="po-header">
+													<span class="po-id satoshi">{po.id}</span>
+													<h4 class="satoshi">{po.title}</h4>
+												</div>
+												<p class="inter">{po.text}</p>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{:else if activeVmTab === 'sdgs'}
+								<div class="sdgs-panel">
+									<div class="sdg-grid">
+										{#each vmContent.sdgs as sdg, i}
+											<div
+												class="sdg-card"
+												in:fly={{ x: 20, duration: 400, delay: i * 100 }}
+												style="--sdg-color: {['#4C9F38', '#BF1D2D', '#26BDE2', '#FCC30B'][i % 4]}"
+											>
+												<div class="sdg-icon-wrap" style="color: var(--sdg-color)">
+													<svg
+														viewBox="0 0 24 24"
+														width="24"
+														height="24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+													>
+														<circle cx="12" cy="12" r="10"></circle>
+														<path d="M12 6v6l4 2"></path>
+													</svg>
+												</div>
+												<div class="sdg-content">
+													<h4 class="satoshi">{sdg.goal}</h4>
+													<p class="inter">{sdg.desc}</p>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{/if}
+						</div>
+					{/key}
+				</div>
+			</section>
 
-			<div class="vm-content-viewport">
-				{#key activeVmTab}
-					<div class="vm-tab-panel" in:fade={{ duration: 300 }}>
-						{#if activeVmTab === 'vision'}
-							<div class="vision-panel" in:fly={{ y: 20, duration: 500, delay: 100 }}>
-								<h3 class="satoshi panel-title">Our Vision</h3>
-								<p class="inter vision-quote">{vmContent.vision.text}</p>
+			<!-- Labs & Infrastructure -->
+			<section
+				id="labs"
+				class="dept-section-card labs-premium-section"
+				style="--section-accent: #6366f1"
+			>
+				<div class="section-top">
+					<div class="section-title-wrap">
+						<div class="labs-title-row">
+							<div class="labs-icon-badge">
+								<svg
+									viewBox="0 0 24 24"
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+									></path>
+								</svg>
 							</div>
-						{:else if activeVmTab === 'mission'}
-							<div class="mission-panel">
-								<div class="panel-grid">
-									{#each vmContent.mission as m, i}
-										<div class="m-card" in:fly={{ y: 30, duration: 500, delay: i * 100 }}>
-											<span class="m-id satoshi">{m.id}</span>
-											<p class="inter">{m.text}</p>
-										</div>
-									{/each}
-								</div>
-							</div>
-						{:else if activeVmTab === 'peos'}
-							<div class="peos-panel">
-								<div class="panel-list">
-									{#each vmContent.peos as peo, i}
-										<div class="peo-item" in:fly={{ x: -20, duration: 400, delay: i * 100 }}>
-											<div class="peo-dot"></div>
-											<div class="peo-content">
-												<span class="peo-id satoshi">{peo.id}</span>
-												<p class="inter">{peo.text}</p>
-											</div>
-										</div>
-									{/each}
-								</div>
-							</div>
-						{:else if activeVmTab === 'psos'}
-							<div class="psos-panel">
-								<div class="panel-grid">
-									{#each vmContent.psos as pso, i}
-										<div class="pso-card" in:fly={{ y: 30, duration: 500, delay: i * 100 }}>
-											<div class="pso-icon" style="background: {activeTabColor}">
-												<svg
-													viewBox="0 0 24 24"
-													width="20"
-													height="20"
-													fill="none"
-													stroke="currentColor"
-													stroke-width="2"
-												>
-													<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-												</svg>
-											</div>
-											<div class="pso-text">
-												<span class="pso-id satoshi">{pso.id}</span>
-												<p class="inter">{pso.text}</p>
-											</div>
-										</div>
-									{/each}
-								</div>
-							</div>
-						{:else if activeVmTab === 'pos'}
-							<div class="pos-panel">
-								<div class="pos-grid">
-									{#each vmContent.pos as po, i}
-										<div class="po-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
-											<div class="po-header">
-												<span class="po-id satoshi">{po.id}</span>
-												<h4 class="satoshi">{po.title}</h4>
-											</div>
-											<p class="inter">{po.text}</p>
-										</div>
-									{/each}
-								</div>
-							</div>
-						{:else if activeVmTab === 'sdgs'}
-							<div class="sdgs-panel">
-								<div class="sdg-grid">
-									{#each vmContent.sdgs as sdg, i}
-										<div
-											class="sdg-card"
-											in:fly={{ x: 20, duration: 400, delay: i * 100 }}
-											style="--sdg-color: {['#4C9F38', '#BF1D2D', '#26BDE2', '#FCC30B'][i % 4]}"
-										>
-											<div class="sdg-icon-wrap" style="color: var(--sdg-color)">
-												<svg
-													viewBox="0 0 24 24"
-													width="24"
-													height="24"
-													fill="none"
-													stroke="currentColor"
-													stroke-width="2"
-												>
-													<circle cx="12" cy="12" r="10"></circle>
-													<path d="M12 6v6l4 2"></path>
-												</svg>
-											</div>
-											<div class="sdg-content">
-												<h4 class="satoshi">{sdg.goal}</h4>
-												<p class="inter">{sdg.desc}</p>
-											</div>
-										</div>
-									{/each}
-								</div>
-							</div>
-						{/if}
+							<h2 class="satoshi">Labs & Infrastructure</h2>
+						</div>
+						<div class="section-underline"></div>
 					</div>
-				{/key}
-			</div>
-		</section>
+				</div>
 
-		<!-- Labs & Infrastructure -->
-		<section
-			id="labs"
-			class="dept-section-card labs-premium-section"
-			style="--section-accent: #6366f1"
-		>
-			<div class="section-top">
-				<div class="section-title-wrap">
-					<div class="labs-title-row">
-						<div class="labs-icon-badge">
-							<svg
-								viewBox="0 0 24 24"
-								width="24"
-								height="24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
+				<div class="labs-interactive-grid">
+					<div class="labs-nav-sidebar scrollbar-hide">
+						{#each labCategories as cat}
+							<button
+								class="lab-nav-item inter"
+								class:active={activeLabCat === cat.id}
+								on:click={() => (activeLabCat = cat.id)}
+								style="--nav-color: {cat.color}"
 							>
-								<path
-									d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-								></path>
-							</svg>
-						</div>
-						<h2 class="satoshi">Labs & Infrastructure</h2>
+								<div class="nav-icon">
+									<svg
+										viewBox="0 0 24 24"
+										width="20"
+										height="20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d={cat.icon}></path>
+									</svg>
+								</div>
+								<div class="nav-text">
+									<span class="cat-name">{cat.name}</span>
+									<span class="cat-count">{cat.labs.length} Facilities</span>
+								</div>
+								<div class="active-indicator"></div>
+							</button>
+						{/each}
 					</div>
-					<div class="section-underline"></div>
-				</div>
-			</div>
 
-			<div class="labs-interactive-grid">
-				<div class="labs-nav-sidebar scrollbar-hide">
-					{#each labCategories as cat}
-						<button
-							class="lab-nav-item inter"
-							class:active={activeLabCat === cat.id}
-							on:click={() => (activeLabCat = cat.id)}
-							style="--nav-color: {cat.color}"
+					<div class="labs-display-pane">
+						{#each labCategories as cat}
+							{#if activeLabCat === cat.id}
+								<div class="labs-content-wrap" in:fly={{ x: 20, duration: 400 }}>
+									<div class="display-header">
+										<h3 class="satoshi" style="color: {cat.color}">{cat.name}</h3>
+										<p class="inter">{cat.description}</p>
+									</div>
+
+									<div class="lab-items-grid">
+										{#each cat.labs as lab, i}
+											<div class="lab-item-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
+												<div class="lab-status-dot" style="background: {cat.color}"></div>
+												<span class="inter lab-name">{lab}</span>
+												<div class="lab-action-btn">
+													<svg
+														viewBox="0 0 24 24"
+														width="14"
+														height="14"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="3"
+													>
+														<path d="M5 12h14m-7-7l7 7-7 7"></path>
+													</svg>
+												</div>
+											</div>
+										{/each}
+									</div>
+								</div>
+							{/if}
+						{/each}
+					</div>
+				</div>
+			</section>
+
+			<!-- Job Opportunities & Roadmap - Ultra Premium -->
+			<section id="jobs" class="dept-section-card jobs-ultra-section">
+				<div class="ultra-header">
+					<h2 class="satoshi">Career Pathways</h2>
+					<p class="inter">Strategic Security Industry Guidance</p>
+				</div>
+
+				<div class="jobs-ultra-grid">
+					{#each jobRoles as job, i}
+						<div
+							class="job-ultra-card"
+							in:fly={{ y: 20, duration: 600, delay: i * 50 }}
+							style="--job-color: {job.color}"
 						>
-							<div class="nav-icon">
+							<div class="job-u-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="22"
+									height="22"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d={job.icon}></path>
+								</svg>
+							</div>
+							<div class="job-u-content">
+								<h4 class="satoshi">{job.role}</h4>
+								<p class="inter">{job.description}</p>
+								<div class="job-u-skills">
+									{#each job.skills as skill}
+										<span class="u-skill">{skill}</span>
+									{/each}
+								</div>
+							</div>
+							<div class="job-u-arrow">
 								<svg
 									viewBox="0 0 24 24"
 									width="20"
 									height="20"
 									fill="none"
 									stroke="currentColor"
-									stroke-width="2"
+									stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg
 								>
-									<path d={cat.icon}></path>
-								</svg>
 							</div>
-							<div class="nav-text">
-								<span class="cat-name">{cat.name}</span>
-								<span class="cat-count">{cat.labs.length} Facilities</span>
-							</div>
-							<div class="active-indicator"></div>
-						</button>
+						</div>
 					{/each}
 				</div>
 
-				<div class="labs-display-pane">
-					{#each labCategories as cat}
-						{#if activeLabCat === cat.id}
-							<div class="labs-content-wrap" in:fly={{ x: 20, duration: 400 }}>
-								<div class="display-header">
-									<h3 class="satoshi" style="color: {cat.color}">{cat.name}</h3>
-									<p class="inter">{cat.description}</p>
-								</div>
-
-								<div class="lab-items-grid">
-									{#each cat.labs as lab, i}
-										<div class="lab-item-card" in:fly={{ y: 20, duration: 400, delay: i * 50 }}>
-											<div class="lab-status-dot" style="background: {cat.color}"></div>
-											<span class="inter lab-name">{lab}</span>
-											<div class="lab-action-btn">
-												<svg
-													viewBox="0 0 24 24"
-													width="14"
-													height="14"
-													fill="none"
-													stroke="currentColor"
-													stroke-width="3"
-												>
-													<path d="M5 12h14m-7-7l7 7-7 7"></path>
-												</svg>
-											</div>
-										</div>
+				<div class="roadmap-ultra-container">
+					<h3 class="satoshi roadmap-u-title">ECE Roadmap</h3>
+					<div class="roadmap-u-timeline">
+						{#each focusRoadmap as step, i}
+							<div class="roadmap-u-step" in:fly={{ y: 20, duration: 600, delay: i * 100 }}>
+								<div class="u-step-year satoshi" style="color: {activeTabColor}">{step.year}</div>
+								<div class="u-step-content inter">
+									{#each step.goals as goal}
+										<span class="u-goal">{goal}</span>
 									{/each}
 								</div>
 							</div>
-						{/if}
-					{/each}
-				</div>
-			</div>
-		</section>
-
-		<!-- Job Opportunities & Roadmap - Ultra Premium -->
-		<section id="jobs" class="dept-section-card jobs-ultra-section">
-			<div class="ultra-header">
-				<h2 class="satoshi">Career Pathways</h2>
-				<p class="inter">Strategic Security Industry Guidance</p>
-			</div>
-
-			<div class="jobs-ultra-grid">
-				{#each jobRoles as job, i}
-					<div
-						class="job-ultra-card"
-						in:fly={{ y: 20, duration: 600, delay: i * 50 }}
-						style="--job-color: {job.color}"
-					>
-						<div class="job-u-icon">
-							<svg
-								viewBox="0 0 24 24"
-								width="22"
-								height="22"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d={job.icon}></path>
-							</svg>
-						</div>
-						<div class="job-u-content">
-							<h4 class="satoshi">{job.role}</h4>
-							<p class="inter">{job.description}</p>
-							<div class="job-u-skills">
-								{#each job.skills as skill}
-									<span class="u-skill">{skill}</span>
-								{/each}
-							</div>
-						</div>
-						<div class="job-u-arrow">
-							<svg
-								viewBox="0 0 24 24"
-								width="20"
-								height="20"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg
-							>
-						</div>
+						{/each}
 					</div>
-				{/each}
-			</div>
-
-			<div class="roadmap-ultra-container">
-				<h3 class="satoshi roadmap-u-title">ECE Roadmap</h3>
-				<div class="roadmap-u-timeline">
-					{#each focusRoadmap as step, i}
-						<div class="roadmap-u-step" in:fly={{ y: 20, duration: 600, delay: i * 100 }}>
-							<div class="u-step-year satoshi" style="color: {activeTabColor}">{step.year}</div>
-							<div class="u-step-content inter">
-								{#each step.goals as goal}
-									<span class="u-goal">{goal}</span>
-								{/each}
-							</div>
-						</div>
-					{/each}
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Faculty Profile -->
-		<!-- <section id="faculty" class="dept-section-card faculty-table-section">
+			<!-- Faculty Profile -->
+			<!-- <section id="faculty" class="dept-section-card faculty-table-section">
 			<div class="section-header-row">
 				<div class="section-title-wrap">
 					<h2 class="satoshi">ECE Faculty</h2>
@@ -1063,95 +1064,99 @@
 			</div>
 		</section> -->
 
-		<!-- HOD Profile & Message - CSE Match Style -->
-		<section id="hod" class="dept-section-card hod-premium-card" style="--section-accent: #db2777">
-			<div class="hod-container">
-				<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
-					<div class="hod-image-glow"></div>
-					<img src={hodImg} alt="Dr. B. Kiranmai" loading="lazy" />
-					<div class="hod-badge satoshi">22+ Years Exp</div>
-				</div>
-				<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
-					<div class="quote-icon">
-						<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
-							<path
-								d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
-							></path>
-						</svg>
+			<!-- HOD Profile & Message - CSE Match Style -->
+			<section
+				id="hod"
+				class="dept-section-card hod-premium-card"
+				style="--section-accent: #db2777"
+			>
+				<div class="hod-container">
+					<div class="hod-visual" in:fly={{ x: -40, duration: 800 }}>
+						<div class="hod-image-glow"></div>
+						<img src={hodImg} alt="Dr. B. Kiranmai" loading="lazy" />
+						<div class="hod-badge satoshi">22+ Years Exp</div>
 					</div>
-					<h2 class="satoshi">Dr. B. Kiranmai</h2>
-					<p class="hod-designation inter">
-						Head of Department | Electronics & Communication Engineering
-					</p>
-					<div class="hod-message-body">
-						<p class="inter">
-							"Welcome to the ECE Department. Our mission is to nurture technical leadership and
-							pioneer research in hardware innovation, blending rigorous engineering fundamentals
-							with cutting-edge embedded systems."
+					<div class="hod-content" in:fly={{ x: 40, duration: 800 }}>
+						<div class="quote-icon">
+							<svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" opacity="0.1">
+								<path
+									d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.01701 21L6.01701 18C6.01701 16.8954 6.91244 16 8.01701 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.01701C7.46473 8 7.01701 8.44772 7.01701 9V12C7.01701 12.5523 6.56929 13 6.01701 13H5.01701V21H6.01701Z"
+								></path>
+							</svg>
+						</div>
+						<h2 class="satoshi">Dr. B. Kiranmai</h2>
+						<p class="hod-designation inter">
+							Head of Department | Electronics & Communication Engineering
 						</p>
-						<p class="inter signature">Dr. B. Kiranmai</p>
+						<div class="hod-message-body">
+							<p class="inter">
+								"Welcome to the ECE Department. Our mission is to nurture technical leadership and
+								pioneer research in hardware innovation, blending rigorous engineering fundamentals
+								with cutting-edge embedded systems."
+							</p>
+							<p class="inter signature">Dr. B. Kiranmai</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Contact Info - Ultra Premium -->
-		<section id="contact" class="dept-section-card contact-ultra-section">
-			<div class="contact-ultra-banner">
-				<div class="c-u-text">
-					<h2 class="satoshi">Connect With Us</h2>
-					<p class="inter">Reach out for academic inquiries and collaborations.</p>
+			<!-- Contact Info - Ultra Premium -->
+			<section id="contact" class="dept-section-card contact-ultra-section">
+				<div class="contact-ultra-banner">
+					<div class="c-u-text">
+						<h2 class="satoshi">Connect With Us</h2>
+						<p class="inter">Reach out for academic inquiries and collaborations.</p>
+					</div>
+					<div class="c-u-actions">
+						<a
+							href="mailto:ece@bitsvizag.com"
+							class="c-u-btn email-u-btn"
+							in:fly={{ y: 20, duration: 500, delay: 100 }}
+						>
+							<div class="c-u-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="20"
+									height="20"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									><path
+										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+									></path><polyline points="22,6 12,13 2,6"></polyline></svg
+								>
+							</div>
+							<div class="c-u-info">
+								<span class="label inter">Official Email</span>
+								<span class="val satoshi">ece@bitsvizag.com</span>
+							</div>
+						</a>
+						<a
+							href="tel:+919121214313"
+							class="c-u-btn phone-u-btn"
+							in:fly={{ y: 20, duration: 500, delay: 200 }}
+						>
+							<div class="c-u-icon">
+								<svg
+									viewBox="0 0 24 24"
+									width="20"
+									height="20"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									><path
+										d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+									></path></svg
+								>
+							</div>
+							<div class="c-u-info">
+								<span class="label inter">Phone Support</span>
+								<span class="val satoshi">+91 8500267193</span>
+							</div>
+						</a>
+					</div>
 				</div>
-				<div class="c-u-actions">
-					<a
-						href="mailto:ece@bitsvizag.com"
-						class="c-u-btn email-u-btn"
-						in:fly={{ y: 20, duration: 500, delay: 100 }}
-					>
-						<div class="c-u-icon">
-							<svg
-								viewBox="0 0 24 24"
-								width="20"
-								height="20"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								><path
-									d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-								></path><polyline points="22,6 12,13 2,6"></polyline></svg
-							>
-						</div>
-						<div class="c-u-info">
-							<span class="label inter">Official Email</span>
-							<span class="val satoshi">ece@bitsvizag.com</span>
-						</div>
-					</a>
-					<a
-						href="tel:+919121214313"
-						class="c-u-btn phone-u-btn"
-						in:fly={{ y: 20, duration: 500, delay: 200 }}
-					>
-						<div class="c-u-icon">
-							<svg
-								viewBox="0 0 24 24"
-								width="20"
-								height="20"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								><path
-									d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-								></path></svg
-							>
-						</div>
-						<div class="c-u-info">
-							<span class="label inter">Phone Support</span>
-							<span class="val satoshi">+91 8500267193</span>
-						</div>
-					</a>
-				</div>
-			</div>
-		</section>
+			</section>
 		</main>
 	</div>
 </div>

@@ -374,7 +374,7 @@
 	.section-head {
 		display: flex;
 		justify-content: space-between;
-		align-items: end;
+		align-items: flex-end;
 		gap: 0.8rem;
 		margin-bottom: 0.7rem;
 	}
