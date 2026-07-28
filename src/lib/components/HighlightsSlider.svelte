@@ -56,7 +56,7 @@
 
 <div bind:this={sectionRef} class="relative w-full bg-white group container-isolate">
 	<!-- Slide Area Wrapper with Responsive Height -->
-	<div class="relative w-full h-[600px] md:h-[94vh] overflow-hidden">
+	<div class="relative w-full h-[500px] sm:h-[600px] md:h-[680px] lg:h-[88vh] xl:h-[92vh] overflow-hidden">
 		<!-- Slides Container -->
 		<div 
 			class="flex h-full transition-transform duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1) will-change-transform gpu-layer" 

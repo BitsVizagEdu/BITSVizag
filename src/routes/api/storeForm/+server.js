@@ -5,8 +5,8 @@ import { env } from '$env/dynamic/private';
 export async function POST({ request }) {
     // ── Authentication ──────────────────────────────────────────────────
     const providedKey = request.headers.get('x-api-key');
-    const apiSecret = env.API_SECRET;
-    if (apiSecret && providedKey !== apiSecret) {
+    const apiSecret = env.API_SECRET || '';
+    if (!providedKey || (apiSecret && providedKey !== apiSecret)) {
         return new Response(JSON.stringify({ success: false, error: true, msg: 'Unauthorized' }), {
             status: 401,
             headers: { 'Content-Type': 'application/json' }
