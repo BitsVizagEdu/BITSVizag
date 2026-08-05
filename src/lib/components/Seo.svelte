@@ -3,15 +3,31 @@
 	export let description;
 	export let type = 'website';
 	export let url;
-	export let imageUrl = '';
-	export let siteName;
+	export let imageUrl = 'https://bitsvizag.edu.in/hero-bits.png';
+	export let siteName = 'BITS Vizag';
 	/** @type {Record<string, unknown> | null} */
 	export let structuredData = null;
+	/** @type {Array<{name: string, item: string}> | null} */
+	export let breadcrumbs = null;
+
+	$: breadcrumbSchema = breadcrumbs
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: breadcrumbs.map((b, i) => ({
+					'@type': 'ListItem',
+					position: i + 1,
+					name: b.name,
+					item: b.item
+				}))
+		  }
+		: null;
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description} />
+	<link rel="canonical" href={url} />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content={type} />
@@ -31,6 +47,12 @@
 	{#if structuredData}
 		<script type="application/ld+json">
 			{JSON.stringify(structuredData, null, 2)}
+		</script>
+	{/if}
+
+	{#if breadcrumbSchema}
+		<script type="application/ld+json">
+			{JSON.stringify(breadcrumbSchema, null, 2)}
 		</script>
 	{/if}
 </svelte:head>

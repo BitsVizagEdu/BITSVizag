@@ -11,11 +11,11 @@
 	];
 
 	const quickLinks = [
-		{ name: 'About Us', href: '/aboutus/About-BITS' },
+		{ name: 'Best College in Vizag', href: '/best-engineering-college-in-vizag' },
+		{ name: 'B.Tech Admissions 2026', href: '/b-tech-admissions-vizag' },
+		{ name: 'Top CSE College Vizag', href: '/cse-college-vizag' },
 		{ name: 'Courses Offered', href: '/courses/Offered-Courses' },
-		{ name: 'Admissions', href: '/application-form' },
 		{ name: 'Placements / CDC', href: '/placements' },
-		{ name: 'Gallery', href: '/gallery' },
 		{ name: 'Contact Us', href: '/contactus' }
 	];
 
@@ -25,10 +25,10 @@
 			href: 'https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx',
 			external: true
 		},
+		{ name: 'About Us', href: '/aboutus/About-BITS' },
 		{ name: 'Facilities', href: '/facilities/Knowledge-Resource-Center' },
 		{ name: 'Faculty', href: '/faculty' },
 		{ name: 'Governance', href: '/governance/mandatory-disclosure' },
-		{ name: 'Research', href: '/governance/best-practices' },
 		{ name: 'IQAC', href: '/governance/IQAC' }
 	];
 
