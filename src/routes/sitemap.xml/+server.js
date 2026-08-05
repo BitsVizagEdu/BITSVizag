@@ -3,61 +3,76 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<!-- Primary Static Routes -->
 	<url>
-		<loc>https://bitsvizag.com</loc>
+		<loc>https://bitsvizag.edu.in</loc>
 		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://bitsvizag.edu.in/best-engineering-college-in-vizag</loc>
+		<priority>0.9</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://bitsvizag.edu.in/b-tech-admissions-vizag</loc>
+		<priority>0.9</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://bitsvizag.edu.in/cse-college-vizag</loc>
+		<priority>0.9</priority>
 		<changefreq>weekly</changefreq>
 	</url>
 
 	<!-- About Us Pages -->
 	<url>
-		<loc>https://bitsvizag.com/aboutus/About-BITS</loc>
+		<loc>https://bitsvizag.edu.in/aboutus/About-BITS</loc>
 		<priority>0.9</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/aboutus/About-ABWEC</loc>
+		<loc>https://bitsvizag.edu.in/aboutus/About-ABWEC</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/aboutus/Message-from-Secretary-&-Correspondent</loc>
+		<loc>https://bitsvizag.edu.in/aboutus/Message-from-Secretary-&-Correspondent</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/aboutus/Message-from-Principal</loc>
+		<loc>https://bitsvizag.edu.in/aboutus/Message-from-Principal</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Departments - Primary Keyword -->
 	<url>
-		<loc>https://bitsvizag.com/department/Department of BS&H</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of BS&H</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of CSE</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of CSE</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of CSE (AI & ML)</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of CSE (AI & ML)</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of CSE (Cyber Security)</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of CSE (Cyber Security)</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of ECE</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of ECE</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of EEE</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of EEE</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
@@ -65,143 +80,143 @@ export async function GET() {
 		<!-- Department of CIVIL removed from sitemap per request -->
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of MECH</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of MECH</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/department/Department of MBA</loc>
+		<loc>https://bitsvizag.edu.in/department/Department of MBA</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Courses - Primary Keyword -->
 	<url>
-		<loc>https://bitsvizag.com/courses/Under-Graduation</loc>
+		<loc>https://bitsvizag.edu.in/courses/Under-Graduation</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/courses/Post-Graduation</loc>
+		<loc>https://bitsvizag.edu.in/courses/Post-Graduation</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Facilities - Primary Keyword -->
 	<url>
-		<loc>https://bitsvizag.com/facilities/Knowledge-Resource-Center</loc>
+		<loc>https://bitsvizag.edu.in/facilities/Knowledge-Resource-Center</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/facilities/Sports</loc>
+		<loc>https://bitsvizag.edu.in/facilities/Sports</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/facilities/Laboratories</loc>
+		<loc>https://bitsvizag.edu.in/facilities/Laboratories</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/facilities/Cafeteria</loc>
+		<loc>https://bitsvizag.edu.in/facilities/Cafeteria</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/facilities/Accomidation</loc>
+		<loc>https://bitsvizag.edu.in/facilities/Accomidation</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/facilities/Transport</loc>
+		<loc>https://bitsvizag.edu.in/facilities/Transport</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Placements/Jobmela - Primary Keyword -->
 	<url>
-		<loc>https://bitsvizag.com/placements</loc>
+		<loc>https://bitsvizag.edu.in/placements</loc>
 		<priority>0.8</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Contact Us -->
 	<url>
-		<loc>https://bitsvizag.com/contactus</loc>
+		<loc>https://bitsvizag.edu.in/contactus</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Gallery -->
 	<url>
-		<loc>https://bitsvizag.com/gallery</loc>
+		<loc>https://bitsvizag.edu.in/gallery</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Exam Cell -->
 	<url>
-		<loc>https://bitsvizag.com/examcell/BTECH</loc>
+		<loc>https://bitsvizag.edu.in/examcell/BTECH</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/examcell/MBA</loc>
+		<loc>https://bitsvizag.edu.in/examcell/MBA</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/examcell/MTECH</loc>
+		<loc>https://bitsvizag.edu.in/examcell/MTECH</loc>
 		<priority>0.7</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 
 	<!-- Accreditation & Reports -->
 	<url>
-		<loc>https://bitsvizag.com/naac</loc>
+		<loc>https://bitsvizag.edu.in/naac</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/NIRF</loc>
+		<loc>https://bitsvizag.edu.in/NIRF</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/IQAC</loc>
+		<loc>https://bitsvizag.edu.in/IQAC</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/governance/mandatory-disclosure</loc>
+		<loc>https://bitsvizag.edu.in/governance/mandatory-disclosure</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/governance/strategic-plan-2025-30</loc>
+		<loc>https://bitsvizag.edu.in/governance/strategic-plan-2025-30</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/governance/best-practices</loc>
+		<loc>https://bitsvizag.edu.in/governance/best-practices</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/affilation-reports</loc>
+		<loc>https://bitsvizag.edu.in/affilation-reports</loc>
 		<priority>0.6</priority>
 		<changefreq>quarterly</changefreq>
 	</url>
 
 	<!-- Other Pages -->
 	<url>
-		<loc>https://bitsvizag.com/feedback</loc>
+		<loc>https://bitsvizag.edu.in/feedback</loc>
 		<priority>0.5</priority>
 		<changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://bitsvizag.com/alumini-data</loc>
+		<loc>https://bitsvizag.edu.in/alumini-data</loc>
 		<priority>0.5</priority>
 		<changefreq>monthly</changefreq>
 	</url>

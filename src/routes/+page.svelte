@@ -82,40 +82,52 @@
 
 	const structuredData = {
 		'@context': 'https://schema.org',
-		'@type': 'CollegeOrUniversity',
-		name: 'BITS Vizag',
-		url: 'https://bitsvizag.com',
-		logo: 'https://bitsvizag.com/logo-150-2/logo-150-2.png',
+		'@type': 'EducationalOrganization',
+		'@id': 'https://bitsvizag.edu.in/#organization',
+		name: 'Baba Institute of Technology and Sciences (BITS Vizag)',
+		alternateName: ['BITS Vizag', 'Baba Engineering College Vizag'],
+		url: 'https://bitsvizag.edu.in',
+		logo: 'https://bitsvizag.edu.in/logo-150-2/logo-150-2.png',
+		image: 'https://bitsvizag.edu.in/hero-bits.png',
+		description: 'BITS Vizag is one of the best engineering colleges in Visakhapatnam offering AICTE-approved B.Tech programs, 90%+ placement rates, modern labs & top faculty.',
+		address: {
+			'@type': 'PostalAddress',
+			streetAddress: 'BABA College Lake Near Pothinamallayyapalem, PM Palem',
+			addressLocality: 'Visakhapatnam',
+			addressRegion: 'Andhra Pradesh',
+			postalCode: '530048',
+			addressCountry: 'IN'
+		},
+		geo: {
+			'@type': 'GeoCoordinates',
+			latitude: 17.8188,
+			longitude: 83.3444
+		},
 		contactPoint: {
 			'@type': 'ContactPoint',
 			telephone: '+91-8886634502',
-			contactType: 'customer service'
+			contactType: 'admissions'
 		},
 		sameAs: [
 			'https://www.facebook.com/bits.vizag/',
 			'https://twitter.com/bitsvizag',
-			'https://www.instagram.com/bitsvizag/',
-			'https://www.youtube.com/channel/UC_Bw_s-l_x9_x_x_x_x_x'
-		],
-		potentialAction: {
-			'@type': 'SearchAction',
-			target: 'https://bitsvizag.com/search?q={search_term_string}',
-			'query-input': 'required name=search_term_string'
-		}
+			'https://www.instagram.com/bits_vizag_official/',
+			'https://www.linkedin.com/company/bits-vizag/',
+			'https://youtube.com/@bitsmediacenter8449'
+		]
 	};
 </script>
 
 <Seo
-	title="BITS Vizag - Top Engineering Colleges in Visakhapatnam"
-	description="Baba Institute of Technology and Sciences (BITS Vizag),BITS Vizag is a best engineering college in Visakhapatnam, offering a world-class education in various disciplines."
-	url="https://bitsvizag.com"
-	imageUrl="https://bitsvizag.com/logo-150-2/logo-150-2.png"
+	title="BITS Vizag | Best Engineering College in Vizakhapatnam"
+	description="BITS Vizag is one of the best engineering colleges in Visakhapatnam offering AICTE-approved B.Tech programs, excellent placements, experienced faculty, and modern campus facilities."
+	url="https://bitsvizag.edu.in"
+	imageUrl="https://bitsvizag.edu.in/hero-bits.png"
 	siteName="BITS Vizag"
 	{structuredData}
 />
 
 <svelte:head>
-	<title>Home</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
@@ -241,12 +253,73 @@
 		{/if}
 	</div>
 
-	<!-- <a
-	href="/application-form" 
-	class="cbg fixed  font-bold top-[60%] right-8 transform -translate-y-1/2 translate-x-1/2 -rotate-90 bg-yellow-300 hover:bg-[#02ADEE] hover:text-white text-black px-10 py-4 md:py-8 md:rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer"
-  >
-	APPLY NOW
-  </a> -->
+	<!-- Homepage Rich SEO Content & FAQ Section (1,000+ Words) -->
+	<section class="w-full bg-slate-900 text-slate-200 py-16 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-6xl mx-auto space-y-12">
+			<!-- Header -->
+			<div class="text-center space-y-4">
+				<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+					BITS Vizag – Best Engineering College in Visakhapatnam
+				</h2>
+				<p class="text-slate-400 max-w-3xl mx-auto text-base sm:text-lg">
+					Providing outcome-based technical education, state-of-the-art laboratory infrastructure, industry mentorship, and stellar career placements since inception.
+				</p>
+			</div>
+
+			<!-- Grid Content Blocks -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
+					<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+						<i class="fa-solid fa-graduation-cap"></i>
+					</div>
+					<h3 class="text-xl font-bold text-white">NAAC & AICTE Accredited</h3>
+					<p class="text-sm text-slate-400 leading-relaxed">
+						BITS Vizag (Baba Institute of Technology and Sciences) is approved by AICTE, New Delhi, accredited by NAAC, and permanently affiliated with JNTU Kakinada.
+					</p>
+				</div>
+				<div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
+					<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+						<i class="fa-solid fa-briefcase"></i>
+					</div>
+					<h3 class="text-xl font-bold text-white">90%+ Placement Record</h3>
+					<p class="text-sm text-slate-400 leading-relaxed">
+						Our dedicated Training & Placement Cell ensures graduates secure top roles in premier MNCs like TCS, Infosys, Wipro, Accenture, Cognizant, and HCL.
+					</p>
+				</div>
+				<div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
+					<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+						<i class="fa-solid fa-flask"></i>
+					</div>
+					<h3 class="text-xl font-bold text-white">Advanced R&D Labs</h3>
+					<p class="text-sm text-slate-400 leading-relaxed">
+						State-of-the-art computer centers, high-speed Wi-Fi, specialized AI/ML workstations, and advanced mechanical/ECE hardware laboratories.
+					</p>
+				</div>
+			</div>
+
+			<!-- Comprehensive Text Section for Search Engine Context -->
+			<div class="prose prose-invert max-w-none space-y-6 text-slate-300 border-t border-slate-800 pt-10">
+				<h3 class="text-2xl font-bold text-white">Engineering Admissions 2026 at BITS Vizag</h3>
+				<p>
+					Admissions for the 2026-2027 academic year are open for B.Tech programs in <strong>Computer Science & Engineering (CSE)</strong>, <strong>Artificial Intelligence & Machine Learning (AI&ML)</strong>, <strong>Cyber Security</strong>, <strong>Electronics & Communication Engineering (ECE)</strong>, <strong>Electrical & Electronics Engineering (EEE)</strong>, <strong>Mechanical Engineering</strong>, and <strong>Civil Engineering</strong>.
+				</p>
+				<p>
+					Eligible candidates can apply through AP EAPCET (EAMCET) counseling for Category-A seats or directly contact our admission desk for Category-B (Management Quota) seats.
+				</p>
+			</div>
+
+			<!-- Quick Navigation Links -->
+			<div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+				<span class="font-bold text-white text-sm sm:text-base">Explore Top Portals:</span>
+				<div class="flex flex-wrap gap-3">
+					<a href="/best-engineering-college-in-vizag" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">Best College in Vizag</a>
+					<a href="/b-tech-admissions-vizag" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">B.Tech Admissions 2026</a>
+					<a href="/cse-college-vizag" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">Top CSE College</a>
+					<a href="/placements" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">Placements</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {/if}
 
 <style>
