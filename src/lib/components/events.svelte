@@ -1,6 +1,15 @@
 <script>
 	let events = [
 		{
+			name: 'Behind the Firewall - The Shield Protocol ’26',
+			description:
+				'Inaugural Cyber Security podcast & hackathon featuring Mr. Santosh Chaluvadi (CEO, Supraja Technologies), hosted by Mr. P. Joshua Raju.',
+			date: 'August 11–13, 2026',
+			image: '/Shield-protocol/sp1.jpg',
+			href: 'https://www.instagram.com/p/Db8WPtKl1x4/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==&igsi=NTc4MTIwNjQ2YQ==',
+			click: 'Click to view post >>>'
+		},
+		{
 			name: 'Graduation Day Celebration 2025',
 			description: 'Celebrating the achievements and success of the Class of 2025.',
 			date: 'June 27, 2026',
@@ -375,9 +384,7 @@
 							</h3>
 						</a>
 
-						<p
-							class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed line-clamp-2 mb-3"
-						>
+						<p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed line-clamp-2 mb-3">
 							{event.description}
 						</p>
 
@@ -455,13 +462,17 @@
 		>
 			<div class="flex items-center gap-3">
 				<!-- Left: Logo -->
-				<div class="relative shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-50 rounded-lg overflow-hidden flex items-center justify-center p-1 border border-slate-100 shadow-sm">
+				<div
+					class="relative shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-50 rounded-lg overflow-hidden flex items-center justify-center p-1 border border-slate-100 shadow-sm"
+				>
 					<img src="/bits.png" alt="BITS Vizag Logo" class="w-full h-full object-contain" />
 				</div>
 
 				<!-- Middle: Info -->
 				<div class="flex-grow min-w-0 py-0.5">
-					<h3 class="font-bold text-slate-900 text-xs sm:text-sm truncate group-hover:text-blue-600 transition-colors leading-normal">
+					<h3
+						class="font-bold text-slate-900 text-xs sm:text-sm truncate group-hover:text-blue-600 transition-colors leading-normal"
+					>
 						bits_vizag_official
 					</h3>
 					<p class="text-[9px] sm:text-xs text-slate-500 mt-1 leading-normal truncate">
@@ -471,7 +482,9 @@
 
 				<!-- Right: Black Button -->
 				<div class="shrink-0">
-					<span class="inline-flex items-center gap-1 bg-[#0f172a] text-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full font-bold text-[9px] sm:text-xs uppercase tracking-wider group-hover:bg-black transition-colors shadow-sm">
+					<span
+						class="inline-flex items-center gap-1 bg-[#0f172a] text-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full font-bold text-[9px] sm:text-xs uppercase tracking-wider group-hover:bg-black transition-colors shadow-sm"
+					>
 						Follow
 						<i class="fa-brands fa-instagram text-[10px] sm:text-xs"></i>
 					</span>
@@ -550,12 +563,17 @@
 
 	/* Snappy Spring-Loaded Hover Trigger */
 	.bird-dance {
-		transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+		transition:
+			transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+			box-shadow 0.3s ease,
+			border-color 0.3s ease;
 	}
 
 	.bird-dance:hover {
 		transform: translateY(-8px) scale(1.02) rotate(1deg);
-		box-shadow: 0 16px 36px rgba(181, 148, 91, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+		box-shadow:
+			0 16px 36px rgba(181, 148, 91, 0.12),
+			0 4px 12px rgba(0, 0, 0, 0.04);
 		border-color: rgba(181, 148, 91, 0.3);
 	}
 
