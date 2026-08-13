@@ -119,7 +119,7 @@
 </script>
 
 <Seo
-	title="BITS Vizag | Best Engineering College in Vizakhapatnam"
+	title="BITS Vizag | Best Engineering College in Visakhapatnam"
 	description="BITS Vizag is one of the best engineering colleges in Visakhapatnam offering AICTE-approved B.Tech programs, excellent placements, experienced faculty, and modern campus facilities."
 	url="https://bitsvizag.edu.in"
 	imageUrl="https://bitsvizag.edu.in/hero-bits.png"
