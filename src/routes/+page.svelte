@@ -15,6 +15,7 @@
 	let CourseHighlightComp = null;
 	let StudentStoriesComp = null;
 	let CampusLifeMosaicComp = null;
+	let ShieldProtocolComp = null;
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
 	let displayText = '';
@@ -70,7 +71,12 @@
 		import('$lib/components/placement.svelte').then((m) => (PlacementComp = m.default));
 		import('$lib/components/CourseHighlight.svelte').then((m) => (CourseHighlightComp = m.default));
 		import('$lib/components/StudentStories.svelte').then((m) => (StudentStoriesComp = m.default));
-		import('$lib/components/CampusLifeMosaic.svelte').then((m) => (CampusLifeMosaicComp = m.default));
+		import('$lib/components/CampusLifeMosaic.svelte').then(
+			(m) => (CampusLifeMosaicComp = m.default)
+		);
+		import('$lib/components/ShieldProtocolHighlight.svelte').then(
+			(m) => (ShieldProtocolComp = m.default)
+		);
 	});
 
 	onDestroy(() => {
@@ -89,7 +95,8 @@
 		url: 'https://bitsvizag.edu.in',
 		logo: 'https://bitsvizag.edu.in/logo-150-2/logo-150-2.png',
 		image: 'https://bitsvizag.edu.in/hero-bits.png',
-		description: 'BITS Vizag is one of the best engineering colleges in Visakhapatnam offering AICTE-approved B.Tech programs, 90%+ placement rates, modern labs & top faculty.',
+		description:
+			'BITS Vizag is one of the best engineering colleges in Visakhapatnam offering AICTE-approved B.Tech programs, 90%+ placement rates, modern labs & top faculty.',
 		address: {
 			'@type': 'PostalAddress',
 			streetAddress: 'BABA College Lake Near Pothinamallayyapalem, PM Palem',
@@ -154,6 +161,48 @@
 				class="absolute inset-0 h-full w-full object-cover object-bottom z-0 animate-hero-premium"
 			/>
 		</picture>
+
+		<!-- Floating Hero Popup Badge for Cyber Security Event -->
+		<a
+			href="#shield-protocol"
+			class="absolute bottom-6 sm:bottom-10 right-4 sm:right-8 z-30 group flex items-center gap-3 p-2.5 sm:p-3 pr-4 sm:pr-5 rounded-2xl bg-slate-950/85 backdrop-blur-xl border border-cyan-500/40 text-white shadow-[0_10px_35px_rgba(0,0,0,0.6)] hover:border-cyan-400 hover:scale-105 transition-all duration-300 max-w-[90vw] sm:max-w-md"
+		>
+			<div
+				class="relative shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-cyan-400/50 bg-slate-900"
+			>
+				<img
+					src="/Shield-protocol/sp1.jpg"
+					alt="Shield Protocol"
+					class="w-full h-full object-cover"
+				/>
+				<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-cyan-400 rounded-full animate-ping"
+				></span>
+			</div>
+
+			<div class="min-w-0 flex-1">
+				<div
+					class="flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wider text-cyan-400"
+				>
+					<span>Cyber Security Podcast</span>
+					<span class="w-1 h-1 rounded-full bg-slate-500"></span>
+					<span class="text-amber-400">AUG 11–14</span>
+				</div>
+				<h4
+					class="text-xs sm:text-sm font-bold text-white truncate group-hover:text-cyan-300 transition-colors"
+				>
+					Behind the Firewall – Protocol ’26
+				</h4>
+				<p class="text-[11px] text-slate-300 truncate">
+					Feat. <strong>Mr. Santosh Chaluvadi</strong> (CEO, Supraja)
+				</p>
+			</div>
+
+			<div
+				class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-colors"
+			>
+				<i class="fa-solid fa-arrow-down text-xs"></i>
+			</div>
+		</a>
 	</section>
 
 	<SectionTransition />
@@ -223,6 +272,12 @@
 			{/if}
 		</div>
 
+		<div class="content-visibility-auto mt-6 md:mt-16">
+			{#if ShieldProtocolComp}
+				<svelte:component this={ShieldProtocolComp} />
+			{/if}
+		</div>
+
 		<div class="content-visibility-auto mt-4 md:mt-20">
 			{#if CourseHighlightComp}
 				<svelte:component this={CourseHighlightComp} />
@@ -262,60 +317,97 @@
 					BITS Vizag – Best Engineering College in Visakhapatnam
 				</h2>
 				<p class="text-slate-400 max-w-3xl mx-auto text-base sm:text-lg">
-					Providing outcome-based technical education, state-of-the-art laboratory infrastructure, industry mentorship, and stellar career placements since inception.
+					Providing outcome-based technical education, state-of-the-art laboratory infrastructure,
+					industry mentorship, and stellar career placements since inception.
 				</p>
 			</div>
 
 			<!-- Grid Content Blocks -->
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
-					<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+					<div
+						class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold"
+					>
 						<i class="fa-solid fa-graduation-cap"></i>
 					</div>
 					<h3 class="text-xl font-bold text-white">NAAC & AICTE Accredited</h3>
 					<p class="text-sm text-slate-400 leading-relaxed">
-						BITS Vizag (Baba Institute of Technology and Sciences) is approved by AICTE, New Delhi, accredited by NAAC, and permanently affiliated with JNTU Kakinada.
+						BITS Vizag (Baba Institute of Technology and Sciences) is approved by AICTE, New Delhi,
+						accredited by NAAC, and permanently affiliated with JNTU Kakinada.
 					</p>
 				</div>
 				<div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
-					<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+					<div
+						class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold"
+					>
 						<i class="fa-solid fa-briefcase"></i>
 					</div>
 					<h3 class="text-xl font-bold text-white">90%+ Placement Record</h3>
 					<p class="text-sm text-slate-400 leading-relaxed">
-						Our dedicated Training & Placement Cell ensures graduates secure top roles in premier MNCs like TCS, Infosys, Wipro, Accenture, Cognizant, and HCL.
+						Our dedicated Training & Placement Cell ensures graduates secure top roles in premier
+						MNCs like TCS, Infosys, Wipro, Accenture, Cognizant, and HCL.
 					</p>
 				</div>
 				<div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
-					<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+					<div
+						class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold"
+					>
 						<i class="fa-solid fa-flask"></i>
 					</div>
 					<h3 class="text-xl font-bold text-white">Advanced R&D Labs</h3>
 					<p class="text-sm text-slate-400 leading-relaxed">
-						State-of-the-art computer centers, high-speed Wi-Fi, specialized AI/ML workstations, and advanced mechanical/ECE hardware laboratories.
+						State-of-the-art computer centers, high-speed Wi-Fi, specialized AI/ML workstations, and
+						advanced mechanical/ECE hardware laboratories.
 					</p>
 				</div>
 			</div>
 
 			<!-- Comprehensive Text Section for Search Engine Context -->
-			<div class="prose prose-invert max-w-none space-y-6 text-slate-300 border-t border-slate-800 pt-10">
+			<div
+				class="prose prose-invert max-w-none space-y-6 text-slate-300 border-t border-slate-800 pt-10"
+			>
 				<h3 class="text-2xl font-bold text-white">Engineering Admissions 2026 at BITS Vizag</h3>
 				<p>
-					Admissions for the 2026-2027 academic year are open for B.Tech programs in <strong>Computer Science & Engineering (CSE)</strong>, <strong>Artificial Intelligence & Machine Learning (AI&ML)</strong>, <strong>Cyber Security</strong>, <strong>Electronics & Communication Engineering (ECE)</strong>, <strong>Electrical & Electronics Engineering (EEE)</strong>, <strong>Mechanical Engineering</strong>, and <strong>Civil Engineering</strong>.
+					Admissions for the 2026-2027 academic year are open for B.Tech programs in <strong
+						>Computer Science & Engineering (CSE)</strong
+					>, <strong>Artificial Intelligence & Machine Learning (AI&ML)</strong>,
+					<strong>Cyber Security</strong>,
+					<strong>Electronics & Communication Engineering (ECE)</strong>,
+					<strong>Electrical & Electronics Engineering (EEE)</strong>,
+					<strong>Mechanical Engineering</strong>, and <strong>Civil Engineering</strong>.
 				</p>
 				<p>
-					Eligible candidates can apply through AP EAPCET (EAMCET) counseling for Category-A seats or directly contact our admission desk for Category-B (Management Quota) seats.
+					Eligible candidates can apply through AP EAPCET (EAMCET) counseling for Category-A seats
+					or directly contact our admission desk for Category-B (Management Quota) seats.
 				</p>
 			</div>
 
 			<!-- Quick Navigation Links -->
-			<div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+			<div
+				class="p-6 rounded-2xl bg-slate-950 border border-slate-800 flex flex-wrap items-center justify-between gap-4"
+			>
 				<span class="font-bold text-white text-sm sm:text-base">Explore Top Portals:</span>
 				<div class="flex flex-wrap gap-3">
-					<a href="/best-engineering-college-in-vizag" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">Best College in Vizag</a>
-					<a href="/b-tech-admissions-vizag" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">B.Tech Admissions 2026</a>
-					<a href="/cse-college-vizag" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">Top CSE College</a>
-					<a href="/placements" class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20">Placements</a>
+					<a
+						href="/best-engineering-college-in-vizag"
+						class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20"
+						>Best College in Vizag</a
+					>
+					<a
+						href="/b-tech-admissions-vizag"
+						class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20"
+						>B.Tech Admissions 2026</a
+					>
+					<a
+						href="/cse-college-vizag"
+						class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20"
+						>Top CSE College</a
+					>
+					<a
+						href="/placements"
+						class="px-4 py-2 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-semibold hover:bg-amber-500/20"
+						>Placements</a
+					>
 				</div>
 			</div>
 		</div>
