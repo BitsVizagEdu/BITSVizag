@@ -1184,7 +1184,28 @@
 								<p class="inter project-desc">
 									An AI-powered coastal monitoring platform that analyzes beach pollution, evaluates pollution severity, and visualizes affected locations using interactive mapping.
 								</p>
-								<a href="https://cse.bitsvizag.com/" class="project-cta-btn inter">
+								<a href="https://cse.bitsvizag.com/" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
+									View Project ↗
+								</a>
+							</div>
+						</div>
+
+						<div class="premium-project-card">
+							<div class="project-image-wrapper">
+								<img src="/Screenshot%202026-08-19%20144137.png" alt="Vizag Groundwater Intelligence Platform" class="project-image" />
+								<div class="project-overlay"></div>
+							</div>
+							<div class="project-content">
+								<div class="project-tags">
+									<span class="tag inter">GIS Analytics</span>
+									<span class="tag inter">Machine Learning</span>
+									<span class="tag inter">Smart City</span>
+								</div>
+								<h3 class="satoshi project-title">Vizag Groundwater Intelligence Platform</h3>
+								<p class="inter project-desc">
+									An integrated platform combining official datasets, field surveys and citizen observations with GIS analytics and machine learning for Visakhapatnam.
+								</p>
+								<a href="https://gwdepth-ap.bitsvizag.com/" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
 									View Project ↗
 								</a>
 							</div>
