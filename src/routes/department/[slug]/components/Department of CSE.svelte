@@ -1154,6 +1154,44 @@
 					</div>
 				</section> -->
 
+				<!-- Sample Projects -->
+				<section
+					id="projects"
+					class="dept-section-card projects-premium-section"
+					style="--section-accent: #0f172a"
+				>
+					<div class="section-top">
+						<div class="section-title-wrap">
+							<h2 class="satoshi">Sample Projects</h2>
+							<p class="inter dept-label" style="text-transform: none; max-width: 600px;">Explore selected projects showcasing innovation, problem-solving, and practical applications of technology.</p>
+							<div class="section-underline" style="background: linear-gradient(90deg, #d4af37, #0f172a);"></div>
+						</div>
+					</div>
+
+					<div class="project-showcase">
+						<div class="premium-project-card">
+							<div class="project-image-wrapper">
+								<img src="/Screenshot%20(3525).png" alt="Coastal Pollution Guard" class="project-image" />
+								<div class="project-overlay"></div>
+							</div>
+							<div class="project-content">
+								<div class="project-tags">
+									<span class="tag inter">AI</span>
+									<span class="tag inter">Computer Vision</span>
+									<span class="tag inter">Environmental Monitoring</span>
+								</div>
+								<h3 class="satoshi project-title">Coastal Pollution Guard</h3>
+								<p class="inter project-desc">
+									An AI-powered coastal monitoring platform that analyzes beach pollution, evaluates pollution severity, and visualizes affected locations using interactive mapping.
+								</p>
+								<a href="https://cse.bitsvizag.com/" class="project-cta-btn inter">
+									View Project ↗
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<!-- HOD Message - Upgraded with Impactful Motion -->
 				<section
 					id="hod"
@@ -3710,5 +3748,153 @@
 	.scrollbar-hide {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+	}
+
+	/* Sample Projects Section Styles */
+	.projects-premium-section {
+		background: linear-gradient(145deg, #ffffff, #f8fafc);
+	}
+	.project-showcase {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		gap: 30px;
+		margin-top: 30px;
+	}
+	.premium-project-card {
+		width: 100%;
+		background: #ffffff;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+		border: 1px solid rgba(212, 175, 55, 0.15);
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.premium-project-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+		border-color: rgba(212, 175, 55, 0.4);
+	}
+	.project-image-wrapper {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
+	.project-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+	.premium-project-card:hover .project-image {
+		transform: scale(1.05);
+	}
+	.project-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(15, 23, 42, 0.4), transparent);
+		opacity: 0.6;
+		transition: opacity 0.4s ease;
+	}
+	.premium-project-card:hover .project-overlay {
+		opacity: 0.3;
+	}
+	.project-content {
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex-grow: 1;
+	}
+	.project-tags {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		margin-bottom: 16px;
+	}
+	.project-tags .tag {
+		background: rgba(15, 23, 42, 0.05);
+		color: #0f172a;
+		padding: 4px 10px;
+		border-radius: 100px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		border: 1px solid rgba(15, 23, 42, 0.1);
+	}
+	.project-title {
+		font-size: 1.4rem;
+		color: #0f172a;
+		margin: 0 0 12px 0;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+	}
+	.project-desc {
+		font-size: 0.95rem;
+		color: #475569;
+		line-height: 1.5;
+		margin: 0 0 24px 0;
+		flex-grow: 1;
+	}
+	.project-cta-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 12px 24px;
+		background: #0f172a;
+		color: #ffffff;
+		border-radius: 10px;
+		font-weight: 600;
+		font-size: 0.95rem;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
+		border: 1px solid transparent;
+	}
+	.project-cta-btn:hover {
+		background: #1e293b;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+		border-color: #d4af37;
+		color: #d4af37;
+	}
+	@media (max-width: 768px) {
+		.project-showcase {
+			grid-template-columns: 1fr;
+			margin-top: 20px;
+		}
+		.premium-project-card {
+			border-radius: 16px;
+		}
+		.project-image-wrapper {
+			height: 180px;
+		}
+		.project-content {
+			padding: 16px;
+		}
+		.project-title {
+			font-size: 1.25rem;
+			margin-bottom: 8px;
+		}
+		.project-desc {
+			font-size: 0.85rem;
+			margin-bottom: 16px;
+		}
+		.project-tags {
+			gap: 6px;
+			margin-bottom: 12px;
+		}
+		.project-tags .tag {
+			padding: 4px 8px;
+			font-size: 0.7rem;
+		}
+		.project-cta-btn {
+			padding: 10px 20px;
+			font-size: 0.9rem;
+		}
 	}
 </style>
