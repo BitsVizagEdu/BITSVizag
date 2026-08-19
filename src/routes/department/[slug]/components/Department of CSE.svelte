@@ -1178,11 +1178,11 @@
 								<div class="project-tags">
 									<span class="tag inter">AI</span>
 									<span class="tag inter">Computer Vision</span>
-									<span class="tag inter">Environmental Monitoring</span>
+									<span class="tag inter">Env. Monitoring</span>
 								</div>
 								<h3 class="satoshi project-title">Coastal Pollution Guard</h3>
 								<p class="inter project-desc">
-									An AI-powered coastal monitoring platform that analyzes beach pollution, evaluates pollution severity, and visualizes affected locations using interactive mapping.
+									AI beach pollution analysis.
 								</p>
 								<a href="https://cse.bitsvizag.com/" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
 									View Project ↗
@@ -1201,11 +1201,74 @@
 									<span class="tag inter">Machine Learning</span>
 									<span class="tag inter">Smart City</span>
 								</div>
-								<h3 class="satoshi project-title">Vizag Groundwater Intelligence Platform</h3>
+								<h3 class="satoshi project-title">Groundwater Intelligence</h3>
 								<p class="inter project-desc">
-									An integrated platform combining official datasets, field surveys and citizen observations with GIS analytics and machine learning for Visakhapatnam.
+									GIS & ML groundwater analysis.
 								</p>
 								<a href="https://gwdepth-ap.bitsvizag.com/" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
+									View Project ↗
+								</a>
+							</div>
+						</div>
+
+						<div class="premium-project-card">
+							<div class="project-image-wrapper">
+								<img src="/image%20copy.png" alt="Smart Waste Management System" class="project-image" />
+								<div class="project-overlay"></div>
+							</div>
+							<div class="project-content">
+								<div class="project-tags">
+									<span class="tag inter">IoT</span>
+									<span class="tag inter">Smart City</span>
+									<span class="tag inter">Sustainability</span>
+								</div>
+								<h3 class="satoshi project-title">Smart Waste Mgmt</h3>
+								<p class="inter project-desc">
+									IoT waste route optimization.
+								</p>
+								<a href="https://smartwastemgmt.bitsvizag.com" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
+									View Project ↗
+								</a>
+							</div>
+						</div>
+
+						<div class="premium-project-card">
+							<div class="project-image-wrapper">
+								<img src="/image%20copy%202.png" alt="Smart Traffic Management System" class="project-image" />
+								<div class="project-overlay"></div>
+							</div>
+							<div class="project-content">
+								<div class="project-tags">
+									<span class="tag inter">Computer Vision</span>
+									<span class="tag inter">AI</span>
+									<span class="tag inter">Urban Mobility</span>
+								</div>
+								<h3 class="satoshi project-title">Smart Traffic System</h3>
+								<p class="inter project-desc">
+									AI traffic signal optimization.
+								</p>
+								<a href="https://smarttraffic.bitsvizag.com" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
+									View Project ↗
+								</a>
+							</div>
+						</div>
+
+						<div class="premium-project-card">
+							<div class="project-image-wrapper">
+								<img src="/image%20copy%203.png" alt="Smart Water Management System" class="project-image" />
+								<div class="project-overlay"></div>
+							</div>
+							<div class="project-content">
+								<div class="project-tags">
+									<span class="tag inter">IoT</span>
+									<span class="tag inter">Data Analytics</span>
+									<span class="tag inter">Resource Mgmt</span>
+								</div>
+								<h3 class="satoshi project-title">Smart Water Network</h3>
+								<p class="inter project-desc">
+									IoT leak detection network.
+								</p>
+								<a href="https://smartwatermgmt.bitsvizag.com" class="project-cta-btn inter" target="_blank" rel="noopener noreferrer">
 									View Project ↗
 								</a>
 							</div>
@@ -3778,8 +3841,8 @@
 	.project-showcase {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-		gap: 30px;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 20px;
 		margin-top: 30px;
 	}
 	.premium-project-card {
@@ -3802,7 +3865,7 @@
 	.project-image-wrapper {
 		position: relative;
 		width: 100%;
-		height: 200px;
+		height: 120px;
 		overflow: hidden;
 	}
 	.project-image {
@@ -3825,7 +3888,7 @@
 		opacity: 0.3;
 	}
 	.project-content {
-		padding: 24px;
+		padding: 16px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -3847,17 +3910,17 @@
 		border: 1px solid rgba(15, 23, 42, 0.1);
 	}
 	.project-title {
-		font-size: 1.4rem;
+		font-size: 1.15rem;
 		color: #0f172a;
-		margin: 0 0 12px 0;
+		margin: 0 0 8px 0;
 		font-weight: 800;
 		letter-spacing: -0.02em;
 	}
 	.project-desc {
-		font-size: 0.95rem;
+		font-size: 0.85rem;
 		color: #475569;
 		line-height: 1.5;
-		margin: 0 0 24px 0;
+		margin: 0 0 16px 0;
 		flex-grow: 1;
 	}
 	.project-cta-btn {
@@ -3865,7 +3928,7 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		padding: 12px 24px;
+		padding: 8px 16px;
 		background: #0f172a;
 		color: #ffffff;
 		border-radius: 10px;
@@ -3885,37 +3948,55 @@
 	}
 	@media (max-width: 768px) {
 		.project-showcase {
-			grid-template-columns: 1fr;
-			margin-top: 20px;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+			margin-top: 16px;
 		}
 		.premium-project-card {
-			border-radius: 16px;
+			border-radius: 12px;
 		}
 		.project-image-wrapper {
-			height: 180px;
+			height: 110px;
 		}
 		.project-content {
-			padding: 16px;
+			padding: 10px;
+			min-width: 0;
+			width: 100%;
 		}
 		.project-title {
-			font-size: 1.25rem;
-			margin-bottom: 8px;
+			font-size: 0.85rem;
+			margin-bottom: 6px;
+			line-height: 1.3;
 		}
 		.project-desc {
-			font-size: 0.85rem;
-			margin-bottom: 16px;
+			display: block;
+			font-size: 0.75rem;
+			margin-bottom: 12px;
+			line-height: 1.4;
+			color: #64748b;
 		}
 		.project-tags {
-			gap: 6px;
-			margin-bottom: 12px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px;
+			margin-bottom: 8px;
 		}
 		.project-tags .tag {
-			padding: 4px 8px;
-			font-size: 0.7rem;
+			background: #f1f5f9;
+			border: 1px solid #e2e8f0;
+			border-radius: 4px;
+			padding: 2px 6px;
+			font-size: 0.65rem;
+			color: #475569;
+			font-weight: 600;
+			white-space: nowrap;
+			display: inline-flex;
+			align-items: center;
 		}
 		.project-cta-btn {
-			padding: 10px 20px;
-			font-size: 0.9rem;
+			padding: 6px 0;
+			font-size: 0.75rem;
+			border-radius: 6px;
 		}
 	}
 </style>
