@@ -5,6 +5,7 @@
 
 	import Notification from '$lib/components/notification.svelte';
 	import SectionTransition from '$lib/components/SectionTransition.svelte';
+	import ShieldProtocolHighlight from '$lib/components/ShieldProtocolHighlight.svelte';
 	import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 	import { onDestroy, onMount } from 'svelte';
 
@@ -15,7 +16,6 @@
 	let CourseHighlightComp = null;
 	let StudentStoriesComp = null;
 	let CampusLifeMosaicComp = null;
-	let ShieldProtocolComp = null;
 
 	let words = ['Tech Leaders', 'Innovators', 'Engineers', 'Visionaries'];
 	let displayText = '';
@@ -73,9 +73,6 @@
 		import('$lib/components/StudentStories.svelte').then((m) => (StudentStoriesComp = m.default));
 		import('$lib/components/CampusLifeMosaic.svelte').then(
 			(m) => (CampusLifeMosaicComp = m.default)
-		);
-		import('$lib/components/ShieldProtocolHighlight.svelte').then(
-			(m) => (ShieldProtocolComp = m.default)
 		);
 	});
 
@@ -205,6 +202,8 @@
 		</a>
 	</section>
 
+	<ShieldProtocolHighlight />
+
 	<SectionTransition />
 
 	<div id="explore">
@@ -269,12 +268,6 @@
 		<div class="content-visibility-auto mt-3 md:mt-12">
 			{#if EventsComp}
 				<svelte:component this={EventsComp} />
-			{/if}
-		</div>
-
-		<div class="content-visibility-auto mt-6 md:mt-16">
-			{#if ShieldProtocolComp}
-				<svelte:component this={ShieldProtocolComp} />
 			{/if}
 		</div>
 
