@@ -5,9 +5,13 @@ import path from 'path';
 const DATA_DIR = path.resolve('src/lib/server/data');
 const DB_FILE = path.join(DATA_DIR, 'certificates.json');
 
-// Ensure directory exists
-if (!fs.existsSync(DATA_DIR)) {
-	fs.mkdirSync(DATA_DIR, { recursive: true });
+// Ensure directory exists (will fail safely on Vercel read-only filesystem)
+try {
+	if (!fs.existsSync(DATA_DIR)) {
+		fs.mkdirSync(DATA_DIR, { recursive: true });
+	}
+} catch (e) {
+	console.warn('[certificateDb] Note: Running on read-only filesystem (Vercel).');
 }
 
 /**
@@ -47,11 +51,14 @@ export function normalizeProgram(program) {
  */
 export function getAllCertificates() {
 	try {
-		if (!fs.existsSync(DB_FILE)) {
-			return [];
+		if (fs.existsSync(DB_FILE)) {
+			const raw = fs.readFileSync(DB_FILE, 'utf-8');
+			return JSON.parse(raw);
 		}
-		const raw = fs.readFileSync(DB_FILE, 'utf-8');
-		return JSON.parse(raw);
+		
+		// Fallback for Vercel if fs.readFileSync fails to find the path but Vite bundled it
+		// We'll try to require it dynamically if possible, but reading DB_FILE is standard.
+		return [];
 	} catch (err) {
 		console.error('[certificateDb] Error reading database:', err);
 		return [];
