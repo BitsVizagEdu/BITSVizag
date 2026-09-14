@@ -8,7 +8,7 @@ import { findCertificate, normalizeRollNumber, normalizeProgram } from '$lib/ser
 const pdfCache = new Map();
 
 /** @type {import('./$types').RequestHandler} */
-export async function GET({ url }) {
+export async function GET({ url, fetch }) {
 	const rollNumberRaw = url.searchParams.get('rollNumber');
 	const programRaw = url.searchParams.get('program');
 	const format = url.searchParams.get('format') || 'pdf'; // default to genuine PDF
@@ -32,20 +32,20 @@ export async function GET({ url }) {
 		});
 	}
 
-	// 2. Resolve verified physical file path securely (prevent path traversal)
-	const staticDir = path.resolve('static');
-	const safeFilePath = path.normalize(record.certificateFilePath).replace(/^(\.\.[\/\\])+/, '');
-	const fullPath = path.join(staticDir, safeFilePath);
-
-	// Ensure path is strictly within staticDir
-	if (!fullPath.startsWith(staticDir)) {
-		return new Response('Access denied', { status: 403 });
+	// 2. Resolve verified physical file path securely
+	let safeFilePath = record.certificateFilePath;
+	if (!safeFilePath.startsWith('/')) {
+		safeFilePath = '/' + safeFilePath;
 	}
 
-	if (!fs.existsSync(fullPath)) {
-		console.error(`[Download Error] Certificate file missing on disk: ${fullPath}`);
+	const assetResponse = await fetch(safeFilePath);
+	if (!assetResponse.ok) {
+		console.error(`[Download Error] Certificate file missing from static assets: ${safeFilePath}`);
 		return new Response('Certificate image file not found on server', { status: 404 });
 	}
+
+	const arrayBuffer = await assetResponse.arrayBuffer();
+	const pngBytes = new Uint8Array(arrayBuffer);
 
 	// Clean student name for filename: e.g. KOYYA_AKASH or PANATHALA_JYOTHI
 	const cleanName = record.studentName.replace(/[^A-Za-z0-9]/g, '_').replace(/_+/g, '_');
@@ -53,8 +53,7 @@ export async function GET({ url }) {
 	// If client explicitly requested raw PNG
 	if (format.toLowerCase() === 'png') {
 		const downloadFilename = `${cleanName}_Internship_Certificate.png`;
-		const fileBuffer = fs.readFileSync(fullPath);
-		return new Response(fileBuffer, {
+		return new Response(pngBytes, {
 			status: 200,
 			headers: {
 				'Content-Type': 'image/png',
@@ -71,7 +70,6 @@ export async function GET({ url }) {
 		let pdfBytes = pdfCache.get(cacheKey);
 
 		if (!pdfBytes) {
-			const pngBytes = fs.readFileSync(fullPath);
 			const pdfDoc = await PDFDocument.create();
 			const pngImage = await pdfDoc.embedPng(pngBytes);
 

@@ -4,7 +4,7 @@ import path from 'path';
 import { findCertificate, normalizeRollNumber, normalizeProgram } from '$lib/server/certificateDb.js';
 
 /** @type {import('./$types').RequestHandler} */
-export async function GET({ url }) {
+export async function GET({ url, fetch }) {
 	const rollNumberRaw = url.searchParams.get('rollNumber');
 	const programRaw = url.searchParams.get('program');
 
@@ -26,19 +26,18 @@ export async function GET({ url }) {
 	}
 
 	// 2. Resolve verified physical file path securely
-	const staticDir = path.resolve('static');
-	const safeFilePath = path.normalize(record.certificateFilePath).replace(/^(\.\.[\/\\])+/, '');
-	const fullPath = path.join(staticDir, safeFilePath);
-
-	if (!fullPath.startsWith(staticDir)) {
-		return new Response('Access denied', { status: 403 });
+	let safeFilePath = record.certificateFilePath;
+	if (!safeFilePath.startsWith('/')) {
+		safeFilePath = '/' + safeFilePath;
 	}
 
-	if (!fs.existsSync(fullPath)) {
+	const assetResponse = await fetch(safeFilePath);
+	if (!assetResponse.ok) {
 		return new Response('Certificate image file missing on server', { status: 404 });
 	}
 
-	const fileBuffer = fs.readFileSync(fullPath);
+	const arrayBuffer = await assetResponse.arrayBuffer();
+	const fileBuffer = new Uint8Array(arrayBuffer);
 
 	return new Response(fileBuffer, {
 		status: 200,
