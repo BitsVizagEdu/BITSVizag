@@ -1,6 +1,7 @@
 // @ts-nocheck
 import fs from 'fs';
 import path from 'path';
+import bundledCertificates from './data/certificates.json';
 
 const DATA_DIR = path.resolve('src/lib/server/data');
 const DB_FILE = path.join(DATA_DIR, 'certificates.json');
@@ -55,13 +56,11 @@ export function getAllCertificates() {
 			const raw = fs.readFileSync(DB_FILE, 'utf-8');
 			return JSON.parse(raw);
 		}
-		
-		// Fallback for Vercel if fs.readFileSync fails to find the path but Vite bundled it
-		// We'll try to require it dynamically if possible, but reading DB_FILE is standard.
-		return [];
+		// If running on Vercel where fs might fail to find the raw file, use the bundled version
+		return bundledCertificates || [];
 	} catch (err) {
-		console.error('[certificateDb] Error reading database:', err);
-		return [];
+		console.error('[certificateDb] Error reading database, using bundled data:', err);
+		return bundledCertificates || [];
 	}
 }
 
