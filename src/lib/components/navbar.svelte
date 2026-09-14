@@ -1,3 +1,11 @@
+<script>
+	import { page } from '$app/stores';
+
+	$: isCertificatesPage =
+		$page.url.pathname.includes('internship-certificates') ||
+		$page.url.pathname.includes('internship-program');
+</script>
+
 <div class="top-bar">
 	<div class="top-bar-container">
 		<div class="welcome-section">
@@ -17,7 +25,7 @@
 			<a href="tel:+919121214313" class="contact-item">
 				<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 					<path
-						d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+						d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
 					/>
 				</svg>
 				<span>Call : +91-80088 44699</span>
@@ -69,8 +77,8 @@
 			</div>
 		</div>
 
-		<div class="brand-right flex items-center gap-4">
-			<div class="accreditation-strip hidden lg:flex" aria-label="Accreditation logos">
+		<div class="brand-right">
+			<div class="accreditation-strip hidden 2xl:flex" aria-label="Accreditation logos">
 				<div class="accreditation-logo round">
 					<img class="logo-mark logo-multiply" src="/bits.png" alt="BITS emblem" />
 				</div>
@@ -78,7 +86,7 @@
 					<img class="logo-mark logo-screen" src="/2026.png" alt="2026 campaign mark" />
 				</div>
 			</div>
-			<div class="ugc-badge hidden lg:flex">
+			<div class="ugc-badge hidden xl:inline-flex">
 				<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
 					<path
 						d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
@@ -86,7 +94,10 @@
 				</svg>
 				<span>UGC Autonomous</span>
 			</div>
-			<span class="status-pill dark hidden sm:inline-flex">NAAC 'A'</span>
+			<span class="status-pill dark hidden lg:inline-flex">NAAC 'A'</span>
+			{#if !isCertificatesPage}
+				<a class="cert-top-btn" href="/internship-certificates"> Certificates </a>
+			{/if}
 			<a class="apply-cta mobile-apply-btn" href="/courses/Offered-Courses" target="_blank"
 				>Explore Courses</a
 			>
@@ -97,7 +108,7 @@
 <style>
 	.top-bar {
 		display: block;
-		background: #0D1B3E;
+		background: #0d1b3e;
 		border-bottom: 1px solid rgba(200, 150, 12, 0.3);
 		padding: 0.2rem 0; /* Reduced from 0.35rem */
 		color: #ffffff;
@@ -109,13 +120,14 @@
 	.header-shell {
 		background-color: rgba(248, 244, 236, 0.95);
 		backdrop-filter: blur(10px);
-		border-bottom: 1px solid #E8E2D9;
+		border-bottom: 1px solid #e8e2d9;
 		width: 100%;
 		transition: all 0.3s ease;
 	}
 
 	@media (max-width: 1024px) {
-		.top-bar, .header-shell {
+		.top-bar,
+		.header-shell {
 			display: none !important;
 		}
 	}
@@ -225,49 +237,50 @@
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: space-between;
-		gap: 2rem;
-		padding: 0.55rem 2rem;
-		max-width: 1440px;
+		gap: 1.5rem;
+		padding: 0.55rem 1.5rem;
+		max-width: 1560px;
 		margin: 0 auto;
+		width: 100%;
 	}
 
 	.brand-left {
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
-		gap: 1.5rem;
-		min-width: 0;
+		gap: 1rem;
+		flex-shrink: 0;
 	}
 
 	.brand-logo {
-		height: clamp(46px, 4.5vw, 58px);
+		height: clamp(40px, 3.8vw, 54px);
 		width: auto;
 		object-fit: contain;
 		flex-shrink: 0;
-		transform: translateY(-1.5px); /* Moved slightly up as requested */
+		transform: translateY(-1.5px);
 	}
 
 	.title-copy {
-		min-width: 0;
+		flex-shrink: 0;
 	}
 
 	.title-copy h1 {
 		margin: 0;
 		font-size: clamp(1rem, 1.35vw, 1.6rem);
 		font-weight: 900;
-		line-height: 1.1;
+		line-height: 1.15;
 		letter-spacing: -0.01em;
-		color: #0D1B3E;
+		color: #0d1b3e;
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
 
 	.title-copy p.lower-text {
-		margin: 0.05rem 0 0;
-		font-size: clamp(0.64rem, 0.72vw, 0.68rem);
+		margin: 0.1rem 0 0;
+		font-size: clamp(0.6rem, 0.68vw, 0.66rem);
 		font-weight: 600;
 		letter-spacing: 0.02em;
-		color: #B55A38;
+		color: #b55a38;
 		text-transform: none;
 		opacity: 0.92;
 		white-space: nowrap;
@@ -277,9 +290,9 @@
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
-		gap: 1.6rem; /* Increased from 1.25rem for more breathing room */
+		gap: 0.75rem;
 		flex-shrink: 0;
-		margin-left: auto; /* Push group firmly to the right */
+		margin-left: auto;
 	}
 
 	.accreditation-strip {
@@ -460,9 +473,9 @@
 	.status-pill.dark {
 		position: relative;
 		overflow: hidden;
-		background: #0D1B3E;
-		border-color: #C8960C;
-		color: #C8960C;
+		background: #0d1b3e;
+		border-color: #c8960c;
+		color: #c8960c;
 		font-weight: 900;
 		box-shadow: 0 0 15px rgba(200, 150, 12, 0.2);
 	}
@@ -484,8 +497,8 @@
 	.apply-cta {
 		text-decoration: none;
 		color: #ffffff;
-		background: #C8960C;
-		border: 1px solid #C8960C;
+		background: #c8960c;
+		border: 1px solid #c8960c;
 		padding: 0.55rem 1.3rem;
 		border-radius: 2px;
 		font-size: 0.8rem;
@@ -501,6 +514,33 @@
 		transform: translateY(-2px);
 		box-shadow: 0 8px 20px rgba(200, 150, 12, 0.4);
 		background: #b0820a;
+	}
+
+	.cert-top-btn {
+		text-decoration: none;
+		color: #ffffff;
+		background: #0a2e5c;
+		border: 1.5px solid #c8960c;
+		padding: 0.5rem 1.15rem;
+		border-radius: 2px;
+		font-size: 0.78rem;
+		font-weight: 800;
+		letter-spacing: 0.04em;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		text-transform: uppercase;
+		box-shadow: 0 4px 12px rgba(10, 46, 92, 0.2);
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.cert-top-btn:hover {
+		transform: translateY(-2px);
+		background: #c8960c;
+		border-color: #c8960c;
+		color: #0d1b3e;
+		box-shadow: 0 8px 20px rgba(200, 150, 12, 0.35);
 	}
 
 	@media (max-width: 1024px) {

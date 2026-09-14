@@ -159,47 +159,6 @@
 			/>
 		</picture>
 
-		<!-- Floating Hero Popup Badge for Cyber Security Event -->
-		<a
-			href="#shield-protocol"
-			class="absolute bottom-6 sm:bottom-10 right-4 sm:right-8 z-30 group flex items-center gap-3 p-2.5 sm:p-3 pr-4 sm:pr-5 rounded-2xl bg-slate-950/85 backdrop-blur-xl border border-cyan-500/40 text-white shadow-[0_10px_35px_rgba(0,0,0,0.6)] hover:border-cyan-400 hover:scale-105 transition-all duration-300 max-w-[90vw] sm:max-w-md"
-		>
-			<div
-				class="relative shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-cyan-400/50 bg-slate-900"
-			>
-				<img
-					src="/Shield-protocol/sp1.jpg"
-					alt="Shield Protocol"
-					class="w-full h-full object-cover"
-				/>
-				<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-cyan-400 rounded-full animate-ping"
-				></span>
-			</div>
-
-			<div class="min-w-0 flex-1">
-				<div
-					class="flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wider text-cyan-400"
-				>
-					<span>Cyber Security Podcast</span>
-					<span class="w-1 h-1 rounded-full bg-slate-500"></span>
-					<span class="text-amber-400">AUG 11–14</span>
-				</div>
-				<h4
-					class="text-xs sm:text-sm font-bold text-white truncate group-hover:text-cyan-300 transition-colors"
-				>
-					Behind the Firewall – Protocol ’26
-				</h4>
-				<p class="text-[11px] text-slate-300 truncate">
-					Feat. <strong>Mr. Santosh Chaluvadi</strong> (CEO, Supraja)
-				</p>
-			</div>
-
-			<div
-				class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-colors"
-			>
-				<i class="fa-solid fa-arrow-down text-xs"></i>
-			</div>
-		</a>
 	</section>
 
 	<ShieldProtocolHighlight />
