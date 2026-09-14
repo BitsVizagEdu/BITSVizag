@@ -28,6 +28,7 @@
 	];
 
 	const moreLinks = [
+		{ label: 'Internship Certificates', href: '/internship-certificates', icon: 'fa-solid fa-award' },
 		{ label: 'Committees', href: '/committees', icon: 'fa-solid fa-list-check' },
 		{ label: 'Gallery', href: '/gallery', icon: 'fa-solid fa-images' },
 		{

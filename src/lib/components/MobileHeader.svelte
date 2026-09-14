@@ -9,6 +9,7 @@
 	let scrollProgress = 0;
 
 	$: isHome = $page.url.pathname === '/';
+	$: isCertificatesPage = $page.url.pathname.includes('internship-certificates') || $page.url.pathname.includes('internship-program');
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -70,14 +71,28 @@
 				{/if}
 			</div>
 
-			<!-- Minimal Hamburger Icon (Right) -->
-			<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle Menu">
-				<div class="hamburger" class:dark={!isHome}>
-					<span class="line-1"></span>
-					<span class="line-2"></span>
-					<span class="line-3"></span>
-				</div>
-			</button>
+			<div class="flex items-center gap-2">
+				{#if isCertificatesPage}
+					<!-- On Certificates page only: Show Logo_1.png clearly visible with mobile clear size -->
+					<div class="flex items-center pr-1">
+						<img
+							src="/Logo_1.png"
+							alt="Logo"
+							class="h-9 sm:h-10 w-auto object-contain block drop-shadow-md"
+						/>
+					</div>
+				{:else}
+					<a href="/internship-certificates" class="mobile-cert-btn"> Certificates </a>
+					<!-- On other pages: Hamburger Icon (Right) -->
+					<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle Menu">
+						<div class="hamburger" class:dark={!isHome}>
+							<span class="line-1"></span>
+							<span class="line-2"></span>
+							<span class="line-3"></span>
+						</div>
+					</button>
+				{/if}
+			</div>
 		</div>
 	</header>
 </div>
@@ -95,7 +110,7 @@
 
 	.main-header {
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
-		height: 72px;
+		height: 56px;
 		display: flex;
 		align-items: center;
 		padding: 0 12px;
@@ -111,12 +126,14 @@
 		transform: translateY(-100%);
 	}
 
-	/* Subpage styling (Neat glassmorphism white instead of black) */
+	/* Subpage styling (Neat compact glassmorphism white) */
 	.main-header.subpage-header {
-		background: rgba(255, 255, 255, 0.8);
+		height: 48px;
+		background: rgba(255, 255, 255, 0.9);
 		backdrop-filter: blur(16px);
 		-webkit-backdrop-filter: blur(16px);
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+		border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 	}
 
 	.header-inner {
@@ -135,13 +152,13 @@
 	.back-link {
 		display: flex;
 		align-items: center;
-		gap: 4px;
+		gap: 3px;
 		color: #0f172a;
 		text-decoration: none;
-		font-size: 14px;
+		font-size: 13px;
 		font-weight: 600;
-		padding: 6px 12px;
-		border-radius: 8px;
+		padding: 4px 10px;
+		border-radius: 6px;
 		background: rgba(15, 23, 42, 0.05);
 		border: 1px solid rgba(15, 23, 42, 0.08);
 		transition: all 0.2s ease;
@@ -160,7 +177,7 @@
 	}
 
 	.logo {
-		height: 48px;
+		height: 42px;
 		width: auto;
 		object-fit: contain;
 		filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
@@ -169,15 +186,15 @@
 	.menu-toggle {
 		background: #0f172a; /* Dark circle background */
 		border: none;
-		width: 36px;
-		height: 36px;
+		width: 32px;
+		height: 32px;
 		border-radius: 50%;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 	}
 
 	.menu-toggle:active {
@@ -200,5 +217,30 @@
 		background: #ffffff; /* Always crisp white inside the dark circle button */
 		border-radius: 1px;
 		transition: background 0.3s ease;
+	}
+
+	.mobile-cert-btn {
+		text-decoration: none;
+		color: #ffffff;
+		background: #0A2E5C;
+		border: 1px solid #C8960C;
+		padding: 0.35rem 0.65rem;
+		border-radius: 4px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		pointer-events: auto;
+		transition: all 0.2s ease;
+	}
+
+	.mobile-cert-btn:active {
+		transform: scale(0.95);
+		background: #C8960C;
+		color: #0D1B3E;
 	}
 </style>
