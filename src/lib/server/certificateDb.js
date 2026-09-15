@@ -151,6 +151,7 @@ export function upsertCertificate(record) {
 		certificateFilePath: record.certificateFilePath,
 		certificateId: record.certificateId || `TSS/${programInfo.slug.toUpperCase()}/2026/${normalizedRoll.slice(-3)}`,
 		certificateStatus: record.certificateStatus || 'active',
+		downloadCount: record.downloadCount !== undefined ? record.downloadCount : (existingIndex >= 0 ? (all[existingIndex].downloadCount || 0) : 0),
 		createdAt: existingIndex >= 0 ? all[existingIndex].createdAt : now,
 		updatedAt: now
 	};

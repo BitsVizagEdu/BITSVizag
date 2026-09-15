@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PDFDocument } from 'pdf-lib';
-import { findCertificate, normalizeRollNumber, normalizeProgram } from '$lib/server/certificateDb.js';
+import { findCertificate, normalizeRollNumber, normalizeProgram, upsertCertificate } from '$lib/server/certificateDb.js';
 
 // Cache generated PDF buffers in memory to ensure instant repeated downloads
 const pdfCache = new Map();
@@ -30,6 +30,22 @@ export async function GET({ url, fetch }) {
 		return new Response('Certificate record not found for the provided roll number and program', {
 			status: 404
 		});
+	}
+
+	// 1.5 Enforce 3 downloads limit per user
+	const currentDownloads = record.downloadCount || 0;
+	if (currentDownloads >= 3) {
+		return new Response('Download limit exceeded. You can only download your certificate a maximum of 3 times.', {
+			status: 403
+		});
+	}
+
+	// Increment the counter for this download attempt
+	record.downloadCount = currentDownloads + 1;
+	try {
+		upsertCertificate(record);
+	} catch (e) {
+		console.warn('Failed to update download count:', e);
 	}
 
 	// 2. Resolve verified physical file path securely
