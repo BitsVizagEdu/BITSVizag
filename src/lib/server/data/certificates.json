@@ -621,7 +621,8 @@
     "certificateId": "TSS/MERN/2026/5E6",
     "certificateStatus": "active",
     "createdAt": "2026-09-16T05:10:50.720Z",
-    "updatedAt": "2026-09-16T05:10:50.720Z"
+    "updatedAt": "2026-09-16T05:13:03.727Z",
+    "downloadCount": 1
   },
   {
     "id": "CERT-MERN-23NR1A05G1",
@@ -633,7 +634,8 @@
     "certificateId": "TSS/MERN/2026/5G1",
     "certificateStatus": "active",
     "createdAt": "2026-09-16T05:10:50.720Z",
-    "updatedAt": "2026-09-16T05:10:50.720Z"
+    "updatedAt": "2026-09-16T05:12:45.805Z",
+    "downloadCount": 1
   },
   {
     "id": "CERT-MERN-23NR1A0544",
@@ -693,7 +695,8 @@
     "certificateId": "TSS/MERN/2026/542",
     "certificateStatus": "active",
     "createdAt": "2026-09-16T05:10:50.721Z",
-    "updatedAt": "2026-09-16T05:10:50.721Z"
+    "updatedAt": "2026-09-16T05:13:30.634Z",
+    "downloadCount": 1
   },
   {
     "id": "CERT-JAVA-24NR5A0513",
@@ -1497,6 +1500,7 @@
     "certificateId": "TSS/JAVA/2026/5F6",
     "certificateStatus": "active",
     "createdAt": "2026-09-16T05:10:50.730Z",
-    "updatedAt": "2026-09-16T05:10:50.730Z"
+    "updatedAt": "2026-09-16T05:13:57.668Z",
+    "downloadCount": 1
   }
 ]
