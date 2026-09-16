@@ -59,7 +59,10 @@ const MERN_STUDENTS = [
 	{ file: '56.png', name: 'UDAY KUMAR DAKOJI', roll: '23NR1A0544', certId: 'TSS/MERN/2026/544' },
 	{ file: '57.png', name: 'MEDA ANUSHA', roll: '23NR1A05A8', certId: 'TSS/MERN/2026/5A8' },
 	{ file: '58.png', name: 'MAHESWARI DEVARAKONDA', roll: '23NR1A0547', certId: 'TSS/MERN/2026/547' },
-	{ file: 'D5.png', name: 'JEY SURYA DAMODHAR', roll: '23NR1A05D5', certId: 'TSS/MERN/2026/5D5' }
+	{ file: 'D5.png', name: 'JEY SURYA DAMODHAR', roll: '23NR1A05D5', certId: 'TSS/MERN/2026/5D5' },
+	{ file: '542.png', name: 'DADI OMIKA', roll: '23NR1A0542', certId: 'TSS/MERN/2026/542' },
+	{ file: '54.png', name: 'P.SANDIL', roll: '23NR1A05E6', certId: 'TSS/MERN/2026/5E6' },
+	{ file: '55.png', name: 'SONGA PURNEMA', roll: '23NR1A05G1', certId: 'TSS/MERN/2026/5G1' }
 ];
 
 const JAVA_STUDENTS = [
