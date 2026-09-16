@@ -50,19 +50,20 @@ const MERN_STUDENTS = [
 	{ file: '45.png', name: 'PARASANA NAGA SRI VAISHNAVI', roll: '23NR1A05C9', certId: 'TSS/MERN/2026/5C9' },
 	{ file: '46.png', name: 'BHUMIREDDI NIKITHA', roll: '23NR1A0527', certId: 'TSS/MERN/2026/527' },
 	{ file: '47.png', name: 'YELLETI SUNIL SAI', roll: '24NR5A0526', certId: 'TSS/MERN/2026/526' },
-	{ file: '48.png', name: 'SAHITH KUMAR BADIREDDY', roll: '23NR1A0514', certId: 'TSS/MERN/2026/514' },
-	{ file: '49.png', name: 'GURUVAJI YERUPALLI', roll: '23NR1A05J3', certId: 'TSS/MERN/2026/5J3' },
-	{ file: '50.png', name: 'CHIRANJEEVI', roll: '23NR1A05F4', certId: 'TSS/MERN/2026/5F4' },
-	{ file: '51.png', name: 'NIKITHA AALLA', roll: '23NR1A0501', certId: 'TSS/MERN/2026/501' },
-	{ file: '52.png', name: 'ANDIBOYINA YELIJARANI', roll: '23NR1A0509', certId: 'TSS/MERN/2026/509' },
-	{ file: '53.png', name: 'BOTTA NAVYA SRI SAI SURYA TEJASWI', roll: '23NR1A0530', certId: 'TSS/MERN/2026/530' },
-	{ file: '56.png', name: 'UDAY KUMAR DAKOJI', roll: '23NR1A0544', certId: 'TSS/MERN/2026/544' },
-	{ file: '57.png', name: 'MEDA ANUSHA', roll: '23NR1A05A8', certId: 'TSS/MERN/2026/5A8' },
-	{ file: '58.png', name: 'MAHESWARI DEVARAKONDA', roll: '23NR1A0547', certId: 'TSS/MERN/2026/547' },
+	//{ file: '48.png', name: 'SAHITH KUMAR BADIREDDY', roll: '23NR1A0514', certId: 'TSS/MERN/2026/514' },
+	{ file: '48.png', name: 'GURUVAJI YERUPALLI', roll: '23NR1A05J3', certId: 'TSS/MERN/2026/5J3' },
+	{ file: '49.png', name: 'CHIRANJEEVI', roll: '23NR1A05F4', certId: 'TSS/MERN/2026/5F4' },
+	//{ file: '50.png', name: 'NIKITHA AALLA', roll: '23NR1A0501', certId: 'TSS/MERN/2026/501' },
+	{ file: '50.png', name: 'ANDIBOYINA YELIJARANI', roll: '23NR1A0509', certId: 'TSS/MERN/2026/509' },
+	{ file: '51.png', name: 'BOTTA NAVYA SRI SAI SURYA TEJASWI', roll: '23NR1A0530', certId: 'TSS/MERN/2026/530' },
+	{ file: '52.png', name: 'P.SANDIL', roll: '23NR1A05E6', certId: 'TSS/MERN/2026/5E6' },
+	{ file: '53.png', name: 'SONGA PURNEMA', roll: '23NR1A05G1', certId: 'TSS/MERN/2026/5G1' },
+	{ file: '54.png', name: 'UDAY KUMAR DAKOJI', roll: '23NR1A0544', certId: 'TSS/MERN/2026/544' },
+	{ file: '55.png', name: 'MEDA ANUSHA', roll: '23NR1A05A8', certId: 'TSS/MERN/2026/5A8' },
+	{ file: '56.png', name: 'MAHESWARI DEVARAKONDA', roll: '23NR1A0547', certId: 'TSS/MERN/2026/547' },
 	{ file: 'D5.png', name: 'JEY SURYA DAMODHAR', roll: '23NR1A05D5', certId: 'TSS/MERN/2026/5D5' },
 	{ file: '542.png', name: 'DADI OMIKA', roll: '23NR1A0542', certId: 'TSS/MERN/2026/542' },
-	{ file: '54.png', name: 'P.SANDIL', roll: '23NR1A05E6', certId: 'TSS/MERN/2026/5E6' },
-	{ file: '55.png', name: 'SONGA PURNEMA', roll: '23NR1A05G1', certId: 'TSS/MERN/2026/5G1' }
+
 ];
 
 const JAVA_STUDENTS = [
@@ -117,9 +118,9 @@ const JAVA_STUDENTS = [
 	{ file: '49.png', name: 'TALARI MEGHANA', roll: '23NR1A05G5', certId: 'TSS/JAVA/2026/5G5' },
 	{ file: '50.png', name: 'VASIPILLI SWAROOPA', roll: '23NR1A05I4', certId: 'TSS/JAVA/2026/5I4' },
 	{ file: '51.png', name: 'THOTA.SAI MANIKANTA', roll: '23NR1A05H4', certId: 'TSS/JAVA/2026/5H4' },
-	{ file: '52.png', name: 'SIREESHA YAMPALLA', roll: '23NR1A05I9', certId: 'TSS/JAVA/2026/5I9' },
+	{ file: '52.png', name: 'EATI RISHITHA', roll: '23NR1A0551', certId: 'TSS/JAVA/2026/551' },
 	{ file: '53.png', name: 'NAGIREDDY AVANAJA', roll: '23NR1A05B8', certId: 'TSS/JAVA/2026/5B8' },
-	{ file: '54.png', name: 'EATI RISHITHA', roll: '23NR1A0551', certId: 'TSS/JAVA/2026/551' },
+	{ file: '54.png', name: 'SIREESHA YAMPALLA', roll: '23NR1A05I9', certId: 'TSS/JAVA/2026/5I9' },
 	{ file: '55.png', name: 'PADALA PRIYANKA', roll: '23NR1A05C0', certId: 'TSS/JAVA/2026/5C0' },
 	{ file: '56.png', name: 'KOTHAPALLI SAMPATH KUMAR', roll: '23NR1A0586', certId: 'TSS/JAVA/2026/586' },
 	{ file: '57.png', name: 'SALMAN SOMBARKI', roll: '23NR1A05G0', certId: 'TSS/JAVA/2026/5G0' },
@@ -128,11 +129,11 @@ const JAVA_STUDENTS = [
 	{ file: '60.png', name: 'APIREDDI RAMA', roll: '23NR1A0512', certId: 'TSS/JAVA/2026/512' },
 	{ file: '61.png', name: 'VANA SWAPNA', roll: '23NR1A05I1', certId: 'TSS/JAVA/2026/5I1' },
 	{ file: '62.png', name: 'TATTA MANEESHA', roll: '23NR1A05G7', certId: 'TSS/JAVA/2026/5G7' },
-	{ file: '67.png', name: 'SANKARAPU NAGAMANI', roll: '23NR1A05F6', certId: 'TSS/JAVA/2026/5F6' },
 	{ file: '63.png', name: 'M VANSHIKA', roll: '23NR1A05A3', certId: 'TSS/JAVA/2026/5A3' },
 	{ file: '64.png', name: 'GANDHULI LIKHITHA', roll: '23NR1A0555', certId: 'TSS/JAVA/2026/555' },
 	{ file: '65.png', name: 'DUPANA YAMUNA', roll: '23NR1A0549', certId: 'TSS/JAVA/2026/549' },
-	{ file: '66.png', name: 'PINNINTI YAMINI', roll: '23NR1A05D7', certId: 'TSS/JAVA/2026/5D7' }
+	{ file: '66.png', name: 'PINNINTI YAMINI', roll: '23NR1A05D7', certId: 'TSS/JAVA/2026/5D7' },
+	{ file: '67.png', name: 'SANKARAPU NAGAMANI', roll: '23NR1A05F6', certId: 'TSS/JAVA/2026/5F6' },
 ];
 
 const STATIC_DIR = path.resolve('static');
