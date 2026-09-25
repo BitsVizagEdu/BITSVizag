@@ -17,7 +17,7 @@
 	];
 
 	const members = [
-		{ name: 'Dr. M. Rajan Babu', role: 'Chair Person', phone: '8008844699' },
+		{ name: 'Prof. B. Poorna Satyanarayana', role: 'Chair Person', phone: '8008844699' },
 		{ name: 'Mrs. A.S.B Prasanna', role: 'Member', phone: '8008633321' },
 		{ name: 'Mrs. Fathimunisa Begum', role: 'Member', phone: '9966540481' },
 		{ name: 'Mr. E. Anil Kumar', role: 'Member', phone: '8096173988' },

@@ -163,22 +163,22 @@
 			eyebrow: 'Leadership Message',
 			title: 'Message From The Principal',
 			intro: [
-				'It is my pleasure to welcome you to BITS Vizag, an institution driven by a clear vision: to evolve into a premier technical institute offering value-based education that nurtures competent and socially responsible technologists for a changing world.',
-				'Since its inception, BITS Vizag has steadily evolved through a strong integration of state-of-the-art infrastructure and dedicated human resources.'
+				'It is with great pleasure that I welcome you to BITS Vizag, an institution dedicated to academic excellence, innovation, and holistic development. Our mission is to provide an empowering environment that shapes aspiring students into globally competent and socially responsible professionals.',
+				'As we navigate a rapidly evolving technological landscape, our focus remains on delivering a robust, industry-aligned education, complemented by state-of-the-art infrastructure and a deeply committed faculty.'
 			],
 			sections: [
 				{
-					heading: 'Academic Focus',
-					text: 'We are committed to delivering professional education with creativity, innovation, and ethical values. Our dynamic academic environment supports knowledge creation, responsible application, and societal development through Outcome-Based Education and experiential learning.'
+					heading: 'Academic Vision',
+					text: 'We emphasize a strong foundation in core engineering principles, fostered through Outcome-Based Education, experiential learning, and interdisciplinary research. Our goal is to cultivate critical thinking, creativity, and a lifelong passion for learning.'
 				},
 				{
-					heading: 'Student Transformation',
-					text: 'At BITS Vizag, we shape students into skilled engineers and responsible citizens. Our holistic approach ensures every graduate is equipped with technical excellence, practical capability, and strong ethical grounding.'
+					heading: 'Student Empowerment',
+					text: 'At BITS Vizag, we go beyond conventional academics. We focus on comprehensive skill development, ethical grounding, and leadership qualities, ensuring our graduates are well-equipped to tackle real-world challenges and contribute meaningfully to society.'
 				}
 			],
-			imageSrc: '/principal copy.jpg',
-			imageAlt: 'Portrait of Dr. M. Rajan Babu',
-			personName: 'Dr. M. Rajan Babu',
+			imageSrc: '/princepal.png',
+			imageAlt: 'Portrait of Prof. B. Poorna Satyanarayana',
+			personName: 'Prof. B. Poorna Satyanarayana',
 			personMeta: 'M.Tech, Ph.D.',
 			personRole: 'Principal'
 		}

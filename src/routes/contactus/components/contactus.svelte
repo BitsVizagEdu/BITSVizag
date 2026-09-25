@@ -5,18 +5,10 @@
 	const contacts = [
 		{
 			role: 'Principal',
-			name: 'Dr. M. Rajan Babu',
+			name: 'Prof. B. Poorna Satyanarayana',
 			email: 'principal@bitsvizag.com',
 			phone: '+91 88866 34502',
 			icon: 'fa-user-tie',
-			color: '#0f172a'
-		},
-		{
-			role: 'Dean Academics',
-			name: 'Dr. B. P. Satyanarayana',
-			email: 'deanacademics@bitsvizag.com',
-			phone: '+91 91212 14313',
-			icon: 'fa-graduation-cap',
 			color: '#0f172a'
 		},
 		{

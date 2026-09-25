@@ -19,7 +19,7 @@
 	];
 
 	const advisoryBody = [
-		['01', 'Dr. M. Rajan Babu', 'Principal, BITS(A)', 'Chairman'],
+		['01', 'Prof. B. Poorna Satyanarayana', 'Principal, BITS(A)', 'Chairman'],
 		['02', 'Dr. K. Babulu', 'Professor, Dept. of ECE & DE, JNTUGV', 'Member'],
 		['03', 'Dr. K. Chandra Bhushana Rao', 'Professor, Dept. of ECE & DAP, JNTUGV', 'Member'],
 		['04', 'Dr. K. Sri Kumar', 'Professor, Dept. of EEE, JNTUGV', 'University Nominee-Member'],
@@ -27,7 +27,6 @@
 		['06', 'Dr. P. Vmasi Krishna', 'Professor, Dept. of ME, NIT Warangal', 'Member'],
 		['07', 'Mr. Suresh Dakavarapu', 'Director, Dizbi', 'Member'],
 		['08', 'Dr. B. S. N. Murthy', 'Professor, Dept. of ME & DE, GITAM University', 'Member'],
-		['09', 'Dr. B. Poorna Satyanarayana', 'Dean Academics, BITS(A)', 'Member'],
 		['10', 'Dr. D. N. Murti', 'Controller of Examinations, BITS(A)', 'Member'],
 		['11', 'Mrs. S. Pavani', 'HOD, CE', 'Member'],
 		['12', 'Mr. K. Venkateswara Rao', 'HOD, EEE', 'Member'],
@@ -42,7 +41,7 @@
 	];
 
 	const antiRagging = [
-		['1', 'Dr. M. Rajan Babu', 'Principal', 'ECE', 'Chairman', '8008844699'],
+		['1', 'Prof. B. Poorna Satyanarayana', 'Principal', 'ECE', 'Chairman', '8008844699'],
 		['2', 'Dr. A. S. B. Prasanna', 'Associate Professor', 'ME', 'Coordinator', '8008633321'],
 		['3', 'Dr. E. Anil Kumar', 'Associate Professor', 'EEE', 'Member', '8096173988'],
 		['4', 'Dr. Fathimunisa Begum', 'Associate Professor', 'ME', 'Member', '6301685115'],
@@ -65,13 +64,13 @@
 	];
 
 	const scst = [
-		['1', 'Chairman', 'Dr. M. Rajan Babu, Principal', '9492618186'],
+		['1', 'Chairman', 'Prof. B. Poorna Satyanarayana, Principal', '9492618186'],
 		['2', 'Liaison Officer - SC/ST', 'Dr. K. Pradeep, Associate Professor, ECE', '9966270111'],
 		['3', 'Member', 'Vasu, Student, 4th Mech', '-']
 	];
 
 	const iqac = [
-		['1', 'Dr. M. Rajan Babu', 'Principal', 'Chairperson'],
+		['1', 'Prof. B. Poorna Satyanarayana', 'Principal', 'Chairperson'],
 		['2', 'Dr. K. Sri Lakshmi', 'Secretary and Correspondent', 'Member'],
 		['3', 'Dr. D. N. Murthy', 'Controller of Examinations', 'Member'],
 		['4', 'Mr. S. Durga Prasad', 'HoD, CSE', 'Member'],
