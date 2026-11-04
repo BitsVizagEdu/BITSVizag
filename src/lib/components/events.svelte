@@ -1,6 +1,42 @@
 <script>
 	let events = [
 		{
+			name: '🎉 Placement Success: Mr. Durga Vara Prasad Uddavolu, Final Year MECH',
+			description:
+				'Hearty Congratulations to Mr. Durga Vara Prasad Uddavolu, Final Year – Mechanical Engineering, on securing a position as CAE Process Engineer at Eleation with a package of ₹9.6 LPA !!!',
+			date: 'October 26, 2026',
+			image: '/event-photos/JOB.png',
+			href: 'https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==',
+			click: 'Click to view post >>>'
+		},
+		{
+			name: '🥊 BITS Vizag Congratulates Mr. Ch. Hari Sampath Kumar, 3rd AI ML',
+			description:
+				'Proud to announce Hari’s selection for the All India Inter-University Boxing Championship for the 2nd consecutive year! Achievements: 🥈 Two Silver Medals at BVK National Championship, 🇮🇳 SGFI Nationals participant, 🥊 All India Inter-University Nationals representative, and multiple District & State-Level Medals. Keep fighting, keep winning, and making BITS Vizag proud! ❤️💙',
+			date: 'October 15, 2026',
+			image: '/event-photos/BOXING.png',
+			href: 'https://www.instagram.com/p/DehUv4fFyf7/?utm_source=ig_web_copy_link&dlrf=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==',
+			click: 'Click to view post >>>'
+		},
+		{
+			name: '🏆 CHAMPIONS ON THE COURT - BITS Super Challengers !!! 🏏🔥',
+			description:
+				'Heartiest Congratulations to BITS Vizag – Super Challengers on winning the Ava Intern Inter-Engineering College Box Cricket Championship Season III and taking home the ₹15,000 Prize Money! Our Super Challengers dominated the tournament with victories in all league matches and emerged as CHAMPIONS against NSRIT in the grand final.',
+			date: 'October 11, 2026',
+			image: '/event-photos/BITS_SC.png',
+			href: 'https://www.instagram.com/p/DeXH_BiDTUp/?utm_source=ig_web_copy_link&xtok=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==',
+			click: 'Click to view post >>>'
+		},
+		{
+			name: 'Smart India Hackathon 2026 | Internal Hackathon',
+			description:
+				'Successfully conducted the Smart India Hackathon 2026 Internal Hackathon, providing students with a platform to identify real-world challenges, explore innovative solutions, and present their ideas before an evaluation panel. Ideate • Innovate • Impact',
+			date: 'September 29, 2026',
+			image: '/event-photos/SIH.png',
+			href: 'https://www.instagram.com/p/Dd3bmTrmmzb/?utm_source=ig_web_copy_link&mdxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==',
+			click: 'Click to view post >>>'
+		},
+		{
 			name: 'Behind the Firewall - The Shield Protocol ’26',
 			description:
 				'Inaugural Cyber Security podcast & hackathon featuring Mr. Santosh Chaluvadi (CEO, Supraja Technologies), hosted by Mr. P. Joshua Raju.',

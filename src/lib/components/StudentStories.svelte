@@ -29,11 +29,11 @@
 		},
 		{
 			id: '04',
-			name: 'Suresh Kumar',
+			name: 'Durga Vara Prasad Uddavolu',
 			program: 'B.Tech Mech',
-			placement: 'Tata Motors',
+			placement: 'Eleation (₹9.6 LPA)',
 			theme: 'emerald',
-			quote: 'The hands-on training in mechanical workshops and CNC design labs made me industry-ready from day one.'
+			quote: 'Securing the CAE Process Engineer position at Eleation with a ₹9.6 LPA package was made possible by the dedicated guidance and core engineering mentorship at BITS Vizag CDC.'
 		},
 		{
 			id: '05',

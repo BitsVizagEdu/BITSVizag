@@ -12,7 +12,7 @@
 		},
 		{
 			role: 'Principal',
-			image: '/principal copy.jpg',
+			image: '/princepal.png',
 			headline: 'Embracing Your Passion: Igniting a Path to Remarkable Future.',
 			quote:
 				'Let your passion ignite the path to a remarkable and rewarding future; stay true to yourself.',

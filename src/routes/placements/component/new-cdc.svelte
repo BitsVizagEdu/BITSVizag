@@ -21,7 +21,7 @@
 		},
 		{
 			role: 'Principal',
-			image: '/principal copy.jpg',
+			image: '/princepal.png',
 			headline: 'Embracing Your Passion: Igniting a Path to Remarkable Future.',
 			quote:
 				'Let your passion ignite the path to a remarkable and rewarding future; stay true to yourself.',
@@ -129,6 +129,14 @@
 	}
 
 	const events = [
+		{
+			date: '26/10/2026',
+			name: 'Eleation Campus Recruitment Drive — ₹9.6 LPA Mechanical Star Selection!',
+			image: '/event-photos/JOB.png',
+			description:
+				'Hearty Congratulations to Mr. Durga Vara Prasad Uddavolu, Final Year – Mechanical Engineering, on securing a prestigious position as CAE Process Engineer at Eleation with an outstanding package of ₹9.6 LPA.',
+			href: 'https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=='
+		},
 		{
 			date: '14/03/2025',
 			name: 'Mega Job Fair 2026 – A Remarkable Success !!! ',
@@ -274,26 +282,52 @@
 		</div>
 
 		<div class="hero-visual">
-			<div class="hero-card">
+			<div class="hero-card spotlight-card">
 				<div class="hero-card-shine" aria-hidden="true"></div>
-				<h3 class="hero-card-title">2026 Opportunity Window Is Live</h3>
-				<div class="hero-card-img">
-					<img src="/gallery/g1.jpg" alt="Top placement achiever" loading="lazy" />
+				<div class="spotlight-top-bar">
+					<span class="spotlight-tag">🌟 STAR PLACEMENT 2026</span>
+					<span class="spotlight-package">₹9.6 LPA</span>
+				</div>
+				<h3 class="hero-card-title">Eleation Campus Recruitment Drive</h3>
+				<a
+					href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
+					target="_blank"
+					rel="noopener noreferrer"
+					class="spotlight-img-frame group"
+					title="Click to view Instagram announcement"
+				>
+					<img
+						src="/event-photos/JOB.png"
+						alt="Mr. Durga Vara Prasad Uddavolu - CAE Process Engineer at Eleation (₹9.6 LPA)"
+						loading="lazy"
+					/>
+					<div class="spotlight-hover-pill">
+						<span>View Official Post ↗</span>
+					</div>
+				</a>
+				<div class="spotlight-student-info">
+					<h4 class="spotlight-student-name">Mr. Durga Vara Prasad Uddavolu</h4>
+					<p class="spotlight-student-meta">Final Year • Mechanical Engineering</p>
 				</div>
 				<div class="hero-card-stats">
 					<div>
-						<span>Interview Readiness</span>
-						<strong>Weekly Bootcamps</strong>
+						<span>Selected Role</span>
+						<strong style="color: #38bdf8;">CAE Process Engineer</strong>
 					</div>
 					<div>
-						<span>Industry Connect</span>
-						<strong>Recruiter Networks</strong>
+						<span>Recruiter</span>
+						<strong style="color: #34d399;">Eleation</strong>
 					</div>
 				</div>
-				<div class="hero-card-badge">
+				<a
+					href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hero-card-badge spotlight-cta"
+				>
 					<span class="badge-dot"></span>
-					Admissions + Placements Open 2026
-				</div>
+					Core Mechanical Placement • View Details ↗
+				</a>
 			</div>
 		</div>
 	</div>
@@ -421,6 +455,100 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- CAMPUS RECRUITMENT DRIVE SPOTLIGHT                                      -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<section class="drive-spotlight-section">
+	<div class="drive-ambient-glow" aria-hidden="true"></div>
+	<div class="section-shell">
+		<div class="drive-spotlight-banner reveal">
+			<div class="drive-spotlight-grid">
+				<!-- Left: Luxury Framed Poster Showcase -->
+				<div class="drive-media-col">
+					<a
+						href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
+						target="_blank"
+						rel="noopener noreferrer"
+						class="drive-poster-frame group"
+						title="Click to view Instagram announcement"
+					>
+						<div class="poster-inner-wrapper">
+							<img
+								src="/event-photos/JOB.png"
+								alt="Eleation Campus Recruitment Drive - Durga Vara Prasad Uddavolu 9.6 LPA"
+								loading="lazy"
+							/>
+						</div>
+						<div class="drive-poster-tag">
+							<span class="pulse-dot"></span>
+							<span>Official Drive Selection</span>
+						</div>
+						<div class="drive-poster-zoom">
+							<span>Open Full Post ↗</span>
+						</div>
+					</a>
+				</div>
+
+				<!-- Right: Product View Presentation -->
+				<div class="drive-info-col">
+					<div class="drive-pill-row">
+						<span class="drive-kicker-pill">Campus Placement Spotlight</span>
+						<span class="drive-branch-pill">Mechanical Engineering</span>
+						<span class="drive-package-pill">₹9.6 LPA Package</span>
+					</div>
+
+					<h2 class="drive-title">
+						Eleation Recruits Mechanical Talent — <span class="drive-highlight">₹9.6 LPA Milestone</span>
+					</h2>
+
+					<p class="drive-desc">
+						Baba Institute of Technology and Sciences (Autonomous) proudly congratulates <strong>Mr. Durga Vara Prasad Uddavolu</strong>, Final Year – Mechanical Engineering, on securing the coveted <strong>CAE Process Engineer</strong> role at <strong>Eleation</strong> through on-campus recruitment.
+					</p>
+
+					<div class="drive-stats-grid">
+						<div class="drive-stat-cell">
+							<span class="cell-label">Selected Candidate</span>
+							<strong class="cell-value">Mr. Durga Vara Prasad Uddavolu</strong>
+							<span class="cell-sub">Final Year B.Tech Student</span>
+						</div>
+						<div class="drive-stat-cell">
+							<span class="cell-label">Discipline & Branch</span>
+							<strong class="cell-value">Mechanical Engineering</strong>
+							<span class="cell-sub">Core Design & CAE Specialization</span>
+						</div>
+						<div class="drive-stat-cell">
+							<span class="cell-label">Position Offered</span>
+							<strong class="cell-value text-role">CAE Process Engineer</strong>
+							<span class="cell-sub">Computer-Aided Engineering</span>
+						</div>
+						<div class="drive-stat-cell">
+							<span class="cell-label">Recruiter & CTC</span>
+							<strong class="cell-value text-ctc">Eleation • ₹9.60 LPA</strong>
+							<span class="cell-sub">On-Campus Placement Drive</span>
+						</div>
+					</div>
+
+					<div class="drive-footer-row">
+						<a
+							href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
+							target="_blank"
+							rel="noopener noreferrer"
+							class="drive-cta-btn"
+						>
+							<i class="fa-brands fa-instagram text-base"></i>
+							<span>View Official Post on Instagram</span>
+							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M7 17L17 7M17 7H7M17 7V17" />
+							</svg>
+						</a>
+						<span class="drive-badge-credit">✓ Officially Verified by Career Development Cell (CDC), BITS Vizag</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!-- PLACEMENT NEWS                                                          -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="news-section">
@@ -457,6 +585,16 @@
 						<time class="news-date">{ev.date}</time>
 						<h3 class="news-title">{ev.name}</h3>
 						<p class="news-desc">{ev.description}</p>
+						{#if ev.href}
+							<a
+								href={ev.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="news-link-btn"
+							>
+								View Official Post ↗
+							</a>
+						{/if}
 					</div>
 				</article>
 			{/each}
@@ -1929,6 +2067,397 @@
 		}
 	}
 
+	/* ── Hero Spotlight Card ─────────────────────────────────────────────────── */
+	.spotlight-card {
+		border-color: rgba(56, 189, 248, 0.45);
+		box-shadow:
+			0 40px 90px -34px rgba(2, 6, 23, 0.9),
+			0 0 35px -8px rgba(56, 189, 248, 0.25),
+			inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	}
+	.spotlight-top-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin-bottom: 0.65rem;
+		position: relative;
+		z-index: 3;
+	}
+	.spotlight-tag {
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #fbbf24;
+		background: rgba(245, 158, 11, 0.15);
+		border: 1px solid rgba(245, 158, 11, 0.35);
+		padding: 0.2rem 0.6rem;
+		border-radius: 999px;
+	}
+	.spotlight-package {
+		font-family: var(--font-disp);
+		font-size: 0.85rem;
+		font-weight: 800;
+		color: #34d399;
+		background: rgba(16, 185, 129, 0.15);
+		border: 1px solid rgba(16, 185, 129, 0.35);
+		padding: 0.2rem 0.65rem;
+		border-radius: 999px;
+	}
+	.spotlight-img-frame {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #ffffff;
+		border-radius: 1.15rem;
+		padding: 0.5rem;
+		border: 1px solid rgba(255, 255, 255, 0.25);
+		box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5);
+		text-decoration: none;
+		overflow: hidden;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	.spotlight-img-frame:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 20px 45px -10px rgba(56, 189, 248, 0.3);
+	}
+	.spotlight-img-frame img {
+		width: 100%;
+		height: auto;
+		max-height: 250px;
+		object-fit: contain;
+		border-radius: 0.85rem;
+		display: block;
+	}
+	.spotlight-hover-pill {
+		position: absolute;
+		bottom: 0.75rem;
+		right: 0.75rem;
+		background: rgba(15, 23, 42, 0.9);
+		color: #38bdf8;
+		padding: 0.3rem 0.75rem;
+		border-radius: 999px;
+		font-size: 0.72rem;
+		font-weight: 700;
+		border: 1px solid rgba(56, 189, 248, 0.4);
+		backdrop-filter: blur(6px);
+		transition: all 0.2s ease;
+	}
+	.spotlight-img-frame:hover .spotlight-hover-pill {
+		background: #0284c7;
+		color: #ffffff;
+		border-color: #38bdf8;
+	}
+	.spotlight-student-info {
+		margin-top: 0.75rem;
+		position: relative;
+		z-index: 3;
+	}
+	.spotlight-student-name {
+		font-family: var(--font-disp);
+		font-size: 1.02rem;
+		font-weight: 750;
+		color: #f8fafc;
+		margin: 0;
+	}
+	.spotlight-student-meta {
+		font-size: 0.78rem;
+		color: #94a3b8;
+		margin: 0.15rem 0 0;
+	}
+	a.spotlight-cta {
+		text-decoration: none;
+		transition: all 0.25s ease;
+		border-color: rgba(56, 189, 248, 0.45);
+	}
+	a.spotlight-cta:hover {
+		background: rgba(14, 165, 233, 0.35);
+		border-color: rgba(56, 189, 248, 0.8);
+		color: #ffffff;
+		transform: translateY(-2px);
+	}
+	.news-link-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		margin-top: 0.85rem;
+		font-size: 0.78rem;
+		font-weight: 700;
+		color: var(--accent);
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	.news-link-btn:hover {
+		color: #1d4ed8;
+		text-decoration: underline;
+	}
+
+	/* ── Dedicated Drive Spotlight Section (Top-Grade Light Studio Canvas) ────── */
+	.drive-spotlight-section {
+		padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+		background: #f8fafc;
+		position: relative;
+		overflow: hidden;
+		border-top: 1px solid #e2e8f0;
+		border-bottom: 1px solid #e2e8f0;
+	}
+	.drive-ambient-glow {
+		position: absolute;
+		width: 550px;
+		height: 550px;
+		background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, rgba(16, 185, 129, 0.06) 50%, transparent 70%);
+		top: -120px;
+		right: -80px;
+		filter: blur(60px);
+		pointer-events: none;
+	}
+	.drive-spotlight-banner {
+		position: relative;
+		border-radius: 2rem;
+		background: #ffffff;
+		border: 1px solid #e2e8f0;
+		box-shadow:
+			0 25px 60px -20px rgba(15, 23, 42, 0.08),
+			0 1px 3px rgba(15, 23, 42, 0.04);
+		padding: clamp(1.75rem, 4vw, 3.5rem);
+		overflow: hidden;
+	}
+	.drive-spotlight-grid {
+		display: grid;
+		grid-template-columns: minmax(280px, 360px) 1fr;
+		gap: clamp(2rem, 4vw, 3.5rem);
+		align-items: center;
+		position: relative;
+		z-index: 2;
+	}
+	.drive-media-col {
+		width: 100%;
+	}
+	.drive-poster-frame {
+		display: block;
+		position: relative;
+		border-radius: 1.5rem;
+		background: #ffffff;
+		border: 1px solid #e2e8f0;
+		padding: 0.75rem;
+		box-shadow:
+			0 20px 40px -15px rgba(15, 23, 42, 0.08),
+			0 0 0 1px rgba(15, 23, 42, 0.03);
+		text-decoration: none;
+		transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
+	}
+	.drive-poster-frame:hover {
+		transform: translateY(-4px) scale(1.015);
+		box-shadow:
+			0 30px 60px -15px rgba(2, 132, 199, 0.18),
+			0 0 0 1px rgba(2, 132, 199, 0.3);
+	}
+	.poster-inner-wrapper {
+		width: 100%;
+		border-radius: 1rem;
+		overflow: hidden;
+		background: #ffffff;
+	}
+	.poster-inner-wrapper img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 1;
+		object-fit: contain;
+		display: block;
+	}
+	.drive-poster-tag {
+		position: absolute;
+		top: 1.15rem;
+		left: 1.15rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(15, 23, 42, 0.88);
+		border: 1px solid rgba(56, 189, 248, 0.3);
+		padding: 0.3rem 0.75rem;
+		border-radius: 999px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: #38bdf8;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		backdrop-filter: blur(8px);
+	}
+	.drive-poster-zoom {
+		position: absolute;
+		bottom: 1.15rem;
+		right: 1.15rem;
+		display: inline-flex;
+		align-items: center;
+		background: #ffffff;
+		color: #0f172a;
+		border: 1px solid #cbd5e1;
+		padding: 0.3rem 0.75rem;
+		border-radius: 999px;
+		font-size: 0.72rem;
+		font-weight: 700;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		transition: all 0.2s ease;
+	}
+	.drive-poster-frame:hover .drive-poster-zoom {
+		background: #0284c7;
+		color: #ffffff;
+		border-color: #0284c7;
+	}
+	.drive-info-col {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+	.drive-pill-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.65rem;
+	}
+	.drive-kicker-pill {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.32rem 0.8rem;
+		border-radius: 999px;
+		background: #eff6ff;
+		border: 1px solid #bfdbfe;
+		color: #1d4ed8;
+		font-size: 0.74rem;
+		font-weight: 750;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+	.drive-branch-pill {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.32rem 0.8rem;
+		border-radius: 999px;
+		background: #f5f3ff;
+		border: 1px solid #ddd6fe;
+		color: #6d28d9;
+		font-size: 0.74rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+	}
+	.drive-package-pill {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.32rem 0.95rem;
+		border-radius: 999px;
+		background: #ecfdf5;
+		border: 1px solid #a7f3d0;
+		color: #047857;
+		font-family: var(--font-disp);
+		font-size: 0.88rem;
+		font-weight: 800;
+		letter-spacing: 0.02em;
+	}
+	.drive-title {
+		font-family: var(--font-disp);
+		font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+		font-weight: 800;
+		line-height: 1.25;
+		color: #0f172a;
+		margin: 0;
+		letter-spacing: -0.02em;
+	}
+	.drive-highlight {
+		background: linear-gradient(135deg, #059669, #0284c7);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.drive-desc {
+		font-family: var(--font-body);
+		font-size: clamp(0.92rem, 1.2vw, 1.02rem);
+		line-height: 1.65;
+		color: #475569;
+		margin: 0;
+	}
+	.drive-desc strong {
+		color: #0f172a;
+		font-weight: 650;
+	}
+	.drive-stats-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.9rem;
+	}
+	.drive-stat-cell {
+		padding: 0.95rem 1.15rem;
+		border-radius: 1rem;
+		background: #f8fafc;
+		border: 1px solid #e2e8f0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		transition: all 0.2s ease;
+	}
+	.drive-stat-cell:hover {
+		background: #ffffff;
+		border-color: #cbd5e1;
+		box-shadow: 0 6px 18px -4px rgba(15, 23, 42, 0.06);
+	}
+	.cell-label {
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #64748b;
+	}
+	.cell-value {
+		font-family: var(--font-disp);
+		font-size: 1rem;
+		font-weight: 750;
+		color: #0f172a;
+	}
+	.cell-value.text-role {
+		color: #0284c7;
+	}
+	.cell-value.text-ctc {
+		color: #059669;
+		font-weight: 800;
+	}
+	.cell-sub {
+		font-size: 0.74rem;
+		color: #64748b;
+	}
+	.drive-footer-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding-top: 0.5rem;
+	}
+	.drive-cta-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		background: #0f172a;
+		color: #ffffff;
+		padding: 0.75rem 1.45rem;
+		border-radius: 999px;
+		font-family: var(--font-disp);
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-decoration: none;
+		box-shadow: 0 10px 25px -8px rgba(15, 23, 42, 0.4);
+		transition: all 0.25s ease;
+	}
+	.drive-cta-btn:hover {
+		background: #1e293b;
+		transform: translateY(-2px);
+		box-shadow: 0 14px 30px -8px rgba(15, 23, 42, 0.6);
+	}
+	.drive-badge-credit {
+		font-size: 0.78rem;
+		color: #64748b;
+		font-weight: 600;
+	}
+
 	/* ══════════ RESPONSIVE ════════════════════════════════════════════════════ */
 	@media (max-width: 1024px) {
 		.stats-grid {
@@ -1960,6 +2489,17 @@
 		}
 	}
 	@media (max-width: 768px) {
+		.drive-spotlight-grid {
+			grid-template-columns: 1fr;
+			gap: 1.75rem;
+		}
+		.drive-poster-frame {
+			max-width: 380px;
+			margin: 0 auto;
+		}
+		.drive-stats-grid {
+			grid-template-columns: 1fr;
+		}
 		.hero {
 			padding-top: clamp(0.7rem, 2.2vw, 1.2rem);
 			min-height: 72vh;
