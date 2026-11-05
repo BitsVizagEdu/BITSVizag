@@ -5,6 +5,7 @@
 
 	import Notification from '$lib/components/notification.svelte';
 	import SectionTransition from '$lib/components/SectionTransition.svelte';
+	import EleationDriveHighlight from '$lib/components/EleationDriveHighlight.svelte';
 	import ShieldProtocolHighlight from '$lib/components/ShieldProtocolHighlight.svelte';
 	import OptimizedImage from '$lib/components/OptimizedImage.svelte';
 	import { onDestroy, onMount } from 'svelte';
@@ -160,6 +161,8 @@
 		</picture>
 
 	</section>
+
+	<EleationDriveHighlight />
 
 	<ShieldProtocolHighlight />
 
