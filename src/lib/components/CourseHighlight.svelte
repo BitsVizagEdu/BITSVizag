@@ -5,6 +5,7 @@
 	const courses = [
 		{
 			title: 'CSE',
+			shortName: 'CSE',
 			image: '/gallery/g2.jpg',
 			desc: 'Computer Science & Engineering',
 			tagline: 'Software Architecture, Cloud & Algorithms',
@@ -17,6 +18,7 @@
 		},
 		{
 			title: 'AI & ML',
+			shortName: 'AI·ML',
 			image: '/Course-highlight/newAI.jpg',
 			desc: 'Artificial Intelligence & Machine Learning',
 			tagline: 'Neural Networks, Deep Learning & Robotics',
@@ -29,6 +31,7 @@
 		},
 		{
 			title: 'Cyber Security',
+			shortName: 'Cyber',
 			image: '/CS-Banners/CS-images/get4.jpg',
 			desc: 'CSE (Cyber Security)',
 			tagline: 'Network Defense, Forensics & Cryptography',
@@ -41,6 +44,7 @@
 		},
 		{
 			title: 'ECE',
+			shortName: 'ECE',
 			image: '/Course-highlight/newece.jpg',
 			desc: 'Electronics & Communication Engineering',
 			tagline: 'VLSI, Embedded Systems & 5G Communications',
@@ -53,6 +57,7 @@
 		},
 		{
 			title: 'EEE',
+			shortName: 'EEE',
 			image: './Course-highlight/eeenew.png',
 			desc: 'Electrical & Electronics Engineering',
 			tagline: 'Power Systems, Renewable Energy & EV Tech',
@@ -65,6 +70,7 @@
 		},
 		{
 			title: 'Mechanical',
+			shortName: 'Mech',
 			image: '/mechnew.png',
 			desc: 'Mechanical Engineering',
 			tagline: 'CAE Simulation, Robotics & Advanced Manufacturing',
@@ -107,6 +113,16 @@
 	function handleMouseLeave() {
 		paused = false;
 	}
+
+	function handlePrev() {
+		active = (active - 1 + courses.length) % courses.length;
+		paused = true;
+	}
+
+	function handleNext() {
+		active = (active + 1) % courses.length;
+		paused = true;
+	}
 </script>
 
 <section class="pathways-section" on:mouseleave={handleMouseLeave} aria-label="Academic Pathways">
@@ -123,32 +139,38 @@
 		</p>
 	</div>
 
-	<!-- Department Selector Tabs (Clean, quick switching) -->
-	<div class="pathways-tabs-bar" role="tablist">
+	<!-- Department Selector Tabs: Neat Responsive Grid Structure (3 cols on mobile, 6 cols on desktop) -->
+	<div class="pathways-tabs-grid" role="tablist" aria-label="Engineering Departments">
 		{#each courses as course, i}
 			<button
 				type="button"
 				role="tab"
 				aria-selected={active === i}
-				class="tab-pill {active === i ? 'active' : ''}"
+				class="tab-card {active === i ? 'active' : ''}"
 				style="--tab-color: {course.color};"
 				on:click={() => handleSelect(i)}
 			>
-				<span class="tab-icon">{course.icon}</span>
-				<span class="tab-name">{course.title}</span>
+				<span class="tab-icon-wrap" style="--accent: {course.color}">
+					<span class="tab-icon">{course.icon}</span>
+				</span>
+				<div class="tab-text-wrap">
+					<span class="tab-name-desktop">{course.title}</span>
+					<span class="tab-name-mobile">{course.shortName}</span>
+					<span class="tab-seats-tag">{course.seats.replace(' Seats', '')} seats</span>
+				</div>
 				{#if active === i}
-					<span class="tab-indicator" in:fade={{ duration: 200 }}></span>
+					<span class="tab-active-indicator" in:fade={{ duration: 150 }}></span>
 				{/if}
 			</button>
 		{/each}
 	</div>
 
-	<!-- MAIN POSTER SHOWCASE (Inspired by reference design: Stacked Typography, Layered Card Frame, Pill Badge) -->
+	<!-- MAIN POSTER SHOWCASE (Inspired by reference mockup: Layered Card Frame, Stacked Typography, Pill Badge) -->
 	<div class="showcase-shell" style="--course-color: {courses[active].color};">
 		<!-- Soft Ambient Glow in Course's Native Color -->
 		<div class="ambient-glow" aria-hidden="true"></div>
 
-		<!-- Stacked Rhythmic Watermark Typography (Behind the frame, just like the reference mockup) -->
+		<!-- Stacked Rhythmic Watermark Typography -->
 		<div class="watermark-stack" aria-hidden="true">
 			<span class="watermark-line line-solid">{courses[active].watermark}</span>
 			<span class="watermark-line line-stroke-1">{courses[active].watermark}</span>
@@ -156,9 +178,9 @@
 			<span class="watermark-line line-stroke-3">{courses[active].watermark}</span>
 		</div>
 
-		<!-- Foreground Grid -->
+		<!-- Foreground Responsive Grid -->
 		<div class="showcase-content">
-			<!-- LEFT: Layered Framed Photo Card (Matching reference mockup's white card with rounded inner window) -->
+			<!-- POSTER PHOTO CARD (Layered White Frame with Rounded Inner Window) -->
 			<div class="poster-card-col">
 				<div class="poster-card-wrapper">
 					<!-- Shadow Elevation Backdrop -->
@@ -179,7 +201,7 @@
 									src={courses[active].image}
 									alt={courses[active].desc}
 									class="frame-photo-img"
-									in:fade={{ duration: 350 }}
+									in:fade={{ duration: 300 }}
 								/>
 							{/key}
 							<div class="photo-gradient-overlay"></div>
@@ -197,7 +219,7 @@
 				</div>
 			</div>
 
-			<!-- RIGHT: Editorial Detail & Typography Lockup (Matching reference layout) -->
+			<!-- EDITORIAL DETAIL & TYPOGRAPHY LOCKUP -->
 			<div class="poster-info-col">
 				<!-- Top Script Subtitle -->
 				<div class="script-header-row">
@@ -205,7 +227,7 @@
 					<span class="script-institution">Autonomous Institution</span>
 				</div>
 
-				<!-- Native Colored Pill Badge (e.g. "Placed as a" in reference -> "B.Tech Programme") -->
+				<!-- Native Colored Pill Badge -->
 				<div class="badge-lockup">
 					<span class="course-pill-badge" style="background-color: {courses[active].color};">
 						B.Tech Programme • {courses[active].duration}
@@ -215,7 +237,7 @@
 				<!-- Bold Designation-Style Department Titles -->
 				<div class="title-lockup">
 					{#key active}
-						<div in:fade={{ duration: 300 }}>
+						<div in:fade={{ duration: 250 }}>
 							<h3 class="main-course-title">
 								{courses[active].desc}
 							</h3>
@@ -226,53 +248,73 @@
 					{/key}
 				</div>
 
-				<!-- 3 Verified Academic Metrics (No AI gradients, clean and crisp) -->
-				<div class="metrics-row">
+				<!-- 3 Verified Academic Metrics (Neat 3-Column Grid on both Desktop and Mobile) -->
+				<div class="metrics-grid">
 					<div class="metric-card">
 						<span class="metric-lbl">Duration</span>
 						<strong class="metric-val">{courses[active].duration}</strong>
-						<span class="metric-sub">Full-Time On Campus</span>
+						<span class="metric-sub">Full-Time</span>
 					</div>
 
 					<div class="metric-card">
-						<span class="metric-lbl">Intake Capacity</span>
+						<span class="metric-lbl">Capacity</span>
 						<strong class="metric-val" style="color: {courses[active].color};">
-							{courses[active].seats}
+							{courses[active].seats.replace(' Seats', '')}
 						</strong>
-						<span class="metric-sub">Annual Admissions</span>
+						<span class="metric-sub">Annual Seats</span>
 					</div>
 
 					<div class="metric-card">
-						<span class="metric-lbl">Accreditation</span>
-						<strong class="metric-val">AICTE / UGC</strong>
-						<span class="metric-sub">JNTUK Affiliated</span>
+						<span class="metric-lbl">Accredited</span>
+						<strong class="metric-val">AICTE</strong>
+						<span class="metric-sub">UGC Autonomous</span>
 					</div>
 				</div>
 
-				<!-- Bottom Action Row: Direct Department Link & Carousel Controls -->
+				<!-- Bottom Action Row: Direct Department Link & Mobile Slider Arrows -->
 				<div class="actions-row">
 					<a
 						href={courses[active].href}
 						class="btn-explore-dept"
 						style="--btn-color: {courses[active].color};"
 					>
-						<span>Explore Department & Curriculum</span>
+						<span>Explore Department & Syllabus</span>
 						<span class="arrow-circle">
 							<i class="fa-solid fa-arrow-right"></i>
 						</span>
 					</a>
 
-					<!-- Quick Indicator Dots -->
-					<div class="carousel-dots" aria-label="Course slides">
-						{#each courses as _, i}
-							<button
-								type="button"
-								class="dot {active === i ? 'active' : ''}"
-								style="--dot-color: {courses[active].color};"
-								on:click={() => handleSelect(i)}
-								aria-label="View course {i + 1}"
-							></button>
-						{/each}
+					<!-- Carousel Controls: Prev/Next & Dots -->
+					<div class="carousel-nav-group">
+						<button
+							type="button"
+							class="nav-arrow-btn"
+							on:click={handlePrev}
+							aria-label="Previous department"
+						>
+							<i class="fa-solid fa-chevron-left"></i>
+						</button>
+
+						<div class="carousel-dots" aria-label="Course slides">
+							{#each courses as _, i}
+								<button
+									type="button"
+									class="dot {active === i ? 'active' : ''}"
+									style="--dot-color: {courses[active].color};"
+									on:click={() => handleSelect(i)}
+									aria-label="View course {i + 1}"
+								></button>
+							{/each}
+						</div>
+
+						<button
+							type="button"
+							class="nav-arrow-btn"
+							on:click={handleNext}
+							aria-label="Next department"
+						>
+							<i class="fa-solid fa-chevron-right"></i>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -285,7 +327,12 @@
 		max-width: 1280px;
 		margin: 0 auto;
 		padding: 4.5rem 1.5rem 5.5rem;
-		font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+		font-family:
+			'Plus Jakarta Sans',
+			'Inter',
+			system-ui,
+			-apple-system,
+			sans-serif;
 	}
 
 	/* ── Header ──────────────────────────────────────────────────────────────── */
@@ -320,7 +367,7 @@
 	}
 
 	.header-title {
-		font-size: clamp(2rem, 3.8vw, 3.25rem);
+		font-size: clamp(1.85rem, 3.8vw, 3.25rem);
 		font-weight: 800;
 		color: #0f172a;
 		letter-spacing: -0.025em;
@@ -329,67 +376,109 @@
 	}
 
 	.header-desc {
-		font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+		font-size: clamp(0.9rem, 1.2vw, 1.05rem);
 		line-height: 1.65;
 		color: #64748b;
 		margin: 0;
 		font-weight: 400;
 	}
 
-	/* ── Department Selector Tabs ───────────────────────────────────────────── */
-	.pathways-tabs-bar {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 0.6rem;
+	/* ── Department Selector Tabs: Neat Responsive Column Grid ──────────────── */
+	.pathways-tabs-grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 0.65rem;
 		margin-bottom: 2rem;
+		max-width: 1100px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.tab-pill {
+	.tab-card {
 		position: relative;
-		display: inline-flex;
+		display: flex;
 		align-items: center;
-		gap: 0.5rem;
-		padding: 0.55rem 1.1rem;
-		border-radius: 9999px;
+		gap: 0.65rem;
+		padding: 0.65rem 0.85rem;
+		border-radius: 1.15rem;
 		background: #ffffff;
 		border: 1px solid #e2e8f0;
-		font-size: 0.85rem;
-		font-weight: 700;
-		color: #475569;
 		cursor: pointer;
-		transition: all 0.25s ease;
+		text-align: left;
+		transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 		box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
 	}
 
-	.tab-pill:hover {
-		color: #0f172a;
+	.tab-card:hover {
 		border-color: #cbd5e1;
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
 	}
 
-	.tab-pill.active {
-		color: #0f172a;
+	.tab-card.active {
 		background: #ffffff;
 		border-color: var(--tab-color);
 		box-shadow:
-			0 4px 14px -2px rgba(15, 23, 42, 0.1),
-			0 0 0 1px var(--tab-color);
+			0 8px 20px -4px rgba(15, 23, 42, 0.12),
+			0 0 0 1.5px var(--tab-color);
+		transform: translateY(-2px);
+	}
+
+	.tab-icon-wrap {
+		width: 36px;
+		height: 36px;
+		border-radius: 0.75rem;
+		background: #f8fafc;
+		border: 1px solid #f1f5f9;
+		display: grid;
+		place-items: center;
+		flex-shrink: 0;
+		transition: all 0.25s ease;
+	}
+
+	.tab-card.active .tab-icon-wrap {
+		background: var(--accent);
+		border-color: transparent;
 	}
 
 	.tab-icon {
-		font-size: 1rem;
+		font-size: 1.15rem;
+		line-height: 1;
 	}
 
-	.tab-name {
+	.tab-text-wrap {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+	}
+
+	.tab-name-desktop {
+		font-size: 0.82rem;
+		font-weight: 800;
+		color: #0f172a;
+		letter-spacing: -0.01em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.tab-name-mobile {
+		display: none;
+		font-size: 0.78rem;
+		font-weight: 800;
+		color: #0f172a;
 		letter-spacing: -0.01em;
 	}
 
-	.tab-indicator {
+	.tab-seats-tag {
+		font-size: 0.65rem;
+		font-weight: 600;
+		color: #64748b;
+	}
+
+	.tab-active-indicator {
 		position: absolute;
-		bottom: -2px;
+		bottom: -1px;
 		left: 20%;
 		right: 20%;
 		height: 3px;
@@ -403,7 +492,7 @@
 		border-radius: 2.25rem;
 		background: #090d16;
 		border: 1px solid rgba(255, 255, 255, 0.1);
-		padding: clamp(2rem, 4vw, 3.5rem);
+		padding: clamp(1.75rem, 4vw, 3.5rem);
 		overflow: hidden;
 		box-shadow:
 			0 25px 60px -15px rgba(15, 23, 42, 0.35),
@@ -468,7 +557,7 @@
 		color: transparent;
 	}
 
-	/* ── Foreground Grid ─────────────────────────────────────────────────────── */
+	/* ── Foreground Responsive Grid ─────────────────────────────────────────── */
 	.showcase-content {
 		position: relative;
 		z-index: 2;
@@ -631,7 +720,7 @@
 		color: rgba(255, 255, 255, 0.5);
 	}
 
-	/* Pill Badge (Inspired by "Placed as a") */
+	/* Pill Badge */
 	.badge-lockup {
 		display: flex;
 		align-items: center;
@@ -654,11 +743,11 @@
 
 	/* Title Lockup */
 	.title-lockup {
-		min-height: 96px;
+		min-height: auto;
 	}
 
 	.main-course-title {
-		font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+		font-size: clamp(1.75rem, 3.2vw, 2.75rem);
 		font-weight: 900;
 		color: #ffffff;
 		letter-spacing: -0.025em;
@@ -667,35 +756,35 @@
 	}
 
 	.course-tagline {
-		font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+		font-size: clamp(0.92rem, 1.25vw, 1.1rem);
 		color: #94a3b8;
 		margin: 0;
 		line-height: 1.5;
 		font-weight: 500;
 	}
 
-	/* 3 Verified Metrics */
-	.metrics-row {
+	/* 3 Verified Academic Metrics (Neat 3-Column Grid) */
+	.metrics-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 0.85rem;
-		padding: 1rem 0;
+		padding: 0.85rem 0;
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
 	.metric-card {
-		padding: 0.75rem 0.9rem;
+		padding: 0.75rem 0.85rem;
 		border-radius: 1rem;
 		background: rgba(255, 255, 255, 0.04);
 		border: 1px solid rgba(255, 255, 255, 0.07);
 		display: flex;
 		flex-direction: column;
-		gap: 0.2rem;
+		gap: 0.15rem;
 	}
 
 	.metric-lbl {
-		font-size: 0.68rem;
+		font-size: 0.65rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
@@ -703,7 +792,7 @@
 	}
 
 	.metric-val {
-		font-size: 1.25rem;
+		font-size: clamp(1.05rem, 2vw, 1.25rem);
 		font-weight: 800;
 		color: #ffffff;
 		letter-spacing: -0.02em;
@@ -711,8 +800,11 @@
 	}
 
 	.metric-sub {
-		font-size: 0.68rem;
+		font-size: 0.65rem;
 		color: #64748b;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	/* Actions Row */
@@ -720,7 +812,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 1.5rem;
+		gap: 1.25rem;
 		flex-wrap: wrap;
 	}
 
@@ -762,6 +854,33 @@
 		transform: translateX(3px);
 	}
 
+	/* Carousel Navigation Controls */
+	.carousel-nav-group {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+	}
+
+	.nav-arrow-btn {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		color: #ffffff;
+		display: grid;
+		place-items: center;
+		font-size: 0.72rem;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.nav-arrow-btn:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.3);
+		transform: scale(1.08);
+	}
+
 	.carousel-dots {
 		display: flex;
 		align-items: center;
@@ -769,8 +888,8 @@
 	}
 
 	.dot {
-		width: 9px;
-		height: 9px;
+		width: 8px;
+		height: 8px;
 		border-radius: 9999px;
 		background: rgba(255, 255, 255, 0.2);
 		border: none;
@@ -784,19 +903,24 @@
 	}
 
 	.dot.active {
-		width: 28px;
+		width: 24px;
 		background: var(--dot-color);
 	}
 
-	/* ── Responsive ──────────────────────────────────────────────────────────── */
+	/* ── Tablet Breakpoint (max-width: 992px) ────────────────────────────────── */
 	@media (max-width: 992px) {
+		.pathways-tabs-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.55rem;
+		}
+
 		.showcase-content {
 			grid-template-columns: 1fr;
-			gap: 2.5rem;
+			gap: 2.25rem;
 		}
 
 		.poster-card-wrapper {
-			max-width: 320px;
+			max-width: 340px;
 		}
 
 		.poster-frame-card {
@@ -805,51 +929,201 @@
 
 		.watermark-stack {
 			right: 0;
-			opacity: 0.35;
+			opacity: 0.25;
 		}
 	}
 
+	/* ── Mobile Breakpoint (max-width: 640px) ────────────────────────────────── */
 	@media (max-width: 640px) {
 		.pathways-section {
 			padding: 2.5rem 1rem 3.5rem;
 		}
 
+		.pathways-header {
+			margin-bottom: 1.75rem;
+		}
+
+		.header-title {
+			font-size: 1.55rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.header-desc {
+			font-size: 0.82rem;
+			line-height: 1.55;
+		}
+
+		/* Neat 3-Column Mobile Tab Grid */
+		.pathways-tabs-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.4rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.tab-card {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 0.5rem 0.35rem;
+			gap: 0.35rem;
+			border-radius: 0.9rem;
+		}
+
+		.tab-icon-wrap {
+			width: 32px;
+			height: 32px;
+			border-radius: 0.65rem;
+		}
+
+		.tab-icon {
+			font-size: 1rem;
+		}
+
+		.tab-name-desktop {
+			display: none;
+		}
+
+		.tab-name-mobile {
+			display: block;
+			font-size: 0.72rem;
+		}
+
+		.tab-seats-tag {
+			font-size: 0.6rem;
+		}
+
+		/* Showcase Mobile Card */
 		.showcase-shell {
-			padding: 1.5rem 1.15rem;
+			padding: 1.35rem 1rem 1.6rem;
 			border-radius: 1.75rem;
 		}
 
-		.pathways-tabs-bar {
-			gap: 0.4rem;
+		.ambient-glow {
+			width: 280px;
+			height: 280px;
 		}
 
-		.tab-pill {
-			padding: 0.4rem 0.8rem;
-			font-size: 0.76rem;
+		.watermark-stack {
+			right: -0.5rem;
+			opacity: 0.18;
 		}
 
-		.metrics-row {
-			grid-template-columns: 1fr;
-			gap: 0.5rem;
+		.watermark-line {
+			font-size: clamp(3.5rem, 18vw, 5.5rem);
+		}
+
+		.showcase-content {
+			gap: 1.5rem;
+		}
+
+		.poster-card-wrapper {
+			max-width: 100%;
+		}
+
+		.poster-frame-card {
+			border-radius: 1.5rem;
+			padding: 0.75rem 0.75rem 0.9rem;
+			box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+		}
+
+		.frame-photo-window {
+			aspect-ratio: 16 / 11;
+			border-radius: 1.15rem;
+			margin: 0.5rem 0;
+		}
+
+		.photo-floating-icon {
+			width: 32px;
+			height: 32px;
+			font-size: 0.95rem;
+			bottom: 0.65rem;
+			right: 0.65rem;
+		}
+
+		.frame-top-bar,
+		.frame-bottom-strip {
+			font-size: 0.72rem;
+			padding-left: 0.25rem;
+			padding-right: 0.25rem;
+		}
+
+		/* Typography Lockup Mobile */
+		.poster-info-col {
+			gap: 0.95rem;
+		}
+
+		.script-header-row {
+			padding-bottom: 0.5rem;
+		}
+
+		.script-sub {
+			font-size: 1.25rem;
+		}
+
+		.script-institution {
+			font-size: 0.62rem;
+		}
+
+		.course-pill-badge {
+			padding: 0.35rem 0.85rem;
+			font-size: 0.72rem;
 		}
 
 		.main-course-title {
-			font-size: 1.5rem;
+			font-size: 1.35rem;
+			line-height: 1.2;
+			margin-bottom: 0.35rem;
+		}
+
+		.course-tagline {
+			font-size: 0.82rem;
+			line-height: 1.45;
+		}
+
+		/* Neat 3-Column Metrics Grid on Mobile */
+		.metrics-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.4rem;
+			padding: 0.65rem 0;
+		}
+
+		.metric-card {
+			padding: 0.55rem 0.4rem;
+			border-radius: 0.75rem;
+			text-align: center;
+			align-items: center;
+		}
+
+		.metric-lbl {
+			font-size: 0.58rem;
+		}
+
+		.metric-val {
+			font-size: 0.95rem;
+		}
+
+		.metric-sub {
+			font-size: 0.56rem;
+		}
+
+		/* Actions Mobile */
+		.actions-row {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 0.85rem;
 		}
 
 		.btn-explore-dept {
 			width: 100%;
 			justify-content: center;
+			padding: 0.7rem 1.15rem;
+			font-size: 0.82rem;
 		}
 
-		.actions-row {
-			flex-direction: column;
-			align-items: stretch;
-			gap: 1rem;
-		}
-
-		.carousel-dots {
+		.carousel-nav-group {
 			justify-content: center;
+			width: 100%;
+			gap: 0.85rem;
 		}
 	}
 </style>
