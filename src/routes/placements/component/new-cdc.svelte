@@ -128,6 +128,13 @@
 		}
 	}
 
+	function scrollToPlacements() {
+		const target = document.getElementById('stats');
+		if (target) {
+			target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	}
+
 	const events = [
 		{
 			date: '26/10/2026',
@@ -238,109 +245,177 @@
 <!-- HERO                                                                    -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <section class="hero">
-	<!-- <div class="hero-bg" style="transform: translateY({scrollY * 0.24}px)" aria-hidden="true"></div>
-	<div class="hero-overlay" aria-hidden="true"></div> -->
-	<!-- <div class="hero-gridline" aria-hidden="true"></div> -->
-
 	<div class="hero-inner">
+		<!-- LEFT: HERO COPY -->
 		<div class="hero-copy">
-			<span class="hero-kicker">Career Development Cell</span>
+			<div class="hero-kicker-wrap">
+				<span class="hero-kicker">
+					<i class="fa-solid fa-briefcase kicker-icon"></i>
+					CAREER DEVELOPMENT CELL
+				</span>
+				<span class="kicker-line"></span>
+			</div>
+
 			<h1 class="hero-title">
 				Build a Career with
-				<span class="hero-bits" aria-label="BITS">
-					<span class="bits-letter bits-b">B</span>
-					<span class="bits-letter bits-i">I</span>
-					<span class="bits-letter bits-t">T</span>
-					<span class="bits-letter bits-s">S</span>
+				<span class="hero-highlight-wrap">
+					<em class="hero-highlight-text">Training & Placement</em>
+					<svg class="hero-swoosh" viewBox="0 0 280 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M 4 14 C 70 4, 200 2, 276 10" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" />
+					</svg>
 				</span>
-				<em class="hero-gradient-text">Training & Placement</em>
 			</h1>
+
 			<p class="hero-desc">
 				A clean, focused pathway for ambitious students: structured mentoring, recruiter-grade skill
 				tracks, and outcomes backed by real placement momentum.
 			</p>
-			<div class="hero-pills">
-				<span>Campus Placements</span>
-				<span>Industry Linkages</span>
-				<span>Skill Development</span>
-			</div>
-			<div class="hero-proof">
-				<div class="hero-proof-item">
-					<strong>40+</strong>
-					<span>Active Recruiters</span>
-				</div>
-				<div class="hero-proof-item">
-					<strong>50+</strong>
-					<span>Hiring Partners</span>
-				</div>
-				<div class="hero-proof-item">
-					<strong>20k+</strong>
 
-					<span>Top Internship Stipend</span>
+			<!-- 3 STAT PROOF BADGES -->
+			<div class="hero-proof-grid">
+				<div class="proof-card">
+					<div class="proof-icon-wrap proof-blue">
+						<i class="fa-solid fa-users"></i>
+					</div>
+					<div class="proof-content">
+						<strong class="proof-val">40+</strong>
+						<span class="proof-lbl">Active Recruiters</span>
+					</div>
+				</div>
+
+				<div class="proof-card">
+					<div class="proof-icon-wrap proof-green">
+						<i class="fa-solid fa-handshake"></i>
+					</div>
+					<div class="proof-content">
+						<strong class="proof-val">50+</strong>
+						<span class="proof-lbl">Hiring Partners</span>
+					</div>
+				</div>
+
+				<div class="proof-card">
+					<div class="proof-icon-wrap proof-purple">
+						<i class="fa-solid fa-trophy"></i>
+					</div>
+					<div class="proof-content">
+						<strong class="proof-val">20k+</strong>
+						<span class="proof-lbl">Top Internship Stipend</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- ACTION BUTTONS & STUDENT TRUST PROOF -->
+			<div class="hero-actions-row">
+				<a href="#stats" on:click|preventDefault={scrollToPlacements} class="btn-explore">
+					<span>Explore Placements</span>
+					<span class="btn-arrow-circle">
+						<i class="fa-solid fa-arrow-right"></i>
+					</span>
+				</a>
+
+				<div class="student-trust-badge">
+					<div class="avatar-stack">
+						<img src="/alumini/1.jpg" alt="Student" class="avatar-img" />
+						<img src="/alumini/2.jpg" alt="Student" class="avatar-img" />
+						<img src="/alumini/3.jpg" alt="Student" class="avatar-img" />
+					</div>
+					<div class="trust-text">
+						<span>Trusted by</span>
+						<strong>Our Students</strong>
+					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- RIGHT: STAR PLACEMENT HERO GLASS CARD -->
 		<div class="hero-visual">
-			<div class="hero-card spotlight-card">
-				<div class="hero-card-shine" aria-hidden="true"></div>
+			<div class="spotlight-glass-card">
+				<!-- Top Bar with Tags -->
 				<div class="spotlight-top-bar">
-					<span class="spotlight-tag">🌟 STAR PLACEMENT 2026</span>
-					<span class="spotlight-package">₹9.6 LPA</span>
+					<span class="spotlight-star-tag">
+						<i class="fa-solid fa-star"></i>
+						STAR PLACEMENT 2026
+					</span>
+					<span class="spotlight-ctc-tag">₹9.6 LPA</span>
 				</div>
-				<h3 class="hero-card-title">Eleation Campus Recruitment Drive</h3>
-				<a
-					href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
-					target="_blank"
-					rel="noopener noreferrer"
-					class="spotlight-img-frame group"
-					title="Click to view Instagram announcement"
-				>
+
+				<!-- Title with Amber Accent Bar -->
+				<div class="spotlight-title-row">
+					<span class="title-amber-bar"></span>
+					<h3 class="spotlight-card-heading">Eleation Campus Recruitment Drive</h3>
+				</div>
+
+				<!-- White Framed Poster Image -->
+				<div class="spotlight-poster-frame">
 					<img
 						src="/event-photos/JOB.png"
 						alt="Mr. Durga Vara Prasad Uddavolu - CAE Process Engineer at Eleation (₹9.6 LPA)"
-						loading="lazy"
+						loading="eager"
 					/>
-					<div class="spotlight-hover-pill">
-						<span>View Official Post ↗</span>
-					</div>
-				</a>
-				<div class="spotlight-student-info">
-					<h4 class="spotlight-student-name">Mr. Durga Vara Prasad Uddavolu</h4>
-					<p class="spotlight-student-meta">Final Year • Mechanical Engineering</p>
+					<a
+						href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
+						target="_blank"
+						rel="noopener noreferrer"
+						class="poster-overlay-pill"
+						title="View official announcement"
+					>
+						<i class="fa-solid fa-eye"></i>
+						<span>View Official Post</span>
+						<i class="fa-solid fa-arrow-right" style="font-size: 0.65rem;"></i>
+					</a>
 				</div>
-				<div class="hero-card-stats">
-					<div>
-						<span>Selected Role</span>
-						<strong style="color: #38bdf8;">CAE Process Engineer</strong>
+
+				<!-- Student Name & Specialization -->
+				<div class="spotlight-student-block">
+					<h4 class="student-name">Mr. Durga Vara Prasad Uddavolu</h4>
+					<p class="student-dept">Final Year • Mechanical Engineering</p>
+				</div>
+
+				<!-- Two Metric Chips -->
+				<div class="spotlight-chips-row">
+					<div class="spotlight-chip">
+						<div class="chip-icon-box chip-blue">
+							<i class="fa-solid fa-briefcase"></i>
+						</div>
+						<div class="chip-meta">
+							<span class="chip-kicker">SELECTED ROLE</span>
+							<strong class="chip-val chip-val-blue">CAE Process Engineer</strong>
+						</div>
 					</div>
-					<div>
-						<span>Recruiter</span>
-						<strong style="color: #34d399;">Eleation</strong>
+
+					<div class="spotlight-chip">
+						<div class="chip-icon-box chip-green">
+							<i class="fa-solid fa-user-check"></i>
+						</div>
+						<div class="chip-meta">
+							<span class="chip-kicker">RECRUITER</span>
+							<strong class="chip-val chip-val-green">Eleation</strong>
+						</div>
 					</div>
 				</div>
+
+				<!-- Bottom Link Pill -->
 				<a
 					href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
 					target="_blank"
 					rel="noopener noreferrer"
-					class="hero-card-badge spotlight-cta"
+					class="spotlight-bottom-bar"
 				>
-					<span class="badge-dot"></span>
-					Core Mechanical Placement • View Details ↗
+					<div class="bottom-bar-left">
+						<i class="fa-solid fa-circle-info"></i>
+						<span>Core Mechanical Placement - View Details</span>
+					</div>
+					<i class="fa-solid fa-chevron-right bottom-bar-chevron"></i>
 				</a>
 			</div>
 		</div>
-	</div>
-
-	<div class="hero-scroll-cue" aria-hidden="true">
-		<span></span>
 	</div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 <!-- STATS                                                                   -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
-<section class="stats-section">
+<section class="stats-section" id="stats">
 	<div class="section-shell">
 		<h2 class="section-title reveal">Placement Excellence</h2>
 		<div class="stats-grid">
@@ -801,315 +876,473 @@
 		text-align: center;
 	}
 
-	/* ══════════ HERO ══════════════════════════════════════════════════════════ */
+	/* ══════════ HERO (PRODUCT GRADE - EXACT MOCKUP) ══════════════════════════ */
 	.hero {
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
-		min-height: 78vh;
-		background: var(--svh);
+		min-height: 86vh;
+		background: #020b1e url('/bg/cdc-hero-bg.png') center center / cover no-repeat;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: clamp(1rem, 2.8vw, 2rem) clamp(1rem, 5vw, 4rem) clamp(2.2rem, 4.5vw, 3.4rem);
-		background: var(--ink);
+		padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1rem, 5vw, 4rem) clamp(3.5rem, 6vw, 5.5rem);
+	}
+	.hero::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 20% 30%, rgba(2, 132, 199, 0.15), transparent 50%);
+		pointer-events: none;
+		z-index: 0;
 	}
 	.hero-inner {
 		position: relative;
 		z-index: 1;
-		max-width: 1260px;
+		max-width: 1280px;
 		margin: 0 auto;
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1.08fr 0.92fr;
-		gap: clamp(2rem, 5vw, 5rem);
+		grid-template-columns: 1.15fr 0.85fr;
+		gap: clamp(2rem, 4vw, 4.5rem);
 		align-items: center;
 	}
 	.hero-copy {
 		animation: hero-up 0.85s var(--ease-out) both;
 	}
-
+	.hero-kicker-wrap {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+	}
 	.hero-kicker {
 		display: inline-flex;
-		padding: 0.45rem 0.95rem;
+		align-items: center;
+		gap: 0.55rem;
+		padding: 0.45rem 1.1rem;
 		border-radius: 999px;
-		border: 1px solid rgba(255, 255, 255, 0.28);
-		background: rgba(255, 255, 255, 0.1);
-		backdrop-filter: blur(8px);
+		border: 1px solid rgba(56, 189, 248, 0.35);
+		background: rgba(10, 25, 52, 0.75);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 0 20px rgba(2, 132, 199, 0.25);
 		font-family: var(--font-body);
-		font-size: 0.74rem;
-		font-weight: 700;
+		font-size: 0.76rem;
+		font-weight: 750;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
-		color: rgba(248, 250, 252, 0.9);
-		margin-bottom: 1.3rem;
+		color: #ffffff;
+	}
+	.kicker-icon {
+		color: #f59e0b;
+		font-size: 0.85rem;
+	}
+	.kicker-line {
+		flex: 1;
+		max-width: 90px;
+		height: 1px;
+		background: linear-gradient(90deg, rgba(56, 189, 248, 0.5), transparent);
 	}
 	.hero-title {
 		font-family: var(--font-disp);
-		font-size: clamp(2.6rem, 5.4vw, 4.8rem);
-		font-weight: 700;
-		line-height: 1.02;
-		letter-spacing: -0.02em;
-		color: #f8fafc;
-		text-shadow: 0 12px 40px rgba(2, 6, 23, 0.5);
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.5rem;
-		margin: 0 0 1.4rem;
-	}
-	.hero-bits {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.28rem;
-		margin-right: 0.12rem;
-		position: relative;
-		top: -0.02em;
-	}
-	.bits-letter {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: clamp(2rem, 3.2vw, 2.6rem);
-		height: clamp(2rem, 3.2vw, 2.6rem);
-		border-radius: 0.46rem;
-		font-size: clamp(1.1rem, 1.95vw, 1.42rem);
-		font-weight: 800;
-		line-height: 1;
+		font-size: clamp(2.5rem, 5vw, 4.3rem);
+		font-weight: 850;
+		line-height: 1.06;
+		letter-spacing: -0.025em;
 		color: #ffffff;
-		box-shadow:
-			0 12px 24px -14px rgba(2, 6, 23, 0.9),
-			inset 0 1px 0 rgba(255, 255, 255, 0.35);
-		border: 1px solid rgba(255, 255, 255, 0.25);
+		text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+		margin: 0 0 1.25rem;
 	}
-	.bits-b {
-		background: linear-gradient(145deg, #ff3ba6, var(--bits-b));
+	.hero-highlight-wrap {
+		display: block;
+		position: relative;
+		margin-top: 0.15rem;
 	}
-	.bits-i {
-		background: linear-gradient(145deg, #a2d94f, var(--bits-i));
+	.hero-highlight-text {
+		font-style: italic;
+		font-weight: 850;
+		color: #f59e0b;
+		text-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
 	}
-	.bits-t {
-		background: linear-gradient(145deg, #ffd651, var(--bits-t));
-		color: #14213d;
-	}
-	.bits-s {
-		background: linear-gradient(145deg, #4ebcf0, var(--bits-s));
-	}
-	.hero-title em {
-		font-style: normal;
-	}
-	.hero-gradient-text {
-		font-style: normal;
-		display: inline-block;
-		white-space: nowrap;
-		flex-shrink: 0;
-		font-size: clamp(1.9rem, 6.8vw, 4.2rem);
-		line-height: 1.08;
-		background: linear-gradient(
-			90deg,
-			var(--bits-b) 0%,
-			var(--bits-b) 23%,
-			var(--bits-i) 23%,
-			var(--bits-i) 48%,
-			var(--bits-t) 48%,
-			var(--bits-t) 72%,
-			var(--bits-s) 72%,
-			#1f6df0 100%
-		);
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		-webkit-box-decoration-break: clone;
-		box-decoration-break: clone;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent;
+	.hero-swoosh {
+		display: block;
+		width: 100%;
+		max-width: 320px;
+		height: 12px;
+		margin-top: -0.2rem;
+		margin-bottom: 0.3rem;
+		overflow: visible;
 	}
 	.hero-desc {
 		font-family: var(--font-body);
-		font-size: clamp(1rem, 1.3vw, 1.1rem);
-		line-height: 1.72;
-		color: rgba(226, 232, 240, 0.9);
-		max-width: 54ch;
-		margin: 0 0 1.3rem;
+		font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+		line-height: 1.68;
+		color: #cbd5e1;
+		max-width: 52ch;
+		margin: 0 0 1.6rem;
 	}
-	.hero-pills {
+	.hero-proof-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.85rem;
+		max-width: 650px;
+		margin-bottom: 1.8rem;
+	}
+	.proof-card {
+		background: rgba(8, 20, 44, 0.68);
+		border: 1px solid rgba(56, 189, 248, 0.22);
+		backdrop-filter: blur(12px);
+		border-radius: 1.15rem;
+		padding: 0.8rem 1rem;
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.6rem;
-		margin-bottom: 1.4rem;
+		align-items: center;
+		gap: 0.85rem;
+		box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.5);
+		transition: transform 0.25s ease, border-color 0.25s ease;
 	}
-	.hero-pills span {
-		padding: 0.46rem 0.9rem;
-		border-radius: 999px;
+	.proof-card:hover {
+		transform: translateY(-2px);
+		border-color: rgba(56, 189, 248, 0.45);
+	}
+	.proof-icon-wrap {
+		font-size: 1.45rem;
+		line-height: 1;
+		flex-shrink: 0;
+	}
+	.proof-blue {
+		color: #38bdf8;
+	}
+	.proof-green {
+		color: #34d399;
+	}
+	.proof-purple {
+		color: #c084fc;
+	}
+	.proof-content {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+	}
+	.proof-val {
+		font-family: var(--font-disp);
+		font-size: 1.45rem;
+		font-weight: 850;
+		color: #ffffff;
+		line-height: 1.1;
+		letter-spacing: -0.01em;
+	}
+	.proof-lbl {
 		font-family: var(--font-body);
 		font-size: 0.72rem;
 		font-weight: 600;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: #dbeafe;
-		background: rgba(15, 23, 42, 0.44);
-		border: 1px solid rgba(148, 163, 184, 0.3);
-	}
-	.hero-proof {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(120px, 1fr));
-		gap: 0.85rem;
-		max-width: 640px;
-	}
-	.hero-proof-item {
-		padding: 0.9rem 0.95rem;
-		border-radius: 0.85rem;
-		border: 1px solid rgba(148, 163, 184, 0.26);
-		background: rgba(2, 6, 23, 0.44);
-		backdrop-filter: blur(6px);
-		display: flex;
-		flex-direction: column;
-		gap: 0.22rem;
-	}
-	.hero-proof-item strong {
-		font-family: var(--font-disp);
-		font-size: 1.05rem;
-		font-weight: 700;
-		color: #e2e8f0;
-	}
-	.hero-proof-item span {
-		font-family: var(--font-body);
-		font-size: 0.76rem;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		color: #93c5fd;
-	}
-	.hero-visual {
-		animation: hero-up 1s 0.18s var(--ease-out) both;
-	}
-	.hero-card {
-		position: relative;
-		border-radius: var(--radius-xl);
-		padding: 1rem;
-		background: rgba(15, 23, 42, 0.6);
-		border: 1px solid rgba(148, 163, 184, 0.28);
-		backdrop-filter: blur(12px);
-		box-shadow:
-			0 40px 90px -34px rgba(2, 6, 23, 0.82),
-			inset 0 1px 0 rgba(255, 255, 255, 0.15);
-		overflow: hidden;
-	}
-	.hero-card-shine {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(
-			135deg,
-			rgba(255, 255, 255, 0.18),
-			transparent 40%,
-			transparent 60%,
-			rgba(59, 130, 246, 0.1)
-		);
-		pointer-events: none;
-		z-index: 2;
-	}
-	.hero-card-title {
-		margin: 0 0 0.95rem;
-		font-family: var(--font-disp);
-		font-size: clamp(1.1rem, 2vw, 1.45rem);
-		font-weight: 650;
-		line-height: 1.3;
-		color: #f8fafc;
-	}
-	.hero-card-img {
-		border-radius: calc(var(--radius-xl) - 6px);
-		overflow: hidden;
-		aspect-ratio: 5/3.5;
-		position: relative;
-		z-index: 1;
-		border: 1px solid rgba(255, 255, 255, 0.14);
-	}
-	.hero-card-img img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		display: block;
-	}
-	.hero-card-stats {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 0.8rem;
-		margin-top: 0.9rem;
-		margin-bottom: 1.8rem;
-		position: relative;
-		z-index: 3;
-	}
-	.hero-card-stats div {
-		padding: 0.75rem;
-		border-radius: 0.75rem;
-		background: rgba(2, 6, 23, 0.54);
-		border: 1px solid rgba(148, 163, 184, 0.2);
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-	.hero-card-stats span {
-		font-family: var(--font-body);
-		font-size: 0.68rem;
-		font-weight: 600;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
 		color: #94a3b8;
+		white-space: nowrap;
+		margin-top: 0.1rem;
 	}
-	.hero-card-stats strong {
-		font-family: var(--font-disp);
+	.hero-actions-row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1.1rem;
+	}
+	.btn-explore {
+		background: #f59e0b;
+		color: #0f172a;
+		font-family: var(--font-body);
 		font-size: 0.92rem;
-		font-weight: 650;
-		color: #e2e8f0;
-	}
-	.hero-card-badge {
-		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
-		transform: none;
-		z-index: 3;
+		font-weight: 800;
+		border-radius: 999px;
+		padding: 0.72rem 1.4rem;
 		display: inline-flex;
 		align-items: center;
-		gap: 0.5rem;
-		padding: 0.48rem 0.9rem;
-		border-radius: 999px;
-		background: rgba(2, 6, 23, 0.8);
-		backdrop-filter: blur(8px);
-		border: 1px solid rgba(148, 163, 184, 0.3);
+		gap: 0.75rem;
+		text-decoration: none;
+		box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
+		transition: all 0.25s ease;
+	}
+	.btn-explore:hover {
+		background: #fbbf24;
+		transform: translateY(-2px);
+		box-shadow: 0 14px 30px rgba(245, 158, 11, 0.45);
+	}
+	.btn-arrow-circle {
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		background: #0f172a;
+		color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.72rem;
+	}
+	.student-trust-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		padding-left: 0.3rem;
+	}
+	.avatar-stack {
+		display: flex;
+		align-items: center;
+	}
+	.avatar-img {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		border: 2px solid #0a1b36;
+		object-fit: cover;
+		margin-left: -8px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	}
+	.avatar-img:first-child {
+		margin-left: 0;
+	}
+	.trust-text {
 		font-family: var(--font-body);
 		font-size: 0.74rem;
+		color: #94a3b8;
+		line-height: 1.25;
+		display: flex;
+		flex-direction: column;
+	}
+	.trust-text strong {
+		color: #ffffff;
 		font-weight: 700;
-		color: #dbeafe;
-		white-space: nowrap;
 	}
-	.badge-dot {
-		width: 7px;
-		height: 7px;
-		border-radius: 50%;
-		background: #4ade80;
-		box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.3);
-		animation: pulse 2s ease-in-out infinite;
+
+	/* ── Hero Spotlight Glass Card (Right Column) ───────────────────────────────── */
+	.hero-visual {
+		animation: hero-up 1s 0.18s var(--ease-out) both;
+		display: flex;
+		justify-content: center;
 	}
-	.hero-scroll-cue {
-		position: absolute;
-		bottom: 2.5rem;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: 2;
+	.spotlight-glass-card {
+		width: 100%;
+		max-width: 480px;
+		background: rgba(6, 18, 42, 0.78);
+		border: 1px solid rgba(56, 189, 248, 0.32);
+		backdrop-filter: blur(16px);
+		border-radius: 1.85rem;
+		padding: 1.4rem;
+		box-shadow:
+			0 30px 70px -15px rgba(2, 6, 23, 0.9),
+			0 0 40px -10px rgba(2, 132, 199, 0.25);
+		position: relative;
+		overflow: hidden;
 	}
-	.hero-scroll-cue span {
+	.spotlight-top-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin-bottom: 0.75rem;
+	}
+	.spotlight-star-tag {
+		font-family: var(--font-body);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #0f172a;
+		background: #f59e0b;
+		padding: 0.28rem 0.85rem;
+		border-radius: 999px;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+	}
+	.spotlight-star-tag i {
+		font-size: 0.7rem;
+	}
+	.spotlight-ctc-tag {
+		font-family: var(--font-disp);
+		font-size: 0.88rem;
+		font-weight: 850;
+		color: #34d399;
+		background: rgba(16, 185, 129, 0.16);
+		border: 1px solid rgba(16, 185, 129, 0.42);
+		padding: 0.25rem 0.85rem;
+		border-radius: 999px;
+	}
+	.spotlight-title-row {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		margin-bottom: 0.85rem;
+	}
+	.title-amber-bar {
+		width: 4px;
+		height: 1.25rem;
+		border-radius: 3px;
+		background: #f59e0b;
+		flex-shrink: 0;
+	}
+	.spotlight-card-heading {
+		font-family: var(--font-disp);
+		font-size: 1.08rem;
+		font-weight: 750;
+		color: #ffffff;
+		margin: 0;
+		line-height: 1.25;
+	}
+	.spotlight-poster-frame {
+		position: relative;
+		background: #ffffff;
+		border-radius: 1.15rem;
+		padding: 0.45rem;
+		overflow: hidden;
+		box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6);
+	}
+	.spotlight-poster-frame img {
+		width: 100%;
+		height: auto;
+		max-height: 250px;
+		object-fit: contain;
+		border-radius: 0.85rem;
 		display: block;
-		width: 1.5px;
-		height: 54px;
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55));
-		animation: scroll-line 2s var(--ease-out) infinite;
+	}
+	.poster-overlay-pill {
+		position: absolute;
+		bottom: 0.85rem;
+		right: 0.85rem;
+		background: rgba(10, 18, 35, 0.9);
+		color: #ffffff;
+		font-family: var(--font-body);
+		font-size: 0.72rem;
+		font-weight: 700;
+		padding: 0.35rem 0.85rem;
+		border-radius: 999px;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		text-decoration: none;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(6px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+		transition: all 0.2s ease;
+	}
+	.poster-overlay-pill:hover {
+		background: #0284c7;
+		border-color: #38bdf8;
+		transform: scale(1.02);
+	}
+	.spotlight-student-block {
+		margin-top: 0.85rem;
+	}
+	.student-name {
+		font-family: var(--font-disp);
+		font-size: 1.08rem;
+		font-weight: 800;
+		color: #ffffff;
+		margin: 0;
+	}
+	.student-dept {
+		font-family: var(--font-body);
+		font-size: 0.8rem;
+		color: #94a3b8;
+		margin: 0.15rem 0 0;
+	}
+	.spotlight-chips-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+		margin: 0.85rem 0;
+	}
+	.spotlight-chip {
+		background: rgba(2, 10, 24, 0.65);
+		border: 1px solid rgba(56, 189, 248, 0.18);
+		border-radius: 0.9rem;
+		padding: 0.6rem 0.8rem;
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+	}
+	.chip-icon-box {
+		width: 32px;
+		height: 32px;
+		border-radius: 0.6rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.9rem;
+		flex-shrink: 0;
+	}
+	.chip-blue {
+		background: rgba(2, 132, 199, 0.22);
+		color: #38bdf8;
+	}
+	.chip-green {
+		background: rgba(16, 185, 129, 0.22);
+		color: #34d399;
+	}
+	.chip-meta {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+	}
+	.chip-kicker {
+		font-size: 0.6rem;
+		font-weight: 750;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #64748b;
+		display: block;
+	}
+	.chip-val {
+		font-family: var(--font-disp);
+		font-size: 0.85rem;
+		font-weight: 750;
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.chip-val-blue {
+		color: #38bdf8;
+	}
+	.chip-val-green {
+		color: #34d399;
+	}
+	.spotlight-bottom-bar {
+		background: rgba(2, 10, 24, 0.75);
+		border: 1px solid rgba(56, 189, 248, 0.2);
+		border-radius: 0.85rem;
+		padding: 0.65rem 0.95rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-decoration: none;
+		color: #cbd5e1;
+		font-size: 0.76rem;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+	.spotlight-bottom-bar:hover {
+		background: rgba(2, 132, 199, 0.16);
+		border-color: rgba(56, 189, 248, 0.45);
+		color: #ffffff;
+	}
+	.bottom-bar-left {
+		display: flex;
+		align-items: center;
+		gap: 0.55rem;
+	}
+	.bottom-bar-left i {
+		color: #38bdf8;
+		font-size: 0.85rem;
+	}
+	.bottom-bar-chevron {
+		color: #64748b;
+		font-size: 0.65rem;
 	}
 
 	/* ══════════ STATS ═════════════════════════════════════════════════════════ */
 	.stats-section {
 		padding: clamp(4rem, 8vw, 7rem) 0;
 		background: var(--surface);
+		scroll-margin-top: clamp(2rem, 4vw, 4rem);
 	}
 	.stats-section .section-title {
 		text-align: left;
@@ -1229,18 +1462,19 @@
 	}
 	.companies-carousel {
 		position: relative;
-		perspective: 1000px;
+		overflow: hidden;
+		padding: 0.5rem 0;
 		z-index: 1;
 	}
 	.companies-carousel.secondary {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 	}
 	.carousel-track {
 		display: flex;
 		gap: 2rem;
 		overflow: visible;
 		width: 100%;
-		padding: 1.5rem clamp(1rem, 4vw, 3rem);
+		padding: 1.5rem clamp(1rem, 4vw, 3rem) 2.2rem;
 		animation: carousel-scroll 35s linear infinite;
 		will-change: transform;
 	}
@@ -1263,45 +1497,64 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: clamp(100px, 12vw, 140px);
-		height: clamp(100px, 12vw, 140px);
-		border-radius: var(--radius-lg);
-		background: var(--surf-alt);
-		border: 1px solid var(--border);
-		padding: 1.2rem;
-		transition: all 0.4s var(--ease-out);
+		width: clamp(120px, 12vw, 155px);
+		height: clamp(75px, 7.5vw, 95px);
+		border-radius: 1.25rem;
+		background: #ffffff;
+		border: 1px solid rgba(226, 232, 240, 0.95);
+		padding: 0.9rem 1.35rem;
+		box-shadow:
+			0 4px 12px -2px rgba(15, 23, 42, 0.05),
+			0 2px 4px -1px rgba(15, 23, 42, 0.03);
+		transition:
+			transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+			border-color 0.3s ease;
 		cursor: pointer;
 		position: relative;
-		overflow: hidden;
+		will-change: transform, box-shadow;
 	}
 	.company-badge::before {
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.12), transparent 70%);
+		border-radius: 1.25rem;
+		background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12), transparent 70%);
 		opacity: 0;
 		transition: opacity 0.4s var(--ease-out);
+		pointer-events: none;
 	}
 	.company-badge:hover::before {
 		opacity: 1;
 	}
 	.company-badge:hover {
-		background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(14, 165, 233, 0.05));
-		border-color: rgba(37, 99, 235, 0.2);
-		transform: translateY(-8px) scale(1.08);
-		box-shadow: 0 24px 48px -12px rgba(37, 99, 235, 0.15);
+		transform: translateY(-10px);
+		border-color: rgba(56, 189, 248, 0.55);
+		box-shadow:
+			0 20px 32px -6px rgba(2, 132, 199, 0.18),
+			0 8px 16px -4px rgba(15, 23, 42, 0.08),
+			0 0 0 1px rgba(56, 189, 248, 0.25);
+		background: #ffffff;
 	}
 	.company-badge img {
 		width: 100%;
 		height: 100%;
+		max-height: 48px;
 		object-fit: contain;
-		filter: grayscale(1) brightness(0.9);
-		transition: filter 0.4s var(--ease-out);
+		filter: grayscale(0.25) contrast(1.02);
+		opacity: 0.9;
+		transition:
+			filter 0.35s ease,
+			opacity 0.35s ease,
+			transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 		position: relative;
 		z-index: 1;
+		display: block;
 	}
 	.company-badge:hover img {
-		filter: grayscale(0) brightness(1);
+		filter: grayscale(0) contrast(1.06);
+		opacity: 1;
+		transform: scale(1.06);
 	}
 	.carousel-fade {
 		position: absolute;
@@ -2067,117 +2320,7 @@
 		}
 	}
 
-	/* ── Hero Spotlight Card ─────────────────────────────────────────────────── */
-	.spotlight-card {
-		border-color: rgba(56, 189, 248, 0.45);
-		box-shadow:
-			0 40px 90px -34px rgba(2, 6, 23, 0.9),
-			0 0 35px -8px rgba(56, 189, 248, 0.25),
-			inset 0 1px 0 rgba(255, 255, 255, 0.2);
-	}
-	.spotlight-top-bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 0.5rem;
-		margin-bottom: 0.65rem;
-		position: relative;
-		z-index: 3;
-	}
-	.spotlight-tag {
-		font-size: 0.68rem;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: #fbbf24;
-		background: rgba(245, 158, 11, 0.15);
-		border: 1px solid rgba(245, 158, 11, 0.35);
-		padding: 0.2rem 0.6rem;
-		border-radius: 999px;
-	}
-	.spotlight-package {
-		font-family: var(--font-disp);
-		font-size: 0.85rem;
-		font-weight: 800;
-		color: #34d399;
-		background: rgba(16, 185, 129, 0.15);
-		border: 1px solid rgba(16, 185, 129, 0.35);
-		padding: 0.2rem 0.65rem;
-		border-radius: 999px;
-	}
-	.spotlight-img-frame {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: #ffffff;
-		border-radius: 1.15rem;
-		padding: 0.5rem;
-		border: 1px solid rgba(255, 255, 255, 0.25);
-		box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5);
-		text-decoration: none;
-		overflow: hidden;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-	.spotlight-img-frame:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 20px 45px -10px rgba(56, 189, 248, 0.3);
-	}
-	.spotlight-img-frame img {
-		width: 100%;
-		height: auto;
-		max-height: 250px;
-		object-fit: contain;
-		border-radius: 0.85rem;
-		display: block;
-	}
-	.spotlight-hover-pill {
-		position: absolute;
-		bottom: 0.75rem;
-		right: 0.75rem;
-		background: rgba(15, 23, 42, 0.9);
-		color: #38bdf8;
-		padding: 0.3rem 0.75rem;
-		border-radius: 999px;
-		font-size: 0.72rem;
-		font-weight: 700;
-		border: 1px solid rgba(56, 189, 248, 0.4);
-		backdrop-filter: blur(6px);
-		transition: all 0.2s ease;
-	}
-	.spotlight-img-frame:hover .spotlight-hover-pill {
-		background: #0284c7;
-		color: #ffffff;
-		border-color: #38bdf8;
-	}
-	.spotlight-student-info {
-		margin-top: 0.75rem;
-		position: relative;
-		z-index: 3;
-	}
-	.spotlight-student-name {
-		font-family: var(--font-disp);
-		font-size: 1.02rem;
-		font-weight: 750;
-		color: #f8fafc;
-		margin: 0;
-	}
-	.spotlight-student-meta {
-		font-size: 0.78rem;
-		color: #94a3b8;
-		margin: 0.15rem 0 0;
-	}
-	a.spotlight-cta {
-		text-decoration: none;
-		transition: all 0.25s ease;
-		border-color: rgba(56, 189, 248, 0.45);
-	}
-	a.spotlight-cta:hover {
-		background: rgba(14, 165, 233, 0.35);
-		border-color: rgba(56, 189, 248, 0.8);
-		color: #ffffff;
-		transform: translateY(-2px);
-	}
+
 	.news-link-btn {
 		display: inline-flex;
 		align-items: center;
@@ -2501,30 +2644,29 @@
 			grid-template-columns: 1fr;
 		}
 		.hero {
-			padding-top: clamp(0.7rem, 2.2vw, 1.2rem);
-			min-height: 72vh;
+			padding: 2rem 1rem 3rem;
+			min-height: auto;
 		}
 		.hero-inner {
 			grid-template-columns: 1fr;
 			gap: 2.5rem;
 		}
 		.hero-title {
-			font-size: clamp(2.1rem, 9vw, 3rem);
+			font-size: clamp(2.1rem, 8vw, 3rem);
 		}
-		.hero-bits {
-			gap: 0.2rem;
-		}
-		.hero-proof {
+		.hero-proof-grid {
 			grid-template-columns: 1fr;
 			max-width: 100%;
 		}
-		.hero-card-stats {
-			grid-template-columns: 1fr;
-			margin-bottom: 3.4rem;
+		.hero-actions-row {
+			flex-direction: column;
+			align-items: stretch;
 		}
-		.hero-card-badge {
-			bottom: 0.8rem;
-			left: 0.8rem;
+		.btn-explore {
+			justify-content: center;
+		}
+		.spotlight-glass-card {
+			max-width: 100%;
 		}
 		.auth-grid {
 			grid-template-columns: 1fr;
@@ -2553,16 +2695,17 @@
 			max-width: 100%;
 		}
 		.company-badge {
-			width: clamp(85px, 10vw, 120px);
-			height: clamp(85px, 10vw, 120px);
+			width: clamp(105px, 12vw, 135px);
+			height: clamp(68px, 8vw, 85px);
+			padding: 0.75rem 1rem;
 		}
 		.carousel-fade {
 			width: clamp(40px, 6vw, 80px);
 		}
 	}
 	@media (max-width: 560px) {
-		.hero-bg {
-			background-size: 100% auto;
+		.hero {
+			background-size: cover;
 		}
 		.stats-grid {
 			grid-template-columns: 1fr 1fr;
@@ -2575,17 +2718,14 @@
 			align-items: flex-start;
 		}
 		.company-badge {
-			width: 80px;
-			height: 80px;
-			padding: 1rem;
+			width: 105px;
+			height: 68px;
+			padding: 0.65rem 0.85rem;
+			border-radius: 1rem;
 		}
 		.carousel-track {
 			gap: 1rem;
 			padding: 1rem;
-		}
-		.hero-pills span,
-		.hero-card-badge {
-			font-size: 0.68rem;
 		}
 		.section-title {
 			font-size: clamp(1.5rem, 5vw, 2.5rem);

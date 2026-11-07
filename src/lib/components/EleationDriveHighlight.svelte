@@ -1,78 +1,45 @@
 <script>
-	let activeModalPoster = null; // 'circular' | 'selection' | null
-	let activeStage = 1; // 0, 1, 2, 3
-
-	const hiringSteps = [
-		{
-			num: '01',
-			name: 'Eligibility & Registration',
-			focus: 'Final Year Mechanical & Core Engineering students',
-			summary: 'Initial screening and profile validation for the core engineering drive.'
-		},
-		{
-			num: '02',
-			name: 'ANSYS Technical Test',
-			focus: 'FEM, FEA & Computational Simulation',
-			summary: 'Rigorous computational examination assessing stress analysis and structural fundamentals.'
-		},
-		{
-			num: '03',
-			name: 'HyperWorks Technical Test',
-			focus: 'HyperMesh & OptiStruct Optimization',
-			summary: 'Advanced engineering test on meshing algorithms and simulation workflows.'
-		},
-		{
-			num: '04',
-			name: 'Technical Interview & Selection',
-			focus: 'One-on-One Panel Evaluation',
-			summary: 'Comprehensive viva on core mechanics, leading to direct appointment as CAE Project Engineer.'
-		}
-	];
+	/** @type {'circular' | 'selection' | null} */
+	let activeModal = null;
 </script>
 
-<section id="eleation-drive-highlight" class="relative w-full py-10 sm:py-14 text-white font-sans overflow-hidden border-b border-white/10 bg-slate-950">
-	<!-- 3D CAE WIREFRAME SIMULATION CAR BACKGROUND -->
-	<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+<section
+	id="eleation-drive-highlight"
+	class="eleation-shell relative w-full py-10 sm:py-16 text-white font-sans overflow-hidden border-b border-white/10"
+>
+	<!-- Engineering Simulation Subtle Backdrop (Existing Wireframe Car Background) -->
+	<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
 		<img
 			src="/bg/image.png"
 			alt="CAE Simulation Wireframe"
-			class="w-full h-full object-cover object-right md:object-center opacity-30 mix-blend-screen scale-105"
+			class="w-full h-full object-cover object-right md:object-center opacity-25 mix-blend-screen scale-105"
 		/>
-		<!-- Multi-stop Dark Vignette Gradient for Clean Text Legibility -->
-		<div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/40"></div>
-		<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/70"></div>
+		<div class="absolute inset-0 bg-gradient-to-r from-[#020b1d] via-[#020b1d]/90 to-[#020b1d]/60"></div>
+		<div class="absolute inset-0 bg-gradient-to-t from-[#020b1d] via-transparent to-[#020b1d]/85"></div>
 	</div>
 
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-		<!-- Simple & Elegant Header -->
-		<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-white/10">
-			<div class="space-y-1.5 max-w-2xl">
+		<!-- Section Header -->
+		<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+			<div class="space-y-1">
 				<div class="flex items-center gap-2">
 					<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-					<span class="text-xs font-bold uppercase tracking-widest text-emerald-400">
-						Campus Placement Milestone • BITS Vizag (A)
+					<span class="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">
+						Placement Milestone • Mechanical Engineering
 					</span>
 				</div>
-
-				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight flex items-baseline flex-wrap gap-2.5">
-					<span>ELEATION Campus Recruitment</span>
-					<span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400 font-extrabold text-xl sm:text-2xl lg:text-3xl">
-						₹9.6 LPA
-					</span>
+				<h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight">
+					ELEATION Virtual Campus Drive 2027
 				</h2>
-
-				<p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-					Hearty Congratulations to <strong class="text-white font-semibold">Mr. Durga Vara Prasad Uddavolu</strong> (Final Year – Mechanical Engineering) on securing appointment as <strong class="text-sky-300 font-semibold">CAE Project Engineer</strong> at <strong class="text-white font-semibold">ELEATION</strong>.
-				</p>
 			</div>
 
-			<!-- Compact Action Pills -->
+			<!-- Verification Action Pills -->
 			<div class="flex items-center flex-wrap gap-2.5 shrink-0">
 				<a
 					href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white text-xs font-bold shadow-lg shadow-rose-950/40 hover:scale-105 active:scale-95 transition-all"
+					class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white text-xs font-bold tracking-wide uppercase shadow-lg shadow-blue-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
 				>
 					<i class="fa-brands fa-instagram text-sm"></i>
 					<span>Official Post</span>
@@ -80,17 +47,17 @@
 
 				<button
 					type="button"
-					on:click={() => (activeModalPoster = 'selection')}
-					class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 text-white text-xs font-semibold backdrop-blur-md transition-all hover:scale-105"
+					on:click={() => (activeModal = 'selection')}
+					class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-white/10 text-slate-200 text-xs font-semibold backdrop-blur-md hover:border-cyan-400/40 transition-all hover:scale-[1.02]"
 				>
-					<i class="fa-solid fa-trophy text-amber-400"></i>
+					<i class="fa-solid fa-award text-amber-400"></i>
 					<span>Selection Poster</span>
 				</button>
 
 				<button
 					type="button"
-					on:click={() => (activeModalPoster = 'circular')}
-					class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 text-white text-xs font-semibold backdrop-blur-md transition-all hover:scale-105"
+					on:click={() => (activeModal = 'circular')}
+					class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-white/10 text-slate-200 text-xs font-semibold backdrop-blur-md hover:border-cyan-400/40 transition-all hover:scale-[1.02]"
 				>
 					<i class="fa-solid fa-file-lines text-sky-400"></i>
 					<span>Drive Circular</span>
@@ -98,191 +65,184 @@
 			</div>
 		</div>
 
-		<!-- Main Showcase: Open Fluid Layout with Large Photo -->
-		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 mt-8 items-center">
-			
-			<!-- PROMINENT LARGE CANDIDATE PORTRAIT (4 cols) -->
-			<div class="lg:col-span-4 flex justify-center lg:justify-start">
-				<div class="relative group w-full max-w-[320px] sm:max-w-[340px]">
-					<!-- Soft Ambient Glow Rim Behind Photo -->
-					<div class="absolute -inset-1.5 bg-gradient-to-tr from-sky-500/40 via-cyan-400/20 to-emerald-500/30 rounded-[2.2rem] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+		<!-- MAIN SHOWCASE: POSTER COMPOSITION (Inspired by reference mockup) -->
+		<div class="mt-8 rounded-3xl bg-slate-900/70 border border-white/10 p-6 sm:p-10 relative overflow-hidden backdrop-blur-md shadow-2xl">
+			<!-- TOP BAR: Brand Logo + Italic Script "Successfully" -->
+			<div class="flex items-center justify-between relative z-20 mb-4 sm:mb-6">
+				<!-- ELEATION Logo Badge -->
+				<div class="bg-white px-4 py-2 rounded-xl shadow-md flex items-center justify-center">
+					<img
+						src="/eleation/eleation-logo.png"
+						alt="ELEATION"
+						class="h-5 sm:h-6 w-auto object-contain"
+					/>
+				</div>
 
-					<!-- Large Portrait Card -->
-					<div class="relative rounded-[2rem] overflow-hidden bg-slate-900 border border-white/15 shadow-2xl">
-						<!-- Floating Company Logo Badge -->
-						<div class="absolute top-3.5 left-3.5 z-20 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
-							<img
-								src="/eleation/eleation-logo.png"
-								alt="ELEATION"
-								class="h-4 sm:h-5 w-auto object-contain"
-							/>
-						</div>
-
-						<!-- Verified Checkmark Pill -->
-						<div class="absolute top-3.5 right-3.5 z-20 bg-emerald-500 text-slate-950 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-lg flex items-center gap-1">
-							<i class="fa-solid fa-check"></i>
-							<span>Selected</span>
-						</div>
-
-						<!-- Large High-Res Studio Portrait Image -->
-						<div class="w-full aspect-[3/4] relative overflow-hidden bg-slate-950">
-							<img
-								src="/eleation/durga-vara-prasad.jpg"
-								alt="Mr. Durga Vara Prasad Uddavolu"
-								class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter brightness-[1.02] contrast-[1.03]"
-							/>
-							<!-- Subtle Bottom Gradient for Overlay Readability -->
-							<div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
-						</div>
-
-						<!-- Integrated Name & Degree Overlay -->
-						<div class="absolute bottom-0 inset-x-0 p-4 text-left z-20">
-							<span class="text-[10px] font-bold uppercase tracking-widest text-sky-400 block mb-0.5">
-								Star Placement
-							</span>
-							<h3 class="text-lg sm:text-xl font-black text-white leading-tight">
-								Mr. Durga Vara Prasad Uddavolu
-							</h3>
-							<p class="text-xs text-slate-300 font-medium mt-0.5">
-								Final Year • B.Tech Mechanical Engineering
-							</p>
-							<p class="text-[11px] text-sky-300 font-semibold mt-1">
-								Position: CAE Project Engineer
-							</p>
-						</div>
-					</div>
+				<!-- Elegant Serif Italic Script -->
+				<div class="text-right">
+					<span class="poster-script text-2xl sm:text-3xl lg:text-4xl text-white/90">
+						Successfully
+					</span>
 				</div>
 			</div>
 
-			<!-- RELEVANT CONTENT & HIGHLIGHTS (8 cols - Open, Non-Boxy Design) -->
-			<div class="lg:col-span-8 space-y-6 text-left">
-				<!-- Clean Key Metrics (Pure Bold Numbers, No Nested Boxes) -->
-				<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-4 border-b border-white/10">
-					<div class="space-y-1">
-						<span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Annual Compensation</span>
-						<strong class="text-3xl sm:text-4xl font-black text-white tracking-tight">
-							₹9.6 <span class="text-sky-400 text-lg sm:text-xl font-bold">LPA</span>
-						</strong>
-						<span class="text-xs text-slate-400 block">Fixed Corporate CTC</span>
-					</div>
-
-					<div class="space-y-1">
-						<span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Monthly Take-Home</span>
-						<strong class="text-3xl sm:text-4xl font-black text-emerald-400 tracking-tight">
-							₹60,000<span class="text-xs text-slate-400 font-normal"> / mo</span>
-						</strong>
-						<span class="text-xs text-slate-400 block">₹7.2 LPA Net In-Hand</span>
-					</div>
-
-					<div class="space-y-1">
-						<span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Workplace Model</span>
-						<strong class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2 mt-1">
-							<i class="fa-solid fa-house-laptop text-sky-400 text-base"></i>
-							<span>100% Remote</span>
-						</strong>
-						<span class="text-xs text-slate-400 block">Official Laptop & Hardware Provided</span>
+			<!-- POSTER BODY: Stacked Giant PLACED Typography + Layered Candidate Frame -->
+			<div class="relative min-h-[440px] sm:min-h-[500px] flex flex-col justify-center">
+				<!-- GIANT STACKED "PLACED" WATERMARK TYPOGRAPHY (Layer behind candidate) -->
+				<div class="absolute inset-0 flex flex-col justify-center items-end sm:items-center pointer-events-none select-none z-0 overflow-hidden pr-2 sm:pr-0">
+					<div class="poster-watermark-col flex flex-col leading-[0.82] tracking-tighter text-right sm:text-center w-full">
+						<span class="poster-watermark-row row-solid">PLACED</span>
+						<span class="poster-watermark-row row-stroke-1">PLACED</span>
+						<span class="poster-watermark-row row-stroke-2">PLACED</span>
+						<span class="poster-watermark-row row-stroke-3">PLACED</span>
 					</div>
 				</div>
 
-				<!-- Streamlined Selection Journey (Interactive, Clean & Fluid) -->
-				<div class="space-y-3">
-					<div class="flex items-center justify-between">
-						<span class="text-xs font-bold uppercase tracking-widest text-slate-400 flex items-center gap-1.5">
-							<i class="fa-solid fa-list-check text-sky-400"></i>
-							<span>Selection Process Overview</span>
-						</span>
-						<span class="text-[11px] text-sky-300 font-medium">Click step to view focus</span>
-					</div>
+				<!-- FOREGROUND GRID: Candidate Framed Card + Editorial Detail Lockup -->
+				<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+					<!-- CANDIDATE PHOTO FRAME (Tilted white card with rounded inner window) -->
+					<div class="lg:col-span-6 flex justify-center lg:justify-start">
+						<div class="poster-card-wrapper relative group">
+							<!-- Background Offset Card Accent -->
+							<div class="absolute -inset-1.5 bg-gradient-to-tr from-cyan-500/30 to-blue-600/20 rounded-[2.5rem] blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
 
-					<!-- Fluid Connected Steps -->
-					<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-						{#each hiringSteps as step, i}
-							<button
-								type="button"
-								on:click={() => (activeStage = i)}
-								class="text-left p-3 rounded-2xl transition-all duration-300 flex flex-col justify-between {activeStage === i
-									? 'bg-sky-500/20 border border-sky-400/80 shadow-lg shadow-sky-950/50'
-									: 'bg-white/5 hover:bg-white/10 border border-white/10'}"
-							>
-								<div class="flex items-center justify-between w-full mb-1">
-									<span class="text-[10px] font-black font-mono {activeStage === i ? 'text-sky-300' : 'text-slate-400'}">
-										Step {step.num}
-									</span>
-									<span class="w-1.5 h-1.5 rounded-full {activeStage === i ? 'bg-sky-400 animate-ping' : 'bg-slate-600'}"></span>
+							<!-- Layered White Poster Frame -->
+							<div class="relative bg-white p-3 sm:p-4 rounded-[2.2rem] shadow-[0_20px_50px_rgba(0,0,0,0.6)] transform -rotate-1 sm:-rotate-2 hover:rotate-0 transition-transform duration-500 max-w-[320px] sm:max-w-[350px]">
+								<!-- Inner Rounded Photo Container -->
+								<div class="rounded-[1.8rem] overflow-hidden bg-slate-900 border border-slate-200/60 aspect-[3.8/4.6] relative">
+									<img
+										src="/eleation/durga-vara-prasad.jpg"
+										alt="Mr. Durga Vara Prasad Uddavolu"
+										class="w-full h-full object-cover object-top filter brightness-[1.02]"
+										loading="eager"
+									/>
+									<!-- Subtle Photo Gradient -->
+									<div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/40 to-transparent"></div>
 								</div>
-								<div>
-									<strong class="text-xs font-bold block leading-snug {activeStage === i ? 'text-white' : 'text-slate-300'}">
-										{step.name}
-									</strong>
-									<span class="text-[11px] text-slate-400 block truncate mt-0.5">
-										{step.focus}
+
+								<!-- Corner Accent Detail on Frame -->
+								<div class="pt-2 px-1 flex items-center justify-between text-[11px] font-bold text-slate-800">
+									<span class="tracking-wider uppercase">ELEATION Drive 2027</span>
+									<span class="text-emerald-600 font-extrabold flex items-center gap-1">
+										<i class="fa-solid fa-circle-check"></i>
+										<span>Verified</span>
 									</span>
 								</div>
-							</button>
-						{/each}
-					</div>
-
-					<!-- Active Step Summary Line -->
-					<div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-start gap-2.5 text-xs text-slate-300">
-						<i class="fa-solid fa-circle-info text-sky-400 text-sm mt-0.5 shrink-0"></i>
-						<div>
-							<strong class="text-white font-semibold">{hiringSteps[activeStage].name}:</strong>
-							<span class="ml-1 text-slate-300">{hiringSteps[activeStage].summary}</span>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- Tools & Institutional Credits -->
-				<div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-400">
-					<div class="flex items-center gap-1.5 flex-wrap">
-						<span class="font-bold text-slate-300 mr-1">CAE Toolchain:</span>
-						{#each ['ANSYS', 'HyperWorks', 'HyperMesh', 'OptiStruct', 'CREO', 'FEA'] as tool}
-							<span class="px-2.5 py-0.5 rounded-full bg-white/5 text-sky-300 text-[11px] font-mono">
-								{tool}
+					<!-- EDITORIAL DETAIL LOCKUP (Directly matching reference image layout) -->
+					<div class="lg:col-span-6 text-left space-y-5">
+						<!-- Green Pill "Placed as a" -->
+						<div>
+							<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-600 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-md">
+								Placed as a
 							</span>
-						{/each}
-					</div>
+						</div>
 
-					<a
-						href="/placements"
-						class="text-sky-400 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors shrink-0"
-					>
-						<span>Explore Training & Placement Cell</span>
-						<i class="fa-solid fa-arrow-right text-[10px]"></i>
-					</a>
+						<!-- Big Bold Appointed Designation -->
+						<div class="space-y-1">
+							<h3 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.05]">
+								CAE Project Engineer
+							</h3>
+							<h4 class="text-2xl sm:text-3xl font-extrabold text-cyan-300 tracking-tight">
+								Mr. Durga Vara Prasad Uddavolu
+							</h4>
+							<p class="text-sm sm:text-base text-slate-300 font-medium">
+								Final Year • B.Tech in Mechanical Engineering
+							</p>
+						</div>
+
+						<!-- Core Verified Package Badges -->
+						<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+							<div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+								<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Package</span>
+								<strong class="text-xl sm:text-2xl font-black text-white block mt-0.5">₹9.6 LPA</strong>
+								<span class="text-[11px] text-slate-400">Fixed Corporate CTC</span>
+							</div>
+
+							<div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+								<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">In-Hand</span>
+								<strong class="text-xl sm:text-2xl font-black text-emerald-400 block mt-0.5">₹60,000<span class="text-xs text-slate-400 font-normal">/mo</span></strong>
+								<span class="text-[11px] text-slate-400">₹7.2 LPA Net</span>
+							</div>
+
+							<div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+								<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Workplace</span>
+								<strong class="text-base sm:text-lg font-black text-white flex items-center gap-1.5 mt-1">
+									<i class="fa-solid fa-house-laptop text-cyan-400 text-xs"></i>
+									<span>100% Remote</span>
+								</strong>
+								<span class="text-[11px] text-slate-400">Laptop Provided</span>
+							</div>
+						</div>
+
+						<!-- 3 Selection Rounds Cleared -->
+						<div class="pt-2">
+							<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+								<i class="fa-solid fa-check-double text-emerald-400"></i>
+								<span>Selection Stages Cleared</span>
+							</div>
+							<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+								<div class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+									<strong class="text-white block">Round 1: ANSYS</strong>
+									<span class="text-[11px] text-slate-400">FEM & FEA Exam</span>
+								</div>
+								<div class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+									<strong class="text-white block">Round 2: HyperWorks</strong>
+									<span class="text-[11px] text-slate-400">HyperMesh Simulation</span>
+								</div>
+								<div class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+									<strong class="text-white block">Round 3: Technical Viva</strong>
+									<span class="text-[11px] text-slate-400">Core Mechanics Panel</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Official Verification URL Footnote -->
+						<div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-400">
+							<span class="font-mono text-cyan-300">www.bitsvizag.com</span>
+							<span>The Training and Placement Cell, BITS Vizag (A)</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- FULLSCREEN POSTER MODAL -->
-	{#if activeModalPoster}
+	<!-- LIGHTBOX MODAL FOR VERIFICATION POSTERS -->
+	{#if activeModal}
 		<div
 			class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
-			on:click={() => (activeModalPoster = null)}
-			on:keydown={(e) => e.key === 'Escape' && (activeModalPoster = null)}
+			on:click={() => (activeModal = null)}
+			on:keydown={(e) => e.key === 'Escape' && (activeModal = null)}
 			role="dialog"
 			tabindex="-1"
 		>
 			<div
-				class="relative max-w-2xl w-full bg-slate-950 border border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+				class="relative max-w-2xl w-full bg-slate-950 border border-white/15 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
 				on:click|stopPropagation
 				role="document"
 			>
 				<!-- Modal Header -->
 				<div class="p-4 bg-slate-900 border-b border-white/10 flex items-center justify-between gap-3 shrink-0">
-					<div class="inline-flex p-1 rounded-full bg-black/40 text-xs">
+					<div class="inline-flex p-1 rounded-xl bg-black/40 text-xs">
 						<button
 							type="button"
-							on:click={() => (activeModalPoster = 'selection')}
-							class="px-4 py-1.5 rounded-full font-bold transition-all {activeModalPoster === 'selection' ? 'bg-sky-500 text-white' : 'text-slate-400 hover:text-white'}"
+							on:click={() => (activeModal = 'selection')}
+							class="px-3.5 py-1.5 rounded-lg font-bold transition-all {activeModal === 'selection'
+								? 'bg-blue-600 text-white'
+								: 'text-slate-400 hover:text-white'}"
 						>
 							Selection Poster
 						</button>
 						<button
 							type="button"
-							on:click={() => (activeModalPoster = 'circular')}
-							class="px-4 py-1.5 rounded-full font-bold transition-all {activeModalPoster === 'circular' ? 'bg-sky-500 text-white' : 'text-slate-400 hover:text-white'}"
+							on:click={() => (activeModal = 'circular')}
+							class="px-3.5 py-1.5 rounded-lg font-bold transition-all {activeModal === 'circular'
+								? 'bg-blue-600 text-white'
+								: 'text-slate-400 hover:text-white'}"
 						>
 							Drive Circular
 						</button>
@@ -291,7 +251,7 @@
 					<button
 						type="button"
 						class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xs transition-colors"
-						on:click={() => (activeModalPoster = null)}
+						on:click={() => (activeModal = null)}
 						aria-label="Close modal"
 					>
 						✕
@@ -300,17 +260,17 @@
 
 				<!-- Modal Image Body -->
 				<div class="flex-1 overflow-auto bg-black p-3 flex items-center justify-center min-h-[300px]">
-					{#if activeModalPoster === 'selection'}
+					{#if activeModal === 'selection'}
 						<img
 							src="/event-photos/JOB.png"
 							alt="Durga Vara Prasad Uddavolu - Eleation Selection"
-							class="max-h-[72vh] w-auto object-contain rounded-xl"
+							class="max-h-[72vh] w-auto object-contain rounded-lg"
 						/>
 					{:else}
 						<img
 							src="/eleation/eleation-drive-poster.jpg"
 							alt="ELEATION Virtual Campus Recruitment Drive Circular"
-							class="max-h-[72vh] w-auto object-contain rounded-xl"
+							class="max-h-[72vh] w-auto object-contain rounded-lg"
 						/>
 					{/if}
 				</div>
@@ -318,18 +278,68 @@
 				<!-- Modal Footer -->
 				<div class="p-3.5 bg-slate-900 border-t border-white/10 flex items-center justify-between gap-2 text-xs shrink-0">
 					<span class="text-slate-300 text-xs truncate">
-						{activeModalPoster === 'selection' ? 'Mr. Durga Vara Prasad Uddavolu — ₹9.6 LPA Milestone' : 'ELEATION Virtual Campus Recruitment Drive'}
+						{activeModal === 'selection'
+							? 'Mr. Durga Vara Prasad Uddavolu — ₹9.6 LPA Milestone'
+							: 'ELEATION Virtual Campus Recruitment Drive'}
 					</span>
 					<a
 						href="https://www.instagram.com/p/De9O-03hf2i/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="
 						target="_blank"
 						rel="noopener noreferrer"
-						class="px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold text-xs"
+						class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold text-xs"
 					>
-						Instagram
+						<i class="fa-brands fa-instagram text-xs"></i>
+						<span>Instagram</span>
 					</a>
 				</div>
 			</div>
 		</div>
 	{/if}
 </section>
+
+<style>
+	.eleation-shell {
+		background:
+			radial-gradient(circle at top left, rgba(14, 116, 144, 0.15), transparent 35%),
+			radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 35%),
+			linear-gradient(135deg, #020b1d 0%, #071529 45%, #08192d 100%);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+	}
+
+	.poster-script {
+		font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+		font-style: italic;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+	}
+
+	.poster-watermark-col {
+		font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+		font-weight: 900;
+	}
+
+	.poster-watermark-row {
+		font-size: clamp(3.8rem, 9.5vw, 8rem);
+		user-select: none;
+		display: block;
+	}
+
+	.row-solid {
+		color: rgba(147, 197, 253, 0.22);
+	}
+
+	.row-stroke-1 {
+		-webkit-text-stroke: 1.5px rgba(147, 197, 253, 0.18);
+		color: transparent;
+	}
+
+	.row-stroke-2 {
+		-webkit-text-stroke: 1.5px rgba(147, 197, 253, 0.11);
+		color: transparent;
+	}
+
+	.row-stroke-3 {
+		-webkit-text-stroke: 1.5px rgba(147, 197, 253, 0.05);
+		color: transparent;
+	}
+</style>
